@@ -1,0 +1,85 @@
+---
+title: "Case Study: Probabilities & Decision Trees"
+format:
+  html:
+    toc: false
+  docx:
+    toc: false
+  pdf:
+    toc: false        
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+::: callout-important
+Please note that you can download PDF and Microsoft Word versions of
+this case study using the links on the right.
+:::
+
+# Case 1
+
+In a hypothetical community, 60% of all people consume at least 6
+alcoholic beverages per week and 50% are overweight. The percentage of
+people who are both overweight and consume this much alcohol is 40%.
+Construct a 2x2 table to answer (a)-(c) below. For part (d), construct a
+decision tree.
+
+-   *What percentage of people consume at least 6 alcoholic beverages
+    per week, are overweight, or fall into both categories?*
+
+{{< include "space-insertion.qmd" >}}
+
+<!-- ::: {.callout-tip appearance="minimal"} -->
+<!-- ![](images/cs_decision-tree_ans_1.1.png)  -->
+<!-- ::: -->
+
+-   *You sample at random a person from the community and find that they
+    consume at least 6 alcoholic beverages per week. What is the
+    probability that they are overweight?*
+
+{{< include "space-insertion.qmd" >}} 
+
+<!-- ::: {.callout-tip appearance="minimal"} -->
+<!-- P(Overweight \| Drinker) = 0.4 / -->
+<!-- 0.6 = 0.667 -->
+<!-- ::: -->
+
+-   *What is the probability that someone from this community consumes
+    at least 6 alcoholic beverages per week if they are overweight?*
+
+{{< include "space-insertion.qmd" >}} 
+
+- *Draw a decision tree to represent this problem*
+
+{{< include "space-insertion.qmd" >}} 
+
+
+<!-- ::: {.callout-tip appearance="minimal"} -->
+<!-- P(Drinker \| Overweight) = 0.4 / 0.5 = 0.8 -->
+<!-- ::: -->
+
+# Case 2
+
+A new screening procedure can detect 80% of women diagnosed with breast
+cancer but will falsely identify 2% without breast cancer. The
+prevalence of breast cancer in the population is 1.6 in 100
+
+-   *What is the probability that a woman does not have breast cancer if
+    the test is negative?*
+
+{{< include "space-insertion.qmd" >}}
+
+<!-- ::: {.callout-tip appearance="minimal"} -->
+<!-- ![](images/cs_decision-tree_ans_2.1.png) -->
+<!-- ::: -->
+
+-   *What is the probability that a woman has breast cancer if the test
+    is positive?*
+
+{{< include "space-insertion.qmd" >}}
+
+<!-- ::: {.callout-tip appearance="minimal"} -->
+<!-- ![](images/cs_decision-tree_ans_2.2.png) -->
+<!-- ::: -->
+

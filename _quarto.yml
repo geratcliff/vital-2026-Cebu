@@ -1,0 +1,57 @@
+project:
+  type: website
+  resources:
+    - "*.xlsx"
+    - "*.xlsm"
+    - "*.xls"
+    - "*.pptx"
+    - "*.pdf"
+    - "*.docx"
+    - "*.amua"
+    - "*.csv"
+
+website:
+  title: "Taller de análisis de decisiones"
+  sidebar:
+    style: "floating"
+    search: false
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: "Recursos Amua"
+        contents:
+          - text: Center for Health Decision Sciences Amua Resources
+            href: case-studies/2024_chds_amua_tutorials_tp.pdf
+          - text: How to Watch (Amua Video Tutorial)
+            href: https://vimeo.com/888816562
+          - text: Introductions (Amua Video Tutorial)
+            href: https://vimeo.com/888816572
+          - text: Basic Layout (Amua Video Tutorial)
+            href: https://vimeo.com/888812546
+          - text: Decision Trees (Amua Video Tutorial)
+            href: https://vimeo.com/888816515
+          - text: Markov Models (Amua Video Tutorial)
+            href: https://vimeo.com/888816536
+      - text: Modelización de Markov avanzada
+        href: https://graveja0.github.io/dalys/
+      - text: Taller de modelado intermedio
+        href: https://smdm-europe23-what-they-didnt-teach.netlify.app
+      - text: Basic Markov Cohort Modeling in R
+        href: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9742144/
+      - text: Time-Dependent Markov Modeling in R
+        href: https://journals.sagepub.com/doi/full/10.1177/0272989X221121747
+      - href: about.qmd
+        text: Instructores
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    
+execute:
+  freeze: true  # never re-render during project render    
+
+
+
