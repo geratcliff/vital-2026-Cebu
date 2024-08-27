@@ -11,7 +11,7 @@ project:
     - "*.csv"
 
 website:
-  title: "Taller de análisis de decisiones"
+  title: "Decision Analysis Workshop"
   sidebar:
     style: "floating"
     search: false
@@ -19,7 +19,7 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - section: "Recursos Amua"
+      - section: "Amua Resources"
         contents:
           - text: Center for Health Decision Sciences Amua Resources
             href: case-studies/2024_chds_amua_tutorials_tp.pdf
@@ -33,9 +33,9 @@ website:
             href: https://vimeo.com/888816515
           - text: Markov Models (Amua Video Tutorial)
             href: https://vimeo.com/888816536
-      - text: Modelización de Markov avanzada
+      - text: Modeling Disability-Adjusted Life Years 
         href: https://graveja0.github.io/dalys/
-      - text: Taller de modelado intermedio
+      - text: Intermediate / Advanced Workshop Materials
         href: https://smdm-europe23-what-they-didnt-teach.netlify.app
       - text: Basic Markov Cohort Modeling in R
         href: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9742144/

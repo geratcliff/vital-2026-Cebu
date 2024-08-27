@@ -13,48 +13,49 @@ bibliography: references.bib
 
 # Schedule
 
-| Day | Time           | Topic                                                                   |
-|------|-----------------|------------------------------------------|
-| 1   | 08:30 - 9:15   | Registration and Introductions                                          |
-|     | 09:15 - 10:30  | Conceptual and Theoretical Foundations for Decision Analysis            |
-|     | 10:30 - 10:50  | Coffee/Tea Break                                                        |
-|     | 10:50 - 12:00  | Foundations of Cost Effectiveness Analysis                              |
-|     | 12:00 - 13:30  | Lunch                                                                   |
-|     | 13:30 - 15:00  | Capstone - Guided exercise                                              |
-|     | 15:00 - 15:30  | Daily Recap and Group Capstone Discussion                               |
-|     | 15:30 - 17:00  | Capstone - Group Work                                                   |
-| 2   | 08:30 - 09:30  | Decision Trees                                                          |
-|     | 09:30 - 10:45  | Case Study: Decision Trees                                              |
-|     | 10:45 - 11:05  | Coffee/Tea Break                                                        |
-|     | 11:05 - 12:00  | Case Study: Decision Trees in Amua                                      |
-|     | 12:00 - 13:30  | Lunch                                                                   |
-|     | 13:30 - 15:00  | Capstone: Construct Decision Tree in Amua                               |
-|     | 15:00 - 15:30  | Daily Recap and Group Discussion                                        |
-|     | 15:30 - 17:00  | Capstone - Group Work                                                   |
-| 3   | 08:30 - 09:30  | Decision Thresholds and Value of Information                            |
-|     | 09:30 - 10:30  | Amua Case Study: Decision Thresholds                                    |
-|     | 10:30 - 10:50  | Coffee / Tea Break                                                      |
-|     | 10:50 - 12:00  | CEA Fundamentals 1: Costs                                               |
-|     | 12:00 - 13:30  | Lunch                                                                   |
-|     | 13:30 - 14:45  | CEA Fundamentals 2: Health Outcomes                                     |
-|     | 14:45 - 15:45  | Capstone: Incorporate Cost and Health Outcomes in Decision Tree Model   |
-|     | 15:45 - 16:15  | Daily Recap and Group Discussion                                        |
-|     | 16:15 - 17:00  | Capstone - Group Work                                                   |
-| 4   | 08:30 - 10:00  | CEA Fundamentals 3: Incremental CEA                                     |
-|     | 10:00 - 10:20  | Break                                                                   |
-|     | 10:20 - 11:30  | Case Study: Incremental CEA                                             |
-|     | 11:30 - 12:00  | Group Discussion: Incremental CEA                                       |
-|     | 12:00 - 13:30  | Lunch                                                                   |
-|     | 13:30 - 15:00  | Markov Models                                                           |
-|     | 15:00 - 16:30  | Case Study: Alive-Sick Dead Markov Model in Amua                        |
-|     | 16:30 - 17:00  | Daily Recap and Group Discussion                                        |
-| 5   | 08:30 - 09:30  | Interactive Lecture / Case Study: One- and Two-way Sensitivity Analysis |
-|     | 09:30 - 10:15  | Interactive Lecture / Case Study: Threshold and Scenario Analysis       |
-|     | 10:15 - 10:30  | Break                                                                   |
-|     | 10:30 - 12:00  | Interactive Lecture / Case Study: Probabilistic Sensitivity Analysis    |
-|     | 12:00 - 13:30  | Lunch                                                                   |
-|     | 13:30 - 15:00  | Prepare Final Capstone Presentations                                    |
-| 6   | 08:30 - 10:00  | Disability-Adjusted Life Year Outcomes (DALYs)                          |
-|     | 10:00 - 12:00  | Capstone Presentations                                                  |
+| Day | Time              | Topic                                                                                                   |
+|------------|------------|------------------------------------------------|
+| 1   | **08:30** - 9:15  | Registration and Introductions \[JG\]                                                                   |
+|     | 09:15 - 10:30     | Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis \[AL, JZ\] |
+|     | 10:30 - 10:50     | Coffee/Tea Break                                                                                        |
+|     | 10:50 - 12:00     | Decision Trees \[AL\]                                                                                   |
+|     | 12:00 - **13:30** | Lunch                                                                                                   |
+|     | 13:30 - 15:00     | Case Study: Decision Trees in Amua \[JZ\]                                                               |
+|     | 15:00 - 16:30     | Capstone - Guided exercise \[CW, MM\] \[Objectives & Deliverables TBD\]                                 |
+|     | 16:30 - 17:00     | Daily Recap Discussion                                                                                  |
+| 2   | **08:30** - 10:00 | Capstone: Construct Decision Tree in Amua                                                               |
+|     | 10:00 - 10:30     | Tea Break                                                                                               |
+|     | 10:30 - 12:00     | CEA Fundamentals 1: Costs \[AL\]                                                                        |
+|     | 12:00 - **13:30** | Lunch                                                                                                   |
+|     | 13:30 - 15:00     | CEA Fundamentals 2: Health Outcomes \[JZ\]                                                              |
+|     | 15:00 - 15:30     | Daily Recap and Group Discussion                                                                        |
+|     | 15:30 - 17:00     | Capstone - Group Work \[Objectives & Deliverables TBD\]                                                 |
+| 3   | **08:30** - 10:00 | Capstone - Paired Group Discussion                                                                      |
+|     | 09:30 - 10:30     | Tea Break                                                                                               |
+|     | 10:30 - 12:00     | CEA Fundamentals 3: Incremental CEA \[AL\]                                                              |
+|     | 12:00 - **13:30** | Lunch                                                                                                   |
+|     | 13:30 - 14:45     | Case Study: Incremental CEA                                                                             |
+|     | 14:45 - 15:45     | Group Discussion: Incremental CEA                                                                       |
+|     | 15:45 - 16:15     | Daily Recap and Group Discussion                                                                        |
+|     | 16:15 - 17:00     | Capstone - Group Work                                                                                   |
+| 4   | **08:30** - 10:30 | Markov Models \[JG\]                                                                                    |
+|     | 10:30 - 11:00     | Break                                                                                                   |
+|     | 11:00 - 12:00     | Case Study: Alive-Sick Dead Markov Model in Amua                                                        |
+|     | 12:00 - **13:30** | Lunch                                                                                                   |
+|     | 13:30 - 14:15     | Case Study: Alive-Sick Dead Discussion                                                                  |
+|     | 14:15 - 15:30     | Lecture: Curating Model Parameters \[JG\]                                                               |
+|     | 15:30 - 17:00     | Daily Recap and Group Discussion                                                                        |
+| 5   | **08:30** - 09:30 | Interactive Lecture / Case Study: One- and Two-way Sensitivity,                                         |
+|     | 09:30 - 10:15     | Interactive Lecture / Threshold and Scenario Analysis Analysis \[JG\]                                   |
+|     | 10:15 - 10:30     | Break                                                                                                   |
+|     | 10:30 - 12:00     | Interactive Lecture / Case Study: Probabilistic Sensitivity Analysis \[JG\]                             |
+|     | 12:00 - **13:30** | Lunch                                                                                                   |
+|     | 13:30 - 15:00     | Prepare Final Capstone Presentations                                                                    |
+| 6   | **08:30** - 10:00 | Disability-Adjusted Life Year Outcomes (DALYs) \[TBD\]                                                  |
+|     | 10:00 - 10:30     | Tea Break                                                                                               |
+|     | 10:30 - 12:00     | Capstone Presentations Session 1                                                                        |
+|     | 12:00 - **13:30** | Lunch                                                                                                   |
+|     | 13:30 - 15:00     | Capstone Presentations Session 2                                                                        |
+|     | 15:00 - 15:45     | Certificate Ceremony                                                                                    |
 
 : {tbl-colwidths="\[10,20,50\]"}
