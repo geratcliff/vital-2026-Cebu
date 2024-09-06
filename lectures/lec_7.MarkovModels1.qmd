@@ -1138,10 +1138,7 @@ print_table(7)
 -   Constructing the matrix is a fairly technical, but fairly
     straightforward process.
 
-    -   We could spend an entire day of lecture and case studies on this
-        alone (and we do in our weeklong intermediate course!)
-    -   However, in the interest of time, we'll skip over these
-        technical details today.
+    -   We will skip over this process for now, but come back to it later today!
 
 ## Transition Probability Matrix
 

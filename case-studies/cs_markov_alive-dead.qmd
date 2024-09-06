@@ -1,0 +1,177 @@
+---
+title: "Case Study: Alive-Dead Model"
+format:
+  html:
+    toc: false
+  docx:
+    toc: false
+  pdf:
+    toc: false        
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+---
+
+# Introduction and Overview of Decision Problem {{< fa regular clipboard >}}
+
+This case study is designed to walk you through the process of constructing a discrete time Markov cohort model in Amua. We will begin with a simple alive-dead model for your country, and then expand into a disease-based model in our case study later today. 
+
+# 1. Alive-Dead Model
+
+We will start by constructing a simple Markov model representing just two health states: "Alive" and "Dead." We will assume that individuals can transition between these states based on the probabilities of surviving as calculated using demographic life table data from your country. 
+
+## Markov Structure: Alive-Dead
+
+The structure of the Markov model for the Alive-Dead model is shown in the figure below. 
+
+![](images/clipboard-904538470.png){fig-align="center" width="800"}
+
+Looking at the figure, you'll see that Amua has a special Markov node (represented by <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> ). The branches that lead off a Markov node designate all the Markov health states (and only Markov states).
+
+In this example, there are two health states: (1) Alive, (2) Dead. Off each health state, you can create a subtree (also called a cycle tree) that reflects those events that can occur during a cycle. The last branch at the end of each pathway will be a state transition, which defines what health state to go to for the next cycle.
+
+::: callout-note
+Note that in a Markov model, outcomes are defined elsewhere – NOT at the end of the branch, but at the state.
+:::
+
+## Building the Tree
+
+### Structure
+
+After you open Amua, click Model {{< fa arrow-right >}} New {{< fa arrow-right >}} <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> Markov Model.
+
+-   Save your model right at the start.
+
+-   Now select the decision node <img src="../amua-images/decisionNode_24.png" alt="Custom Icon" width="20" height="20"/>, Right-click {{< fa arrow-right >}} Add {{< fa arrow-right >}} <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> Markov Chain .
+
+-   Start by developing the structure of the Markov model using Alive and Dead for the different health states. The branches of the Markov chain should correspond to the states of the model. Label the name option to the right of the decision node as Alive-Dead.
+
+![](images/clipboard-556363520.png){width="800"}
+
+::: {.callout-caution appearance="minimal"}
+**Complete the structure of the Markov model using the information above. Note: focus on adding the branches and transitions for this step; Parameters will be added later.**
+:::
+
+-   When you reach the end of the branch, select the chance node you would like to turn into a state transition, right click, select Change to State Transition. This will give you the blue arrow <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> . On the right of this arrow, you can find a dropdown menu with the different health states you specified. Select the health state this part of the cohort will transition to.
+
+-   With this button <img src="../amua-images/alignRightSelected_24.png" alt="Custom Icon" width="20" height="20"/> you can align the end nodes.
+
+### Cohort size and starting probabilities
+
+-   Go to Model {{< fa arrow-right >}} Properties {{< fa arrow-right >}} select the Simulation tab. The default cohort size is 1,000. Change cohort size to 1, so that all outputs will be at the individual level (i.e., per person).
+
+![](images/clipboard-1176592840.png){fig-align="center" width="500"}
+
+-   At the Markov Chain <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> , change the initial probabilities of health states. Since all patients start in the Alive state, change the p:0 on the left of the Local state to p:1 (see blue box below).
+
+![](images/clipboard-948912894.png){fig-align="center" width="600"}
+
+## Model Parameters
+
+First, define the following time-constant parameters for the model in the “Parameters” panel.
+
+![](images/clipboard-2737349940.png){fig-align="center" width="350"}
+
+This variable tells Amua that we will model a cohort of newborns. However, we could easily adapt this to model a cohort of 20 year-olds, etc.
+
+## Transition Probabilities
+
+The underlying transition probability matrix has the following form:
+
+![](images/clipboard-3364156865.png){fig-align="center" width="200"}
+
+However, because we are modeling a cohort of newborns until death, we need to include death transition probabilities that vary by age (i.e., cycle) in the model. In other words, there will be a different death probability in each cycle.
+
+::: callout-important
+In Amua, **time-varying inputs are operationalized as variables** <img src="../amua-images/variable_16.png" alt="Custom Icon" width="20" height="20"/> rather than parameters.
+
+Variables <img src="../amua-images/variable_16.png" alt="Custom Icon" width="20" height="20"/> can be defined to keep track of model events and dynamically update expressions as the model runs. Thus, unlike parameters <img src="../amua-images/parameter_16.png" alt="Custom Icon" width="20" height="20"/> which are fixed for a given run of the model, variables can change within a simulation. Variables may change across individuals, allowing heterogeneity to be modeled, or they may change over time.
+:::
+
+Therefore, we will define `p_die` as a **variable** <img src="../amua-images/variable_16.png" alt="Custom Icon" width="20" height="20"/> that references values in a **lookup table** <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/>, following the steps below.
+
+::: callout-important
+A lookup table returns the value that corresponds to a particular index. The first column in a lookup table contains the table indices, and one or more columns of lookup values can be defined. Index values must be unique and in ascending order. There are 3 lookup methods, (1) exact, (2) interpolate, and (3) truncate, for details about these methods visit the [Amua Wiki on GitHub](https://github.com/zward/Amua/wiki/Tables).
+:::
+
+We first define a lookup table <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/> tbl_death to read in the age-dependent background mortality constructed from country life tables.
+
+### Download Data
+
+Download the background mortality file for your country from the workshop website. Each workbook contains the age-indexed annual mortality probability for various countries represented in our workshop.
+
+|                                                                                           |                                                                                            |
+|------------------------------------|------------------------------------|
+| [Bangladesh](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)  | [Rwanda](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)       |
+| [Cambodia](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)    | [South Africa](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv) |
+| [Cameroon](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)    | [Sri Lanka](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)    |
+| [China](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)       | [Tanzania](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)     |
+| [Ethiopia](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)    | [Thailand](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)     |
+| [India](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)       | [Uganda](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)       |
+| [Kenya](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)       | [Zambia](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)       |
+| [Mozambique](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)  | [Zimbabwe](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv)     |
+| [Philippines](https://graveja0.github.io/vital-istanbul-2024/case-studies/bangladesh.csv) |                                                                                            |
+
+A screenshot of the first few rows of this .csv file is shown below. The`index`column is the age, while`p_die` is the annual probability of death at each age.
+
+![](images/clipboard-2593165698.png){fig-align="center" width="300"}
+
+Go to the “Tables” panel, click <img src="../amua-images/add_16.png" alt="Custom Icon" width="20" height="20"/> to add a table, and you should see a “Define Table” window (see screenshot below). Click the Import button <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/> and select the downloaded .csv file to import. The table will automatically be resized to fit the imported data. The first row in the file will be used as table headers.
+
+::: callout-tip
+An alternative appraoch to uploading the .csv is to simply copy and paste the two columns from the .csv file, and then hit the <img src="../amua-images/paste_16.png" alt="Custom Icon" width="20" height="20"/> paste button. You can then paste the table directly into Amua. 
+:::
+
+::: callout-important
+!!!! TK INCLUDE SCREENSHOT
+:::
+<!-- ![](images/clipboard-4147587961.png) -->
+
+Enter “tbl_p_die” as the name for this variable. “Lookup” is the default table type (which is what we want here). Choose "Interpolate" as the Lookup Method. Click Save to apply.
+
+
+### Background Mortality 
+
+Next, we can define the *time-varying variable* `p_die` (which reads from the table we just defined and operates as the background mortality probability in the current model cycle, $t$).
+
+Make sure you create a variable and not a parameter. Under “Variables”, click <img src="../amua-images/add_16.png" alt="Custom Icon" width="20" height="20"/> to add a variable p_die = tbl_p_die\[age_initial + t, 1\].
+
+::: callout-note
+The first column of a table is always used for indexing in tables. Therefore, the number "1" here will actually indicate the second column in your table as the corresponding value. You can also use the name of the column to read a value, e.g., tbl_p_die\[age_initial + t, “p_die”\].
+:::
+
+::: callout-tip
+In Amua, “***t***” is a built-in variable that tracks the number of cycles. It automatically updates when the model runs. For example, in the 10^th^ cycle on the Markov model, *t = 10*. Therefore, in the formula “tbl_p_die\[age_initial + *t*, 1\]”, age_initial + *t* will equal the modeled age of the individual in cycle *t*, and the full formula will read the age-dependent background mortality based on the individual’s current age (instead of the initial age).
+
+Amua defaults to a cycle time of $t=0$. Therefore, if you hit "Evaluate" the Expected Value field should calculate the death probability for a newborn as shown in the .csv lookup table.
+:::
+
+![](images/clipboard-3390332906.png){fig-align="center" width="500"}
+
+We now have all transition probabilities defined. Add these inputs to the branches of the model. Remember to add the complementary probabilities using “C” as well.
+
+## Termination Condition
+
+-   Specify the termination of the model by selecting \[termination\] and type t==110. This will allow your model to run for 110 cycles, then the model will terminate.
+
+![](images/clipboard-3413612505.png){fig-align="center" width="400"}
+
+## Rewards
+
+The default reward in Amua is cost. We need to change this to have life-expectancy (LE) as a reward. Go to Model {{< fa arrow-right >}} Properties {{< fa arrow-right >}} select the Analysis tab and change the cost dimension to LE. Use LE as the symbol and set to 4 decimal places.
+
+![](images/clipboard-896605952.png){fig-align="center" width="500"}
+
+Add the life-expectancy "payoff" on the left of each health state after "R: (LE)".
+
+![](images/clipboard-2710970859.png){fig-align="center" width="400"}
+
+Apply Half-cycle correction. Go to **Model** {{< fa arrow-right >}} **Properties** {{< fa arrow-right >}} select the **Markov** tab and check the Half-cycle correction box. Click **OK** to apply.
+
+![](images/clipboard-2281393950.png){fig-align="center" width="400"}
+
+Now, we have finished constructing the Alive-Dead model. Analyze the model using a cohort simulation by clicking **Run** {{< fa arrow-right >}} **Run Model**.
+
+::: {.callout-caution appearance="minimal"}
+**Run the alive-dead model and calculate overall life expectancy.**
+:::

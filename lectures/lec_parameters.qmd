@@ -1,0 +1,284 @@
+---
+title: "Curating model parameters"
+format:
+  revealjs:
+    theme: slides.scss
+    incremental: true
+    slide-number: true
+    logo: ../vchem.png
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: |
+      [Back to Website](../index.html)
+editor_options: 
+  chunk_output_type: console
+editor: source
+---
+
+# Learning Objectives and Outline
+
+## Learning Objectives
+
+-   Classify model parameters across different economic perspectives
+
+-   Characterize the data collection approaches for cost-effectiveness studies (i.e., alongside clinical trials versus secondary data collection)
+
+-   Identify resources and tools for collecting both cost and benefit parameters
+
+## Outline
+
+::: columns
+::: {.column width="50%"}
+1.  ICER review
+2.  Perspective
+3.  Data collection
+:::
+
+::: {.column width="50%"}
+4.  Numerator: Costs
+5.  Denominator: Effects
+:::
+:::
+
+# ICER review {background="#43464B"}
+
+$$
+\frac{C_1 - C_0 \quad  (\Delta C)}{E_1 - E_0 \quad  (\Delta E)}
+$$
+
+## Numerator (costs)
+
+Valued in monetary terms
+
+<br> - E.g., <br> [\$USD / ₦NGN / KES / R]{style="color: #016301"}
+
+## Denominator (benefits):
+
+Valued in terms of **clinical outcomes**
+
+<br> - E.g., <br> [\# of HIV cases prevented]{style="color: #016301"} <br> [\# of children seizure free]{style="color: #016301"} <br> [\# of quality-adjusted life years gained]{style="color: #016301"} <br>
+
+-   What's important for the question at hand
+-   Most analyses report several different outcomes
+-   QALY/DALYs enable comparability across disease areas
+
+# Perspective matters {background="#43464B"}
+
+::: {style="font-size: 0.8em"}
+## Formal healthcare sector
+
+**Costs:** Medical costs borne by "third-party payers" & paid for out-of-pocket by patients <br> **Benefits:** Health impact to patient & if relevant, family/unpaid caregiver <br>
+
+::: incremental
+-   In many countries, this might mean "donor payers" and/or largely out-of-pocket costs by patients.
+-   This might also include "program costs" paid for by donor of government entities
+-   Ideally, costs from a healthcare sector perspective should include **current + future costs**, related & unrelated to the condition under consideration
+:::
+:::
+
+::: {style="font-size: 0.8em"}
+## Societal perspective
+
+Represents the wider "public interest" & inter-sector distribution of resources that are important to consider <br>
+
+-   Includes patient transportation/travel, non-medical out-of-pocket costs, and time/productivity costs
+-   May include family/informal caregiver costs related to transport/travel, non-medical out-of-pocket costs, time/productivity costs <br>
+
+::: incremental
+-   **Presenteeism** (i.e., lost productivity when individuals are not fully functional at work due to illness)
+-   **Absenteeism** (i.e., time absent from work as a consequence of illness)
+:::
+:::
+
+# Data collection {background="#43464B"}
+
+## Two approaches:
+
+<br> (1) Alongside [**clinical trials**]{style="color: #00589b;"} <br> (2) Using [**secondary data**]{style="color: #00589b;"}
+
+# 1. Data collection alongside [clinical trials]{style="color: aquamarine;"} {background="#43464B"}
+
+::: {style="font-size: 0.8em"}
+## Costs (clinical trials)
+
+Source: Gold 1996, Drummond 2015, Gray 2012) <br>
+
+1.  **Identify** -- Estimate the different categories of resources likely to be required (e.g., surgical staff, medical equipment, surgical complications, re-admissions) <br> <br>
+
+2.  **Measure** -- Estimate how much of each resource category is required (e.g. type of staff performing the surgery and time involved, post-surgery length of stay, re-admission rates) <br> <br>
+
+3.  **Value** -- Apply unit costs to each resource category (e.g., salary scales from the relevant hospital or national wage rates for staff inputs, cost per inpatient day for the post-surgery hospital stay)
+:::
+
+## Costs (clinical trials)
+
+![](images/Screen%20Shot%202022-09-06%20at%2011.08.13%20AM.jpeg)
+
+## Costs (clinical trials)
+
+![](images/Screen%20Shot%202022-09-06%20at%2011.09.38%20AM.png)
+
+## Costs (clinical trials)
+
+![](images/Screen%20Shot%202022-09-06%20at%2011.09.14%20AM.png)
+
+## Effects (clinical trials)
+
+-   Important clinical outcomes of the trial (e.g. cases or deaths averted)
+-   If seeking to measure **QALYs** gained, the EQ-5D (an indirect preference-based weight tool) can be obtained in several different languages
+    -   visit: [euroqol.org/eq-5d-instruments/all-eq-5d-versions/]{style="color: blue;"}
+    -   Age/proxy requirements can also be found on this site
+
+## Effects (clinical trials)
+
+If seeking to measure **DALYs** averted (DALYs typically utilizes standardized disability weights): <br>
+
+-   **Published Global burden of disease weights** can be used alongside other data points collected in the clinical trial, such as "age of onset of disease."
+
+-   Other data needed to calculate DALYs, such as "life expectancy" due to disease/stages of disease, can also be estimated (more on that in the "secondary data" section)
+
+## Effects (clinical trials)
+
+<br>
+
+> Since disability weights are freely & publicly available (these weights are required for DALY calculations), it can reduce costs/time/resources compared to collecting QALY estimates
+
+## Productivity/time associated costs (clinical trials)
+
+-   **Productivity (presenteeism & absenteeism)** can be measured with validated instruments such as the [Work Productivity and Activity Impairment Questionnaire (WPAI)]{style="color: #016301"}, among others published <br><br>
+-   Scores from these instruments can be used to estimate the **% of work-related productivity loss**, which can be monetized based on assumptions on population wage and number of hours typically spent working
+
+# 2. Using [secondary]{style="color: aquamarine;"} data only {background="#43464B"}
+
+::: {style="font-size: 0.8em"}
+## Costs (secondary data)
+
+(Same approach as for clinical trials above) <br>
+
+1.  **Identify** -- Estimate the different categories of resources (e.g., surgical staff, medical equipment, surgical complications, re-admissions) <br> <br>
+
+2.  **Measure** -- Estimate how much of each resource category is required (e.g. type of staff performing the surgery and time involved, post-surgery length of stay, re-admission rates) <br> <br>
+
+3.  **Value** -- Apply unit costs to each resource category (e.g., salary scales from the relevant hospital or national wage rates for staff inputs, cost per inpatient day for the post-surgery hospital stay)
+:::
+
+## Costs (secondary data)
+
+1.  **In country/hospital/donor data registries** - key is to get as close to the "true" cost associated with each procedure per patient
+    -   E.g., "TB healthcare & diagnostics are from official price list of the National Health Laboratory Service in South Africa; Costs for follow-up reflect local clinic and culture-based screening for active-tuberculosis"
+2.  **Review of published literature**
+3.  **Tufts CEA Registry**
+4.  **DCP3: Disease Control Priorities**
+
+## Costs (secondary data)
+
+![](images/file_show-01.jpeg)
+
+## Costs (secondary data)
+
+![](images/1.png)
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-09-06%20at%202.47.32%20PM.jpeg){width="766"}
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-09-06%20at%203.53.38%20PM.png)
+
+https://cevr.tuftsmedicalcenter.org/databases/cea-registry
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-10-04%20at%203.24.08%20PM.png){width="570"}
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-10-04%20at%203.53.22%20PM.png)
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-10-04%20at%203.28.14%20PM.png){width="529"}
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-10-04%20at%203.29.14%20PM.png){width="499"}
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-09-06%20at%203.57.05%20PM.png)
+
+http://ghcearegistry.org/ghcearegistry/
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-10-04%20at%203.49.19%20PM.png)
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-10-04%20at%203.50.18%20PM.png)
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-09-13%20at%201.41.55%20PM.png){width="180"}
+
+![](images/Screen%20Shot%202022-09-13%20at%201.44.12%20PM.jpeg){width="533"}
+
+## Costs (secondary data)
+
+![](images/Screen%20Shot%202022-09-13%20at%201.40.58%20PM.png)
+
+## Costs (secondary data)
+
+-   Up until now, we focused on **Micro costing** (bottom-up) (e.g., for treatment-specific costs); Identifying & measuring each resource utilized and applying unit costs
+
+-   **Gross costing** (top-down) estimates the cost of an event or condition; can capture important downstream costs (e.g., hospitalizations due to "opioid" relapse/recurrence)
+
+## Costs (secondary data)
+
+![](images/2.png)
+
+## Effects (secondary data)
+
+-   IHME Disease-specific rates
+-   Global burden of disease \| Tufts DALY calculator \|
+-   DCP3
+-   Other literature/RCTs/Meta-analyses/etc. - including Tufts registries that we just reviewed + other!
+
+## Effects (secondary data)
+
+![](images/Screen%20Shot%202022-09-14%20at%209.45.01%20AM.png)
+
+## Effects (secondary data)
+
+![](images/Screen%20Shot%202022-09-13%20at%201.55.26%20PM.png)
+
+(Marx et al 2020)
+
+## Effects (secondary data)
+
+![](images/Screen%20Shot%202022-09-13%20at%201.56.36%20PM.png)
+
+(Marx et al 2020)
+
+## Effects (secondary data)
+
+![](images/Screen%20Shot%202022-09-06%20at%202.48.41%20PM.png){width="720" height="144"}
+
+## Effects (secondary data)
+
+![](images/Screen%20Shot%202022-09-14%20at%209.31.26%20AM.png)
+
+A tool that can convert health outcomes expressed in non-DALY metrics (e.g., cases or deaths averted) into DALYs -- converted DALY measures can then be used to compare cost-effectiveness ratios of interventions across different disease areas (http://ghcearegistry.org/ghcearegistry/)
+
+## Effects (secondary data)
+
+![](images/Screen%20Shot%202022-09-14%20at%209.34.46%20AM.png){width="765"}
+
+## Effects (secondary data)
+
+![](images/DCP1.jpeg){width="172"}
+
+![](images/DCP2.jpeg){width="426"}
