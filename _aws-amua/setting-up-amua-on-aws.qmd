@@ -1,0 +1,46 @@
+---
+title: "Creating an AWS Compute Image for Amua"
+editor: visual
+---
+
+This document runs through the process of creating a Windows-based virtual cloud computer for Amua.
+
+Step 1: Sign into AWS console.
+
+Click "Launch Instance" and select Windows
+
+![Set instance type to t2.large and select the correct keypair (used later to obtain the Administrator password).](images/clipboard-4119151560.png)
+
+![](images/clipboard-2597937350.png)
+
+Network settings can stay at the default values.
+
+![](images/clipboard-1586831703.png)
+
+Click "Launch Instance"
+
+Once it is running, navigate to the instance and hit "Connect"
+
+![](images/clipboard-3364882536.png)
+
+Navigate to RDP client and click on "Download remote desktop file." You can then double click this file to open it in Microsoft Remote Desktop.
+
+![](images/clipboard-793755099.png)
+
+Four minutes after the instance starts, you can obtain the Administrator password by clicking "Get Password." You will need to upload the key pair .pem file to obtain the password. Once you have, copy it and use it to login with Windows Remote Desktop.
+
+![](images/clipboard-1901168086.png)
+
+![](images/clipboard-3115226941.png)
+
+Once logged in, you need to install Java. Open Microsoft Edge and navigate to the [Java download site](https://www.java.com/en/download/). Download and install it.
+
+![](images/clipboard-2816616055.png)
+
+Once Java is installed, navigate to the Amua github repo and [download the .jar file](https://github.com/zward/Amua/releases/download/v0.3.1/Amua_0.3.1.jar).
+
+You can now change the password by typing "cmd" into the Search bar on the bottom of the Windows screen to open a Command Prompt.
+
+![](images/clipboard-2147004463.png)
+
+Type `net user Administrator "vit@lStrategies2024"`

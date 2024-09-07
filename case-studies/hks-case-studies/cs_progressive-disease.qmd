@@ -1,0 +1,71 @@
+---
+title: "Case Study: Progressive Disease Model"
+format:
+  html:
+    toc: false
+  docx:
+    toc: false
+  pdf:
+    toc: false        
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Introduction
+
+In this case study we will build on the alive-dead model constructed earlier to construct a progressive disease model in Amua. A state transition "bubble" diagram of this model is shown below:
+
+![State Transition Diagram for Progressive Disease Model](images/clipboard-3451439054.png){fig-align="center" width="1800"}
+
+In this model, individuals start off healthy and can develop a hypothetical disease. The disease begins asymptomatic (i.e., the patient has the disease but experiences very little effects) but can progress to a more severe state that increases the likelihood of death. All individuals in the model will experience mortality from other causes---but those with progressive disease can also die from the disease.
+
+Suppose there are two new treatment options available:
+
+1.  A one-time vaccine that reduces the likelihood of developing the disease.
+2.  A drug that reduces the likelihood of death from progressive disease.
+
+We will compare each of these strategies to a "status quo" strategy of doing nothing.
+
+# Model Parameters
+
+Relevant model parameters are summarized in the tables below:
+
+## State Transition Probabilities
+
++-----------------+---------------------------------------------------------------------------------------------+-----------------------------------------------------------+
+| Name            | Value                                                                                       | Description                                               |
++=================+=============================================================================================+===========================================================+
+| p_asymptomatic  | 0.001 if aged 0-18\                                                                         | Age-based probability of developing asymptomatic disease. |
+|                 | 0.003 if aged 19-34\                                                                        |                                                           |
+|                 | 0.005 if aged 35-44\                                                                        |                                                           |
+|                 | 0.008 if aged 45-64\                                                                        |                                                           |
+|                 | 0.010 if aged 65+                                                                           |                                                           |
++-----------------+---------------------------------------------------------------------------------------------+-----------------------------------------------------------+
+| p_progressive   | 0.002 if aged 0-18\                                                                         | Probability of disease progression.                       |
+|                 | 0.006 if aged 19-34\                                                                        |                                                           |
+|                 | 0.010 if aged 35-44\                                                                        |                                                           |
+|                 | 0.016 if aged 45-64\                                                                        |                                                           |
+|                 | 0.020 if aged 65+                                                                           |                                                           |
++-----------------+---------------------------------------------------------------------------------------------+-----------------------------------------------------------+
+| p_death_oc      | Age-dependent and based on mortality model fit to life table data.\                         | Probability of death from other causes.                   |
+|                 | \                                                                                           |                                                           |
+|                 | **Please use the same background mortality probabilities as used in the alive-dead model.** |                                                           |
++-----------------+---------------------------------------------------------------------------------------------+-----------------------------------------------------------+
+| p_death_disease | 0.15                                                                                        | Probability of death from progressive disease.            |
++-----------------+---------------------------------------------------------------------------------------------+-----------------------------------------------------------+
+: State Transition Probabilities
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+: Cost Parameters
