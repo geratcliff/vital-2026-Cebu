@@ -110,7 +110,7 @@ Relevant model parameters are summarized in the tables below:
 
 Your first objective is to build out a status quo or "do nothing" strategy based on the description and parameters defined above. **This is a strategy in which neither preventive measures nor additional treatments are used.**
 
-To get you going, we have built out the beginnings of a model based on an alive-dead model with age-specific background mortality rates. You can download this model at [this link](case-studies/cs_progressive-disease_blank.amua) TK CHECK LINK. The image below shows the structure of this model:
+To get you going, we have built out the beginnings of a model based on an alive-dead model with age-specific background mortality rates. You can download this model at [this link](graveja0.github.io/vital-istanbul-2024/case-studies/cs_progressive-disease_blank.amua). The image below shows the structure of this model:
 
 ![](images/clipboard-2678783669.png){fig-align="center"}
 
