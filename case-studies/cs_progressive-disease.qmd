@@ -1,0 +1,266 @@
+---
+title: "Case Study: Progressive Disease Model"
+format:
+  html:
+    toc: false
+  docx:
+    toc: false
+  pdf:
+    toc: false        
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Introduction
+
+This case study will build a decision model to analyze strategies to prevent and treat a noncommunicable disease.
+
+For this hypothetical disease, individuals start off healthy and can develop a progressive disease. The disease begins mild (i.e., the patient has the disease but experiences very little effects) but can progress to a more severe state that substantially increases the likelihood of death. Individuals also experience mortality from other causes---though in our model, we will separately track deaths from the disease vs. other background causes.
+
+A state transition "bubble" diagram of the model you will build is shown below:
+
+![](images/clipboard-792250022.png)
+
+## Policy Decision Problem
+
+Suppose there is a new preventive measure that can be undertaken to reduce the likelihood of disease progression. There is also a more expensive treatment option for individuals with progressive disease that reduces the probability of death from disease, and slightly increases their quality of life with the progressive disease.
+
+The Minister of Health has empowered your team to conduct an economic evaluation to investigate the costs and benefits of the status quo (i.e., do nothing) vs. adopting one of the following strategies:
+
+1.  Implement the lower-cost disease progression prevention strategy. This strategy costs less per person but only reduces the likelihood of disease progression.
+2.  Implement the higher-cost treatment strategy. This strategy costs more per person, but it reduces the probability of death from disease and raises quality of life with the disease.
+
+# Model Parameters
+
+Relevant model parameters are summarized in the tables below:
+
+## State Transition Probabilities
+
++-----------------+--------------------------------------------------------------------+------------------------------------------------+
+| Name            | Value                                                              | Description                                    |
++=================+====================================================================+================================================+
+| p_mild          | 0.001 if aged 0-18\                                                | Age-based probability of mild disease onset.   |
+|                 | 0.003 if aged 19-34\                                               |                                                |
+|                 | 0.005 if aged 35-44\                                               |                                                |
+|                 | 0.008 if aged 45-64\                                               |                                                |
+|                 | 0.010 if aged 65+                                                  |                                                |
++-----------------+--------------------------------------------------------------------+------------------------------------------------+
+| p_progression   | 0.002 if aged 0-18\                                                | Probability of disease progression.            |
+|                 | 0.006 if aged 19-34\                                               |                                                |
+|                 | 0.010 if aged 35-44\                                               |                                                |
+|                 | 0.016 if aged 45-64\                                               |                                                |
+|                 | 0.020 if aged 65+                                                  |                                                |
++-----------------+--------------------------------------------------------------------+------------------------------------------------+
+| p_death_oc      | Age-dependent and based on mortality model fit to life table data. | Probability of death from other causes.        |
++-----------------+--------------------------------------------------------------------+------------------------------------------------+
+| p_death_disease | 0.15                                                               | Probability of death from progressive disease. |
++-----------------+--------------------------------------------------------------------+------------------------------------------------+
+
+## Costs
+
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+| Name            | Value      | Description                                                                                                      |
++=================+============+==================================================================================================================+
+| c_healthy       | 0          | Annual (cycle) cost of healthy state.                                                                            |
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+| c_mild          | 1000       | Annual (cycle) cost of mild disease state.                                                                       |
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+| c_progressive   | 3000       | Annual (cycle) cost of progressive disease state.                                                                |
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+| c_death_disease | 5000       | One-time transition cost of death from progressive disease.                                                      |
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+| c_prevention    | 500        | Annual (cycle) cost of prevention.                                                                               |
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+| c_treatment     | 25,000     | One-time cost of progressive disease treatment (occurs at point of transition from mild to progressive disease). |
++-----------------+------------+------------------------------------------------------------------------------------------------------------------+
+
+## Quality of Life Adjustments
+
++-----------------------+------------+-------------------------------------------------------------------------------+
+| Name                  | Value      | Description                                                                   |
++=======================+============+===============================================================================+
+| u_healthy             | 1.0        | Quality-of-life (QoL) weight for healthy state.                               |
++-----------------------+------------+-------------------------------------------------------------------------------+
+| u_mild                | 0.95       | Quality-of-life (QoL) weight for mild disease health state.                   |
++-----------------------+------------+-------------------------------------------------------------------------------+
+| u_progressive         | 0.75       | Quality-of-life (QoL) weight for progressive disease health state.            |
++-----------------------+------------+-------------------------------------------------------------------------------+
+| u_progressive_treated | 0.85       | Quality-of-life (QoL) weight for progressive disease health state if treated. |
++-----------------------+------------+-------------------------------------------------------------------------------+
+| u_dead                | 0          | Quality-of-life (QoL) weight for death health states.                         |
++-----------------------+------------+-------------------------------------------------------------------------------+
+
+## Other Parameters
+
++---------------+----------+-----------------------------------------------------------------------------------------------+
+| Name          | Value    | Description                                                                                   |
++===============+==========+===============================================================================================+
+| rr_prevention | 0.90     | Prevention Strategy: Relative risk reduction in probability of mild disease onset             |
++---------------+----------+-----------------------------------------------------------------------------------------------+
+| rr_treatment  | 0.80     | Treatment Strategy: Relative risk reduction in probability of death from progressive disease. |
++---------------+----------+-----------------------------------------------------------------------------------------------+
+| r_disc_health | 0.03     | Annual discount rate: health outcomes.                                                        |
++---------------+----------+-----------------------------------------------------------------------------------------------+
+| r_disc_cost   | 0.03     | Annual discount rate: cost outcomes.                                                          |
++---------------+----------+-----------------------------------------------------------------------------------------------+
+
+# Status Quo Scenario
+
+Your first objective is to build out a status quo or "do nothing" strategy based on the description and parameters defined above. **This is a strategy in which neither preventive measures nor additional treatments are used.**
+
+To get you going, we have built out the beginnings of a model based on an alive-dead model with age-specific background mortality rates. You can download this model at [this link](case-studies/cs_progressive-disease_blank.amua) TK CHECK LINK. The image below shows the structure of this model:
+
+![](images/clipboard-2678783669.png){fig-align="center"}
+
+## Add Health States and Transitions
+
+::: {.callout-note appearance="minimal"}
+**Add in the relevant health states and transitions for the progressive disease model. Don't worry yet about transition probabilities and other parameters---just get the Markov structure complete.**
+:::
+
+-   When you reach the end of the branch, select the chance node you would like to turn into a state transition, right click, select Change to State Transition. This will give you the blue arrow <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> . On the right of this arrow, you can find a dropdown menu with the different health states you specified. Select the health state this part of the cohort will transition to.
+
+-   With this button <img src="../amua-images/alignRightSelected_24.png" alt="Custom Icon" width="20" height="20"/> you can align the end nodes.
+
+Your Markov model should now look like this:
+
+![](images/clipboard-3333040390.png)
+
+## Define Transition Probabilities
+
+::: {.callout-note appearance="minimal"}
+**Use the parameter values above to define and add transition probabilities to the Markov model.**
+:::
+
+::: {.callout-important appearance="minimal"}
+For this exercise, you will need to define some parameter tables and variables that draw on age-based transition probabilities, just as you did for the alive-dead model. For these transition probabilities, remember to enter them as Variables rather than Parameters. Refer to the [Alive-Dead case study](case-studies/cs_markov_alive-dead.qmd) for instructions on how to index a transition probability to the current age in the model.
+
+Because transition probabilities are not defined for each age in the model, you will need to specify the "Truncate" option in Amua when defining the table. This will allow Amua to draw on the next closest age when assigning the transition probability. A screenshot for a table defined for the disease onset probabilities is shown below.
+
+![](images/clipboard-140813940.png)
+:::
+
+After inputting the transition probabilities, your Markov model should look like this:
+
+![](images/clipboard-3583703224.png)
+
+### Sanity Check: Life Expectancy
+
+It's often useful to occasionally stop and validate that your model does not have any errors in it before moving on to the next step. For this sanity check, let's verify that we can obtain the same life expectancy as in the simple alive-dead model. In other words, we'll allow people to cycle among the various healthy and diseased health states. However, we will (temporarily) rule out the possibility of disease-related death. By calculating life expectancy as the primary outcome, we "reward" all health states (healthy, mild, progressive disease) with a payoff value of 1.0. Thus, even though our model is more complicated, we should obtain the same overall life expectancy value as a simple alive-dead model.
+
+To do this, make the following changes:
+
+1.  Make sure that the life expectancy "payoff" ("LE") is set to 1 for all health states in which an individual remains alive (Healthy, Asymptomatic, Progressive).
+
+2.  Temporarily set the probabilty of disease-related death to 0.
+
+![](images/clipboard-33576193.png){fig-align="center"}
+
+::: {.callout-note appearance="minimal"}
+With these changes made, check and run the model. You should obtain a life expectancy value of 77.0449.
+:::
+
+## Define Cycle Adjustments and Discounting 
+
+-   Go to Model {{< fa arrow-right >}} Properties {{< fa arrow-right >}} select the Markov tab.
+- Select the "Half-Cycle Correction" option.
+- Select the "Discount Rewards" option and enter the discount rates shown in the tables above. 
+- Click "OK"
+
+
+## Define Outcomes
+
+::: {.callout-important appearance="minimal"}
+Make sure you set the transition probability for disease-related death back to `p_death_disease`!
+:::
+
+Our next step is to define our primary health-related quality-of-life and cost outcomes.
+
+-   Go to Model {{< fa arrow-right >}} Properties {{< fa arrow-right >}} select the Analysis tab.
+-   Add outcomes for costs and quality-adjusted life expectency (QALE)
+-   Change the Analysis type to Cost-Effectiveness Analysis (CEA) and define the relevant Cost and Effect outcomes.
+-   Make sure to also set the Baseline Strategy to the Status Quo (we'll add more strategies later).
+
+![](images/clipboard-1019102486.png){fig-align="center" width="500"}
+
+-   Next, in the model itself, define the following cycle-specific payoffs based on the values in the tables above. Many of these parameters are already defined for you in the parameters tab in the Amua model:
+
+    -   Costs and QoL in Healthy state
+
+    -   Costs and QoL in Asymptomatic state
+
+    -   Costs and QoL in Progressive Disease state
+
+    -   QoL in Death states
+
+-   You will also need to define some one-time costs. For example, death from disease carries a one-time cost (`c_death_disease`). We will add this cost by assigning a one-time cost at the time an individual transitions to the Death (Disease) state from the Progressive disease state. You can add this one-time cost by *right-clicking* on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> after "Death (Disease)" in the Progressive Disease health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"/> Add Cost.
+
+![](images/clipboard-132271593.png){fig-align="center"}
+
+::: {.callout-note appearance="minimal"}
+Once you have added all costs and utility outcomes to your model, run the model and verify that it calculates expected costs and QALE for the status quo strategy.
+:::
+
+# Treatment and Prevention Strategies
+
+Our next objective is to build out the remaining two strategies: prevention and treatment. Fortunately, we have already done most of the work to add them -- we just need to copy and paste the Status Quo strategy, then adapt with additional parameters as needed.
+
+### Prevention Strategy
+
+-   Right click on the <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> Markov symbol next to the Status Quo strategy name, then select "Copy"
+
+![](images/clipboard-4149011598.png){fig-align="center" width="1000"}
+
+-   Right click on the red square and select "Paste." This will create a copy of the Status Quo strategy. Hit the OCD button to organize things again.
+
+![](images/clipboard-1448918543.png)
+
+-   Rename the new strategy to "Prevention" and adapt the transition probabilities using the prevention strategy parameters defined in the tables above (and in the Amua model parameters).
+
+::: {.callout-important appearance="minimal"}
+The prevention and treatment parameters (`rr_prevention` and `rr_treatment`, respectively) are defined as relative risks. Recall that relative risks can be directly multiplied with transition probabilities:
+
+![](images/clipboard-3868901548.png){fig-align="center" width="800"}
+
+If these parameters were instead hazard ratios, we'd have to go back to the underlying transition rates to perform the multiplication, and then re-convert into transition probabilities.
+:::
+
+::: {.callout-note appearance="minimal"}
+With these changes made, check and run the model. Do you obtain different cost and QALE estimates for the prevention strategy?
+:::
+
+### Treatment Strategy
+
+-   Right click on the <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> Markov symbol next to the Status Quo strategy name, then select "Copy"
+
+-   Right click on the red square and select "Paste." This will create a copy of the Status Quo strategy. Hit the OCD button to organize things again.
+
+-   Rename the new strategy to "Treatment" and adapt the transition probabilities using the prevention strategy parameters defined in the tables above (and in the Amua model parameters).
+
+-   Update the utility payoff for the progressive disease state using `u_progressive_treatment`
+
+-   Include the one-time treatment cost at the time of transition from mild to progressive disease (see below)
+
+::: {.callout-important appearance="minimal"}
+The treatment strategy includes a one-time treatment cost, which should apply as soon as the patient transitions from mild to progressive disease status. You can add this one-time cost by *right-clicking* on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> after "Death (Disease)" in the Progressive Disease health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"/> Add Cost.
+:::
+
+::: {.callout-note appearance="minimal"}
+Check and run the model to obtain Cost-Effectiveness Analysis (CEA) results
+:::
+
+### Cost-Effectiveness Analysis 
+
+::: {.callout-note appearance="minimal"}
+If the Ministry of Health uses a \$25,000/QALY threshold for adoption, what strategy would you recommend based on your initial results?
+:::
+
+::: {.callout-note appearance="minimal"}
+If the Ministry of Health uses a \$50,000/QALY threshold for adoption, what strategy would you recommend based on your initial results?
+:::
+
+::: {.callout-note appearance="minimal"}
+If the Ministry of Health uses a \$100,000/QALY threshold for adoption, what strategy would you recommend based on your initial results?
+:::

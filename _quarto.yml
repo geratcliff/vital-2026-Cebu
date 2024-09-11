@@ -19,6 +19,10 @@ website:
     contents:
       - href: index.qmd
         text: Home
+      - section: "Model Diagram Drawing Resources"
+        contents:
+          - text: Draw.io
+          - href: http://www.draw.io
       - section: "Amua Resources"
         contents:
           - text: Center for Health Decision Sciences Amua Resources
@@ -42,7 +46,7 @@ website:
       - text: Time-Dependent Markov Modeling in R
         href: https://journals.sagepub.com/doi/full/10.1177/0272989X221121747
       - href: about.qmd
-        text: Instructores
+        text: Instructors
 
 format:
   html:
