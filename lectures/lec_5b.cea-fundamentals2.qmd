@@ -3,6 +3,7 @@ title: "CEA Fundamentals: Valuing Outcomes"
 format:
   revealjs:
     theme: slides.scss
+    css: slides.css
     incremental: false
     slide-number: true
     logo: ../vchem.png
@@ -30,22 +31,15 @@ editor:
     for estimating health state utilities
 
 -   Curate model parameters for quantifying "benefits" (the denominator
-    in the CEA ratio)
+    in the C/E ratio)
 
 ## Outline
 
 <br>
 
-::: columns
-::: {.column width="50%"}
 1.  Valuing health outcomes: QALYs/DALYs
-2.  Utility weights / instruments
-:::
-
-::: {.column width="50%"}
+2.  Utility weights/instruments
 3.  Where to get values
-:::
-:::
 
 # ICER review {background="#43464B"}
 
@@ -69,7 +63,7 @@ quality-adjusted life years gained]{style="color: #016301"} <br>
 
 -   What's important for the question at hand
 -   Most analyses report several different outcomes
--   QALY/DALYs enable comparability across disease areas
+-   QALYs/DALYs enable comparability across disease areas
 
 # Valuing Health Outcomes
 
@@ -77,7 +71,7 @@ quality-adjusted life years gained]{style="color: #016301"} <br>
 
 -   QALYs and DALYs both provide a summary measure of health
 
--   Allow comparison of health attainment / disease burden
+-   Allow comparison of health attainment/disease burden
 
     -   Across diseases
 
@@ -89,13 +83,13 @@ quality-adjusted life years gained]{style="color: #016301"} <br>
 
 -   Origin story: welfare economics
 
-    -   Utility = holistic measure of satisfaction or wellbeing
+    -   Utility = holistic measure of satisfaction or well-being
 
 -   With QALYs, two dimensions of interest:
 
-    -   length of life (measured in life-years)
+    -   Length of life (measured in life-years)
 
-    -   quality of life (measured by utility weight, usually between 0
+    -   Quality of life (measured by utility weight, usually between 0
         and 1)
 
 ![](images/paste-A0D04843.png)
@@ -125,7 +119,7 @@ quality-adjusted life years gained]{style="color: #016301"} <br>
 
 ## Example: Patient with coronary heart disease [(without surgery)]{style="color: blue;"}
 
-![](images/QALY graphs_3.png){fig-align="center"}
+![](images/QALY%20graphs_3.png){fig-align="center"}
 
 ## Example: Patient with coronary heart disease
 
@@ -180,8 +174,8 @@ quality-adjusted life years gained]{style="color: #016301"} <br>
 
 <div>
 
-> "What risk of death you would accept in order to avoid \[living with
-> an amputated leg the rest of your life\] and live the rest of your
+> "What risk of death would you accept in order to avoid \[living with
+> an amputated leg for the rest of your life\] and live the rest of your
 > life in perfect health?"
 
 </div>
@@ -202,7 +196,7 @@ quality-adjusted life years gained]{style="color: #016301"} <br>
 -   Then **U(Amputation)** = $p$\*U(Death) + $(1-p)$\*U(Perfect Health)
     = 0.10\*0 + (1-0.10)\*1 = **0.9** = [threshold of indifference
     between surgery & no surgery (I will live with this rather than have
-    a high risk of dying"\*\*\*)]{style="color: #E0A458;"}
+    a high risk of dying)]{style="color: #E0A458;"}
 :::
 :::
 
@@ -240,18 +234,22 @@ This is the STANDARD GAMBLE TECHNIQUE
 
 ## Direct methods - Standard Gamble (SG) {.smaller}
 
-> "What risk of death you would accept in order to avoid \[living with
-> an amputated leg the rest of your life\] and live the rest of your
+<div>
+
+> "What risk of death would you accept in order to avoid \[living with
+> an amputated leg for the rest of your life\] and live the rest of your
 > life in perfect health?"
+
+</div>
 
 ![](images/amputation2.png)
 
 ## Direct methods - Standard Gamble (SG) {.smaller}
 
 ::: fragment
-> "What risk of death you would accept in order to avoid \[living with
-> stroke the rest of your life\] and live the rest of your life in
-> perfect health?"
+> "What risk of death would you accept in order to avoid \[living with
+> **stroke** for the rest of your life\] and live the rest of your life
+> in perfect health?"
 :::
 
 ::: columns
@@ -313,7 +311,7 @@ This is the STANDARD GAMBLE TECHNIQUE
 :::
 :::
 
-## Direct Methods - Time Trade-Off (TTO)
+## Direct methods - Time Trade-Off (TTO)
 
 -   An alternative to standard gamble
 
@@ -324,11 +322,11 @@ This is the STANDARD GAMBLE TECHNIQUE
 -   Task might be easier for some respondents compared to standard
     gamble
 
-## Direct Methods - Time Trade-Off (TTO) {.smaller}
+## Direct methods - Time Trade-Off (TTO) {.smaller}
 
 ::: fragment
 > "What portion of your current life expectancy of 40 years would you
-> give up to improve your current health state (stroke) to 'perfect
+> give up to improve your current health state (**stroke**) to 'perfect
 > health'?"
 :::
 
@@ -375,7 +373,7 @@ The Visual Analog Scale (VAS) is a commonly-used rating scale
 
 ::: fragment
 ![Source:
-https://assessment-module.yale.edu/im-palliative/visual-analogue-scale](images/paste-B88DC3D6.png){alt="Source: https://assessment-module.yale.edu/im-palliative/visual-analogue-scale"}
+https://assessment-module.yale.edu/im-palliative/visual-analogue-scale](images/paste-B88DC3D6.png)
 :::
 
 ## Direct methods -- Rating scales
@@ -385,8 +383,7 @@ https://assessment-module.yale.edu/im-palliative/visual-analogue-scale](images/p
 -   Very subjective and prone to more extreme answers! Usually,
     utilities for **VAS \< TTO \< SG**
 
-
-## Indirect Methods - EQ-5D {.smaller}
+## Indirect methods - EQ-5D {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -406,38 +403,44 @@ https://assessment-module.yale.edu/im-palliative/visual-analogue-scale](images/p
 :::
 
 ::: notes
-(1) Indirect utility measures map preferences onto a utility scale via a generic health-related quality of life questionnaire
+(1) Indirect utility measures map preferences onto a utility scale via a
+    generic health-related quality of life questionnaire
 :::
 
+## Indirect methods
 
-## Indirect Methods
-<br>
-
-INDIRECT UTILITY MEASURES
-<br>
-
--   HUI – Health Utility Index 
--   EQ5D – EuroQol health status measure 
--   SF-6D – Converts SF-36 & SF-12 scores to utilities 
--   QWB – Quality of well-being scale 
+-   HUI -- Health Utility Index
+-   EQ5D -- EuroQol health status measure
+-   SF-6D -- Converts SF-36 & SF-12 scores to utilities
+-   QWB -- Quality of well-being scale
 
 ::: notes
-(1) I’m not going to get into detail for each of these since you don’t need to know the granularity of each right now until you start exploring for your studies in the future, but just as an overview of some of the more well-known ones: 
+(1) I'm not going to get into detail for each of these since you don't
+    need to know the granularity of each right now until you start
+    exploring for your studies in the future, but just as an overview of
+    some of the more well-known ones:
 
-(2) HUI (Health Utility Index), based on a large, Canadian community sample (copyrighted, not free to use), patients are asked to consider their health over the past 2, 3, & 4 weeks 
+(2) HUI (Health Utility Index), based on a large, Canadian community
+    sample (copyrighted, not free to use), patients are asked to
+    consider their health over the past 2, 3, & 4 weeks
 
-(2) EQ5D, European & US-based, asks participants to consider their health during the day of the interview; free but need to request permission & if you need to translate into other languages then it can be quite pricey 
+(3) EQ5D, European & US-based, asks participants to consider their
+    health during the day of the interview; free but need to request
+    permission & if you need to translate into other languages then it
+    can be quite pricey
 
-(3) SF-6D, 4 to 1-week recall period, converts the SF-36 & SF-12 (validated, generic quality of life measures) into utility scores, conversion done by University of Sheffield developer John Brazier; published articles on the methodology to convert these
+(4) SF-6D, 4 to 1-week recall period, converts the SF-36 & SF-12
+    (validated, generic quality of life measures) into utility scores,
+    conversion done by University of Sheffield developer John Brazier;
+    published articles on the methodology to convert these
 
-(4) QWB (Quality of Well-Being scale), asks participants to consider their health over the previous three days, primary care patients in San Diego, CA; contact UCSD health outcomes assessment program for access 
+(5) QWB (Quality of Well-Being scale), asks participants to consider
+    their health over the previous three days, primary care patients in
+    San Diego, CA; contact UCSD health outcomes assessment program for
+    access
 :::
 
-
 ## DALYs
-
-
-<br>
 
 -   Origin story: Global Burden of Disease Study
 
@@ -445,9 +448,9 @@ INDIRECT UTILITY MEASURES
 
 -   Similar to QALYs, two dimensions of interest:
 
-    -   length of life (differences in life expectancy)
+    -   Length of life (differences in life expectancy)
 
-    -   quality of life (measured by disability weight)
+    -   Quality of life (measured by disability weight)
 
 ## DALYs
 
@@ -496,19 +499,19 @@ http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd
 ## Synthetic, Reference Life Table
 
 ::: {style="font-size: 0.6em"}
-| Age |    Life Expectancy     | Age |    Life Expectancy     |
-|:---:|:----------------------:|:---:|:----------------------:|
-|  0  |          88.9          | 50  | [**39.6**]{.underline} |
-|  1  |          88.0          | 55  |          34.9          |
-|  5  |          84.0          | 60  |          30.3          |
-| 10  |          79.0          | 65  |          25.7          |
-| 15  |          74.1          | 70  |          21.3          |
-| 20  |          69.1          | 75  |          17.1          |
-| 25  |          64.1          | 80  |          13.2          |
-| 30  | [**59.2**]{.underline} | 85  |          10.0          |
-| 35  |          54.3          | 90  |          7.6           |
-| 40  |          49.3          | 95  |          5.9           |
-| 45  |          44.4          |     |                        |
+| Age |     Life Expectancy     | Age |     Life Expectancy     |
+|:---:|:-----------------------:|:---:|:-----------------------:|
+|  0  |          88.9           | 50  | [39.6]{.highlight-blue} |
+|  1  |          88.0           | 55  |          34.9           |
+|  5  |          84.0           | 60  |          30.3           |
+| 10  |          79.0           | 65  |          25.7           |
+| 15  |          74.1           | 70  |          21.3           |
+| 20  |          69.1           | 75  |          17.1           |
+| 25  |          64.1           | 80  |          13.2           |
+| 30  | [59.2]{.highlight-blue} | 85  |          10.0           |
+| 35  |          54.3           | 90  |           7.6           |
+| 40  |          49.3           | 95  |           5.9           |
+| 45  |          44.4           |     |                         |
 
 Source:
 http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd-2019-reference-life-table
@@ -602,11 +605,12 @@ e712-e723.](images/paste-51631169.png){width="404"}](http://www.thelancet.com/jo
 **Common practice**
 
 -   High-income setting: QALYs
--   Low- and middle- income setting = DALYs \*\*\*Since disability
-    weights are freely & publicly available (these weights are required
-    for DALY calculations), it can reduce costs/time/resources compared
-    to collecting QALY estimates
+-   Low- and middle- income setting: DALYs
+    -   \*\*\*Since disability weights are freely & publicly available
+        (these weights are required for DALY calculations), it can
+        reduce costs/time/resources compared to collecting QALY
+        estimates
 :::
 :::
 
-
+# Next up: Incremental CEA! {background="#43464B"}

@@ -49,3 +49,8 @@ details>summary {
 .two {
   list-style: square inside;
 }
+
+
+.highlight-blue {
+  background-color: lightblue;
+}
