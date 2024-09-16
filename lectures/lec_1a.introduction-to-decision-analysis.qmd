@@ -29,7 +29,7 @@ editor: source
 ## Course Website
 
 ::: {style="font-size: 2.0em"}
-https://github.com/graveja0/bogota-vital-strategies
+<https://graveja0.github.io/vital-istanbul-2024/>
 :::
 
 ::: incremental
