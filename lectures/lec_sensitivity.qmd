@@ -1,5 +1,5 @@
 ---
-title: "Deterministic & Scenario Analysis"
+title: "Deterministic, Threshold and Scenario Analyses"
 format:
   revealjs:
     theme: slides.scss
@@ -11,29 +11,123 @@ format:
     background-transition: fade
     highlight-style: ayu-mirage
     footer: |
-      [Back to website](../index.html)
+      [Back to Website](../index.html)
 editor_options: 
   chunk_output_type: console
-editor: source
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 # Learning Objectives and Outline
 
 ## Learning Objectives
 
--   Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.
+-   Explain the purpose of deterministic sensitivity analysis and
+    provide examples of one-way versus two-way analyses.
 
--   Detail the advantages/disadvantages of deterministic sensitivity analysis.
+-   Detail the advantages/disadvantages of deterministic sensitivity
+    analysis.
 
 ## Outline
 
-1.  One-way sensitivity analysis.
-2.  Examples from publications.
+1.  Net Benefit Outcome Measures
+2.  One-way sensitivity analysis.
 3.  Two-way sensitivity analysis.
-4.  Examples from publications.
-5.  Limitations and extensions.
+4.  Limitations and extensions.
+5.  Threshold analysis
 6.  Scenario analysis
-7.  Threshold analysis
+
+## Alternatives to ICERs
+
+-   ICERs the most common approach for describing CEA results
+    -   [Good]{style="color:green"}: summarize all aspects of decision
+        problem except WTP (which comes from decision-maker)
+    -   [Bad]{style="color:red"}: algorithms a bit complicated, negative
+        ICERs, ratios can act poorly when denominator uncertain
+
+## An Alternative
+
+-   If willing to choose a fixed willingness-to-pay threshold (e.g.,
+    $\lambda =$ 100,000 / QALY), can write down an equation for the
+    contribution of health and cost to utility.
+    -   Net Health Benefit (NHB)
+    -   Net Monetary Benefit (NMB)
+-   [Objective]{style="color:blue"}: Select the strategy with the
+    highest NHB/NMB
+
+## Net Health Benefit (NHB)
+
+$$
+\text{NHB}_s = E_s - \frac{C_s}{\lambda}
+$$ where $E_s$ is effectiveness of strategy $s$, $C_s$ is cost of $s$
+and $\lambda$ is WTP threshold.
+
+## Net Health Benefit (NHB)
+
+$$
+\text{NMB}_s = E_s \times \lambda - C_s
+$$ where $E_s$ is effectiveness of strategy $s$, $C_s$ is cost of $s$
+and $\lambda$ is WTP threshold.
+
+## Example: NHB
+
+::: columns
+::: column
+$E_1$ = 0.07 years
+
+$E_2$ = 0.10 years
+
+$C_1$ = 1,500
+
+$C_2$ = 2,800
+
+$\lambda$ = 50,000 per year of life saved
+:::
+
+::: column
+$$
+ICER = \frac{2800-1500}{0.10 - 0.07}  \\
+= 43,333 \\
+$$
+:::
+:::
+
+## Example: NHB
+
+$$
+NHB_1 = 0.07 - 1500/50000 = 0.040 \\
+NHB_2 = 0.10 - 2800/50000 = 0.044
+\\
+\text{Incremental } NHB = 0.044 - 0.040 = 0.004
+$$
+
+## Example: Net Monetary Benefit (NMB)
+
+$$
+NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
+NHB_2 = 0.10 \times 50000 - 2800 = 2200
+\\
+\text{Incremental } NHB = 2200 - 2000 = 200
+$$
+
+## Calculating NMB in Amua
+
+::: r-stack
+![](images/clipboard-1972470218.png){.fragment width="750" height="500"}
+
+![](images/clipboard-2080375502.png){.fragment width="750" height="500"}
+
+![](images/clipboard-975167616.png){.fragment width="550" height="300"}
+
+![](images/clipboard-3987091812.png){.fragment width="550" height="300"}
+:::
+
+## Sensitivity
+
+- ICER for Prevention strategy is just above WTP threshold of $50,000/QALY. 
+- NMB for treatment only slightly above NMB for prevention. 
+- How sensitive are these results to changes in specific model inputs?
 
 # One-way sensitivity analysis {background="#43464B"}
 
@@ -41,23 +135,17 @@ editor: source
 
 ::: incremental
 -   Usually the starting point for sensitivity analyses
--   Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant
+-   Sequentially testing one variable at a time (i.e., Age, BMI, QALY,
+    other clinically important parameters), while holding everything
+    else constant
 -   Determining how this variation impacts the results
--   One-way sensitivity analyses are often presented in a **tornado diagram**
-    -   Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs
+-   One-way sensitivity analyses are often presented in a **tornado
+    diagram**
+    -   Used to visually rank the different variables in order of their
+        overall influence on the magnitude of the model outputs
 :::
 
-## A simple decision tree
 
-![](images/Screen%20Shot%202022-09-27%20at%203.43.43%20PM.png)
-
-## A simple decision tree
-
-![](images/Screen%20Shot%202022-09-27%20at%203.44.29%20PM.png)
-
-## A simple decision tree
-
-![](images/Screen%20Shot%202022-09-27%20at%203.45.20%20PM.png)
 
 # Examples from publications
 
@@ -89,12 +177,15 @@ editor: source
 
 ![](images/Screen%20Shot%202022-10-06%20at%209.19.09%20AM.png){width="777"}
 
+# Interactive Amua Session {background="#43464B"}
+
 # Two-way sensitivity analysis {background="#43464B"}
 
 ## Two-way sensitivity analysis
 
 ::: incremental
--   A way to map the interaction effects between two parameters in a decision analysis model
+-   A way to map the interaction effects between two parameters in a
+    decision analysis model
 -   Varies 2 parameters at a time
 -   Explores the robustness of results in more depth
 :::
@@ -108,9 +199,14 @@ editor: source
 ## HIV prevention
 
 ::: incremental
--   Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)
+-   Markov model examining strategies for HIV prevention among
+    serodiscordant couples seeking conception (woman does not have HIV
+    and male has HIV)
 
--   We know that if the **male partner is consistently on medication for HIV** (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)
+-   We know that if the **male partner is consistently on medication for
+    HIV** (i.e., resulting in virologic suppression), then the risk of
+    transmission is small regardless of the woman taking PrEP
+    (pre-exposure prophylaxis)
 
 -   And we also know that PrEP has traditionally been really **costly**
 :::
@@ -126,36 +222,52 @@ editor: source
 ## Financial incentives for acute stroke care
 
 ::: incremental
--   Under pay for performance policies in the US, **physicians or hospitals are paid more for meeting evidence-based quality targets**
+-   Under pay for performance policies in the US, **physicians or
+    hospitals are paid more for meeting evidence-based quality targets**
 
--   Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the **application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke**
+-   Study objective: Illustrate how pay-for-performance incentives can
+    be quantitatively bounded using cost-effectiveness modeling, through
+    the **application of reimbursement to hospitals for faster
+    time-to-tPA for acute ischemic stroke**
 :::
 
 ## Financial incentives for acute stroke care
 
-> When administered quickly after stroke onset (within three hours, as approved by the FDA), tPA helps to restore blood flow to brain regions affected by a stroke, thereby limiting the risk of damage and functional impairment
+> When administered quickly after stroke onset (within three hours, as
+> approved by the FDA), tPA helps to restore blood flow to brain regions
+> affected by a stroke, thereby limiting the risk of damage and
+> functional impairment
 
 ## Financial incentives for acute stroke care
 
 ![](images/Screen%20Shot%202022-09-28%20at%2010.14.03%20PM.png){width="520"}
+
+# Interactive Amua Session {background="#43464B"}
 
 # Limitations of deterministic sensitivity analyses {background="#43464B"}
 
 ## Caution: Limitations!
 
 -   Limited by the subjectivity of the choice of parameters to analyze
--   That's why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value
-
-# Opportunity to practice in Exercise!
+-   That's why we also run PSAs!, i.e., varying ALL input parameters at
+    the same time, using priors to play a distribution around each value
 
 # Scenario analysis
 
+## Motivation
+
+- Suppose we wanted to model the impact of these interventions under a "lower cost" scenario.
+- One option is to 
+- It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.
+
 ## Scenario analysis
 
--   Focuses more on model **assumptions** rather than parameter uncertainty
+-   Focuses more on model **assumptions** rather than parameter
+    uncertainty
 -   Could include separate analysis on:
 
-> Subgroups/sub-populations, including different age cohorts & risk levels
+> Subgroups/sub-populations, including different age cohorts & risk
+> levels
 
 <br>
 
@@ -163,7 +275,10 @@ editor: source
 
 ## Scenario analysis
 
-> Hypothetical scenarios ("optimistic" and "conservative" scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)
+> Hypothetical scenarios ("optimistic" and "conservative" scenarios; for
+> example, if we have little evidence of long-term survival associated
+> with medication X, we might have an optimistic versus conservative
+> scenario)
 
 <br>
 
@@ -197,7 +312,8 @@ editor: source
 
 ## Threshold analysis
 
--   Answers the question: What the input parameter need be to meet the country thresholds of:
+-   Answers the question: What the input parameter need be to meet the
+    country thresholds of:
     -   \$50,000/QALY gained
     -   \$100,000/QALY gained
     -   \$150,000/QALY gained

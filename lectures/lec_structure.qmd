@@ -6,7 +6,7 @@ format:
     incremental: true
     slide-number: true
     logo: ../vchem.png
-    html-math-method: katex
+    bibliography: references.bib
     transition: fade
     background-transition: fade
     highlight-style: ayu-mirage
@@ -60,8 +60,6 @@ library(tidyverse)
 
 -   Non-stationary rates: mortality and other time/age-varying parameters.
 -   Tunnel states and other disease-specific transition dynamics
-
-4.  Working backwards: adapting an existing model to your country/region.
 :::
 
 ## Goal
@@ -257,7 +255,7 @@ m_P %>% data.frame() %>%
 
 ::: {style="font-size: 0.6em"}
 | Statistic        | Evaluates                                                                                               | Range         | Applicable Domain  |
-|------------------|---------------------------------------------------------------------------------------------------------|---------------|--------------------|
+|-----------|---------------------------------------|-----------|-----------|
 | Rate             | $\frac{\# \text{events in time period}}{\text{Total time period experienced by all subjects followed}}$ | 0 to $\infty$ | Rate matrix        |
 | Probability/risk | $\frac{\# \text{events in time period}}{\# \text{people followed for time period}}$                     | 0-1           | Probability matrix |
 :::
@@ -500,7 +498,7 @@ Let's now calculate the probability of transitioning from the **CHF** state to *
 
 ## 3a. Rate-to-probability conversion
 
-Annual probability of transitioning from CHF to death from CHF:
+Annual probability of transitioning from CHF to death from CHF: 
 
 $$
 p_{\text{CHF,D_CHF}}= \frac{r_{\text{CHF,D_CHF}}}{r_{\text{CHF,D_CHF}} + r_{\text{CHF,D_OTH}}}\big ( 1 - e^{-(r_{\text{CHF,D_CHF}} + r_{\text{CHF,D_OTH}}) \times 1}\big )
@@ -620,7 +618,7 @@ Cons:
 Cons, cont'd:
 
 ::: incremental
--   Excel does not easily do matrix exponentiation, however you can use an approximation (we'll do this in a case study).
+-   Excel does not easily do matrix exponentiation, however you can use an approximation via a "power series expansion"
 
 -   Modern (free) statistical software can easily exponentiate a matrix:
 :::
@@ -743,7 +741,7 @@ Not all literature-based parameters operate on the rate scale. Some operate on t
 
 ::: {style="font-size: 0.5em"}
 | Statistic        | Evaluates                                                                                               | Range         | Applicable Domain  |
-|------------------|---------------------------------------------------------------------------------------------------------|---------------|--------------------|
+|-----------|---------------------------------------|-----------|-----------|
 | Rate             | $\frac{\# \text{events in time period}}{\text{Total time period experienced by all subjects followed}}$ | 0 to $\infty$ | Rate matrix        |
 | Hazard Ratio     | $\frac{\text{Hazard rate of outcome in exposed}}{\text{Hazard rate of outcome in unexposed}}$           | 0 to $\infty$ | Rate matrix        |
 | Probability/risk | $\frac{\# \text{events in time period}}{\# \text{people followed for time period}}$                     | 0-1           | Probability matrix |
@@ -821,7 +819,7 @@ Transition probability matrices (NH = Natural History; A = Strategy A; B = Strat
 
 ![](images/paste-E2EB7E3D.png)
 
-# Transition Dynamics
+# Nonstationary Transitions
 
 ## Transition Dynamics
 
@@ -841,245 +839,13 @@ Transition probability matrices (NH = Natural History; A = Strategy A; B = Strat
 ## Age-Varying Background Mortality
 
 ::: incremental
--   Useful data source is life table data.
+-   Useful data source is life table data. You used this in the Alive-Dead case study!
 -   May be available from vital statistics division in your country.
 -   Also available (by region) [from the UN](https://www.un.org/development/desa/pd/data/model-life-tables) and other organizations.
 :::
 
 ##  {background-image="media/life-table-un.png" data-background-size="contain"}
 
-```{r}
-library(ggplot2); theme_set(theme_bw())
-library(flexsurv) # For pgompertz
-library(survival) # For fitting
-library(readxl)
-library(janitor)
-
-# Read in Raw Lifetable Data
-deaths.male <- read.table(here::here("gompertz-mortality/data/mltper_1x1.txt"),skip=2,header=T,as.is=TRUE)
-deaths.female <- read.table(here::here("gompertz-mortality/data/fltper_1x1.txt"),skip=2,header=T,as.is=TRUE)
-
-# Make Some Edits
-deaths.male[which(deaths.male$Age=="110+"),]$Age <- 110
-deaths.female[which(deaths.female$Age=="110+"),]$Age <- 110
-deaths.male$Age <- as.numeric(deaths.male$Age)
-deaths.female$Age <- as.numeric(deaths.female$Age)
-
-# Isolate each file to 2010 deaths only
-deaths.male.2010 <- subset(deaths.male,Year==2010)
-deaths.female.2010 <- subset(deaths.female,Year==2010)
-
-# Generate the CDF ## CDF == 1-Survival = 1 - lx/10)
-deaths.male.2010$cdf <- with(deaths.male.2010,1-lx/100000)
-deaths.female.2010$cdf <- with(deaths.female.2010,1-lx/100000)
-
-# Expand to full data frame
-deaths.male.long <- data.frame(Age=rep(deaths.male.2010$Age, deaths.male.2010$dx))
-deaths.male.long$Death <- 1
-
-deaths.female.long <- data.frame(Age=rep(deaths.female.2010$Age, deaths.female.2010$dx))
-deaths.female.long$Death <- 1
-
-parameters = data.frame(
-  Age = 0:110,
-  male.shape=rep(NA,111),
-  male.rate=rep(NA,111),
-  female.shape=rep(NA,111),
-  female.rate=rep(NA,111)
-)
-
-parameters <- read.csv(here::here("lectures/gompertz-mortality.csv"))
-```
-
-## Background Mortality
-
-::: incremental
--   You can fit a Gompertz survival model to each age's life table data.[^9]
--   The Gompertz model will estimate two parameters: a **shape (a)** and a **rate (b)** parameter.
--   Gompertz parameters (by gender) are shown in the table.
-:::
-
-[^9]: See the [workshop blog posting](../blog/posts/gompertz-mortality.html) for R code!
-
-## Background Mortality
-
--   You can fit a Gompertz survival model to each age's life table data.
--   The Gompertz model will estimate two parameters: a **shape (a)** and a **rate (b)** parameter.
--   Gompertz parameters (by gender) are shown in the table on next slide.
-
-## Background Mortality
-
-::: {style="font-size: 1.0em"}
-```{r}
-library(knitr)
-library(kableExtra)
-parameters %>%  select(Age,a_shape = male.shape, b_rate = male.rate) %>% head() %>% kable(digits=5) %>% kable_styling()
-```
-:::
-
-## Background Mortality {.smaller}
-
-```{r}
-# for(age in 0:109)
-# {
-#   print(age)
-#   surv.data <- with(deaths.male.long[deaths.male.long$Age >= age,], Surv(Age, Death, origin=age))
-#   surv.model <- flexsurvreg(surv.data ~ 1, dist="gompertz")
-# 
-#   parameters$male.shape[age+1] <- surv.model$coefficients[1]
-#   parameters$male.rate[age+1] <- exp(surv.model$coefficients[2])
-#   
-#   surv.data <- with(deaths.female.long[deaths.female.long$Age >= age,], Surv(Age, Death, origin=age))
-#   surv.model <- flexsurvreg(surv.data ~ 1, dist="gompertz")
-#   
-#   parameters$female.shape[age+1] <- surv.model$coefficients[1]
-#   parameters$female.rate[age+1] <- exp(surv.model$coefficients[2])
-# }
-# 
-# parameters <- parameters[1:110,]
-# 
-# write.csv(parameters, here::here("lectures/media/gompertz-mortality.csv"), row.names=FALSE)
-```
-
--   Gompertz fit to mortality data for two selected ages (40- and 90-year old U.S. males)
-
-::: {#fig-gompertz layout-ncol="2"}
-```{r}
-#| fig-height: 6
-#| fig-cap: 40-Year Old Men
-#| label: fig-forty
-
-
-#  Let's check the post 40 fit.
-surv.data <- deaths.male.long[deaths.male.long$Age >= 40,]
-
-hist(surv.data$Age, freq=FALSE, main="Census Data from 2010", xlab="Male Deaths Starting at 40", breaks=20)
-curve(dgompertz(x-40, parameters$male.shape[41], parameters$male.rate[41]) , add=TRUE, col='red')
-```
-
-```{r}
-#| fig-height: 6
-#| fig-cap: 90-Year Old Men
-#| label: fig-ninety
-#| 
-#  Let's check the post 90 fit.
-surv.data <- deaths.male.long[deaths.male.long$Age >= 90,]
-
-hist(surv.data$Age, freq=FALSE, main="Census Data from 2010", xlab="Male Deaths Starting at 90", breaks=20)
-curve(dgompertz(x-90, parameters$male.shape[91], parameters$male.rate[91]) , add=TRUE, col='red')
-```
-
-Distribution of observed deaths (grey bars) and fitted Gompertz model (red) for two ages.
-:::
-
-## Background Mortality
-
-::: incremental
--   Suppose we have a model of males starting at age 40.
--   Each age has its own estimated shape (a) and rate (b) parameter.
--   We can find the values of $a$ and $b$ for our 40 year old male cohort:
-:::
-
-## Background Mortality
-
--   Suppose we have a model of males starting at age 40.
--   Each age has its own estimated shape (a) and rate (b) parameter.
--   We can find the values of $a$ and $b$ for our 40 year old male cohort:
-
-```{r}
-parameters %>% select(Age,a_shape = male.shape, b_rate = male.rate) %>%  filter(Age==40) %>% kable() %>% kable_styling()
-```
-
-## Background Mortality
-
-::: incremental
--   These shape and rate values are now fixed for our model
--   That is, we only need these two values, as they allow us to model the remaining life expectancy of our 40-year-old male cohort as it ages through our model!
-:::
-
-## Background Mortality
-
-::: incremental
--   As our cohort ages through the model (40, 41, 42, ...), the background death rate at each subsequent age can be calculated using a simple formula.
-
--   Given the $a$ and $b$ values for a 40-year-old males, we can calcualte the death rate at any subsequent age as $$r_{e} =  \frac{b}{a} (e^{at_2} - e^{at_1})$$
-:::
-
-## Background Mortality
-
-```{r}
-tmp_ <- parameters %>% select(Age,a_shape = male.shape, b_rate = male.rate) %>%  filter(Age==40)
-a <- tmp_$a_shape[1] 
-b <- tmp_$b_rate[1] 
-t = 0
-r <- (b/a) * (exp(a*(t+1)) - exp(a*((t))))
-```
-
--   The Gompertz parameters for 40-year old males (US life table data) are:
-    -   a = `r round(a,4)`
-    -   b = `r round(b,4)`
-
-## Background Mortality
-
-::: incremental
--   At t=0 (i.e., age 40), the mortality rate for the cohort over the next year is:
-
-::: nobullet
--   $$r_{t=0} = `r r` =  \frac{`r b`}{`r a`} (e^{`r a` \cdot 1} - e^{`r a` \cdot (0))})$$
-:::
-
--   Using a rate-to-probability conversion formula, this corresponds to a probability of death in the next year of $$p = 1-exp(-r) = 1-exp(-`r r`) = `r 1-exp(-r)`$$
-:::
-
-## Verifying Accuracy
-
-::: incremental
--   Using this mortality rate, we can (randomly) draw death times (years from age 40) for 1 million 40 year old males.
--   The average life expectancy is the mean of this value.
--   In this example, the life expectancy is `r round(rgompertz(1e7,shape =a, rate=b) %>% mean(),1)` years.
-:::
-
-## Background Mortality
-
--   This life expectancy closely matches other published data
-
-![](images/paste-B67603F4.png)
-
-![](images/paste-47FEC4F5.png)
-
-## Background Mortality
-
-::: incremental
--   We can now repeat this exercise for every cycle in our model.
--   This gives us a different background mortality rate for every cycle.
-:::
-
-::: {style="font-size: 0.8em"}
-```{r}
-tibble(cycle = 0:5, age = 40:45, a_shape = a, b_rate = b) %>% 
-  mutate(r_mort = (b_rate / a_shape) * (exp(a_shape*(cycle+1)) - exp(a_shape * cycle))) %>% 
-  mutate(p_death = 1-exp(-r_mort)) %>% 
-  kable(digits=4) %>% 
-  kable_styling()
-
-```
-:::
-
-## Background Mortality
-
--   We can now repeat this exercise for every cycle in our model.
--   This gives us a different background mortality rate for every cycle.
-
-::: {style="font-size: 0.8em"}
-```{r}
-tibble(cycle = 50:55, age = 50+40:45, a_shape = a, b_rate = b) %>% 
-  mutate(r_mort = (b_rate / a_shape) * (exp(a_shape*(cycle+1)) - exp(a_shape * cycle))) %>% 
-  mutate(p_death = 1-exp(-r_mort)) %>% 
-  kable(digits=4) %>% 
-  kable_styling()
-
-```
-:::
 
 ## Nonstationary Rates
 
@@ -1106,13 +872,7 @@ Source: @russellWhatPertussisMortality2016
 -   It is straightforward to incorporate these dynamics into a Markov model.
 -   Essentially, you recalculate the transition probability matrix in each cycle.
 -   This works long as the underlying rates/probabilities change by age.
-:::
-
-## Nonstationary Rates
-
-::: incremental
--   This makes the Excel a bit more complicated, because you have to incorporate visual basic code to recalculate.
--   We have constructed an optional case study that draws on age-specific background mortality rates -- see the workshop website for more!
+-   Amua can handle all of this for you, provided you enter the age-specific "lookup table" in the model (just as with background mortality). 
 :::
 
 ## Other Transition Dynamics
@@ -1228,13 +988,9 @@ m_Pt %>%
 ```
 :::
 
-## Tunnel States: Healthy, Sick, Dead
+## Tunnel States: Healthy, Sick, Dead {.smaller}
 
 -   If we run out the Markov trace for five cycles, here are the results.
-
-::: incremental
--   You can find a nice discussion of how to incorporate tunnel states into an Excel model [here](https://www.youtube.com/watch?v=FkYFRNw5EAw).
-:::
 
 ::: {style="font-size: 0.75em"}
 ```{r}
@@ -1252,255 +1008,6 @@ library(Matrix)
 
 ```
 :::
-
-# Working Backwards
-
-## Working Backwards
-
-::: incremental
--   Suppose someone has already constructed a detailed Markov model for the decision problem you are working on.
--   However, this model was constructed for another country/region/context.
--   Rather than start from "scratch" with your own model, you might be able to adapt it!
-:::
-
-## Working Backwards
-
-Essentially, this means working backwards!
-
-![](images/paste-72736A50.png)
-
-## Working Backwards
-
-Essentially, this means working backwards!
-
-![](images/paste-B58E8E75.png)
-
-## Working Backwards
-
-::: incremental
--   We won't go into the (very mathematical) details, but we will show you how to do this!
--   Essentially, we will "solve" for what is called the **generator matrix** for the (existing) transition probability matrix.
--   This is done through a process known as "eigenvalue decomposition."
--   Note that this is not always possible, depending on the matrix!
-:::
-
-## Working Backwards
-
-Let's start with the example transition probability matrix from earlier:
-
-`m_P` =
-
-```{r}
-m_P %>% 
-  kable() %>% 
-  kable_styling()
-```
-
-## Working Backwards
-
-To obtain the rate matrix (`m_R`) from an existing transition probability matrix (`m_P`):
-
-``` r
-V  <- eigen(m_P)$vectors
-iV <- solve(V)
-Ap <- iV %*% m_P %*% V
-lAp <- diag(log(diag(Ap)), nrow(Ap), ncol(Ap))
-m_R  <- V %*% lAp %*% iV
-```
-
-## Working Backwards
-
-To obtain the rate matrix (`m_R`) from an existing transition probability matrix (`m_P`):
-
-`m_R` =
-
-```{r}
-m_R %>% 
-  kable() %>% 
-  kable_styling()
-```
-
-## Working Backwards
-
-::: incremental
--   We now have the rate matrix that is the "hub" or "root" of the underlying Markov model!
--   From here, we could adapt rates using country-specific parameters.
--   For example, we could adapt the rate of background mortality to match our country's/region's mortality rate.
--   We could also add additional states, or make other changes as needed.
-:::
-
-## Working Backwards
-
-::: incremental
--   Once we make the changes we need, we just go back to our usual process.
--   "Embed" the new transition probability matrix using rate-to-probability conversion formulas, or using exponentiation.
-:::
-
-# Now You Try It!
-
-<!-- ## Relative Risk (RR) -->
-
-<!-- -   Also known as a **risk ratio** -->
-
-<!-- -   Ratio of the probability of an outcome between two groups. -->
-
-<!-- -   RR = 1 : Probability of outcome identical -->
-
-<!-- -   RR \< 1 : Probability of outcome is lower compared to reference group. -->
-
-<!-- -   RR \> 1 : Probability of outocme is higher compare to referance group. -->
-
-<!-- ## Relative Risk vs. Odds Ratio -->
-
-<!-- -   RR is different from the odds ratio (OR). -->
-
-<!-- -   OR \$\approx \$ RR for outcomes with small probabilities. -->
-
-<!-- ##  -->
-
-<!-- | Quantity     | Where Does it Apply?                         | -->
-
-<!-- |--------------|----------------------------------------------| -->
-
-<!-- | rate         | Transition rate matrix ($\mathbf{R}$)        | -->
-
-<!-- | Hazard Ratio | Transition rate matrix ($\mathbf{R}$)        | -->
-
-<!-- | probability  | Transition probability matrix ($\mathbf{P}$) | -->
-
-<!-- | probability  | Transition probability matrix ($\mathbf{P}$) | -->
-
-<!-- | probability  | Transition probability matrix ($\mathbf{P}$) | -->
-
-<!-- ## Transition Rate Matrix -->
-
-<!-- For strategy $s$ -->
-
-<!-- $\mathbf{R}$ = -->
-
-<!-- ::: {style="font-size: 0.6em"} -->
-
-<!-- |     | H                                                    | S                                                                                                                                                                      | D                                                                                                                                                                      | -->
-
-<!-- |------------|------------|------------------------|------------------------| -->
-
-<!-- | H   | [$-(r_{HS,s}+r_{HD,s})$]{style="background:#f3c7a0"} | [$r_{HS,s}\cdot \Delta t$]{style="background:#bee0ec"}=</span>[$HR_{HS,s}$]{style="background:#9ee9b2"} $\cdot$ [$r_{HS,0}\cdot \Delta t$]{style="background:#bee0ec"} | [$r_{HD,s}\cdot \Delta t$]{style="background:#bee0ec"}=</span>[$HR_{HD,s}$]{style="background:#9ee9b2"} $\cdot$ [$r_{HD,0}\cdot \Delta t$]{style="background:#bee0ec"} | -->
-
-<!-- | S   | 0                                                    | [$-r_{SD,s}\cdot \Delta t$]{style="background:#f3c7a0"}                                                                                                                | [$r_{SD,s}\cdot \Delta t$]{style="background:#bee0ec"}=</span>[$HR_{SD,s}$]{style="background:#9ee9b2"} $\cdot$ [$r_{SD,0}\cdot \Delta t$]{style="background:#bee0ec"} | -->
-
-<!-- | D   | 0                                                    | 0                                                                                                                                                                      | 0                                                                                                                                                                      | -->
-
-<!-- ::: -->
-
-<!-- ::: {style="font-size: 0.6em"} -->
-
-<!-- | Key                                                                                                       | -->
-
-<!-- |------------------------------------------------------------------------| -->
-
-<!-- | </span>[Rate adjusted for timestep $\Delta t$]{style="background:#bee0ec"}                                | -->
-
-<!-- | </span>[$r_0\cdot \Delta t=$ Baseline Rate adjusted for time step $\Delta t$]{style="background:#bee0ec"} | -->
-
-<!-- | </span>[Hazard Ratio $\frac{r_s\cdot \Delta t}{r_0\cdot \Delta t}$]{style="background:#9ee9b2"}           | -->
-
-<!-- | </span>[Constructed from other cells]{style="background:#f3c7a0"}                                         | -->
-
-<!-- ::: -->
-
-<!-- ## Relative Risks and Odds Ratios -->
-
-<!-- ::: incremental -->
-
-<!-- -   Where do relative risks and odds ratios plug in? -->
-
-<!-- -   These must be applied to the transition probability matrix. -->
-
-<!-- -   Therefore, we first convert the transition rate matrix to the transition probability matrix. -->
-
-<!-- ::: -->
-
-<!-- ## Rate Matrix to Probability Matrix {.smaller} -->
-
-<!-- -   *Preferred Method*: $\mathbf{P} = \exp(\mathbf{R})$[^4] -->
-
-<!-- -   Can also use the rate-to-probability conversion formulas. -->
-
-<!-- [^4]: Can use statistical software or Taylor series expansion; see case study for worked example. -->
-
-<!-- ## Transition Probability Matrix -->
-
-<!-- For strategy $s$ -->
-
-<!-- ::: {style="font-size: 0.8em"} -->
-
-<!-- |     | H                                               | S                                                                                                                                          | D                                                                                                                                          | -->
-
-<!-- |-------------|-------------|------------------------|------------------------| -->
-
-<!-- | H   | [$1-p_{HS}-p_{HD}$]{style="background:#f3c7a0"} | [$p_{HS}^s$]{style="background:#f2c9ec"}=</span>[$RR_{HS}^s$]{style="background:#f8f5aa"} $\cdot$ [$p_{HS}^0$]{style="background:#f2c9ec"} | [$p_{HD}^s$]{style="background:#f2c9ec"}=</span>[$RR_{HD}^s$]{style="background:#f8f5aa"} $\cdot$ [$p_{HD}^0$]{style="background:#f2c9ec"} | -->
-
-<!-- | S   | 0                                               | [$1-p_{SD}^s$]{style="background:#f3c7a0"}                                                                                                 | [$p_{SD}^s$]{style="background:#f2c9ec"}=</span>[$RR_{SD}^s$]{style="background:#f8f5aa"} $\cdot$ [$p_{SD}^0$]{style="background:#f2c9ec"} | -->
-
-<!-- | D   | 0                                               | 0                                                                                                                                          | 0                                                                                                                                          | -->
-
-<!-- ::: -->
-
-<!-- ::: {style="font-size: 0.8em"} -->
-
-<!-- | Key                                                                                                              | -->
-
-<!-- |------------------------------------------------------------------------| -->
-
-<!-- | </span>[Probability]{style="background:#f2c9ec"}                                                                 | -->
-
-<!-- | </span>[$p^0=$ Probability Rate]{style="background:#f2c9ec"}                                                     | -->
-
-<!-- | </span>[Relative Risk $RR = \frac{p^s}{p^0} = \frac{OR^s}{(1-p^0+(p^0 \times OR))}$]{style="background:#f8f5aa"} | -->
-
-<!-- | </span>[Constructed from other cells]{style="background:#f3c7a0"}                                                | -->
-
-<!-- ::: -->
-
-<!-- ## Transition Probability Matrix with Odds Ratios -->
-
-<!-- For strategy $s$ -->
-
-<!-- ::: {style="font-size: 0.8em"} -->
-
-<!-- |     | H                                               | S                                                                                                                                          | D                                                                                                                                          | -->
-
-<!-- |-------------|-------------|------------------------|------------------------| -->
-
-<!-- | H   | [$1-p_{HS}-p_{HD}$]{style="background:#f3c7a0"} | [$p_{HS}^s$]{style="background:#f2c9ec"}=</span>[$RR_{HS}^s$]{style="background:#f8f5aa"} $\cdot$ [$p_{HS}^0$]{style="background:#f2c9ec"} | [$p_{HD}^s$]{style="background:#f2c9ec"}=</span>[$RR_{HD}^s$]{style="background:#f8f5aa"} $\cdot$ [$p_{HD}^0$]{style="background:#f2c9ec"} | -->
-
-<!-- | S   | 0                                               | [$1-p_{SD}^s$]{style="background:#f3c7a0"}                                                                                                 | [$p_{SD}^s$]{style="background:#f2c9ec"}=</span>[$RR_{SD}^s$]{style="background:#f8f5aa"} $\cdot$ [$p_{SD}^0$]{style="background:#f2c9ec"} | -->
-
-<!-- | D   | 0                                               | 0                                                                                                                                          | 0                                                                                                                                          | -->
-
-<!-- ::: -->
-
-<!-- ::: {style="font-size: 0.8em"} -->
-
-<!-- | Key                                                                                  | -->
-
-<!-- |------------------------------------------------------------------------| -->
-
-<!-- | </span>[Probability]{style="background:#f2c9ec"}                                     | -->
-
-<!-- | </span>[$p^0=$ Probability Rate]{style="background:#f2c9ec"}                         | -->
-
-<!-- | </span>[Odds Ratio $\frac{OR^s}{1-p^0+(p^0 \times OR)}$]{style="background:#f8f5aa"} | -->
-
-<!-- | </span>[Constructed from other cells]{style="background:#f3c7a0"}                    | -->
-
-<!-- ::: -->
-
-<!-- ## Test -->
-
-<!-- ![](images/paste-23DDF3EF.png) -->
-
-<!-- Source: @gidwaniEstimatingTransitionProbabilities2020 -->
 
 # References
 

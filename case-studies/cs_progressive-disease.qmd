@@ -13,6 +13,31 @@ self-contained: true
 editor: source
 ---
 
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  #link = "https://graveja0.github.io/cea-workshop-vital/case-studies/cs5_healthy-sick-dead_v1_BLANK.xlsx",
+  link = "https://graveja0.github.io/vital-istanbul-2024/case-studies/cs_progressive-disease_blank.amua",
+  button_label = "Download Case Study Template",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
+
+# To Do
+
+-   Add a more explicit download link.
+- Add final case study template to AWS instance landing page. 
+-   Mention initial age
+-   Change initial parameters in blank doc to align with final values.
+-   Have them change cohort size to 1 for the life expectancy check.
+-   Two-prongs not three.
+-   Do discounting only after QALY and cost outcomes have been defined.
+
 # Introduction
 
 This case study will build a decision model to analyze strategies to prevent and treat a noncommunicable disease.
@@ -60,21 +85,21 @@ Relevant model parameters are summarized in the tables below:
 
 ## Costs
 
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
-| Name            | Value      | Description                                                                                                      |
-+=================+============+==================================================================================================================+
-| c_healthy       | 0          | Annual (cycle) cost of healthy state.                                                                            |
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
-| c_mild          | 1000       | Annual (cycle) cost of mild disease state.                                                                       |
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
-| c_progressive   | 3000       | Annual (cycle) cost of progressive disease state.                                                                |
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
-| c_death_disease | 5000       | One-time transition cost of death from progressive disease.                                                      |
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
-| c_prevention    | 500        | Annual (cycle) cost of prevention.                                                                               |
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
-| c_treatment     | 25,000     | One-time cost of progressive disease treatment (occurs at point of transition from mild to progressive disease). |
-+-----------------+------------+------------------------------------------------------------------------------------------------------------------+
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
+| Name            | Value   | Description                                                                                                      |
++=================+=========+==================================================================================================================+
+| c_healthy       | 0       | Annual (cycle) cost of healthy state.                                                                            |
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
+| c_mild          | 1000    | Annual (cycle) cost of mild disease state.                                                                       |
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
+| c_progressive   | 3000    | Annual (cycle) cost of progressive disease state.                                                                |
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
+| c_death_disease | 5000    | One-time transition cost of death from progressive disease.                                                      |
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
+| c_prevention    | 500     | Annual (cycle) cost of prevention.                                                                               |
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
+| c_treatment     | 25,000  | One-time cost of progressive disease treatment (occurs at point of transition from mild to progressive disease). |
++-----------------+---------+------------------------------------------------------------------------------------------------------------------+
 
 ## Quality of Life Adjustments
 
@@ -110,7 +135,7 @@ Relevant model parameters are summarized in the tables below:
 
 Your first objective is to build out a status quo or "do nothing" strategy based on the description and parameters defined above. **This is a strategy in which neither preventive measures nor additional treatments are used.**
 
-To get you going, we have built out the beginnings of a model based on an alive-dead model with age-specific background mortality rates. You can download this model at [this link](graveja0.github.io/vital-istanbul-2024/case-studies/cs_progressive-disease_blank.amua). The image below shows the structure of this model:
+To get you going, we have built out the beginnings of a model based on an alive-dead model with age-specific background mortality rates. You can download this model at [this link](https://graveja0.github.io/vital-istanbul-2024/case-studies/cs_progressive-disease_blank.amua). The image below shows the structure of this model:
 
 ![](images/clipboard-2678783669.png){fig-align="center"}
 
@@ -152,7 +177,7 @@ It's often useful to occasionally stop and validate that your model does not hav
 
 To do this, make the following changes:
 
-1.  Make sure that the life expectancy "payoff" ("LE") is set to 1 for all health states in which an individual remains alive (Healthy, Asymptomatic, Progressive).
+1.  Make sure that the life expectancy "payoff" ("LE") is set to 1 for all health states in which an individual remains alive (Healthy, Mild, Progressive).
 
 2.  Temporarily set the probabilty of disease-related death to 0.
 
@@ -162,13 +187,12 @@ To do this, make the following changes:
 With these changes made, check and run the model. You should obtain a life expectancy value of 77.0449.
 :::
 
-## Define Cycle Adjustments and Discounting 
+## Define Cycle Adjustments and Discounting
 
 -   Go to Model {{< fa arrow-right >}} Properties {{< fa arrow-right >}} select the Markov tab.
-- Select the "Half-Cycle Correction" option.
-- Select the "Discount Rewards" option and enter the discount rates shown in the tables above. 
-- Click "OK"
-
+-   Select the "Half-Cycle Correction" option.
+-   Select the "Discount Rewards" option and enter the discount rates shown in the tables above.
+-   Click "OK"
 
 ## Define Outcomes
 
@@ -189,7 +213,7 @@ Our next step is to define our primary health-related quality-of-life and cost o
 
     -   Costs and QoL in Healthy state
 
-    -   Costs and QoL in Asymptomatic state
+    -   Costs and QoL in Mild state
 
     -   Costs and QoL in Progressive Disease state
 
@@ -222,7 +246,7 @@ Our next objective is to build out the remaining two strategies: prevention and 
 ::: {.callout-important appearance="minimal"}
 The prevention and treatment parameters (`rr_prevention` and `rr_treatment`, respectively) are defined as relative risks. Recall that relative risks can be directly multiplied with transition probabilities:
 
-![](images/clipboard-3868901548.png){fig-align="center" width="800"}
+![](images/clipboard-1008495585.png)
 
 If these parameters were instead hazard ratios, we'd have to go back to the underlying transition rates to perform the multiplication, and then re-convert into transition probabilities.
 :::
@@ -251,7 +275,7 @@ The treatment strategy includes a one-time treatment cost, which should apply as
 Check and run the model to obtain Cost-Effectiveness Analysis (CEA) results
 :::
 
-### Cost-Effectiveness Analysis 
+### Cost-Effectiveness Analysis
 
 ::: {.callout-note appearance="minimal"}
 If the Ministry of Health uses a \$25,000/QALY threshold for adoption, what strategy would you recommend based on your initial results?
