@@ -3,10 +3,6 @@ title: "Case Study: Progressive Disease Model"
 format:
   html:
     toc: false
-  docx:
-    toc: false
-  pdf:
-    toc: false        
 editor_options: 
   chunk_output_type: console
 self-contained: true

@@ -5,8 +5,6 @@ format:
     toc: false
   pdf:
     toc: false
-  docx:
-    toc: false
 ---
 
 ::: callout-important
