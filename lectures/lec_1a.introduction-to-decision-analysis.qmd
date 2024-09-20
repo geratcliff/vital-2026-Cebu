@@ -211,26 +211,36 @@ You have been appointed as Director of a funding allocation committee responsibl
 **Opioid/substance use in pregnancy**
 
 ![](images/ex4-oud-tradeoffs.png)
-
+::: {style="font-size: 0.8em"}
+[leech aa et al 2024]
+:::
 
 ## Ex 3. Opioid/substance use in pregnancy 
 
 ![](images/oud-schematic-2.png)
+::: {style="font-size: 0.8em"}
+[leech aa et al 2024]
+:::
 
 
 ## Ex 3. Opioid/substance use in pregnancy 
 
 ![](images/oud-methods.png)
-
+::: {style="font-size: 0.8em"}
+[leech aa et al 2024]
+:::
 
 ## Ex 3. Opioid/substance use in pregnancy
 
 ![](images/ceac.png)
+::: {style="font-size: 0.8em"}
+[leech aa et al 2024]
+:::
 
 
 ## Ex 3. Opioid/substance use in pregnancy
 
--   The clear winner is buprenorphine?!! 
+-   The clear winner is buprenorphine!! 
 -   Yes, BUT... 
 <br>
 -   We know that clinically, patient choice is really important for retention outcomes 
@@ -247,8 +257,7 @@ You have been appointed as Director of a funding allocation committee responsibl
 ## Ex 3. Opioid/substance use in pregnancy
 <br>
 
-> Despite that challenging decision trade-off, the model clearly demonstrated that even if buprenorphine is “dominating” in the parlance of decision-science and health economics, if providers and/or policy makers require pregnant individuals to initiate treatment with the “optimal” treatment, and that requirement leads to decreased retention on MOUD, then the policy becomes a poor one that results in less life and higher cost than allowing pregnant individuals to choose their preferred CHOICE. 
-
+> Despite that challenging decision trade-off, the model clearly demonstrated that even if buprenorphine is “dominating” in the parlance of decision science and health economics--if requiring this treatment leads to reduced retention--it becomes a poor policy, leading to worse outcomes & higher costs than allowing them to CHOOSE their preferred option. 
 
 
 ## Estimating probabilities is fundamental to decision making {background="#43464B"}
