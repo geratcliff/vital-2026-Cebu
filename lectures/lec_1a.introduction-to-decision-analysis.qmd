@@ -60,11 +60,34 @@ editor: source
     -   Source: [WHO](https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases)
 -   Rates also remain high in many parts of the world for malnutrition, unmet need for sexual and reproductive health services, and maternal mortality.
 
+## Despite these advances ...
+
+-   Governments/society's cannot afford all the healthcare from which people could possibly benefit
+-   Either implicitly or explicitly, we make choices about which programs to fund, which individuals and populations to screen, and which expensive new drugs to provide to which patients
+-   ***Decision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point (in other words, how to get the biggest bang for your buck)**
+
+## Decision Analysis 
+
+<br>
+
+> Decision analysis is a methodology that is uniquely beneficial when there are meaningful tradeoffs between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain. 
+
+
 ##  {background-image="images/new_decision-analysis-overview.png" data-background-size="contain"}
 
 ##  {background-image="images/new_decision-analysis-overview_blank.png" data-background-size="contain"}
 
 <br><br>
+
+## Value  
+
+<br> 
+
+> Economists have long defined value as "outcomes relative to costs" 
+
+<br>
+> If we only consider benefits when we define value, it's no different htan efficacy or effectiveness research. And we obviously don't want to just consider costs without benefits! 
+
 
 # Examples of Decision Analyses {background="#43464B"}
 
@@ -121,6 +144,7 @@ You have been appointed as Director of a funding allocation committee responsibl
 ::: {.callout-note appearance="minimal"}
 **Objective**: Minimize total expected deaths
 :::
+
 
 ## Ex 2. Birth Defects {auto-animate="true"}
 
@@ -182,55 +206,50 @@ You have been appointed as Director of a funding allocation committee responsibl
 -   We may treat one child's death as more tolerable than some other's -- even when we have no way, before the fact, of distinguishing one infant from the other.
 :::
 
-## Ex 3. Colon Cancer
+## Ex 3. Another "competing objectives" example: My own work 
 
-::: incremental
--   3rd leading cause of cancer death.
--   Men, women, all races.
--   Early detection aids in prevention & improves health outcomes .
--   $\sim80\%$ preventable.
-:::
+**Opioid/substance use in pregnancy**
 
-## Ex 3. Colon Cancer -- **Prevention**
+![](images/ex4-oud-tradeoffs.png)
 
-::: incremental
--   When to screen?
--   Which test & how often?
--   If a polyp is found/removed, when to repeat?
-:::
 
-## Ex 3. Colon Cancer -- **Prevention**
+## Ex 3. Opioid/substance use in pregnancy 
 
-::: incremental
--   Cost-effectiveness of alternative screening tests?
--   Alternative frequencies of screening?
--   How should screening vary by risk groups?
-:::
+![](images/oud-schematic-2.png)
 
-## Ex 3. Colon Cancer - **Estimating Probabilities**
 
-::: incremental
--   Predict colon cancer risk/incidence
-    -   Family history, past polyps, other factors
-    -   Probability of getting colon cancer
--   Predict impact from colon cancer
-    -   Probability of cure
-    -   Probability of death
-    -   Probability of morbidity\
-:::
+## Ex 3. Opioid/substance use in pregnancy 
 
-## Ex 3. Colon Cancer - **Estimating Probabilities**
+![](images/oud-methods.png)
 
-::: incremental
--   Predict "benefit" from screening
-    -   All previous probabilities
-    -   Probability of early detection
-    -   Probability of complication from testing
-    -   Probability of false positive
-    -   Probability of false negative
-    -   Probability of positive tests = cancer
-    -   Probability of negative test = no cancer
-:::
+
+## Ex 3. Opioid/substance use in pregnancy
+
+![](images/ceac.png)
+
+
+## Ex 3. Opioid/substance use in pregnancy
+
+-   The clear winner is buprenorphine?!! 
+-   Yes, BUT... 
+<br>
+-   We know that clinically, patient choice is really important for retention outcomes 
+-   We can also see that our final conclusions are driven by the infant outcomes 
+-   We did not simulate the birthing parent over their lifetime 
+
+
+## Ex 3. Opioid/substance use in pregnancy
+<br>
+
+> The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling. 
+
+
+## Ex 3. Opioid/substance use in pregnancy
+<br>
+
+> Despite that challenging decision trade-off, the model clearly demonstrated that even if buprenorphine is “dominating” in the parlance of decision-science and health economics, if providers and/or policy makers require pregnant individuals to initiate treatment with the “optimal” treatment, and that requirement leads to decreased retention on MOUD, then the policy becomes a poor one that results in less life and higher cost than allowing pregnant individuals to choose their preferred CHOICE. 
+
+
 
 ## Estimating probabilities is fundamental to decision making {background="#43464B"}
 
