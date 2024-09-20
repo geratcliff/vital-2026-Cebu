@@ -579,6 +579,7 @@ width="50%"}
 :::
 
 ## At what probability ($p_B$) of rain for the beach are you indifferent between the two options? {auto-animate="true"}
+<br> 
 
 Set 0.74 (expected value of remaining at home) equal to the **beach**
 payoffs and solve for $p_B$
@@ -599,19 +600,11 @@ p~B~ \* 0.4 + 1 - p~B~ = 0.74
 
 ## At what probability ($p_B$) of rain for the beach are you indifferent between the two options? {auto-animate="true"}
 
-::: {.fragment .fade-out}
-p~B~ \* 0.4 + 1 - p~B~ = 0.74
-:::
-
 ::: incremental
 p~B~ \* -0.6 = -0.26
 :::
 
 ## At what probability ($p_B$) of rain for the beach are you indifferent between the two options? {auto-animate="true"}
-
-::: {.fragment .fade-out}
-p~B~ \* -0.6 = -0.26
-:::
 
 ::: incremental
 p~B~ = -0.26 / -0.6 = [**0.43**]{style="color:green;"}
@@ -734,6 +727,7 @@ style ERHospB fill:#ffffff,stroke:#333,stroke-width:0px
 :::
 
 ## Pathways
+<br>
 
 -   Pathways = sequence of events that lead to a subsequent "pay off"
 -   In other words, a sequence of events leads to an
@@ -748,6 +742,7 @@ style ERHospB fill:#ffffff,stroke:#333,stroke-width:0px
 ![](images/pathways.png)
 
 ## Conditional probability
+<br> 
 
 Example: What is the conditional probability of death within a year of
 birth, given the infant has a mother who smokes?
