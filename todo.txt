@@ -1,0 +1,30 @@
+John's To-Do list
+
+cs_alive-dead.qmd
+  - Add country-specific .csv files
+
+cs_progressive-disease.qmd
+  - Switch to pairwise probabilities
+  - Make sure to have them define a WTP in the Analysis tab
+  
+Deterministic sensitivity 
+  - Add a reminder to have a defined WTP in the Analysis tab
+  
+Scenario Analyses
+  - Come up with some examples
+
+Threshold Analyses
+  - Come up with some examples
+  
+DALY Lecture
+  - Adapt approach 1 to use Amua output
+  - Export undiscounted and non-cycle-corrected Markov traces from Amua
+  - Do by hand in Excel
+  
+  
+What if data aren't available? 
+  - Add a section on how to use expert opinion
+  - Add a section on how to use data from similar countries
+  
+  
+

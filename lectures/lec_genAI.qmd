@@ -1,0 +1,31 @@
+---
+title: "Modeling with Generative AI"
+format:
+  revealjs:
+    theme: slides.scss
+    incremental: false
+    slide-number: true
+    logo: ../vchem.png
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: |
+      [Back to Website](../index.html)
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Motivation
+
+-   Inform the coceptualization and construction of a progressive
+    disease model using generative AI.
+
+## Conceptualize the Decision Problem
+
+![](images/clipboard-2243802403.png)
+
+## Refine the Decision Problem 
