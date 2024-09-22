@@ -16,4 +16,5 @@ _bundled-daily-material/
 _freeze/
 *.zip
 *.jar
-_gbd_lifetables/
+_gbd_lifetables/IHME*
+_gbd_lifetables/life-tables-2019.rds
