@@ -124,11 +124,33 @@ countries = c("Bangladesh", "Cambodia", "Cameroon", "China", "Ethiopia", "India"
      name = paste0(gsub(" ","_",tolower(.y)),".csv")
      x <- tibble(.x) %>% ungroup() %>% select(index,p_die) 
      rownames(x) = NULL
-     cat(paste0("_gbd_lifetables/output/",name))
+     cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
      cat("\n")
      x %>% data.table::fwrite(here(paste0("_gbd_lifetables/output/",name)))
+     
+     
    }))) %>% 
    unnest(cols = c(tmp))
  
- 
+
+ gbd_lt2 %>% mutate(le = map(hp_mort,~({
+   hp_ <-   .x
+   p_ <- tibble(index = 0:111, p_die = approxfun(names(.x$fitted.values), .x$fitted.values )(0:111))
+   s_ <- c(1,0) 
+   tr <- 0:111 %>% map(~({
+     px <- p_[.x+1,]$p_die
+     P = matrix(c(1-px,0,px,1),nrow=2,ncol=2, dimnames = list(c("A","D"),c("A","D")))
+     s_ <<- s_ %*% P
+     data.frame(s_)
+   })) %>% 
+     bind_rows() %>% 
+     as.matrix()
+   hc <- rep(1,length(0:111))
+   hc[1] = 0.5
+   hc[length(hc)] = .5
+   le <- sum((tr %*% c(1,0))*hc)
+   cat(paste0("Life Expectanccy ",round(le,2),"\n"))
+   as.numeric(le)
+ }))) %>% 
+   unnest(cols = c(le))
  
