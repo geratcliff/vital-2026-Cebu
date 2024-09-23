@@ -50,13 +50,11 @@ Decision trees & probabilities
 :::
 
 ::: {.callout-note appearance="simple"}
-Bayes theorem & the importance of incorporating information on testing,
-including the value of this additional information
+Bayes theorem & probability revision
 :::
 
 ::: {.callout-note appearance="simple"}
-Treatment thresholds and constructing decision trees within varying
-software programs
+Constructing decision trees using Amua
 :::
 
 ## Today... {background="#43464B"}
@@ -97,7 +95,6 @@ fig-align="center" width="255"}
 ::: {.fragment .fade-in-then-semi-out}
 -   {{< fa check-circle >}} Comparative analysis of alternative courses
     of action.
-    -   We'll focus on this in the next lecture.
 :::
 :::
 
@@ -106,7 +103,7 @@ fig-align="center" width="255"}
 <br>
 
 | Type of study | Measurement/valuation of costs | Identification of consequences | Measurement / valuation of consequences |
-|-----------------|-----------------|-----------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | Cost analysis | Monetary units                 | None                           | None                                    |
 
 ::: footer
@@ -131,7 +128,7 @@ Source: [@drummond2015a]
 <br>
 
 | Type of study                         | Measurement/Valuation of costs         | Identification of consequences                                                             | Measurement / valuation of consequences                                                                  |
-|-----------------|-----------------|------------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | [Cost analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [None]{style="color: grey;"}                                                               | [None]{style="color: grey;"}                                                                             |
 | Cost-effectiveness analysis           | Monetary units                         | Single effect of interest, common to both alternatives, but achieved to different degrees. | Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.) |
 
@@ -168,7 +165,7 @@ budget, and the relevant outcome is common across strategies
 ## Techniques for Economic Evaluation {.smaller}
 
 | Type of study                                       | Measurement/Valuation of costs both alternative | Identification of consequences                                                                                     | Measurement / valuation of consequences                                                                                          |
-|-----------------|-----------------|------------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | [Cost analysis]{style="color: grey;"}               | [Monetary units]{style="color: grey;"}          | [None]{style="color: grey;"}                                                                                       | [None]{style="color: grey;"}                                                                                                     |
 | [Cost-effectiveness analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"}          | [Single effect of interest, common to both alternatives, but achieved to different degrees.]{style="color: grey;"} | [Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.)]{style="color: grey;"} |
 | Cost-utility analysis                               | Monetary units                                  | Single or multiple effects, not necessarily common to both alternatives.                                           | Healthy years (typically measured as quality-adjusted life-years)                                                                |
@@ -181,7 +178,7 @@ Source: [@drummond2015a]
 
 ::: incremental
 -   Essentially a variant of cost-effectiveness analysis.
--   **Major feature:** use of generic measure of health.
+-   **Major feature:** use of summary measure of health: **QALY**.
 -   Quality-Adjusted Life Year (QALY): A metric that reflects both
     changes in life expectancy and quality of life (pain, function, or
     both).
@@ -192,7 +189,7 @@ Source: [@drummond2015a]
 
 ::: {style="font-size: 0.8em"}
 | Type of study                                       | Measurement/Valuation of costs both alternative | Identification of consequences                                                                                     | Measurement / valuation of consequences                                                                                          |
-|-----------------|-----------------|------------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | [Cost analysis]{style="color: grey;"}               | [Monetary units]{style="color: grey;"}          | [None]{style="color: grey;"}                                                                                       | [None]{style="color: grey;"}                                                                                                     |
 | [Cost-effectiveness analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"}          | [Single effect of interest, common to both alternatives, but achieved to different degrees.]{style="color: grey;"} | [Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.)]{style="color: grey;"} |
 | [Cost-utility analysis]{style="color: grey;"}       | [Monetary units]{style="color: grey;"}          | [Single or multiple effects, not necessarily common to both alternatives.]{style="color: grey;"}                   | [Healthy years (typically measured as quality-adjusted life-years)]{style="color: grey;"}                                        |
@@ -232,9 +229,11 @@ Source: [@drummond2015a]
 -   Relevant when healthcare alternatives have different costs & health
     consequences <br>
 
-::: fragment
-$$ \frac{\text{(Cost Intervention A - Cost Intervention B)}}{\text{(Benefit A - Benefit B)}}$$
-:::
+<div>
+
+$$\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) - Benefit (B)}}$$
+
+</div>
 
 -   Relative VALUE of an intervention in comparison to its alternative
     is expressed as a cost-effectiveness RATIO (the focus of next
@@ -266,6 +265,7 @@ $$ \frac{\text{(Cost Intervention A - Cost Intervention B)}}{\text{(Benefit A - 
 ## Who uses economic evaluations? {.smaller}
 
 ::: {style="font-size: 0.8em"}
+::: fragment
 -   Health Technology Advisory Committees
 
     -   NICE (The National Institute for Health and Care Excellence,
@@ -277,7 +277,9 @@ $$ \frac{\text{(Cost Intervention A - Cost Intervention B)}}{\text{(Benefit A - 
         **Australia**)
 
     -   **Brazil**'s health technology assessment institute
+:::
 
+::: fragment
 -   Groups developing clinical guidelines
 
     -   WHO
@@ -286,12 +288,15 @@ $$ \frac{\text{(Cost Intervention A - Cost Intervention B)}}{\text{(Benefit A - 
 
     -   Disease-specific organizations: American Cancer Society;
         American Heart Association; European Stroke Organisation
+:::
 
+::: fragment
 -   Regulatory agencies:
 
     -   FDA (U.S. Food and Drug Administration)
 
     -   EPA (U.S. Environmental Protection Agency)
+:::
 :::
 
 ::: notes
@@ -350,7 +355,11 @@ associated consequences in terms of:
 
 <br>
 
-$$ \frac{\text{(Cost Intervention A - Cost Intervention B)}}{\text{(Benefit A - Benefit B)}}$$
+<div>
+
+$$\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) - Benefit (B)}}$$
+
+</div>
 
 ::: notes
 (1) We will now get into the components of cost-effectiveness analyses
@@ -743,11 +752,11 @@ $$
         cost-effectiveness thresholds are often estimated in the unit of
         USD per DALY.
 
--   How do we convert 1,000 Nairas to USD?
+-   How do we convert 1,000 Turkish Liras to USD?
 
--   Current exchange rate in 2023: 1 Naira = \~0.0013 USD
+-   Current exchange rate in 2024: 1 Turkish Lira = \~0.029 USD
 
--   1,000 Nairas = 1.3 USD
+-   1,000 Liras = 29 USD
 :::
 
 # Discounting
@@ -853,6 +862,6 @@ Adjust for inflation and currency first, then discount
 -   Assume in year 5, a patient develops disease, and there is a
     treatment cost of \$500
     -   This is the future value (FV) of the cost!
--   Present value PV = $PV = FV/(1+r)^t = 500/(1+0.03)^5 = \$ 431.3$
+-   Present value $PV = FV/(1+r)^t = 500/(1+0.03)^5 = \$ 431.3$
 
 # Next up: Benefits! (the denominator)
