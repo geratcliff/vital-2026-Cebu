@@ -5,32 +5,32 @@ library(glue)
 
 countries = c("Bangladesh", "Cambodia", "Cameroon", "China", "Ethiopia", "India", "Kenya", "Mozambique", "Philippines", "Rwanda", "South Africa", "Sri Lanka", "Thailand", "Zimbabwe", "United Republic of Tanzania", "Uganda", "Zambia")
 
- cbd_life_tables <- c(
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_28_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_5_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_6_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_7_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_8_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_9_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_10_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_11_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_12_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_13_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_14_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_15_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_16_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_17_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_18_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_19_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_20_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_30_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_31_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_32_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_33_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_44_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_45_0.zip",
-     "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_148_0.zip"
- )
+cbd_life_tables <- c(
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_28_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_5_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_6_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_7_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_8_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_9_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_10_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_11_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_12_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_13_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_14_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_15_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_16_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_17_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_18_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_19_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_20_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_30_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_31_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_32_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_33_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_44_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_45_0.zip",
+   "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_148_0.zip"
+)
 
  # cbd_life_tables %>% map(~({
  #     cat(glue::glue("File: {.x}\n"))
@@ -86,71 +86,197 @@ countries = c("Bangladesh", "Cambodia", "Cameroon", "China", "Ethiopia", "India"
 
      })))
  
- gbd_lt2 <- countries %>% map(~({
+ gbd_lt <- countries %>% map(~({
    gbd_lt %>% filter(grepl(tolower(paste0(.x,"")),tolower(location_name)))
  })) %>% 
    bind_rows() %>% 
    filter(!location_name == "Indiana" & !location_name=="Taiwan (Province of China)") 
  
- setdiff(countries,gbd_lt2$location_name)
+ setdiff(countries,gbd_lt$location_name)
  
- gbd_lt2 <-
-     gbd_lt2 %>%
-     mutate(hp_mort = map(life_table,~({
-         ages     <- .x$age
-         deaths   <- .x$lx * .x$qx
-         exposure <- .x$lx
-
-         mort_fit <- MortalityLaw(
-             x  = ages,
-             Dx  = deaths,   # vector with death counts
-             Ex  = exposure, # vector containing exposures
-             law = "HP",
-             opt.method = "LF2")
-         mort_fit
-         #coef(mort_fit) %>% data.frame() %>% t()
-     })))
- 
- 
- 
- gbd_lt2 %>% mutate(p_death = map(hp_mort,~({
-   hp_ <-   .x
-   tibble(index = 0:111, p_die = approxfun(names(.x$fitted.values), .x$fitted.values )(0:111))
- })))  %>% 
-   unnest(cols = p_death) %>% 
-   select(location_name,index, p_die) %>% 
-   group_by(location_name) %>% 
-   nest() %>% mutate(tmp = map2(data,location_name, ~({
-     name = paste0(gsub(" ","_",tolower(.y)),".csv")
-     x <- tibble(.x) %>% ungroup() %>% select(index,p_die) 
-     rownames(x) = NULL
-     cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
-     cat("\n")
-     x %>% data.table::fwrite(here(paste0("_gbd_lifetables/output/",name)))
-     
-     
-   }))) %>% 
-   unnest(cols = c(tmp))
- 
-
- gbd_lt2 %>% mutate(le = map(hp_mort,~({
-   hp_ <-   .x
-   p_ <- tibble(index = 0:111, p_die = approxfun(names(.x$fitted.values), .x$fitted.values )(0:111))
+ # Fit the Mortality Model 
+ gbd_lt %>% mutate(p_death = map(life_table, ~({
+   ages     <- .x$age
+   deaths   <- .x$lx * .x$qx
+   exposure <- .x$lx
+   
+   mort_fit <- MortalityLaw(
+     x  = ages,
+     Dx  = deaths,   # vector with death counts
+     Ex  = exposure, # vector containing exposures
+     law = "HP",
+     opt.method = "LF2")
+   r_ <- HP(.x$age,mort_fit$coefficients)$hx
+   afn_ <- approxfun(.x$age,r_)
+   p_ <- tibble(index = 0:111, r_die = afn_(0:111),fitted = HP(0:111,mort_fit$coefficients)$hx) %>% 
+     mutate(r_die = ifelse(index<12 & fitted>0.5,r_die,fitted)) %>% 
+     select(index,r_die)
    s_ <- c(1,0) 
    tr <- 0:111 %>% map(~({
-     px <- p_[.x+1,]$p_die
+     px <- 1-exp(-p_[.x+1,]$r_die)
      P = matrix(c(1-px,0,px,1),nrow=2,ncol=2, dimnames = list(c("A","D"),c("A","D")))
      s_ <<- s_ %*% P
      data.frame(s_)
    })) %>% 
      bind_rows() %>% 
      as.matrix()
-   hc <- rep(1,length(0:111))
+   tr = na.omit(tr)
+   hc <- rep(1,nrow(tr))
    hc[1] = 0.5
    hc[length(hc)] = .5
    le <- sum((tr %*% c(1,0))*hc)
    cat(paste0("Life Expectanccy ",round(le,2),"\n"))
    as.numeric(le)
+   p_ 
  }))) %>% 
-   unnest(cols = c(le))
+   select(location_name,p_death) %>% 
+   unnest(cols = c(p_death)) %>% 
+   select(location_name,index, r_die) 
+ 
+ 
+ #### SCRATCH FROM HERE OUT
+ 
+   group_by(location_name) %>% 
+   nest() %>% 
+   mutate(tmp = map2(data,location_name, ~({
+     name = paste0(gsub(" ","_",tolower(.y)),".csv")
+     x <- tibble(.x) %>% ungroup() %>% select(index,p_die) 
+     rownames(x) = NULL
+     cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
+     cat("\n")
+     x %>% data.table::fwrite(here(paste0("_gbd_lifetables/output/",name)))
+   }))) %>% 
+   unnest(cols = c(tmp))
+
+
+
+ 
+
+ gbd_lt <-
+   gbd_lt %>%
+   mutate(hp_mort = map(life_table,~({
+     ages     <- .x$age
+     deaths   <- .x$lx * .x$qx
+     exposure <- .x$lx
+     
+     mort_fit <- MortalityLaw(
+       x  = ages,
+       Dx  = deaths,   # vector with death counts
+       Ex  = exposure, # vector containing exposures
+       law = "HP",
+       opt.method = "LF2")
+     mort_fit
+     #coef(mort_fit) %>% data.frame() %>% t()
+   })))
+ 
+ 
+ 
+ df_ <- 
+   gbd_lt %>% filter(location_name=="Cameroon") %>% 
+   ungroup() %>% 
+   select(data) %>% 
+   unnest(cols = c(data)) %>% filter(sex_id==3) %>% 
+   mutate(age = age_group_lut[paste0(age_group_id)]) %>% 
+   select(age,metric_name,val) %>% 
+   arrange(age) %>% 
+   mutate(metric_name = gsub(" ","_",tolower(metric_name))) %>% 
+   spread(metric_name,val)
+ df_ %>% write.csv("~/Desktop/cameroon.csv")
+# probability to rate function
+
+ 
+ 
+
+
+
+ .x = gbd_lt2[1,]$data[[1]]
+
+ 
+ p_ <- tibble(age = 0:110, p_die = approxfun(df_$age,df_$probability_of_death)(0:110))
+ 
+
+ 
+ gbd_lt2 %>% mutate(p_death = map(data,~({
+  lt_ <- .x %>% 
+    filter(measure_name=="Probability of death" & sex_id==3) %>% 
+    mutate(age = age_group_lut[paste0(age_group_id)])  %>% 
+    arrange(age)
+  afn_ <- approxfun(lt_$age, lt_$val)
+
+  p_ <-  tibble(index = 0:111, p_die = afn_(0:111))
+  s_ <- c(1,0) 
+  tr <- 0:111 %>% map(~({
+    px <- p_[.x+1,]$p_die
+    P = matrix(c(1-px,0,px,1),nrow=2,ncol=2, dimnames = list(c("A","D"),c("A","D")))
+    s_ <<- s_ %*% P
+    data.frame(s_)
+  })) %>% 
+    bind_rows() %>% 
+    as.matrix()
+  hc <- rep(1,length(0:111))
+  hc[1] = 0.5
+  hc[length(hc)] = .5
+  le <- sum((tr %*% c(1,0))*hc)
+  cat(paste0("Life Expectanccy ",round(le,2),"\n"))
+  as.numeric(le)
+  p_ 
+}))) %>% 
+  unnest(cols = p_death) %>% 
+  select(location_name,index, p_die) %>% 
+  group_by(location_name) %>% 
+  nest() %>% 
+  mutate(tmp = map2(data,location_name, ~({
+    name = paste0(gsub(" ","_",tolower(.y)),".csv")
+    x <- tibble(.x) %>% ungroup() %>% select(index,p_die) 
+    rownames(x) = NULL
+    cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
+    cat("\n")
+    x %>% data.table::fwrite(here(paste0("_gbd_lifetables/output/",name)))
+  }))) %>% 
+  unnest(cols = c(tmp))
+
+
+
+
+ 
+ # gbd_lt2 %>% mutate(p_death = map(hp_mort,~({
+ #   hp_ <-   .x
+ #   tibble(index = 0:111, p_die = approxfun(names(.x$fitted.values), .x$fitted.values )(0:111))
+ # })))  %>% 
+ #   unnest(cols = p_death) %>% 
+ #   select(location_name,index, p_die) %>% 
+ #   group_by(location_name) %>% 
+ #   nest() %>% mutate(tmp = map2(data,location_name, ~({
+ #     name = paste0(gsub(" ","_",tolower(.y)),".csv")
+ #     x <- tibble(.x) %>% ungroup() %>% select(index,p_die) 
+ #     rownames(x) = NULL
+ #     cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
+ #     cat("\n")
+ #     x %>% data.table::fwrite(here(paste0("_gbd_lifetables/output/",name)))
+ #     
+ #     
+ #   }))) %>% 
+ #   unnest(cols = c(tmp))
+ # 
+
+ # gbd_lt2 %>% mutate(le = map(hp_mort,~({
+ #   hp_ <-   .x
+ #   p_ <- tibble(index = 0:111, p_die = approxfun(names(.x$fitted.values), .x$fitted.values )(0:111))
+ #   s_ <- c(1,0) 
+ #   tr <- 0:111 %>% map(~({
+ #     px <- p_[.x+1,]$p_die
+ #     P = matrix(c(1-px,0,px,1),nrow=2,ncol=2, dimnames = list(c("A","D"),c("A","D")))
+ #     s_ <<- s_ %*% P
+ #     data.frame(s_)
+ #   })) %>% 
+ #     bind_rows() %>% 
+ #     as.matrix()
+ #   hc <- rep(1,length(0:111))
+ #   hc[1] = 0.5
+ #   hc[length(hc)] = .5
+ #   le <- sum((tr %*% c(1,0))*hc)
+ #   cat(paste0("Life Expectanccy ",round(le,2),"\n"))
+ #   as.numeric(le)
+ # }))) %>% 
+ #   unnest(cols = c(le))
  

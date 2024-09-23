@@ -1,0 +1,35 @@
+---
+title: "Specify the Decision Problem"
+subtitle: "Capstone Exercise 1"
+format:
+  html:
+    toc: false
+  pdf:
+    toc: false
+---
+
+# Objectives
+
+- Clarify and specify the decision problem you are addressing
+
+-	Describe and define the
+  -	Specific health condition(s)/issue(s)
+  -	Specific population(s) affected
+  -	Current public health consequences
+  -	Current and alternative strategies
+
+# Deliverables
+
+Create initial/draft slides for final presentation that introduce your decision
+
+-	Slide 1 – Title, Team name, and Members
+  - Tell us who you are
+  
+- Slide 2 – Background    
+  - What is the health condition/issue you are trying to address and what is the motivation for addressing it?
+  
+- Slide 3 – Objective
+  - What is the decision problem or comparison you will be modeling?
+  
+-	Slide 4 – Strategy options
+  -Describe the status quo and the options you are considering

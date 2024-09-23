@@ -1,7 +1,9 @@
 John's To-Do list
 
+quarto-ify the capstone 
+
 cs_alive-dead.qmd
-  - Add country-specific .csv files
+  - Check country-specific .csv files
 
 cs_progressive-disease.qmd
   - Switch to pairwise probabilities
@@ -20,7 +22,6 @@ DALY Lecture
   - Adapt approach 1 to use Amua output
   - Export undiscounted and non-cycle-corrected Markov traces from Amua
   - Do by hand in Excel
-  
   
 What if data aren't available? 
   - Add a section on how to use expert opinion
