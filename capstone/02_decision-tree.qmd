@@ -1,0 +1,25 @@
+---
+title: "Construct a Decision Tree in Amua"
+subtitle: "Capstone Exercise 2"
+format: 
+  html:
+    link-external-newwindow: true
+  pdf:
+    toc: false
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Objectives
+-	Construct a decision tree in Amua comparing the status quo to your specific strategy(ies)
+
+-	Parameterize decision tree and estimate outcomes
+  -	Use known parameters, if possible
+  -	It is ok to use educated guesses (assumptions) if parameters are unknown at this time
+
+# Deliverables
+-	Create slide for final presentation that graphically displays your decision options using a decision tree
+  -	Slide 5 – Decision tree graphic with expected values
+How do they copy the decision tree graphic out of Amua into PPT?

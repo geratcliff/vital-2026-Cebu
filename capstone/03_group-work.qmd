@@ -1,0 +1,24 @@
+---
+title: "Group Work"
+subtitle: "Capstone Exercise 3"
+format: 
+  html:
+    link-external-newwindow: true
+  pdf:
+    toc: false
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Objectives
+-	Work as a team to refine your decision problem and strategies based on your Amua decision tree
+What did you have to specify for the model that was not in your initial description of the decision problem and strategies?
+
+# Deliverables
+-	Refined descriptions of decision problem and strategies
+  -	Slide 3 – Objective/Decision problem
+  What do you have to add or subtract to match the decision tree?
+  -	Slide 4 – Strategy options
+  What should you add or subtract to match the decision tree?

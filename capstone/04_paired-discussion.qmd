@@ -1,0 +1,36 @@
+---
+title: "Paired Group Discussion"
+subtitle: "Capstone Exercise 4"
+format: 
+  html:
+    link-external-newwindow: true
+  pdf:
+    toc: false
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Objectives
+
+-	Present your draft Background, Objective/Decision Problem, and Strategy Options to your paired team
+Quick, 5-minute presentation. Allow plenty of time for feedback.
+
+-	Provide feedback on clarity and completeness of descriptions
+
+How can the health issue/condition be more clearly described?  
+
+Was the motivation to address the health condition/issue well described? What else is needed to convince you it is important?
+
+Is the decision problem clearly defined? 
+
+How well do the strategy options match the background and decision problem? 
+ 
+
+# Deliverables
+
+-	Refined slide descriptions of background, decision problem, and strategies based on feedback
+-	Slide 2 – Background 
+-	Slide 3 – Objective/Decision problem
+-	Slide 4 – Strategy options

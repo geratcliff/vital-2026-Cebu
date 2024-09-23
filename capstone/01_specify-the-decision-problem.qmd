@@ -1,11 +1,15 @@
 ---
 title: "Specify the Decision Problem"
 subtitle: "Capstone Exercise 1"
-format:
+format: 
   html:
-    toc: false
+    link-external-newwindow: true
   pdf:
     toc: false
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
 ---
 
 # Objectives

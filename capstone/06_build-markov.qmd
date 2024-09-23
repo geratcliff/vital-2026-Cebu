@@ -1,0 +1,34 @@
+---
+title: "Build and Run Your Markov Model"
+subtitle: "Capstone Exercise 6"
+format: 
+  html:
+    link-external-newwindow: true
+  pdf:
+    toc: false
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Objectives
+-	Determine parameter estimates and complete the parameter table
+What are the data points you have on hand? Which ones do you need to make assumptions for in order to run the model?
+
+-	Determine transition probabilities and fill in the transition matrix
+What are the probabilities you have on hand? Which ones do you need to make assumptions for in order to run the model?
+
+-	Run Markov model in Amua
+Link to a wiki on running Markov models in Amua –  https://github.com/zward/Amua/wiki/Markov-Models 
+
+
+# Deliverables
+
+-	Create slides for final presentation that fills in and documents your Markov model inputs and calculation
+
+  -	Slide 7 – filled in parameter table, transition matrix
+  Be sure to indicate which estimates are assumptions
+  -	Slide 8 – Markov bubble schematic and “reward” calculations
+  
+

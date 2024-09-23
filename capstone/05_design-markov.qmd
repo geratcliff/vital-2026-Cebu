@@ -1,0 +1,53 @@
+---
+title: "Design Your Markov Model"
+subtitle: "Capstone Exercise 5"
+format: 
+  html:
+    link-external-newwindow: true
+  pdf:
+    toc: false
+editor_options: 
+  chunk_output_type: console
+self-contained: true
+editor: source
+---
+
+# Objectives
+
+-   Use your decision problem, strategies, and decision tree from slides 3, 4, and 5
+
+-   Determine the health states of the decision problem
+
+    ::: {.callout-important appearance="minimal"}
+    *These become your Markov states*
+    :::
+
+-   Determine the transitions
+
+    ::: {.callout-important appearance="minimal"}
+    *Which state(s) does your population move in and out of? Is there an order?*
+    :::
+
+-   Determine parameters
+
+    -   Population – who?
+    -   Cycle length – how long does it take to move through the states?
+    -   Time horizon – how far into the future?
+    -   Probabilities (fill these in later)
+
+# Deliverables
+
+-   Create slide for final presentation that displays your decision problem as a Markov schematic
+-   Slide 6 – bubble diagram graphic, parameter table headers, transition matrix framework
+
+::: {.callout-important appearance="minimal"}
+Your draft bubble diagram should indicate the various health/intervention states and directional pathways between states.
+:::
+
+::: {.callout-important appearance="minimal"}
+The parameter table should list the parameters needed to define and run the model – ages, costs, utility weights, time horizon – it does not need parameter estimates yet.
+:::
+
+::: {.callout-important appearance="minimal"}
+Use the transition matrix to define the health/intervention states that the population can move between – probability estimates are not needed yet  
+:::

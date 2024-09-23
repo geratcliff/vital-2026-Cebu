@@ -1,0 +1,144 @@
+---
+title: "Capstone Exercises"
+format:
+  revealjs:
+    theme: ../lectures/slides.scss
+    incremental: true
+    slide-number: true
+    logo: ../vchem.png
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: |
+      [Back to Website](../index.html)
+editor_options: 
+  chunk_output_type: console
+editor: source
+---
+
+# 1. Specify the Decision Problem
+
+## Objectives
+
+-   Clarify the decision problem you are addressing
+-   Describe
+    -   Current public health concern
+    -   Health condition(s) you are modeling
+    -   Specific population(s) affected
+    -   Current and alternative strategies
+
+## Deliverables
+
+Create initial slides for final presentation that introduce your decision problem
+
+-   Slide 1: Title
+-   Slide 2: Background
+-   Slide 3: Objective/Decision problem and economic/clinical outcomes
+-   Slide 4: Strategy options
+
+## Examples
+
+::: {.callout-tip appearance="minimal"}
+Assess the cost-effectiveness of community-based A, community-based B, and hospital-based hypertension screening options among Thai population aged 18+
+:::
+
+## Examples
+
+::: {.callout-tip appearance="minimal"}
+Assess the cost-effectiveness of community-based A, community-based B, and hospital-based hypertension screening options among Thai population aged 18+
+:::
+
+::: {.callout-tip appearance="minimal"}
+Assess the tradeoffs of implementing mass rotavirus vaccination of newborns in India
+:::
+
+## Examples
+
+::: {.callout-tip appearance="minimal"}
+Assess the cost-effectiveness of community-based A, community-based B, and hospital-based hypertension screening options among Thai population aged 18+
+:::
+
+::: {.callout-tip appearance="minimal"}
+Assess the tradeoffs of implementing mass rotavirus vaccination of newborns in India
+:::
+
+::: {.callout-tip appearance="minimal"}
+Compare cost-effectiveness of strategies for prevention of malaria: Distribution of insecticide-treated nets Seasonal malaria prophylaxis
+:::
+
+# 2. Build a Decision Tree
+
+## Objectives
+
+-   Construct a decision tree in Amua comparing the status quo to your specific strategy(ies)
+-   Parameterize decision tree and estimate outcomes
+
+## Deliverables
+
+-   Create slide for final presentation that graphically displays your decision options using a decision tree
+-   Slide 5 – Decision tree graphic with expected values
+
+##  {background-image="images/clipboard-656182917.png" data-background-size="contain"}
+
+
+# 3. Group Work
+
+## Objectives
+- Work as a team to refine your decision problem and strategies based on your Amua decision tree
+
+## Deliverables
+- Refined descriptions of decision problem and strategies
+  - Slide 3 – Objective/Decision problem
+  - Slide 4 – Strategy options
+
+# 4. Paired Group Discussions
+
+##  Objectives
+- Present Background, Objective/Decision Problem, and Strategy Options to other team
+  - 5-minute presentation
+- Provide feedback on clarity and completeness of descriptions
+- Switch presenting team/feedback team at halfway point
+
+## Deliverables
+
+- Refined descriptions of background, decision problem, and strategies
+  - Slide 2 – Background
+  - Slide 3 – Objective/Decision problem
+  - Slide 4 – Strategy options
+
+# 5. Design a Markov Model
+
+## Objectives
+
+- Use your decision problem and strategies from slides 3, 4, and 5
+  - Determine the health states of the decision problem
+  - Determine the transitions
+  - Determine parameters
+    - Population
+    - Cycle length
+    - Time horizon
+    - Probabilities (fill in later)
+
+## Deliverables
+
+- Create slide for final presentation that displays your decision problem as a Markov schematic
+  - A good resource to use is draw.io
+  
+- Slide 6 – bubble diagram graphic, parameter table headers, transition matrix framework
+
+# 6. Build and Run the Markov Model
+
+## Objectives
+
+- Determine parameter estimates and complete the parameter table
+- Determine transition probabilities and fill in the transition matrix
+- Run Markov model in Amua
+
+## Deliverables
+
+- Create slides for final presentation that fills in and documents your Markov model inputs and calculation
+  - Slide 7 – filled in parameter table, transition matrix
+  - Slide 8 – Markov bubble schematic and “reward” calculations
+
+
