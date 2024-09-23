@@ -41,7 +41,8 @@ Here is a comprehensive [tutorial](https://s3.amazonaws.com/amua-tutorials/Amua+
 
 # Step 1: Define Strategies
 
--   Create a new model in Amua and define the following three strategies
+-   Create a new model in Amua: In Amua, on the menu at the top, go to **Model** -\> **New** -\> **Decision Tree**.
+-   Define the following three strategies
     1.  No screening
     2.  Screen
     3.  Treat all
@@ -115,18 +116,17 @@ You can now complete the structure of the decision tree by adding in the remaini
 
 # Step 5: Save
 
--   You can save at any time by clicking on Model -\> Save or using the keyboard shortcut (Windows: Ctrl-S. Mac: CmdS).
+-   You can save at any time by clicking on **Model -\> Save** or using the keyboard shortcut (Windows: Ctrl-S. Mac: Cmd-S).
 -   When saving for the first time, a dialog box will appear asking for the name of the model.
--   Choose the location where you want to save the model, enter `Dx_Screen` as the file name, and click Save.
+-   Choose the location where you want to save the model, enter `Dx_Screen` as the file name, and click **Save**.
 
 # Step 6: Define Model Outcomes
 
-By default, model outcomes (called model ‘dimensions’ in Amua) track Costs, denoted by the \$ symbol inside\
-parentheses. In this model, our outcome of interest will be Life Expectancy.
+By default, model outcomes (called model 'dimensions' in Amua) track Costs, denoted by the \$ symbol inside parentheses. In this model, our outcome of interest will be Life Expectancy.
 
--   To change the outcome of interest, go to the menu bar and click `Model ->   Properties` and select the `Analysis` tab.
+-   To change the outcome of interest, go to the menu bar and click `Model -> Properties` and select the `Analysis` tab.
 -   In this tab, rename the dimension from **Cost** to **Life Expectancy**, change the symbol to LE, and choose 2 decimal places for precision.
--   Make sure that you hit Enter once you change the value in a table cell. The cell border will turn [light blue]{style="color: #118aef;"} once the cell is updated.
+-   Make sure that you hit **Enter** once you change the value in a table cell. The cell border will turn [light blue]{style="color: #118aef;"} once the cell is updated.
 
 ![](images/amua-properties.png) ![](images/amua-le.png)
 
@@ -138,10 +138,9 @@ Now we will assign probabilities to the branches of chance nodes <i class="fa-so
 
 -   For the branch `No Screen`, click underneath the branch labeled **D+** (next to the label p:). A text-entry box will now be outlined in [blue]{style="color: blue;"}. This is where you enter the probability for this branch.
 
--   Type `prev` which we will define as the *prevalence* of the disease. Hit Enter or click outside the text-box to accept the probability.
+-   Type `prev` which we will define as the *prevalence* of the disease. Hit **Enter** or click outside the text-box to accept the probability.
 
--   The text will now turn [red]{style="color: red;"} because Amua does not recognize prev as a model object, so we will have to\
-    define it later.
+-   The text will now turn [red]{style="color: red;"} because Amua does not recognize prev as a model object, so we will have to define it later.
 
 ![](images/amua-prob1.png)
 
@@ -151,11 +150,11 @@ Now we will assign probabilities to the branches of chance nodes <i class="fa-so
 
 -   Because the probabilities for all branches of a chance node must sum to 1.0, we could enter `1-prev` as the probability.
 
-    -   This is called a ‘complementary’ probability as it provides the complement to sum to 1.0.
+    -   This is called a 'complementary' probability as it provides the complement to sum to 1.0.
 
--In Amua you can type `C` or `c` to indicate a complementary probability. - Note that there can only be one complementary probability per chance node.
+-   In Amua you can type `C` or `c` to indicate a complementary probability. (Note that there can only be one complementary probability per chance node.)
 
--Enter `C` for the probability of **D-**.
+    -   Enter `C` for the probability of **D-**.
 
 ![](images/amua-prob2.png)
 
@@ -165,14 +164,23 @@ Now we will assign probabilities to the branches of chance nodes <i class="fa-so
 
 -   Enter `C` for the probability of Test -.
 
--   Next, we'll define the probability of having the disease given each test result in the Screen strategy.
+-   Next, we'll define the probability of having the disease given each test result in the `Screen` strategy.
 
     1.  On the **Test +** branch, click under the **D+** branch and type `pD_TPos`. This will be the probability of having the disease given a positive test.
+
     2.  Click under **D-** and type `C` to indicate a complementary probability.
+
     3.  For the **Test -** branch, click under the **D+** branch and type `pD_TNeg`, which is the probability of having the disease given a negative test.
+
     4.  Click under **D-** below and type `C` again.
 
-![](images/amua-prob3.png) - Finally, define teh probability of having the disease in the `Treat All` strategy. 1. Click under **D+** and type `prev`, which is the prevalence of the disease. 2. Enter **C** for the probability of **D-**.
+        ![](images/amua-prob3.png)
+
+-   Finally, define the probability of having the disease in the `Treat All` strategy.
+
+    1.  Click under **D+** and type `prev`, which is the prevalence of the disease.
+
+    2.  Enter `C` for the probability of **D-**.
 
 # Step 8: Defining Payoffs
 
@@ -191,7 +199,7 @@ Now we will define the payoffs for each terminal node to model the consequences 
     -   On the **Test-** branch, enter `LateRx` as the payoff for **D +** since these people have the disease but were not identified by the screening test.
     -   For **D -**, enter `NoDx` since these people are true negatives.
 
--   Everyone will be treated in the `Treat  All` strategy. This is good for those with the disease, but not for those\
+-   Everyone will be treated in the `Treat All` strategy. This is good for those with the disease, but not for those\
     without the disease.
 
     -   For **D +**, enter `Rx` as the payoff and for **D -** enter `Tox`.
@@ -202,7 +210,7 @@ Your decision tree should now look like this:
 
 # Step 9: Defining Parameters
 
-We’ve entered the names of all of the probabilities and payoffs in the tree, but we haven’t yet defined the values for these parameters. We could have entered numeric values directly in the tree, but defining them as Parameters is more flexible and lets us perform sensitivity analyses later. Parameters are global in the model, which means that they can only be defined once and have the same value wherever they are used in the model.
+We've entered the names of all of the probabilities and payoffs in the tree, but we haven't yet defined the values for these parameters. We could have entered numeric values directly in the tree, but defining them as Parameters is more flexible and lets us perform sensitivity analyses later. Parameters are global in the model, which means that they can only be defined once and have the same value wherever they are used in the model.
 
 1.  In the upper right-hand box of the program, you will see a blue <i class="fa-solid fa-plus" style="color: #1c67e9;"></i> sign:
 
@@ -214,18 +222,18 @@ We’ve entered the names of all of the probabilities and payoffs in the tree, b
 To [delete a variable]{style="color: #D65C41;"}, click on the variable and click on the red <i class="fa-solid fa-x" style="color: #d03216;"></i> next to the pencil image in the variable dialogue.
 :::
 
-| Parameter | Description                                                                      | Value                                                    |
-|-----------|----------------------------------------------------------------------------------|----------------------------------------------------------|
-| prev      | Disease prevalence                                                               | 0.05                                                     |
-| sens      | Sensitivity of test                                                              | 0.97                                                     |
-| spec      | Specificity of test                                                              | 0.9988                                                   |
-| pTPos     | Probability of testing positive (based on Bayes' theorem–more on this tomorrow!) | prev \* sens + (1 - prev) \* (1 - spec)                  |
-| pD_TPos   | Probability of having the disease given a *positive* test.                       | prev \* sens / (prev \* sens + (1 - prev) \* (1 - spec)) |
-| pD_TNeg   | Probability of having the disease given a *negative* test.                       | prev\*(1 - sens)/(prev \* (1 - sens)+(1 - prev) \* spec) |
-| LateRx    | Life expectancy if disease treated late                                          | 25.2                                                     |
-| NoDx      | Life expectancy if no disease                                                    | 40.3                                                     |
-| Rx        | Life expectancy if treated                                                       | 35.8                                                     |
-| Tox       | Life expectancy if treated, but do not have disease (due to Rx toxicity)         | 39.4                                                     |
+| Parameter | Description                                                                       | Value                                                    |
+|--------------|-----------------------------------|-----------------------|
+| prev      | Disease prevalence                                                                | 0.05                                                     |
+| sens      | Sensitivity of test                                                               | 0.97                                                     |
+| spec      | Specificity of test                                                               | 0.9988                                                   |
+| pTPos     | Probability of testing positive (based on Bayes' theorem--more on this tomorrow!) | prev \* sens + (1 - prev) \* (1 - spec)                  |
+| pD_TPos   | Probability of having the disease given a *positive* test.                        | prev \* sens / (prev \* sens + (1 - prev) \* (1 - spec)) |
+| pD_TNeg   | Probability of having the disease given a *negative* test.                        | prev\*(1 - sens)/(prev \* (1 - sens)+(1 - prev) \* spec) |
+| LateRx    | Life expectancy if disease treated late                                           | 25.2                                                     |
+| NoDx      | Life expectancy if no disease                                                     | 40.3                                                     |
+| Rx        | Life expectancy if treated                                                        | 35.8                                                     |
+| Tox       | Life expectancy if treated, but do not have disease (due to Rx toxicity)          | 39.4                                                     |
 
 ![](images/amua-addparam1.png){width="511"}
 
