@@ -1,5 +1,5 @@
 ---
-title: Decision Analysis and Economic Evaluation Workshop 
+title: Decision Modeling for Health Economic Evaluation
 subtitle: Istanbul, Türkiye 2024
 editor: visual
 format: 
@@ -98,21 +98,13 @@ bibliography: references.bib
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                        | 16:00         | Daily Recap and Group Discussion                                                                                                                             |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 02/10/2024 (Wednesday) | 08:15 - 09:30 | [Interactive Lecture / Case Study: CEAs, One- and Two-way Sensitivity](lectures/lec_sensitivity.qmd) \[JG\]                                                  |
+| 02/10/2024 (Wednesday) | 08:15 - 09:30 | [One- and Two-way Sensitivity](lectures/lec_sensitivity.qmd) \[JG\]                                                                                          |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                        | 09:30 - 10:15 | Interactive Lecture: Deterministic, Scenario and Threshold Analyses \[JG\]                                                                                   |
-|                        |               |                                                                                                                                                              |
-|                        |               | [2022 Lecture](https://vchem-vital-workshop-2022.netlify.app/lectures/lec_sensitivity_scenario#/title-slide)                                                 |
-|                        |               |                                                                                                                                                              |
-|                        |               | [2023 Nigeria Version](https://graveja0.github.io/v-brch-nigeria-2023/lectures/lec_sensitivity.html#/title-slide)                                            |
-|                        |               |                                                                                                                                                              |
-|                        |               | \[JG\]                                                                                                                                                       |
+|                        | 09:30 - 10:15 | [Deterministic, Scenario and Threshold Analyses](lectures/lec_sensitivity.qmd) \[JG\]                                                                        |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                        | 10:15 - 10:30 | Break                                                                                                                                                        |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                        | 10:30 - 12:00 | Interactive Lecture: Probabilistic Sensitivity Analysis and Value of Information \[JG\]                                                                      |
-|                        |               |                                                                                                                                                              |
-|                        |               | [2022 Lecture](https://vchem-vital-workshop-2022.netlify.app/lectures/lec_psa#/title-slide)                                                                  |
+|                        | 10:30 - 12:00 | [Interactive Lecture: Probabilistic Sensitivity Analysis and Value of Information](lectures/lec_psa.qmd) \[JG\]                                              |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                        | 12:00 - 13:15 | Lunch                                                                                                                                                        |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
