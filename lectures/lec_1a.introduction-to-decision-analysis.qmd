@@ -15,6 +15,8 @@ format:
 editor_options: 
   chunk_output_type: console
 editor: source
+markdown: 
+  wrap: 72
 ---
 
 ## Outline {{< fa regular clipboard >}}
@@ -62,16 +64,19 @@ editor: source
 
 ## Despite these advances ...
 
--   Governments/society's cannot afford all the healthcare from which people could possibly benefit
--   Either implicitly or explicitly, we make choices about which programs to fund, which individuals and populations to screen, and which expensive new drugs to provide to which patients
--   ***Decision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point (in other words, how to get the biggest bang for your buck)**
+::: {.callout-note appearance="minimal"}
+Governments cannot afford all the healthcare from which people could possibly benefit
+:::
 
-## Decision Analysis 
+-   Either implicitly or explicitly, we make choices about which programs to fund, which populations to screen, and which expensive new drugs to provide to which patients
+
+-   **Decision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point**
+
+## Decision Analysis
 
 <br>
 
-> Decision analysis is a methodology that is uniquely beneficial when there are meaningful tradeoffs between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain. 
-
+> Decision analysis is a methodology that is uniquely beneficial when there are meaningful tradeoffs between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.
 
 ##  {background-image="images/new_decision-analysis-overview.png" data-background-size="contain"}
 
@@ -79,15 +84,13 @@ editor: source
 
 <br><br>
 
-## Value  
-
-<br> 
-
-> Economists have long defined value as "outcomes relative to costs" 
+## Value
 
 <br>
-> If we only consider benefits when we define value, it's no different htan efficacy or effectiveness research. And we obviously don't want to just consider costs without benefits! 
 
+> Economists have long defined value as "outcomes relative to costs"
+
+<br> \> If we only consider benefits when we define value, it's no different than efficacy or effectiveness research. And we obviously don't want to just consider costs without benefits!
 
 # Examples of Decision Analyses {background="#43464B"}
 
@@ -145,7 +148,6 @@ You have been appointed as Director of a funding allocation committee responsibl
 **Objective**: Minimize total expected deaths
 :::
 
-
 ## Ex 2. Birth Defects {auto-animate="true"}
 
 ::: {.callout-note appearance="minimal"}
@@ -158,37 +160,11 @@ You have been appointed as Director of a funding allocation committee responsibl
 -   **Testing** produces: (0.0004 x 100,000) = **40** expected deaths
 
 -   **No testing** produces: (0.001 x 0.5 x 100,000) = **50** expected deaths
+
+-   [**Looks like TESTING WINS!**]{style="color: green;"}
+
+-   [**Anyone got a problem with this??**]{style="color: darkred;"}
 :::
-
-## Ex 2. Birth Defects {auto-animate="true"}
-
-::: {.callout-note appearance="minimal"}
-**Objective**: Minimize total expected deaths
-:::
-
--   Consider a population of **100,000 newborns**
-
--   **Testing** produces: (0.0004 x 100,000) = **40** expected deaths
-
--   **No testing** produces: (0.001 x 0.5 x 100,000) = **50** expected deaths
-
-#### Looks like TESTING WINS!
-
-## Ex 2. Birth Defects {auto-animate="true"}
-
-::: {.callout-note appearance="minimal"}
-**Objective**: Minimize total expected deaths
-:::
-
--   Consider a population of **100,000 newborns**
-
--   **Testing** produces: (0.0004 x 100,000) = **40** expected deaths
-
--   **No testing** produces: (0.001 x 0.5 x 100,000) = **50** expected deaths
-
-#### Looks like TESTING WINS!
-
-#### [Anyone got a problem with this??]{style="color: darkred;"}
 
 ## **Different lives are lost**
 
@@ -206,59 +182,61 @@ You have been appointed as Director of a funding allocation committee responsibl
 -   We may treat one child's death as more tolerable than some other's -- even when we have no way, before the fact, of distinguishing one infant from the other.
 :::
 
-## Ex 3. Another "competing objectives" example: My own work 
+## Ex 3. Substance use treatment in pregnancy
 
-**Opioid/substance use in pregnancy**
-
-![](images/ex4-oud-tradeoffs.png)
 ::: {style="font-size: 0.8em"}
-[leech aa et al 2024]
+**Another example of "Competing interests"**
 :::
 
-## Ex 3. Opioid/substance use in pregnancy 
-
-![](images/oud-schematic-2.png)
-::: {style="font-size: 0.8em"}
-[leech aa et al 2024]
+::: {style="font-size: 0.6em"}
+\[Leech AA, 2024\]
 :::
 
-
-## Ex 3. Opioid/substance use in pregnancy 
-
-![](images/oud-methods.png)
-::: {style="font-size: 0.8em"}
-[leech aa et al 2024]
-:::
+![](images/ex4-oud-tradeoffs.png){width="395"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
-![](images/ceac.png)
-::: {style="font-size: 0.8em"}
-[leech aa et al 2024]
+::: {style="font-size: 0.6em"}
+\[Leech AA, 2024\]
 :::
 
+![](images/oud-schematic-2.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
--   The clear winner is buprenorphine!! 
--   Yes, BUT... 
-<br>
--   We know that clinically, patient choice is really important for retention outcomes 
--   We can also see that our final conclusions are driven by the infant outcomes 
--   We did not simulate the birthing parent over their lifetime 
+::: {style="font-size: 0.6em"}
+\[Leech AA, 2024\]
+:::
 
+![](images/oud-methods.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
-<br>
 
-> The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling. 
+::: {style="font-size: 0.6em"}
+\[Leech AA, 2024\]
+:::
 
+![](images/ceac.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
+
+-   The clear winner is buprenorphine!!
+-   Yes, BUT... <br>
+-   We know that clinically, patient choice is really important for retention outcomes
+-   We can also see that our final conclusions are driven by the infant outcomes (methadone actually has better retention outcomes)
+-   We did not simulate the birthing parent over their lifetime
+
+## Ex 3. Opioid/substance use in pregnancy
+
 <br>
 
-> Despite that challenging decision trade-off, the model clearly demonstrated that even if buprenorphine is “dominating” in the parlance of decision science and health economics--if requiring this treatment leads to reduced retention--it becomes a poor policy, leading to worse outcomes & higher costs than allowing them to CHOOSE their preferred option. 
+> The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling.
 
+## Ex 3. Opioid/substance use in pregnancy
+
+<br>
+
+> Even if buprenorphine is "dominating" in the parlance of decision science and health economics--if requiring this treatment leads to reduced retention--it becomes a poor policy, leading to worse outcomes & higher costs than allowing individuals to CHOOSE their preferred option.
 
 ## Estimating probabilities is fundamental to decision making {background="#43464B"}
 
