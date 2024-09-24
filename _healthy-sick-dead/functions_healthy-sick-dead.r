@@ -1,3 +1,18 @@
+#' Number of ticks for \code{ggplot2} plots
+#'
+#' Function for determining number of ticks on axis of \code{ggplot2} plots.
+#' @param n integer giving the desired number of ticks on axis of
+#' \code{ggplot2} plots. Non-integer values are rounded down.
+#' @section Details:
+#' Based on function \code{pretty}.
+#' @return a vector of axis-label breaks
+#' @keywords internal
+number_ticks <- function(n) {
+  function(limits) {
+    pretty(limits, n + 1)
+  }
+}
+
 get_frontier <- function(df, s, c , e , max_wtp=200000) {
 
   e_ <- enquo(e)
@@ -94,7 +109,7 @@ plot_trace <- function(m_M) {
     geom_line(size = 1) +
     xlab("Cycle") +
     ylab("Proportion of the cohort") +
-    scale_x_continuous(breaks = dampack::number_ticks(8)) +
+    scale_x_continuous(breaks = number_ticks(8)) +
     theme_bw(base_size = 14) +
     theme(legend.position  = "bottom",
           legend.background = element_rect(fill = NA))
@@ -404,7 +419,7 @@ add_common_aes <- function(gplot, txtsize, scale_name = waiver(),
     if (!is.null(xbreaks)) {
       xb <- xbreaks
     } else {
-      xb <- dampack::number_ticks(n_x_ticks)
+      xb <- number_ticks(n_x_ticks)
     }
     p <- p +
       scale_x_continuous(breaks = xb,
@@ -417,7 +432,7 @@ add_common_aes <- function(gplot, txtsize, scale_name = waiver(),
     if (!is.null(ybreaks)) {
       yb <- ybreaks
     } else {
-      yb <- dampack::number_ticks(n_y_ticks)
+      yb <- number_ticks(n_y_ticks)
     }
     p <- p +
       scale_y_continuous(breaks = yb,

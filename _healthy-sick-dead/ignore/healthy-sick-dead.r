@@ -462,7 +462,7 @@ plot.exp_loss(elc_obj, log_y = FALSE,
   ggthemes::scale_fill_colorblind() +
   # geom_point(aes(shape = as.name("Strategy"))) +
   scale_y_continuous("Expected Loss (Thousand $)",
-                     breaks = dampack::number_ticks(10),
+                     breaks = number_ticks(10),
                      labels = function(x) x/1000) +
   theme(legend.position = c(0.4, 0.7))
 
