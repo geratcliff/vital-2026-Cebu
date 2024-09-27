@@ -7,7 +7,7 @@
         <dateCreated>Mon Sep 09 10:51:24 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Mon Sep 09 13:49:47 CDT 2024</dateModified>
+        <dateModified>Tue Sep 24 15:14:27 CDT 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -24,77 +24,6 @@
     </DimInfo>
     <scale>162</scale>
     <alignRight>true</alignRight>
-    <Parameter>
-        <name>initial_age</name>
-        <expression>0</expression>
-        <notes>Initial age in model . </notes>
-    </Parameter>
-    <Parameter>
-        <name>c_healthy</name>
-        <expression>0</expression>
-        <notes>Annual (cycle) cost of healthy state. </notes>
-    </Parameter>
-    <Parameter>
-        <name>c_asymptomatic</name>
-        <expression>1000</expression>
-        <notes>Annual (cycle) cost of asymptomatic disease state. </notes>
-    </Parameter>
-    <Parameter>
-        <name>c_progressive</name>
-        <expression>3000</expression>
-        <notes>Annual (cycle) cost of progressive disease state. </notes>
-    </Parameter>
-    <Parameter>
-        <name>c_death_disease</name>
-        <expression>5000</expression>
-        <notes>One-time transition cost of death from progressive disease </notes>
-    </Parameter>
-    <Parameter>
-        <name>c_prevention</name>
-        <expression>500</expression>
-        <notes>One-time cost for prevention
-</notes>
-    </Parameter>
-    <Parameter>
-        <name>c_treatment</name>
-        <expression>8000</expression>
-        <notes>One-time cost of treatment. </notes>
-    </Parameter>
-    <Parameter>
-        <name>u_healthy</name>
-        <expression>1</expression>
-        <notes>Quality-of-life weight for healthy state. </notes>
-    </Parameter>
-    <Parameter>
-        <name>u_asymptomatic</name>
-        <expression>0.95</expression>
-        <notes>Quality-of-life weight for asymptomatic health state</notes>
-    </Parameter>
-    <Parameter>
-        <name>u_progressive</name>
-        <expression>0.75</expression>
-        <notes>Quality-of-life weight for progressive disease state. </notes>
-    </Parameter>
-    <Parameter>
-        <name>u_dead</name>
-        <expression>0</expression>
-        <notes>Quality-of-life weight for death states. </notes>
-    </Parameter>
-    <Parameter>
-        <name>rr_prevention</name>
-        <expression>0.80</expression>
-        <notes>Prevention strategy: Relative risk reduction in probability of asymptomatic disease onset. </notes>
-    </Parameter>
-    <Parameter>
-        <name>rr_treatment</name>
-        <expression>0.5</expression>
-        <notes>Treatment strategy: relative risk reduction in probability of disease progression. </notes>
-    </Parameter>
-    <Variable>
-        <name>p_death_oc</name>
-        <expression>tbl_p_die_oc[initial_age + t, 1]</expression>
-        <notes></notes>
-    </Variable>
     <Table>
         <name>tbl_p_die_oc</name>
         <type>Lookup</type>
@@ -574,7 +503,6 @@
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
-            <cost>0</cost>
         </Node>
         <Node>
             <type>1</type>
@@ -642,7 +570,7 @@
         </Node>
         <Node>
             <type>4</type>
-            <name>Remain Healthy</name>
+            <name>Survive</name>
             <xPos>977</xPos>
             <yPos>35</yPos>
             <width>32</width>
@@ -680,7 +608,7 @@
         </Node>
         <Node>
             <type>4</type>
-            <name>Remain Dead</name>
+            <name>Dead</name>
             <xPos>977</xPos>
             <yPos>231</yPos>
             <width>32</width>
