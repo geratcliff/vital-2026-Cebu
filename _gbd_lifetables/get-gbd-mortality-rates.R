@@ -95,22 +95,27 @@ cbd_life_tables <- c(
  setdiff(countries,gbd_lt$location_name)
  
  # Fit the Mortality Model 
- gbd_lt %>% mutate(p_death = map(life_table, ~({
+p_death <-  gbd_lt %>% mutate(p_death = map(life_table, ~({
    ages     <- .x$age
    deaths   <- .x$lx * .x$qx
    exposure <- .x$lx
    
+   # fit the HP model
    mort_fit <- MortalityLaw(
      x  = ages,
      Dx  = deaths,   # vector with death counts
      Ex  = exposure, # vector containing exposures
      law = "HP",
      opt.method = "LF2")
+   
    r_ <- HP(.x$age,mort_fit$coefficients)$hx
+   yrs = c(1,4,diff(.x$age[-c(1)]))
+   r_ <- r_ / yrs
    afn_ <- approxfun(.x$age,r_)
-   p_ <- tibble(index = 0:111, r_die = afn_(0:111),fitted = HP(0:111,mort_fit$coefficients)$hx) %>% 
-     mutate(r_die = ifelse(index<12 & fitted>0.5,r_die,fitted)) %>% 
-     select(index,r_die)
+   
+   p_ <- tibble(index = 0:111, 
+                r_die = afn_(0:111)) 
+   
    s_ <- c(1,0) 
    tr <- 0:111 %>% map(~({
      px <- 1-exp(-p_[.x+1,]$r_die)
@@ -128,25 +133,30 @@ cbd_life_tables <- c(
    cat(paste0("Life Expectanccy ",round(le,2),"\n"))
    as.numeric(le)
    p_ 
- }))) %>% 
+ }))) 
+
+p_death %>% 
    select(location_name,p_death) %>% 
    unnest(cols = c(p_death)) %>% 
-   select(location_name,index, r_die) 
- 
- 
- #### SCRATCH FROM HERE OUT
- 
+   select(location_name,index, r_die)  %>% 
    group_by(location_name) %>% 
    nest() %>% 
    mutate(tmp = map2(data,location_name, ~({
      name = paste0(gsub(" ","_",tolower(.y)),".csv")
-     x <- tibble(.x) %>% ungroup() %>% select(index,p_die) 
+     x <- tibble(.x) %>% ungroup() %>% select(index,r_die) %>% 
+       mutate(p_death = 1-exp(-r_die)) %>% 
+       select(-r_die)
      rownames(x) = NULL
      cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
      cat("\n")
      x %>% data.table::fwrite(here(paste0("_gbd_lifetables/output/",name)))
    }))) %>% 
    unnest(cols = c(tmp))
+ 
+ 
+ #### SCRATCH FROM HERE OUT
+ 
+  
 
 
 

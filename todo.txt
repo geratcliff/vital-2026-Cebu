@@ -2,12 +2,6 @@ John's To-Do list
 
 Add instructors page
 
-cs_decision-tree-amua
-- add a tip about double clicking on a mac
-
-cs_incremental-cea.qmd
-- add microsoft word version?
-
 cs_alive-dead.qmd
   - Check country-specific .csv files
   - Add screenshot
