@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Model>
-    <name>cs_decision-tree</name>
+    <name>cs-decision-tree_ANS</name>
     <type>0</type>
     <Metadata>
         <author>johngraves</author>
         <dateCreated>Mon Nov 06 10:53:37 CST 2023</dateCreated>
         <versionCreated>0.3.0</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Fri Sep 27 12:12:13 BST 2024</dateModified>
+        <dateModified>Fri Sep 27 12:41:03 BST 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -29,14 +29,14 @@
         <expression>.05</expression>
         <notes></notes>
         <sensMin>0.001</sensMin>
-        <sensMax>1</sensMax>
+        <sensMax>.99</sensMax>
     </Parameter>
     <Parameter>
         <name>sens</name>
         <expression>0.97</expression>
         <notes></notes>
         <sensMin>0.8</sensMin>
-        <sensMax>1</sensMax>
+        <sensMax>.99</sensMax>
     </Parameter>
     <Parameter>
         <name>spec</name>
@@ -65,21 +65,21 @@
         <expression>39.4</expression>
         <notes></notes>
     </Parameter>
-    <Variable>
+    <Parameter>
         <name>pTPos</name>
-        <expression>prev * sens + (1- prev) * (1 - spec)</expression>
+        <expression>prev * sens + (1-prev) * (1 - spec)</expression>
         <notes></notes>
-    </Variable>
-    <Variable>
+    </Parameter>
+    <Parameter>
         <name>pD_TPos</name>
-        <expression>prev * sens / (prev * sens + (1-prev)*(1-spec))</expression>
+        <expression>prev * sens / (prev * sens + (1-prev) * (1 - spec))</expression>
         <notes></notes>
-    </Variable>
-    <Variable>
+    </Parameter>
+    <Parameter>
         <name>pD_TNeg</name>
-        <expression>prev * (1 - sens) / (prev * (1 - sens) + (1 - prev)*spec)</expression>
+        <expression>prev*(1-sens)/(prev*(1-sens)+(1-prev)*spec)</expression>
         <notes></notes>
-    </Variable>
+    </Parameter>
     <simParamSets>false</simParamSets>
     <simType>0</simType>
     <cohortSize>1</cohortSize>

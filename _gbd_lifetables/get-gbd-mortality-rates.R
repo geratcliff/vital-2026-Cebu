@@ -95,7 +95,7 @@ cbd_life_tables <- c(
  setdiff(countries,gbd_lt$location_name)
  
  # Fit the Mortality Model 
-p_death <-  gbd_lt %>% mutate(p_death = map(life_table, ~({
+p_die <-  gbd_lt %>% mutate(p_die = map(life_table, ~({
    ages     <- .x$age
    deaths   <- .x$lx * .x$qx
    exposure <- .x$lx
@@ -135,16 +135,16 @@ p_death <-  gbd_lt %>% mutate(p_death = map(life_table, ~({
    p_ 
  }))) 
 
-p_death %>% 
-   select(location_name,p_death) %>% 
-   unnest(cols = c(p_death)) %>% 
+p_die %>% 
+   select(location_name,p_die) %>% 
+   unnest(cols = c(p_die)) %>% 
    select(location_name,index, r_die)  %>% 
    group_by(location_name) %>% 
    nest() %>% 
    mutate(tmp = map2(data,location_name, ~({
      name = paste0(gsub(" ","_",tolower(.y)),".csv")
      x <- tibble(.x) %>% ungroup() %>% select(index,r_die) %>% 
-       mutate(p_death = 1-exp(-r_die)) %>% 
+       mutate(p_die = 1-exp(-r_die)) %>% 
        select(-r_die)
      rownames(x) = NULL
      cat(paste0("https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/",name))
@@ -206,7 +206,7 @@ p_death %>%
  
 
  
- gbd_lt2 %>% mutate(p_death = map(data,~({
+ gbd_lt2 %>% mutate(p_die = map(data,~({
   lt_ <- .x %>% 
     filter(measure_name=="Probability of death" & sex_id==3) %>% 
     mutate(age = age_group_lut[paste0(age_group_id)])  %>% 
@@ -231,7 +231,7 @@ p_death %>%
   as.numeric(le)
   p_ 
 }))) %>% 
-  unnest(cols = p_death) %>% 
+  unnest(cols = p_die) %>% 
   select(location_name,index, p_die) %>% 
   group_by(location_name) %>% 
   nest() %>% 
@@ -249,11 +249,11 @@ p_death %>%
 
 
  
- # gbd_lt2 %>% mutate(p_death = map(hp_mort,~({
+ # gbd_lt2 %>% mutate(p_die = map(hp_mort,~({
  #   hp_ <-   .x
  #   tibble(index = 0:111, p_die = approxfun(names(.x$fitted.values), .x$fitted.values )(0:111))
  # })))  %>% 
- #   unnest(cols = p_death) %>% 
+ #   unnest(cols = p_die) %>% 
  #   select(location_name,index, p_die) %>% 
  #   group_by(location_name) %>% 
  #   nest() %>% mutate(tmp = map2(data,location_name, ~({

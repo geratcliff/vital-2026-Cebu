@@ -2,8 +2,9 @@ John's To-Do list
 
 Add instructors page
 
+- add back in extra slides to Bayes' lecture
+
 cs_alive-dead.qmd
-  - Check country-specific .csv files
   - Add screenshot
   
 cs_progressive-disease.qmd

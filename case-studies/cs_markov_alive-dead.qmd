@@ -114,19 +114,13 @@ Download the background mortality file for your country from the workshop websit
 
 A screenshot of the first few rows of this .csv file is shown below. The`index`column is the age, while`p_die` is the annual probability of death at each age.
 
-![](images/clipboard-2593165698.png){fig-align="center" width="300"}
+![](images/clipboard-1348648427.png){fig-align="center" width="500"}
 
 Go to the “Tables” panel, click <img src="../amua-images/add_16.png" alt="Custom Icon" width="20" height="20"/> to add a table, and you should see a “Define Table” window (see screenshot below). Click the Import button <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/> and select the downloaded .csv file to import. The table will automatically be resized to fit the imported data. The first row in the file will be used as table headers.
 
 ::: callout-tip
-An alternative appraoch to uploading the .csv is to simply copy and paste the two columns from the .csv file, and then hit the <img src="../amua-images/paste_16.png" alt="Custom Icon" width="20" height="20"/> paste button. You can then paste the table directly into Amua.
+An alternative approach to uploading the .csv is to simply copy and paste the two columns from the .csv file, and then hit the <img src="../amua-images/paste_16.png" alt="Custom Icon" width="20" height="20"/> paste button. You can then paste the table directly into Amua.
 :::
-
-::: callout-important
-!!!! TK INCLUDE SCREENSHOT
-:::
-
-<!-- ![](images/clipboard-4147587961.png) -->
 
 Enter “tbl_p_die” as the name for this variable. “Lookup” is the default table type (which is what we want here). Choose "Interpolate" as the Lookup Method. Click Save to apply.
 
