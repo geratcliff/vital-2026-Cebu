@@ -758,3 +758,254 @@ proportion of non-diseased people with a positive test: b/(b+d)
     additional information then that can change
 :::
 
+
+# [Extra] Likelihood Ratios {background="#43464B"}
+
+## Likelihood ratio
+
+<br>
+
+::: {.callout-important appearance="minimal" icon="false"}
+Useful for situations in which a quick estimate of revised probabilities
+is needed
+:::
+
+> Likelihood that a given test result would be expected in a patient
+> with the **target disorder Pr(test result \| D+) compared to** the
+> likelihood that the same result would be expected in a patient
+> **without the target disorder Pr(test result \| D-)** \[A RATIO\]
+
+## Likelihood ratios
+
+<br>
+
+The likelihood ratio (LR) summarizes test sensitivity and specificity
+[into one number:]{style="color: forestgreen;"} <br>
+
+::: {.callout-important appearance="minimal" icon="false"}
+LR (positive test) = sensitivity/1-specificity (or TPR/FPR)
+:::
+
+::: {.callout-important appearance="minimal" icon="false"}
+LR (negative test) = 1-sensitivity/specificity (or FNR/TNR)
+:::
+
+## Likelihood ratios
+
+-   LR can be used to revise disease probabilities using the following
+    form of Bayes' Theorem:
+
+> Post-test odds = Pretest odds x LR
+
+-   The odds that the patient has the target disorder, after the test
+    results are known. It is calculated by multiplying the pre-test odds
+    by the likelihood of a positive or negative test.
+
+::: notes
+(3) In other words, the post-test odds are the odds that the patient has
+    the target disorder AFTER the test results are known
+:::
+
+## Likelihood ratios
+
+<br>
+
+-   LR's are an advance beyond 2x2 tables
+
+-   To use likelihood ratios, you must be comfortable converting between
+    probabilities of disease and odds of disease
+
+-   Odds are simply another way of describing the chances that something
+    will (or won't) happen
+
+## Likelihood ratios
+
+<br>
+
+$$ Odds of Disease = \frac{\text{Probability}}{\text{1 - Probability}}$$
+<br>
+
+$$ Probability = \frac{\text{Odds}}{\text{Odds + 1}}$$
+
+## Likelihood ratios
+
+<br>
+
+Odds favoring an event; Odds = p/(1-p) If an event has 0.20 probability
+of occurrence, the odds favoring the event = 0.2/0.8 = 0.25 (or 1:4)
+
+<br>
+
+Odds against (OddA) the event; OddA = (1-p)/p The odds against are
+0.8/0.2 = 4 (or 4:1)
+
+::: notes
+The components of the LR are calculated vertically, and like the
+sensitivity and specificity are immune to the prevalence
+:::
+
+## Back to first example (coronary care unit)
+
+<br>
+
+::: {style="font-size: 0.6em"}
+|                | *Present*   | *Absent*    |                     |
+|----------------|-------------|-------------|---------------------|
+| *Elevated (+)* | 300 (a, TP) | 15 (b, FP)  | 315 (a + b)         |
+| *Normal (-)*   | 35 (c, FN)  | 150 (d, TN) | 185 (c + d)         |
+|                | 335 (a + c) | 165 (b + d) | 500 (a + b + c + d) |
+:::
+
+<br>
+
+::: {style="font-size: 0.8em"}
+-   Pre-test probability was 67% (prevalence)
+-   SENS = 0.90 & SPEC = 0.91
+-   LR+ (for positive test result) = SENS / 1=SPEC = 0.90/1-0/.91 =
+    **10**
+-   Interpretation: A patient with a positive test result is 10X more
+    likely to have had a heart attack than someone who did not have a
+    heart attack with the same test result
+:::
+
+::: notes
+(1) Let's go back to our 1st example when we were looking at a coronary
+    care unit population
+(2) The pre-test probability was 67%
+(3) Sensitivity was 90% & specificity was 91%
+(4) The Likelihood ratio for a positive test result would be, SENS /
+    1-SPEC (or, true positive divided by false positives) = 10 This
+    means...
+:::
+
+## Back to first example (coronary care unit)
+
+<br>
+
+-   LR - (for a negative test result):
+    -   1-SENS / SPEC = 1-0.90 / 0.91 = **.11**, indicates a \~10-fold
+        decrease in the odds of having a condition in a patient with a
+        negative test result.
+
+::: notes
+(1) The Likelihood ratio for a NEGATIVE test result would be, (false
+    negative tests / true negative)
+:::
+
+## Back to first example (coronary care unit)
+
+<br>
+
+::: columns
+::: {.column width="90%"}
+::: {style="font-size: 0.6em"}
+|                                                                     |                         |
+|-----------------------------------------------------------------------------------------------|
+| Pre-test probability                                                | 67%                     |
+| Pre-test odds (0.67 / 1-0.67)                                       | 2 (2:1)                 |
+| Post (+ test) odds of disease  = pre-test odds \* LR(+)             | 2\*10 = 20.             |
+| Post (+ test) prob of disease = post-test odds / post-test odds + 1 | = 20/21 = 0.95 (PPV)    |
+| Post (- test) odds of disease = pre-test odds \* LR(-)              | = 2\*0.11 = 0.22        |
+| Post (- test) prob of disease = 0.22 / 1.22                         | = 0.18 (1-NPV)          |
+:::
+:::
+:::
+
+::: notes
+(1) Now let's calculate the pre & post-test ODDS using what we found the
+    LR's to be
+
+(2) Pre-test odds = Prob / 1-Prob = 2 ; In other words, \[2:1\] - If you
+    play the game 3 times, you're likely to win twice
+
+(3) Post-test odds = pre-test odds \* LR
+
+-   Post-test odds of a POSITIVE test = 2\*10 (10 is the value we got a
+    couple slides back) = 20 ; or 20-fold increase in odds
+
+-   Post-test probability of a POSITIVE test = 95%, which is the
+    probability that your patient will have a heart attack given his/her
+    screening test results (worthwhile diagnostic test)
+
+-   Post-test odds of a NEGATIVE test = 0.22; 20-fold decrease in odds
+    of having a heart attack in a patient with a negative test result
+
+-   Post-test probability of a NEGATIVE test = 18% ; in other words, of
+    those with normal levels, there is an 18% prob that your patient
+    WILL HAVE a heart attack given the negative screening results
+:::
+
+## Odds Likelihood Form of Bayes
+
+::: {style="font-size: 0.8em"}
+$$
+Odds LR = \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} = \frac{{Pr(D+)}}{Pr(D-)} * \frac{{lr(D+)}}{lr(D-)}
+$$ <br>
+
+$$ \frac{{Pr(D+)}}{Pr(D-)} * \frac{{lr(D+)}}{lr(D-)}$$ <br>
+
+The above is the same as:
+
+$$ \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} $$
+:::
+
+## Odds Likelihood Form of Bayes
+
+::: {style="font-size: 0.8em"}
+$$
+Odds LR = \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} = \frac{{Pr(D+)}}{Pr(D-)} * \frac{\text{Pr(test result | D+)}}{\text{Pr (test result | D-)}}
+$$ <br>
+
+Pre-test odds favoring disease (*the prior*):
+
+$$ \frac{{Pr(D+)}}{Pr(D-)} $$
+
+<br> The post-test odds given the test result:
+
+$$ \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} $$
+:::
+
+## Odds Likelihood Form of Bayes
+
+<br>
+
+::: {style="font-size: 0.8em"}
+$$
+\frac{\text{Pr(test result | D+)}}{\text{Pr (test result | D-)}} = \frac{{Pr(D-)}}{{Pr (D+)}} * \frac{{(CTN - CFP)}}{(CTP - CFN)} 
+$$ <br>
+
+How to calculate an optimal "cut-off" for a test with categorical or
+continuous results at the point in which we will [optimize the cut-off
+conditional on the (1) prior probability of disease and (2) the
+consequences of the scenario we are assessing]{style="color: green;"}
+
+<br>
+
+Next lecture: [Positivity Criterion!]{style="color: green;"}
+:::
+
+::: notes
+-   You won't be tested on this equation, but this is another way of getting the OPTIMAL CUT-OFF VALUE for a continuous or categorical test -- remember this for the next lecture on positivity criterion. 
+
+-   Need to factor in the "interventions/treatment" for the "consequences of false positive" and "consequences of false negative"
+:::
+
+## Likelihood ratios
+
+<br>
+
+::: {.callout-important appearance="simple"}
+LR (+) <br> GT 10 Excellent <br> 5-10 Good <br> 2-5 Fair. May be helpful
+<br> 1-2 Unlikely to be helpful
+:::
+
+::: {.callout-important appearance="simple"}
+LR (-) <br> \<0.1 Excellent <br> 0.1-0.2 Good <br> 0.2-0.5 Fair. May be
+helpful <br> 0.5-1.0 Unlikely to be helpful
+:::
+
+::: notes
+(1) The higher **diagnostic odds ratios** are indicative of better test
+    performance, which you can see here
+:::
+

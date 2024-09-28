@@ -4,8 +4,6 @@ Add instructors page
 
 - add back in extra slides to Bayes' lecture
 
-cs_alive-dead.qmd
-  - Add screenshot
   
 cs_progressive-disease.qmd
   - Switch to pairwise probabilities
