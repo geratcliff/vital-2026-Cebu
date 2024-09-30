@@ -86,8 +86,6 @@ Newer ARTs are also available and their lifetime costs/QALYs are detailed below:
 
 : ICER Calculation Table 2 {tbl-colwidths="\[20,20,20,20,20,20\]"}
 
-: ICER Calculation Table 3 {tbl-colwidths="\[20,20,20,20,20,20\]"}
-
 # Case 2 Description
 
 You are interested in performing a cost-effectiveness analysis of different cancer screening recommendations for anal squamous intraepithelial lesions and anal cancer in men.
