@@ -91,7 +91,17 @@ Variables <img src="../amua-images/variable_16.png" alt="Custom Icon" width="20"
 Therefore, we will define `p_die` as a **variable** <img src="../amua-images/variable_16.png" alt="Custom Icon" width="20" height="20"/> that references values in a **lookup table** <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/>, following the steps below.
 
 ::: callout-important
-A lookup table returns the value that corresponds to a particular index. The first column in a lookup table contains the table indices, and one or more columns of lookup values can be defined. Index values must be unique and in ascending order. There are 3 lookup methods, (1) exact, (2) interpolate, and (3) truncate, for details about these methods visit the [Amua Wiki on GitHub](https://github.com/zward/Amua/wiki/Tables).
+A lookup table returns the value that corresponds to a particular index. The first column in a lookup table contains the table indices, and one or more columns of lookup values can be defined. Index values must be unique and in ascending order.
+
+Depending on how your data are defined, you can use three lookup table methods in Amua:
+
+-   **Exact**: Returns the value associated with the exact index. Use this only if the index values exactly align with the cycle length (e.g., ages 0, 1, 2, etc. with an annual cycle length). If the exact index is not found the table returns NaN (i.e., a missing value).
+
+-   **Truncate**: Returns a value that is truncated (i.e. floor) for the index. *This is a common way to use life-tables that bin ages into ranges.* If the supplied index is below the minimum index the table returns NaN.
+
+-   **Interpolate**: Returns a value that is interpolated between indices. Interpolate may be a viable option if you have age-based probabilities defined at the year level, but cycle lengths that are less than a year.
+
+For details about these methods visit the [Amua Wiki on GitHub](https://github.com/zward/Amua/wiki/Tables).
 :::
 
 We first define a lookup table <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/> tbl_death to read in the age-dependent background mortality constructed from country life tables.
@@ -167,5 +177,5 @@ Apply Half-cycle correction. Go to **Model** {{< fa arrow-right >}} **Properties
 Now, we have finished constructing the Alive-Dead model. Analyze the model using a cohort simulation by clicking **Run** {{< fa arrow-right >}} **Run Model**.
 
 ::: {.callout-caution appearance="minimal"}
-**Run the alive-dead model and calculate overall life expectancy.**
+**Run the alive-dead model and calculate overall life expectancy for your country.**
 :::

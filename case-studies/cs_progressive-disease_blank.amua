@@ -7,7 +7,7 @@
         <dateCreated>Mon Sep 09 10:51:24 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Tue Sep 24 15:14:27 CDT 2024</dateModified>
+        <dateModified>Mon Sep 30 07:15:30 EET 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -24,6 +24,117 @@
     </DimInfo>
     <scale>162</scale>
     <alignRight>true</alignRight>
+    <Parameter>
+        <name>initial_age</name>
+        <expression>0</expression>
+        <notes>Initial age in model . </notes>
+        <sensMin>0</sensMin>
+        <sensMax>0</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>c_healthy</name>
+        <expression>0</expression>
+        <notes>Annual (cycle) cost of healthy state. </notes>
+        <sensMin>0</sensMin>
+        <sensMax>0</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>c_mild</name>
+        <expression>1000</expression>
+        <notes>Annual (cycle) cost of asymptomatic disease state. </notes>
+        <sensMin>500</sensMin>
+        <sensMax>1500</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>c_progressive</name>
+        <expression>3500</expression>
+        <notes>Annual (cycle) cost of progressive disease state. </notes>
+        <sensMin>1000</sensMin>
+        <sensMax>4000</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>c_death_disease</name>
+        <expression>5000</expression>
+        <notes>One-time transition cost of death from progressive disease </notes>
+        <sensMin>2000</sensMin>
+        <sensMax>8000</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>c_prevention</name>
+        <expression>650</expression>
+        <notes>One-time cost for prevention
+</notes>
+        <sensMin>100</sensMin>
+        <sensMax>900</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>c_treatment</name>
+        <expression>40000</expression>
+        <notes>One-time cost of treatment. </notes>
+        <sensMin>15000</sensMin>
+        <sensMax>35000</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>u_healthy</name>
+        <expression>1</expression>
+        <notes>Quality-of-life weight for healthy state. </notes>
+        <sensMin>1</sensMin>
+        <sensMax>1</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>u_mild</name>
+        <expression>0.95</expression>
+        <notes>Quality-of-life weight for asymptomatic health state</notes>
+        <sensMin>0.9</sensMin>
+        <sensMax>.98</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>u_progressive</name>
+        <expression>0.842</expression>
+        <notes>Quality-of-life weight for progressive disease state. </notes>
+        <sensMin>.75</sensMin>
+        <sensMax>.95</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>u_dead</name>
+        <expression>0</expression>
+        <notes>Quality-of-life weight for death states. </notes>
+        <sensMin>0</sensMin>
+        <sensMax>0</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>u_progressive_treated</name>
+        <expression>.87</expression>
+        <notes></notes>
+        <sensMin>.75</sensMin>
+        <sensMax>.95</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>p_death_disease</name>
+        <expression>.15</expression>
+        <notes></notes>
+        <sensMin>.05</sensMin>
+        <sensMax>.2</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>rr_prevention</name>
+        <expression>0.90</expression>
+        <notes></notes>
+        <sensMin>.8</sensMin>
+        <sensMax>1</sensMax>
+    </Parameter>
+    <Parameter>
+        <name>rr_treatment</name>
+        <expression>0.80</expression>
+        <notes></notes>
+        <sensMin>.6</sensMin>
+        <sensMax>1</sensMax>
+    </Parameter>
+    <Variable>
+        <name>p_death_oc</name>
+        <expression>tbl_p_die_oc[initial_age + t, 1]</expression>
+        <notes></notes>
+    </Variable>
     <Table>
         <name>tbl_p_die_oc</name>
         <type>Lookup</type>

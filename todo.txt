@@ -1,10 +1,5 @@
 John's To-Do list
 
-Add instructors page
-
-- add back in extra slides to Bayes' lecture
-
-  
 cs_progressive-disease.qmd
   - Switch to pairwise probabilities
   - Make sure to have them define a WTP in the Analysis tab
