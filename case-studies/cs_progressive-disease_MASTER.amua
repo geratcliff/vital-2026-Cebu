@@ -7,7 +7,7 @@
         <dateCreated>Mon Sep 09 10:51:24 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Tue Oct 01 10:09:47 EET 2024</dateModified>
+        <dateModified>Tue Oct 01 10:25:34 EET 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -1181,20 +1181,20 @@
             <type>4</type>
             <name>Die (Disease)</name>
             <xPos>1166</xPos>
-            <yPos>653</yPos>
+            <yPos>652</yPos>
             <width>29</width>
             <height>29</height>
             <parentX>922</parentX>
             <parentY>623</parentY>
             <parentType>3</parentType>
             <level>4</level>
-            <hasCost>false</hasCost>
+            <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_death_disease</prob>
             <cost>0</cost>
-            <cost>0</cost>
+            <cost>c_death_disease</cost>
             <cost>0</cost>
             <transition>Dead (Disease)</transition>
         </Node>
@@ -1471,7 +1471,7 @@
             <cost>0</cost>
             <cost>0</cost>
             <rewards>1</rewards>
-            <rewards>c_progressive</rewards>
+            <rewards>c_progressive+c_progressive</rewards>
             <rewards>u_progressive</rewards>
         </Node>
         <Node>
@@ -1522,20 +1522,20 @@
             <type>4</type>
             <name>Die (Disease)</name>
             <xPos>1166</xPos>
-            <yPos>1621</yPos>
+            <yPos>1620</yPos>
             <width>29</width>
             <height>29</height>
             <parentX>922</parentX>
             <parentY>1591</parentY>
             <parentType>3</parentType>
             <level>4</level>
-            <hasCost>false</hasCost>
+            <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_death_disease</prob>
             <cost>0</cost>
-            <cost>0</cost>
+            <cost>c_death_disease</cost>
             <cost>0</cost>
             <transition>Dead (Disease)</transition>
         </Node>
@@ -1981,13 +1981,13 @@
             <parentY>2559</parentY>
             <parentType>3</parentType>
             <level>4</level>
-            <hasCost>false</hasCost>
+            <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>rr_treatment * p_death_disease</prob>
             <cost>0</cost>
-            <cost>0</cost>
+            <cost>c_death_disease</cost>
             <cost>0</cost>
             <transition>Dead (Disease)</transition>
         </Node>

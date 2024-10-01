@@ -245,11 +245,9 @@ Our next objective is to build out the remaining two strategies: prevention and 
 
 -   Right click on the <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> Markov symbol next to the Status Quo strategy name, then select "Copy"
 
-![](images/clipboard-4138220920.png)
+![](images/clipboard-2195549954.png)
 
 -   Right click on the red square and select "Paste." This will create a copy of the Status Quo strategy. Hit the OCD button to organize things again.
-
-<!-- -->
 
 -   Rename the new strategy to "Prevention" and add in the cost of the prevention strategy—these costs apply to everyone in the mild disease state.
 
