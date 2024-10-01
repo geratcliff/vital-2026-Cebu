@@ -7,7 +7,7 @@
         <dateCreated>Mon Sep 09 10:51:24 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Tue Oct 01 10:25:34 EET 2024</dateModified>
+        <dateModified>Tue Oct 01 10:39:04 EET 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -1471,7 +1471,7 @@
             <cost>0</cost>
             <cost>0</cost>
             <rewards>1</rewards>
-            <rewards>c_progressive+c_progressive</rewards>
+            <rewards>c_progressive</rewards>
             <rewards>u_progressive</rewards>
         </Node>
         <Node>
