@@ -149,18 +149,16 @@ The image below shows two alternative approaches to modeling these events. **Pan
 
 ![](images/branching-options.png)
 
-Note that in Panel B, the probability of Event B is rescaled by $(1-p_A)$. This ensures that the probability of Event B is only among those who survive Event A (i.e., one minus the probability of Event A).
-
-If you are converting death rates to probabilities using standard formulas (e.g., $1-\exp(-r)$) you should use a sequential approach where only two events are considered at at time (Panel B). This ensures that the converted probabilities work correctly. You must, however, re-scale all "downstream" probabilities so that they are conditional on not experiencing earlier events.
+If you are converting rates to probabilities using standard formulas (e.g., $1-\exp(-r)$) you should use a sequential approach where only two events are considered at at time (Panel B). This ensures that the converted probabilities work correctly.
 
 If you are using transition probabilities derived from embedding the transition probabilities from the underlying transition rate matrix, as we covered in lecture, you do not need to undertake the sequential approach: you can use the approach in Panel A, though you will also need to make sure that your model structure captures all non-zero probabilities in your transition probability matrix.
 
-For the remainder of this case study we will model the disease progression using the sequential approach (e.g., the approach in Panel B).
+**For the remainder of this case study we will model the disease progression using the sequential approach (e.g., the approach in Panel B).**
 :::
 
 Your Markov model should now look like this:
 
-![](images/clipboard-1329716395.png)
+![](images/clipboard-3516082028.png)
 
 ## Define Transition Probabilities
 
@@ -178,7 +176,7 @@ Because transition probabilities are not defined for each age in the model, you 
 
 After inputting the transition probabilities, your Markov model should look like this:
 
-![](images/clipboard-1585004494.png)
+![](images/clipboard-3556452658.png)
 
 ### Sanity Check: Life Expectancy
 
@@ -224,9 +222,9 @@ Our next step is to define our primary health-related quality-of-life and cost o
 
     -   QoL in Death states
 
--   **You will also need to define some one-time costs.** For example, death from disease carries a one-time cost (`c_death_disease`). We will add this cost by assigning a one-time cost at the time an individual transitions to the Death (Disease) state from the Progressive disease state. You can add this one-time cost by *right-clicking* on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> after "Death (Disease)" in the Progressive Disease health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"/> Add Cost.
+-   **You will also need to define some one-time costs.** For example, death from disease carries a one-time cost (`c_death_disease`). We will add this cost by assigning a one-time cost at the time an individual transitions to the Death (Disease) state from the Progressive disease state. You can add this one-time cost by *right-clicking* on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> after "Dead (Disease)" in the Progressive Disease health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"/> Add Cost.
 
-![](images/clipboard-3029162401.png){fig-align="center" width="500"}
+    ![](images/clipboard-1326740867.png){width="1000"}
 
 ## Define Cycle Adjustments and Discounting
 
@@ -251,9 +249,8 @@ Our next objective is to build out the remaining two strategies: prevention and 
 
 -   Right click on the red square and select "Paste." This will create a copy of the Status Quo strategy. Hit the OCD button to organize things again.
 
-```{=html}
 <!-- -->
-```
+
 -   Rename the new strategy to "Prevention" and add in the cost of the prevention strategy—these costs apply to everyone in the mild disease state.
 
     ![](images/clipboard-1900536045.png){width="500"}
@@ -285,7 +282,7 @@ With these changes made, check and run the model. Do you obtain different cost a
 -   Include the one-time treatment cost at the time of transition from mild to progressive disease (see below)
 
 ::: {.callout-important appearance="minimal"}
-The treatment strategy includes a one-time treatment cost, which should apply as soon as the patient transitions from mild to progressive disease status. You can add this one-time cost by *right-clicking* on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> after "Death (Disease)" in the Progressive Disease health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"/> Add Cost.
+The treatment strategy includes a one-time treatment cost, which should apply as soon as the patient transitions from mild to progressive disease status. You can add this one-time cost by *right-clicking* on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"/> after "Progressive Disease" in the Mild health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"/> Add Cost.
 :::
 
 ::: {.callout-note appearance="minimal"}

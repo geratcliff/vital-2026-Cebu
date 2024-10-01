@@ -24,7 +24,7 @@ We will start by constructing a simple Markov model representing just two health
 
 The structure of the Markov model for the Alive-Dead model is shown in the figure below.
 
-![](images/clipboard-904538470.png){fig-align="center" width="800"}
+![](images/clipboard-3077087514.png)
 
 Looking at the figure, you'll see that Amua has a special Markov node (represented by <img src="../amua-images/markovChain_24.png" alt="Custom Icon" width="20" height="20"/> ). The branches that lead off a Markov node designate all the Markov health states (and only Markov states).
 
@@ -104,7 +104,7 @@ Depending on how your data are defined, you can use three lookup table methods i
 For details about these methods visit the [Amua Wiki on GitHub](https://github.com/zward/Amua/wiki/Tables).
 :::
 
-We first define a lookup table <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/> tbl_death to read in the age-dependent background mortality constructed from country life tables.
+We first define a lookup table <img src="../amua-images/table_16.png" alt="Custom Icon" width="20" height="20"/> tbl_p_die to read in the age-dependent background mortality constructed from country life tables.
 
 ### Download Data
 

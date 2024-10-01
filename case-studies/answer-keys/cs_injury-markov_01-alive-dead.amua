@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Model>
-    <name>fireworks_markov_alivedead_V2</name>
+    <name>cs_injury-markov_01-alive-dead</name>
     <type>1</type>
     <Metadata>
         <author>graceratcliff</author>
         <dateCreated>Thu Jun 13 08:34:42 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
-        <modifier>graceratcliff</modifier>
-        <dateModified>Fri Jun 14 09:23:55 CDT 2024</dateModified>
+        <modifier>johngraves</modifier>
+        <dateModified>Tue Oct 01 05:59:36 EET 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>

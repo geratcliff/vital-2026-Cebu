@@ -51,6 +51,7 @@ options(knitr.kable.NA = '')
 }
 </style>
 ```
+
 ```{r, echo = FALSE}
 
 source("./functions_healthy-sick-dead.r")
@@ -84,10 +85,8 @@ load("./data/df_cea.RData")
 df <- 
   df_cea %>% 
   select(Cost, Effect) %>% 
-  mutate(Cost = round(Cost,0)) %>% 
-  mutate(Effect = round(Effect,2)) %>% 
   rownames_to_column(var= "strategy") %>% 
-  select(strategy, everything())
+  select(strategy, everything()) 
 
 df_s <- 
   df_cea %>% 
@@ -101,8 +100,8 @@ df_i1 <-
   rownames_to_column(var= "strategy") %>% 
   select(strategy, everything()) %>% 
   arrange(Cost) %>%
-  mutate(d_cost = Cost - lag(Cost),
-         d_effect = Effect - lag(Effect)) %>%
+  mutate(d_cost = round(Cost - lag(Cost),0),
+         d_effect = round(Effect - lag(Effect),3)) %>%
   select(strategy, Cost, d_cost ,Effect, d_effect)
 
 df_i2 <- 
@@ -115,8 +114,8 @@ df_i3 <-
   df_i2 %>% 
   #filter(status != "Dominated") %>% 
   arrange(status,Cost) %>%
-  mutate(d_cost = Cost - lag(Cost),
-         d_effect = Effect - lag(Effect)) %>% 
+ mutate(d_cost = round(Cost - lag(Cost),0),
+         d_effect = round(Effect - lag(Effect),3)) %>%
   mutate(icer = d_cost / d_effect) %>% 
   mutate(icer = ifelse(status %in% c("Dominated","Dominated (Extended)"), NA, icer)) %>% 
   mutate(d_cost = ifelse(status %in% c("Dominated","Dominated (Extended)"), NA, d_cost)) %>% 
@@ -128,8 +127,8 @@ df_i3 <-
 df_i4 <- 
   df_i3 %>% 
   arrange(status, Cost) %>% 
-   mutate(d_cost = Cost - lag(Cost),
-         d_effect = Effect - lag(Effect)) %>% 
+  mutate(d_cost = round(Cost - lag(Cost),0),
+         d_effect = round(Effect - lag(Effect),3)) %>%
   mutate(icer = d_cost / d_effect) %>% 
   mutate(icer = ifelse(status %in% c("Dominated","Dominated (Extended)"), NA, icer)) %>% 
   mutate(d_cost = ifelse(status %in% c("Dominated","Dominated (Extended)"), NA, d_cost)) %>% 

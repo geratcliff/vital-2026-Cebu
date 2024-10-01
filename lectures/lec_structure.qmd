@@ -343,10 +343,12 @@ m_P %>% kable()
 ::: columns
 ::: column
 ::: {style="font-size: 1.0em"}
+::: nonincremental
 -   Suppose that a new strategy can reduces the risk of CHF mortality by 20% (i.e., hazard ratio = 0.8).
 -   We can simply apply this hazard ratio directly to construct a rate matrix for strategy A.
 -   For the Strategy A rate matrix, the rate of CHF death is $0.8 * 0.125 = 0.1$
 -   Make sure that the diagonal element is adjusted to account for this change!
+:::
 :::
 :::
 
@@ -406,9 +408,11 @@ m_P %>% kable()
 
 ::: columns
 ::: column
+::: nonincremental
 -   Another adjustment we could make at this stage is the time cycle length.
 -   Suppose our rate matrix is defined in terms of a one-year time cycle, but we want to convert to a monthly cycle.
 -   In that event, we'd simply divide each rate in the matrix by 12, and the resulting matrix would be for a monthly timestep.
+:::
 :::
 
 ::: column
@@ -442,8 +446,10 @@ m_P %>% kable()
 
 ## 3. "Embed" the transition probability matrix using the rate matrix
 
+::: nonincremental
 -   Our next step is to convert the transition rate matrix into a transition probability matrix.
 -   Common practice is to use rate-to-probability conversion formulas
+:::
 
 $$
 p = 1 - \exp(-rt)
@@ -454,7 +460,7 @@ $$ where $r$ is the rate and $t$ is the time-step.
 ::: incremental
 -   This formula works fine when there is only one possible state an individual can transition to.
 -   The formula **will not** calculate the correct transition probability if there are two or more states someone can transition to.
--   See the [workshop blog posting](../blog/posts/embedding-a-transition-probability-matrix.html) for more.
+<!-- -   See the [workshop blog posting](../blog/posts/embedding-a-transition-probability-matrix.html) for more. -->
 :::
 
 ## 3. "Embed" the transition probability matrix using the rate matrix
@@ -462,6 +468,7 @@ $$ where $r$ is the rate and $t$ is the time-step.
 ::: incremental
 -   We will cover **two** approaches for constructing a transition probability matrix.
 -   The first is technically incorrect, but is widely used and easier to implement because it ignores compound transitions (i.e., multiple transitions within a cycle).
+  - You can get around these issues if you use a relatively short cycle length.  
 :::
 
 ## 3. "Embed" the transition probability matrix using the rate matrix
@@ -703,7 +710,7 @@ expm(m_P_A) %>% kable(digits=4)
 
 ## CHF Example, Continued
 
-::: incremental
+::: nonincremental
 -   Now suppose we wanted to model a second strategy ("B") based on a randomized trial of another drug.
 -   That trial reports an odds ratio (OR) of CHF death of 0.75.
 -   The probability of CHF death in the placebo (control) arm in that trial was 0.15.[^6]
@@ -767,7 +774,7 @@ Let's turn back to our CHF example.
 
 ## CHF Example, Continued
 
-::: incremental
+::: nonincremental
 -   We can convert an odds ratio to a relative risk (i.e., ratio of probabilities) if we know the baseline (unexposed) probability of the outcome, $p_0$.
 -   In this case we were able to find $p_0=0.15$ in the underlying clinical trial.
 -   If we didn't have this information, we might **assume** its the same (0.1172) as in our underlying natural history probability matrix[^7]
@@ -795,7 +802,7 @@ Let's turn back to our CHF example.
 
 ## CHF Example, Continued
 
-::: {#fig-elephants layout-ncol="2" style="font-size: 0.7em"}
+::: {layout-ncol="2" style="font-size: 0.55em"}
 ```{r}
 expm(m_P) %>% kable(digits=4,caption = "m_P =") %>% kable_styling()
 ```

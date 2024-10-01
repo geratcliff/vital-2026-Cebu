@@ -149,15 +149,15 @@ $$
 
 # Examples from publications
 
-## Rotavirus case study from Capstone
+## Rotavirus study
 
 ![](images/file_show.jpeg)
 
-## Rotavirus case study from Capstone
+## Rotavirus study
 
 ![](images/file_show2.jpeg)
 
-## Rotavirus case study from Capstone
+## Rotavirus study
 
 ![](images/file_show3.jpeg)
 
