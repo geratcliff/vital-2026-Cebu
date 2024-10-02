@@ -125,9 +125,10 @@ $$
 
 ## Sensitivity
 
-- ICER for Prevention strategy is just above WTP threshold of $50,000/QALY. 
-- NMB for treatment only slightly above NMB for prevention. 
-- How sensitive are these results to changes in specific model inputs?
+-   ICER for Prevention strategy is just above WTP threshold of
+    \$50,000/QALY.
+-   NMB for treatment only slightly above NMB for prevention.
+-   How sensitive are these results to changes in specific model inputs?
 
 # One-way sensitivity analysis {background="#43464B"}
 
@@ -144,8 +145,6 @@ $$
     -   Used to visually rank the different variables in order of their
         overall influence on the magnitude of the model outputs
 :::
-
-
 
 # Examples from publications
 
@@ -178,6 +177,18 @@ $$
 ![](images/Screen%20Shot%202022-10-06%20at%209.19.09%20AM.png){width="777"}
 
 # Interactive Amua Session {background="#43464B"}
+
+## Primary Results: Progressive Disease
+
+| Strategy   | ICER    |
+|------------|---------|
+| Status Quo | \-      |
+| Treatment  | 49,513  |
+| Prevention | 139,630 |
+
+-   Treatment is cost-effective at WTP=\$50,000/QALY---but *barely.*
+
+-   How sensitive is this result to the input parameter values used?
 
 # Two-way sensitivity analysis {background="#43464B"}
 
@@ -256,9 +267,11 @@ $$
 
 ## Motivation
 
-- Suppose we wanted to model the impact of these interventions under a "lower cost" scenario.
-- One option is to 
-- It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.
+-   Suppose we wanted to model the impact of these interventions under a
+    "lower cost" scenario.
+-   One option is to
+-   It may be more efficient to define different scenarios rather than
+    add additional strategies to the model structure itself.
 
 ## Scenario analysis
 

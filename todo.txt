@@ -1,9 +1,10 @@
 John's To-Do list
 
-cs_progressive-disease.qmd
-  - Switch to pairwise probabilities
-  - Make sure to have them define a WTP in the Analysis tab
-  
+- add a piece on opening an amua model. 
+
+https://docs.google.com/document/d/15Vxo2P5sOfX43jr6Eg0gL_FFciHnr1y9JM9LIiecYqA/edit#heading=h.3rc2tosroi0n
+
+
 Deterministic sensitivity 
   - Add a reminder to have a defined WTP in the Analysis tab
   - add more on sampling from distributions 

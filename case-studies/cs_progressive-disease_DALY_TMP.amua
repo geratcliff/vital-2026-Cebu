@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Model>
-    <name>cs_progressive-disease_DALY</name>
+    <name>cs_progressive-disease_DALY_TMP</name>
     <type>1</type>
     <Metadata>
         <author>johngraves</author>
         <dateCreated>Mon Sep 09 10:51:24 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Tue Oct 01 15:03:20 EET 2024</dateModified>
+        <dateModified>Tue Oct 01 14:13:52 EET 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -872,6 +872,9 @@
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
+            <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>1</type>
@@ -1675,7 +1678,7 @@
         <discountRates>3.0</discountRates>
         <discountRates>3.0</discountRates>
         <discountRates>3.0</discountRates>
-        <discountRates>3.0</discountRates>
+        <discountRates>0.0</discountRates>
         <discountRates>3.0</discountRates>
         <discountStartCycle>0</discountStartCycle>
         <cyclesPerYear>1.0</cyclesPerYear>

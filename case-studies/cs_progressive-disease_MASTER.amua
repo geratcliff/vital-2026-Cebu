@@ -7,7 +7,7 @@
         <dateCreated>Mon Sep 09 10:51:24 CDT 2024</dateCreated>
         <versionCreated>0.3.1</versionCreated>
         <modifier>johngraves</modifier>
-        <dateModified>Tue Oct 01 10:39:04 EET 2024</dateModified>
+        <dateModified>Wed Oct 02 06:27:44 EET 2024</dateModified>
         <versionModified>0.3.1</versionModified>
     </Metadata>
     <DimInfo>
@@ -92,7 +92,7 @@
         <name>u_mild</name>
         <expression>Beta(95,5,~)</expression>
         <notes>Quality-of-life weight for asymptomatic health state</notes>
-        <sensMin>0.9</sensMin>
+        <sensMin>.93</sensMin>
         <sensMax>.98</sensMax>
     </Parameter>
     <Parameter>

@@ -275,7 +275,7 @@ With these changes made, check and run the model. Do you obtain different cost a
 
     -   Make sure to multiply `p_death_disease` by the relative risk reduction *each time it appears in the branches!*
 
--   Update the utility payoff for the progressive disease state using `u_progressive_treatment`
+-   Update the utility payoff for the progressive disease state using `u_progressive_treated`
 
 -   Include the one-time treatment cost at the time of transition from mild to progressive disease (see below)
 

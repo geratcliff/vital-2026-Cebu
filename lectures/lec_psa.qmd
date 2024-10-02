@@ -635,35 +635,44 @@ For a given iteration $j$
 3.  Record the PSA parameter values and the outcome results in a table.
 4.  Repeat 1-3 many times.
 
-## Example {.smaller}
+## Common PSA Distributions in Amua
 
-Let's construct a PSA sample for a model with a single parameter with uncertainty distribution Normal(2,0.1).
+| Parameter Type                  | Distribution     | Amua                      |
+|---------------------------------|------------------|---------------------------|
+| Probability                     | beta             | Beta(shape1,shape2,\~)    |
+| Rate                            | gamma            | Gamma(shape, scale, \~)   |
+| Utility weight                  | beta             | Beta(shape1,shape2,\~)    |
+| Right skew (e.g., cost)         | gamma, lognormal | LogNorm(shape,scale,\~)   |
+| Relative risks or hazard ratios | lognormal        | LogNorm(shape,scale,\~)   |
+| Odds Ratio                      | logistic         | Logistic(location, scale) |
 
-1.  PSA sample size: M = 5
-2.  Draw a random number between 0 and 1: `r set.seed(23); round(runif(1),4)`
-3.  Feed thhis into the inverse Normal CDF: `NORM.INV(.5766 , 2, 0.1) = 2.019`
-4.  Repeat steps 1-3 four more times to get the PSA sample for this parameter.
+## Exmample: Uncertainty in Utility Weight
 
-## Example
+- Base case value: 0.95
+- Sample from `Beta(95,5,~)`
+- Alternatively, sample from `Beta(950,50,~)`
 
-| rand   | formula                  | result |
-|--------|--------------------------|--------|
-| 0.5766 | NORM.INV(0.5766, 2, 0.1) | 2.019  |
-| 0.2231 | NORM.INV(0.2231, 2, 0.1) | 1.924  |
-| 0.3319 | NORM.INV(0.3319, 2, 0.1) | 1.957  |
-| 0.7107 | NORM.INV(0.7107, 2, 0.1) | 2.056  |
-| 0.8194 | NORM.INV(0.8194, 2, 0.1) | 2.091  |
+## Exmample: Uncertainty in Utility Weight
 
-## Inverse CDFs Available In Excel
+```{r, echo = FALSE}
+#| fig-width: 8
+#| fig-height: 5
+#| fig-align: center
+p = tibble(samp1 = rbeta(95,5,n=1e4), samp2 = rbeta(950,50,n=1e4)) %>% 
+  mutate(index = row_number()) %>% 
+  gather(samp,value,-index) %>% 
+  mutate(samp = case_when(samp == "samp1" ~ "Beta(95,5,~)", 
+                          samp == "samp2" ~ "Beta(950,50,~")) %>% 
+  ggplot() + geom_density(aes(group = samp, x = value, colour =samp)) + 
+  hrbrthemes::theme_ipsum() + ggsci::scale_colour_d3() + 
+  labs(title = "Utility Weight Uncertainty", x = "Utility Weight Value", y = "Density") + 
+  geom_vline(aes(xintercept = 0.95))
 
-::: {style="font-size: 0.8em"}
-| Distribution | Function      | Example                        | Example Value |
-|------------------|------------------|-------------------|------------------|
-| Normal       | NORM.INV()    | NORM.INV(RAND(),2,0.1)         | 2.024         |
-| Beta         | BETA.INV()    | BETA.INV(RAND(),100,5)         | 0.947         |
-| Gamma        | GAMMA.INV()   | GAMMA.INV(RAND(),20,1/100)     | 0.269         |
-| Lognormal    | LOGNORM.INV() | LOGNORM.INV(RAND(),LN(4),0.01) | 4.061         |
-:::
+p_labeled <- directlabels::direct.label(p, "top.points") + scale_y_continuous(limits = c(0,70))
+print(p_labeled)
+```
+
+# Interactive Amua Session 
 
 # 3. How Do We Summarize PSA Results?
 
@@ -672,7 +681,7 @@ Let's construct a PSA sample for a model with a single parameter with uncertaint
 ::: columns
 ::: column
 -   Plot costs and QALYs of each iteration to show degree of variation in estimates.
--   Figure plots values at each iteration, the average across 1,000 iterations (large points) and ellipses that capture \~95% of points.[^1]
+-   Figure plots values at each iteration, the average across 1,000 iterations (large points) and ellipses that capture \~95% of points.
 :::
 
 ::: column
@@ -688,7 +697,6 @@ plot.psa(l_psa) +
 :::
 :::
 
-[^1]: Unfortunately, this figure cannot be directly created in Excel; you can use our Shiny app to create it though!
 
 ## Cost Effectiveness Acceptability Curves
 
@@ -985,6 +993,8 @@ plot.ceac(ceac_obj, frontier=FALSE) +
   theme(legend.position = c(0.82, 0.5))
 ```
 
+# Interactive Amua Session 
+
 ## What Does the CEAC Tell Us?
 
 -   Fenwick et al. (2001) the probability of being cost-effective cannot be used to determine the optimal option.
@@ -1220,6 +1230,8 @@ plot.evpi(evpi)
 :::
 :::
 :::
+
+# Interactive Amua Session 
 
 <!-- ## Sampling Parameters -->
 
