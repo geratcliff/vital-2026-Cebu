@@ -104,13 +104,13 @@ bibliography: references.bib
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                        | 09:30 - 10:15 | [Interactive Lecture: Determinisitic, Threshold and Scenario Analyses](lectures/lec_sensitivity.qmd) \[JG\]                                                  |
 |                        |               |                                                                                                                                                              |
-|                        |               | Progressive Disease Case Study Template \[will be provided Wednesday morning!\]                                                                              |
+|                        |               | [Progressive Disease Case Study Template](https://graveja0.github.io/vital-istanbul-2024/case-studies/cs_progressive-disease_MASTER.amua)                    |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                        | 10:15 - 10:45 | Break                                                                                                                                                        |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                        | 10:30 - 12:30 | [Interactive Lecture: Probabilistic Sensitivity Analysis and Value of Information](lectures/lec_psa.qmd) \[JG\]                                              |
+|                        | 10:30 - 12:30 | [Advanced Modeling Methods](lectures/lec_advanced-modeling-techniques.qmd) \[JZ\]                                                                            |
 |                        |               |                                                                                                                                                              |
-|                        |               | [Advanced Modeling Methods](lectures/lec_advanced-modeling-techniques.qmd) \[time permitting\] \[JZ\]                                                        |
+|                        |               | [Interactive Lecture: Probabilistic Sensitivity Analysis and Value of Information](lectures/lec_psa.qmd) \[JG\]                                              |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                        | 12:30 - 13:45 | Lunch                                                                                                                                                        |
 +------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
