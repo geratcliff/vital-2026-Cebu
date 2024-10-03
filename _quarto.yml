@@ -9,6 +9,7 @@ project:
     - "*.docx"
     - "*.amua"
     - "*.csv"
+    - "*.zip"
 
 website:
   title: "Decision Analysis Workshop"
