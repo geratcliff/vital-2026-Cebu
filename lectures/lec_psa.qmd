@@ -1,12 +1,22 @@
 ---
 title: "9. Systematic Approaches to Understanding Model Uncertainty"
-editor: source
-format: 
+format:
   revealjs:
+    theme: slides.scss
+    incremental: false
+    slide-number: true
+    logo: ../vchem.png
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
     footer: |
       [Back to Website](../index.html)
 editor_options: 
   chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
 bibliography: references.bib  
 ---
 
@@ -549,82 +559,82 @@ cdf_params <-
 | Relative risks or hazard ratios | lognormal        |
 | Odds Ratio                      | logistic         |
 
-## How Do We Draw PSA Values?
+<!-- ## How Do We Draw PSA Values? -->
 
-::: r-stack
-![](media/r_HS.png){.fragment height="500px"}
+<!-- ::: r-stack -->
+<!-- ![](media/r_HS.png){.fragment height="500px"} -->
 
-![](media/r_HD.png){.fragment height="500px"}
+<!-- ![](media/r_HD.png){.fragment height="500px"} -->
 
-![](media/hr_S.png){.fragment height="500px"}
+<!-- ![](media/hr_S.png){.fragment height="500px"} -->
 
-![](media/hr_HS_trtB.png){.fragment height="500px"}
+<!-- ![](media/hr_HS_trtB.png){.fragment height="500px"} -->
 
-![](media/hr_HS_trtC.png){.fragment height="500px"}
+<!-- ![](media/hr_HS_trtC.png){.fragment height="500px"} -->
 
-![](media/hr_HS_trtD.png){.fragment height="500px"}
+<!-- ![](media/hr_HS_trtD.png){.fragment height="500px"} -->
 
-![](media/hr_HS_trtE.png){.fragment height="500px"}
+<!-- ![](media/hr_HS_trtE.png){.fragment height="500px"} -->
 
-![](media/u_H.png){.fragment height="500px"}
+<!-- ![](media/u_H.png){.fragment height="500px"} -->
 
-![](media/u_S.png){.fragment height="500px"}
+<!-- ![](media/u_S.png){.fragment height="500px"} -->
 
-![](media/c_S.png){.fragment height="500px"}
+<!-- ![](media/c_S.png){.fragment height="500px"} -->
 
-![](media/c_trtA.png){.fragment height="500px"}
+<!-- ![](media/c_trtA.png){.fragment height="500px"} -->
 
-![](media/c_trtB.png){.fragment height="500px"}
+<!-- ![](media/c_trtB.png){.fragment height="500px"} -->
 
-![](media/c_trtC.png){.fragment height="500px"}
+<!-- ![](media/c_trtC.png){.fragment height="500px"} -->
 
-![](media/c_trtD.png){.fragment height="500px"}
+<!-- ![](media/c_trtD.png){.fragment height="500px"} -->
 
-![](media/c_trtE.png){.fragment height="500px"}
-:::
+<!-- ![](media/c_trtE.png){.fragment height="500px"} -->
+<!-- ::: -->
 
-## How Do We Draw PSA Values
+<!-- ## How Do We Draw PSA Values -->
 
-::: incremental
--   All the model parameters have different uncertainty distributions. How do we draw values?
--   **Inverse Transform Method**
--   Idea: randomly sample from quantiles in the distribution.
-:::
+<!-- ::: incremental -->
+<!-- -   All the model parameters have different uncertainty distributions. How do we draw values? -->
+<!-- -   **Inverse Transform Method** -->
+<!-- -   Idea: randomly sample from quantiles in the distribution. -->
+<!-- ::: -->
 
-## How Do We Draw PSA Values
+<!-- ## How Do We Draw PSA Values -->
 
-::: incremental
--   Requires drawing a random number between 0 and 1 (the quantile)
--   Requires an *inverse cumulative density function*
--   You can do this in Excel!
-:::
+<!-- ::: incremental -->
+<!-- -   Requires drawing a random number between 0 and 1 (the quantile) -->
+<!-- -   Requires an *inverse cumulative density function* -->
+<!-- -   You can do this in Excel! -->
+<!-- ::: -->
 
-## Normal Distribution: PDF
+<!-- ## Normal Distribution: PDF -->
 
-![](media/pdf-to-cdf-norm.png){fig-align="center" layout-valign="center" height="500px"}
+<!-- ![](media/pdf-to-cdf-norm.png){fig-align="center" layout-valign="center" height="500px"} -->
 
-## Normal Distribution: CDF
+<!-- ## Normal Distribution: CDF -->
 
-![](media/pdf-to-cdf-norm4.png){fig-align="center" layout-valign="center" height="500px"}
+<!-- ![](media/pdf-to-cdf-norm4.png){fig-align="center" layout-valign="center" height="500px"} -->
 
-## Normal Distribution: PDF to CDF
+<!-- ## Normal Distribution: PDF to CDF -->
 
-![](media/pdf-to-cdf-norm.gif){fig-align="center" layout-valign="center" height="500px"}
+<!-- ![](media/pdf-to-cdf-norm.gif){fig-align="center" layout-valign="center" height="500px"} -->
 
-```{r}
-#| eval: false
-anim_norm
-```
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- anim_norm -->
+<!-- ``` -->
 
-## Normal Distribution: CDF
+<!-- ## Normal Distribution: CDF -->
 
-![](media/pdf-to-cdf-norm4.png){fig-align="center" layout-valign="center" height="500px"}
+<!-- ![](media/pdf-to-cdf-norm4.png){fig-align="center" layout-valign="center" height="500px"} -->
 
-## Drawing from an Arbitrary PSA Distribution
+<!-- ## Drawing from an Arbitrary PSA Distribution -->
 
-1.  Draw a random number between 0 and 1 (`RAND()`)
-2.  Feed this number through the quantile function ("inverse cumulative density function") for the specified distribution.
-3.  Repeat as many times as needed for the PSA (e.g., 1,000 times)
+<!-- 1.  Draw a random number between 0 and 1 (`RAND()`) -->
+<!-- 2.  Feed this number through the quantile function ("inverse cumulative density function") for the specified distribution. -->
+<!-- 3.  Repeat as many times as needed for the PSA (e.g., 1,000 times) -->
 
 ## Constructing a PSA Sample
 
