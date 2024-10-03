@@ -132,8 +132,6 @@ $$
 
 ::: incremental
 -   **WHO-CHOICE:** Time discounting of health outcomes.
--   **Our Methodology:** Continuous-time discounting from original GBD
-    equations is retained.
 :::
 
 ## Takeaways
@@ -203,7 +201,7 @@ $$
 ::: incremental
 -   YLD: New Outcome. Use disability weights instead of utility weights!
 -   YLL: One-time "event" at time of death from disease.
-    -   "Cost": present value of remaining life expectancy at age $t$ in
+    -   "Cost": present value of remaining life expectancy at age of death in
         the model.
     -   Intuition: we penalize premature death from disease using the
         remaining life expectancy at the age in which the person dies.
