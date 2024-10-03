@@ -18,3 +18,4 @@ _freeze/
 *.jar
 _gbd_lifetables/IHME*
 _gbd_lifetables/life-tables-2019.rds
+_website-usb/
