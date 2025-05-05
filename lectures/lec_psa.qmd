@@ -559,6 +559,13 @@ cdf_params <-
 | Relative risks or hazard ratios | lognormal        |
 | Odds Ratio                      | logistic         |
 
+## How Do I Draw Values
+
+
+https://yuhanxuan.shinyapps.io/shiny4dist/
+
+
+
 <!-- ## How Do We Draw PSA Values? -->
 
 <!-- ::: r-stack -->

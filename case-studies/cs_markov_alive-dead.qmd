@@ -110,17 +110,17 @@ We first define a lookup table <img src="../amua-images/table_16.png" alt="Custo
 
 Download the background mortality file for your country from the workshop website. Each workbook contains the age-indexed annual mortality probability for various countries represented in our workshop.
 
-|                                                                                                      |                                                                                                                   |
+|  |  |
 |------------------------------------|------------------------------------|
-| [Bangladesh](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/bangladesh.csv)   | [Rwanda](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/rwanda.csv)                        |
-| [Cambodia](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/cambodia.csv)       | [South Africa](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/south_africa.csv)            |
-| [Cameroon](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/cameroon.csv)       | [Sri Lanka](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/sri_lanka.csv)                  |
-| [China](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/china.csv)             | [Tanzania](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/united_republic_of_tanzania.csv) |
-| [Ethiopia](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/ethiopia.csv)       | [Thailand](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/thailand.csv)                    |
-| [India](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/india.csv)             | [Uganda](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/uganda.csv)                        |
-| [Kenya](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/kenya.csv)             | [Zambia](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/zambia.csv)                        |
-| [Mozambique](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/mozambique.csv)   | [Zimbabwe](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/zimbabwe.csv)                    |
-| [Philippines](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/philippines.csv) |                                                                                                                   |
+| [Bangladesh](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/bangladesh.csv) | [Rwanda](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/rwanda.csv) |
+| [Cambodia](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/cambodia.csv) | [South Africa](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/south_africa.csv) |
+| [Cameroon](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/cameroon.csv) | [Sri Lanka](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/sri_lanka.csv) |
+| [China](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/china.csv) | [Tanzania](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/united_republic_of_tanzania.csv) |
+| [Ethiopia](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/ethiopia.csv) | [Thailand](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/thailand.csv) |
+| [India](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/india.csv) | [Uganda](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/uganda.csv) |
+| [Kenya](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/kenya.csv) | [Zambia](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/zambia.csv) |
+| [Mozambique](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/mozambique.csv) | [Zimbabwe](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/zimbabwe.csv) |
+| [Philippines](https://graveja0.github.io/vital-istanbul-2024/_gbd_lifetables/output/philippines.csv) |  |
 
 A screenshot of the first few rows of this .csv file is shown below. The`index`column is the age, while`p_die` is the annual probability of death at each age.
 

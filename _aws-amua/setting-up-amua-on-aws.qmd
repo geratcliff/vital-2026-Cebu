@@ -44,3 +44,7 @@ You can now change the password by typing "cmd" into the Search bar on the botto
 ![](images/clipboard-2147004463.png)
 
 Type `net user Administrator "vit@lStrategies2024"`
+
+# Create Image
+
+![](images/clipboard-2539907652.png)
