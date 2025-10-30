@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: _site
   resources:
     - "*.xlsx"
     - "*.xlsm"
@@ -12,7 +13,7 @@ project:
     - "*.zip"
 
 website:
-  title: "Decision Analysis Workshop"
+  title: "Decision Analysis Workshop - Cebu"
   sidebar:
     style: "floating"
     search: false
