@@ -11,6 +11,7 @@ project:
     - "*.amua"
     - "*.csv"
     - "*.zip"
+  site-url: https://geratcliff.github.io/vital-2026-Cebu/
 
 website:
   title: "Decision Analysis Workshop - Cebu"
