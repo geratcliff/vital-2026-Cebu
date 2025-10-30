@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: /docs
+  output-dir: docs
   resources:
     - "*.xlsx"
     - "*.xlsm"
@@ -11,6 +11,7 @@ project:
     - "*.amua"
     - "*.csv"
     - "*.zip"
+
 
 website:
   title: "Decision Analysis Workshop - Cebu"
@@ -49,7 +50,7 @@ website:
         href: https://journals.sagepub.com/doi/full/10.1177/0272989X221121747
       - href: about.qmd
         text: Instructors
-
+base-url: /vital-2026-Cebu/
 format:
   html:
     theme: cosmo
