@@ -8,7 +8,7 @@
 _site/
 *cache*
 *html*
-site_libs/
+/site_libs/
 *files*
 *.json*
 *.feed*
