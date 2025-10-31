@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.24">
+
+  <title>Decision Analysis Workshop - Cebu – Bayes’ Theorem &amp; Probability Revision</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Bayes’ Theorem &amp; Probability Revision</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section>
+<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
+<h1>Learning Objectives and Outline</h1>
+
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning Objectives</h2>
+<ul>
+<li class="fragment"><p>Recognize the importance of Bayes’ Theorem within a Decision Analysis context</p></li>
+<li class="fragment"><p>Reproduce Bayes’ within context of sensitivity/specificity/positive &amp; negative predictive values</p></li>
+</ul>
+</section>
+<section id="medical-testing" class="slide level2">
+<h2>Medical Testing</h2>
+<p><br></p>
+<p><strong>Testing is done for:</strong></p>
+<ul>
+<li class="fragment"><p>Screening (primary prevention)</p></li>
+<li class="fragment"><p>Diagnosis (secondary prevention)</p></li>
+<li class="fragment"><p>Monitor and guide treatment (tertiary prevention)</p></li>
+<li class="fragment"><p>Prognosis</p></li>
+</ul>
+<aside class="notes">
+<p>Keeping Bayes’ Theorem in mind, let’s jump into diagnostic testing &amp; then we will see how we would apply Bayes’ theorem within the context of test results</p>
+<p>MEDICAL TESTING is done for –</p>
+<p>Screening as it relates to primary prevention EX: HPV screening for cervical cancer prevention</p>
+<p>Diagnosis, or secondary prevention EX: Diagnosis of Hepatitis C, which the earlier diagnosis the better in terms of the disease getting worse over time</p>
+<p>To monitor &amp; guide treatment (otherwise known as tertiary prevention) EX: Diabetes could be a good example of this – the goal is to improve quality of life by limiting or delaying complications, restoring function, etc.</p>
+<p>To make a prognosis EX: The likely course of a disease</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="information-for-decision-making" class="slide level2">
+<h2>Information for decision making</h2>
+<p><br></p>
+<p><strong>Clinicians have a variety of diagnostic information to guide their decision making</strong></p>
+<ul>
+<li class="fragment"><p>Talking to patient (history, symptoms)</p></li>
+<li class="fragment"><p>Physically examining patient</p></li>
+<li class="fragment"><p>Screening (cervical cancer) + diagnostic tests (EKGs, Blood tests, X-rays)</p></li>
+</ul>
+</section>
+<section id="information-for-decision-making-1" class="slide level2">
+<h2>Information for decision making</h2>
+<p><br></p>
+<p>Obtaining information can be…</p>
+<ul>
+<li class="fragment"><p>RISKY <br></p></li>
+<li class="fragment"><p>EXPENSIVE <br></p></li>
+<li class="fragment"><p>ERROR PRONE <br></p></li>
+<li class="fragment"><p>ALL THREE</p></li>
+</ul>
+<aside class="notes">
+<p>RISKY/INVASIVE – For example, getting an Amniocentesis during pregnancy (A medical procedure used primarily in prenatal diagnosis of chromosomal abnormalities and fetal infections) can significantly increase one’s risk of a miscarriage.</p>
+<p>EXPENSIVE – An MRI, for example, is pricey</p>
+<p>ERROR PRONE – Diagnostic tests, like anything, aren’t perfect; though, some are more perfect than others</p>
+<p>ALL THREE –A diagnostic test, for example, could be all three – risky, expensive, &amp; not very precise</p>
+<p>**We need to factor in these tradeoffs when making decisions</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="role-of-decision-analysis-methods" class="slide level2">
+<h2>Role of Decision Analysis Methods</h2>
+<ul>
+<li class="fragment">Can be used to weigh the costs and benefits:
+<ul>
+<li class="fragment">Test costs</li>
+<li class="fragment">Test accuracy</li>
+<li class="fragment">Health risks of testing</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-diagnostic-tests" class="slide level2">
+<h2>Example: Diagnostic Tests</h2>
+<p>What is the chance that a patient has a disease if a diagnostic test is positive or negative? <br></p>
+</section>
+<section id="example-diagnostic-tests-1" class="slide level2">
+<h2>Example: Diagnostic Tests</h2>
+<p>What is the chance that a patient has a disease if a diagnostic test is positive or negative? <br></p>
+<p>In other words, what is the probability of disease conditional on the test result? (D+ | T+); (D+ | T-)</p>
+</section>
+<section id="ways-to-get-revised-posterior-probabilities" class="slide level2">
+<h2>Ways to get revised (posterior) probabilities</h2>
+<p><br></p>
+<ol type="1">
+<li class="fragment">Bayes’ theorem <br></li>
+<li class="fragment">2x2 tables <br></li>
+<li class="fragment">Bayes’ theorem via decision tree inversion <br></li>
+</ol>
+</section>
+<section id="ways-to-get-revised-posterior-probabilities-1" class="slide level2">
+<h2>Ways to get revised (posterior) probabilities</h2>
+<p><br></p>
+<ol type="1">
+<li><span style="background-color: yellow;">Bayes’ theorem</span> <br></li>
+<li>2x2 tables <br></li>
+<li>Bayes’ theorem via decision tree inversion <br></li>
+</ol>
+</section></section>
+<section>
+<section id="bayes-theorem-intuition" class="title-slide slide level1 center" data-background="#43464B">
+<h1>1. Bayes’ Theorem: Intuition</h1>
+
+</section>
+<section id="population-of-200-indiviudals" class="slide level2">
+<h2>Population of 200 indiviudals</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test1.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="disease-red-has-1-prevalence." class="slide level2">
+<h2>Disease (red) has 1% prevalence.</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test2.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="a-screening-test-is-available" class="slide level2">
+<h2>A Screening Test is Available</h2>
+<div class="quarto-layout-panel" data-layout="[[-1], [-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-will-detect-100-of-positive-cases." class="slide level2">
+<h2>Test will detect 100% of positive cases.</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test3a.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="of-disease-free-individuals-will-test-positive" class="slide level2 smaller">
+<h2>3% of disease-free individuals will test positive</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test3.png" class="quarto-figure quarto-figure-center" height="520"></p>
+</figure>
+</div>
+</section>
+<section id="eight-positive-tests" class="slide level2">
+<h2>Eight Positive Tests</h2>
+<div class="quarto-layout-panel" data-layout="[[-1],[-1], [-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test4.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="probability-of-disease-given-positive-test" class="slide level2">
+<h2>Probability of Disease Given Positive Test</h2>
+<div class="quarto-layout-panel" data-layout="[[-1],[-1],  [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_test5.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="key-points" class="slide level2">
+<h2>Key Points</h2>
+<ul>
+<li class="fragment">While the test <em>always</em> detects a true case, it also returns false positives.</li>
+<li class="fragment">The higher the number of false positives, the lower the probability that a given positive result is actually an individual with the disease.</li>
+</ul>
+</section>
+<section id="false-positives" class="slide level2">
+<h2>False Positives</h2>
+<ul>
+<li class="fragment">Could be the result of a poor test (e.g., 3% false positive rate).</li>
+<li class="fragment">Or could be the result of a disease with very low prevalence in a large population, but a very good test!
+<ul>
+<li class="fragment">In a population of 200 million, a test with a 0.01% false positive rate will yield 20,000 false positive readings!</li>
+<li class="fragment">If the disease prevalence is low (e.g., 0.001%, or 2,000 sick individuals), the probability that someone is sick if they test positive is &lt;10%!</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="bayes-theorem-theory" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Bayes’ Theorem: Theory</h1>
+
+</section>
+<section id="probability-of-b" class="slide level2">
+<h2>Probability of B</h2>
+<div class="columns">
+<div class="column">
+<p><span class="math display">
+Pr(B)
+</span></p>
+</div><div class="column">
+<p><img data-src="images/conditional-1.png"></p>
+</div></div>
+</section>
+<section id="probability-of-a-and-b" class="slide level2">
+<h2>Probability of A and B</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><span class="math display">
+\begin{aligned}
+Pr(A \&amp; B) &amp;= Pr(A|B) Pr(B)\\
+&amp;= Pr(B|A) Pr(A)
+\end{aligned}
+</span></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/conditional-2.png"></p>
+</div></div>
+</section>
+<section id="probability-of-a-given-b" class="slide level2">
+<h2>Probability of A Given B</h2>
+<div class="columns">
+<div class="column">
+<p><span class="math display">
+Pr(A|B) = \frac{Pr(A \&amp; B)}{Pr(B)}
+</span></p>
+</div><div class="column">
+<p><img data-src="images/conditional-3.png"></p>
+</div></div>
+</section>
+<section id="a-perfect-test" class="slide level2">
+<h2>A Perfect Test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes1.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="specificity-100-sensitivity" class="slide level2">
+<h2>100% Specificity, &lt;100% Sensitivity</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes2.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="specificity-100-sensitivity-1" class="slide level2">
+<h2>&lt;100% Specificity, 100% Sensitivity</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes3.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="lets-lower-disease-prevalence" class="slide level2">
+<h2>Let’s Lower Disease Prevalence</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes4.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="specificity-100-sensitivity-2" class="slide level2">
+<h2>&lt;100% Specificity, &lt;100% Sensitivity</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes5.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="what-is-the-probability-of-disease-given-a-positive-test" class="title-slide slide level1 center" data-background="#43464B">
+<h1>What is the Probability of Disease Given A Positive Test?</h1>
+
+</section>
+<section id="probability-of-testing-positive-if-have-disease" class="slide level2">
+<h2>Probability of Testing Positive if Have Disease</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1],  [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes5.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_PrPosBarDisesase.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="probability-of-having-the-disease" class="slide level2">
+<h2>Probability of Having the Disease</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1],  [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes5.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_PrDisease.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="probability-of-a-positive-test" class="slide level2">
+<h2>Probability of a Positive Test</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1],  [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes5.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_PrPos.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="bayes-theorem" class="slide level2">
+<h2>Bayes’ Theorem</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1],[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/bayes_theorem_.png"></p>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bayes_theorem.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<ol type="1">
+<li><p>Bayes theorem describes the probability of an event BASED ON the PRIOR knowledge of conditions that might be related to the event</p></li>
+<li><p>When conducting decision analyses in real life, sometimes, the probability of A given B is easier to get (or vice versa) and you’re not able to find the probability of B given A. So, you can use Bayes’ theorem to convert probabilities into what you need based on the data you have in the real world</p></li>
+<li><p>Conditional probabilities are related according to Bayes’ theorem – in other words, it is a way to RELATE conditional probabilities</p></li>
+<li><p>Explain how to get to Bayes equation*** NOTE: Pr(B) cannot be 0 and Pr(A) cannot be 0 or it becomes undefined</p></li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="section-1" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain" data-background-opacity="0.1">
+<h2></h2>
+</section>
+<section id="section-2" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain" data-background-opacity="0.1">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment">Population of 200</li>
+<li class="fragment">Disease (red) has 1% prevalence.</li>
+<li class="fragment">Test will detect 100% of positive cases.</li>
+<li class="fragment">3% of disease-free individuals will test positive</li>
+</ul>
+</div><div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1],[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/bayes_population0.png"></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain" data-background-opacity="0.1">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Population of 200</li>
+<li>Disease (red) has 1% prevalence.</li>
+<li>Test will detect 100% of positive cases.</li>
+<li>3% of disease-free individuals will test positive</li>
+</ul>
+</div><div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1],[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/bayes_population1.png"></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-4" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain" data-background-opacity="0.1">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Population of 200</li>
+<li>Disease (red) has 1% prevalence.</li>
+<li>Test will detect 100% of positive cases.</li>
+<li>3% of disease-free individuals will test positive</li>
+</ul>
+</div><div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1],[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/bayes_population2.png"></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-5" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain" data-background-opacity="0.1">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Population of 200</li>
+<li>Disease (red) has 1% prevalence.</li>
+<li>Test will detect 100% of positive cases.</li>
+<li>3% of disease-free individuals will test positive</li>
+</ul>
+</div><div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1],[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="images/bayes_population3.png"></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-6" class="slide level2" data-background-image="images/bayes_test3.png" data-background-size="contain" data-background-opacity="0.1">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Population of 200</li>
+<li>Disease (red) has 1% prevalence.</li>
+<li>Test will detect 100% of positive cases.</li>
+<li>3% of disease-free individuals will test positive</li>
+</ul>
+</div><div class="column">
+<div class="quarto-layout-panel" data-layout="[[-1], [-1],[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p><img data-src="images/bayes_population3.png"> <img data-src="images/bayes_population4.png"></p>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="x2-tables" class="title-slide slide level1 center" data-background="#43464B">
+<h1>2. 2x2 Tables</h1>
+
+</section>
+<section id="x2-example-disease-testing" class="slide level2">
+<h2>2x2 Example: Disease Testing</h2>
+<p><strong>Case example</strong></p>
+<p>You are trying to determine what proportion of the population has already been exposed a new communicable disease, in hopes of figuring out if herd immunity is possible.</p>
+<p><br></p>
+<p>You decide to do a antibody test to measure the level of antibodies <span style="background-color: yellow;">in a sample of 500 participants</span></p>
+</section>
+<section id="disease-testing" class="slide level2">
+<h2>Disease Testing</h2>
+<p><br></p>
+<p><strong>Case example</strong></p>
+<p>What is the test’s SENSITIVITY? <br></p>
+<p>What is the test’s SPECIFICITY? <br></p>
+<p>What is the test’s FALSE NEGATIVE RATE? <br></p>
+<p>What is the test’s FALSE POSITIVE RATE? <br></p>
+</section>
+<section id="disease-testing-1" class="slide level2">
+<h2>Disease Testing</h2>
+<p><br></p>
+<p><strong>Case example</strong></p>
+<div style="font-size: 0.8em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><em>D+</em></th>
+<th><em>D-</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>T+</em></td>
+<td>a (TP)</td>
+<td>b (FP)</td>
+<td>a + b</td>
+</tr>
+<tr class="even">
+<td><em>T-</em></td>
+<td>c (FN)</td>
+<td>d (TN)</td>
+<td>c + d</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>a + c</td>
+<td>b + d</td>
+<td>a + b + c + d</td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="notes">
+<p>One way we can look at these different testing outcomes is through a 2X2 table</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-testing-sensitivity" class="slide level2">
+<h2>Disease Testing: SENSITIVITY</h2>
+<p><br></p>
+<div style="font-size: 0.8em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><em>D+</em></th>
+<th><em>D-</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>T+</em></td>
+<td><strong>125</strong> (a, TP)</td>
+<td>20 (b, FP)</td>
+<td>145 (a + b)</td>
+</tr>
+<tr class="even">
+<td><em>T-</em></td>
+<td>9 (c, FN)</td>
+<td>346 (d, TN)</td>
+<td>355 (c + d)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>134</strong> (a + c)</td>
+<td>366 (b + d)</td>
+<td>500 (a + b + c + d)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br> Test Sensitivity among those who have or had the virus, <span style="background-color: yellow;">125/134 = 93%</span> (Interpretation: The probability of the screening test correctly identifying diseased subjects was 93%)</p>
+<aside class="notes">
+<ol type="1">
+<li><p><strong>Sensitivity</strong> measures how often a test correctly generates a positive result for people who had the condition that’s being tested for (also known as the “true positive” rate).</p></li>
+<li><p>We would take column A (which is the proportion of people who have a positive COVID antibody test &amp; divide that by everyone who truly had COVID) –</p></li>
+<li><p>As a result, we would get the proportion of people that previously HAD COVID with a TRUE POSITIVE test</p></li>
+</ol>
+<p><em>(to determine those who “truly” had COVID, the study criteria could have included individuals who had received a range of other confirmatory tests while they had COVID, including lung examinations, other blood work, etc.)</em></p>
+<ol start="4" type="1">
+<li><p>For this example, we get a test sensitivity of 93%</p></li>
+<li><p><strong>In other words, a test with 93% sensitivity will correctly return a positive result for MOST people who have had COVID BUT will return a negative result — a false-negative — for 7% of the people who have had COVID &amp; should have tested positive</strong></p></li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-testing-sensitivity-1" class="slide level2">
+<h2>Disease Testing: SENSITIVITY</h2>
+
+<img data-src="images/sensitivity.png" class="r-stretch"></section>
+<section id="example-specificity" class="slide level2">
+<h2>Example: SPECIFICITY</h2>
+<p><br></p>
+<div style="font-size: 0.8em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><em>D+</em></th>
+<th><em>D-</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>T+</em></td>
+<td>125 (a, TP)</td>
+<td>20 (b, FP)</td>
+<td>145 (a + b)</td>
+</tr>
+<tr class="even">
+<td><em>T-</em></td>
+<td>9 (c, FN)</td>
+<td><strong>346</strong> (d, TN)</td>
+<td>355 (c + d)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>134 (a + c)</td>
+<td><strong>366</strong> (b + d)</td>
+<td>500 (a + b + c + d)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br> Test Specificity among those without the disease at any point, <span style="background-color: yellow;">346/366 = 95%</span> (Interpretation: The probability of the screening test correctly identifying non-diseased subjects was 65%)</p>
+<aside class="notes">
+<ol type="1">
+<li><p><strong>Specificity</strong> measures a test’s ability to correctly generate a <strong>negative result</strong> for people <strong>who don’t have the condition</strong> (or didn’t have the condition in our case) that’s being tested for (also known as the “true negative” rate).</p></li>
+<li><p>To calculate the SPECIFICITY of the antibody test, we would take column D (which is the proportion of people who tested negative for COVID antibodies &amp; divide that by everyone who <strong>truly</strong> did NOT have COVID</p></li>
+<li><p>When we do the calculation, the probability of the antibody test correctly identifying those that DID NOT previously have COVID was 95%</p></li>
+<li><p><strong>In other words, a test with 95% specificity will correctly return a negative result for MOST people who didn’t have the disease BUT will return a positive result — a false-positive — for 5% of the people who didn’t have COVID and should have tested negative for the antibodies</strong></p></li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-testing-specificity" class="slide level2">
+<h2>Disease Testing: SPECIFICITY</h2>
+
+<img data-src="images/specificity.png" class="r-stretch"></section></section>
+<section>
+<section id="do-you-want-a-test-with-good-sensitivity-or-good-specificity" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Do you want a test with good Sensitivity or good Specificity?</h1>
+<aside class="notes">
+<p>IT DEPENDS!</p>
+<p>EXAMPLE – HIV TEST</p>
+<p>If low SENSITIVITY, you have the risk of producing a lot of false-negatives, which could be bad for the population &amp; the spread of the virus + patient not getting the care he/she needs; Not picking up the disease in people who should be picked up</p>
+<p>If low SPECIFICITY, there’s an increase risk of false-positive results, which can be devastating &amp; lead to toxicity implications (if you start treatment) + grave emotional consequences + increase healthcare costs Falsely returning positive tests in people that don’t have the disease</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="false-negatives" class="slide level2">
+<h2>False Negatives</h2>
+<p><br></p>
+<p><span style="color: #169873;">False negative rate (1-sensitivity)</span> is the proportion of diseased people with a negative test: c/(a+c)</p>
+</section>
+<section id="false-negatives-1" class="slide level2" data-background-image="images/false-negative.png" data-background-size="contain" data-background-opacity="0.1">
+<h2>False Negatives</h2>
+<p><br></p>
+<p><span style="color: #169873;">False negative rate (1-sensitivity)</span> is the proportion of diseased people with a negative test: c/(a+c)</p>
+</section>
+<section id="false-negatives-2" class="slide level2" data-background-image="images/false-negative.png" data-background-size="contain" data-background-opacity="1.0">
+<h2>False Negatives</h2>
+</section>
+<section id="false-positives-1" class="slide level2">
+<h2>False Positives</h2>
+<p><br></p>
+<p><span style="color: #169873;">False positive rate (1-specificity)</span> is the proportion of non-diseased people with a positive test: b/(b+d)</p>
+</section>
+<section id="false-negatives-3" class="slide level2" data-background-image="images/false-positive.png" data-background-size="contain" data-background-opacity="0.1">
+<h2>False Negatives</h2>
+<p><br></p>
+<p><span style="color: #169873;">False positive rate (1-specificity)</span> is the proportion of non-diseased people with a positive test: b/(b+d)</p>
+</section>
+<section id="false-negatives-4" class="slide level2" data-background-image="images/false-positive.png" data-background-size="contain" data-background-opacity="1.0">
+<h2>False Negatives</h2>
+</section></section>
+<section>
+<section id="bayes-theorem-with-tree-inversion" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Bayes’ Theorem With Tree Inversion</h1>
+
+</section>
+<section id="bayes-theorem-with-tree-inversion-1" class="slide level2">
+<h2>Bayes’ theorem with tree inversion</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion1.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Another way that we can revise probabilities based on the information we have to work with is inverting the tree</p></li>
+<li><p>We often have information on the P(T+ | D+) (tree to the right); but mathematically, the tree to the left is the same, but it might be easier to construct the tree this way given the information you have</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="goal-flip-the-tree" class="slide level2">
+<h2>Goal: “Flip” The Tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion2.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="start-matching-terminal-numbers" class="slide level2">
+<h2>Start Matching Terminal Numbers …</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion3.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="continue-matching-terminal-numbers" class="slide level2">
+<h2>Continue Matching Terminal Numbers …</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion4.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="continue-matching-terminal-numbers-1" class="slide level2">
+<h2>Continue Matching Terminal Numbers …</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion5.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="work-your-way-down-the-tree" class="slide level2">
+<h2>Work Your Way Down the Tree …</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion6.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="inverted-tree" class="slide level2">
+<h2>Inverted Tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion7.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="probability-of-disease-given-test" class="slide level2">
+<h2>Probability of Disease Given + Test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion8.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="probability-of-disease-given---test" class="slide level2">
+<h2>Probability of Disease Given - Test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/inversion9.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="conclusions" class="slide level2">
+<h2>Conclusions</h2>
+<ul>
+<li class="fragment">We are often bayesian in how we think</li>
+<li class="fragment">Knowledge of test characteristics can help you to make more informed decisions</li>
+<li class="fragment">In general, diagnostic tests are helpful when pre-test prob is in the middle (30-70%) and test is going to move you past a decision threshold</li>
+<li class="fragment">Tests with very good characteristics (ex. 100% sens or spec) can also be very useful if used appropriately</li>
+</ul>
+<aside class="notes">
+<ol type="1">
+<li>You don’t realize it but you’re already thinking about these ratios in your head</li>
+</ol>
+<ul>
+<li>If you’re a surgeon and someone comes in and says that their stomach hurts, you have a certain probability in your mind that they have appendicitis</li>
+<li>Everyday life and other professions – Personality tests, who will benefit from education intervention; Autism screening</li>
+</ul>
+<ol start="2" type="1">
+<li>Pre-test probability is a big deal because you don’t want to do an expensive test with a low pre-test probability, BUT once you find additional information then that can change</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="extra-likelihood-ratios" class="title-slide slide level1 center" data-background="#43464B">
+<h1>[Extra] Likelihood Ratios</h1>
+
+</section>
+<section id="likelihood-ratio" class="slide level2">
+<h2>Likelihood ratio</h2>
+<p><br></p>
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Useful for situations in which a quick estimate of revised probabilities is needed</p>
+</div>
+</div>
+</div>
+<blockquote>
+<p>Likelihood that a given test result would be expected in a patient with the <strong>target disorder Pr(test result | D+) compared to</strong> the likelihood that the same result would be expected in a patient <strong>without the target disorder Pr(test result | D-)</strong> [A RATIO]</p>
+</blockquote>
+</section>
+<section id="likelihood-ratios" class="slide level2">
+<h2>Likelihood ratios</h2>
+<p><br></p>
+<p>The likelihood ratio (LR) summarizes test sensitivity and specificity <span style="color: forestgreen;">into one number:</span> <br></p>
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>LR (positive test) = sensitivity/1-specificity (or TPR/FPR)</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>LR (negative test) = 1-sensitivity/specificity (or FNR/TNR)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="likelihood-ratios-1" class="slide level2">
+<h2>Likelihood ratios</h2>
+<ul>
+<li class="fragment">LR can be used to revise disease probabilities using the following form of Bayes’ Theorem:</li>
+</ul>
+<blockquote>
+<p>Post-test odds = Pretest odds x LR</p>
+</blockquote>
+<ul>
+<li class="fragment">The odds that the patient has the target disorder, after the test results are known. It is calculated by multiplying the pre-test odds by the likelihood of a positive or negative test.</li>
+</ul>
+<aside class="notes">
+<ol start="3" type="1">
+<li>In other words, the post-test odds are the odds that the patient has the target disorder AFTER the test results are known</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="likelihood-ratios-2" class="slide level2">
+<h2>Likelihood ratios</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p>LR’s are an advance beyond 2x2 tables</p></li>
+<li class="fragment"><p>To use likelihood ratios, you must be comfortable converting between probabilities of disease and odds of disease</p></li>
+<li class="fragment"><p>Odds are simply another way of describing the chances that something will (or won’t) happen</p></li>
+</ul>
+</section>
+<section id="likelihood-ratios-3" class="slide level2">
+<h2>Likelihood ratios</h2>
+<p><br></p>
+<p><span class="math display"> Odds of Disease = \frac{\text{Probability}}{\text{1 - Probability}}</span> <br></p>
+<p><span class="math display"> Probability = \frac{\text{Odds}}{\text{Odds + 1}}</span></p>
+</section>
+<section id="likelihood-ratios-4" class="slide level2">
+<h2>Likelihood ratios</h2>
+<p><br></p>
+<p>Odds favoring an event; Odds = p/(1-p) If an event has 0.20 probability of occurrence, the odds favoring the event = 0.2/0.8 = 0.25 (or 1:4)</p>
+<p><br></p>
+<p>Odds against (OddA) the event; OddA = (1-p)/p The odds against are 0.8/0.2 = 4 (or 4:1)</p>
+<aside class="notes">
+<p>The components of the LR are calculated vertically, and like the sensitivity and specificity are immune to the prevalence</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="back-to-first-example-coronary-care-unit" class="slide level2">
+<h2>Back to first example (coronary care unit)</h2>
+<p><br></p>
+<div style="font-size: 0.6em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><em>Present</em></th>
+<th><em>Absent</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Elevated (+)</em></td>
+<td>300 (a, TP)</td>
+<td>15 (b, FP)</td>
+<td>315 (a + b)</td>
+</tr>
+<tr class="even">
+<td><em>Normal (-)</em></td>
+<td>35 (c, FN)</td>
+<td>150 (d, TN)</td>
+<td>185 (c + d)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>335 (a + c)</td>
+<td>165 (b + d)</td>
+<td>500 (a + b + c + d)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<div style="font-size: 0.8em">
+<ul>
+<li class="fragment">Pre-test probability was 67% (prevalence)</li>
+<li class="fragment">SENS = 0.90 &amp; SPEC = 0.91</li>
+<li class="fragment">LR+ (for positive test result) = SENS / 1=SPEC = 0.90/1-0/.91 = <strong>10</strong></li>
+<li class="fragment">Interpretation: A patient with a positive test result is 10X more likely to have had a heart attack than someone who did not have a heart attack with the same test result</li>
+</ul>
+</div>
+<aside class="notes">
+<ol type="1">
+<li>Let’s go back to our 1st example when we were looking at a coronary care unit population</li>
+<li>The pre-test probability was 67%</li>
+<li>Sensitivity was 90% &amp; specificity was 91%</li>
+<li>The Likelihood ratio for a positive test result would be, SENS / 1-SPEC (or, true positive divided by false positives) = 10 This means…</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="back-to-first-example-coronary-care-unit-1" class="slide level2">
+<h2>Back to first example (coronary care unit)</h2>
+<p><br></p>
+<ul>
+<li class="fragment">LR - (for a negative test result):
+<ul>
+<li class="fragment">1-SENS / SPEC = 1-0.90 / 0.91 = <strong>.11</strong>, indicates a ~10-fold decrease in the odds of having a condition in a patient with a negative test result.</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<ol type="1">
+<li>The Likelihood ratio for a NEGATIVE test result would be, (false negative tests / true negative)</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="back-to-first-example-coronary-care-unit-2" class="slide level2">
+<h2>Back to first example (coronary care unit)</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:90%;">
+<div style="font-size: 0.6em">
+<table class="caption-top">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Pre-test probability</td>
+</tr>
+<tr class="even">
+<td>Pre-test odds (0.67 / 1-0.67)</td>
+</tr>
+<tr class="odd">
+<td>Post (+ test) odds of disease = pre-test odds * LR(+)</td>
+</tr>
+<tr class="even">
+<td>Post (+ test) prob of disease = post-test odds / post-test odds + 1</td>
+</tr>
+<tr class="odd">
+<td>Post (- test) odds of disease = pre-test odds * LR(-)</td>
+</tr>
+<tr class="even">
+<td>Post (- test) prob of disease = 0.22 / 1.22</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<aside class="notes">
+<ol type="1">
+<li><p>Now let’s calculate the pre &amp; post-test ODDS using what we found the LR’s to be</p></li>
+<li><p>Pre-test odds = Prob / 1-Prob = 2 ; In other words, [2:1] - If you play the game 3 times, you’re likely to win twice</p></li>
+<li><p>Post-test odds = pre-test odds * LR</p></li>
+</ol>
+<ul>
+<li><p>Post-test odds of a POSITIVE test = 2*10 (10 is the value we got a couple slides back) = 20 ; or 20-fold increase in odds</p></li>
+<li><p>Post-test probability of a POSITIVE test = 95%, which is the probability that your patient will have a heart attack given his/her screening test results (worthwhile diagnostic test)</p></li>
+<li><p>Post-test odds of a NEGATIVE test = 0.22; 20-fold decrease in odds of having a heart attack in a patient with a negative test result</p></li>
+<li><p>Post-test probability of a NEGATIVE test = 18% ; in other words, of those with normal levels, there is an 18% prob that your patient WILL HAVE a heart attack given the negative screening results</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="odds-likelihood-form-of-bayes" class="slide level2">
+<h2>Odds Likelihood Form of Bayes</h2>
+<div style="font-size: 0.8em">
+<p><span class="math display">
+Odds LR = \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} = \frac{{Pr(D+)}}{Pr(D-)} * \frac{{lr(D+)}}{lr(D-)}
+</span> <br></p>
+<p><span class="math display"> \frac{{Pr(D+)}}{Pr(D-)} * \frac{{lr(D+)}}{lr(D-)}</span> <br></p>
+<p>The above is the same as:</p>
+<p><span class="math display"> \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} </span></p>
+</div>
+</section>
+<section id="odds-likelihood-form-of-bayes-1" class="slide level2">
+<h2>Odds Likelihood Form of Bayes</h2>
+<div style="font-size: 0.8em">
+<p><span class="math display">
+Odds LR = \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} = \frac{{Pr(D+)}}{Pr(D-)} * \frac{\text{Pr(test result | D+)}}{\text{Pr (test result | D-)}}
+</span> <br></p>
+<p>Pre-test odds favoring disease (<em>the prior</em>):</p>
+<p><span class="math display"> \frac{{Pr(D+)}}{Pr(D-)} </span></p>
+<p><br> The post-test odds given the test result:</p>
+<p><span class="math display"> \frac{\text{Pr(D+ | test result)}}{\text{Pr(D- | test result)}} </span></p>
+</div>
+</section>
+<section id="odds-likelihood-form-of-bayes-2" class="slide level2">
+<h2>Odds Likelihood Form of Bayes</h2>
+<p><br></p>
+<div style="font-size: 0.8em">
+<p><span class="math display">
+\frac{\text{Pr(test result | D+)}}{\text{Pr (test result | D-)}} = \frac{{Pr(D-)}}{{Pr (D+)}} * \frac{{(CTN - CFP)}}{(CTP - CFN)}
+</span> <br></p>
+<p>How to calculate an optimal “cut-off” for a test with categorical or continuous results at the point in which we will <span style="color: green;">optimize the cut-off conditional on the (1) prior probability of disease and (2) the consequences of the scenario we are assessing</span></p>
+<p><br></p>
+<p>Next lecture: <span style="color: green;">Positivity Criterion!</span></p>
+</div>
+<aside class="notes">
+<ul>
+<li><p>You won’t be tested on this equation, but this is another way of getting the OPTIMAL CUT-OFF VALUE for a continuous or categorical test – remember this for the next lecture on positivity criterion.</p></li>
+<li><p>Need to factor in the “interventions/treatment” for the “consequences of false positive” and “consequences of false negative”</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="likelihood-ratios-5" class="slide level2">
+<h2>Likelihood ratios</h2>
+<p><br></p>
+<div class="callout callout-important callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>LR (+) <br> GT 10 Excellent <br> 5-10 Good <br> 2-5 Fair. May be helpful <br> 1-2 Unlikely to be helpful</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>LR (-) <br> &lt;0.1 Excellent <br> 0.1-0.2 Good <br> 0.2-0.5 Fair. May be helpful <br> 0.5-1.0 Unlikely to be helpful</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ol type="1">
+<li>The higher <strong>diagnostic odds ratios</strong> are indicative of better test performance, which you can see here</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../vchem.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="../index.html">Back to Website</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
