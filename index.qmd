@@ -1,6 +1,6 @@
 ---
 title: Decision Modeling for Health Economic Evaluation
-subtitle: Istanbul, Türkiye 2024
+subtitle: Cebu, Philippines 2026
 editor: visual
 format: 
   html:
