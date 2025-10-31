@@ -14,6 +14,7 @@ project:
 
 website:
   title: "Decision Analysis Workshop - Cebu"
+  site-url: "https://geratcliff.github.io/vital-2026-Cebu"
   sidebar:
     style: "floating"
     search: false
