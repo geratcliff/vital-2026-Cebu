@@ -26,7 +26,7 @@ library(tidyr)
 
 Due to the workshop only being 5 days, we kindly ask that you do some pre-work before arriving to the workshop to ensure that you are able to make ample progress on your capstone.
 
-[Get Started](prework.qmd)
+[Get Started](capstone/prework.qmd)
 
 # Schedule
 

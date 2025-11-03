@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/prework.html</loc>
-    <lastmod>2025-11-03T22:43:22.327Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_structure.html</loc>
+    <lastmod>2025-10-30T14:04:58.149Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_genAI.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_3a.bayes-probrevision.html</loc>
     <lastmod>2025-10-30T14:04:58.148Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5b.cea-fundamentals2.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_2.decision-trees-and-probabilities.html</loc>
     <lastmod>2025-10-30T14:04:58.147Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_6.ICERs.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_test.html</loc>
     <lastmod>2025-10-30T14:04:58.144Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_psa.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_day1-review.html</loc>
     <lastmod>2025-10-30T14:04:58.143Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_sensitivity.html</loc>
-    <lastmod>2025-10-30T14:04:58.142Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_1a.introduction-to-decision-analysis.html</loc>
+    <lastmod>2025-10-30T14:04:58.122Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_advanced-modeling-techniques.html</loc>
-    <lastmod>2025-10-30T14:04:58.121Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_7.MarkovModels1.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5a.cea-fundamentals1.html</loc>
     <lastmod>2025-10-30T14:04:58.120Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_4a.trt-thresholds-voi.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/creating-custom-fontawesome-icons.html</loc>
+    <lastmod>2025-10-30T14:04:57.536Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_dalys.html</loc>
     <lastmod>2025-10-30T14:04:57.535Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_parameters.html</loc>
-    <lastmod>2025-10-30T14:04:57.534Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/capstone/prework.html</loc>
+    <lastmod>2025-11-03T22:43:22.327Z</lastmod>
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/capstone/06_build-markov.html</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/index.html</loc>
-    <lastmod>2025-11-03T22:20:45.524Z</lastmod>
+    <lastmod>2025-11-03T22:51:16.213Z</lastmod>
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_icer.html</loc>
@@ -113,39 +113,39 @@
     <lastmod>2025-10-30T14:04:57.515Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_dalys.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_parameters.html</loc>
+    <lastmod>2025-10-30T14:04:57.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_4a.trt-thresholds-voi.html</loc>
     <lastmod>2025-10-30T14:04:57.535Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/creating-custom-fontawesome-icons.html</loc>
-    <lastmod>2025-10-30T14:04:57.536Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5a.cea-fundamentals1.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_7.MarkovModels1.html</loc>
     <lastmod>2025-10-30T14:04:58.120Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_1a.introduction-to-decision-analysis.html</loc>
-    <lastmod>2025-10-30T14:04:58.122Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_advanced-modeling-techniques.html</loc>
+    <lastmod>2025-10-30T14:04:58.121Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_day1-review.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_sensitivity.html</loc>
+    <lastmod>2025-10-30T14:04:58.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_psa.html</loc>
     <lastmod>2025-10-30T14:04:58.143Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_test.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_6.ICERs.html</loc>
     <lastmod>2025-10-30T14:04:58.144Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_2.decision-trees-and-probabilities.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5b.cea-fundamentals2.html</loc>
     <lastmod>2025-10-30T14:04:58.147Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_3a.bayes-probrevision.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_genAI.html</loc>
     <lastmod>2025-10-30T14:04:58.148Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_structure.html</loc>
-    <lastmod>2025-10-30T14:04:58.149Z</lastmod>
   </url>
 </urlset>
