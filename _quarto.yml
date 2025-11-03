@@ -22,6 +22,8 @@ website:
     contents:
       - href: index.qmd
         text: Home
+      - href: prework.qmd
+        text: Before you arrive
       - section: "Model Diagram Drawing Resources"
         contents:
           - text: Draw.io
@@ -40,16 +42,36 @@ website:
             href: https://vimeo.com/888816515
           - text: Markov Models (Amua Video Tutorial)
             href: https://vimeo.com/888816536
-      - text: Modeling Disability-Adjusted Life Years 
-        href: https://graveja0.github.io/dalys/
-      - text: Intermediate / Advanced Workshop Materials
-        href: https://smdm-europe23-what-they-didnt-teach.netlify.app
-      - text: Basic Markov Cohort Modeling in R
-        href: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9742144/
-      - text: Time-Dependent Markov Modeling in R
-        href: https://journals.sagepub.com/doi/full/10.1177/0272989X221121747
+      - section: "Advanced Methods"
+        contents:
+          - text: Modeling Disability-Adjusted Life Years 
+            href: https://graveja0.github.io/dalys/
+          - text: Intermediate / Advanced Workshop Materials
+            href: https://smdm-europe23-what-they-didnt-teach.netlify.app
+          - text: Basic Markov Cohort Modeling in R
+            href: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9742144/
+          - text: Time-Dependent Markov Modeling in R
+            href: https://journals.sagepub.com/doi/full/10.1177/0272989X221121747
+      - section: "Previous Workshops"
+        contents:
+          - text: Health Economic Modeling - Bangkok, Thailand (5-day Workshop, 2022) 
+            href: https://vchem-vital-workshop-2022.netlify.app/ 
+          - text: Adapting Models for LMICs - Cape Town, South Africa (1-day Workshop at IHEA Congress, 2023) 
+            href: https://ihea2023-adapting-models-for-lmics.netlify.app/
+          - text: Decision Analysis and Economic Evaluation for Clinical Leaders - Kano, Nigeria (5-day workshop, 2023)
+            href: https://graveja0.github.io/v-brch-nigeria-2023/ 
+          - text: Health Economic Modeling - Bogota, Columbia (4-day Workshop, 2024) 
+            href: https://graveja0.github.io/bogota-vital-strategies/
+          - text: Health Economic Modeling -Istanbul, Türkiye (6-day Workshop, 2024) 
+            href: https://graveja0.github.io/vital-istanbul-2024/
+          - text: Advanced Health Economic Modeling -Nashville, Tennessee, United States (3-week Fellowship, 2025)
+            href: https://graveja0.github.io/vital-fellows-2025-website/index.html
+          - text: DALYs in AMUA - Nusa Dua, Bali, Indonesia (1-day Workshop at IHEA Congress, 2025)
+            href: https://ihea2025-vanderbilt.netlify.app/
+            
       - href: about.qmd
         text: Instructors
+        
 
 format:
   html:

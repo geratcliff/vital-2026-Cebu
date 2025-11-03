@@ -1,0 +1,207 @@
+---
+title: "Workshop Pre-Work"
+format: html
+---
+
+## Welcome Letter
+
+Congrats on being selected to join us for the Health Economics Decision Modeling Workshop in Cebu. To provide you the best experience possible, we are asking you to complete some pre-work.
+
+This work will help you prepare for the capstone that you will be completing in the workshop. This may feel backwards, since typically you would receive the education then do an example. Since we are asking you to do work without a modeling background, we have attempted to create tools to help you collect the information you need without the modeling experience. However, you will likely run into problems. Please reach out if you have any questions that we can help with.
+
+### Please complete the following before the workshop:
+
+1.  Pre-Workshop: Topic Survey that will sent to your email in Mid-November
+
+2.  Collecting data using the [data collection tool](https://geratcliff.shinyapps.io/shinyapp_data/)
+
+3.  Pre-Workshop: Data Collection Survey that will sent to your email in early January
+
+4.  Download AMUA
+
+5.  Slides to introduce yourself and your topic (format below)
+
+6.  Pre-Workshop: knowledge baseline that will sent to your email right before the workshop
+
+## How to create a PICOT Question
+
+{{< dstart summary="Instructions" open >}}
+
+In this dropdown
+
+{{< dstop >}}
+
+## How to search for Data
+
+{{< dstart summary="Instructions" open >}}
+
+In this dropdown
+
+{{< dstop >}}
+
+## Data Collection Tool
+
+As we mentioned before, we understand the difficulty of trying to collect data for your project without knowing the modeling methods. We have attempted to create tools to help you collect the information you need without the modeling experience. However, you will likely run into problems. There is a form submission at the bottom of the tool to ask for assistance from the team. Read the following below before starting the work within the tool.
+
+<details>
+
+<summary style="color: orange;">
+
+Instructions
+
+</summary>
+
+<p style="color: black;">
+
+### About the tool
+
+This tool will walk you through tabs from left to right (Introduction → 1 → 2 → 3 → 4 → 5 → 6), to help you determine the data points that you need. The model has been created without modeling specific text to help you understand the steps on each tab.
+
+#### You will
+
+-   Describe your disease/health condition
+
+-   Choose strategies to compare
+
+-   Identify health states
+
+-   List events that happen
+
+-   Collect data that can be downloaded as an Excel file
+
+### Saving your work
+
+The tool will auto save your changes to your machine, but we HIGHLY recommend using the backup save after each session to ensure you do not lose all your data. When you click the `Download Backup` button, a file will download to your computer (it ends in .rds)
+
+::: callout-note
+The Excel download on tab 6 cannot be loaded back into the tool.
+:::
+
+### Working together
+
+We recommend that all participants complete tabs 1, 2, 3, 4, and 5. However, you can work on step 6 together once you agree on the other states. The `.rds` file that is saved upon clicking the `Download Backup` button can be shared with the rest of your assigned topic team so you can work together on data collection
+
+::: callout-caution
+The `.rds` file will include all the data you input. If you are using sensitive or classified data. You can must make a note in the tool instead of uploading it and keep the data saved somewhere easy to access on your machine.
+:::
+
+**In early January, we will be asking for the `.rds` to understand the progress that has been made on data collection.**
+
+### For assistance with the tool
+
+Start with the walk-through under the `❓Help & FAQ` section. If that is unable to answer your questions, please reach out to get assistance.
+
+### Workshop specific notes
+
+...
+
+</p>
+
+</details>
+
+## How to Download Amua
+
+For the workshop, the free open-source tool Amua will be used to work on the case study and capstone. Amua is a user friendly decision modeling tool developed by Zach Ward, our colleague at Harvard University.
+
+<details>
+
+<summary style="color: orange;">
+
+Download Instructions
+
+</summary>
+
+<p style="color: black;">
+
+#### 1. Get Java on your computer
+
+To check if java is on your computer do the following:
+
++---------------------------------------------------------+---------------------------------------------+
+| On a Windows                                            | On a Mac                                    |
++=========================================================+=============================================+
+| 1.  Press `Win + R`                                     | 1.  Press `Cmd + Space`                     |
+| 2.  Type `wt` (for Windows Terminal), and press `Enter` | 2.  Type "Terminal," and press `Enter`      |
+| 3.  Paste `java -version` into the terminal             | 3.  Paste `java -version` into the terminal |
++---------------------------------------------------------+---------------------------------------------+
+
+If you have java it will print out a the version. It will look like this:
+
+```         
+USER@ComputerID ~ % java -version
+java version "1.8.0_471" 
+Java(TM) SE Runtime Environment (build 1.8.0_471-b09) 
+Java HotSpot(TM) 64-Bit Server VM (build 25.471-b09, mixed mode)
+```
+
+If you do not see this, then you need to first download Java.
+
+</p>
+
+[Download Java](https://www.java.com/en/download/manual.jsp)
+
+<p style="color: black;">
+
+#### 2. Download Amua
+
+Once Java is installed on your computer, you will need to download Amua. Follow the instructions on the website below.
+
+</p>
+
+[Install Amua](https://github.com/zward/Amua/wiki/Getting-Started)
+
+::: callout-note
+**Mac Users:** If it says “Amua_0.3.4.jar” cannot be opened because it is from an unidentified developer.", Go `Settings > Privacy & Security.` Scroll down until you see the app being blocked and click `Open Anyway`.
+
+![](images/download_amua_mac_security.png)
+:::
+
+<p style="color: black;">
+
+#### 3. Open to make sure it works!
+
+After you have downloaded Amua, open it to make sure that it works. You should see the following screen.
+
+![](images/amua_load_screen.png)
+
+#### If this worked, you have successfully downloaded AMUA 🎉
+
+</p>
+
+::: callout-warning
+### *If you were NOT able to do this successfully, please reach out to the team so we can assist you properly.*
+:::
+
+</details>
+
+## Start creating your slides
+
+One the first day of the workshop, you will meet in small groups and present your capstone information in small groups. These meetings will be the first few slides of your eventually final workshop. Each day we will
+
+<details>
+
+<summary style="color: orange;">
+
+More Information
+
+</summary>
+
+<p style="color: black;">
+
+Upon arrival you should have the following:
+
+-   Slide 1: Introduction to you
+
+-   Slide 2: Background of your topic
+
+-   Slide 3: Strategies that you are comparing
+
+</p>
+
+</details>
+
+<p style="font-size: 36px; text-align: center;">
+
+**Thank you for all the time you have put into the pre-work, we look forward to seeing you at the Cebu 2026 workshop!**
+
+</p>
