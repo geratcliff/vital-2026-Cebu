@@ -766,7 +766,7 @@ $$
 -   Adjust costs at social discount rate to reflect social "rate of time
     preference"
 
-    -   Pure time preference ("inpatience")
+    -   Pure time preference ("impatient")
 
     -   Potential catastrophic risk in the future
 
