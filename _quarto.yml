@@ -22,7 +22,7 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: capstone/prework.qmd
+      - href: prework.qmd
         text: Before you arrive
       - section: "Model Diagram Drawing Resources"
         contents:
