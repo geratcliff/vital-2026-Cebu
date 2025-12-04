@@ -13,7 +13,7 @@ This work is designed to help you prepare for the capstone project you’ll comp
 
 1.  Topic Survey that will sent to your email \[Due: December 12\]
 
-2.  Collecting data using the [data collection tool](https://geratcliff.shinyapps.io/shinyapp_data/) \[Due January 8\]
+2.  Collecting data using the [data collection tool](https://geratcliff.shinyapps.io/shinyapp_data/){target="_blank"} \[Due January 8\]
 
     -   Data Collection Survey that will sent to your email to collect your progress
 
@@ -123,33 +123,33 @@ Example search strategy: (adolescent\* OR your\* OR teen*) AND (depress* OR angs
 
 ### Where to Find Papers
 
-**PubMed®** <https://pubmed.ncbi.nlm.nih.gov/>
+**PubMed®** <https://pubmed.ncbi.nlm.nih.gov/>{target="_blank"}
 
 Largest biomedical and health sciences literature database comprising more than 39 million citations for biomedical literature from MEDLINE, life science journals, and online books. Hosted by the US National Library of Medicine.
 
 Interactive tutorials on the PubMed® website:
 
-• [Find Articles by Author](https://www.nlm.nih.gov/oet/ed/pubmed/quicktours/author/index.html)
+• [Find Articles by Author](https://www.nlm.nih.gov/oet/ed/pubmed/quicktours/author/index.html){target="_blank"}
 
-• [Save Searches and Set E-mail Alerts](https://www.nlm.nih.gov/oet/ed/pubmed/quicktours/alerts/index.html)
+• [Save Searches and Set E-mail Alerts](https://www.nlm.nih.gov/oet/ed/pubmed/quicktours/alerts/index.html){target="_blank"}
 
-• [Using the Advanced Search](https://www.youtube.com/watch?v=-JS5f0REiV0)
+• [Using the Advanced Search](https://www.youtube.com/watch?v=-JS5f0REiV0){target="_blank"}
 
-• [Subject Search: How It Works](https://www.nlm.nih.gov/oet/ed/pubmed/quicktours/topic_how_it_works/index.html)
+• [Subject Search: How It Works](https://www.nlm.nih.gov/oet/ed/pubmed/quicktours/topic_how_it_works/index.html){target="_blank"}
 
-• [PubMed Online Training](https://learn.nlm.nih.gov/rest/training-packets/T0042010P.html)
+• [PubMed Online Training](https://learn.nlm.nih.gov/rest/training-packets/T0042010P.html){target="_blank"}
 
-• [PubMed User Guide](https://pubmed.ncbi.nlm.nih.gov/help/)
+• [PubMed User Guide](https://pubmed.ncbi.nlm.nih.gov/help/){target="_blank"}
 
 **Web of Science** IP Address: 160.129.250.236
 
 Paid-access platform
 
-**Google Scholar** <https://scholar.google.com/>
+**Google Scholar** <https://scholar.google.com/>{target="_blank"}
 
 Freely available search engine
 
-**S.I.F.T Method** <https://hapgood.us/2019/06/19/sift-the-four-moves/>
+**S.I.F.T Method** <https://hapgood.us/2019/06/19/sift-the-four-moves/>{target="_blank"}
 
 Use this method to help you judge the veracity of the online source.
 
@@ -173,13 +173,13 @@ ORCiD is a free, unique, persistent identifier (PID) for individuals to use as t
 
 Download Mendeley Applications
 
--   [Getting started with Mendeley Reference Manager](https://www.mendeley.com/guides/mendeley-reference-manager/)
+-   [Getting started with Mendeley Reference Manager](https://www.mendeley.com/guides/mendeley-reference-manager/){target="_blank"}
 
--   [Mendeley Web Importer](http://www.mendeley.com/import/)
+-   [Mendeley Web Importer](http://www.mendeley.com/import/){target="_blank"}
 
 Import papers, web pages and other documents directly into your reference library from search engines and academic databases.
 
--   [Mendeley Videos & Tutorials](https://www.mendeley.com/guides/videos)
+-   [Mendeley Videos & Tutorials](https://www.mendeley.com/guides/videos){target="_blank"}
 
 Available from mendeley.com
 
@@ -187,25 +187,25 @@ Available from mendeley.com
 
 Getting Started:
 
--   [Zotero Desktop Application](https://www.zotero.org/download/)
+-   [Zotero Desktop Application](https://www.zotero.org/download/){target="_blank"}
 
 Download the application to your computer where you can view and manage your citations from your desktop.
 
--   [Zotero Web Account](https://www.zotero.org/user/register/)
+-   [Zotero Web Account](https://www.zotero.org/user/register/){target="_blank"}
 
 Register for a free account. Sync your online account with your desktop application to view and manage your library online.
 
--   [Zotero Web Connecter](https://www.zotero.org/download/)
+-   [Zotero Web Connecter](https://www.zotero.org/download/){target="_blank"}
 
 Install the web connector into your browser and import citations from the web directly into your Zotero library.
 
 Zotero Support and Training: Information and materials available from Zotero's website.
 
--   [Zotero Quick Start Guide](https://www.zotero.org/support/quick_start_guide)
+-   [Zotero Quick Start Guide](https://www.zotero.org/support/quick_start_guide){target="_blank"}
 
--   [Zotero Documentation](https://www.zotero.org/support/)
+-   [Zotero Documentation](https://www.zotero.org/support/){target="_blank"}
 
--   [Zotero Tutorial Videos](https://www.zotero.org/support/screencast_tutorials)
+-   [Zotero Tutorial Videos](https://www.zotero.org/support/screencast_tutorials){target="_blank"}
 
 *Created based on tools from the Vanderbilt University Biomedical Library*
 
@@ -283,10 +283,6 @@ The `.rds` file will include all the data you input. If you are using sensitive 
 
 Start with the walk-through under the `❓Help & FAQ` section. If that is unable to answer your questions, please reach out to get assistance.
 
-### Workshop specific notes
-
-...
-
 </p>
 
 </details>
@@ -330,7 +326,7 @@ If you do not see this, then you need to first download Java.
 
 </p>
 
-[Download Java](https://www.java.com/en/download/manual.jsp)
+[Download Java](https://www.java.com/en/download/manual.jsp){target="_blank"}
 
 <p style="color: black;">
 
@@ -340,7 +336,7 @@ Once Java is installed on your computer, you will need to download Amua. Follow 
 
 </p>
 
-[Install Amua](https://github.com/zward/Amua/wiki/Getting-Started)
+[Install Amua](https://github.com/zward/Amua/wiki/Getting-Started){target="_blank"}
 
 ::: callout-note
 **Mac Users:** If it says “Amua_0.3.4.jar” cannot be opened because it is from an unidentified developer.", Go `Settings > Privacy & Security.` Scroll down until you see the app being blocked and click `Open Anyway`.
