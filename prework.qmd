@@ -16,12 +16,12 @@ This work is designed to help you prepare for the capstone project you’ll comp
 2.  Collecting data using the [data collection tool](https://geratcliff.shinyapps.io/shinyapp_data/){target="_blank"} \[Due January 8\]
 
     -   Data Collection Survey that will sent to your email to collect your progress
+    
+3.  Knowledge baseline that will sent to your email before the workshop \[Due January 16\]
 
-3.  Download AMUA \[Due January 15\]
+4.  Download AMUA \[Due January 16\]
 
-4.  Slides to introduce yourself and your topic (format below) \[Due January 23\]
-
-5.  Knowledge baseline that will sent to your email right before the workshop \[Due January 23\]
+5.  Slides to introduce yourself and your topic (format below) \[Due January 23\]
 
 ## How to create a PICOT Question
 
@@ -382,7 +382,9 @@ Upon arrival you should have the following:
 
 -   Slide 2: Background of your topic
 
--   Slide 3: Strategies that you are comparing
+-   Slide 3: Research Question using PICOT
+
+-   Slide 4: Strategies that you are comparing
 
 Please use the following template and example to create your slides. These will be presented on day 1 of the workshop.
 

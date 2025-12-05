@@ -22,7 +22,7 @@ library(tidyr)
 
 ![](images/logos.png){fig-align="center"}
 
-# Before you Arrive 
+# Before you Arrive
 
 Due to the workshop only being 5 days, we kindly ask that you do some pre-work before arriving to the workshop to ensure that you are able to make ample progress on your capstone.
 
@@ -35,12 +35,12 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 26/01/2026 (Monday)
 
 | Time | Type | Topic |
-|------------|-----------|-------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | 08:00 - 8:45 | Check-Ins | Registration and Introductions |
 | 08:45 - 9:30 | Lecture | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.qmd) |
-| 10:00 - 10:30 | Case Study |  Introduction to Topic |
+| 10:00 - 10:30 | Case Study | Introduction to Topic |
 | 10:30 - 10:50 | Break | Coffee/Tea |
-| 10:50 - 12:00 | Lecture |  [Decision Trees](lectures/lec_2.decision-trees-and-probabilities.qmd) |
+| 10:50 - 12:00 | Lecture | [Decision Trees](lectures/lec_2.decision-trees-and-probabilities.qmd) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 13:55 | Capstone | Intro to Capstone |
 | 13:55 - 14:55 | Capstone | Discuss Decision Problem \[Small Groups\] |
@@ -53,7 +53,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 27/01/2026 (Tuesday)
 
 | Time | Type | Topic |
-|------------|-----------|-------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | 08:00 - 09:00 | Case Study | [Decision Trees in Amua](case-studies/cs_decision-tree-amua.qmd) |
 | 9:00 - 10:30 | Capstone | Make a Decision Tree |
 | 10:30 - 11:30 | Break | Coffee/Tea |
@@ -69,13 +69,13 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 28/01/2026 (Wednesday)
 
 | Time | Type | Topic |
-|------------|-----------|-------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | 08:00 - 09:00 | Case Study | [Incremental CEA](case-studies/cs_icer.qmd) |
 | 09:00-10:00 | Lecture | [Markov Models](lectures/lec_7.MarkovModels1.qmd) |
 | 10:45 - 11:15 | Break | Coffee/Tea |
-| 11:15 - 12:30 | Lecture | Likelihood Metrics - Rates & Probabilities |
+| 11:15 - 12:30 | Lecture | Rates, Probabilities & More |
 | 12:30 - 13:40 | Break | Lunch |
-| 13:40 - 14:45 | Case Study |  [Alive-Dead Markov Model in Amua](case-studies/cs_markov_alive-dead.qmd) |
+| 13:40 - 14:45 | Case Study | [Alive-Dead Markov Model in Amua](case-studies/cs_markov_alive-dead.qmd) |
 | 14:45 - 16:30 | Capstone | Start Markov Model |
 | 16:30 | Check-Ins | Daily Recap and Group Discussion |
 
@@ -84,7 +84,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 29/01/2026 (Thursday)
 
 | Time | Type | Topic |
-|------------|-----------|-------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | 08:00 - 10:20 | Lecture | [Lecture: Structuring the Markov Model](lectures/lec_structure.qmd) \[JG\] |
 | 10:15 - 10:30 | Break | Coffee/Tea |
 | 10:30- 12:30 | Case Study | Case Study: [Progressive Disease Model in Amua](case-studies/cs_progressive-disease.qmd) |
@@ -98,7 +98,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 30/01/2026 (Friday)
 
 | Time          | Type          | Topic                                       |
-|------------|------------|-------------------------------------------------|
+|---------------|---------------|-------------------------------------------|
 | 08:00 - 09:00 | Case Study    | DALYs in AMUA \[Guided\]                    |
 | 09:30 - 10:15 | Lecture       | Common CEA Errors                           |
 | 10:15 - 10:45 | Break         | Coffee/Tea                                  |
@@ -111,9 +111,10 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 ## Optional Content
 
-| Time         | Type        | Topic         |
-|--------------|-------------|---------------|
-| Asynchronous | Lecture:    |  PSA Analysis |
-| Asynchronous | Case Study: |  PSA Analysis |
+| Time         | Type        | Topic        |
+|--------------|-------------|--------------|
+| Asynchronous | Case Study: | QALYS.       |
+| Asynchronous | Lecture:    | PSA Analysis |
+| Asynchronous | Case Study: | PSA Analysis |
 
 : {tbl-colwidths="\[20,10,50\]"}
