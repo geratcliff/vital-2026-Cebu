@@ -284,6 +284,8 @@ The `.rds` file will include all the data you input. If you are using sensitive 
 
 **In early January, we will be asking for the `.rds` to understand the progress that has been made on data collection.**
 
+[Data Collection Tool](https://geratcliff.shinyapps.io/shinyapp_data/){target="_blank"}
+
 ### For assistance with the tool
 
 Start with the walk-through under the `❓Help & FAQ` section. If that is unable to answer your questions, please reach out to get assistance.
