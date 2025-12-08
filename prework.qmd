@@ -5,39 +5,42 @@ format: html
 
 ## Welcome Letter
 
-Congratulations on being selected to join us for the Health Economics Decision Modeling Workshop in Cebu. To provide you the best experience possible, we are asking you to complete some pre-work.
+Congratulations on being selected to join us for the Health Economics Decision Modeling Workshop in Cebu. To provide you with the best experience possible, we are asking you to complete some pre-work ahead of attending the workshop.
 
-This work is designed to help you prepare for the capstone project you’ll complete during the workshop. It may feel a bit unusual because, instead of learning the theory first and then applying it, we’re asking you to start with practical work. Since you may not have a modeling background, we’ve created tools to guide you in gathering the necessary information without requiring prior modeling experience. You might encounter challenges along the way, so please don’t hesitate to reach out if you have any questions, **we’re here to help.**
+This work is designed to help you prepare for the capstone project you will complete during the workshop. It may feel a bit unusual because, instead of learning the theory first and then applying it, we are asking you to start with practical work. If you do not have a modeling background, do not worry. We have created tools to guide you in gathering the necessary information without requiring prior modeling experience. If you encounter challenges along the way, please do not hesitate to reach out if you have any questions, **we are here to help.**
 
-### Please complete the following before the workshop:
+<a href="mailto:vchem@vumc.org">Email the Team For Help</a>
 
-1.  Topic Survey that will sent to your email \[Due: December 12\]
+## Please complete the following before the workshop:
 
-2.  Collecting data using the [data collection tool](https://geratcliff.shinyapps.io/shinyapp_data/){target="_blank"} \[Due January 8\]
+1.  Complete the **topic survey** that will sent to your email **\[Due: December 19\]**
 
-    -   Data Collection Survey that will sent to your email to collect your progress
-    
-3.  Knowledge baseline that will sent to your email before the workshop \[Due January 16\]
+2.  **Collect data** using the [data collection tool](https://geratcliff.shinyapps.io/shinyapp_data/){target="_blank"} **\[Due January 8\]**
 
-4.  Download AMUA \[Due January 16\]
+    -   The **data collection survey** will sent to your email to collect your progress
 
-5.  Slides to introduce yourself and your topic (format below) \[Due January 23\]
+3.  Complete the **knowledge baseline survey** that will be sent to your email **\[Due January 19\]**
+
+4.  **Download AMUA \[Due January 19\]**
+
+5.  **Slides** to introduce yourself and your topic (format below) **\[Due January 23\]**
 
 ## How to create a PICOT Question
 
 A PICOT question helps you clearly define the focus of your project by breaking it into five key components: Population, Intervention, Comparison, Outcome, and Timeframe. This structured approach ensures your work is specific, measurable, and aligned with evidence-based practice, making it easier to guide research, collect data, and evaluate results effectively.
 
+We recommend using the PICOT guide created by the AWHONN. We have include their pdf guide in the dropdown below.
+
 <details>
 
 <summary style="color: orange;">
 
-Instructions
+Instructions for AWHONN PICOT guide
 
 </summary>
 
 <p style="color: black;">
 
-We recommend using the PICOT guide created by the AWHONN
 
 ```{=html}
 <iframe src="/media/PICOT-Questions.pdf" width="100%" height="600px"></iframe>
@@ -49,9 +52,11 @@ We recommend using the PICOT guide created by the AWHONN
 
 </details>
 
-## How to search for Data
+## How to Complete a Literature Search for Data for Your Model
 
-This section provides general resources on conducting academic searches, including tips for using databases and refining keywords. You’ll also find a PDF guide specifically focused on searching for cost-effectiveness analyses (CEAs), which walks you through strategies to locate studies efficiently.
+Data and Same process for lit reviews
+
+This section provides general resources on conducting academic searches, including tips for using databases and refining keywords. You’ll also find a PDF guide specifically focused on searching for cost-effectiveness analyses (CEAs), which walks you through strategies to locate studies efficiently. Both can be accessed through the dropdowns below.
 
 <details>
 
@@ -63,11 +68,11 @@ General Best Practices
 
 <p style="color: black;">
 
-### Finding Literature for Your Study
+### Finding Literature for Your Research
 
 #### Use your PICO(T) Question
 
-You can paste your PICO(T) question into an online search.
+You can paste concepts from your PICO(T) question into an online search.
 
 -   Do *not* include directional terms (decrease, improve, etc.). Including directional terms may return an incomplete and biased literature search.
 
@@ -123,7 +128,7 @@ Example search strategy: (adolescent\* OR your\* OR teen*) AND (depress* OR angs
 
 ### Where to Find Papers
 
-**PubMed®** <https://pubmed.ncbi.nlm.nih.gov/>{target="_blank"}
+**PubMed®** [https://pubmed.ncbi.nlm.nih.gov/](https://pubmed.ncbi.nlm.nih.gov/){target="_blank"}
 
 Largest biomedical and health sciences literature database comprising more than 39 million citations for biomedical literature from MEDLINE, life science journals, and online books. Hosted by the US National Library of Medicine.
 
@@ -145,11 +150,11 @@ Interactive tutorials on the PubMed® website:
 
 Paid-access platform
 
-**Google Scholar** <https://scholar.google.com/>{target="_blank"}
+**Google Scholar** [https://scholar.google.com/](https://scholar.google.com/){target="_blank"}
 
 Freely available search engine
 
-**S.I.F.T Method** <https://hapgood.us/2019/06/19/sift-the-four-moves/>{target="_blank"}
+**S.I.F.T Method** [https://hapgood.us/2019/06/19/sift-the-four-moves/](https://hapgood.us/2019/06/19/sift-the-four-moves/){target="_blank"}
 
 Use this method to help you judge the veracity of the online source.
 
@@ -233,13 +238,13 @@ CEA Specific
 
 ## Data Collection Tool
 
-As we mentioned before, we understand the difficulty of trying to collect data for your project without knowing the modeling methods. We have attempted to create tools to help you collect the information you need without modeling experience. However, you may run into challenges. There is a form submission at the bottom of the tool to ask for assistance from the team. Read the following below before starting the work within the tool.
+We understand the difficulty of trying to collect data for your project without knowing the modeling methods. We have attempted to create tools to help you collect the information you need without modeling experience. However, you may run into challenges. There is a form submission at the bottom of the tool to ask for assistance from the team. Please read the information in the dropdown below before starting to work within the tool.
 
 <details>
 
 <summary style="color: orange;">
 
-Instructions
+What to know about the Data Collection Tool
 
 </summary>
 
@@ -249,9 +254,9 @@ Instructions
 
 This tool will walk you through tabs from left to right (Introduction → 1 → 2 → 3 → 4 → 5 → 6), to help you determine the data points that you need. The tool has been created without modeling specific text to help you understand the steps on each tab.
 
-#### You will
+#### Using this tool will help you 
 
--   Have an indepth understanding your disease/health condition
+-   Have an indepth understanding of your disease/health condition
 
 -   Choose strategies to compare
 
@@ -271,7 +276,7 @@ The Excel download on tab 6 cannot be loaded back into the tool.
 
 ### Working together
 
-We recommend that all participants complete tabs 1, 2, 3, 4, and 5. However, you can work on step 6 together once you agree on the other steps. The `.rds` file that is saved upon clicking the `Manual Backup` button can be shared with the rest of your assigned topic team so you can work together on data collection
+We recommend that each participant individually complete tabs 1, 2, 3, 4, and 5. However, you should work on step 6 with your topic team once the team agrees on the other steps. The `.rds` file that is saved upon clicking the `Manual Backup` button can be shared with the rest of your assigned topic team so you can work together on data collection.
 
 ::: callout-caution
 The `.rds` file will include all the data you input. If you are using sensitive or classified data, you can make a note in the tool instead of uploading it and keep the data saved somewhere easy to access on your machine.
@@ -283,13 +288,15 @@ The `.rds` file will include all the data you input. If you are using sensitive 
 
 Start with the walk-through under the `❓Help & FAQ` section. If that is unable to answer your questions, please reach out to get assistance.
 
+<a href="mailto:vchem@vumc.org">Email the Team For Help</a>
+
 </p>
 
 </details>
 
 ## How to Download Amua
 
-For the workshop, the free open-source tool Amua will be used to work on the case study and capstone. Amua is a user friendly decision modeling tool developed by Zach Ward, our colleague at Harvard University.
+For the workshop, the free open-source tool Amua will be used to work on the case study and capstone. Amua is a user friendly decision modeling tool developed by Zach Ward, our colleague at Harvard University. Information on how to install Amua is provided in the dropdown below.
 
 <details>
 
@@ -301,7 +308,7 @@ Download Instructions
 
 <p style="color: black;">
 
-#### 1. Get Java on your computer
+#### 1. Install Java on your computer
 
 To check if java is on your computer do the following:
 
@@ -322,7 +329,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_471-b09)
 Java HotSpot(TM) 64-Bit Server VM (build 25.471-b09, mixed mode)
 ```
 
-If you do not see this, then you need to first download Java.
+If you do not see this, then you need to first download and install Java.
 
 </p>
 
@@ -357,14 +364,14 @@ After you have downloaded Amua, open it to make sure that it works. You should s
 </p>
 
 ::: callout-warning
-### *If you were NOT able to do this successfully, please reach out to the team so we can assist you properly.*
+### *If you were NOT able to do this successfully, please reach out to the team so we can assist you properly.* 
 :::
-
+<a href="mailto:vchem@vumc.org">Email the Team For Help</a>
 </details>
 
 ## Start creating your slides
 
-One the first day of the workshop, you will meet in small groups and present your capstone information in small groups. These meetings will be the first few slides of your eventually final workshop. Each day we will
+One the first day of the workshop, you will meet in small groups and present your capstone information in small groups. These meetings will cover the first few slides of your eventual final capstone project. Each day you will have time to work on the capstone and create the slides for the final presentation. Rgw initial slides you should bring are in the dropdown below. Please stick to the slides provided to ensure all workshop participants get equal opportunity to present and discuss. 
 
 <details>
 
@@ -382,7 +389,7 @@ Upon arrival you should have the following:
 
 -   Slide 2: Background of your topic
 
--   Slide 3: Research Question using PICOT
+-   Slide 3: Research Question using PICO(T)
 
 -   Slide 4: Strategies that you are comparing
 
@@ -396,6 +403,8 @@ Here is a link to [download the presentation file](/media/inital-presentation.pp
 
 <p style="font-size: 36px; text-align: center;">
 
-**Thank you for all the time you have put into the pre-work, we look forward to seeing you at the Cebu 2026 workshop!**
+**Thank you for all the time you have put into the pre-work, we look forward to seeing you at the Cebu 2026 workshop! Please reach out with any capstone questions, we want to make sure you can be succesfull at the workshop.**
 
 </p>
+
+<a href="mailto:vchem@vumc.org">Email the Team For Help</a>
