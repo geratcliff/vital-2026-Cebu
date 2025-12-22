@@ -2,10 +2,10 @@
 title: "Introduction to Decision Analysis"
 format:
   revealjs:
-    theme: slides.scss
+    theme: [default, _extensions/branding/custom-brand.scss]
     incremental: true
     slide-number: true
-    logo: ../vchem.png
+    logo: images/logos.png 
     html-math-method: katex
     transition: fade
     background-transition: fade

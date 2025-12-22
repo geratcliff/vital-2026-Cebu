@@ -85,12 +85,13 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 | Time | Type | Topic |
 |----|----|----|
-| 08:00 - 10:20 | Lecture | [Lecture: Structuring the Markov Model](lectures/lec_structure.qmd) \[JG\] |
+| 08:00 - 09:00 | Lecture | [Lecture: Structuring the Markov Model](lectures/lec_structure.qmd) \[JG\] |
+| 09:00 - 10:15 | Case Study | Case Study: [Progressive Disease Model in Amua](case-studies/cs_progressive-disease.qmd) |
 | 10:15 - 10:30 | Break | Coffee/Tea |
-| 10:30- 12:30 | Case Study | Case Study: [Progressive Disease Model in Amua](case-studies/cs_progressive-disease.qmd) |
+| 10:30- 12:30 | Capstone | Run CEA and Stop work on Model to complete slides |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 14:45 | Lecture | [Determinisitic, Threshold and Scenario Analyses](lectures/lec_sensitivity.qmd) |
-| 14:45 - 16:00 | Capstone | Run CEA and Stop work on Model to complete slides |
+| 14:45 - 16:00 | Case Study | Common CEA Errors |
 | 16:00 | Check-Ins | Daily Recap |
 
 : {tbl-colwidths="\[20,10,50\]"}
@@ -100,21 +101,21 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | Time          | Type          | Topic                                       |
 |---------------|---------------|---------------------------------------------|
 | 08:00 - 09:00 | Case Study    | DALYs in AMUA \[Guided\]                    |
-| 09:30 - 10:15 | Lecture       | Common CEA Errors                           |
+| 09:30 - 10:15 | Case Study    | Common CEA Errors                           |
 | 10:15 - 10:45 | Break         | Coffee/Tea                                  |
-| 10:45 - 12:30 | Presentations | Capstone Presentations Session 1            |
+| 10:45 - 12:30 | Presentations | Capstone Presentations (Small Groups)       |
 | 12:30 - 13:45 | Break         | Lunch                                       |
-| 13:45 - 15:00 | Presentations | Capstone Presentations Session 2            |
-| 15:00         | Farewell      | Certificate Ceremony and Closing Discussion |
+| 13:45 - 14:00 | Farewell      | Certificate Ceremony and Closing Discussion |
 
 : {tbl-colwidths="\[20,10,50\]"}
 
 ## Optional Content
 
-| Time         | Type        | Topic        |
-|--------------|-------------|--------------|
-| Asynchronous | Case Study: | QALYS.       |
-| Asynchronous | Lecture:    | PSA Analysis |
-| Asynchronous | Case Study: | PSA Analysis |
+| Time         | Type       | Topic        |
+|--------------|------------|--------------|
+| Asynchronous | Case Study | QALYS.       |
+| Asynchronous | Lecture    | PSA Analysis |
+
+| Asynchronous \| Case Study \| PSA Analysis \|
 
 : {tbl-colwidths="\[20,10,50\]"}

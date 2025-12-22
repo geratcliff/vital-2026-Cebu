@@ -3586,7 +3586,7 @@
     "href": "index.html#wednesday",
     "title": "Decision Modeling for Health Economic Evaluation",
     "section": "28/01/2026 (Wednesday)",
-    "text": "28/01/2026 (Wednesday)\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\n08:00 - 09:00\nCase Study\nIncremental CEA\n\n\n09:00-10:00\nLecture\nMarkov Models\n\n\n10:45 - 11:15\nBreak\nCoffee/Tea\n\n\n11:15 - 12:30\nLecture\nLikelihood Metrics - Rates & Probabilities\n\n\n12:30 - 13:40\nBreak\nLunch\n\n\n13:40 - 14:45\nCase Study\nAlive-Dead Markov Model in Amua\n\n\n14:45 - 16:30\nCapstone\nStart Markov Model\n\n\n16:30\nCheck-Ins\nDaily Recap and Group Discussion",
+    "text": "28/01/2026 (Wednesday)\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\n08:00 - 09:00\nCase Study\nIncremental CEA\n\n\n09:00-10:00\nLecture\nMarkov Models\n\n\n10:45 - 11:15\nBreak\nCoffee/Tea\n\n\n11:15 - 12:30\nLecture\nRates, Probabilities & More\n\n\n12:30 - 13:40\nBreak\nLunch\n\n\n13:40 - 14:45\nCase Study\nAlive-Dead Markov Model in Amua\n\n\n14:45 - 16:30\nCapstone\nStart Markov Model\n\n\n16:30\nCheck-Ins\nDaily Recap and Group Discussion",
     "crumbs": [
       "Home"
     ]
@@ -3596,7 +3596,7 @@
     "href": "index.html#thursday",
     "title": "Decision Modeling for Health Economic Evaluation",
     "section": "29/01/2026 (Thursday)",
-    "text": "29/01/2026 (Thursday)\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\n08:00 - 10:20\nLecture\nLecture: Structuring the Markov Model [JG]\n\n\n10:15 - 10:30\nBreak\nCoffee/Tea\n\n\n10:30- 12:30\nCase Study\nCase Study: Progressive Disease Model in Amua\n\n\n12:30 - 13:40\nBreak\nLunch\n\n\n13:40 - 14:45\nLecture\nDeterminisitic, Threshold and Scenario Analyses\n\n\n14:45 - 16:00\nCapstone\nRun CEA and Stop work on Model to complete slides\n\n\n16:00\nCheck-Ins\nDaily Recap",
+    "text": "29/01/2026 (Thursday)\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\n08:00 - 09:00\nLecture\nLecture: Structuring the Markov Model [JG]\n\n\n09:00 - 10:15\nCase Study\nCase Study: Progressive Disease Model in Amua\n\n\n10:15 - 10:30\nBreak\nCoffee/Tea\n\n\n10:30- 12:30\nCapstone\nRun CEA and Stop work on Model to complete slides\n\n\n12:30 - 13:40\nBreak\nLunch\n\n\n13:40 - 14:45\nLecture\nDeterminisitic, Threshold and Scenario Analyses\n\n\n14:45 - 16:00\nCase Study\nCommon CEA Errors\n\n\n16:00\nCheck-Ins\nDaily Recap",
     "crumbs": [
       "Home"
     ]
@@ -3606,7 +3606,7 @@
     "href": "index.html#friday",
     "title": "Decision Modeling for Health Economic Evaluation",
     "section": "30/01/2026 (Friday)",
-    "text": "30/01/2026 (Friday)\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\n08:00 - 09:00\nCase Study\nDALYs in AMUA [Guided]\n\n\n09:30 - 10:15\nLecture\nCommon CEA Errors\n\n\n10:15 - 10:45\nBreak\nCoffee/Tea\n\n\n10:45 - 12:30\nPresentations\nCapstone Presentations Session 1\n\n\n12:30 - 13:45\nBreak\nLunch\n\n\n13:45 - 15:00\nPresentations\nCapstone Presentations Session 2\n\n\n15:00\nFarewell\nCertificate Ceremony and Closing Discussion",
+    "text": "30/01/2026 (Friday)\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\n08:00 - 09:00\nCase Study\nDALYs in AMUA [Guided]\n\n\n09:30 - 10:15\nCase Study\nCommon CEA Errors\n\n\n10:15 - 10:45\nBreak\nCoffee/Tea\n\n\n10:45 - 12:30\nPresentations\nCapstone Presentations (Small Groups)\n\n\n12:30 - 13:45\nBreak\nLunch\n\n\n13:45 - 14:00\nFarewell\nCertificate Ceremony and Closing Discussion",
     "crumbs": [
       "Home"
     ]
@@ -3616,7 +3616,7 @@
     "href": "index.html#optional-content",
     "title": "Decision Modeling for Health Economic Evaluation",
     "section": "Optional Content",
-    "text": "Optional Content\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\nAsynchronous\nLecture:\nPSA Analysis\n\n\nAsynchronous\nCase Study:\nPSA Analysis",
+    "text": "Optional Content\n\n\n\n\n\n\n\n\nTime\nType\nTopic\n\n\n\n\nAsynchronous\nCase Study\nQALYS.\n\n\nAsynchronous\nLecture\nPSA Analysis\n\n\nAsynchronous\nCase Study\nPSA Analysis",
     "crumbs": [
       "Home"
     ]

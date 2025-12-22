@@ -1,0 +1,416 @@
+---
+title: "Template"
+title-slide-attributes:
+  data-background-image: /assets/title-bg.jpg
+author: "VUMC - Center for Health Economic Modeling"
+format:
+  revealjs:
+    theme: [default, custom-brand.scss]
+    slide-number: c/t
+    show-slide-number: all
+    transition: fade
+    logo: assets/logos/logos.png 
+    background-transition: fade
+    margin: 0.1
+---
+
+## {.numbered-list-slide}
+
+<h2>Overview Template</h2>
+
+::: {.number-list}
+::: {.list-item}
+<div class="number">01</div>
+<div class="text">First topic</div>
+:::
+
+::: {.list-item}
+<div class="number">02</div>
+<div class="text">Second topic</div>
+:::
+
+::: {.list-item}
+<div class="number">03</div>
+<div class="text">Third topic</div>
+:::
+
+::: {.list-item}
+<div class="number">04</div>
+<div class="text">Fourth topic</div>
+:::
+:::
+
+## Section Divider Template {.section-slide}
+
+:::{.section-number}
+01
+:::
+
+## Info Cards Template
+
+::: {.info-cards}
+::: {.card}
+**Health State Definition**
+
+A health state represents a specific condition. Should be:
+
+- Mutually exclusive
+- Collectively exhaustive
+- Clinically meaningful
+:::
+
+::: {.card}
+**Key Considerations**
+
+When defining states:
+
+- Disease progression
+- Treatment response
+- Quality of life
+- Cost implications
+:::
+:::
+
+## Stats Grid Template
+
+::: {.concept-grid}
+<div class="concept-box">Disease-Free</div>
+<div class="concept-box">Early Disease</div>
+<div class="concept-box">Advanced Disease</div>
+<div class="concept-box">Death</div>
+:::
+
+## Icon Bullets Template
+
+::: {.process-flow}
+::: {.step}
+<div class="step-number">1</div>
+<div class="step-title">Literature Review</div>
+<div class="step-content">Review guidelines and models</div>
+:::
+
+::: {.step}
+<div class="step-number">2</div>
+<div class="step-title">Expert Consultation</div>
+<div class="step-content">Engage clinicians</div>
+:::
+
+::: {.step}
+<div class="step-number">3</div>
+<div class="step-title">Data Validation</div>
+<div class="step-content">Ensure data alignment</div>
+:::
+:::
+
+## Concept Grid Template {.split-wrapper}
+
+::: {.split-content}
+::: {.content-text}
+**Patient Journey**
+
+- Initial diagnosis
+- Treatment initiation
+- Disease progression
+- End-of-life care
+:::
+
+::: {.content-visual}
+![](images/patient-journey.png)
+
+*Patient journey flowchart*
+:::
+:::
+
+
+## Split Conten
+
+::: {.icon-bullets}
+- Health states are mutually exclusive
+- Transitions must sum to 1.0
+- Time cycle must be specified
+- Clinical validation required
+:::
+
+## Treatment Comparison
+
+::: {.comparison-table}
+::: {.comparison-column}
+<div class="column-header">Standard Care</div>
+<div class="column-content">
+
+- Lower upfront cost
+- Established protocols
+- Widely available
+- Known side effects
+
+</div>
+:::
+
+::: {.comparison-column}
+<div class="column-header">New Treatment</div>
+<div class="column-content">
+
+- Higher efficacy
+- Fewer side effects
+- Better QoL outcomes
+- Higher cost
+
+</div>
+:::
+
+::: {.comparison-column}
+<div class="column-header">Combination</div>
+<div class="column-content">
+
+- Best outcomes
+- Complex protocol
+- Highest cost
+- Specialized care needed
+
+</div>
+:::
+:::
+
+## Important Concept
+
+::: {.highlight-box}
+<div class="box-title">Key Takeaway</div>
+
+Markov models assume memoryless transitions - the probability of moving to the next state depends only on the current state, not on the history of previous states.
+:::
+
+## With Different Colors
+
+::: {.highlight-box .primary}
+<div class="box-title">Primary Highlight</div>
+This uses the primary blue color.
+:::
+
+::: {.highlight-box .secondary}
+<div class="box-title">Secondary Highlight</div>
+This uses the secondary teal color.
+:::
+
+## Model Development Timeline
+
+::: {.timeline}
+::: {.timeline-items}
+::: {.timeline-item}
+<div class="timeline-marker">1</div>
+<div class="timeline-content">
+<div class="timeline-title">Define States</div>
+<div class="timeline-description">Identify health states</div>
+</div>
+:::
+
+::: {.timeline-item}
+<div class="timeline-marker">2</div>
+<div class="timeline-content">
+<div class="timeline-title">Create Diagram</div>
+<div class="timeline-description">Draw bubble diagram</div>
+</div>
+:::
+
+::: {.timeline-item}
+<div class="timeline-marker">3</div>
+<div class="timeline-content">
+<div class="timeline-title">Add Transitions</div>
+<div class="timeline-description">Define probabilities</div>
+</div>
+:::
+
+::: {.timeline-item}
+<div class="timeline-marker">4</div>
+<div class="timeline-content">
+<div class="timeline-title">Validate</div>
+<div class="timeline-description">Expert review</div>
+</div>
+:::
+:::
+:::
+
+## Model Parameters
+
+::: {.stats-grid}
+::: {.stat-box}
+<div class="stat-value">4</div>
+<div class="stat-label">Health States</div>
+<div class="stat-description">Including absorbing state</div>
+:::
+
+::: {.stat-box}
+<div class="stat-value">12</div>
+<div class="stat-label">Transitions</div>
+<div class="stat-description">Possible state changes</div>
+:::
+
+::: {.stat-box}
+<div class="stat-value">1 yr</div>
+<div class="stat-label">Cycle Length</div>
+<div class="stat-description">Annual transitions</div>
+:::
+
+::: {.stat-box}
+<div class="stat-value">20</div>
+<div class="stat-label">Time Horizon</div>
+<div class="stat-description">Years modeled</div>
+:::
+:::
+
+## Advantages and Challenges
+
+::: {.two-column-text}
+::: {.column}
+### Advantages
+
+Markov models offer several benefits for health economic evaluation:
+
+- Capture disease progression
+- Handle uncertainty explicitly
+- Allow probabilistic sensitivity analysis
+- Incorporate time-dependent effects
+:::
+
+::: {.column}
+### Challenges
+
+However, they also have limitations:
+
+- Memoryless assumption
+- Computational complexity
+- Data requirements
+- Validation difficulties
+:::
+:::
+
+## Model Examples
+
+::: {.image-grid}
+::: {.image-item}
+![](images/model1.png)
+<div class="image-caption">HIV Progression Model</div>
+:::
+
+::: {.image-item}
+![](images/model2.png)
+<div class="image-caption">Cancer Screening Model</div>
+:::
+
+::: {.image-item}
+![](images/model3.png)
+<div class="image-caption">Chronic Disease Model</div>
+:::
+
+::: {.image-item}
+![](images/model4.png)
+<div class="image-caption">Vaccination Model</div>
+:::
+:::
+
+## Fixed 2x2 Grid
+
+::: {.image-grid .grid-2x2}
+[items here]
+:::
+
+## Fixed 3x3 Grid
+
+::: {.image-grid .grid-3x3}
+[items here]
+:::
+
+## {.quote-slide}
+
+<div class="quote-text">
+The goal of health economic modeling is not to predict the future, but to inform better decisions in the present.
+</div>
+
+<div class="quote-author">Milton Weinstein</div>
+<div class="quote-context">Harvard School of Public Health</div>
+
+## What is a Markov Model?
+
+::: {.definition-box}
+<div class="term">Markov Model</div>
+
+<div class="definition">
+A mathematical model that represents a system where transitions between states occur with fixed probabilities, independent of the path taken to reach the current state (memoryless property).
+</div>
+
+::: {.example}
+<div class="example-label">Example:</div>
+<div class="example-text">
+A patient in the "Early Disease" state has a 0.15 probability of progressing to "Advanced Disease" each year, regardless of how long they've been in the early stage.
+</div>
+:::
+:::
+
+## Treatment Options
+
+::: {.pros-cons}
+::: {.pros-column}
+### Advantages
+
+- Clinically proven efficacy
+- Well-tolerated by patients
+- Lower cost per dose
+- Easy administration
+- Wide availability
+:::
+
+::: {.cons-column}
+### Disadvantages
+
+- Requires frequent dosing
+- Some drug interactions
+- Not suitable for all patients
+- Long-term safety uncertain
+- Limited durability
+:::
+:::
+
+## {.big-number-slide}
+
+<div class="big-number">$50K</div>
+<div class="big-number-label">Cost-Effectiveness Threshold</div>
+<div class="big-number-context">
+Commonly used willingness-to-pay threshold per quality-adjusted life year (QALY) in the United States
+</div>
+
+## Model Development Checklist
+
+::: {.checklist}
+### Before Running Analysis
+
+- [ ] All health states defined
+- [ ] Transition probabilities validated
+- [ ] Cycle length specified
+- [x] Time horizon determined
+- [x] Discount rate selected
+- [ ] Utilities assigned
+- [ ] Costs estimated
+- [ ] Sensitivity analyses planned
+:::
+
+## Next Lecture {.lecturediv-slide}
+
+Rates and Probabilities in Health Economic Models
+
+## My Slide Title {data-background-class="circle-accent"}
+
+Content here with circle accent in corner
+
+## Another Slide {data-background-class="chevron-accent"}
+
+Content here with chevron accent
+
+## More Options {data-background-class="triangle-accent"}
+
+- `chevron-accent` - Double chevrons (top right)
+- `circle-accent` - Large circle (bottom right)
+- `triangle-accent` - Triangle (top left)
+- `rounded-rect-accent` - Rounded rectangle (right side)
+- `quarter-circle-accent` - Quarter circle (top right corner)
+- `half-circle-accent` - Half circle (left side)
+- `diagonal-stripe-accent` - Diagonal stripe pattern
+
