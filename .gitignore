@@ -7,7 +7,7 @@
 /.quarto/
 _site/
 *cache*
-*html*
+#*html*
 /site_libs/
 *files*
 *.json*
