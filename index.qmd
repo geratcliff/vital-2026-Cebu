@@ -35,7 +35,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 26/01/2026 (Monday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 8:45 | Check-Ins | Registration and Introductions |
 | 08:45 - 9:30 | Lecture | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.qmd) |
 | 10:00 - 10:30 | Case Study | Introduction to Topic |
@@ -53,7 +53,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 27/01/2026 (Tuesday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | Case Study | [Decision Trees in Amua](case-studies/cs_decision-tree-amua.qmd) |
 | 9:00 - 10:30 | Capstone | Make a Decision Tree |
 | 10:30 - 11:30 | Break | Coffee/Tea |
@@ -66,10 +66,12 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 : {tbl-colwidths="\[20,10,50\]"}
 
+### <span style="color:#0083a9;"> Group dinner at Ettas Cucina + Bar - Mandani Bay will be provided. Time and Transportation will be announced. </span>
+
 ## 28/01/2026 (Wednesday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | Case Study | [Incremental CEA](case-studies/cs_icer.qmd) |
 | 09:00-10:00 | Lecture | [Markov Models](lectures/lec_7.MarkovModels1.qmd) |
 | 10:45 - 11:15 | Break | Coffee/Tea |
@@ -84,7 +86,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 29/01/2026 (Thursday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | Lecture | [Lecture: Structuring the Markov Model](lectures/lec_structure.qmd) \[JG\] |
 | 09:00 - 10:15 | Case Study | Case Study: [Progressive Disease Model in Amua](case-studies/cs_progressive-disease.qmd) |
 | 10:15 - 10:30 | Break | Coffee/Tea |
@@ -99,7 +101,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 30/01/2026 (Friday)
 
 | Time          | Type          | Topic                                       |
-|---------------|---------------|---------------------------------------------|
+|----------------|----------------|----------------------------------------|
 | 08:00 - 09:00 | Case Study    | DALYs in AMUA \[Guided\]                    |
 | 09:30 - 10:15 | Case Study    | Common CEA Errors                           |
 | 10:15 - 10:45 | Break         | Coffee/Tea                                  |

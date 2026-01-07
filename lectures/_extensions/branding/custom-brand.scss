@@ -41,7 +41,7 @@ $breakpoint-large: 1440px;
 
 .reveal h2 {
   font-size: clamp(1.5em, 4vw, 2em);
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 // ============================================================================
@@ -269,18 +269,21 @@ $breakpoint-large: 1440px;
 
 .numbered-list-slide {
   h2 {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.25em;
   }
   
   .number-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-    gap: clamp(1em, 2vw, 1.5em);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5em, 1vw, 0.75em);
     margin-top: 2em;
+    max-width: 1200px;
+    margin-left: 0;
+    margin-right: auto;
     
     .list-item {
       background: $white;
-      padding: clamp(1em, 2vw, 1.5em);
+      padding: clamp(0.6em, 1.2vw, 0.8em) clamp(1em, 2vw, 1.5em);
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       display: flex;
@@ -288,12 +291,12 @@ $breakpoint-large: 1440px;
       transition: transform 0.2s;
       
       &:hover {
-        transform: translateY(-4px);
+        transform: translateX(8px);
         box-shadow: 0 4px 16px rgba(0,0,0,0.12);
       }
       
       .number {
-        font-size: clamp(1.5em, 4vw, 2.5em);
+        font-size: clamp(1.6em, 1.2vw, 0.8em);
         font-weight: 700;
         color: $secondary-color;
         margin-right: 0.5em;
@@ -875,42 +878,43 @@ $breakpoint-large: 1440px;
 }
 
 // ============================================================================
-// TWO COLUMN TEXT
+// SIMPLE TWO COLUMN COMPARISON (No Cards)
 // ============================================================================
 
-.two-column-text {
+.simple-comparison {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: clamp(2em, 4vw, 3em);
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(3em, 6vw, 4em);
   margin-top: 2em;
 
-  .column {
-    h3 {
-      color: $primary-color !important;
-      font-size: clamp(1.1em, 2.2vw, 1.3em);
+  .comparison-column {
+    .column-header {
+      font-size: clamp(1.2em, 2.5vw, 1.5em);
+      font-weight: 600;
+      color: $primary-color;
       margin-bottom: 1em;
+      padding-bottom: 0.5em;
+      border-bottom: 3px solid $accent-color;
     }
 
-    p {
-      margin-bottom: 1em;
-      line-height: 1.6;
-    }
+    .column-content {
+      ul {
+        list-style: none;
+        padding: 0;
 
-    ul {
-      list-style: none;
-      padding: 0;
+        li {
+          padding: 0.5em 0 0.5em 1.5em;
+          position: relative;
+          margin: 0.5em 0;
+          font-size: clamp(0.9em, 1.8vw, 1em);
 
-      li {
-        padding-left: 1.5em;
-        position: relative;
-        margin: 0.5em 0;
-
-        &::before {
-          content: "→";
-          color: $secondary-color;
-          position: absolute;
-          left: 0;
-          font-weight: bold;
+          &::before {
+            content: "→";
+            color: $secondary-color;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+          }
         }
       }
     }
@@ -924,8 +928,8 @@ $breakpoint-large: 1440px;
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-  gap: clamp(1em, 2vw, 1.5em);
-  margin-top: 2em;
+  gap: clamp(0.5em, 0.7vw, 1.5em);
+  margin-top: 0.5em;
 
   .image-item {
     background: $white;
@@ -933,6 +937,8 @@ $breakpoint-large: 1440px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
       transform: translateY(-4px);
@@ -941,25 +947,41 @@ $breakpoint-large: 1440px;
 
     img {
       width: 100%;
-      height: auto;
+      object-fit: contain;
       display: block;
+      padding: clamp(0.1em, 0.2vw, 0.5em) clamp(0.1em, 0.2vw, 1em);
+      background: white;
     }
 
     .image-caption {
-      padding: clamp(1em, 2vw, 1.5em);
-      font-size: clamp(0.9em, 1.8vw, 1em);
+      padding: clamp(0.05em, 0.1vw, 1em);
+      font-size: clamp(0.6em, 0.7vw, 0.9em);
+      margin: 0;
       color: $text-dark;
       text-align: center;
       font-weight: 500;
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
   }
 
   &.grid-2x2 {
     grid-template-columns: repeat(2, 1fr);
+    
+    .image-item {
+      img {
+        max-height: 20vh;
+      }
+    }
   }
 
   &.grid-3x3 {
     grid-template-columns: repeat(3, 1fr);
+    
+    .image-item {
+      img {
+        max-height: 10vh;
+      }
+    }
   }
 }
 
@@ -1066,26 +1088,29 @@ $breakpoint-large: 1440px;
 }
 
 // ============================================================================
-// PROS & CONS LAYOUT
+// PROS & CONS LAYOUT (NEW VERSION)
 // ============================================================================
 
-.pros-cons {
+.pros-cons-new {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: clamp(1.5em, 3vw, 2em);
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2em, 4vw, 3em);
   margin-top: 2em;
 
   .pros-column, .cons-column {
-    background: $white;
-    border-radius: 12px;
-    padding: clamp(1.5em, 3vw, 2em);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-
-    h3 {
-      font-size: clamp(1.2em, 2.5vw, 1.5em);
-      margin-bottom: 1em;
-      padding-bottom: 0.5em;
-      border-bottom: 3px solid;
+    .column-title {
+      font-size: clamp(1.3em, 2.8vw, 1.6em);
+      margin-bottom: 1.2em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      font-family: $presentation-heading-font;
+      
+      &::before {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
     }
 
     ul {
@@ -1093,41 +1118,55 @@ $breakpoint-large: 1440px;
       padding: 0;
 
       li {
-        padding: 0.5em 0 0.5em 2em;
+        padding: 0.6em 0 0.6em 2.2em;
         position: relative;
-        margin: 0.5em 0;
-
+        margin: 0.7em 0;
+        font-size: clamp(0.9em, 1.9vw, 1.05em);
+        line-height: 1.5;
+        
         &::before {
           position: absolute;
           left: 0;
-          font-weight: bold;
-          font-size: 1.2em;
+          font-weight: 700;
+          font-size: 1.3em;
         }
       }
     }
   }
 
   .pros-column {
-    h3 {
+    .column-title {
       color: #2d7a3e !important;
-      border-bottom-color: #2d7a3e;
+      
+      &::before {
+        content: "✓";
+        color: #2d7a3e;
+      }
     }
 
-    ul li::before {
-      content: "✓";
-      color: #2d7a3e;
+    ul li {
+      &::before {
+        content: "•";
+        color: #2d7a3e;
+      }
     }
   }
 
   .cons-column {
-    h3 {
+    .column-title {
       color: #c44536 !important;
-      border-bottom-color: #c44536;
+      
+      &::before {
+        content: "✗";
+        color: #c44536;
+      }
     }
 
-    ul li::before {
-      content: "✗";
-      color: #c44536;
+    ul li {
+      &::before {
+        content: "•";
+        color: #c44536;
+      }
     }
   }
 }
@@ -1175,7 +1214,7 @@ $breakpoint-large: 1440px;
   padding: clamp(1.5em, 3vw, 2em);
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  margin-top: 2em;
+  margin-top: 0em;
 
   h3 {
     color: $primary-color !important;
@@ -1208,6 +1247,135 @@ $breakpoint-large: 1440px;
       &.checked::before {
         content: "☑";
       }
+    }
+  }
+}
+
+
+// ============================================================================
+// SUMMARY CIRCLE END SLIDE
+// ============================================================================
+
+.reveal .summary-end-slide {
+  background-color: $light-bg !important;
+  
+  // Override any default Reveal.js slide positioning
+  .slides & {
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .summary-circle {
+    width: clamp(300px, 50vw, 500px);
+    height: clamp(300px, 50vw, 500px);
+    border-radius: 50%;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2em, 4vw, 3em);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    position: relative;
+    margin: 0 auto;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 50px);
+      height: calc(100% + 50px);
+      border: 2px solid rgba($accent-color, 0.3);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .end-title {
+      font-size: clamp(2em, 5vw, 3em);
+      text-align: center;
+      color: $white;
+      font-weight: 600;
+      margin-bottom: 0.3em;
+      z-index: 1;
+      font-family: $presentation-heading-font;
+    }
+    
+    .end-subtitle {
+      font-size: clamp(1em, 2vw, 1.3em);
+      color: rgba($white, 0.9);
+      text-align: center;
+      z-index: 1;
+      line-height: 1.4;
+      margin-bottom: 1em;
+    }
+
+    .key-points {
+      margin-top: 1em;
+      z-index: 1;
+      text-align: left;
+
+      li {
+        color: $white;
+        font-size: clamp(0.85em, 1.7vw, 0.95em);
+        margin: 0.4em 0;
+        list-style: none;
+        position: relative;
+        padding-left: 1.5em;
+
+        &::before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: $accent-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+
+// ============================================================================
+// QUESTIONS SLIDE (Minimal with Accent)
+// ============================================================================
+
+.questions-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+
+  h2 {
+    font-size: clamp(2.5em, 6vw, 4em);
+    font-weight: 600;
+    color: $primary-color !important;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: clamp(80px, 15vw, 120px);
+      height: 3px;
+      background: $accent-color;
+      margin: 0 auto 1em;
+    }
+  }
+
+  .next-info {
+    font-size: clamp(1em, 2.5vw, 1.3em);
+    color: $text-light;
+    margin-top: 2em;
+    font-weight: 400;
+
+    strong {
+      color: $secondary-color;
+      font-weight: 600;
     }
   }
 }

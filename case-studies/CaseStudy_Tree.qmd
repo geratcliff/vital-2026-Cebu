@@ -1,0 +1,240 @@
+---
+title: "CaseStudy_decisiontree"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{=html}
+<style>
+/* Base: make Quarto callouts behave like full cards */
+.callout.fill-box {
+  /* Unified background & border for the whole card */
+  --box-bg: #eaf6ee;   /* default soft green if no class overrides */
+  --edge-color: #1f6f43; /* default darker edge/title color */
+  background: var(--box-bg);
+  border: 1px solid var(--edge-color);
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden; /* keeps rounded corners clean when title is darker */
+}
+
+/* Title bar: darker shade; full-width across top */
+.callout.fill-box .callout-title {
+  background: var(--edge-color);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--edge-color);
+}
+
+/* Body: same light color as the card, not a separate “stripe” */
+.callout.fill-box .callout-body {
+  background: transparent; /* let the parent set the background */
+  padding: 0.9rem 1rem;
+}
+
+
+/* --- Specific palettes --- */
+/* Green: "Why are we doing this?" */
+.callout.why-box {
+  --box-bg: #eaf6ee;    /* light green fill */
+  --edge-color: #1f6f43;/* dark green edge/title */
+}
+
+/* Purple: "Your Task" */
+.callout.task-box {
+  --box-bg: #f3ecfb;    /* light purple fill */
+  --edge-color: #7140a6;/* deep purple edge/title */
+}
+
+/* Yellow: "Objectives" */
+.callout.objectives {
+  --box-bg: #FFFAA0;    /* light yellow fill */
+  --edge-color: #F4C430; /* deep yellow edge/title */
+}
+
+</style>
+```
+
+::: {.callout .fill-box .objectives}
+# Introduction and Learning Objectives {{< fa regular clipboard >}}
+
+Now that we have identified the strat and downloaded AMUA on your
+computer. You are ready to start build a decision tree for the research
+question.
+
+By the end of this session, participants will be able to:
+
+1.  Build and structure a decision tree model in Amua to represent
+    clinical decision problems.
+
+2.  Define and parameterize key inputs (e.g., probabilities, outcomes,
+    and costs) within the Amua software.
+
+3.  Evaluate model outcomes for alternative clinical strategies.
+
+4.  Add and compare multiple strategies (e.g., diagnostic testing
+    options) in a single decision framework.
+:::
+
+Another member of the lab has completed the data collection for you
+already, you just need to build the model in Amua
+
+::: {.callout .fill-box .why-box}
+## Why are we doing this?
+
+A decision tree will allow us to determine how the life years that are
+gained varies by each strategy. This will be important data to provide
+in a policy brief on why one decision should be considered over another.
+:::
+
+::: {.callout .fill-box .task-box}
+## Your Task
+
+Create the model structure for the three strategies.
+:::
+
+# Reminder of Decision Problem
+
+There has been an increase in cases of Cancer within your country and
+you've been assigned to look into methods other countries near by have
+implemented.
+
+You find that one country has implemented **screening for all** and
+provides treatment only for those that test positive. Another country
+has launched a campaign to **treat everyone** regardless of having the
+disease.. The Ministry of Health has asked us to **determine the cost
+effectiveness of the different strategies.**
+
+1.  No Screen, No Treat
+
+2.  Screen All, then Treat
+
+3.  No Screen, Treat All
+
+# Step 1: Download the Tree File
+
+To assist you with the limited time for the case study, we have created
+the initial layout of the decision tree for you.
+
+\*\* ADD AN IMAGE OF AMUA FILE WITH THE FOLLOWING BUILT \*\* - NO
+SCREEN/TREAT branch structure built (no outcomes or probabilities) -
+Initial branches for SCREEN ALL strategy and TREAT ALL strategy
+
+# Step 2: Build Out the Strategies
+
+## Screen all strategy
+
+Things to remember when building the strategy out: - The specificity is
+100% (the test is 100% accurate for individuals that are not sick) - The
+specificity is **NOT** 100%. Some sick people will get a negative test
+result. - Only individuals that have a positive screening will get
+treated
+
+## Treat all strategy
+
+Things to remember when building the strategy out: - Everyone that is
+sick will get treatment immediately
+
+<details>
+
+<summary>Show solution</summary>
+
+\*\* ADD AN IMAGE OF AMUA WITH THE FULL TREE BUILT \*\* - no outcomes or
+probabilities
+
+</details>
+
+# Step 3: Add Probabilities
+
+| Label  | Value     | Description                              |
+|--------|-----------|------------------------------------------|
+| p_sick | ADD VALUE | Probability of getting sick (Prevelance) |
+| sens   | ADD VALUE | Sensitivity of Screening Test            |
+
+<details>
+
+<summary>Show solution</summary>
+
+\*\* ADD AN IMAGE OF AMUA WITH THE FULL TREE BUILT WITH PROBABILITIES
+\*\* - no outcomes
+
+</details>
+
+# Step 4: Add outcomes
+
+::: panel-tabset
+### Costs
+
+| Label        | Value     | Description                      |
+|--------------|-----------|----------------------------------|
+| c_untreated  | ADD VALUE | Cost of being sick and untreated |
+| c_treated    | ADD VALUE | Cost of being sick and treated   |
+| c_screen     | ADD VALUE | Cost of screening                |
+| c_screen_imp | ADD VALUE | Cost to implement screening      |
+
+### Life Years
+
+| Label              | Value     | Description                      |
+|--------------------|-----------|----------------------------------|
+| LY_untreated       | ADD VALUE | Cost of being sick and untreated |
+| LY_treated         | ADD VALUE | Cost of being sick and treated   |
+| LY_healthy         | ADD VALUE | Cost of screening                |
+| LY_healthy_treated | ADD VALUE | Cost to implement screening      |
+:::
+
+<details>
+
+<summary>Show solution</summary>
+
+\*\* ADD AN IMAGE OF AMUA WITH THE FULL TREE BUILT \*\*
+
+</details>
+
+# Step 5: Run the Tree
+
+Run the tree to check your results
+
+
+::: {.callout-tip}
+## Check your answer
+
+Enter your result:
+<input id="answer1" type="number" step="0.01" placeholder="e.g., 42.5" />
+<button id="check1">Check</button>
+<span id="feedback1" style="margin-left:0.5rem;"></span>
+
+<script>
+(function() {
+  // Set the correct value and tolerance
+  const CORRECT = 42.5;
+  const TOL = 0.01; // accept +/- 0.01
+
+  const input = document.getElementById('answer1');
+  const button = document.getElementById('check1');
+  const feedback = document.getElementById('feedback1');
+
+  function setFeedback(msg, status) {
+    feedback.textContent = msg;
+    feedback.style.fontWeight = '600';
+    feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
+  }
+
+  button.addEventListener('click', function() {
+    const val = parseFloat(input.value);
+    if (isNaN(val)) {
+      setFeedback('Please enter a number.', 'warn');
+      return;
+    }
+    const ok = Math.abs(val - CORRECT) <= TOL;
+    if (ok) {
+      setFeedback('✅ Correct!', 'ok');
+    } else {
+      setFeedback('❌ Not quite. Try again.', 'bad');
+    }
+  });
+})();
+</script>
+:::
+

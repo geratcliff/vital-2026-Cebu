@@ -1,0 +1,19 @@
+---
+title: "Case Study Home Base"
+---
+
+
+This just exists internally as a way to see all the case study frameworks
+
+[Intro To Case Study](CaseStudy_Intro.qmd)
+
+[Intro To AMUA](CaseStudy_AMUA.qmd)
+
+[Decision Trees](CaseStudy_Tree.qmd)
+
+[Cost Effectiveness Analysis](CaseStudy_CEA.qmd)
+
+[Markov Model](CaseStudy_MarkovSimple.qmd)
+
+[Progressive Markov Model](CaseStudy_MarkovProgression.qmd)
+** This currently doesn't exist ** 

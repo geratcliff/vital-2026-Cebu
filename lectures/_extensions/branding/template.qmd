@@ -3,6 +3,7 @@ title: "Template"
 title-slide-attributes:
   data-background-image: /assets/title-bg.jpg
 author: "VUMC - Center for Health Economic Modeling"
+date: 01-06-2026
 format:
   revealjs:
     theme: [default, custom-brand.scss]
@@ -14,342 +15,525 @@ format:
     margin: 0.1
 ---
 
-## {.numbered-list-slide}
+##  {.numbered-list-slide}
 
-<h2>Overview Template</h2>
+<h2> (1) Numbered Overview Template </h2>
 
-::: {.number-list}
-::: {.list-item}
+::::::::::::::: number-list
+::: {.list-item} 
 <div class="number">01</div>
-<div class="text">First topic</div>
+<div class="text">First topic </div> 
 :::
-
-::: {.list-item}
+::: {.list-item} 
 <div class="number">02</div>
-<div class="text">Second topic</div>
+<div class="text">Second topic </div> 
 :::
-
-::: {.list-item}
+::: {.list-item} 
 <div class="number">03</div>
-<div class="text">Third topic</div>
+<div class="text">Third topic </div> 
 :::
-
-::: {.list-item}
+::: {.list-item} 
 <div class="number">04</div>
-<div class="text">Fourth topic</div>
+<div class="text">Fourth topic </div> 
 :::
-:::
+:::::::::::::::
 
-## Section Divider Template {.section-slide}
+## (2) Section Divider Template {.section-slide}
 
-:::{.section-number}
+::: section-number
 01
 :::
 
-## Info Cards Template
+## (3) Info Cards Template
 
-::: {.info-cards}
-::: {.card}
+::::: info-cards
+::: card
 **Health State Definition**
 
 A health state represents a specific condition. Should be:
 
-- Mutually exclusive
-- Collectively exhaustive
-- Clinically meaningful
+-   Mutually exclusive
+-   Collectively exhaustive
+-   Clinically meaningful
 :::
 
-::: {.card}
+::: card
 **Key Considerations**
 
 When defining states:
 
-- Disease progression
-- Treatment response
-- Quality of life
-- Cost implications
+-   Disease progression
+-   Treatment response
+-   Quality of life
+-   Cost implications
 :::
-:::
+:::::
 
-## Stats Grid Template
+## (4) Stats Grid Template
 
-::: {.concept-grid}
-<div class="concept-box">Disease-Free</div>
-<div class="concept-box">Early Disease</div>
-<div class="concept-box">Advanced Disease</div>
-<div class="concept-box">Death</div>
-:::
-
-## Icon Bullets Template
-
-::: {.process-flow}
-::: {.step}
-<div class="step-number">1</div>
-<div class="step-title">Literature Review</div>
-<div class="step-content">Review guidelines and models</div>
+::::::::::::::::::: stats-grid
+:::::: stat-box
+::: stat-value
+4
 :::
 
-::: {.step}
-<div class="step-number">2</div>
-<div class="step-title">Expert Consultation</div>
-<div class="step-content">Engage clinicians</div>
+::: stat-label
+Health States
 :::
 
-::: {.step}
-<div class="step-number">3</div>
-<div class="step-title">Data Validation</div>
-<div class="step-content">Ensure data alignment</div>
+::: stat-description
+Including absorbing state
 :::
+::::::
+
+:::::: stat-box
+::: stat-value
+12
 :::
 
-## Concept Grid Template {.split-wrapper}
+::: stat-label
+Transitions
+:::
 
-::: {.split-content}
-::: {.content-text}
+::: stat-description
+Possible state changes
+:::
+::::::
+
+:::::: stat-box
+::: stat-value
+1 yr
+:::
+
+::: stat-label
+Cycle Length
+:::
+
+::: stat-description
+Annual transitions
+:::
+::::::
+
+:::::: stat-box
+::: stat-value
+20
+:::
+
+::: stat-label
+Time Horizon
+:::
+
+::: stat-description
+Years modeled
+:::
+::::::
+:::::::::::::::::::
+
+## (5) Icon Bullets Template
+
+::: icon-bullets
+-   Health states are mutually exclusive
+-   Transitions must sum to 1.0
+-   Time cycle must be specified
+-   Clinical validation required
+:::
+
+## (6) Concept Grid Template
+
+::::::: concept-grid
+::: concept-box
+Disease-Free
+:::
+
+::: concept-box
+Early Disease
+:::
+
+::: concept-box
+Advanced Disease
+:::
+
+::: concept-box
+Death
+:::
+:::::::
+
+## (7) Split Content Template {.split-wrapper}
+
+::::: split-content
+::: content-text
 **Patient Journey**
 
-- Initial diagnosis
-- Treatment initiation
-- Disease progression
-- End-of-life care
+-   Initial diagnosis
+-   Treatment initiation
+-   Disease progression
+-   End-of-life care
 :::
 
-::: {.content-visual}
-![](images/patient-journey.png)
+::: content-visual
+![](/assets/template_images/splitcontent_image.png)
 
 *Patient journey flowchart*
 :::
-:::
+:::::
 
+## (8) Simple Two Column Comparison Template
 
-## Split Conten
-
-::: {.icon-bullets}
-- Health states are mutually exclusive
-- Transitions must sum to 1.0
-- Time cycle must be specified
-- Clinical validation required
-:::
-
-## Treatment Comparison
-
-::: {.comparison-table}
+::: {.simple-comparison}
 ::: {.comparison-column}
-<div class="column-header">Standard Care</div>
+<div class="column-header">Markov models offer several benefits for health economic evaluation:</div>
 <div class="column-content">
 
-- Lower upfront cost
-- Established protocols
-- Widely available
-- Known side effects
+-   Capture disease progression
+-   Handle uncertainty explicitly
+-   Allow probabilistic sensitivity analysis
+-   Incorporate time-dependent effects
 
 </div>
 :::
 
 ::: {.comparison-column}
-<div class="column-header">New Treatment</div>
+<div class="column-header">However, they also have limitations:</div>
 <div class="column-content">
 
-- Higher efficacy
-- Fewer side effects
-- Better QoL outcomes
-- Higher cost
-
-</div>
-:::
-
-::: {.comparison-column}
-<div class="column-header">Combination</div>
-<div class="column-content">
-
-- Best outcomes
-- Complex protocol
-- Highest cost
-- Specialized care needed
+-   Memoryless assumption
+-   Computational complexity
+-   Data requirements
+-   Validation difficulties
 
 </div>
 :::
 :::
 
-## Important Concept
 
-::: {.highlight-box}
-<div class="box-title">Key Takeaway</div>
+## (9) Comparison Table Template
+
+:::::::::::: comparison-table
+::::: comparison-column
+::: column-header
+Standard Care
+:::
+
+::: column-content
+-   Lower upfront cost
+-   Established protocols
+-   Widely available
+-   Known side effects
+:::
+:::::
+
+::::: comparison-column
+::: column-header
+New Treatment
+:::
+
+::: column-content
+-   Higher efficacy
+-   Fewer side effects
+-   Better QoL outcomes
+-   Higher cost
+:::
+:::::
+
+::::: comparison-column
+::: column-header
+Combination
+:::
+
+::: column-content
+-   Best outcomes
+-   Complex protocol
+-   Highest cost
+-   Specialized care needed
+:::
+:::::
+::::::::::::
+
+## (10) Definition Template
+
+:::::::: definition-box
+::: term
+Markov Model
+:::
+
+::: definition
+A mathematical model that represents a system where transitions between states occur with fixed probabilities, independent of the path taken to reach the current state (memoryless property).
+:::
+
+::::: example
+::: example-label
+Example:
+:::
+
+::: example-text
+A patient in the "Early Disease" state has a 0.15 probability of progressing to "Advanced Disease" each year, regardless of how long they've been in the early stage.
+:::
+:::::
+::::::::
+
+## (11) Highlight Box Template
+
+:::: highlight-box
+::: box-title
+Key Takeaway
+:::
 
 Markov models assume memoryless transitions - the probability of moving to the next state depends only on the current state, not on the history of previous states.
+::::
+
+## (11) Continued .... With Different Colors
+
+:::: {.highlight-box .primary}
+::: box-title
+Primary Highlight
 :::
 
-## With Different Colors
-
-::: {.highlight-box .primary}
-<div class="box-title">Primary Highlight</div>
 This uses the primary blue color.
+::::
+
+:::: {.highlight-box .secondary}
+::: box-title
+Secondary Highlight
 :::
 
-::: {.highlight-box .secondary}
-<div class="box-title">Secondary Highlight</div>
 This uses the secondary teal color.
+::::
+
+## (12) Image Grid Template [2x2]
+
+::::::::::: {.image-grid .grid-2x2}
+
+:::: image-item
+![](assets/template_images/Grid_stackeOWSA.png)
+
+::: image-caption
+Staked OWSA
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid_OWSA.png)
+
+::: image-caption
+Tornado Diagram (OWSA)
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid_TWSA.png)
+
+::: image-caption
+Two-Way Sensitvity
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid_CEAC.png)
+
+::: image-caption
+CEA from PSA
+:::
+::::
+
+:::::::::::
+
+## (12) Image Grid Template [3x3]
+
+::::::: {.image-grid .grid-3x3}
+
+:::: image-item
+![](assets/template_images/Grid3_healthy.png)
+
+::: image-caption
+Healthy
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_screen.png)
+
+::: image-caption
+Screening
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_infected.png)
+
+::: image-caption
+Infected
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_vaccine.png)
+
+::: image-caption
+Vaccinated
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_sick.png)
+
+::: image-caption
+Symptomatic
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_doctor.png)
+
+::: image-caption
+Doctor vists
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_meds.png)
+
+::: image-caption
+Treatment
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_hospital.png)
+
+::: image-caption
+Hospital
+:::
+::::
+
+:::: image-item
+![](assets/template_images/Grid3_death.png)
+
+::: image-caption
+Die
+:::
+::::
+:::::::
+
+## (13) Process Flow Template
+
+::::::::::::::: process-flow
+:::::: step
+::: step-number
+1
 :::
 
-## Model Development Timeline
-
-::: {.timeline}
-::: {.timeline-items}
-::: {.timeline-item}
-<div class="timeline-marker">1</div>
-<div class="timeline-content">
-<div class="timeline-title">Define States</div>
-<div class="timeline-description">Identify health states</div>
-</div>
+::: step-title
+Literature Review
 :::
 
-::: {.timeline-item}
-<div class="timeline-marker">2</div>
-<div class="timeline-content">
-<div class="timeline-title">Create Diagram</div>
-<div class="timeline-description">Draw bubble diagram</div>
-</div>
+::: step-content
+Review guidelines and models
+:::
+::::::
+
+:::::: step
+::: step-number
+2
 :::
 
-::: {.timeline-item}
-<div class="timeline-marker">3</div>
-<div class="timeline-content">
-<div class="timeline-title">Add Transitions</div>
-<div class="timeline-description">Define probabilities</div>
-</div>
+::: step-title
+Expert Consultation
 :::
 
-::: {.timeline-item}
-<div class="timeline-marker">4</div>
-<div class="timeline-content">
-<div class="timeline-title">Validate</div>
-<div class="timeline-description">Expert review</div>
-</div>
+::: step-content
+Engage clinicians
 :::
-:::
-:::
+::::::
 
-## Model Parameters
-
-::: {.stats-grid}
-::: {.stat-box}
-<div class="stat-value">4</div>
-<div class="stat-label">Health States</div>
-<div class="stat-description">Including absorbing state</div>
+:::::: step
+::: step-number
+3
 :::
 
-::: {.stat-box}
-<div class="stat-value">12</div>
-<div class="stat-label">Transitions</div>
-<div class="stat-description">Possible state changes</div>
+::: step-title
+Data Validation
 :::
 
-::: {.stat-box}
-<div class="stat-value">1 yr</div>
-<div class="stat-label">Cycle Length</div>
-<div class="stat-description">Annual transitions</div>
+::: step-content
+Ensure data alignment
+:::
+::::::
+:::::::::::::::
+
+## (14) Timeline Template
+
+:::::::::::::::::::::::: timeline
+::::::::::::::::::::::: timeline-items
+::::::: timeline-item
+::: timeline-marker
+1
 :::
 
-::: {.stat-box}
-<div class="stat-value">20</div>
-<div class="stat-label">Time Horizon</div>
-<div class="stat-description">Years modeled</div>
-:::
+::::: timeline-content
+::: timeline-title
+Define States
 :::
 
-## Advantages and Challenges
+::: timeline-description
+Identify health states
+:::
+:::::
+:::::::
 
-::: {.two-column-text}
-::: {.column}
-### Advantages
-
-Markov models offer several benefits for health economic evaluation:
-
-- Capture disease progression
-- Handle uncertainty explicitly
-- Allow probabilistic sensitivity analysis
-- Incorporate time-dependent effects
+::::::: timeline-item
+::: timeline-marker
+2
 :::
 
-::: {.column}
-### Challenges
-
-However, they also have limitations:
-
-- Memoryless assumption
-- Computational complexity
-- Data requirements
-- Validation difficulties
-:::
+::::: timeline-content
+::: timeline-title
+Create Diagram
 :::
 
-## Model Examples
+::: timeline-description
+Draw bubble diagram
+:::
+:::::
+:::::::
 
-::: {.image-grid}
-::: {.image-item}
-![](images/model1.png)
-<div class="image-caption">HIV Progression Model</div>
+::::::: timeline-item
+::: timeline-marker
+3
 :::
 
-::: {.image-item}
-![](images/model2.png)
-<div class="image-caption">Cancer Screening Model</div>
+::::: timeline-content
+::: timeline-title
+Add Transitions
 :::
 
-::: {.image-item}
-![](images/model3.png)
-<div class="image-caption">Chronic Disease Model</div>
+::: timeline-description
+Define probabilities
+:::
+:::::
+:::::::
+
+::::::: timeline-item
+::: timeline-marker
+4
 :::
 
-::: {.image-item}
-![](images/model4.png)
-<div class="image-caption">Vaccination Model</div>
-:::
-:::
-
-## Fixed 2x2 Grid
-
-::: {.image-grid .grid-2x2}
-[items here]
+::::: timeline-content
+::: timeline-title
+Validate
 :::
 
-## Fixed 3x3 Grid
-
-::: {.image-grid .grid-3x3}
-[items here]
+::: timeline-description
+Expert review
 :::
+:::::
+:::::::
+:::::::::::::::::::::::
+::::::::::::::::::::::::
 
-## {.quote-slide}
-
-<div class="quote-text">
-The goal of health economic modeling is not to predict the future, but to inform better decisions in the present.
-</div>
-
-<div class="quote-author">Milton Weinstein</div>
-<div class="quote-context">Harvard School of Public Health</div>
-
-## What is a Markov Model?
-
-::: {.definition-box}
-<div class="term">Markov Model</div>
-
-<div class="definition">
-A mathematical model that represents a system where transitions between states occur with fixed probabilities, independent of the path taken to reach the current state (memoryless property).
-</div>
-
-::: {.example}
-<div class="example-label">Example:</div>
-<div class="example-text">
-A patient in the "Early Disease" state has a 0.15 probability of progressing to "Advanced Disease" each year, regardless of how long they've been in the early stage.
-</div>
-:::
-:::
-
-## Treatment Options
-
-::: {.pros-cons}
+## (15) Pros & Cons
+::: {.pros-cons-new}
 ::: {.pros-column}
-### Advantages
+<div class="column-title">Advantages</div>
 
 - Clinically proven efficacy
 - Well-tolerated by patients
@@ -359,7 +543,7 @@ A patient in the "Early Disease" state has a 0.15 probability of progressing to 
 :::
 
 ::: {.cons-column}
-### Disadvantages
+<div class="column-title">Disadvantages</div>
 
 - Requires frequent dosing
 - Some drug interactions
@@ -369,48 +553,78 @@ A patient in the "Early Disease" state has a 0.15 probability of progressing to 
 :::
 :::
 
-## {.big-number-slide}
+##  {.quote-slide}
 
-<div class="big-number">$50K</div>
-<div class="big-number-label">Cost-Effectiveness Threshold</div>
-<div class="big-number-context">
-Commonly used willingness-to-pay threshold per quality-adjusted life year (QALY) in the United States
-</div>
-
-## Model Development Checklist
-
-::: {.checklist}
-### Before Running Analysis
-
-- [ ] All health states defined
-- [ ] Transition probabilities validated
-- [ ] Cycle length specified
-- [x] Time horizon determined
-- [x] Discount rate selected
-- [ ] Utilities assigned
-- [ ] Costs estimated
-- [ ] Sensitivity analyses planned
+::: quote-text
+The goal of health economic modeling is not to predict the future, but to inform better decisions in the present.
 :::
 
-## Next Lecture {.lecturediv-slide}
+::: quote-author
+Milton Weinstein
+:::
 
-Rates and Probabilities in Health Economic Models
+::: quote-context
+Harvard School of Public Health
+:::
 
-## My Slide Title {data-background-class="circle-accent"}
+##  {.big-number-slide}
 
-Content here with circle accent in corner
+::: big-number
+17
+:::
 
-## Another Slide {data-background-class="chevron-accent"}
+::: big-number-label
+Big Number Template
+:::
 
-Content here with chevron accent
+::: big-number-context
+Commonly used willingness-to-pay threshold per quality-adjusted life year (QALY) in the United States
+:::
+
+## (18) Checklist Template
+
+::: checklist
+### Before Running Analysis
+
+-   All health states defined
+
+-   Transition probabilities validated
+
+-   Cycle length specified
+
+-   Time horizon determined
+
+-   Discount rate selected
+:::
+
+## {.summary-end-slide}
+::: {.summary-circle}
+<div class = "end-title"> Key Takeaways </div>
+<div class = "end-subtitle"> Subtitle </div>
+<div class = "key-points"> 
+-   Memoryless transitions
+-   Probabilistic modeling
+-   Time-based cycles
+-   Clinical validation
+</div>
+:::
+
+## Questions? {.questions-slide}
+
+::: next-info
+Next Lecture: <strong>(20) Lecture Divider Slide</strong>
+:::
+
+
 
 ## More Options {data-background-class="triangle-accent"}
 
-- `chevron-accent` - Double chevrons (top right)
-- `circle-accent` - Large circle (bottom right)
-- `triangle-accent` - Triangle (top left)
-- `rounded-rect-accent` - Rounded rectangle (right side)
-- `quarter-circle-accent` - Quarter circle (top right corner)
-- `half-circle-accent` - Half circle (left side)
-- `diagonal-stripe-accent` - Diagonal stripe pattern
+These aren't working so please let me know if you fix them
 
+-   `chevron-accent` - Double chevrons (top right)
+-   `circle-accent` - Large circle (bottom right)
+-   `triangle-accent` - Triangle (top left)
+-   `rounded-rect-accent` - Rounded rectangle (right side)
+-   `quarter-circle-accent` - Quarter circle (top right corner)
+-   `half-circle-accent` - Half circle (left side)
+-   `diagonal-stripe-accent` - Diagonal stripe pattern

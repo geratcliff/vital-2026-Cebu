@@ -1,0 +1,32 @@
+---
+title: "CS-Markov_BonusContent"
+---
+
+Below are some common "tricky" situations that were not covered in this Case Study but may arise in your capstone.
+
+## **1.** What if my model isn’t an annual cycle?
+
+This is not an uncommon problem. Many conditions are not accurately captured in an annual cycle. Cycles can be adjusted to be longer or shorter. Just make sure that you make all the necessary updates to the model to capture the time line.
+
+1.  Ensure Health States are accurate to the new cycle length
+2.  Update probabilities to be for the new cycle length
+3.  Max cycles & termination updated
+4.  Adjust outcomes to ensure they are accurate to the cycle length
+    1.  Costs
+    2.  Counts
+    3.  Utility
+5.  Update discounts to match the cycle length
+
+## **2.** When do I not do a decision tree into a Markov?
+
+In the case study, the decision tree flows into a markov model. This allows us to capture the one time screening. However, there are times when the only branches before the Markov Chain are the strategy/decision names.
+
+Times when to have a decision tree flow before the Markov Chain:
+
+-   One time upfront event (Screening, Strategy, Treatment Etc.)
+
+Times when the Markov Chain is the beginning:
+
+-   Nothing up front
+
+![](images/markov_additionalexp/TreevsJustMarkov.png)

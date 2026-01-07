@@ -1,0 +1,203 @@
+---
+title: "Case Study 1 - Intro"
+---
+
+<style>
+/* Base: make Quarto callouts behave like full cards */
+.callout.fill-box {
+  /* Unified background & border for the whole card */
+  --box-bg: #eaf6ee;   /* default soft green if no class overrides */
+  --edge-color: #1f6f43; /* default darker edge/title color */
+  background: var(--box-bg);
+  border: 1px solid var(--edge-color);
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden; /* keeps rounded corners clean when title is darker */
+}
+
+/* Title bar: darker shade; full-width across top */
+.callout.fill-box .callout-title {
+  background: var(--edge-color);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--edge-color);
+}
+
+/* Body: same light color as the card, not a separate “stripe” */
+.callout.fill-box .callout-body {
+  background: transparent; /* let the parent set the background */
+  padding: 0.9rem 1rem;
+}
+
+
+/* --- Specific palettes --- */
+/* Green: "Why are we doing this?" */
+.callout.why-box {
+  --box-bg: #eaf6ee;    /* light green fill */
+  --edge-color: #1f6f43;/* dark green edge/title */
+}
+
+/* Purple: "Your Task" */
+.callout.task-box {
+  --box-bg: #f3ecfb;    /* light purple fill */
+  --edge-color: #7140a6;/* deep purple edge/title */
+}
+
+</style>
+
+
+Congrats on being invited to join the prestigious economic modeling lab of Dr. Grooves.
+
+There has been an increase in cases of Cancer within your country and you've been assigned to look into methods other countries near by have implemented.
+
+You find that one country has implemented **screening for all** and provides treatment only for those that test positive. Another country has launched a campaign to **treat everyone** regardless of having the disease.. The Ministry of Health has asked us to **determine the cost effectiveness of the different strategies.**
+
+1.  No Screen, No Treat
+
+2.  Screen All, then Treat
+
+3.  No Screen, Treat All
+
+**We will break into 6 teams. Each team will review a resource below for 2 minutes. Then we will discuss how the strategies compare. **
+
+
+::: {.callout .fill-box .task-box}
+## Your Task
+1. Review a resource below for 2 minutes.
+2. Mark areas of your resource where there is potential varience in stragies
+:::
+
+
+::: {.callout .fill-box .why-box}
+## Why are we doing this?
+This ia an attempt to replicate how this data would be collected in a real decision problem. Often we are given models without a background in the topic area. As economic modelers, we must do our due diligence to research the topic and strategy background as well as implementation barriers to ensure that the model represents the disease accurately and not just the data that is collected.
+:::
+
+
+::: {.panel-tabset}
+
+### Source 1
+
+**Early Treatment of Cancer: A Randomized Controlled Trial**
+
+Journal of Health Economics, 2023
+
+Background: Many patients with cancer remain asymptomatic for years before clinical presentation. We evaluated whether early treatment in screen-detected asymptomatic patients improves outcomes compared to waiting for symptomatic presentation.
+
+Methods: 2,400 patients with screen-detected asymptomatic disease were randomized to immediate treatment vs. watchful waiting. Primary outcome was progression to severe disease at 5 years.
+
+Results: Immediate treatment reduced progression to severe disease (12% vs. 28%, p<0.001). Treatment was well-tolerated with similar adverse event rates in both groups. In the watchful waiting arm, 65% of patients eventually developed symptoms and were then offered treatment. Among symptomatic patients who received treatment, progression to severe disease occurred in 35% vs. 12% in those treated while asymptomatic (p<0.001).
+
+Conclusion: Early treatment of asymptomatic disease X substantially improves long-term outcomes compared to waiting for symptomatic presentation.
+
+### Source 2
+
+**Performance of the Rapid Cancer Screening Test in Community Settings**
+Diagnostic Medicine, 2024
+
+Background: Within our community, 8% of people will get Cancer. Currently, individuals that get Cancer can only be treated with the one time necessary surgery when they are symptomatic. A new screening test has been created that can test for Cancer. We evaluated the QuickScreen-Cancer test ($45) in 5,000 community-dwelling adults across 12 primary care clinics.
+
+Methods:  Within each of the 12 primary care facilities, all 5,000 participants completed a health background survey to analyze their risk level. Participants were then given a QuickScreen-Cancer test to determine if they had Cancer.  The results came back within 2 hours of providing the test and were able to be completed in a basic phlebotomy lab. Those with positive results were provided the one time surgery for treatment. Growths that were removed from individuals during the surgery then had further testing to determine if they were positive for cancer. Individuals that had negative results were monitored over 5 years to determine if Cancer developed.
+
+Results:  Of the 5,000 participants, we found that around X% of individuals tested positive for Cancer. Of the growths removed, 92% (95% CI: 88-95%) were found to have Cancer. From the individuals that tested negative, 0 of the participants got Cancer in the next five years. The test performed equally well across all subgroups examined.
+
+### Source 3
+
+**American Society for Cancer Management: Screening Recommendations (2024)**
+
+RISK STRATIFICATION:
+
+High-risk patients are defined as individuals with ≥2 of the following:
+
+- High Blood Pressure (> 140/90 )
+- Family history of Cancer
+- Existence of a growth
+- History of Cancer causing workplace
+
+Approximately 35% of the general adult population meets high-risk criteria.
+
+SCREENING PROTOCOLS:
+
+- Recommended at age 45
+- One time screening
+
+TREATMENT INITIATION:
+
+Current evidence supports immediate treatment (growth removal surgery) initiation upon diagnosis. Delays in treatment are associated with worse outcomes. Individuals over 50 cannot be treated due to the risks of the surgery.
+
+### Source 4
+
+ **INTERVIEW WITH DR. SARAH CHEN** 
+ Community Health Director
+
+**Q: Can you walk me through how your clinic identifies and treats patients with Cancer?**
+
+A: We currently treat people that come in complaining of symptoms - you know, the classic fatigue, joint pain, brain fog. But we are catching people pretty late in the disease course.
+
+About two years ago, we implemented the risk survey. This allowed us to identify high-risk patients - anyone over 45 with a family history or other risk factors. We flag them in our EMR system.That's been working pretty well. However, there is no confirmatory test so there are patients that are getting the costly surgery treatment that may not need it. Unfortunately, if a patient is over 50 years old, the treatment surgery is too dangerous to perform in a community health center. This makes catching cases early really important. 
+
+**Q: What happens with patients that are not treated before 50?**
+
+A: We can provide those patients palliative care with things like pain and nausea medication. A small subset of those patients may still get the surgery at a larger health facility. The patients that cannot get treatment will eventual progress to a more severe stage of Cancer where they will have more hospital visits and often get blood transfusions to help with the anemia. Patients with a more severe stage of cancer they will also have a risk of death from the Cancer. 
+
+**Q: What about the costs involved?**
+
+A: Treatment costs between $800 - $1,200. Insurance usually covers everything. Patients that are caught later tend to have more expensive treatment because it takes the clinicians longer to remove all the growth. I’ve heard the government is looking into covering a new screening test that is only $45 per test.
+
+### Source 5
+
+**Cancer Surveillance System Annual Report**
+
+Key Statistics (2024):
+
+- Adult population (age 18+): 250 million
+- Estimated prevalence of Cancer: 8% (20 million people)
+
+Disease Progression:
+
+Without treatment, approximately 30% of all people with Cancer will eventually develop symptoms. Symptom onset typically occurs 1-5 years after disease onset. Once symptomatic, patients experience reduced quality of life and increased healthcare utilization. 
+
+Costs from the formulary: 
+
+- Annual healthcare costs for untreated symptomatic disease: $8,500 per patient
+- Annual healthcare costs for treated disease: $2,800 per patient
+
+ADD COSTS
+
+### Source 6
+
+**Excerpt from: *“Real-world implementation of universal screening for Cancer”* **
+
+Our community clinic implemented universal screening at routine preventive care visits. All adults aged 45 presenting for annual wellness visits were offered screening.
+
+Implementation details:
+
+- Screening incorporated into standard bloodwork panels
+- Medical assistants flagged eligible patients during check-in
+- Results typically available within 2 hours
+- Positive results triggered automatic referral to treatment protocol
+- Average time from positive test to treatment initiation: 8 days
+
+**Small Graph??**
+
+Uptake: 78% of eligible patients accepted screening when offered. Primary reasons for decline were "feeling healthy" and time constraints during visit.
+
+In the first year, we screened 45,000 patients and identified 3,600 with disease X (8% positivity rate). Of these, 85% were asymptomatic at time of diagnosis.
+:::
+
+
+::: {.callout .fill-box .task-box}
+## Group Task
+We will lead a large group discussion to identify the key differences between each strategy that need to be captured in the model.
+:::
+
+::: {.callout .fill-box .why-box}
+## Why are we doing this?
+Mapping out the differences between the strategies will help provide some intuition into how the model should function. Not only will it help you understand which variables should differ between the strategies but it should build some baseline intuition on the expected outcomes. This will help us do quality assurance on the model later.
+:::
+
+
+
+
+
