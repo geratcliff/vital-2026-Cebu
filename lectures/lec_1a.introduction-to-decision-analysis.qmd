@@ -3,7 +3,12 @@ title: "Introduction to Decision Analysis"
 format:
   revealjs:
     theme: [default, _extensions/branding/custom-brand.scss]
-    incremental: true
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.1     # Minimal margins for max space
+    minScale: 0.2    # Allow more scaling down
+    maxScale: 2.0    # Allow more scaling up
+    center: true     # Vertically center content
     slide-number: true
     logo: images/logos.png 
     html-math-method: katex
@@ -19,34 +24,89 @@ markdown:
   wrap: 72
 ---
 
-## Outline {{< fa regular clipboard >}}
+##  {.numbered-list-slide}
 
-::: incremental
-1.  Introductions
-2.  Motivation
-3.  Examples of Decision Analysis
-4.  Workshop objectives
+<h2>Outline</h2>
+
+::::::::::::::: number-list
+::::: list-item
+::: number
+01
 :::
+
+::: text
+Introductions
+:::
+:::::
+
+::::: list-item
+::: number
+02
+:::
+
+::: text
+Motivation
+:::
+:::::
+
+::::: list-item
+::: number
+03
+:::
+
+::: text
+Examples of Decision Analysis
+:::
+:::::
+
+::::: list-item
+::: number
+04
+:::
+
+::: text
+Workshop objectives
+:::
+:::::
+:::::::::::::::
 
 ## Course Website
 
-::: {style="font-size: 2.0em"}
-<https://graveja0.github.io/vital-istanbul-2024/>
-:::
+::::: split-content
+::: content-text
+**What is it?**
 
-::: incremental
 -   All course materials (slides, case studies) are posted here.
+
 -   Our (likely evolving) schedule will also be posted here, and updated regularly.
+
+-   Additional Resources (Quick Start Guide, Data Collection Tool, Etc.)
 :::
 
-## Introductions
+::: content-visual
+![](images/lec1/Cebu_Website_Image.png)
+:::
+:::::
 
--   Please introduce yourself!
+::: {style="font-size: 1.0em"}
+<https://geratcliff.github.io/vital-2026-Cebu/>
+:::
 
-# Motivation {background="#43464B"}
+## Introductions {.section-slide}
+
+::: section-number
+01
+:::
+
+## Motivation {.section-slide}
+
+::: section-number
+02
+:::
 
 ## The Past Two Decades ...
 
+:::: icon-bullets
 ::: incremental
 -   Cured Hepatitis C
 -   Significantly reduced incidence of HIV
@@ -54,49 +114,89 @@ markdown:
 -   Perfected vaccines (e.g. HPV vaccine) to prevent diseases such as cervical & other cancers
 -   Strides in preventing cardiovascular disease
 :::
+::::
 
 ## Despite these advances ...
 
--   Burden of non-communicable diseases (NCDs) like cancer, cardiovascular disease, and diabetes is growing.
--   NCDs are the cause of 74 percent of deaths globally, with most (86%) of those deaths in low- and middle-income countries (LMICs)
-    -   Source: [WHO](https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases)
--   Rates also remain high in many parts of the world for malnutrition, unmet need for sexual and reproductive health services, and maternal mortality.
+##  {.big-number-slide}
 
-## Despite these advances ...
-
-::: {.callout-note appearance="minimal"}
-Governments cannot afford all the healthcare from which people could possibly benefit
+::: big-number
+74%
 :::
 
+::: big-number-label
+of deaths globally are from non-communicable diseases.
+:::
+
+::: big-number-context
+86% of those deaths are in low- and middle-income countries (LMICs) Burden of NCDs like cancer, cardiovascular disease, and diabetes is growing.
+:::
+
+Source: [WHO](https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases)
+
+## 
+
+::: arrow-bullets
+-   Governments cannot afford all the healthcare from which people could possibly benefit
+
 -   Either implicitly or explicitly, we make choices about which programs to fund, which populations to screen, and which expensive new drugs to provide to which patients
+:::
 
--   **Decision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point**
+:::: highlight-box
+::: box-title
+**Decision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point**
+:::
+::::
 
-## Decision Analysis
+## 
 
-<br>
+:::::::: definition-box
+::: term
+Decision Analysis
+:::
 
-> Decision analysis is a methodology that is uniquely beneficial when there are meaningful tradeoffs between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.
+::: definition
+a methodology that is uniquely beneficial when there are ***meaningful tradeoffs*** between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.
+:::
 
-##  {background-image="images/new_decision-analysis-overview.png" data-background-size="contain"}
+::::: example
+::: example-label
+Example:
+:::
 
-##  {background-image="images/new_decision-analysis-overview_blank.png" data-background-size="contain"}
+::: example-text
+The introduction of a new drug provides hope at more survival and better quality of life. However, based on the high cost it is unknown if the new drug is worth implementing over the current drug.
+:::
+:::::
+::::::::
 
-<br><br>
+## 
+
+![](images/lec1/new_decision-analysis-overview.png)
+
+## 
+
+![](images/lec1/new_decision-analysis-overview_blank.png)
 
 ## Value
 
-<br>
+::: highlight-box
+Economists have long defined value as "outcomes relative to costs
+:::
 
-> Economists have long defined value as "outcomes relative to costs"
+If we only consider benefits when we define value, it's no different than efficacy or effectiveness research.
 
-<br> \> If we only consider benefits when we define value, it's no different than efficacy or effectiveness research. And we obviously don't want to just consider costs without benefits!
+### [But, we do NOT want to just consider costs without benefits!]{style="text-align: center; display: block;"}
 
-# Examples of Decision Analyses {background="#43464B"}
+## Examples of Decision Analysis {.section-slide}
+
+::: section-number
+03
+:::
 
 ## Ex 1. HIV
 
-::: {.callout-important appearance="minimal" icon="false"}
+::: {.highlight-box .primary}
 You have been appointed as Director of a funding allocation committee responsible for prevention & treatment initiatives for HIV.
 :::
 
@@ -110,77 +210,124 @@ You have been appointed as Director of a funding allocation committee responsibl
 
 ## Ex 2. Birth Defects {auto-animate="true"}
 
-::: incremental
--   A hypothetical birth defect is present in every 1 in 1,000 children born
+A hypothetical birth defect...
 
--   Unless treated, this condition has a 50% fatality rate
+::::::::::: stats-grid
+:::::: stat-box
+::: stat-value
+1 in 1,000
 :::
+
+::: stat-label
+children
+:::
+
+::: stat-description
+are born with it
+:::
+::::::
+
+:::::: stat-box
+::: stat-value
+50%
+:::
+
+::: stat-label
+fatality rate
+:::
+
+::: stat-description
+unless treated
+:::
+::::::
+:::::::::::
 
 ## Ex 2. Birth Defects {auto-animate="true"}
 
-::: {.callout-important appearance="minimal" icon="false"}
-### [**Should we test for this hypothetical birth defect?**]{style="color: forestgreen;"}
+::: {.highlight-box .thin}
+***Should we test for this hypothetical birth defect?***
 :::
 
--   A hypothetical birth defect is present in every 1 in 1,000 children born.
+:::::: concept-grid
+::: {.concept-box .fragment data-fragment-index="1"}
+Diagnostic test: Perfectly accurate
+:::
 
--   Unless treated, this condition has a 50% fatality rate.
+::: {.concept-box .fragment data-fragment-index="2"}
+All newborns in whom the defect is identified can be successfully cured
+:::
+
+::: {.concept-box .accent .fragment data-fragment-index="3"}
+The test itself can be lethal **4 in every 10,000** infants tested will die as a direct and observable result of the testing procedure
+:::
+::::::
 
 ## Ex 2. Birth Defects {auto-animate="true"}
 
-::: {.callout-important appearance="minimal" icon="false"}
-### [**Should we test for this hypothetical birth defect?**]{style="color: forestgreen;"}
-:::
-
-::: incremental
--   Diagnostic test: Perfectly accurate
-
--   All newborns in whom the defect is identified can be successfully cured
-
--   BUT the test itself can be lethal:
-
-    -   **4 in every 10,000** infants tested will die as a direct and observable result of the testing procedure
-:::
-
-## Ex 2. Birth Defects {auto-animate="true"}
-
-::: {.callout-note appearance="minimal"}
+::: {.highlight-box .secondary .thin}
 **Objective**: Minimize total expected deaths
 :::
 
-## Ex 2. Birth Defects {auto-animate="true"}
+Consider a population of **100,000 newborns**
 
-::: {.callout-note appearance="minimal"}
-**Objective**: Minimize total expected deaths
+::::::::: comparison-table
+::::: comparison-column
+::: column-header
+Testing
 :::
 
-::: incremental
--   Consider a population of **100,000 newborns**
+::: column-content
+Produces: (0.0004 x 100,000) = **40** expected deaths
 
--   **Testing** produces: (0.0004 x 100,000) = **40** expected deaths
-
--   **No testing** produces: (0.001 x 0.5 x 100,000) = **50** expected deaths
-
--   [**Looks like TESTING WINS!**]{style="color: green;"}
-
--   [**Anyone got a problem with this??**]{style="color: darkred;"}
+[✓ **Fewer deaths**]{.fragment style="color: green;"}
 :::
+:::::
+
+::::: comparison-column
+::: column-header
+No testing
+:::
+
+::: column-content
+Produces: (0.001 x 0.5 x 100,000) = **50** expected deaths
+:::
+:::::
+
+-   [**Anyone got a problem with this??**]{.fragment style="color: darkred;"}
+:::::::::
 
 ## **Different lives are lost**
 
-::: incremental
--   With **testing**, virtually all 40 deaths occur in infants born without the fatal condition.
-
--   With **no testing**, all 50 expected deaths occur from "natural causes" (i.e. unpreventable birth defect)
+::::::::: comparison-table
+::::: {.comparison-column .fragment data-fragment-index="1"}
+::: column-header
+Testing
 :::
+
+::: column-content
+Virtually all 40 deaths occur in infants born **without** the fatal condition
+:::
+:::::
+
+::::: {.comparison-column .fragment data-fragment-index="2"}
+::: column-header
+No testing
+:::
+
+::: column-content
+All 50 expected deaths occur from "natural causes" (i.e. unpreventable birth defect)
+:::
+:::::
+:::::::::
 
 ## **Different lives are lost**
 
-::: incremental
+:::: incremental
+::: arrow-bullets
 -   "Innocent deaths" inflicted on children who had **"nothing to gain"** from testing program
-
 -   We may treat one child's death as more tolerable than some other's -- even when we have no way, before the fact, of distinguishing one infant from the other.
 :::
+::::
 
 ## Ex 3. Substance use treatment in pregnancy
 
@@ -192,7 +339,7 @@ You have been appointed as Director of a funding allocation committee responsibl
 \[Leech AA, 2024\]
 :::
 
-![](images/ex4-oud-tradeoffs.png){width="395"}
+![](images/lec1ex4-oud-tradeoffs.png){width="395"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
@@ -200,7 +347,7 @@ You have been appointed as Director of a funding allocation committee responsibl
 \[Leech AA, 2024\]
 :::
 
-![](images/oud-schematic-2.png){width="420"}
+![](images/lec1oud-schematic-2.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
@@ -208,7 +355,7 @@ You have been appointed as Director of a funding allocation committee responsibl
 \[Leech AA, 2024\]
 :::
 
-![](images/oud-methods.png){width="420"}
+![](images/lec1oud-methods.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
@@ -216,40 +363,65 @@ You have been appointed as Director of a funding allocation committee responsibl
 \[Leech AA, 2024\]
 :::
 
-![](images/ceac.png){width="420"}
+![](images/lec1ceac.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
--   The clear winner is buprenorphine!!
--   Yes, BUT... <br>
+::: {.highlight-box .thin}
+The clear winner is buprenorphine!!
+:::
+
+Yes, BUT...
+
+:::: arrow-bullets
+::: incremental
 -   We know that clinically, patient choice is really important for retention outcomes
 -   We can also see that our final conclusions are driven by the infant outcomes (methadone actually has better retention outcomes)
 -   We did not simulate the birthing parent over their lifetime
+:::
+::::
+
+##  {.quote-slide}
+
+::: quote-text
+The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling.
+:::
 
 ## Ex 3. Opioid/substance use in pregnancy
 
-<br>
+Even if buprenorphine is "dominating" in the parlance of decision science and health economics. Requiring this treatment creates poor policy with...
 
-> The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling.
+:::::: concept-grid
+::: concept-box
+Reduced Retention
+:::
 
-## Ex 3. Opioid/substance use in pregnancy
+::: concept-box
+Worse Outcomes
+:::
 
-<br>
+::: concept-box
+Higher Cost
+:::
+::::::
 
-> Even if buprenorphine is "dominating" in the parlance of decision science and health economics--if requiring this treatment leads to reduced retention--it becomes a poor policy, leading to worse outcomes & higher costs than allowing individuals to CHOOSE their preferred option.
+...than allowing individuals to [**CHOOSE**]{.accent-text} their preferred option.
 
 ## Estimating probabilities is fundamental to decision making {background="#43464B"}
 
+:::: icon-bullets-triangle
 ::: incremental
 -   Cannot readily obtain needed probabilities
 -   Varying time periods / lengths
 -   Methods to estimate probabilities
 :::
+::::
 
 <!-- TK This needs to be a full page  -->
 
-## Commonality of cases {background="#43464B"}
+## Commonality of cases
 
+:::: icon-bullets-triangle
 ::: incremental
 -   Unavoidable tradeoffs
 -   Different perspectives may lead to different conclusions
@@ -257,45 +429,106 @@ You have been appointed as Director of a funding allocation committee responsibl
 -   Complexity
 -   Uncertainty
 :::
+::::
 
-## Decision Analysis {background="#43464B"}
+##  {.summary-end-slide}
 
-<br>
+::::::: summary-circle
+::: end-title
+Key Takeaways
+:::
 
+::: end-subtitle
+Decision Analysis
+:::
+
+:::: key-points
 ::: incremental
 -   Aims to inform choice under uncertainty using an explicit, quantitative approach
+-   Aims to [identify, measure, & value the **consequences of decisions** under uncertainty]{.accent-text} when a decision needs to be made, most appropriately over time.
+:::
+::::
+:::::::
 
--   Aims to [identify, measure, & value the **consequences of decisions** under uncertainty]{style="color: #169873;"} when a decision needs to be made, most appropriately over time.
+## Workshop objectives {.section-slide}
+
+::: section-number
+04
 :::
 
 ## Workshop Design
 
-1.  We're *flexible* -- if there is a topic that is unclear to you, or that you would like expanded upon, please let us know!
-2.  Mixed content
+1.  We're *flexible* -- if there is a topic that is unclear to you, or that you would like expanded upon, **please let us know**!
 
+</br> 2. Mixed content
+
+::: arrow-bullets
 -   Lectures
+
 -   Small group case studies
--   Large group case studies and "hands-on" Excel exercises
+
+-   Large group case studies and "hands-on" Amua exercises
+
+-   Time for Capstone work and guidance
+:::
 
 ## Workshop Content
 
-1.  Basics of decision analysis (Day 1)
+::::::::::::::: comparison-table
+::::: comparison-column
+::: column-header
+Day 1
+:::
+
+::: column-content
+Basics of decision analysis
 
 -   Decision trees
 
-## Workshop Content
+-   Introduction to Amua
 
-2.  Basics of Cost-Effectiveness Analysis (Days 2-3)
+-   Introduction to Capstone
+:::
+:::::
+
+::::: comparison-column
+::: column-header
+Days 2-3
+:::
+
+::: column-content
+Basics of Cost-Effectiveness Analysis
 
 -   Valuing cost and health outcomes
+
 -   Incremental cost-effectiveness analysis
+
 -   Introduction to Markov Modeling
+:::
+:::::
 
-## Workshop Content
+::::: comparison-column
+::: column-header
+Day 4-5
+:::
 
-3.  Advanced Topic Preview (4)
+::: column-content
+Advanced Topic Preview
+
+-   Risk Matrix
+
+-   Progressive Disease
 
 -   Sensitivity Analysis
--   Advanced CEA modeling frameworks.
 
-# Questions? {background="#43464B"}
+-   Common CEA Errors
+
+-   DALYs in Amua
+:::
+:::::
+:::::::::::::::
+
+## Questions? {.questions-slide}
+:::{.next-info}
+Next: Decision Trees
+:::

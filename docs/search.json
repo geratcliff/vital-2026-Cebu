@@ -4700,116 +4700,123 @@
     "text": "Example\n\n\nAssume in year 5, a patient develops disease, and there is a treatment cost of $500\n\nThis is the future value (FV) of the cost!\n\nPresent value PV = FV/(1+r)^t = 500/(1+0.03)^5 = \\$ 431.3"
   },
   {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#outline",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#outline",
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#section",
     "title": "Introduction to Decision Analysis",
-    "section": "Outline ",
-    "text": "Outline \n\nIntroductions\nMotivation\nExamples of Decision Analysis\nWorkshop objectives"
+    "section": "",
+    "text": "Outline\n\n\n\n\n01\n\n\nIntroductions\n\n\n\n\n02\n\n\nMotivation\n\n\n\n\n03\n\n\nExamples of Decision Analysis\n\n\n\n\n04\n\n\nWorkshop objectives"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#course-website",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#course-website",
     "title": "Introduction to Decision Analysis",
     "section": "Course Website",
-    "text": "Course Website\n\nhttps://graveja0.github.io/vital-istanbul-2024/\n\n\nAll course materials (slides, case studies) are posted here.\nOur (likely evolving) schedule will also be posted here, and updated regularly."
+    "text": "Course Website\n\n\nWhat is it?\n\nAll course materials (slides, case studies) are posted here.\nOur (likely evolving) schedule will also be posted here, and updated regularly.\nAdditional Resources (Quick Start Guide, Data Collection Tool, Etc.)\n\n\n\n\n\n\n\nhttps://geratcliff.github.io/vital-2026-Cebu/"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#introductions",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#introductions",
     "title": "Introduction to Decision Analysis",
     "section": "Introductions",
-    "text": "Introductions\n\nPlease introduce yourself!"
+    "text": "Introductions\n\n01"
+  },
+  {
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#motivation",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#motivation",
+    "title": "Introduction to Decision Analysis",
+    "section": "Motivation",
+    "text": "Motivation\n\n02"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#the-past-two-decades",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#the-past-two-decades",
     "title": "Introduction to Decision Analysis",
     "section": "The Past Two Decades …",
-    "text": "The Past Two Decades …\n\nCured Hepatitis C\nSignificantly reduced incidence of HIV\nPotential cure for relapsed/refractory leukemia & lymphoma\nPerfected vaccines (e.g. HPV vaccine) to prevent diseases such as cervical & other cancers\nStrides in preventing cardiovascular disease"
+    "text": "The Past Two Decades …\n\n\nCured Hepatitis C\nSignificantly reduced incidence of HIV\nPotential cure for relapsed/refractory leukemia & lymphoma\nPerfected vaccines (e.g. HPV vaccine) to prevent diseases such as cervical & other cancers\nStrides in preventing cardiovascular disease"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#despite-these-advances",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#despite-these-advances",
     "title": "Introduction to Decision Analysis",
     "section": "Despite these advances …",
-    "text": "Despite these advances …\n\nBurden of non-communicable diseases (NCDs) like cancer, cardiovascular disease, and diabetes is growing.\nNCDs are the cause of 74 percent of deaths globally, with most (86%) of those deaths in low- and middle-income countries (LMICs)\n\nSource: WHO\n\nRates also remain high in many parts of the world for malnutrition, unmet need for sexual and reproductive health services, and maternal mortality."
+    "text": "Despite these advances …"
   },
   {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#despite-these-advances-1",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#despite-these-advances-1",
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section-1",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#section-1",
     "title": "Introduction to Decision Analysis",
-    "section": "Despite these advances …",
-    "text": "Despite these advances …\n\n\n\nGovernments cannot afford all the healthcare from which people could possibly benefit\n\n\n\n\nEither implicitly or explicitly, we make choices about which programs to fund, which populations to screen, and which expensive new drugs to provide to which patients\nDecision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point"
+    "section": "",
+    "text": "74%\n\n\nof deaths globally are from non-communicable diseases.\n\n\n86% of those deaths are in low- and middle-income countries (LMICs) Burden of NCDs like cancer, cardiovascular disease, and diabetes is growing.\n\nSource: WHO"
   },
   {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#decision-analysis",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#decision-analysis",
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section-2",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#section-2",
     "title": "Introduction to Decision Analysis",
-    "section": "Decision Analysis",
-    "text": "Decision Analysis\n\n\nDecision analysis is a methodology that is uniquely beneficial when there are meaningful tradeoffs between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain."
+    "section": "",
+    "text": "Governments cannot afford all the healthcare from which people could possibly benefit\nEither implicitly or explicitly, we make choices about which programs to fund, which populations to screen, and which expensive new drugs to provide to which patients\n\n\n\n\nDecision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point"
+  },
+  {
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section-3",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#section-3",
+    "title": "Introduction to Decision Analysis",
+    "section": "",
+    "text": "Decision Analysis\n\n\na methodology that is uniquely beneficial when there are meaningful tradeoffs between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.\n\n\n\nExample:\n\n\nThe introduction of a new drug provides hope at more survival and better quality of life. However, based on the high cost it is unknown if the new drug is worth implementing over the current drug."
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#value",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#value",
     "title": "Introduction to Decision Analysis",
     "section": "Value",
-    "text": "Value\n\n\nEconomists have long defined value as “outcomes relative to costs”\n\n &gt; If we only consider benefits when we define value, it’s no different than efficacy or effectiveness research. And we obviously don’t want to just consider costs without benefits!"
+    "text": "Value\n\nEconomists have long defined value as “outcomes relative to costs\n\nIf we only consider benefits when we define value, it’s no different than efficacy or effectiveness research.\nBut, we do NOT want to just consider costs without benefits!"
+  },
+  {
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#examples-of-decision-analysis",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#examples-of-decision-analysis",
+    "title": "Introduction to Decision Analysis",
+    "section": "Examples of Decision Analysis",
+    "text": "Examples of Decision Analysis\n\n03"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-1.-hiv",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-1.-hiv",
     "title": "Introduction to Decision Analysis",
     "section": "Ex 1. HIV",
-    "text": "Ex 1. HIV\n\n\n\nYou have been appointed as Director of a funding allocation committee responsible for prevention & treatment initiatives for HIV.\n\n\n\n\nHow will the committee decide on the proportion of funds for prevention efforts versus treatment?\nShould any of the funds be used for research?\nHow do you respond to a member who argues that the funds are better spent on childhood vaccinations?"
+    "text": "Ex 1. HIV\n\nYou have been appointed as Director of a funding allocation committee responsible for prevention & treatment initiatives for HIV.\n\n\nHow will the committee decide on the proportion of funds for prevention efforts versus treatment?\nShould any of the funds be used for research?\nHow do you respond to a member who argues that the funds are better spent on childhood vaccinations?"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects",
     "title": "Introduction to Decision Analysis",
     "section": "Ex 2. Birth Defects",
-    "text": "Ex 2. Birth Defects\n\nA hypothetical birth defect is present in every 1 in 1,000 children born\nUnless treated, this condition has a 50% fatality rate"
+    "text": "Ex 2. Birth Defects\nA hypothetical birth defect…\n\n\n\n1 in 1,000\n\n\nchildren\n\n\nare born with it\n\n\n\n\n50%\n\n\nfatality rate\n\n\nunless treated"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-1",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-1",
     "title": "Introduction to Decision Analysis",
     "section": "Ex 2. Birth Defects",
-    "text": "Ex 2. Birth Defects\n\n\n\nShould we test for this hypothetical birth defect?\n\n\n\n\n\n\n\nA hypothetical birth defect is present in every 1 in 1,000 children born.\nUnless treated, this condition has a 50% fatality rate."
+    "text": "Ex 2. Birth Defects\n\nShould we test for this hypothetical birth defect?\n\n\n\nDiagnostic test: Perfectly accurate\n\n\nAll newborns in whom the defect is identified can be successfully cured\n\n\nThe test itself can be lethal 4 in every 10,000 infants tested will die as a direct and observable result of the testing procedure"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-2",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-2",
     "title": "Introduction to Decision Analysis",
     "section": "Ex 2. Birth Defects",
-    "text": "Ex 2. Birth Defects\n\n\n\nShould we test for this hypothetical birth defect?\n\n\n\n\n\n\n\nDiagnostic test: Perfectly accurate\nAll newborns in whom the defect is identified can be successfully cured\nBUT the test itself can be lethal:\n\n4 in every 10,000 infants tested will die as a direct and observable result of the testing procedure"
-  },
-  {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-3",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-3",
-    "title": "Introduction to Decision Analysis",
-    "section": "Ex 2. Birth Defects",
-    "text": "Ex 2. Birth Defects\n\n\n\nObjective: Minimize total expected deaths"
-  },
-  {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-4",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-2.-birth-defects-4",
-    "title": "Introduction to Decision Analysis",
-    "section": "Ex 2. Birth Defects",
-    "text": "Ex 2. Birth Defects\n\n\n\nObjective: Minimize total expected deaths\n\n\n\n\nConsider a population of 100,000 newborns\nTesting produces: (0.0004 x 100,000) = 40 expected deaths\nNo testing produces: (0.001 x 0.5 x 100,000) = 50 expected deaths\nLooks like TESTING WINS!\nAnyone got a problem with this??"
+    "text": "Ex 2. Birth Defects\n\nObjective: Minimize total expected deaths\n\nConsider a population of 100,000 newborns\n\n\n\nTesting\n\n\nProduces: (0.0004 x 100,000) = 40 expected deaths\n✓ Fewer deaths\n\n\n\n\nNo testing\n\n\nProduces: (0.001 x 0.5 x 100,000) = 50 expected deaths\n\n\n\nAnyone got a problem with this??"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#different-lives-are-lost",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#different-lives-are-lost",
     "title": "Introduction to Decision Analysis",
     "section": "Different lives are lost",
-    "text": "Different lives are lost\n\nWith testing, virtually all 40 deaths occur in infants born without the fatal condition.\nWith no testing, all 50 expected deaths occur from “natural causes” (i.e. unpreventable birth defect)"
+    "text": "Different lives are lost\n\n\n\nTesting\n\n\nVirtually all 40 deaths occur in infants born without the fatal condition\n\n\n\n\nNo testing\n\n\nAll 50 expected deaths occur from “natural causes” (i.e. unpreventable birth defect)"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#different-lives-are-lost-1",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#different-lives-are-lost-1",
     "title": "Introduction to Decision Analysis",
     "section": "Different lives are lost",
-    "text": "Different lives are lost\n\n“Innocent deaths” inflicted on children who had “nothing to gain” from testing program\nWe may treat one child’s death as more tolerable than some other’s – even when we have no way, before the fact, of distinguishing one infant from the other."
+    "text": "Different lives are lost\n\n\n“Innocent deaths” inflicted on children who had “nothing to gain” from testing program\nWe may treat one child’s death as more tolerable than some other’s – even when we have no way, before the fact, of distinguishing one infant from the other."
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-3.-substance-use-treatment-in-pregnancy",
@@ -4844,70 +4851,70 @@
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-3.-opioidsubstance-use-in-pregnancy-3",
     "title": "Introduction to Decision Analysis",
     "section": "Ex 3. Opioid/substance use in pregnancy",
-    "text": "Ex 3. Opioid/substance use in pregnancy\n\nThe clear winner is buprenorphine!!\nYes, BUT… \nWe know that clinically, patient choice is really important for retention outcomes\nWe can also see that our final conclusions are driven by the infant outcomes (methadone actually has better retention outcomes)\nWe did not simulate the birthing parent over their lifetime"
+    "text": "Ex 3. Opioid/substance use in pregnancy\n\nThe clear winner is buprenorphine!!\n\nYes, BUT…\n\n\nWe know that clinically, patient choice is really important for retention outcomes\nWe can also see that our final conclusions are driven by the infant outcomes (methadone actually has better retention outcomes)\nWe did not simulate the birthing parent over their lifetime"
+  },
+  {
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section-6",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#section-6",
+    "title": "Introduction to Decision Analysis",
+    "section": "",
+    "text": "The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling."
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-3.-opioidsubstance-use-in-pregnancy-4",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-3.-opioidsubstance-use-in-pregnancy-4",
     "title": "Introduction to Decision Analysis",
     "section": "Ex 3. Opioid/substance use in pregnancy",
-    "text": "Ex 3. Opioid/substance use in pregnancy\n\n\nThe appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling."
-  },
-  {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-3.-opioidsubstance-use-in-pregnancy-5",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#ex-3.-opioidsubstance-use-in-pregnancy-5",
-    "title": "Introduction to Decision Analysis",
-    "section": "Ex 3. Opioid/substance use in pregnancy",
-    "text": "Ex 3. Opioid/substance use in pregnancy\n\n\nEven if buprenorphine is “dominating” in the parlance of decision science and health economics–if requiring this treatment leads to reduced retention–it becomes a poor policy, leading to worse outcomes & higher costs than allowing individuals to CHOOSE their preferred option."
+    "text": "Ex 3. Opioid/substance use in pregnancy\nEven if buprenorphine is “dominating” in the parlance of decision science and health economics. Requiring this treatment creates poor policy with…\n\n\nReduced Retention\n\n\nWorse Outcomes\n\n\nHigher Cost\n\n\n…than allowing individuals to CHOOSE their preferred option."
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#estimating-probabilities-is-fundamental-to-decision-making",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#estimating-probabilities-is-fundamental-to-decision-making",
     "title": "Introduction to Decision Analysis",
     "section": "Estimating probabilities is fundamental to decision making",
-    "text": "Estimating probabilities is fundamental to decision making\n\nCannot readily obtain needed probabilities\nVarying time periods / lengths\nMethods to estimate probabilities"
+    "text": "Estimating probabilities is fundamental to decision making\n\n\nCannot readily obtain needed probabilities\nVarying time periods / lengths\nMethods to estimate probabilities"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#commonality-of-cases",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#commonality-of-cases",
     "title": "Introduction to Decision Analysis",
     "section": "Commonality of cases",
-    "text": "Commonality of cases\n\nUnavoidable tradeoffs\nDifferent perspectives may lead to different conclusions\nMultiple competing objectives\nComplexity\nUncertainty"
+    "text": "Commonality of cases\n\n\nUnavoidable tradeoffs\nDifferent perspectives may lead to different conclusions\nMultiple competing objectives\nComplexity\nUncertainty"
   },
   {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#decision-analysis-1",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#decision-analysis-1",
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section-7",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#section-7",
     "title": "Introduction to Decision Analysis",
-    "section": "Decision Analysis",
-    "text": "Decision Analysis\n\n\nAims to inform choice under uncertainty using an explicit, quantitative approach\nAims to identify, measure, & value the consequences of decisions under uncertainty when a decision needs to be made, most appropriately over time."
+    "section": "",
+    "text": "Key Takeaways\n\n\nDecision Analysis\n\n\n\nAims to inform choice under uncertainty using an explicit, quantitative approach\nAims to identify, measure, & value the consequences of decisions under uncertainty when a decision needs to be made, most appropriately over time."
+  },
+  {
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-objectives",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-objectives",
+    "title": "Introduction to Decision Analysis",
+    "section": "Workshop objectives",
+    "text": "Workshop objectives\n\n04"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-design",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-design",
     "title": "Introduction to Decision Analysis",
     "section": "Workshop Design",
-    "text": "Workshop Design\n\nWe’re flexible – if there is a topic that is unclear to you, or that you would like expanded upon, please let us know!\nMixed content\n\n\nLectures\nSmall group case studies\nLarge group case studies and “hands-on” Excel exercises"
+    "text": "Workshop Design\n\nWe’re flexible – if there is a topic that is unclear to you, or that you would like expanded upon, please let us know!\n\n 2. Mixed content\n\n\nLectures\nSmall group case studies\nLarge group case studies and “hands-on” Amua exercises\nTime for Capstone work and guidance"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-content",
     "href": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-content",
     "title": "Introduction to Decision Analysis",
     "section": "Workshop Content",
-    "text": "Workshop Content\n\nBasics of decision analysis (Day 1)\n\n\nDecision trees"
+    "text": "Workshop Content\n\n\n\nDay 1\n\n\nBasics of decision analysis\n\nDecision trees\nIntroduction to Amua\nIntroduction to Capstone\n\n\n\n\n\nDays 2-3\n\n\nBasics of Cost-Effectiveness Analysis\n\nValuing cost and health outcomes\nIncremental cost-effectiveness analysis\nIntroduction to Markov Modeling\n\n\n\n\n\nDay 4-5\n\n\nAdvanced Topic Preview\n\nRisk Matrix\nProgressive Disease\nSensitivity Analysis\nCommon CEA Errors\nDALYs in Amua"
   },
   {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-content-1",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-content-1",
+    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#questions",
+    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#questions",
     "title": "Introduction to Decision Analysis",
-    "section": "Workshop Content",
-    "text": "Workshop Content\n\nBasics of Cost-Effectiveness Analysis (Days 2-3)\n\n\nValuing cost and health outcomes\nIncremental cost-effectiveness analysis\nIntroduction to Markov Modeling"
-  },
-  {
-    "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-content-2",
-    "href": "lectures/lec_1a.introduction-to-decision-analysis.html#workshop-content-2",
-    "title": "Introduction to Decision Analysis",
-    "section": "Workshop Content",
-    "text": "Workshop Content\n\nAdvanced Topic Preview (4)\n\n\nSensitivity Analysis\nAdvanced CEA modeling frameworks."
+    "section": "Questions?",
+    "text": "Questions?\n\nNext: Decision Trees"
   },
   {
     "objectID": "lectures/lec_day1-review.html#strengths",

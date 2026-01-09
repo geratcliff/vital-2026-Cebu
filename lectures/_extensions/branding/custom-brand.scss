@@ -12,7 +12,7 @@ $text-light: #58595b;
 // Typography
 $font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 $presentation-heading-font: 'Poppins', $font-family-sans-serif;
-$presentation-font-size-root: 2.5vmin;
+$presentation-font-size-root: 3.5vmin;
 
 // Breakpoints
 $breakpoint-mobile: 480px;
@@ -42,6 +42,32 @@ $breakpoint-large: 1440px;
 .reveal h2 {
   font-size: clamp(1.5em, 4vw, 2em);
   margin-bottom: 1em;
+}
+
+//paragraphs
+.reveal p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+// ============================================================================
+// Font styles
+// ============================================================================
+
+.reveal .primary-text {
+  color: $primary-color;
+}
+
+.reveal .secondary-text {
+  color: $secondary-color;
+}
+
+.reveal .accent-text {
+  color: $accent-color;
+}
+
+.reveal .center-text {
+  text-align: center !important;
 }
 
 // ============================================================================
@@ -156,6 +182,37 @@ $breakpoint-large: 1440px;
   z-index: 1;
 }
 
+// ============================================================================
+// Arrow-bullets
+// ============================================================================
+
+  .arrow-bullets {
+    h3 {
+      color: $primary-color !important;
+      margin-bottom: 1em;
+      font-size: clamp(1.1em, 2.5vw, 1.3em);
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        padding: 0.5em 0 0.5em 2em;
+        position: relative;
+        font-size: clamp(0.9em, 1.8vw, 1em);
+        
+        &::before {
+          content: "→";
+          color: $secondary-color;
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
 
 // ============================================================================
 // TITLE SLIDE
@@ -269,21 +326,22 @@ $breakpoint-large: 1440px;
 
 .numbered-list-slide {
   h2 {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.3em;  // Tighter
+    font-size: clamp(1.4em, 3.5vw, 1.8em);  // Slightly smaller heading
   }
   
   .number-list {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.5em, 1vw, 0.75em);
-    margin-top: 2em;
+    gap: clamp(0.3em, 0.6vw, 0.5em);  // Much tighter gaps
+    margin-top: 0.8em;  // Less space after heading
     max-width: 1200px;
     margin-left: 0;
     margin-right: auto;
     
     .list-item {
       background: $white;
-      padding: clamp(0.6em, 1.2vw, 0.8em) clamp(1em, 2vw, 1.5em);
+      padding: clamp(0.1em, 0.2vw, 0.4em) clamp(0.8em, 1.5vw, 1.2em);  // Tighter padding
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       display: flex;
@@ -296,7 +354,7 @@ $breakpoint-large: 1440px;
       }
       
       .number {
-        font-size: clamp(1.6em, 1.2vw, 0.8em);
+        font-size: clamp(1.1em, 2vw, 1.4em);  // Smaller numbers
         font-weight: 700;
         color: $secondary-color;
         margin-right: 0.5em;
@@ -304,8 +362,9 @@ $breakpoint-large: 1440px;
       }
       
       .text {
-        font-size: clamp(0.9em, 2vw, 1.1em);
+        font-size: clamp(0.8em, 1.6vw, 0.95em);  // Smaller text
         font-weight: 400;
+        line-height: 1.3;  // Tighter line height
       }
     }
   }
@@ -397,6 +456,11 @@ $breakpoint-large: 1440px;
     
     &:hover {
       transform: translateY(-4px);
+    }
+    
+    &.accent {
+    background: linear-gradient(135deg,  $accent-color, lighten($accent-color, 15%));
+      
     }
   }
 }
@@ -512,6 +576,7 @@ $breakpoint-large: 1440px;
   ul {
     list-style: none;
     padding: 0;
+    width: 90%;  // Full width of slide
     
     li {
       padding: clamp(0.8em, 1.5vw, 1em);
@@ -525,6 +590,76 @@ $breakpoint-large: 1440px;
       
       &::before {
         content: "✓";
+        position: absolute;
+        left: clamp(0.8em, 1.5vw, 1em);
+        color: white;
+        background: $secondary-color;
+        width: clamp(1.3em, 2.5vw, 1.5em);
+        height: clamp(1.3em, 2.5vw, 1.5em);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: clamp(0.8em, 1.5vw, 1em);
+      }
+    }
+  }
+}
+
+.icon-bullets-triangle{
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 90%;  // Full width of slide
+    
+    li {
+      padding: clamp(0.8em, 1.5vw, 1em);
+      padding-left: clamp(2.5em, 5vw, 3.5em);
+      position: relative;
+      margin: clamp(0.8em, 1.5vw, 1em) 0;
+      background: $white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      font-size: clamp(0.9em, 1.8vw, 1em);
+      
+      &::before {
+        content: "︎▶︎";
+        position: absolute;
+        left: clamp(0.8em, 1.5vw, 1em);
+        color: white;
+        background: $secondary-color;
+        width: clamp(1.3em, 2.5vw, 1.5em);
+        height: clamp(1.3em, 2.5vw, 1.5em);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: clamp(0.8em, 1.5vw, 1em);
+      }
+    }
+  }
+}
+
+.icon-bullets-x{
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 90%;  // Full width of slide
+    
+    li {
+      padding: clamp(0.8em, 1.5vw, 1em);
+      padding-left: clamp(2.5em, 5vw, 3.5em);
+      position: relative;
+      margin: clamp(0.8em, 1.5vw, 1em) 0;
+      background: $white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      font-size: clamp(0.9em, 1.8vw, 1em);
+      
+      &::before {
+        content: "✕";
         position: absolute;
         left: clamp(0.8em, 1.5vw, 1em);
         color: white;
@@ -689,7 +824,7 @@ $breakpoint-large: 1440px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: clamp(1em, 2vw, 1.5em);
-  margin-top: 2em;
+  margin-top: 1em;
 
   .comparison-column {
     background: $white;
@@ -700,14 +835,14 @@ $breakpoint-large: 1440px;
     .column-header {
       background: linear-gradient(135deg, $secondary-color, lighten($secondary-color, 10%));
       color: white;
-      padding: clamp(1em, 2vw, 1.5em);
+      padding: clamp(0.2em, 0.5vw, 1.5em);
       font-weight: 600;
       font-size: clamp(1em, 2vw, 1.2em);
       text-align: center;
     }
 
     .column-content {
-      padding: clamp(1.5em, 2.5vw, 2em);
+      padding: clamp(1em, 2vw, 2em);
 
       ul {
         list-style: none;
@@ -738,7 +873,7 @@ $breakpoint-large: 1440px;
 .highlight-box {
   background: linear-gradient(135deg, rgba($accent-color, 0.15), rgba($accent-color, 0.05));
   border-left: 4px solid $accent-color;
-  padding: clamp(1.5em, 3vw, 2em);
+  padding: clamp(1em, 2vw, 2em);
   border-radius: 8px;
   margin: 2em 0;
 
@@ -750,6 +885,11 @@ $breakpoint-large: 1440px;
   &.secondary {
     background: linear-gradient(135deg, rgba($secondary-color, 0.08), rgba($secondary-color, 0.03));
     border-left-color: $secondary-color;
+  }
+  
+  &.thin{
+    padding-top: 5px !important; 
+    padding-bottom: 5px !important;
   }
 
   .box-title {
@@ -919,6 +1059,14 @@ $breakpoint-large: 1440px;
       }
     }
   }
+}
+
+// ============================================================================
+// Hidden Title
+// ============================================================================
+
+.reveal .hide-title h2 {
+  display: none;
 }
 
 // ============================================================================
@@ -1174,34 +1322,45 @@ $breakpoint-large: 1440px;
 // ============================================================================
 // BIG NUMBER SLIDE (Single Focus)
 // ============================================================================
-
 .big-number-slide {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 60vh;
-
+  
+  // Remove default paragraph margins
+  p {
+    margin: 0 !important;
+  }
+  
   .big-number {
     font-size: clamp(5em, 15vw, 12em);
     font-weight: 900;
     color: $secondary-color;
-    line-height: 1;
-    margin-bottom: 0.2em;
+    line-height: 0.9;  // Even tighter
+    margin: 0 0 0.1em 0 !important;  // All margins explicit
+    padding: 0;
   }
-
+  
   .big-number-label {
     font-size: clamp(1.5em, 4vw, 2.5em);
     color: $primary-color;
     font-weight: 600;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em 0;  // Explicit margins
+    padding: 0;
   }
-
+  
   .big-number-context {
     font-size: clamp(1em, 2vw, 1.3em);
     color: $text-light;
     max-width: 70%;
     margin: 0 auto;
+    padding: 0;
+    
+    p {
+      margin: 0.3em 0 !important;  // Tight spacing for multi-paragraph context
+    }
   }
 }
 
@@ -1268,8 +1427,8 @@ $breakpoint-large: 1440px;
   }
 
   .summary-circle {
-    width: clamp(300px, 50vw, 500px);
-    height: clamp(300px, 50vw, 500px);
+    width: clamp(500px, 60vw, 700px);
+    height: clamp(500px, 60vw, 700px);
     border-radius: 50%;
     background: linear-gradient(135deg, $primary-color, $secondary-color);
     display: flex;
@@ -1350,10 +1509,10 @@ $breakpoint-large: 1440px;
   min-height: 60vh;
 
   h2 {
-    font-size: clamp(2.5em, 6vw, 4em);
+    font-size: clamp(7em, 8vw, 9em);
     font-weight: 600;
     color: $primary-color !important;
-    margin-top: 2em;
+    margin-top: 0em;
     margin-bottom: 0.5em;
     position: relative;
 
