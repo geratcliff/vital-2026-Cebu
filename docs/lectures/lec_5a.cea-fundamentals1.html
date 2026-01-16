@@ -6,9 +6,7 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
   <title>Decision Analysis Workshop - Cebu – CEA Fundamentals: Valuing Costs</title>
@@ -30,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8e7bff74f7e8bbea61e2c7153ef82f1a.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -150,72 +148,79 @@
 </div>
 
 </section>
-<section>
-<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
-<h1>Learning Objectives and Outline</h1>
-
+<section id="learning-objectives-and-outline" class="slide level2 section-slide center">
+<h2>Learning Objectives and Outline</h2>
+<div class="section-number">
+<p>00</p>
+</div>
 </section>
-<section id="learning-objectives" class="slide level2">
+<section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
+<div class="arrow-bullets">
 <ul>
 <li><p>Identify theoretical and methodological differences between different economic evaluation techniques</p></li>
 <li><p>Grasp the foundations of cost-effectiveness analysis</p></li>
 <li><p>Describe the steps of valuing costs in economic evaluations &amp; identify ways to curate cost parameters</p></li>
 </ul>
+</div>
 </section>
-<section id="outline" class="slide level2">
+<section id="outline" class="slide level2 numbered-list-slide center">
 <h2>Outline</h2>
-<p><br></p>
-<ol type="1">
-<li>Introduction to economic evaluations</li>
-<li>Valuing costs</li>
-</ol>
-</section></section>
-<section>
-<section id="introduction-to-economic-evluations" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Introduction to economic evluations</h1>
-
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Introduction to economic evaluations</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>CEAs: Identifying Alternatives</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>03</p>
+</div>
+<div class="text">
+<p>Valuing Costs</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>04</p>
+</div>
+<div class="text">
+<p>Data Collection</p>
+</div>
+</div>
+</div>
 </section>
-<section id="so-far" class="slide level2" data-background="#43464B">
+<section id="introduction-to-economic-evaluations" class="slide level2 section-slide center">
+<h2>Introduction to Economic Evaluations</h2>
+<div class="section-number">
+<p>01</p>
+</div>
+</section>
+<section id="so-far" class="slide level2 center" data-background="#43464B">
 <h2>So far…</h2>
 <p>We’ve touched on the basic framework for decision analysis, focusing on: <br></p>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Decision trees &amp; probabilities</p>
-</div>
-</div>
-</div>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Bayes theorem &amp; probability revision</p>
-</div>
-</div>
-</div>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Constructing decision trees using Amua</p>
-</div>
-</div>
+<div class="icon-bullets">
+<ul>
+<li><p>Decision trees &amp; probabilities</p></li>
+<li><p>Bayes theorem &amp; probability revision</p></li>
+<li><p>Constructing decision trees using Amua</p></li>
+</ul>
 </div>
 </section>
-<section id="today" class="slide level2" data-background="#43464B">
-<h2>Today…</h2>
-<p><br></p>
-<ul>
-<li>We will touch on some of the core concepts for representing <span style="color: #FF8966;">costs and health benefits</span> within decision problems</li>
-</ul>
+<section id="now" class="slide level2 center" data-background="#43464B">
+<h2>Now…</h2>
+<p>We will start to touch on some of the core concepts for representing <span class="bold secondary-text">costs and health benefits</span> within decision problems.</p>
 <aside class="notes">
 
 <style type="text/css">
@@ -230,37 +235,33 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="economic-evaluation" class="slide level2">
+<section id="economic-evaluation" class="slide level2 split-wrapper center">
 <h2>Economic Evaluation</h2>
-<div style="font-size: 0.8em">
+<div class="split-content">
+<div class="content-text">
 <ul>
 <li class="fragment"><p>Relevant when decision alternatives have different costs and health consequences.</p></li>
 <li class="fragment"><p>We want to measure the relative value of one strategy in comparison to others.</p></li>
 <li class="fragment"><p>This can help us make resource allocation decisions in the face of constraints (e.g., budget).</p></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/noun-cost-and-benefit-4664704.jpeg" class="fragment quarto-figure quarto-figure-center" width="255"></p>
-</figure>
+</div>
+<div class="content-visual">
+<p><img data-src="../images/lec5a/balance.png"></p>
+<p><em>Balancing $$ and Health Outcomes</em></p>
 </div>
 </div>
 </section>
-<section id="features-of-economic-evaluation" class="slide level2">
+<section id="features-of-economic-evaluation" class="slide level2 center">
 <h2>Features of Economic Evaluation</h2>
-<div class="nobullet">
+<div class="icon-bullets">
 <ul>
-<li><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> Systematic quantification of costs and consequences.</li>
+<li class="fragment">Systematic quantification of costs and consequences.</li>
+<li class="fragment">Comparative analysis of alternative courses of action.</li>
 </ul>
-<div class="fragment fade-in-then-semi-out">
-<ul>
-<li><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> Comparative analysis of alternative courses of action.</li>
-</ul>
-</div>
 </div>
 </section>
-<section id="techniques-for-economic-evaluation" class="slide level2 smaller">
+<section id="techniques-for-economic-evaluation" class="slide level2 smaller center">
 <h2>Techniques for Economic Evaluation</h2>
-<p><br></p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 24%">
@@ -289,19 +290,18 @@
 <p>Source: <span class="citation" data-cites="drummond2015a">[@drummond2015a]</span></p>
 </div>
 </section>
-<section id="cost-analysis" class="slide level2">
+<section id="cost-analysis" class="slide level2 center">
 <h2>Cost analysis</h2>
+<div class="icon-bullets-triangle">
 <ul>
 <li><p>Only looks at healthcare costs</p></li>
-<li><p>Relevant when alternative options are equally effective (provide equal benefits)</p>
-<ul>
-<li>Rarely the case in reality!</li>
-</ul></li>
+<li><p>Relevant when alternative options are equally effective (provide equal benefits). <span class="bold secondary-text">Rarely the case in reality!</span></p></li>
 <li><p>Costs are valued in monetary terms (e.g., U.S. dollars)</p></li>
 <li><p>Decision criterion: often to minimize cost</p></li>
 </ul>
+</div>
 </section>
-<section id="techniques-for-economic-evaluation-1" class="slide level2 smaller">
+<section id="techniques-for-economic-evaluation-1" class="slide level2 smaller center">
 <h2>Techniques for Economic Evaluation</h2>
 <p><br></p>
 <table class="caption-top">
@@ -338,31 +338,39 @@
 <p>Source: <span class="citation" data-cites="drummond2015a">[@drummond2015a]</span></p>
 </div>
 </section>
-<section id="cost-effectiveness-analysis-cea" class="slide level2">
+<section id="cost-effectiveness-analysis-cea" class="slide level2 center">
 <h2>Cost-Effectiveness Analysis (CEA)</h2>
-<div class="callout callout-tip no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
 <p>Most useful when decision makers consider multiple options within a budget, and the relevant outcome is common across strategies</p>
+<div class="info-cards">
+<div class="card">
+<p><strong>Costs</strong></p>
+<p>Costs are valued in monetary terms ($)</p>
+</div>
+<div class="card">
+<p><strong>Benefits</strong></p>
+<p>Benefits are valued in terms of clinical outcomes (e.g., cases prevented, lives saved, years of life gained)</p>
+</div>
+<div class="card">
+<p><strong>Results</strong></p>
+<p>Results reported as a cost-effectiveness ratio</p>
 </div>
 </div>
-</div>
-<ul>
-<li>Costs are valued in monetary terms ($)</li>
-<li>Benefits are valued in terms of clinical outcomes (e.g., cases prevented or cured, lives saved, years of life gained)</li>
-<li>Results reported as a cost-effectiveness ratio</li>
-</ul>
 </section>
-<section id="cost-effectiveness-analysis" class="slide level2">
-<h2>Cost-Effectiveness Analysis</h2>
+<section id="cost-effectiveness-analysis-example" class="slide level2 center">
+<h2>Cost-Effectiveness Analysis Example</h2>
+<div class="highlight-box secondary">
+<div class="box-title">
+<p>Life Extension Example</p>
+</div>
+<p>Suppose we are interested in the prolongation of life after an intervention:</p>
 <ul>
-<li class="fragment"><p>Suppose we are interested in the prolongation of life after an intervention.</p></li>
-<li class="fragment"><p>Outcome of interest: life-years gained.</p></li>
-<li class="fragment"><p>The outcome is common to alternative strategies; they differ only in the magnitude of life-years gained.</p></li>
-<li class="fragment"><p>We can report results in terms of $/Life-years gained</p></li>
+<li><strong>Outcome of interest:</strong> life-years gained</li>
+<li>The outcome is common to alternative strategies; they differ only in the magnitude of life-years gained</li>
+<li><strong>Results reported as:</strong> $/Life-years gained</li>
 </ul>
+</div>
 </section>
-<section id="techniques-for-economic-evaluation-2" class="slide level2 smaller">
+<section id="techniques-for-economic-evaluation-2" class="slide level2 smaller center">
 <h2>Techniques for Economic Evaluation</h2>
 <table class="caption-top">
 <colgroup>
@@ -404,16 +412,18 @@
 <p>Source: <span class="citation" data-cites="drummond2015a">[@drummond2015a]</span></p>
 </div>
 </section>
-<section id="cost-utility-analysis" class="slide level2">
+<section id="cost-utility-analysis" class="slide level2 center">
 <h2>Cost-Utility Analysis</h2>
+<div class="icon-bullets-triangle">
 <ul>
 <li class="fragment">Essentially a variant of cost-effectiveness analysis.</li>
-<li class="fragment"><strong>Major feature:</strong> use of summary measure of health: <strong>QALY</strong>.</li>
+<li class="fragment"><span class="bold secondary-text">Major feature:</span> use of summary measure of health: <span class="bold secondary-text">QALY.</span></li>
 <li class="fragment">Quality-Adjusted Life Year (QALY): A metric that reflects both changes in life expectancy and quality of life (pain, function, or both).</li>
 <li class="fragment">By far the most widely published form of economic evaluation.</li>
 </ul>
+</div>
 </section>
-<section id="techniques-for-economic-evaluation-3" class="slide level2 smaller">
+<section id="techniques-for-economic-evaluation-3" class="slide level2 smaller center">
 <h2>Techniques for Economic Evaluation</h2>
 <div style="font-size: 0.8em">
 <table class="caption-top">
@@ -460,43 +470,42 @@
 </table>
 </div>
 </section>
-<section id="cost-benefit-analysis" class="slide level2 smaller">
+<section id="cost-benefit-analysis" class="slide level2 smaller center">
 <h2>Cost-Benefit Analysis</h2>
+<div class="icon-bullets-triangle">
 <ul>
-<li>Also known as Benefit-Cost Analysis</li>
-<li>Relevant for resource allocation between health care and other areas (e.g., education)</li>
-<li><strong>Costs and health consequences are valued in monetary terms (e.g., U.S. dollars)</strong></li>
-<li>Valuation of health consequences in monetary terms ($) is obtained by estimating individuals willingness to pay for life saving or health improving interventions.
-<ul>
-<li>e.g.&nbsp;US estimate of value per statistical life ~$9 million</li>
-</ul></li>
-<li>Cost-benefit criterion: the benefits of a program &gt; its costs
-<ul>
-<li><span style="background-color: yellow;">Notice that we’re not making comparisons <em>across</em> strategies–only comparisons of costs and benefits for the same strategy</span></li>
-</ul></li>
-<li>To read more: <a href="https://www.cambridge.org/core/product/identifier/S2194588819000046/type/journal_article">Robinson et al, 2019</a></li>
+<li class="fragment">Also known as Benefit-Cost Analysis</li>
+<li class="fragment">Relevant for resource allocation between health care and other areas (e.g., education)</li>
+<li class="fragment"><span class="bold secondary-text">Costs and health consequences are valued in monetary terms (e.g., U.S. dollars)</span></li>
+<li class="fragment">Valuation of health consequences in monetary terms ($) is obtained by estimating individuals willingness to pay for life saving or health improving interventions. (e.g.&nbsp;US estimate of value per statistical life ~$9 million)</li>
+<li class="fragment">Cost-benefit criterion: the benefits of a program &gt; its costs <br> <span class="highlight">Notice that we’re not making comparisons <em>across</em> strategies–only comparisons of costs and benefits for the same strategy</span></li>
 </ul>
-</section>
-<section id="cost-benefit-analysis-1" class="slide level2">
-<h2>Cost-Benefit Analysis</h2>
-
-<img data-src="images/paste-8DC909EB.png" class="r-stretch quarto-figure-center"><p class="caption">https://pubmed.ncbi.nlm.nih.gov/28183740/</p></section>
-<section id="cost-benefit-analysis-2" class="slide level2">
-<h2>Cost-Benefit Analysis</h2>
-
-<img data-src="images/paste-3B67CFB1.png" class="r-stretch quarto-figure-center"><p class="caption">https://www.cambridge.org/core/product/identifier/S2194588818000271/type/journal_article</p></section>
-<section id="back-to-cost-effectiveness-analysis" class="slide level2">
-<h2>Back to Cost-Effectiveness Analysis!</h2>
-<p><br></p>
-<ul>
-<li>Relevant when healthcare alternatives have different costs &amp; health consequences <br></li>
-</ul>
-<div>
-<p><span class="math display">\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) - Benefit (B)}}</span></p>
 </div>
-<ul>
-<li>Relative VALUE of an intervention in comparison to its alternative is expressed as a cost-effectiveness RATIO (the focus of next lecture!)</li>
-</ul>
+<p>To read more: <a href="https://www.cambridge.org/core/product/identifier/S2194588819000046/type/journal_article">Robinson et al, 2019</a></p>
+</section>
+<section id="cost-benefit-analysis-1" class="slide level2 center">
+<h2>Cost-Benefit Analysis</h2>
+
+<img data-src="images/lec5a/CBA_1.png" class="r-stretch quarto-figure-center"><p class="caption">https://pubmed.ncbi.nlm.nih.gov/28183740/</p></section>
+<section id="cost-benefit-analysis-2" class="slide level2 center">
+<h2>Cost-Benefit Analysis</h2>
+
+<img data-src="images/lec5a/CBA_2.png" class="r-stretch quarto-figure-center"><p class="caption">https://www.cambridge.org/core/product/identifier/S2194588818000271/type/journal_article</p></section>
+<section>
+<section id="back-to-cost-effectiveness-analysis" class="title-slide slide level1 center">
+<h1>Back to <span class="accent-text">Cost-Effectiveness Analysis</span>!</h1>
+
+</section>
+<section id="cost-effectiveness-analysis-formula" class="slide level2 center">
+<h2>Cost-Effectiveness Analysis Formula</h2>
+<div class="highlight-box">
+<div class="box-title">
+<p>The CEA Formula</p>
+</div>
+<p>Relevant when healthcare alternatives have different costs &amp; health consequences</p>
+<p><span class="math display">\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) - Benefit (B)}}</span></p>
+<p>Relative VALUE of an intervention in comparison to its alternative is expressed as a cost-effectiveness RATIO</p>
+</div>
 <aside class="notes">
 <ol type="1">
 <li><p>Cost-effectiveness analysis is relevant when healthcare alternatives between different services/interventions have DIFFERENT costs AND varying health consequences EXAMPLE: Different types of chemotherapy</p></li>
@@ -517,38 +526,44 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="who-uses-economic-evaluations" class="slide level2 smaller">
+<section id="who-uses-economic-evaluations" class="slide level2 center">
 <h2>Who uses economic evaluations?</h2>
-<div style="font-size: 0.8em">
-<div class="fragment">
-<ul>
-<li><p>Health Technology Advisory Committees</p>
+<div class="comparison-table">
+<div class="comparison-column fragment">
+<div class="column-header">
+<p>Health Technology Advisory Committees</p>
+</div>
+<div class="column-content" style="font-size: 0.7em">
 <ul>
 <li><p>NICE (The National Institute for Health and Care Excellence, <strong>UK</strong>)</p></li>
 <li><p><strong>Canada</strong>’s Drug and Health Technology Agency</p></li>
 <li><p>PBAC (Pharmaceutical Benefits Advisory Committee in <strong>Australia</strong>)</p></li>
 <li><p><strong>Brazil</strong>’s health technology assessment institute</p></li>
-</ul></li>
 </ul>
 </div>
-<div class="fragment">
-<ul>
-<li><p>Groups developing clinical guidelines</p>
+</div>
+<div class="comparison-column fragment">
+<div class="column-header">
+<p>Groups developing clinical guidelines</p>
+</div>
+<div class="column-content" style="font-size: 0.7em">
 <ul>
 <li><p>WHO</p></li>
 <li><p>CDC</p></li>
 <li><p>Disease-specific organizations: American Cancer Society; American Heart Association; European Stroke Organisation</p></li>
-</ul></li>
 </ul>
 </div>
-<div class="fragment">
-<ul>
-<li><p>Regulatory agencies:</p>
+</div>
+<div class="comparison-column fragment">
+<div class="column-header" style="min-height: 3em;">
+<p>Regulatory agencies</p>
+</div>
+<div class="column-content" style="font-size: 0.7em">
 <ul>
 <li><p>FDA (U.S. Food and Drug Administration)</p></li>
 <li><p>EPA (U.S. Environmental Protection Agency)</p></li>
-</ul></li>
 </ul>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -576,37 +591,50 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section></section>
-<section>
-<section id="ceas-identifying-alternatives" class="title-slide slide level1 center">
-<h1>CEAs: Identifying Alternatives</h1>
-
 </section>
-<section id="identifying-alternatives" class="slide level2 smaller">
+<section id="ceas-identifying-alternatives" class="slide level2 section-slide center">
+<h2>CEAs: Identifying Alternatives</h2>
+<div class="section-number">
+<p>02</p>
+</div>
+</section>
+<section id="identifying-alternatives" class="slide level2 smaller center">
 <h2>Identifying Alternatives</h2>
-<ul>
-<li class="fragment"><p>Decision modeling / economic evaluation requires identifying strategies or alternative courses of action.</p></li>
-<li class="fragment"><p>These alternatives could include different therapies / policies / technologies.</p></li>
-<li class="fragment"><p>Or, our alternatives could capture different combinations or sequences of treatment (e.g., what dose? what age to start?)</p></li>
-</ul>
+<p>Decision modeling / economic evaluation requires identifying strategies or alternative courses of action.</p>
+<h3 id="alternatives-include"><span class="secondary-text">Alternatives Include:</span></h3>
+<div class="concept-grid">
+<div class="concept-box">
+<p>Different therapies</p>
+</div>
+<div class="concept-box">
+<p>Different policies</p>
+</div>
+<div class="concept-box">
+<p>Different technologies</p>
+</div>
+<div class="concept-box">
+<p>Different combinations</p>
+</div>
+<div class="concept-box">
+<p>Different sequences of events</p>
+</div>
+<div class="concept-box">
+<p>Different treatment ages</p>
+</div>
+</div>
 <div class="fragment">
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
+<div class="highlight-box">
 <p>Once we have identified the alternatives, we’ll want to quantify their associated consequences in terms of:</p>
+<div class="arrow-bullets">
 <ul>
-<li><p>Health outcomes</p></li>
-<li><p>Costs</p></li>
+<li>Health outcomes</li>
+<li>Costs</li>
 </ul>
-</div>
 </div>
 </div>
 </div>
 </section>
-<section id="cea-components" class="slide level2">
+<section id="cea-components" class="slide level2 center">
 <h2>CEA components</h2>
 <p><br></p>
 <div>
@@ -627,81 +655,170 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section></section>
-<section>
-<section id="valuing-costs" class="title-slide slide level1 center">
-<h1>Valuing Costs</h1>
-
 </section>
-<section id="valuing-costs-steps" class="slide level2 smaller">
+<section id="valuing-costs" class="slide level2 section-slide center">
+<h2>Valuing Costs</h2>
+<div class="section-number">
+<p>03</p>
+</div>
+</section>
+<section id="valuing-costs-steps" class="slide level2 center">
 <h2>Valuing Costs: Steps</h2>
-<p>Source: Gold 1996, Drummond 2015, Gray 2012) <br></p>
-<ol type="1">
-<li><p><strong>Identify</strong> – Estimate the different categories of resources likely to be required (e.g., surgical staff, medical equipment, surgical complications, re-admissions) <br> <br></p></li>
-<li><p><strong>Measure</strong> – Estimate how much of each resource category is required (e.g.&nbsp;type of staff performing the surgery and time involved, post-surgery length of stay, re-admission rates) <br> <br></p></li>
-<li><p><strong>Value</strong> – Apply unit costs to each resource category (e.g., salary scales from the relevant hospital or national wage rates for staff inputs, cost per inpatient day for the post-surgery hospital stay)</p></li>
-</ol>
+<div class="timeline">
+<div class="timeline-items">
+<div class="timeline-item">
+<div class="timeline-marker">
+<p>1</p>
+</div>
+<div class="timeline-content">
+<div class="timeline-title">
+<p>Identify</p>
+</div>
+<div class="timeline-description">
+<p>Estimate the different categories of resources likely to be required <br><br> <span class="accent-text">(e.g., surgical staff, medical equipment, surgical complications, re-admissions)</span></p>
+</div>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-marker">
+<p>2</p>
+</div>
+<div class="timeline-content">
+<div class="timeline-title">
+<p>Measure</p>
+</div>
+<div class="timeline-description">
+<p>Estimate how much of each resource category is required <br><br> <span class="accent-text">(e.g. type of staff performing the surgery and time involved, post-surgery length of stay, re-admission rates)</span></p>
+</div>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-marker">
+<p>3</p>
+</div>
+<div class="timeline-content">
+<div class="timeline-title">
+<p>Value</p>
+</div>
+<div class="timeline-description">
+<p>Apply unit costs to each resource category <br><br> <span class="accent-text">(e.g., salary scales from the relevant hospital or national wage rates for staff inputs, cost per inpatient day for the post-surgery hospital stay)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><span style="font-size: 0.7em">Source: Gold 1996, Drummond 2015, Gray 2012)</span></p>
 </section>
-<section id="we-can-identify-different-types-of-healthcare-costs" class="slide level2 smaller">
+<section id="we-can-identify-different-types-of-healthcare-costs" class="slide level2 center">
 <h2>We can <u>identify</u> different types of healthcare costs</h2>
-<div style="font-size: 0.8em">
+<div class="horizontal-comparison">
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Direct Health Care Costs</p>
+</div>
+<div class="row-content">
 <ul>
-<li class="fragment"><p><span style="color: #57886C"><strong>Direct Health Care Costs</strong></span></p>
+<li>Hospital, office, home, facilities</li>
+<li>Medications, procedures, tests, professional fees</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Direct Non-Health Care Costs</p>
+</div>
+<div class="row-content">
 <ul>
-<li class="fragment"><p>Hospital, office, home, facilities</p></li>
-<li class="fragment"><p>Medications, procedures, tests, professional fees</p></li>
-</ul></li>
-<li class="fragment"><p><span style="color: #57886C"><strong>Direct Non-Health Care Costs</strong></span></p>
+<li>Childcare, transportation costs</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Time Costs</p>
+</div>
+<div class="row-content">
 <ul>
-<li class="fragment">Childcare, transportation costs</li>
-</ul></li>
-<li class="fragment"><p><span style="color: #57886C"><strong>Time Costs</strong></span></p>
+<li>Patient time receiving care, opportunity cost of time</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Productivity Costs</p>
+</div>
+<div class="row-content">
 <ul>
-<li class="fragment">Patient time receiving care, opportunity cost of time</li>
-</ul></li>
-<li class="fragment"><p><span style="color: #57886C"><strong>Productivity costs (‘indirect costs’)</strong></span></p>
+<li>Impaired ability to work due to morbidity</li>
+<li>Lost economic productivity due to death</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Unrelated Healthcare Costs</p>
+</div>
+<div class="row-content">
 <ul>
-<li class="fragment"><p>impaired ability to work due to morbidity?</p></li>
-<li class="fragment"><p>lost economic productivity due to death?</p></li>
-</ul></li>
-<li class="fragment"><p><span style="color: #57886C"><strong>Unrelated healthcare costs</strong></span></p>
+<li>Cumulative trajectory of total healthcare costs over time (unrelated to medical interventions)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="identifying-costs-in-practice" class="slide level2 center">
+<h2>Identifying Costs in Practice</h2>
+<div class="icon-bullets">
 <ul>
-<li class="fragment">Cumulative trajectory of total healthcare costs over time (unrelated to medical interventions)</li>
-</ul></li>
+<li>Count what is likely to matter</li>
+</ul>
+</div>
+<div class="icon-bullets-x">
+<ul>
+<li>Exclude what is likely to have little effect or equal effects across alternatives</li>
+<li>Any exclusion must be noted &amp; possible bias examined</li>
+<li>We are constrained by what data are available</li>
 </ul>
 </div>
 </section>
-<section id="identifying-costs-continued" class="slide level2">
-<h2>Identifying costs (continued)</h2>
-<p><br></p>
-<ul>
-<li><p>In practice, we count what is likely to matter</p>
-<ul>
-<li>Exclude what is likely to have little effect or equal effects across alternatives</li>
-</ul></li>
-<li><p>Any exclusion must be noted &amp; possible bias examined</p></li>
-<li><p>We are constrained by what data are available</p></li>
-</ul>
-</section>
-<section id="we-can-measure-costs-using-different-approaches" class="slide level2 smaller">
+<section id="we-can-measure-costs-using-different-approaches" class="slide level2 smaller center">
 <h2>We can <u>measure</u> costs using different approaches</h2>
+<div class="horizontal-comparison">
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Micro-costing <br>(bottom-up)</p>
+</div>
+<div class="row-content">
 <ul>
-<li class="fragment"><p><strong>Micro-costing (bottom-up)</strong></p>
-<ul>
-<li class="fragment">Measure all resources used by individual patients, then assign the unit cost for each type of resource consumed to calculate the total cost</li>
-</ul></li>
-<li class="fragment"><p><strong>Gross-costing (top-down)</strong></p>
-<ul>
-<li class="fragment">Estimate cost for a given volume of patients by dividing the total cost by the volume of service use</li>
-<li class="fragment">Example: Downstream costs (e.g., hospitalization due to opioid overdose)</li>
-</ul></li>
-<li class="fragment"><p><strong>Ingredients-based approach (P x Q x C)</strong></p>
-<ul>
-<li class="fragment"><p>Probability of occurrence (P)</p></li>
-<li class="fragment"><p>Quantity (Q)</p></li>
-<li class="fragment"><p>Unit costs (C)</p></li>
-</ul></li>
+<li>Measure all resources used by individual patients, then assign the unit cost for each type of resource consumed to calculate the total cost</li>
 </ul>
+</div>
+</div>
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Gross-costing <br>(top-down)</p>
+</div>
+<div class="row-content">
+<ul>
+<li>Estimate cost for a given volume of patients by dividing the total cost by the volume of service use</li>
+<li>Example: Downstream costs (e.g., hospitalization due to opioid overdose)<br>
+</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row fragment">
+<div class="row-header">
+<p>Ingredients-based approach <br>(P x Q x C)</p>
+</div>
+<div class="row-content">
+<ul>
+<li>Probability of occurrence (P)</li>
+<li>Quantity (Q)</li>
+<li>Unit costs (C)</li>
+</ul>
+</div>
+</div>
+</div>
 <aside class="notes">
 <ol type="1">
 <li><p>Micro-costing: most precise (which is a bottom up approach where we measure, for instance, all the lab tests, hospital bed, provider time, imaging tests, equipment used, etc.)</p></li>
@@ -725,21 +842,20 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="whose-perspective" class="slide level2">
+<section id="whose-perspective" class="slide level2 center">
 <h2>Whose perspective?</h2>
 
-<img data-src="images/paste-1BA51D60.png" class="r-stretch quarto-figure-center"><p class="caption">Sanders GD, Neumann PJ, Basu A, et al.&nbsp;Recommendations for Conduct, Methodological Practices, and Reporting of Cost-effectiveness Analyses: Second Panel on Cost-Effectiveness in Health and Medicine. JAMA. 2016;316:1093–1103.</p></section>
-<section id="whose-perspective-1" class="slide level2">
+<img data-src="images/lec5a/perspective_1.png" class="r-stretch quarto-figure-center"><p class="caption">Sanders GD, Neumann PJ, Basu A, et al.&nbsp;Recommendations for Conduct, Methodological Practices, and Reporting of Cost-effectiveness Analyses: Second Panel on Cost-Effectiveness in Health and Medicine. JAMA. 2016;316:1093–1103.</p></section>
+<section id="whose-perspective-1" class="slide level2 center">
 <h2>Whose perspective?</h2>
-<p><br></p>
-<div style="font-size: 0.8em">
-<p>PERSPECTIVE MATTERS – <br> <br></p>
-<blockquote>
-<p><strong>Formal Healthcare Sector:</strong> Medical costs borne by third-party payers &amp; paid for out-of-pocket by patients. Should include current + future costs, related &amp; unrelated to the condition under consideration</p>
-</blockquote>
-<blockquote>
+<p>PERSPECTIVE MATTERS</p>
+<div class="info-cards">
+<div class="card">
+<p><strong>Formal Healthcare Sector:</strong> Medical costs borne by third-partypayers &amp; paid for out-of-pocket by patients. Should include current + future costs, related &amp; unrelated to the condition under consideration</p>
+</div>
+<div class="card accent">
 <p><strong>Societal perspective:</strong> Represents the wider “public interest” &amp; inter-sectoral distribution of resources that are important to consider - reflects costs on all affected parties</p>
-</blockquote>
+</div>
 </div>
 <aside class="notes">
 <ol type="1">
@@ -773,18 +889,38 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="whose-perspective-2" class="slide level2 smaller">
-<h2>Whose perspective?</h2>
-<p><br></p>
-<p><strong>Healthcare sector perspective</strong></p>
-<p><br></p>
-<p>MAMMOGRAPHY (Healthcare Sector): <br></p>
+<section id="perspective-example-mammography" class="slide level2 center">
+<h2>Perspective Example: Mammography</h2>
+<div class="info-cards">
+<div class="card">
+<p><strong>Formal Healthcare Sector:</strong></p>
+<div style="font-size: 2.5vh;">
 <ul>
-<li><p>Costs associated with the screening itself [mammogram procedure + physician time]</p></li>
-<li><p>Costs of follow-up tests for both false-positive &amp; true positive results</p></li>
-<li><p>Downstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs</p></li>
-<li><p>Costs unrelated to medical intervention/disease; of living longer due to mammography</p></li>
+<li><span class="fragment" data-fragment-index="1">Costs associated with the screening itself [mammogram procedure + physician time]</span></li>
+<li><span class="fragment" data-fragment-index="2">Costs of follow-up tests for both false-positive &amp; true positive results</span></li>
+<li><span class="fragment" data-fragment-index="3">Downstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs</span></li>
+<li><span class="fragment" data-fragment-index="4">Costs unrelated to medical intervention/disease; of living longer due to mammography</span></li>
 </ul>
+</div>
+</div>
+<div class="card accent">
+<p><strong>Societal perspective:</strong></p>
+<div class="fragment" style="font-size: 2.5vh;" data-fragment-index="5">
+<ul>
+<li>Costs associated with the screening itself [mammogram procedure + physician time]</li>
+<li>Costs of follow-up tests for both false-positive &amp; true positive results</li>
+<li>Downstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs</li>
+<li>Costs unrelated to medical intervention/disease; of living longer due to mammography</li>
+</ul>
+</div>
+<div style="font-size: 2.5vh;">
+<ul>
+<li><span class="highlight fragment" data-fragment-index="6">Patient productivity losses associated with the screening or cancer treatment</span></li>
+<li><span class="highlight fragment" data-fragment-index="7">Childcare/transportation costs</span></li>
+</ul>
+</div>
+</div>
+</div>
 <aside class="notes">
 <ol type="1">
 <li><p>Let’s look at an example - Mammography for breast cancer screening</p></li>
@@ -812,85 +948,121 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="whose-perspective-3" class="slide level2 smaller">
-<h2>Whose perspective?</h2>
-<p><br></p>
-<p><strong>Societal perspective</strong></p>
-<p><br></p>
-<p>MAMMOGRAPHY (Societal perspective): <br></p>
-<ul>
-<li><p>Costs associated with the screening itself [mammogram procedure + physician time]</p></li>
-<li><p>Costs of follow-up tests for both false-positive &amp; true positive results</p></li>
-<li><p>Downstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs</p></li>
-<li><p>Costs unrelated to medical intervention/disease; of living longer due to mammography</p></li>
-<li><p><span style="background-color: yellow;">Patient productivity losses associated with the screening or cancer treatment</span></p></li>
-<li><p><span style="background-color: yellow;">Childcare/transportation costs</span></p></li>
-</ul>
-</section></section>
-<section>
-<section id="data-collection" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Data collection</h1>
-
-</section>
-<section id="two-approaches" class="slide level2">
-<h2>Two approaches:</h2>
-<p><br> (1) Alongside <span style="color: #00589b;"><strong>clinical trials</strong></span> <br> (2) Using <span style="color: #00589b;"><strong>secondary data</strong></span></p>
-</section>
-<section id="costs-secondary-data" class="slide level2">
-<h2>Costs (secondary data)</h2>
-<p><br></p>
-<blockquote>
-<p>International versus US will have different approaches</p>
-</blockquote>
-</section>
-<section id="costs-international" class="slide level2">
-<h2>Costs (International)</h2>
-<div style="font-size: 0.8em">
-<ol type="1">
-<li><strong>In country/hospital/donor data registries</strong> - key is to get as close to the “true” cost associated with each procedure per patient
-<ul>
-<li>E.g., “TB healthcare &amp; diagnostics are from official price list of the National Health Laboratory Service in South Africa; Costs for follow-up reflect local clinic and culture-based screening for active-tuberculosis”</li>
-</ul></li>
-<li><strong>Review of published literature</strong></li>
-<li><strong>Tufts CEA Registry</strong></li>
-<li><strong>DCP3: Disease Control Priorities</strong></li>
-</ol>
+<section id="data-collection" class="slide level2 section-slide center">
+<h2>Data Collection</h2>
+<div class="section-number">
+<p>04</p>
 </div>
 </section>
-<section id="costs-published-literature" class="slide level2">
+<section id="two-approaches-for-data-collection" class="slide level2 center">
+<h2>Two Approaches for Data Collection</h2>
+<div class="info-cards">
+<div class="card">
+<p><strong>Approach 1</strong></p>
+<p>Alongside <span class="bold secondary-text">clinical trials</span></p>
+<p>Collect cost data directly during the trial</p>
+</div>
+<div class="card accent">
+<p><strong>Approach 2</strong></p>
+<p>Using <span class="bold accent-text">secondary data</span></p>
+<p>Leverage existing databases, registries, and published literature</p>
+</div>
+</div>
+<div class="highlight-box thin fragment">
+<p>International versus US will have different approaches</p>
+</div>
+</section>
+<section id="costs-international" class="slide level2 center">
+<h2>Costs (International)</h2>
+<div class="process-flow">
+<div class="step">
+<div class="step-number">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Local Data</p>
+</div>
+<div class="step-content">
+<p>In-country registries, hospital data, donor databases</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Literature</p>
+</div>
+<div class="step-content">
+<p>Published cost studies</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Tufts CEA Registry</p>
+</div>
+<div class="step-content">
+<p>Comprehensive database</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">
+<p>4</p>
+</div>
+<div class="step-title">
+<p>DCP3</p>
+</div>
+<div class="step-content">
+<p>Disease Control Priorities</p>
+</div>
+</div>
+</div>
+<div class="highlight-box thin secondary">
+<div class="box-title">
+<p>The key is to get as close to the “true” cost associated with each procedure per patient</p>
+</div>
+<div style="font-size: 2vh;">
+<p>E.g., “TB healthcare &amp; diagnostics are from official price list of the National Health Laboratory Service in South Africa; Costs for follow-up reflect local clinic and culture-based screening for active-tuberculosis”</p>
+</div>
+</div>
+</section>
+<section id="costs-published-literature" class="slide level2 center">
 <h2>Costs (Published Literature)</h2>
 
-<img data-src="images/file_show-01.jpeg" class="r-stretch"></section>
-<section id="costs-published-literature-1" class="slide level2">
+<img data-src="images/lec5a/costs_lit_1.jpeg" class="r-stretch"></section>
+<section id="costs-published-literature-1" class="slide level2 center">
 <h2>Costs (Published Literature)</h2>
 
-<img data-src="images/screenshot_cea_SA2.jpeg" class="r-stretch"></section>
-<section id="costs-tufts-cevr" class="slide level2">
+<img data-src="images/lec5a/costs_lit_2.jpeg" class="r-stretch"></section>
+<section id="costs-tufts-cevr" class="slide level2 center">
 <h2>Costs (Tufts CEVR)</h2>
 
-<img data-src="images/cevr1.png" class="r-stretch"><p>https://cevr.tuftsmedicalcenter.org/databases/cea-registry</p>
+<img data-src="images/lec5a/cevr1.png" class="r-stretch"><p>https://cevr.tuftsmedicalcenter.org/databases/cea-registry</p>
 </section>
-<section id="costs-tufts-cevr-1" class="slide level2">
+<section id="costs-tufts-cevr-1" class="slide level2 center">
 <h2>Costs (Tufts CEVR)</h2>
 
-<img data-src="images/cevr3.jpeg" class="r-stretch"></section>
-<section id="costs-tufts-cevr-2" class="slide level2">
+<img data-src="images/lec5a/cevr3.jpeg" class="r-stretch"></section>
+<section id="costs-tufts-cevr-2" class="slide level2 center">
 <h2>Costs (Tufts CEVR)</h2>
 
-<img data-src="images/cevr5.jpeg" class="r-stretch"></section>
-<section id="costs-tufts-cevr-3" class="slide level2">
+<img data-src="images/lec5a/cevr5.jpeg" class="r-stretch"></section>
+<section id="costs-tufts-cevr-3" class="slide level2 center">
 <h2>Costs (Tufts CEVR)</h2>
 
-<img data-src="images/global1.png" class="r-stretch"><p>http://ghcearegistry.org/ghcearegistry/</p>
+<img data-src="images/lec5a/global1.png" class="r-stretch"><p>http://ghcearegistry.org/ghcearegistry/</p>
 </section>
-<section id="costs-tufts-cevr-4" class="slide level2">
+<section id="costs-tufts-cevr-4" class="slide level2 center">
 <h2>Costs (Tufts CEVR)</h2>
 
-<img data-src="images/global2.png" class="r-stretch"></section>
-<section id="costs-dcp3" class="slide level2">
+<img data-src="images/lec5a/global2.png" class="r-stretch"></section>
+<section id="costs-dcp3" class="slide level2 center">
 <h2>Costs (DCP3)</h2>
 
-<img data-src="images/dp3.png" class="r-stretch"><aside class="notes">
+<img data-src="images/lec5a/dp3.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>The Disease Control Priorities is a multi-year project funded in 2010 by the Bill &amp; Melinda Gates Foundation.</li>
 <li>From 2010 – 2017, it was led by the University of Washington, which worked with local organizations to promote and support the use of economic evaluation (CEAs) for priority setting at both global and national levels</li>
@@ -908,63 +1080,126 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="adjustments-needed-for-valuing-costs" class="slide level2">
+<section id="adjustments-needed-for-valuing-costs" class="slide level2 numbered-list-slide center">
 <h2>Adjustments needed for <u>Valuing</u> Costs</h2>
-<p><br></p>
-<ul>
-<li><p>Adjusting for currency and currency year</p></li>
-<li><p>Discounting</p></li>
-</ul>
-</section></section>
-<section>
-<section id="inflation-adjustment" class="title-slide slide level1 center">
-<h1>Inflation Adjustment</h1>
-
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Inflation adjustment</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>Adjusting for currency and currency year</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>03</p>
+</div>
+<div class="text">
+<p>Discounting</p>
+</div>
+</div>
+</div>
 </section>
-<section id="inflation-adjustment-motivation" class="slide level2">
+<section id="inflation-adjustment" class="slide level2 center">
+<h2>Inflation Adjustment</h2>
+</section>
+<section id="inflation-adjustment-motivation" class="slide level2 center">
 <h2>Inflation Adjustment: Motivation</h2>
-<p><br></p>
-<ul>
-<li><p>$100 in 2000 is not equivalent to $100 in 2020</p>
-<ul>
-<li>$100 could buy a lot more in 2000!</li>
-</ul></li>
-<li><p>Important to adjust for the price difference over time, especially when working with cost sources from multiple years</p></li>
-</ul>
+<div class="info-cards">
+<div class="card">
+<p><strong>The Problem</strong></p>
+<p>$100 in 2000 is not equivalent to $100 in 2020</p>
+<p><span class="highlight">$100 could buy a lot more in 2000!</span></p>
+</div>
+<div class="card accent fragment">
+<p><strong>The Solution</strong></p>
+<p>Important to adjust for the price difference over time, especially when working with cost sources from multiple years</p>
+</div>
+</div>
 </section>
-<section id="inflation-adjustment-example" class="slide level2 smaller">
+<section id="inflation-adjustment-example" class="slide level2 smaller center">
 <h2>Inflation Adjustment: Example</h2>
 
-<img data-src="images/hsr.png" class="r-stretch"></section>
-<section id="inflation-adjustment-method" class="slide level2 smaller">
+<img data-src="images/lec5a/inflation.png" class="r-stretch"></section>
+<section id="inflation-adjustment-method" class="slide level2 center">
 <h2>Inflation Adjustment: Method</h2>
-<ul>
-<li><p>Choose a reference year (usually the current year of analysis)</p></li>
-<li><p>Convert all costs to the reference year</p></li>
-</ul>
-<div class="fragment">
+<div class="process-flow">
+<div class="step">
+<div class="step-number">
+<p>1</p>
+</div>
+<div class="step-title">
+<p>Choose Reference Year</p>
+</div>
+<div class="step-content">
+<p>Usually the current year of analysis</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">
+<p>2</p>
+</div>
+<div class="step-title">
+<p>Convert All Costs</p>
+</div>
+<div class="step-content">
+<p>Convert to reference year</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">
+<p>3</p>
+</div>
+<div class="step-title">
+<p>Apply Formula</p>
+</div>
+<div class="step-content">
+<p>Use price index ratio</p>
+</div>
+</div>
+</div>
+<div class="highlight-box fragment">
 <p>Converting cost in Year X to Year Y (reference year):</p>
 <p><span class="math display">
     \textbf{Cost(Year Y)} = \textbf{Cost(Year X)} \times \frac{\textbf{Price index(Year Y)}}{\textbf{Price index(Year X)}}
 </span></p>
 </div>
 </section>
-<section id="inflation-adjustment-example-1" class="slide level2 smaller">
+<section id="inflation-adjustment-example-1" class="slide level2 center">
 <h2>Inflation Adjustment: Example</h2>
-<p><br></p>
-<blockquote>
-<p>Cost of hospitalization for mild stroke in the US was ~15,000 USD in 2016. What if we want to convert this number to 2020 USD?</p>
-</blockquote>
+<div class="definition-box">
+<div class="term">
+<p>Example Problem</p>
+</div>
+<div class="definition">
+<p>Cost of hospitalization for mild stroke in the US was ~$15,000 USD in 2016. Convert to 2020 USD.</p>
+</div>
+<div class="example fragment">
+<div class="example-label">
+<p>Solution:</p>
+</div>
+<div class="example-text">
 <ul>
-<li><p>PCE (Personal Consumption Expenditure Health Price Index) in 2016: 105.430 <a href="https://meps.ahrq.gov/about_meps/Price_Index.shtml">(second column of Table 3 (PCE, health)</a></p></li>
-<li><p>PCE in 2020: 112.978</p></li>
+<li>PCE (Personal Consumption Expenditure Health Price Index) in 2016: 105.430</li>
+<li>PCE in 2020: 112.978</li>
 </ul>
-<div class="fragment">
 <p><span class="math display">
-\textbf{Cost(2020)} = \textbf{Cost(2016)} \times \frac{\textbf{PCE(2020)}}{\textbf{PCE(2016)}} \\
-= 15,000 \times \frac{112.978}{105.430} \\
-= 16,674 \ (\text{2020 USD})
+\textbf{Cost(2020)} = 15,000 \times \frac{112.978}{105.430} = \$16,674 \text{ (2020 USD)}
 </span></p>
+</div>
+<div style="font-size: 1.5vh;">
+<p><a href="https://meps.ahrq.gov/about_meps/Price_Index.shtml">(second column of Table 3 (PCE,health))</a></p>
+</div>
+</div>
 </div>
 </section></section>
 <section>
@@ -972,18 +1207,25 @@
 <h1>Currency Conversion</h1>
 
 </section>
-<section id="currency-conversion-1" class="slide level2">
-<h2>Currency Conversion</h2>
-<div style="font-size: 0.8em">
+<section id="currency-conversion-basics" class="slide level2 center">
+<h2>Currency Conversion Basics</h2>
+<div class="info-cards">
+<div class="card">
+<p><strong>When Needed</strong></p>
+<p>Not required for CEA but may be useful:</p>
 <ul>
-<li><p>Isn’t required for CEA but may be useful in some situations:</p>
-<ul>
-<li>Example: may need to convert local currency to USD because cost-effectiveness thresholds are often estimated in the unit of USD per DALY.</li>
-</ul></li>
-<li><p>How do we convert 1,000 Turkish Liras to USD?</p></li>
-<li><p>Current exchange rate in 2024: 1 Turkish Lira = ~0.029 USD</p></li>
-<li><p>1,000 Liras = 29 USD</p></li>
+<li>Convert local currency to USD for international comparisons</li>
+<li>Cost-effectiveness thresholds often estimated in USD per DALY</li>
 </ul>
+</div>
+<div class="card">
+<p><strong>How to Convert</strong></p>
+<p>Example: 1,000 Philippine Peso to USD</p>
+<ul>
+<li>Current exchange rate (2026): 1 Philippine Peso = ~0.017 USD</li>
+<li><strong>Result:</strong> 1,000 Peso = $16.87 USD</li>
+</ul>
+</div>
 </div>
 </section></section>
 <section>
@@ -991,22 +1233,40 @@
 <h1>Discounting</h1>
 
 </section>
-<section id="why-discounting" class="slide level2">
-<h2>Why discounting?</h2>
+<section id="why-discounting" class="slide level2 center">
+<h2>Why Discounting?</h2>
+<div class="info-cards">
+<div class="card">
+<p><strong>Purpose</strong></p>
+<p>Adjust costs at social discount rate to reflect social “rate of time preference”</p>
+</div>
+<div class="card">
+<p><strong>Reasons</strong></p>
 <ul>
-<li><p>Adjust costs at social discount rate to reflect social “rate of time preference”</p>
-<ul>
-<li><p>Pure time preference (“impatient”)</p></li>
-<li><p>Potential catastrophic risk in the future</p></li>
-<li><p>Economic growth/return</p></li>
-</ul></li>
+<li>Pure time preference (“impatient”)</li>
+<li>Potential catastrophic risk in the future</li>
+<li>Economic growth/return on investment</li>
 </ul>
+</div>
+</div>
 </section>
-<section id="discounting-1" class="slide level2">
+<section id="discounting-1" class="slide level2 center">
 <h2>Discounting</h2>
+<p>A $ today is <span class="bold">NOT</span> worth a $ tomorrow</p>
+<div class="concept-grid with-arrows">
+<div class="concept-box">
+<p>$100 now</p>
+</div>
+<div class="concept-box accent">
+<p>2% net return</p>
+</div>
+<div class="concept-box">
+<p>$102 next year</p>
+</div>
+</div>
 <p><br></p>
-
-<img data-src="images/discount.png" class="r-stretch"><aside class="notes">
+<p>The “present value” of $102 next year is $100 today.<br> Similarly, $100 next year = $98.04 today</p>
+<aside class="notes">
 <ol type="1">
 <li><p>If you have $100 now, this could either be consumed or invested in the most profitable alternative (e.g., risk free government bond)</p></li>
 <li><p>Let’s say the net return on the bond is 2%, then this means that next year the current $100 has grown to $102</p></li>
@@ -1025,66 +1285,94 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="discounting-2" class="slide level2">
-<h2>Discounting</h2>
-<p><br></p>
-<div class="callout callout-important no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>Inflation: We convert PAST cost to present-day values</p>
+<section id="inflation-vs.-discounting" class="slide level2 center">
+<h2>Inflation vs.&nbsp;Discounting</h2>
+<div class="simple-comparison">
+<div class="comparison-column">
+<div class="column-header">
+<p>Inflation Adjustment</p>
+</div>
+<div class="column-content">
+<p>We convert <strong>PAST</strong> costs to present-day values</p>
 </div>
 </div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Discounting</p>
 </div>
-<div class="callout callout-important no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>Discounting: We convert FUTURE costs to present-day values</p>
+<div class="column-content">
+<p>We convert <strong>FUTURE</strong> costs to present-day values</p>
 </div>
 </div>
 </div>
 </section>
-<section id="how-do-we-discount" class="slide level2">
-<h2>How do we discount?</h2>
-<div style="font-size: 0.8em">
-<ul>
-<li><p>Present value: <span class="math inline">PV = FV/(1+r)^t</span></p>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Present Value Formula</p>
+</div>
+<div class="definition">
+<p><span class="math display">PV = \frac{FV}{(1+r)^t}</span></p>
+<p>Where:</p>
 <ul>
 <li><p>FV = future value, the nominal cost incurred in the future</p></li>
-<li><p>r = <strong>annual discount rate</strong> (analogous to interest rate)</p></li>
+<li><p>r = <span class="bold accent-text">annual discount rate</span> (analogous to interest rate)</p></li>
 <li><p>t = number of years in future when cost is incurred</p></li>
-</ul></li>
-<li><p>Reasonable consensus around 3% per year</p></li>
-<li><p>May vary according to country guidelines</p></li>
 </ul>
-<div class="fragment">
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p><span class="bold accent-text">Standard rate:</span> Reasonable consensus around 3% per year (may vary by country guidelines)</p>
 </div>
-<div class="callout-content">
-<p>Adjust for inflation and currency first, then discount</p>
-</div>
-</div>
+<div class="example">
+<div class="example-text">
+<p><span class="bold secondary-text">Important!</span> Adjust for inflation and currency first, then discount</p>
 </div>
 </div>
 </div>
 </section>
-<section id="intuition" class="slide level2">
+<section id="intuition" class="slide level2 center">
 <h2>Intuition</h2>
-<div style="font-size: 0.8em">
+<div class="split-content">
+<div class="content-text">
+<p><span class="math inline">r = 0.03</span></p>
+<p><span class="math inline">PV = FV/(1+r)^t</span>, and we’re at Year 0:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Formula</th>
+<th>Value of $1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>$1/1.03^0</td>
+<td>$1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>$1/1.03^1</td>
+<td>$0.97</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>$1/1.03^2</td>
+<td>$0.94</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>$1/1.03^3</td>
+<td>$0.92</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="content-visual bold secondary-text">
 <ul>
-<li><p><span class="math inline">r = 0.03</span></p></li>
-<li><p>Recall that <span class="math inline">PV = FV/(1+r)^t</span>, and we’re at Year 0:</p>
-<ul>
-<li><p>$1 in Year 0 is valued as <span class="math inline">1/1.03^0 = \$ 1</span></p></li>
-<li><p>$1 in Year 1 is valued as <span class="math inline">1/1.03^1 = \$0.97</span></p></li>
-<li><p>$1 in Year 2 is valued as <span class="math inline">1/1.03^2 = \$0.94</span></p></li>
-<li><p>$1 in Year 3 is valued as <span class="math inline">1/1.03^3 = \$0.92</span></p></li>
-<li><p>…</p></li>
-<li><p>In other words, we are converting what a $1 would be in Year 2, for example, to the PRESENT VALUE of today. Today, it will be 0.94.</p></li>
-</ul></li>
+<li class="fragment"><p>What would $1 be in Year 2 be in the PRESENT VALUE of today?</p></li>
+<li class="fragment"><p>Today, it will be <span class="accent-text">0.94.</span></p></li>
 </ul>
+</div>
 </div>
 <aside class="notes">
 <ol type="1">
@@ -1103,25 +1391,61 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<p><br></p>
-<ul>
-<li>Assume in year 5, a patient develops disease, and there is a treatment cost of $500
-<ul>
-<li>This is the future value (FV) of the cost!</li>
-</ul></li>
-<li>Present value <span class="math inline">PV = FV/(1+r)^t = 500/(1+0.03)^5 = \$ 431.3</span></li>
-</ul>
-</section></section>
-<section id="next-up-benefits-the-denominator" class="title-slide slide level1 center">
-<h1>Next up: Benefits! (the denominator)</h1>
-
-
+<section id="discounting-example" class="slide level2 center">
+<h2>Discounting Example</h2>
+<div class="definition-box">
+<div class="term">
+<p>Example Problem</p>
+</div>
+<div class="definition">
+<p>Assume in year 5, a patient develops disease, and there is a treatment cost of $500. What is the present value?</p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Solution:</p>
+</div>
+<div class="example-text fragment">
+<p><span class="math display">PV = \frac{FV}{(1+r)^t} = \frac{500}{(1+0.03)^5} = \$431.30</span></p>
+</div>
+</div>
+</div>
 </section>
+<section id="section-1" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Costs</p>
+</div>
+<ul class="key-points">
+<li>
+Different types of economic evaluation
+</li>
+<li>
+CEA uses cost-effectiveness ratios
+</li>
+<li>
+Perspective matters for cost inclusion
+</li>
+<li>
+Adjust for inflation &amp; discount future costs
+</li>
+</ul>
+</div>
+</section>
+<section id="questions" class="slide level2 questions-slide center">
+<h2>Questions?</h2>
+<div class="next-info">
+<p>Next Lecture: <strong>Benefits &amp; QALYs</strong></p>
+</div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../vchem.png" class="slide-logo"></p>
+<p><img src="images/logos.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -1204,7 +1528,7 @@
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -1300,12 +1624,12 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 5.0e-2,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,

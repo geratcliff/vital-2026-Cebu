@@ -2,10 +2,14 @@
 title: "Deterministic, Threshold and Scenario Analyses"
 format:
   revealjs:
-    theme: slides.scss
-    incremental: true
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.05      # Minimal margins for max space
+    center: true     # Vertically center content
+    incremental: false
     slide-number: true
-    logo: ../vchem.png
+    logo: images/logos.png 
     html-math-method: katex
     transition: fade
     background-transition: fade

@@ -2,10 +2,14 @@
 title: "Incremental Cost-Effectiveness Analysis"
 format:
   revealjs:
-    theme: slides.scss
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.05      # Minimal margins for max space
+    center: true     # Vertically center content
     incremental: false
     slide-number: true
-    logo: ../vchem.png
+    logo: images/logos.png 
     html-math-method: katex
     transition: fade
     background-transition: fade
@@ -141,10 +145,15 @@ df_i4 <-
 
 ```
 
-# Learning Objectives and Outline
+## Learning Objectives and Outline {.section-slide}
+
+::: section-number
+00
+:::
 
 ## Learning Objectives
 
+::: icon-bullets
 -   Differentiate between average & incremental CEA ratios
 
 -   Characterize decision problems by whether they are competing or
@@ -157,41 +166,98 @@ df_i4 <-
 
 -   Identify "high-value" versus "low value" care strategies, based on
     generally accepted cost-effectiveness thresholds
-
-## Outline
-
-<br>
-
-::: columns
-::: {.column width="50%"}
-1.  Review of CEA ratio
-2.  Non-competing versus competing CEAs
-3.  Incremental CEA
 :::
 
-::: {.column width="50%"}
-4.  Dominance & extended dominance
-5.  Comparators
-6.  CEA thresholds
-:::
+## Outline {.numbered-list-slide}
+
+::::::::::::::::::::::::: columns
+::::::::::::: {.column width="50%"}
+:::::::::::: number-list
+::::: list-item
+::: number
+01
 :::
 
-# Cost-Effectiveness Analysis {background="#43464B"}
+::: text
+Review of CEA ratio
+:::
+:::::
+
+::::: list-item
+::: number
+02
+:::
+
+::: text
+Non-competing versus competing CEAs
+:::
+:::::
+
+::::: list-item
+::: number
+03
+:::
+
+::: text
+Incremental CEA
+:::
+:::::
+::::::::::::
+:::::::::::::
+
+::::::::::::: {.column width="50%"}
+:::::::::::: number-list
+::::: list-item
+::: number
+04
+:::
+
+::: text
+Dominance & extended dominance
+:::
+:::::
+
+::::: list-item
+::: number
+05
+:::
+
+::: text
+Comparators
+:::
+:::::
+
+::::: list-item
+::: number
+06
+:::
+
+::: text
+CEA thresholds
+:::
+:::::
+::::::::::::
+:::::::::::::
+:::::::::::::::::::::::::
+
+## Review of CEA ratio {.section-slide}
+
+::: section-number
+01
+:::
 
 ## Cost-Effectiveness Analysis
 
-::: incremental
+::: {.icon-bullets .incremental}
 -   Quantifies how to maximize the quality & quantity of life from among
     competing alternatives, given restricted resources
-
 -   It's an explicit measure of value for money
-
--   A POPULATION-LEVEL decision-making tool
+-   A [POPULATION-LEVEL]{.bold .accent-text} decision-making tool
 :::
 
 ## Cost-Effectiveness Analysis IS NOT
 
-::: incremental
+::: {.icon-bullets-x .incremental}
 -   Indiscriminate cost-cutting
 -   Downsizing
 -   For individual-level decision making
@@ -200,7 +266,7 @@ df_i4 <-
 
 ## Cost-Effectiveness Analysis {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: r-vstack
+::::::: r-vstack
 ::: {data-id="costA"}
 Cost of Intervention
 :::
@@ -216,133 +282,132 @@ Benefit of Intervention
 ::: {data-id="benefitB"}
 Benefit of Alternative
 :::
-:::
+:::::::
 
 ## Cost-Effectiveness Analysis {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: r-vstack
-::: {data-id="costA" style="color: #B98476;"}
+::::::: r-vstack
+::: {.brown-text data-id="costA"}
 Cost of Intervention
 :::
 
-::: {data-id="costB" style="color: #B98476;"}
+::: {.brown-text data-id="costB"}
 Cost of Alternative
 :::
 
-::: {data-id="benefitA" style="color: #3FA090;"}
+::: {.secondary-text data-id="benefitA"}
 Benefit of Intervention
 :::
 
-::: {data-id="benefitB" style="color: #3FA090;"}
+::: {.secondary-text data-id="benefitB"}
 Benefit of Alternative
 :::
-:::
+:::::::
 
 ## Cost-Effectiveness Ratio {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: r-vstack
-::: r-hstack
-::: {data-id="costA" style="color: #B98476;"}
+::::::::: r-vstack
+::::: r-hstack
+::: {.brown-text data-id="costA"}
 Cost of Intervention
 :::
 
 $$ \quad - \quad $$
 
-::: {data-id="costB" style="color: #B98476;"}
+::: {.brown-text data-id="costB"}
 Cost of Alternative
 :::
-:::
+:::::
 
 $$\frac{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}$$
 
-::: r-hstack
-::: {data-id="benefitA" style="color: #3FA090;"}
+::::: r-hstack
+::: {.secondary-text data-id="benefitA"}
 Benefit of Intervention
 :::
 
 $$ \quad - \quad $$
 
-::: {data-id="benefitB" style="color: #3FA090;"}
+::: {.secondary-text data-id="benefitB"}
 Benefit of Alternative
 :::
-:::
-:::
+:::::
+:::::::::
 
 ## Cost-Effectiveness Ratio {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: r-vstack
-::: r-hstack
-::: {data-id="costA" style="color: #B98476;"}
+::::::::: r-vstack
+::::: r-hstack
+::: {.brown-text data-id="costA"}
 $C_1$
 :::
 
 $$ \quad - \quad $$
 
-::: {data-id="costB" style="color: #B98476;"}
+::: {.brown-text data-id="costB"}
 $C_0$
 :::
-:::
+:::::
 
 $$\frac{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}$$
 
-::: r-hstack
-::: {data-id="benefitA" style="color: #3FA090;"}
+::::: r-hstack
+::: {.secondary-text data-id="benefitA"}
 $E_0$
 :::
 
 $$ \quad - \quad $$
 
-::: {data-id="benefitB" style="color: #3FA090;"}
+::: {.secondary-text data-id="benefitB"}
 $E_1$
 :::
-:::
-:::
+:::::
+:::::::::
 
 ## Cost-Effectiveness Ratio {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: r-vstack
-::: r-hstack
-::: {data-id="costA" style="color: #B98476;"}
+::::::: r-vstack
+:::: r-hstack
+::: {.brown-text data-id="costA"}
 $\Delta C$
 :::
-:::
+::::
 
 $$\frac{\quad \quad \quad \quad }{\quad \quad \quad \quad \quad }$$
 
-::: r-hstack
-::: {data-id="benefitA" style="color: #3FA090;"}
+:::: r-hstack
+::: {.secondary-text data-id="benefitA"}
 $\Delta E$
 :::
+::::
+:::::::
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::: definition-box
+::: term
+Incremental Cost-Effectiveness Ratio
 :::
-:::
 
-## Incremental Cost-Effectiveness Ratio {.smaller}
+$$
+\begin{aligned}
+ICER &=  \frac{C_1 - C_0}{E_1 - E_0} 
+ &= \frac{\Delta C}{\Delta E} 
+\end{aligned}
+$$
 
-**Most often used, since for most conditions there is already some
-available treatment.**
-
-::: incremental
-::: columns
-::: {.column width="50%"}
 -   $C_1$: net present value of total lifetime costs of new treatment
--   $C_0$: net present value of total lifetime costs of default
-    treatment
--   $E_1$: effectiveness of new treatment, measured in expected life
-    expectancy, quality-adjusted life years (QALYs) or
-    disability-adjusted life years (DALYs), or some decision-relevant
-    health outcome.
--   $E_0$: effectiveness of default treatment
-:::
+-   $C_0$: net present value of total lifetime costs of comparator
+-   $E_1$: effectiveness of new treatment
+-   $E_0$: effectiveness of comparator
+    -   [Effectivness is measured in expected life expectancy,
+        quality-adjusted life years (QALYs) or disability-adjusted life
+        years (DALYs), or some decision-relevant health
+        outcome.]{style="font-size: 2vh"}
 
-::: {.column width="50%"}
-::: {style="padding-top: 100px;"}
-$$
-\frac{C_1 - C_0 \quad  (\Delta C)}{E_1 - E_0 \quad  (\Delta E)}
-$$
-:::
-:::
-:::
-:::
+[Most often used, since for most conditions there is already some
+available treatment.]{.bold .accent-text}
+::::
 
 <!-- # Example: Neurologic Disease -->
 
@@ -364,116 +429,157 @@ $$
 
 <!-- - TK -->
 
+## Neurologic Disease Decision Tree {.title-photo-slide}
 
-## Neurologic Disease Decision Tree
-
-
-![](images/cea-example1.png)
-
-## Outcomes
-
--   $C_{treat}$ = expected cost of treat everyone strategy.
--   $C_{no treat}$ = expected cost of treat *no one* strategy.
--   $C_{biopsy}$ = expected cost of biopsy strategy.
+::: photo-container
+![](images/lec6/Neurologic.png)
+:::
 
 ## Outcomes
 
--   $C_{treat}$ = expected cost of treat everyone strategy.
--   $C_{no treat}$ = expected cost of treat *no one* strategy.
--   $C_{biopsy}$ = expected cost of biopsy strategy.
--   $E_{treat}$ = expected life expectancy of treat everyone strategy.
--   $E_{no treat}$ = expected expectancy of treat *no one* strategy.
--   $E_{biopsy}$ = expected expectancy of biopsy strategy.
+:::::: concept-grid
+::: concept-box
+$C_{treat}$ = [expected cost of treat everyone strategy.]{.db-text}
+:::
+
+::: concept-box
+$C_{no treat}$ = [expected cost of treat *no one* strategy.]{.db-text}
+:::
+
+::: concept-box
+$C_{biopsy}$ = [expected cost of biopsy strategy.]{.db-text}
+:::
+::::::
+
+:::::: {.concept-grid .fragment}
+::: {.concept-box .accent}
+$E_{treat}$ = [expected life expectancy of treat everyone
+strategy.]{.db-text}
+:::
+
+::: {.concept-box .accent}
+$E_{no treat}$ = [expected expectancy of treat *no one*
+strategy.]{.db-text}
+:::
+
+::: {.concept-box .accent}
+$E_{biopsy}$ = [expected expectancy of biopsy strategy.]{.db-text}
+:::
+::::::
 
 ## Outcomes in Amua
 
-![](images/outcomes-amua.png){fig-align="center"}
+![](images/lec6/outcomes-amua.png){fig-align="center"}
 
-## Treat All vs. Treat None
+## Strategy: Treat No One
 
-Strategy: Treat No One ![](images/cea-example2.png)
+![](images/lec6/NoTreatOutcomes.png)
 
-## Treat All vs. Treat None
+## Strategy: Treat All
 
-Strategy: Treat All ![](images/cea-example3.png)
+![](images/lec6/TreatOutcomes.png)
 
 ## Key Takeaways (For Now)
 
-::: incremental
+::: {.incremental .icon-bullets}
 -   Treatment yields *higher* life expectancy for those with disease,
-    but comes at a cost.
+    but comes at a cost. (↑ LE, ↑ Cost)
 -   Treatment yields *lower* life expectancy for those without the
-    disease, *and also* comes at a cost.
+    disease, *and also* comes at a cost. (↓ LE, ↑ Cost)
 -   Biopsy can help balance these two outcomes by better targeting
     treatment, but also comes with costs and risks.
 -   Incremental CEA provides a transparent framework for quantifying and
     weighing these considerations.
 :::
 
-## Average Cost-Effectiveness Ratio {.smaller}
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::: definition-box
+::: term
+Average Cost-Effectiveness Ratio
+:::
 
 **Special case where** $C_0$ and $E_0$ are assumed to be zero.
 
-::: columns
-::: {.column width="50%"}
--   $C_1$: net present value of total lifetime costs of new treatment
--   $C_0$: Assumed zero
--   $E_1$: effectiveness of new treatment, measured in expected life
-    expectancy, quality-adjusted life years (QALYs) or
-    disability-adjusted life years (DALYs), or some decision-relevant
-    health outcome.
--   $E_0$: Assumed zero
-:::
-
-::: {.column width="50%"}
-::: {style="padding-top: 50px;"}
 $$
 \begin{aligned}
-ICER &=  \frac{C_1 - 0}{E_1 - 0} \\
+ICER &=  \frac{C_1 - 0}{E_1 - 0}
  &= \frac{C_1}{E_1 }
 \end{aligned}
 $$
+
+-   $C_1$: net present value of total lifetime costs of new treatment
+-   $C_0$: Assumed zero
+-   $E_1$: effectiveness of new treatment
+-   $E_0$: Assumed zero
+    -   [Effectivness is measured in expected life expectancy,
+        quality-adjusted life years (QALYs) or disability-adjusted life
+        years (DALYs), or some decision-relevant health
+        outcome.]{style="font-size: 2vh"}
+::::
+
+## Non-Competing vs. Competing CEAs {.section-slide}
+
+::: section-number
+02
 :::
+
+## Use of CEA in two situations
+
+::: {.card .fragment}
+::: card
+**Shopping Spree**
+
+Decision problem has [non-competing]{.bold .accent-text}
+programs/interventions.
+
+-   Each program is compared to a null alternative
+-   Calculate an "average" cost-effectiveness ratio.
 :::
-:::
 
-# Non-Competing vs. Competing CEAs {background="#43464B"}
+::: {.card .fragment}
+**Competing Choice**
 
-## Use of CEA in two situations {auto-animate="true"}
-
-1.  **Shopping Spree**: Decision problem has non-competing
-    programs/interventions.
-
--   Each program is compared to a null alternative; therefore, you're
-    calculating an "average" cost-effectiveness ratio.
-
-## Use of CEA in two situations {auto-animate="true"}
-
-2.  **Competing Choice**: Decision problem has competing
-    programs/interventions for the same purpose; these choices are
-    mutually exclusive.
+Decision problem has [competing mutually exclusive]{.bold .accent-text}
+programs/ interventions for the same purpose.
 
 -   Two or more active alternatives in addition to the null option.
--   You need to calculate an "incremental cost- effectiveness ratio",
-    which gives us the added cost per unit of added benefit of an
-    option, relative to the next less expensive choice
+-   Calculate an "incremental cost- effectiveness ratio" to get the
+    added cost per unit of added benefit of an option, relative to the
+    next less expensive choice
+:::
+:::::
 
 ## Non-Competing (Shopping Spree) Decision Problem
 
 **How can we measure the relative priority of various health programs
 that compete for limited resources?**
 
-::: incremental
-1.  Cardiovascular disease program
-2.  Safe motherhood program
-3.  HIV prevention initiative
-4.  Child vaccination
-5.  Depression screening
+:::::::: concept-grid
+::: {.concept-box .accent .fragment}
+Cardiovascular disease program
 :::
+
+::: {.concept-box .accent .fragment}
+Safe motherhood program
+:::
+
+::: {.concept-box .accent .fragment}
+HIV prevention initiative
+:::
+
+::: {.concept-box .accent .fragment}
+Child vaccination
+:::
+
+::: {.concept-box .accent .fragment}
+Depression screening
+:::
+::::::::
 
 ## Assumptions
 
-::: incremental
+::: {.icon-bullets .incremental}
 -   Program alternatives are assumed to be independent
 -   Budget constraint is only limitation
 -   Neither the net cost nor the net effectiveness depend on what other
@@ -482,20 +588,34 @@ that compete for limited resources?**
     implemented\]\
 :::
 
-## Objectives: Shopping Spree Problem {background="#c2f0c2"}
+## Objectives: Shopping Spree Problem 
 
 #### {{< fa circle-check >}} Maximize the total net effectiveness (health benefit) of the programs selected.
 
 #### {{< fa circle-check >}} Stay within budget.
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem
 
-::: columns
-::: {.column width="50%"}
-::: incremental
-Step 1: - Rule out programs that cost \$ but have negative health
-effects <br> - Dominated by alternative of "no program"
+:::::::: {.column width="40%"}
+::::::: process-flow
+:::::: step
+::: step-number
+1
 :::
+
+::: step-title
+Remove Dominated Strategies
+:::
+
+::: step-content
+Rule out programs that cost \$ but have negative health effects.
+Dominated by alternative of "no program"
+:::
+::::::
+:::::::
+::::::::
+
+::: {.column width="10%"}
 :::
 
 ::: {.column width="50%"}
@@ -516,39 +636,56 @@ df_ex <-
                            type == "cn_ep" ~ "More effective\nless costly",
                            type == "cp_ep" ~ "More effective\nmore costly"))
 
-  df_ex %>% 
-    filter(type %in% c("cp_en")) %>% 
-    ggplot(aes(x = qalys, y = cost)) + 
-    theme_cea() + 
-    geom_point(size=6, aes(pch=type,colour = type)) +
-    geom_quadrant_lines(linetype = "solid") +
-    #hrbrthemes::theme_ipsum(base_size=16) + 
-    theme(axis.title.x = ggplot2::element_text( size=24, angle=0),
-          axis.title.y = ggplot2::element_text(size = 24,angle=1)) + 
-    scale_x_continuous(limits = c(-max(abs(df_ex$qalys)),max(abs(df_ex$qalys))), breaks = NULL , position="top") + 
-    scale_y_continuous(limits = c(-max(abs(df_ex$cost)),max(abs(df_ex$cost))), breaks = NULL ,position = "right") +
-    labs(x = "Incremental Costs", y = "Incremental Health") + 
-    geom_dl(method = list("smart.grid",hjust=.9,cex=2,vjust=1),aes(label = glue("{label}"))) +
-    theme(legend.position ="none") +
-    scale_shape_manual(values = c(4)) + 
-    scale_colour_manual(values = c("red")) + 
-    geom_label(aes(label=program),size=10)
-
+df_ex %>% 
+  filter(type %in% c("cp_en")) %>% 
+  ggplot(aes(x = qalys, y = cost)) + 
+  theme_cea() + 
+  geom_point(size=6, aes(pch=type,colour = type)) +
+  geom_quadrant_lines(linetype = "solid") +
+  theme(axis.title.x = ggplot2::element_text(size=24, angle=0),
+        axis.title.y = ggplot2::element_text(size=24, angle=1)) + 
+  scale_x_continuous(limits = c(-max(abs(df_ex$qalys)),max(abs(df_ex$qalys))), 
+                     breaks = NULL, position="top") + 
+  scale_y_continuous(limits = c(-max(abs(df_ex$cost)),max(abs(df_ex$cost))), 
+                     breaks = NULL, position = "right") +
+  labs(x = "Incremental Costs", y = "Incremental Health") + 
+  geom_dl(method = list("smart.grid",hjust=.9,cex=2,vjust=1),
+          aes(label = glue("{label}"))) +
+  theme(legend.position = "none", 
+        plot.background = element_rect(fill = "#f2eee4", colour = NA),  # Add colour = NA
+        panel.background = element_rect(fill = "#f2eee4", colour = NA), # Add this
+        panel.border = element_blank(),
+        axis.line = element_blank()) + 
+  scale_shape_manual(values = c(4)) + 
+  scale_colour_manual(values = c("red")) + 
+  geom_label(aes(label=program), size=10)
 
 ```
 :::
+
+## Shopping Spree Problem
+
+:::::::: {.column width="40%"}
+::::::: process-flow
+:::::: step
+::: step-number
+2
 :::
 
-## Shopping Spree Problem {.smaller}
-
-::: columns
-::: {.column width="50%"}
-::: incremental
-Step 2:\
-- Select programs that are cost-saving & offer benefit; net savings can
-also be added to budget <br> - Cost-saving compared to alternative of no
-program
+::: step-title
+Select programs that are cost-saving & offer benefit
 :::
+
+::: {.step-content .incremental .arrow-bullets}
+-   Net savings can also be added to budget
+
+-   Cost-saving compared to alternative of no program
+:::
+::::::
+:::::::
+::::::::
+
+::: {.column width="10%"}
 :::
 
 ::: {.column width="50%"}
@@ -569,7 +706,11 @@ program
   scale_y_continuous(limits = c(-max(abs(df_ex$cost)),max(abs(df_ex$cost))), breaks = NULL ,position = "right") +
   labs(x = "Incremental Costs", y = "Incremental Health") + 
   geom_dl(method = list("smart.grid",hjust=.9,cex=2,vjust=1),aes(label = glue("{label}"))) +
-  theme(legend.position ="none") +
+  theme(legend.position = "none", 
+        plot.background = element_rect(fill = "#f2eee4", colour = NA),  # Add colour = NA
+        panel.background = element_rect(fill = "#f2eee4", colour = NA), # Add this
+        panel.border = element_blank(),
+        axis.line = element_blank()) + 
   scale_shape_manual(values = c(19,4,3)) + 
   scale_colour_manual(values = c("darkgreen","red","blue")) + 
   geom_label(aes(label=program),size = 10)
@@ -577,19 +718,35 @@ program
 
 ```
 :::
+
+## Shopping Spree Problem
+
+:::::::: {.column width="40%"}
+::::::: process-flow
+:::::: step
+::: step-number
+3
 :::
 
-## Shopping Spree Problem {.smaller}
-
-::: columns
-::: {.column width="50%"}
-::: incremental
-Step 3:\
-- Rank other programs in ascending order by their cost-effectiveness
-ratio (lowest to highest) <br> - Programs are then selected from the
-LEAST to the MOST expensive until the budget is expended <br> - Final
-array of programs selected will depend on the budget constraint
+::: step-title
+Rank other programs
 :::
+
+::: {.step-content .incremental .arrow-bullets}
+-   Rank other programs in ascending order by their cost-effectiveness
+    ratio (lowest to highest)
+
+-   Programs are then selected from the LEAST to the MOST expensive
+    until the budget is expended
+
+-   Final array of programs selected will depend on the budget
+    constraint
+:::
+::::::
+:::::::
+::::::::
+
+::: {.column width="10%"}
 :::
 
 ::: {.column width="50%"}
@@ -611,7 +768,11 @@ array of programs selected will depend on the budget constraint
   scale_y_continuous(limits = c(-max(abs(df_ex$cost)),max(abs(df_ex$cost))), breaks = NULL ,position = "right") +
   labs(x = "Incremental Costs", y = "Incremental Health") + 
   #geom_dl(method = list("first.points",hjust=2,cex=2),aes(label = glue("{program}"))) +
-  theme(legend.position ="none") +
+  theme(legend.position = "none", 
+        plot.background = element_rect(fill = "#f2eee4", colour = NA),  # Add colour = NA
+        panel.background = element_rect(fill = "#f2eee4", colour = NA), # Add this
+        panel.border = element_blank(),
+        axis.line = element_blank()) + 
   scale_shape_manual(values = c(3))  + 
   theme_cea() 
   #scale_colour_manual(values = c("blue")) 
@@ -620,13 +781,40 @@ array of programs selected will depend on the budget constraint
 
 ```
 :::
-:::
+
+
 
 ## Shopping Spree Problem {.smaller}
 
-Steps 1 & 2: Rule out dominated options & select cost-saving
-interventions <br>
+::::::::::: {.column width="40%"}
+:::::::::: process-flow
+::::::::: step
+::::: fragment
+::: step-number
+1
+:::
 
+::: step-title
+Rule out dominated options
+:::
+:::::
+
+<br> <br>
+
+::::: fragment
+::: step-number
+2
+:::
+
+::: step-title
+Select cost-saving interventions
+:::
+:::::
+:::::::::
+::::::::::
+:::::::::::
+
+::: {.column .table-compact width="50%"}
 ```{r}
 color.me.red <- which(df_ex$type == "cp_en")
 color.me.green <- which(df_ex$type == "cn_ep")
@@ -648,19 +836,20 @@ df_ex_excl <-
          select(program,cost,qalys,status) %>% 
   na.omit()
 ```
+:::
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem
 
-::: columns
-::: {.column width="50%"}
+:::::: columns
+:::: {.column width="50%"}
 ::: incremental
 -   Initial budget: \$80
--   Budget savings: [\$20]{style="color: #a8d4a7;"}.
--   Total budget: \$80 + [\$20]{style="color: #a8d4a7;"} = \$100
+-   Budget savings: [\$20]{.accent-text}
+-   Total budget: \$80 + [\$20]{.accent-text} = \$100
 :::
-:::
+::::
 
-::: {.column width="50%"}
+::: {.column .table-compact width="50%"}
 ```{r}
 
 color.me.red <- which(df_ex$type == "cp_en")
@@ -678,18 +867,18 @@ df_ex %>%
 
 ```
 :::
-:::
+::::::
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem
 
-::: columns
-::: {.column width="50%"}
+:::::: columns
+:::: {.column .arrow-bullets width="50%"}
 ::: incremental
 -   Calculate average cost-effectiveness ratio.
 :::
-:::
+::::
 
-::: {.column width="50%"}
+::: {.column .table-compact width="50%"}
 ```{r}
 
 df_ex_ <-
@@ -712,17 +901,17 @@ df_ex_ %>%
 
 ```
 :::
-:::
+::::::
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem
 
-::: columns
-::: {.column width="50%"}
+::::: columns
+::: {.column .arrow-bullets width="50%"}
 -   Calculate average cost-effectiveness ratio.
 -   Sort (by C/E) in ascending order .
 :::
 
-::: {.column width="50%"}
+::: {.column .table-compact width="50%"}
 ```{r}
 
 df_ex_ <-
@@ -746,7 +935,7 @@ df_ex_ %>%
 
 ```
 :::
-:::
+:::::
 
 ::: notes
 -   We want to order the RATIOS from lowest to highest for budget
@@ -756,7 +945,7 @@ df_ex_ %>%
 
 ## Shopping Spree Problem
 
-::: incremental
+::: {.arrow-bullets .incremental}
 -   Calculate cumulative costs
 -   Determine what is adoptable based on global budget constraint
     (\$100)
@@ -765,7 +954,7 @@ df_ex_ %>%
 
 ## Shopping Spree Problem {.smaller}
 
-Budget: \$100
+[Budget: \$100]{.bold}
 
 ```{r}
 
@@ -797,7 +986,7 @@ df_ex_ %>%
 
 ## Shopping Spree Problem {.smaller}
 
-Budget: \$100
+[Budget: \$100]{.bold}
 
 ```{r}
 
@@ -842,7 +1031,7 @@ df_ex_[color.me.green,] %>%
 
 ## Shopping Spree Problem {.smaller}
 
-Budget: \$150
+[Budget: \$150]{.bold}
 
 ```{r}
 
@@ -886,7 +1075,7 @@ df_ex_[color.me.green,] %>%
 
 ## Shopping Spree Problem {.smaller}
 
-Budget: \$150
+[Budget: \$150]{.bold}
 
 ```{r}
 color.me.red <- which(df_ex_$in_budget==0)[-1]
@@ -919,7 +1108,7 @@ df_ex_[color.me.green,] %>%
 
 ## Shopping Spree Problem {.smaller}
 
-Budget: \$150
+[Budget: \$150]{.bold}
 
 ```{r}
 df_ex_ %>% 
@@ -965,25 +1154,42 @@ df_ex_[c(color.me.green,color.me.yellow),]  %>%
 
 ## Summary: Shopping Spree Problem
 
-#### {{< fa circle-check >}} Maximize the total net effectiveness (health benefit)
+::: icon-bullets
+-   Maximize the total net effectiveness (health benefit)
 
-#### {{< fa circle-check >}} Stay within budget
-
-#### {{< fa note-sticky >}} Can do the same with other objectives (e.g., Minimize costs, subject decision to 'minimum benefit' constraint, etc.)
-
-## Use of CEA in two situations {auto-animate="true"}
-
-::: {.fragment .highlight-grey}
-1.  **Shopping Spree**: Decision problem has non-competing
-    programs/interventions.
+-   Stay within budget
 :::
 
-## Use of CEA in two situations {auto-animate="true"}
+::: highlight-box
+Can do the same with other objectives (e.g., Minimize costs, subject
+decision to 'minimum benefit' constraint, etc.)
+:::
 
-2.  **Competing Choice**: Decision problem has competing
-    programs/interventions for the same purpose; these choices are
-    mutually exclusive.
+## Use of CEA in two situations
 
+::::: info-cards
+::: card
+**Shopping Spree**
+
+Decision problem has [non-competing]{.bold .accent-text}
+programs/interventions.
+
+-   Each program is compared to a null alternative
+-   Calculate an "average" cost-effectiveness ratio.
+:::
+
+::: {.card .fragment}
+**Competing Choice**
+
+Decision problem has [competing mutually exclusive]{.bold .accent-text}
+programs/ interventions for the same purpose.
+
+-   Two or more active alternatives in addition to the null option.
+-   Calculate an "incremental cost- effectiveness ratio" to get the
+    added cost per unit of added benefit of an option, relative to the
+    next less expensive choice
+:::
+:::::
 ## Objectives: Competing Choice Problem {background="#c2f0c2"}
 
 #### {{< fa circle-check >}} Cannot implement more than one strategy at a time.
@@ -992,8 +1198,8 @@ df_ex_[c(color.me.green,color.me.yellow),]  %>%
 
 ## What's different?
 
-::: columns
-::: {.column width="50%"}
+::::: info-cards
+::: card
 **Shopping Spree**
 
 1.  Can select multiple programs
@@ -1001,15 +1207,15 @@ df_ex_[c(color.me.green,color.me.yellow),]  %>%
 3.  Requires calculation of an *Average Cost-Effectiveness Ratio*
 :::
 
-::: {.column width="50%"}
+::: {.card .fragment}
 **Competing Choice**
 
-1.  [Programs are mutually exclusive.]{style="color: red;"}
+1.  [Programs are mutually exclusive.]{.bold .accent-text}
 2.  Different costs & effects associated with each.
 3.  [Requires calculation of an *Incremental Cost-Effectiveness Ratio*
-    (ICER)]{style="color: red;"}
+    (ICER)]{.bold .accent-text}
 :::
-:::
+:::::
 
 ::: notes
 \(1\) Opioid pharmacotherapy is the recommended treatment for OUD in
@@ -1068,12 +1274,18 @@ fetal outcomes.
     of the tradeoffs just mentioned
 :::
 
-# Incremental CEA {background="black"}
+## Incremental Cost-Effectiveness Analysis {.section-slide}
 
-# 1. Incremental CEA in Pictures
+::: section-number
+03
+:::
 
-## 1. Calculate incremental costs and effects
+# A. Incremental CEA in [Pictures]{.accent-text}
 
+## (1)  Calculate incremental costs and effects
+
+::::: split-content
+::: content-text
 ::: incremental
 -   Often, a strategy capturing current practice ('status-quo', 'do
     nothing', 'natural history') is defined.
@@ -1082,128 +1294,321 @@ fetal outcomes.
 -   Plot the difference in costs and effects with health effects on
     x-axis and cost effects on y-axis.
 :::
+:::
 
-## 1. Calculate cost and effects {.smaller auto-animate="true"}
-
+::: {.content-visual .fragment}
 ![](images/vis_icer1.png){fig-align="center"}
+:::
+:::::
 
-## Identify Dominated Strategies {.smaller auto-animate="true"}
 
-::: nonincremental
+## (2a) Identify Dominated Strategies {.smaller auto-animate="true"}
+
+::::: split-content
+::: content-text
 -   We can rule out any strategies that result in less health at higher
     cost.
 :::
 
-## Identify Dominated Strategies {.smaller auto-animate="true"}
-
+::: {.content-visual .fragment}
 ![](images/vis_icer2.png){fig-align="center"}
+:::
+:::::
 
-## Identify Dominated Strategies {.smaller auto-animate="true"}
+## (2b) Identify Dominated Strategies {.smaller auto-animate="true"}
 
+::::: split-content
+::: content-text
 ::: incremental
 -   We can also rule out strategies where *some other competing
     strategy* results in more (or equal) health at lower (or equal)
     cost.
 -   This is known as "strong" dominance.
 :::
+:::
 
-## Identify Dominated Strategies {.smaller auto-animate="true"}
-
+::: {.content-visual .fragment}
 ![](images/vis_icer3.png){fig-align="center"}
+:::
+:::::
 
-## Identify Dominated Strategies {.smaller auto-animate="true"}
 
+## (2c) Identify Dominated Strategies {.smaller auto-animate="true"}
+
+::::: split-content
+::: content-text
+::: incremental
+-   We can also rule out strategies where *some other competing
+    strategy* results in more (or equal) health at lower (or equal)
+    cost.
+-   This is known as "strong" dominance.
+:::
+:::
+
+::: {.content-visual .fragment}
+![](images/vis_icer3.png){fig-align="center"}
+:::
+:::::
+
+## (2c) Identify Dominated Strategies {.smaller auto-animate="true"}
+
+::::: split-content
+::: content-text
+::: incremental
+-   We can also rule out strategies where *some other competing
+    strategy* results in more (or equal) health at lower (or equal)
+    cost.
+-   This is known as "strong" dominance.
+:::
+:::
+
+::: {.content-visual .fragment}
 ![](images/vis_icer4.png){fig-align="center"}
+:::
+:::::
 
-## What about strategy B? {.smaller auto-animate="true"}
+
+## What about strategy B? {auto-animate="true"}
 
 ![](images/vis_icer5.png){fig-align="center"}
 
 ## Hybrid Strategies
 
+:::split-content
+:::content-text
 ::: incremental
--   Suppose it is feasible to partially implement strategies **A** and
-    **D**.
-    -   For example, we could implement **A** for 90% of the population
-        and **D** for 10% of the population, or vice versa.
+-   Suppose it is feasible to partially implement strategies [A]{.bold .secondary-text} and
+    [D]{.bold .secondary-text} .
+    
 :::
 
-## 90% A, 10% D
+::: {.highlight-box .fragment}
+For example, we could implement [A]{.bold .secondary-text} for [90%]{.bold .accent} of the population and [D]{.bold .secondary-text} for [10%]{.bold .accent}  of the population, or vice versa.
+
+:::
+::: 
+:::{.content-visual .fragment}
+90% A, 10% D
 
 ![](images/vis_icer6a.png){fig-align="center"}
+:::
+:::
 
-## 10% A, 90% D
+## Hybrid Strategies
+
+:::split-content
+:::content-text
+-   Suppose it is feasible to partially implement strategies [A]{.bold .secondary-text} and
+    [D]{.bold .secondary-text} .
+
+::: {.highlight-box}
+For example, we could implement [A]{.bold .secondary-text} for [10%]{.bold .accent} of the population and [D]{.bold .secondary-text} for [90%]{.bold .accent} of the population, or vice versa.
+:::
+:::
+
+:::{.content-visual}
+10% A, 90% D
 
 ![](images/vis_icer6b.png){fig-align="center"}
+:::
+:::
 
-## 50% A, 50% D {.smaller auto-animate="true"}
+## Hybrid Strategies
 
--   Can we make any statements about **B** now?
+:::split-content
+:::content-text
+-   Suppose it is feasible to partially implement strategies [A]{.bold .secondary-text} and
+    [D]{.bold .secondary-text} .
+
+::: {.highlight-box}
+For example, we could implement [A]{.bold .secondary-text} for [50%]{.bold .accent} of the population and [D]{.bold .secondary-text} for [50%]{.bold .accent} of the population, or vice versa.
+:::
+
+:::fragment
+[Can we make any statements about [B]{.secondary-text} now?]{.bold}
+:::
+:::
+
+:::{.content-visual}
+50% A, 50% D
 
 ![](images/vis_icer6c.png){fig-align="center"}
 
-## Extended (Weak) Dominance {.smaller auto-animate="true"}
+:::
+:::
+
+
+
+## Extended (Weak) Dominance {auto-animate="true"}
 
 -   **B** is ruled out by extended ("weak") dominance.
 
-![](images/vis_icer7.png){fig-align="center"}
+::: split-content
 
-## Extended (Weak) Dominance {.smaller auto-animate="true"}
+:::content-visual
+![](images/vis_icer7.png){fig-align="center"}
+:::
+:::{.content-visual .fragment}
 
 ![](images/vis_icer8.png){fig-align="center"}
-
-## Efficiency Frontier {.smaller auto-animate="true"}
-
-::: nonincremental
--   The efficiency frontier is the set of non-dominated strategies.
+:::
 :::
 
-![](images/vis_icer9.png){fig-align="center"}
+##
+:::::::: definition-box
+::: term
+Efficiency Frontier
+:::
 
-## ICERs {.smaller auto-animate="true"}
+::: {.column width="40%"}
+::: definition
+The efficiency frontier is the set of non-dominated strategies.
+:::
+:::
 
--   The slope of a line connecting two points is the incremental
-    cost-effectiveness ratio comparing those strategies. More on this
-    later!
+::: {.column width="60%"}
+::::: example
+::: example-image
+![](images/vis_icer9.png)
+:::
+:::::
+:::
+::::::::
 
+
+##
+:::::::: definition-box
+::: term
+ICERs
+:::
+
+::: {.column width="40%"}
+::: definition
+The slope of a line connecting two points is the incremental
+    cost-effectiveness ratio comparing those strategies. 
+<br><br><br>    
+More on this later!
+:::
+:::
+
+::: {.column width="60%"}
+::::: example
+::: example-image
 ![](images/vis_icer10.png){fig-align="center"}
+:::
+:::::
+:::
+::::::::
 
-# 2. Incremental CEA in Tables
+
+# B. Incremental CEA in [Tables]{.accent-text}
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-</br> </br> </br> </br> </br>
-
-::: {.callout-important appearance="simple"}
+::: {.highlight-box}
+:::box-title
+Notice:
+:::
 Please note that the following example uses different strategies and
 values than the example used in the previous pictures!
 :::
 
-## Incremental CEA {.smaller auto-animate="true"}
+## Steps of Incremental CEA
 
-::: incremental
-1.  Calculate costs and effects for each strategy.
-
-2.  Sort table by costs in ascending order.[^1]
-
-3.  Calculate ICER based on difference in costs and effects.
-
-4.  Determine dominated strategies (ICER\<0).
-
-5.  Re-calculate ICERs after eliminating dominated strategies.
-
-6.  Determine strategies ruled out by extended dominance.
-
-7.  Re-calculate ICERs after ruling out all dominated strategies.
-
-8.  Repeat 5-7 as needed.
+::::::::::::::: process-flow
+:::::: step
+::: step-number
+1
 :::
 
+::: step-content
+Calculate costs and effects for each strategy.
+:::
+::::::
+
+:::::: step
+::: step-number
+2
+:::
+
+
+::: step-content
+Sort table by costs in ascending order.[^1]
+:::
+::::::
+
+:::::: step
+::: step-number
+3
+:::
+
+::: step-content
+Calculate ICER based on difference in costs and effects.
+:::
+::::::
+
+:::::: step
+::: step-number
+4
+:::
+
+
+::: step-content
+Determine dominated strategies (ICER\<0).
+:::
+::::::
+
+:::::::::::::::
+
+::::::::::::::: process-flow
+:::::: step
+::: step-number
+5
+:::
+
+::: step-content
+Re-calculate ICERs after eliminating dominated strategies.
+:::
+::::::
+
+:::::: step
+::: step-number
+6
+:::
+
+::: step-content
+Determine strategies ruled out by extended dominance.
+:::
+::::::
+
+:::::: step
+::: step-number
+7
+:::
+
+::: step-content
+Determine strategies ruled out by extended dominance.
+:::
+::::::
+
+:::::: step
+::: step-number
+8
+:::
+
+::: step-content
+Repeat 5-7 as needed.
+:::
+::::::
+
+
+:::::::::::::::
 [^1]: Least costly first, most costly last
+
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 [1. Calculate costs and effects for each strategy.]{.fragment
 .highlight-red}
@@ -1211,7 +1616,7 @@ values than the example used in the previous pictures!
 
 ::: {.column width="50%"}
 :::
-:::
+:::::
 
 ```{r}
 df %>% kable(col.names = c("Strategy","Cost","QALYs"),format.args = list(big.mark = ","),digits = 3) %>% 
@@ -1220,7 +1625,7 @@ df %>% kable(col.names = c("Strategy","Cost","QALYs"),format.args = list(big.mar
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1230,7 +1635,7 @@ df %>% kable(col.names = c("Strategy","Cost","QALYs"),format.args = list(big.mar
 
 ::: {.column width="50%"}
 :::
-:::
+:::::
 
 [^2]: [Least costly first, most costly last]{.fragment .highlight-red}
 
@@ -1241,7 +1646,7 @@ df_s %>% kable(col.names = c("Strategy","Cost","QALYs"),format.args = list(big.m
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1253,7 +1658,7 @@ df_s %>% kable(col.names = c("Strategy","Cost","QALYs"),format.args = list(big.m
 
 ::: {.column width="50%"}
 :::
-:::
+:::::
 
 [^3]: Least costly first, most costly last
 
@@ -1265,7 +1670,7 @@ df_i2 %>% select(-status) %>% kable(col.names = c("Strategy","Cost","dCost","QAL
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1277,7 +1682,7 @@ df_i2 %>% select(-status) %>% kable(col.names = c("Strategy","Cost","dCost","QAL
 ::: {.column width="50%"}
 [4. Determine dominated strategies (ICER\<0)]{.fragment .highlight-red}
 :::
-:::
+:::::
 
 [^4]: Least costly first, most costly last
 
@@ -1287,6 +1692,14 @@ df_i2 %>% select(-status) %>% kable(col.names = c("Strategy","Cost","dCost","QAL
 #   kable_styling() %>%
 #   row_spec(color.me, bold = T, color = "black", background = "#FCD2CA")
 ```
+
+## Dominance & extended dominance {.section-slide}
+
+::: section-number
+04
+:::
+
+
 
 ## Determining Dominated Strategies {.smaller auto-animate="true"}
 
@@ -1308,16 +1721,23 @@ df_i2  %>%
   row_spec(color.me, bold = T, color = "black", background = "#FCD2CA")
 ```
 
-## Determining Dominated Strategies {.smaller auto-animate="true"}
+##
 
-::: incremental
--   **Strong dominance** refers to situations where one strategy is
-    preferred over another on both costs and health effects (e.g.,
-    QALYs).
--   When we identify a strongly dominated option, we remove it from the
-    table and re-calculate ICERS based on the remaining strategies.
+:::::::: definition-box
+::: term
+Strong dominance
 :::
 
+::: definition
+Situations where one strategy is preferred over another on both costs and health effects (e.g., QALYs).
+:::
+
+::::: example
+
+::: example-text
+When we identify a strongly dominated option, we remove it from the table and re-calculate ICERS based on the remaining strategies.
+:::
+:::{.table-compact}
 ```{r}
 color.me <- which(df_i2$status == "Dominated")
 df_i2  %>% 
@@ -1325,9 +1745,16 @@ df_i2  %>%
   kable_styling() %>%
   row_spec(color.me, bold = T, color = "black", background = "#FCD2CA")
 ```
+:::
+:::::
+::::::::
+
 
 ## A Brief Aside on Negative ICERs
 
+:::split-content
+::: content-text
+::: arrow-bullets
 -   We want to rule out strategies that cost *more* but result in less
     health.
     -   This implies a negative ICER.
@@ -1335,19 +1762,29 @@ df_i2  %>%
     -   Strategy adds health but reduces costs.
     -   This is a great strategy!
 
-## Both Strategies Have a Negative ICER
+:::
+:::
 
+::: {.content-visual .fragment}
 ![](images/vis_icer-negative.png){fig-align="center"}
+:::
+:::
+
 
 ## A Brief Aside on Negative ICERs
 
+:::{.highlight-box}
 -   For this reason, it is poor practice to report negative ICERs.
+
+
 -   Be careful when deleting a strategy becuase it has a negative ICER!
     -   It may be a great strategy!
 
+:::
+
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1359,7 +1796,7 @@ df_i2  %>%
 ::: {.column width="50%"}
 [4. Determine dominated strategies (ICER\<0)]{.fragment .highlight-red}
 :::
-:::
+:::::
 
 [^5]: Least costly first, most costly last
 
@@ -1372,7 +1809,7 @@ df_i2  %>% kable(col.names = c("Strategy","Cost","dCost","QALYs","dQALYs","ICER"
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1387,7 +1824,7 @@ df_i2  %>% kable(col.names = c("Strategy","Cost","dCost","QALYs","dQALYs","ICER"
 [5. Re-calculate ICERs after eliminating dominated
 strategies.]{.fragment .highlight-red}
 :::
-:::
+:::::
 
 [^6]: Least costly first, most costly last
 
@@ -1403,7 +1840,7 @@ df_i2  %>% mutate(d_cost = ifelse(status %in% c("Dominated","Dominated (Extended
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1417,7 +1854,7 @@ df_i2  %>% mutate(d_cost = ifelse(status %in% c("Dominated","Dominated (Extended
 
 5.  Re-calculate ICERs after eliminating dominated strategies.
 :::
-:::
+:::::
 
 [^7]: Least costly first, most costly last
 
@@ -1471,7 +1908,7 @@ df_i3  %>%
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 1.  Calculate costs and effects for each strategy.
 
@@ -1488,7 +1925,7 @@ df_i3  %>%
 [6. Determine strategies ruled out by extended dominance.]{.fragment
 .highlight-red}
 :::
-:::
+:::::
 
 [^8]: Least costly first, most costly last
 
@@ -1502,7 +1939,7 @@ df_i3  %>%
 
 ## Incremental CEA {.smaller auto-animate="true"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 [7. Re-calculate ICERs after ruling out all dominated
 strategies.]{.fragment .highlight-red}
@@ -1510,7 +1947,7 @@ strategies.]{.fragment .highlight-red}
 
 ::: {.column width="50%"}
 :::
-:::
+:::::
 
 ```{r}
 color.me <- grep("Dominated",df_i4$status)
@@ -1592,6 +2029,14 @@ df %>%
 ```
 :::
 
+
+## Dominance & extended dominance {.section-slide}
+
+::: section-number
+04
+:::
+
+
 ## Determine dominated strategies {.smaller}
 
 ::: {style="font-size: 0.7em"}
@@ -1616,8 +2061,14 @@ df1 %>%
   row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA")
 ```
 :::
+## 
 
-# Remove dominated strategies and recalculate
+:::concept-grid
+:::{.concept-box .accent style="font-size: 3em"}
+Remove dominated strategies and recalculate
+:::
+:::
+
 
 ## Determine dominated strategies {.smaller}
 
@@ -1669,9 +2120,14 @@ df2 %>%
 ```
 :::
 
-# Remove dominated strategies and recalculate
+## 
 
-## Determine dominated strategies {.smaller}
+:::concept-grid
+:::{.concept-box .accent style="font-size: 3em"}
+Remove dominated strategies and recalculate
+:::
+:::
+
 
 ## Determine dominated strategies {.smaller}
 
@@ -1753,6 +2209,12 @@ df4 %>%
 ```
 :::
 
+## Comparators {.section-slide}
+
+::: section-number
+05
+:::
+
 ## A note on COMPARATORS
 
 ![](images/comparator1.png){width="564"}
@@ -1785,9 +2247,16 @@ df4 %>%
 -   What CEA cannot tell us is HOW TO SPEND
 :::
 
+## CEA thresholds {.section-slide}
+
+::: section-number
+06
+:::
+
+
 ## CEA Thresholds
 
-::: incremental
+::: {.arrow-bullets .incremental}
 -   So now we have our ICERs, but how do we make a decision?
 -   We must define a **threshold** ($\lambda$), or an ICER value that
     determines whether or not we implement a given strategy.
@@ -1798,7 +2267,7 @@ df4 %>%
 
 What are common thresholds and how are they determined?
 
-::: incremental
+::: {.arrow-bullets .incremental}
 -   In high income countries, common thresholds are \$50,000/QALY,
     \$100,000/QALY, and \$100,000/QALY.
 -   In LMICs, 0.5-3x per capita gross domestic product (GDP) per DALY
@@ -1903,11 +2372,9 @@ Europe) - "demand-side" (US) - per capita consumption (US/LMICs)
 
 <br>
 
-::: incremental
+::: {.icon-bullets .incremental}
 -   Decision should be informed by the value of what will be given up as
-    a consequence of those cost.
-
-    -   Known as the "opportunity cost."
+    a consequence of those cost. Known as the "opportunity cost."
 
 -   If resources are committed to the funding of one intervention, then
     they are not available to fund and deliver others **(shopping spree
@@ -1916,10 +2383,10 @@ Europe) - "demand-side" (US) - per capita consumption (US/LMICs)
 -   The opportunity cost of a commitment of resources is the health
     forgone because these "other" interventions that are available to
     the health system cannot be delivered.
-
--   Source: See K Claxton on the estimation of the NICE threshold in the
-    UK / Woods et al, & others
 :::
+
+[Source: See K Claxton on the estimation of the NICE threshold in the
+    UK / Woods et al, & others]{style="font-size:2vh"}
 
 ## Opportunity cost ("supply-side") {.smaller}
 
@@ -1950,16 +2417,12 @@ Europe) - "demand-side" (US) - per capita consumption (US/LMICs)
 
 <br>
 
-::: {style="font-size: 0.8em"}
-> If you don't consider the budget under which you are operating, then
-> some medications could take up half the budget and displace
-> interventions that produce significant health gain OR in the US, could
-> increase premiums or take away \$\$ from other sectors
+::: {.highlight-box .secondary}
+If you don't consider the budget under which you are operating, then some medications could take up half the budget and displace interventions that produce significant health gain OR in the US, could increase premiums or take away \$\$ from other sectors
+:::
 
-> Academics have argued that the threshold should be lower/on the more
-> conservative end for higher priced therapies (NICE uses a budget
-> impact threshold of 20,000 GBP/QALY for these higher priced therapies
-> as opposed to 30,000 GBP/QALY for others)
+::: {.highlight-box .secondary}
+Academics have argued that the threshold should be lower/on the more conservative end for higher priced therapies (NICE uses a budget impact threshold of 20,000 GBP/QALY for these higher priced therapies as opposed to 30,000 GBP/QALY for others)
 :::
 
 ## Willingness to pay ("demand-side")
@@ -2017,7 +2480,7 @@ Europe) - "demand-side" (US) - per capita consumption (US/LMICs)
 
 <br>
 
-::: incremental
+::: {.icon-bullets-triangle .incremental}
 -   Past WHO guidelines recommended countries use following guidelines:
     An intervention is cost-effective if cost/DALY averted is less than
     1-3X per capita GDP of country
@@ -2093,13 +2556,69 @@ df4 %>%
 ```
 :::
 
-## HIV Example from Earlier {.smaller}
+## HIV Example From Earlier {.smaller}
 
-<br>
+:::::::: {.column width="20%"}
+[If our CE threshold was 2x GDP (GDP = \$2,500), which option would
+    we choose as decision makers?]{.fragment}
+    <br><br>
 
--   If our CE threshold was 2x GDP (GDP = \$2,500), which option would
-    we choose as decision makers?
--   If our CE threshold was 1x GDP (GDP = \$2,500), which option would
-    we choose as decision makers?
+[If our CE threshold was 1x GDP (GDP = \$2,500), which option would
+    we choose as decision makers?]{.fragment}
+::::::::
 
-# Next: ICER Case Study {background="#43464B"}
+:::::::: {.column width="80%"}
+
+::: {.table-compact}
+```{r}
+df4 <- 
+  df3 %>%
+  bind_rows(df1 %>%
+              group_by(status) %>%
+              nest()  %>%
+              filter(status != "") %>%
+              unnest(cols = c(data))) %>%
+ bind_rows(df2 %>%
+              group_by(status) %>%
+              nest()  %>%
+              filter(status != "") %>%
+              unnest(cols = c(data))) %>%  
+  mutate(cost_per_daly_averted = ifelse(status=="",cost_per_daly_averted,NA)) %>% 
+  select(Strategy, iCost, DALYs_averted, cost_per_daly_averted, status)
+
+color.me.red <- which(df4$status == "Dominated (Strong)" | df4$status == "Dominated (Extended)")
+
+df4 %>% 
+  mutate(cost_per_daly_averted = round(cost_per_daly_averted,0)) %>% 
+  kable(col.names = c("Strategy","Incremental Cost","DALYs Averted", "Incremental Cost per DALY Averted", "Status"),format.args = list(big.mark = ",")) %>%
+  kable_styling() %>% 
+  row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") 
+
+```
+:::
+::::::::
+
+## {.summary-end-slide}
+
+::::: summary-circle
+::: end-title
+Key Takeaways
+:::
+
+::: end-subtitle
+Benefits
+:::
+
+<ul class="key-points">
+<li>X</li>
+<li>X</li>
+<li>X</li>
+<li>X</li>
+</ul>
+:::::
+
+## Questions? {.questions-slide}
+
+::: next-info
+Next Lecture: <strong>Markov Models</strong>
+:::

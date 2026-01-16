@@ -88,7 +88,7 @@ Workshop objectives
 :::
 :::::
 
-::: {style="font-size: 1.0em"}
+::: {style="font-size: 1.0em; text-align:center;"}
 <https://geratcliff.github.io/vital-2026-Cebu/>
 :::
 
@@ -339,7 +339,7 @@ All 50 expected deaths occur from "natural causes" (i.e. unpreventable birth def
 \[Leech AA, 2024\]
 :::
 
-![](images/lec1ex4-oud-tradeoffs.png){width="395"}
+![](images/lec1/ex4-oud-tradeoffs.png){width="395"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
@@ -347,7 +347,7 @@ All 50 expected deaths occur from "natural causes" (i.e. unpreventable birth def
 \[Leech AA, 2024\]
 :::
 
-![](images/lec1oud-schematic-2.png){width="420"}
+![](images/lec1/oud-schematic-2.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
@@ -355,7 +355,7 @@ All 50 expected deaths occur from "natural causes" (i.e. unpreventable birth def
 \[Leech AA, 2024\]
 :::
 
-![](images/lec1oud-methods.png){width="420"}
+![](images/lec1/oud-methods.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 
@@ -363,7 +363,7 @@ All 50 expected deaths occur from "natural causes" (i.e. unpreventable birth def
 \[Leech AA, 2024\]
 :::
 
-![](images/lec1ceac.png){width="420"}
+![](images/lec1/ceac.png){width="420"}
 
 ## Ex 3. Opioid/substance use in pregnancy
 

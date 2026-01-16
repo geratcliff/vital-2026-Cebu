@@ -26,7 +26,7 @@ library(tidyr)
 
 Due to the workshop only being 5 days, we kindly ask that you do some pre-work before arriving to the workshop to ensure that you are able to make ample progress on your capstone.
 
-[Get Started](capstone/prework.qmd)
+[Get Started](prework.qmd)
 
 # Schedule
 
@@ -38,13 +38,13 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 |------------------------|------------------------|------------------------|
 | 08:00 - 8:45 | Check-Ins | Registration and Introductions |
 | 08:45 - 9:30 | Lecture | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.qmd) |
-| 10:00 - 10:30 | Case Study | [Identifying Strategy Differences](CaseStudy_Intro.qmd) |
+| 10:00 - 10:30 | Case Study | [Identifying Strategy Differences](case-studies/CaseStudy_Intro.qmd) |
 | 10:30 - 10:50 | Break | Coffee/Tea |
 | 10:50 - 12:00 | Lecture | [Decision Trees](lectures/lec_2.decision-trees-and-probabilities.qmd) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 13:55 | Capstone | Example Presentation |
 | 13:55 - 14:55 | Capstone | Discuss Decision Problem \[Small Groups\] |
-| 14:55 -15:40 | Case Study | [Introduction to AMUA](CaseStudy_AMUA.qmd) |
+| 14:55 -15:40 | Case Study | [Introduction to AMUA](case-studies/CaseStudy_AMUA.qmd) |
 | 15:40-16:30 | Lecture | [CEA Fundamentals 1: Costs](lectures/lec_5a.cea-fundamentals1.qmd) |
 | 16:30 | Check-Ins | Daily Recap & Discussion |
 

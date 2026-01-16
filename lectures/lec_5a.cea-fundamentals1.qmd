@@ -2,10 +2,14 @@
 title: "CEA Fundamentals: Valuing Costs"
 format:
   revealjs:
-    theme: slides.scss
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.05      # Minimal margins for max space
+    center: true     # Vertically center content
     incremental: false
     slide-number: true
-    logo: ../vchem.png
+    logo: images/logos.png 
     html-math-method: katex
     transition: fade
     background-transition: fade
@@ -19,10 +23,15 @@ editor:
     wrap: 72
 ---
 
-# Learning Objectives and Outline
+## Learning Objectives and Outline {.section-slide}
+
+::: section-number
+00
+:::
 
 ## Learning Objectives
 
+::: arrow-bullets
 -   Identify theoretical and methodological differences between
     different economic evaluation techniques
 
@@ -30,47 +39,84 @@ editor:
 
 -   Describe the steps of valuing costs in economic evaluations &
     identify ways to curate cost parameters
+:::
 
-## Outline
+## Outline {.numbered-list-slide}
 
-<br>
+::::::::::::::: number-list
+::::: list-item
+::: number
+01
+:::
 
-1.  Introduction to economic evaluations
-2.  Valuing costs
+::: text
+Introduction to economic evaluations
+:::
+:::::
 
-# Introduction to economic evluations {background="#43464B"}
+::::: list-item
+::: number
+02
+:::
+
+::: text
+CEAs: Identifying Alternatives
+:::
+:::::
+
+::::: list-item
+::: number
+03
+:::
+
+::: text
+Valuing Costs
+:::
+:::::
+
+::::: list-item
+::: number
+04
+:::
+
+::: text
+Data Collection
+:::
+:::::
+:::::::::::::::
+
+## Introduction to Economic Evaluations {.section-slide}
+
+::: section-number
+01
+:::
 
 ## So far... {background="#43464B"}
 
 We've touched on the basic framework for decision analysis, focusing on:
 <br>
 
-::: {.callout-note appearance="simple"}
-Decision trees & probabilities
+::: icon-bullets
+-   Decision trees & probabilities
+
+-   Bayes theorem & probability revision
+
+-   Constructing decision trees using Amua
 :::
 
-::: {.callout-note appearance="simple"}
-Bayes theorem & probability revision
-:::
+## Now... {background="#43464B"}
 
-::: {.callout-note appearance="simple"}
-Constructing decision trees using Amua
-:::
-
-## Today... {background="#43464B"}
-
-<br>
-
--   We will touch on some of the core concepts for representing [costs
-    and health benefits]{style="color: #FF8966;"} within decision
-    problems
+We will start to touch on some of the core concepts for representing
+[costs and health benefits]{.bold .secondary-text} within decision
+problems.
 
 ::: notes
 :::
 
-## Economic Evaluation
+## Economic Evaluation {.split-wrapper}
 
-::: {style="font-size: 0.8em"}
+:::::: split-content
+:::: content-text
 ::: incremental
 -   Relevant when decision alternatives have different costs and health
     consequences.
@@ -80,31 +126,28 @@ Constructing decision trees using Amua
 
 -   This can help us make resource allocation decisions in the face of
     constraints (e.g., budget).
+:::
+::::
 
-![](images/noun-cost-and-benefit-4664704.jpeg){.fragment
-fig-align="center" width="255"}
+::: content-visual
+![](/images/lec5a/balance.png)
+
+*Balancing \$\$ and Health Outcomes*
 :::
-:::
+::::::
 
 ## Features of Economic Evaluation
 
-::: nobullet
--   {{< fa check-circle >}} Systematic quantification of costs and
-    consequences.
-
-::: {.fragment .fade-in-then-semi-out}
--   {{< fa check-circle >}} Comparative analysis of alternative courses
-    of action.
-:::
+::: {.icon-bullets .incremental}
+-   Systematic quantification of costs and consequences.
+-   Comparative analysis of alternative courses of action.
 :::
 
 ## Techniques for Economic Evaluation {.smaller}
 
-<br>
-
 | Type of study | Measurement/valuation of costs | Identification of consequences | Measurement / valuation of consequences |
 |------------------|------------------|------------------|-------------------|
-| Cost analysis | Monetary units                 | None                           | None                                    |
+| Cost analysis | Monetary units | None | None |
 
 ::: footer
 Source: [@drummond2015a]
@@ -112,25 +155,26 @@ Source: [@drummond2015a]
 
 ## Cost analysis
 
+::: icon-bullets-triangle
 -   Only looks at healthcare costs
 
 -   Relevant when alternative options are equally effective (provide
-    equal benefits)
-
-    -   Rarely the case in reality!
+    equal benefits). [Rarely the case in reality!]{.bold
+    .secondary-text}
 
 -   Costs are valued in monetary terms (e.g., U.S. dollars)
 
 -   Decision criterion: often to minimize cost
+:::
 
 ## Techniques for Economic Evaluation {.smaller}
 
 <br>
 
-| Type of study                         | Measurement/Valuation of costs         | Identification of consequences                                                             | Measurement / valuation of consequences                                                                  |
+| Type of study | Measurement/Valuation of costs | Identification of consequences | Measurement / valuation of consequences |
 |------------------|------------------|------------------|-------------------|
-| [Cost analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [None]{style="color: grey;"}                                                               | [None]{style="color: grey;"}                                                                             |
-| Cost-effectiveness analysis           | Monetary units                         | Single effect of interest, common to both alternatives, but achieved to different degrees. | Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.) |
+| [Cost analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [None]{style="color: grey;"} | [None]{style="color: grey;"} |
+| Cost-effectiveness analysis | Monetary units | Single effect of interest, common to both alternatives, but achieved to different degrees. | Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.) |
 
 ::: footer
 Source: [@drummond2015a]
@@ -138,37 +182,53 @@ Source: [@drummond2015a]
 
 ## Cost-Effectiveness Analysis (CEA)
 
-::: {.callout-tip appearance="minimal"}
 Most useful when decision makers consider multiple options within a
 budget, and the relevant outcome is common across strategies
+
+:::::: info-cards
+::: card
+**Costs**
+
+Costs are valued in monetary terms (\$)
 :::
 
--   Costs are valued in monetary terms (\$)
--   Benefits are valued in terms of clinical outcomes (e.g., cases
-    prevented or cured, lives saved, years of life gained)
--   Results reported as a cost-effectiveness ratio
+::: card
+**Benefits**
 
-## Cost-Effectiveness Analysis
+Benefits are valued in terms of clinical outcomes (e.g., cases
+prevented, lives saved, years of life gained)
+:::
 
-::: incremental
--   Suppose we are interested in the prolongation of life after an
-    intervention.
+::: card
+**Results**
 
--   Outcome of interest: life-years gained.
+Results reported as a cost-effectiveness ratio
+:::
+::::::
 
+## Cost-Effectiveness Analysis Example
+
+:::: {.highlight-box .secondary}
+::: box-title
+Life Extension Example
+:::
+
+Suppose we are interested in the prolongation of life after an
+intervention:
+
+-   **Outcome of interest:** life-years gained
 -   The outcome is common to alternative strategies; they differ only in
-    the magnitude of life-years gained.
-
--   We can report results in terms of \$/Life-years gained
-:::
+    the magnitude of life-years gained
+-   **Results reported as:** \$/Life-years gained
+::::
 
 ## Techniques for Economic Evaluation {.smaller}
 
-| Type of study                                       | Measurement/Valuation of costs both alternative | Identification of consequences                                                                                     | Measurement / valuation of consequences                                                                                          |
+| Type of study | Measurement/Valuation of costs both alternative | Identification of consequences | Measurement / valuation of consequences |
 |------------------|------------------|------------------|-------------------|
-| [Cost analysis]{style="color: grey;"}               | [Monetary units]{style="color: grey;"}          | [None]{style="color: grey;"}                                                                                       | [None]{style="color: grey;"}                                                                                                     |
-| [Cost-effectiveness analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"}          | [Single effect of interest, common to both alternatives, but achieved to different degrees.]{style="color: grey;"} | [Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.)]{style="color: grey;"} |
-| Cost-utility analysis                               | Monetary units                                  | Single or multiple effects, not necessarily common to both alternatives.                                           | Healthy years (typically measured as quality-adjusted life-years)                                                                |
+| [Cost analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [None]{style="color: grey;"} | [None]{style="color: grey;"} |
+| [Cost-effectiveness analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [Single effect of interest, common to both alternatives, but achieved to different degrees.]{style="color: grey;"} | [Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.)]{style="color: grey;"} |
+| Cost-utility analysis | Monetary units | Single or multiple effects, not necessarily common to both alternatives. | Healthy years (typically measured as quality-adjusted life-years) |
 
 ::: footer
 Source: [@drummond2015a]
@@ -176,9 +236,10 @@ Source: [@drummond2015a]
 
 ## Cost-Utility Analysis
 
-::: incremental
+::: {.icon-bullets-triangle .incremental}
 -   Essentially a variant of cost-effectiveness analysis.
--   **Major feature:** use of summary measure of health: **QALY**.
+-   [Major feature:]{.bold .secondary-text} use of summary measure of
+    health: [QALY.]{.bold .secondary-text}
 -   Quality-Adjusted Life Year (QALY): A metric that reflects both
     changes in life expectancy and quality of life (pain, function, or
     both).
@@ -188,56 +249,59 @@ Source: [@drummond2015a]
 ## Techniques for Economic Evaluation {.smaller}
 
 ::: {style="font-size: 0.8em"}
-| Type of study                                       | Measurement/Valuation of costs both alternative | Identification of consequences                                                                                     | Measurement / valuation of consequences                                                                                          |
+| Type of study | Measurement/Valuation of costs both alternative | Identification of consequences | Measurement / valuation of consequences |
 |------------------|------------------|------------------|-------------------|
-| [Cost analysis]{style="color: grey;"}               | [Monetary units]{style="color: grey;"}          | [None]{style="color: grey;"}                                                                                       | [None]{style="color: grey;"}                                                                                                     |
-| [Cost-effectiveness analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"}          | [Single effect of interest, common to both alternatives, but achieved to different degrees.]{style="color: grey;"} | [Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.)]{style="color: grey;"} |
-| [Cost-utility analysis]{style="color: grey;"}       | [Monetary units]{style="color: grey;"}          | [Single or multiple effects, not necessarily common to both alternatives.]{style="color: grey;"}                   | [Healthy years (typically measured as quality-adjusted life-years)]{style="color: grey;"}                                        |
-| Cost-benefit analysis                               | Monetary units                                  | Single or multiple effects, not necessarily common to both alternatives                                            | **Monetary units**                                                                                                               |
+| [Cost analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [None]{style="color: grey;"} | [None]{style="color: grey;"} |
+| [Cost-effectiveness analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [Single effect of interest, common to both alternatives, but achieved to different degrees.]{style="color: grey;"} | [Natural units (e.g., life-years gained, disability days saved, points of blood pressure reduction, etc.)]{style="color: grey;"} |
+| [Cost-utility analysis]{style="color: grey;"} | [Monetary units]{style="color: grey;"} | [Single or multiple effects, not necessarily common to both alternatives.]{style="color: grey;"} | [Healthy years (typically measured as quality-adjusted life-years)]{style="color: grey;"} |
+| Cost-benefit analysis | Monetary units | Single or multiple effects, not necessarily common to both alternatives | **Monetary units** |
 :::
 
 ## Cost-Benefit Analysis {.smaller}
 
+::: {.icon-bullets-triangle .incremental}
 -   Also known as Benefit-Cost Analysis
 -   Relevant for resource allocation between health care and other areas
     (e.g., education)
--   **Costs and health consequences are valued in monetary terms (e.g.,
-    U.S. dollars)**
+-   [Costs and health consequences are valued in monetary terms (e.g.,
+    U.S. dollars)]{.bold .secondary-text}
 -   Valuation of health consequences in monetary terms (\$) is obtained
     by estimating individuals willingness to pay for life saving or
-    health improving interventions.
-    -   e.g. US estimate of value per statistical life \~\$9 million
--   Cost-benefit criterion: the benefits of a program \> its costs
-    -   [Notice that we're not making comparisons *across*
-        strategies--only comparisons of costs and benefits for the same
-        strategy]{style="background-color: yellow;"}
--   To read more: [Robinson et al,
-    2019](https://www.cambridge.org/core/product/identifier/S2194588819000046/type/journal_article)
+    health improving interventions. (e.g. US estimate of value per
+    statistical life \~\$9 million)
+-   Cost-benefit criterion: the benefits of a program \> its costs <br>
+    [Notice that we're not making comparisons *across* strategies--only
+    comparisons of costs and benefits for the same strategy]{.highlight}
+:::
+
+To read more: [Robinson et al,
+2019](https://www.cambridge.org/core/product/identifier/S2194588819000046/type/journal_article)
 
 ## Cost-Benefit Analysis
 
-![https://pubmed.ncbi.nlm.nih.gov/28183740/](images/paste-8DC909EB.png)
+![https://pubmed.ncbi.nlm.nih.gov/28183740/](images/lec5a/CBA_1.png)
 
 ## Cost-Benefit Analysis
 
-![https://www.cambridge.org/core/product/identifier/S2194588818000271/type/journal_article](images/paste-3B67CFB1.png)
+![https://www.cambridge.org/core/product/identifier/S2194588818000271/type/journal_article](images/lec5a/CBA_2.png)
 
-## Back to Cost-Effectiveness Analysis!
+# Back to [Cost-Effectiveness Analysis]{.accent-text}!
 
-<br>
+## Cost-Effectiveness Analysis Formula
 
--   Relevant when healthcare alternatives have different costs & health
-    consequences <br>
+:::: highlight-box
+::: box-title
+The CEA Formula
+:::
 
-<div>
+Relevant when healthcare alternatives have different costs & health
+consequences
 
 $$\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) - Benefit (B)}}$$
 
-</div>
-
--   Relative VALUE of an intervention in comparison to its alternative
-    is expressed as a cost-effectiveness RATIO (the focus of next
-    lecture!)
+Relative VALUE of an intervention in comparison to its alternative is
+expressed as a cost-effectiveness RATIO
+::::
 
 ::: notes
 (1) Cost-effectiveness analysis is relevant when healthcare alternatives
@@ -262,42 +326,52 @@ $$\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) 
     hopefully contribute to better decision making
 :::
 
-## Who uses economic evaluations? {.smaller}
+## Who uses economic evaluations?
 
-::: {style="font-size: 0.8em"}
-::: fragment
--   Health Technology Advisory Committees
-
-    -   NICE (The National Institute for Health and Care Excellence,
-        **UK**)
-
-    -   **Canada**'s Drug and Health Technology Agency
-
-    -   PBAC (Pharmaceutical Benefits Advisory Committee in
-        **Australia**)
-
-    -   **Brazil**'s health technology assessment institute
+:::::::::::: comparison-table
+::::: {.comparison-column .fragment}
+::: column-header
+Health Technology Advisory Committees
 :::
 
-::: fragment
--   Groups developing clinical guidelines
+::: {.column-content style="font-size: 0.7em"}
+-   NICE (The National Institute for Health and Care Excellence, **UK**)
 
-    -   WHO
+-   **Canada**'s Drug and Health Technology Agency
 
-    -   CDC
+-   PBAC (Pharmaceutical Benefits Advisory Committee in **Australia**)
 
-    -   Disease-specific organizations: American Cancer Society;
-        American Heart Association; European Stroke Organisation
+-   **Brazil**'s health technology assessment institute
+:::
+:::::
+
+::::: {.comparison-column .fragment}
+::: column-header
+Groups developing clinical guidelines
 :::
 
-::: fragment
--   Regulatory agencies:
+::: {.column-content style="font-size: 0.7em"}
+-   WHO
 
-    -   FDA (U.S. Food and Drug Administration)
+-   CDC
 
-    -   EPA (U.S. Environmental Protection Agency)
+-   Disease-specific organizations: American Cancer Society; American
+    Heart Association; European Stroke Organisation
 :::
+:::::
+
+::::: {.comparison-column .fragment}
+::: {.column-header style="min-height: 3em;"}
+Regulatory agencies
 :::
+
+::: {.column-content style="font-size: 0.7em"}
+-   FDA (U.S. Food and Drug Administration)
+
+-   EPA (U.S. Environmental Protection Agency)
+:::
+:::::
+::::::::::::
 
 ::: notes
 When we look at how cost-effectiveness is used around the world --
@@ -325,31 +399,56 @@ drugs & devices -- some of which include:
 (4) Groups developing clinical guidelines around CEA, includes...
 :::
 
-# CEAs: Identifying Alternatives
+## CEAs: Identifying Alternatives {.section-slide}
+
+::: section-number
+02
+:::
 
 ## Identifying Alternatives {.smaller}
 
-::: incremental
--   Decision modeling / economic evaluation requires identifying
-    strategies or alternative courses of action.
+Decision modeling / economic evaluation requires identifying strategies
+or alternative courses of action.
 
--   These alternatives could include different therapies / policies /
-    technologies.
+### [Alternatives Include:]{.secondary-text}
 
--   Or, our alternatives could capture different combinations or
-    sequences of treatment (e.g., what dose? what age to start?)
+::::::::: concept-grid
+::: concept-box
+Different therapies
 :::
 
-::: fragment
-::: {.callout-note appearance="simple"}
+::: concept-box
+Different policies
+:::
+
+::: concept-box
+Different technologies
+:::
+
+::: concept-box
+Different combinations
+:::
+
+::: concept-box
+Different sequences of events
+:::
+
+::: concept-box
+Different treatment ages
+:::
+:::::::::
+
+::::: fragment
+:::: highlight-box
 Once we have identified the alternatives, we'll want to quantify their
 associated consequences in terms of:
 
+::: arrow-bullets
 -   Health outcomes
-
 -   Costs
 :::
-:::
+::::
+:::::
 
 ## CEA components
 
@@ -367,93 +466,185 @@ $$\frac{\text{Cost (Intervention A) - Cost (Intervention B)}}{\text{Benefit (A) 
     cost-effectiveness ratio & then delving into the DENOMINATOR
 :::
 
-# Valuing Costs
+## Valuing Costs {.section-slide}
 
-## Valuing Costs: Steps {.smaller}
-
-Source: Gold 1996, Drummond 2015, Gray 2012) <br>
-
-1.  **Identify** -- Estimate the different categories of resources
-    likely to be required (e.g., surgical staff, medical equipment,
-    surgical complications, re-admissions) <br> <br>
-
-2.  **Measure** -- Estimate how much of each resource category is
-    required (e.g. type of staff performing the surgery and time
-    involved, post-surgery length of stay, re-admission rates) <br> <br>
-
-3.  **Value** -- Apply unit costs to each resource category (e.g.,
-    salary scales from the relevant hospital or national wage rates for
-    staff inputs, cost per inpatient day for the post-surgery hospital
-    stay)
-
-## We can [identify]{.underline} different types of healthcare costs {.smaller}
-
-::: {style="font-size: 0.8em"}
-::: incremental
--   [**Direct Health Care Costs**]{style="color: #57886C"}
-
-    -   Hospital, office, home, facilities
-
-    -   Medications, procedures, tests, professional fees
-
--   [**Direct Non-Health Care Costs**]{style="color: #57886C"}
-
-    -   Childcare, transportation costs
-
--   [**Time Costs**]{style="color: #57886C"}
-
-    -   Patient time receiving care, opportunity cost of time
-
--   [**Productivity costs ('indirect costs')**]{style="color: #57886C"}
-
-    -   impaired ability to work due to morbidity?
-
-    -   lost economic productivity due to death?
-
--   [**Unrelated healthcare costs**]{style="color: #57886C"}
-
-    -   Cumulative trajectory of total healthcare costs over time
-        (unrelated to medical interventions)
-:::
+::: section-number
+03
 :::
 
-## Identifying costs (continued)
+## Valuing Costs: Steps
 
-<br>
+::::::::::::::::::: timeline
+:::::::::::::::::: timeline-items
+::::::: timeline-item
+::: timeline-marker
+1
+:::
 
--   In practice, we count what is likely to matter
+::::: timeline-content
+::: timeline-title
+Identify
+:::
 
-    -   Exclude what is likely to have little effect or equal effects
-        across alternatives
+::: timeline-description
+Estimate the different categories of resources likely to be required
+<br><br> [(e.g., surgical staff, medical equipment, surgical
+complications, re-admissions)]{.accent-text}
+:::
+:::::
+:::::::
 
+::::::: timeline-item
+::: timeline-marker
+2
+:::
+
+::::: timeline-content
+::: timeline-title
+Measure
+:::
+
+::: timeline-description
+Estimate how much of each resource category is required <br><br> [(e.g.
+type of staff performing the surgery and time involved, post-surgery
+length of stay, re-admission rates)]{.accent-text}
+:::
+:::::
+:::::::
+
+::::::: timeline-item
+::: timeline-marker
+3
+:::
+
+::::: timeline-content
+::: timeline-title
+Value
+:::
+
+::: timeline-description
+Apply unit costs to each resource category <br><br> [(e.g., salary
+scales from the relevant hospital or national wage rates for staff
+inputs, cost per inpatient day for the post-surgery hospital
+stay)]{.accent-text}
+:::
+:::::
+:::::::
+::::::::::::::::::
+:::::::::::::::::::
+
+[Source: Gold 1996, Drummond 2015, Gray 2012)]{style="font-size: 0.7em"}
+
+## We can [identify]{.underline} different types of healthcare costs
+
+:::::::::::::::::: horizontal-comparison
+::::: {.comparison-row .fragment}
+::: row-header
+Direct Health Care Costs
+:::
+
+::: row-content
+-   Hospital, office, home, facilities
+-   Medications, procedures, tests, professional fees
+:::
+:::::
+
+::::: {.comparison-row .fragment}
+::: row-header
+Direct Non-Health Care Costs
+:::
+
+::: row-content
+-   Childcare, transportation costs
+:::
+:::::
+
+::::: {.comparison-row .fragment}
+::: row-header
+Time Costs
+:::
+
+::: row-content
+-   Patient time receiving care, opportunity cost of time
+:::
+:::::
+
+::::: {.comparison-row .fragment}
+::: row-header
+Productivity Costs
+:::
+
+::: row-content
+-   Impaired ability to work due to morbidity
+-   Lost economic productivity due to death
+:::
+:::::
+
+::::: {.comparison-row .fragment}
+::: row-header
+Unrelated Healthcare Costs
+:::
+
+::: row-content
+-   Cumulative trajectory of total healthcare costs over time (unrelated
+    to medical interventions)
+:::
+:::::
+::::::::::::::::::
+
+## Identifying Costs in Practice
+
+::: icon-bullets
+-   Count what is likely to matter
+:::
+
+::: icon-bullets-x
+-   Exclude what is likely to have little effect or equal effects across
+    alternatives
 -   Any exclusion must be noted & possible bias examined
-
 -   We are constrained by what data are available
+:::
 
 ## We can [measure]{.underline} costs using different approaches {.smaller}
 
-::: incremental
--   **Micro-costing (bottom-up)**
-
-    -   Measure all resources used by individual patients, then assign
-        the unit cost for each type of resource consumed to calculate
-        the total cost
-
--   **Gross-costing (top-down)**
-
-    -   Estimate cost for a given volume of patients by dividing the
-        total cost by the volume of service use
-    -   Example: Downstream costs (e.g., hospitalization due to opioid
-        overdose)
-
--   **Ingredients-based approach (P x Q x C)**
-
-    -   Probability of occurrence (P)
-
-    -   Quantity (Q)
-
-    -   Unit costs (C)
+:::::::::::: horizontal-comparison
+::::: {.comparison-row .fragment}
+::: row-header
+Micro-costing <br>(bottom-up)
 :::
+
+::: row-content
+-   Measure all resources used by individual patients, then assign the
+    unit cost for each type of resource consumed to calculate the total
+    cost
+:::
+:::::
+
+::::: {.comparison-row .fragment}
+::: row-header
+Gross-costing <br>(top-down)
+:::
+
+::: row-content
+-   Estimate cost for a given volume of patients by dividing the total
+    cost by the volume of service use
+-   Example: Downstream costs (e.g., hospitalization due to opioid
+    overdose)\
+:::
+:::::
+
+::::: {.comparison-row .fragment}
+::: row-header
+Ingredients-based approach <br>(P x Q x C)
+:::
+
+::: row-content
+-   Probability of occurrence (P)
+-   Quantity (Q)
+-   Unit costs (C)
+:::
+:::::
+::::::::::::
 
 ::: notes
 (1) Micro-costing: most precise (which is a bottom up approach where we
@@ -477,23 +668,26 @@ Source: Gold 1996, Drummond 2015, Gray 2012) <br>
 ![Sanders GD, Neumann PJ, Basu A, et al. Recommendations for Conduct,
 Methodological Practices, and Reporting of Cost-effectiveness Analyses:
 Second Panel on Cost-Effectiveness in Health and Medicine. JAMA.
-2016;316:1093--1103.](images/paste-1BA51D60.png)
+2016;316:1093--1103.](images/lec5a/perspective_1.png)
+
 
 ## Whose perspective?
 
-<br>
+PERSPECTIVE MATTERS
 
-::: {style="font-size: 0.8em"}
-PERSPECTIVE MATTERS -- <br> <br>
-
-> **Formal Healthcare Sector:** Medical costs borne by third-party
-> payers & paid for out-of-pocket by patients. Should include current +
-> future costs, related & unrelated to the condition under consideration
-
-> **Societal perspective:** Represents the wider "public interest" &
-> inter-sectoral distribution of resources that are important to
-> consider - reflects costs on all affected parties
+::::: info-cards
+::: card
+**Formal Healthcare Sector:** Medical costs borne by third-partypayers &
+paid for out-of-pocket by patients. Should include current + future
+costs, related & unrelated to the condition under consideration
 :::
+
+::: {.card .accent}
+**Societal perspective:** Represents the wider "public interest" &
+inter-sectoral distribution of resources that are important to
+consider - reflects costs on all affected parties
+:::
+:::::
 
 ::: notes
 (1) PERSPECTIVE really matters when you're deciding what costs to
@@ -529,27 +723,47 @@ PERSPECTIVE MATTERS -- <br> <br>
     implications of decision making.
 :::
 
-## Whose perspective? {.smaller}
+## Perspective Example: Mammography
 
-<br>
+:::::::: info-cards
+:::: card
+**Formal Healthcare Sector:**
 
-**Healthcare sector perspective**
+::: {style="font-size: 2.5vh;"}
+-   [Costs associated with the screening itself \[mammogram procedure +
+    physician time\]]{.fragment fragment-index="1"}
+-   [Costs of follow-up tests for both false-positive & true positive
+    results]{.fragment fragment-index="2"}
+-   [Downstream costs (or savings) associated with cases of breast
+    cancer, such as: Hospitalization + treatment costs]{.fragment
+    fragment-index="3"}
+-   [Costs unrelated to medical intervention/disease; of living longer
+    due to mammography]{.fragment fragment-index="4"}
+:::
+::::
 
-<br>
+::::: {.card .accent}
+**Societal perspective:**
 
-MAMMOGRAPHY (Healthcare Sector): <br>
-
+::: {.fragment style="font-size: 2.5vh;" fragment-index="5"}
 -   Costs associated with the screening itself \[mammogram procedure +
     physician time\]
-
 -   Costs of follow-up tests for both false-positive & true positive
     results
-
 -   Downstream costs (or savings) associated with cases of breast
     cancer, such as: Hospitalization + treatment costs
-
 -   Costs unrelated to medical intervention/disease; of living longer
     due to mammography
+:::
+
+::: {style="font-size: 2.5vh;"}
+-   [Patient productivity losses associated with the screening or cancer
+    treatment]{.highlight .fragment fragment-index="6"}
+-   [Childcare/transportation costs]{.highlight .fragment
+    fragment-index="7"}
+:::
+:::::
+::::::::
 
 ::: notes
 (1) Let's look at an example - Mammography for breast cancer screening
@@ -578,95 +792,146 @@ LISA, BOOK says AVERTED COSTS for downstream costs
     will discuss in the next few slides)
 :::
 
-## Whose perspective? {.smaller}
+## Data Collection {.section-slide}
 
-<br>
+::: section-number
+04
+:::
 
-**Societal perspective**
+## Two Approaches for Data Collection
 
-<br>
+::::: info-cards
+::: card
+**Approach 1**
 
-MAMMOGRAPHY (Societal perspective): <br>
+Alongside [clinical trials]{.bold .secondary-text}
 
--   Costs associated with the screening itself \[mammogram procedure +
-    physician time\]
+Collect cost data directly during the trial
+:::
 
--   Costs of follow-up tests for both false-positive & true positive
-    results
+::: {.card .accent}
+**Approach 2**
 
--   Downstream costs (or savings) associated with cases of breast
-    cancer, such as: Hospitalization + treatment costs
+Using [secondary data]{.bold .accent-text}
 
--   Costs unrelated to medical intervention/disease; of living longer
-    due to mammography
+Leverage existing databases, registries, and published literature
+:::
+:::::
 
--   [Patient productivity losses associated with the screening or cancer
-    treatment]{style="background-color: yellow;"}
-
--   [Childcare/transportation costs]{style="background-color: yellow;"}
-
-# Data collection {background="#43464B"}
-
-## Two approaches:
-
-<br> (1) Alongside [**clinical trials**]{style="color: #00589b;"} <br>
-(2) Using [**secondary data**]{style="color: #00589b;"}
-
-## Costs (secondary data)
-
-<br>
-
-> International versus US will have different approaches
+::: {.highlight-box .thin .fragment}
+International versus US will have different approaches
+:::
 
 ## Costs (International)
 
-::: {style="font-size: 0.8em"}
-1.  **In country/hospital/donor data registries** - key is to get as
-    close to the "true" cost associated with each procedure per patient
-    -   E.g., "TB healthcare & diagnostics are from official price list
-        of the National Health Laboratory Service in South Africa; Costs
-        for follow-up reflect local clinic and culture-based screening
-        for active-tuberculosis"
-2.  **Review of published literature**
-3.  **Tufts CEA Registry**
-4.  **DCP3: Disease Control Priorities**
+::::::::::::::::::: process-flow
+:::::: step
+::: step-number
+1
 :::
 
+::: step-title
+Local Data
+:::
+
+::: step-content
+In-country registries, hospital data, donor databases
+:::
+::::::
+
+:::::: step
+::: step-number
+2
+:::
+
+::: step-title
+Literature
+:::
+
+::: step-content
+Published cost studies
+:::
+::::::
+
+:::::: step
+::: step-number
+3
+:::
+
+::: step-title
+Tufts CEA Registry
+:::
+
+::: step-content
+Comprehensive database
+:::
+::::::
+
+:::::: step
+::: step-number
+4
+:::
+
+::: step-title
+DCP3
+:::
+
+::: step-content
+Disease Control Priorities
+:::
+::::::
+:::::::::::::::::::
+
+::::: {.highlight-box .thin .secondary}
+::: box-title
+The key is to get as close to the "true" cost associated with each
+procedure per patient
+:::
+
+::: {style="font-size: 2vh;"}
+E.g., "TB healthcare & diagnostics are from official price list of the
+National Health Laboratory Service in South Africa; Costs for follow-up
+reflect local clinic and culture-based screening for
+active-tuberculosis"
+:::
+:::::
+
 ## Costs (Published Literature)
 
-![](images/file_show-01.jpeg)
+![](images/lec5a/costs_lit_1.jpeg)
 
 ## Costs (Published Literature)
 
-![](images/screenshot_cea_SA2.jpeg)
+![](images/lec5a/costs_lit_2.jpeg)
 
 ## Costs (Tufts CEVR)
 
-![](images/cevr1.png)
+![](images/lec5a/cevr1.png)
 
 https://cevr.tuftsmedicalcenter.org/databases/cea-registry
 
 ## Costs (Tufts CEVR)
 
-![](images/cevr3.jpeg)
+![](images/lec5a/cevr3.jpeg)
 
 ## Costs (Tufts CEVR)
 
-![](images/cevr5.jpeg)
+![](images/lec5a/cevr5.jpeg)
 
 ## Costs (Tufts CEVR)
 
-![](images/global1.png)
+![](images/lec5a/global1.png)
 
 http://ghcearegistry.org/ghcearegistry/
 
 ## Costs (Tufts CEVR)
 
-![](images/global2.png)
+![](images/lec5a/global2.png)
 
-## Costs (DCP3)
+## Costs (DCP3) 
 
-![](images/dp3.png)
+
+![](images/lec5a/dp3.png)
 
 ::: notes
 -   The Disease Control Priorities is a multi-year project funded in
@@ -681,38 +946,112 @@ http://ghcearegistry.org/ghcearegistry/
     implementation of UHC Essential Packages of Health Services.
 :::
 
-## Adjustments needed for [Valuing]{.underline} Costs
+## Adjustments needed for [Valuing]{.underline} Costs {.numbered-list-slide}
 
-<br>
+:::::::::::: number-list
+::::: list-item
+::: number
+01
+:::
 
--   Adjusting for currency and currency year
+::: text
+Inflation adjustment
+:::
+:::::
 
--   Discounting
+::::: list-item
+::: number
+02
+:::
 
-# Inflation Adjustment
+::: text
+Adjusting for currency and currency year
+:::
+:::::
+
+::::: list-item
+::: number
+03
+:::
+
+::: text
+Discounting
+:::
+:::::
+::::::::::::
+
+## Inflation Adjustment
 
 ## Inflation Adjustment: Motivation
 
-<br>
+::::: info-cards
+::: card
+**The Problem**
 
--   \$100 in 2000 is not equivalent to \$100 in 2020
+\$100 in 2000 is not equivalent to \$100 in 2020
 
-    -   \$100 could buy a lot more in 2000!
+[\$100 could buy a lot more in 2000!]{.highlight}
+:::
 
--   Important to adjust for the price difference over time, especially
-    when working with cost sources from multiple years
+::: {.card .accent .fragment}
+**The Solution**
+
+Important to adjust for the price difference over time, especially when
+working with cost sources from multiple years
+:::
+:::::
 
 ## Inflation Adjustment: Example {.smaller}
 
-![](images/hsr.png)
+![](images/lec5a/inflation.png)
 
-## Inflation Adjustment: Method {.smaller}
+## Inflation Adjustment: Method
 
--   Choose a reference year (usually the current year of analysis)
+::::::::::::::: process-flow
+:::::: step
+::: step-number
+1
+:::
 
--   Convert all costs to the reference year
+::: step-title
+Choose Reference Year
+:::
 
-::: fragment
+::: step-content
+Usually the current year of analysis
+:::
+::::::
+
+:::::: step
+::: step-number
+2
+:::
+
+::: step-title
+Convert All Costs
+:::
+
+::: step-content
+Convert to reference year
+:::
+::::::
+
+:::::: step
+::: step-number
+3
+:::
+
+::: step-title
+Apply Formula
+:::
+
+::: step-content
+Use price index ratio
+:::
+::::::
+:::::::::::::::
+
+::: {.highlight-box .fragment}
 Converting cost in Year X to Year Y (reference year):
 
 $$
@@ -720,63 +1059,107 @@ $$
 $$
 :::
 
-## Inflation Adjustment: Example {.smaller}
+## Inflation Adjustment: Example
 
-<br>
+::::::::: definition-box
+::: term
+Example Problem
+:::
 
-> Cost of hospitalization for mild stroke in the US was \~15,000 USD in
-> 2016. What if we want to convert this number to 2020 USD?
+::: definition
+Cost of hospitalization for mild stroke in the US was \~\$15,000 USD in
+2016. Convert to 2020 USD.
+:::
 
+:::::: {.example .fragment}
+::: example-label
+Solution:
+:::
+
+::: example-text
 -   PCE (Personal Consumption Expenditure Health Price Index) in 2016:
-    105.430 [(second column of Table 3 (PCE,
-    health)](https://meps.ahrq.gov/about_meps/Price_Index.shtml)
-
+    105.430
 -   PCE in 2020: 112.978
 
-::: fragment
 $$
-\textbf{Cost(2020)} = \textbf{Cost(2016)} \times \frac{\textbf{PCE(2020)}}{\textbf{PCE(2016)}} \\
-= 15,000 \times \frac{112.978}{105.430} \\
-= 16,674 \ (\text{2020 USD})
+\textbf{Cost(2020)} = 15,000 \times \frac{112.978}{105.430} = \$16,674 \text{ (2020 USD)}
 $$
 :::
+
+::: {style="font-size: 1.5vh;"}
+[(second column of Table 3
+(PCE,health))](https://meps.ahrq.gov/about_meps/Price_Index.shtml)
+:::
+::::::
+:::::::::
 
 # Currency Conversion
 
-## Currency Conversion
+## Currency Conversion Basics
 
-::: {style="font-size: 0.8em"}
--   Isn't required for CEA but may be useful in some situations:
+::::: info-cards
+::: card
+**When Needed**
 
-    -   Example: may need to convert local currency to USD because
-        cost-effectiveness thresholds are often estimated in the unit of
-        USD per DALY.
+Not required for CEA but may be useful:
 
--   How do we convert 1,000 Turkish Liras to USD?
-
--   Current exchange rate in 2024: 1 Turkish Lira = \~0.029 USD
-
--   1,000 Liras = 29 USD
+-   Convert local currency to USD for international comparisons
+-   Cost-effectiveness thresholds often estimated in USD per DALY
 :::
+
+::: card
+**How to Convert**
+
+Example: 1,000 Philippine Peso to USD
+
+-   Current exchange rate (2026): 1 Philippine Peso = \~0.017 USD
+-   **Result:** 1,000 Peso = \$16.87 USD
+:::
+:::::
 
 # Discounting
 
-## Why discounting?
+## Why Discounting?
 
--   Adjust costs at social discount rate to reflect social "rate of time
-    preference"
+::::: info-cards
+::: card
+**Purpose**
 
-    -   Pure time preference ("impatient")
+Adjust costs at social discount rate to reflect social "rate of time
+preference"
+:::
 
-    -   Potential catastrophic risk in the future
+::: card
+**Reasons**
 
-    -   Economic growth/return
+-   Pure time preference ("impatient")
+-   Potential catastrophic risk in the future
+-   Economic growth/return on investment
+:::
+:::::
 
 ## Discounting
 
+A \$ today is [NOT]{.bold} worth a \$ tomorrow
+
+:::::: {.concept-grid .with-arrows}
+::: concept-box
+\$100 now
+:::
+
+::: {.concept-box .accent}
+2% net return
+:::
+
+::: concept-box
+\$102 next year
+:::
+::::::
+
 <br>
 
-![](images/discount.png)
+The "present value" of \$102 next year is \$100 today.<br> Similarly,
+\$100 next year = \$98.04 today
 
 ::: notes
 (1) If you have \$100 now, this could either be consumed or invested in
@@ -790,61 +1173,85 @@ $$
 (4) Similarly, \$100 next year = \$98.04 today
 :::
 
-## Discounting
+## Inflation vs. Discounting
 
-<br>
-
-::: {.callout-important appearance="minimal" icon="false"}
-Inflation: We convert PAST cost to present-day values
+::::::::: simple-comparison
+::::: comparison-column
+::: column-header
+Inflation Adjustment
 :::
 
-::: {.callout-important appearance="minimal" icon="false"}
-Discounting: We convert FUTURE costs to present-day values
+::: column-content
+We convert **PAST** costs to present-day values
+:::
+:::::
+
+::::: comparison-column
+::: column-header
+Discounting
 :::
 
-## How do we discount?
-
-::: {style="font-size: 0.8em"}
--   Present value: $PV = FV/(1+r)^t$
-
-    -   FV = future value, the nominal cost incurred in the future
-
-    -   r = **annual discount rate** (analogous to interest rate)
-
-    -   t = number of years in future when cost is incurred
-
--   Reasonable consensus around 3% per year
-
--   May vary according to country guidelines
-
-::: fragment
-::: {.callout-important appearance="simple"}
-Adjust for inflation and currency first, then discount
+::: column-content
+We convert **FUTURE** costs to present-day values
 :::
+:::::
+:::::::::
+
+## 
+
+::::::: definition-box
+::: term
+Present Value Formula
 :::
+
+::: definition
+$$PV = \frac{FV}{(1+r)^t}$$
+
+Where:
+
+-   FV = future value, the nominal cost incurred in the future
+
+-   r = [annual discount rate]{.bold .accent-text} (analogous to
+    interest rate)
+
+-   t = number of years in future when cost is incurred
+
+[Standard rate:]{.bold .accent-text} Reasonable consensus around 3% per
+year (may vary by country guidelines)
 :::
+
+:::: example
+::: example-text
+[Important!]{.bold .secondary-text} Adjust for inflation and currency
+first, then discount
+:::
+::::
+:::::::
 
 ## Intuition
 
-::: {style="font-size: 0.8em"}
--   $r = 0.03$
+:::: split-content
+::: content-text
+$r = 0.03$
 
--   Recall that $PV = FV/(1+r)^t$, and we're at Year 0:
+$PV = FV/(1+r)^t$, and we're at Year 0:
 
-    -   \$1 in Year 0 is valued as $1/1.03^0 = \$ 1$
-
-    -   \$1 in Year 1 is valued as $1/1.03^1 = \$0.97$
-
-    -   \$1 in Year 2 is valued as $1/1.03^2 = \$0.94$
-
-    -   \$1 in Year 3 is valued as $1/1.03^3 = \$0.92$
-
-    -   ...
-
-    -   In other words, we are converting what a \$1 would be in Year 2,
-        for example, to the PRESENT VALUE of today. Today, it will be
-        0.94.
+| Year | Formula     | Value of \$1 |
+|------|-------------|--------------|
+| 0    | \$1/1.03\^0 | \$1          |
+| 1    | \$1/1.03\^1 | \$0.97       |
+| 2    | \$1/1.03\^2 | \$0.94       |
+| 3    | \$1/1.03\^3 | \$0.92       |
 :::
+
+::: {.content-visual .incremental .bold .secondary-text}
+
+-   What would \$1 be in Year 2 be in the PRESENT VALUE of today?
+
+-   Today, it will be [0.94.]{.accent-text}
+:::
+
+:::::
 
 ::: notes
 (1) We generally value future costs and effects less than current costs
@@ -855,13 +1262,50 @@ Adjust for inflation and currency first, then discount
     investment later
 :::
 
-## Example
+## Discounting Example
 
-<br>
+:::: definition-box
+::: term
+Example Problem
+:::
 
--   Assume in year 5, a patient develops disease, and there is a
-    treatment cost of \$500
-    -   This is the future value (FV) of the cost!
--   Present value $PV = FV/(1+r)^t = 500/(1+0.03)^5 = \$ 431.3$
+::: definition
+Assume in year 5, a patient develops disease, and there is a treatment cost of $500. What is the present value?
+:::
 
-# Next up: Benefits! (the denominator)
+::::: example
+::: example-label
+Solution:
+:::
+
+::: {.example-text .fragment}
+$$PV = \frac{FV}{(1+r)^t} = \frac{500}{(1+0.03)^5} = \$431.30$$
+:::
+:::::
+::::
+
+## {.summary-end-slide}
+
+::::: summary-circle
+::: end-title
+Key Takeaways
+:::
+
+::: end-subtitle
+Costs
+:::
+
+<ul class="key-points">
+<li>Different types of economic evaluation</li>
+<li>CEA uses cost-effectiveness ratios</li>
+<li>Perspective matters for cost inclusion</li>
+<li>Adjust for inflation & discount future costs</li>
+</ul>
+:::::
+
+## Questions? {.questions-slide}
+
+::: next-info
+Next Lecture: <strong>Benefits & QALYs</strong>
+:::
+
