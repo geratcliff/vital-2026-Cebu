@@ -119,4 +119,6 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | Asynchronous | Case Study | QALYS.       |
 | Asynchronous | Lecture    | PSA Analysis |
 
+| Asynchronous \| Case Study \| PSA Analysis \|
+
 : {tbl-colwidths="\[20,10,50\]"}
