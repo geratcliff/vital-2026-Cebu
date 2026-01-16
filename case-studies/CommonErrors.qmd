@@ -143,6 +143,7 @@ FAKE SOURCE:
 
 
 Figure 8: Incremental Cost-Effectiveness of  Varies Strategies to Improve the BYE Endemic in Another Region
+
 |  |  |  |  |  |  |
 |----|----|----|----|----|----|
 | **Strategy** | **Cost (Dis)** | **Utility (Dis)** | **Inc. Cost** | **Inc. Utility** | **ICER** |
