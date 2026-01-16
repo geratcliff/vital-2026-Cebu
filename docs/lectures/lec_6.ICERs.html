@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="lec_6.ICERs_files/libs/clipboard/clipboard.min.js"></script>
-<script src="lec_6.ICERs_files/libs/quarto-html/tabby.min.js"></script>
-<script src="lec_6.ICERs_files/libs/quarto-html/popper.min.js"></script>
-<script src="lec_6.ICERs_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="lec_6.ICERs_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="lec_6.ICERs_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="lec_6.ICERs_files/libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="lec_6.ICERs_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="lec_6.ICERs_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Incremental Cost-Effectiveness Analysis</title>
+  <title>Decision Analysis Workshop - Cebu – Incremental Cost-Effectiveness Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="lec_6.ICERs_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="lec_6.ICERs_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="lec_6.ICERs_files/libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -47,10 +47,10 @@
 }}});
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-  <link href="lec_6.ICERs_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="lec_6.ICERs_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="lec_6.ICERs_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="lec_6.ICERs_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -138,8 +138,8 @@
       margin-right: 0; 
     }
   </style>
-  <script src="lec_6.ICERs_files/libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="lec_6.ICERs_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -160,15 +160,13 @@
 }
 </style>
 </section>
-<section id="learning-objectives-and-outline" class="slide level2 section-slide center">
-<h2>Learning Objectives and Outline</h2>
-<div class="section-number">
-<p>00</p>
-</div>
+<section>
+<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
+<h1>Learning Objectives and Outline</h1>
+
 </section>
 <section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
-<div class="icon-bullets">
 <ul>
 <li><p>Differentiate between average &amp; incremental CEA ratios</p></li>
 <li><p>Characterize decision problems by whether they are competing or non-competing</p></li>
@@ -176,95 +174,48 @@
 <li><p>Practice ruling out “dominated” and “extendedly dominated” strategies</p></li>
 <li><p>Identify “high-value” versus “low value” care strategies, based on generally accepted cost-effectiveness thresholds</p></li>
 </ul>
-</div>
 </section>
-<section id="outline" class="slide level2 numbered-list-slide center">
+<section id="outline" class="slide level2 center">
 <h2>Outline</h2>
+<p><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="number-list">
-<div class="list-item">
-<div class="number">
-<p>01</p>
-</div>
-<div class="text">
-<p>Review of CEA ratio</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>02</p>
-</div>
-<div class="text">
-<p>Non-competing versus competing CEAs</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>03</p>
-</div>
-<div class="text">
-<p>Incremental CEA</p>
-</div>
-</div>
-</div>
+<ol type="1">
+<li>Review of CEA ratio</li>
+<li>Non-competing versus competing CEAs</li>
+<li>Incremental CEA</li>
+</ol>
 </div><div class="column" style="width:50%;">
-<div class="number-list">
-<div class="list-item">
-<div class="number">
-<p>04</p>
-</div>
-<div class="text">
-<p>Dominance &amp; extended dominance</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>05</p>
-</div>
-<div class="text">
-<p>Comparators</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>06</p>
-</div>
-<div class="text">
-<p>CEA thresholds</p>
-</div>
-</div>
-</div>
+<ol start="4" type="1">
+<li>Dominance &amp; extended dominance</li>
+<li>Comparators</li>
+<li>CEA thresholds</li>
+</ol>
 </div></div>
+</section></section>
+<section>
+<section id="cost-effectiveness-analysis" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Cost-Effectiveness Analysis</h1>
+
 </section>
-<section id="review-of-cea-ratio" class="slide level2 section-slide center">
-<h2>Review of CEA ratio</h2>
-<div class="section-number">
-<p>01</p>
-</div>
-</section>
-<section id="cost-effectiveness-analysis" class="slide level2 center">
+<section id="cost-effectiveness-analysis-1" class="slide level2 center">
 <h2>Cost-Effectiveness Analysis</h2>
-<div class="icon-bullets">
 <ul>
-<li class="fragment">Quantifies how to maximize the quality &amp; quantity of life from among competing alternatives, given restricted resources</li>
-<li class="fragment">It’s an explicit measure of value for money</li>
-<li class="fragment">A <span class="bold accent-text">POPULATION-LEVEL</span> decision-making tool</li>
+<li class="fragment"><p>Quantifies how to maximize the quality &amp; quantity of life from among competing alternatives, given restricted resources</p></li>
+<li class="fragment"><p>It’s an explicit measure of value for money</p></li>
+<li class="fragment"><p>A POPULATION-LEVEL decision-making tool</p></li>
 </ul>
-</div>
 </section>
 <section id="cost-effectiveness-analysis-is-not" class="slide level2 center">
 <h2>Cost-Effectiveness Analysis IS NOT</h2>
-<div class="icon-bullets-x">
 <ul>
 <li class="fragment">Indiscriminate cost-cutting</li>
 <li class="fragment">Downsizing</li>
 <li class="fragment">For individual-level decision making</li>
 <li class="fragment">The only tool for decision-making</li>
 </ul>
-</div>
 </section>
-<section id="cost-effectiveness-analysis-1" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="cost-effectiveness-analysis-2" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title">Cost-Effectiveness Analysis</h2>
 <div class="r-vstack">
 <div data-id="costA">
@@ -281,19 +232,19 @@
 </div>
 </div>
 </section>
-<section id="cost-effectiveness-analysis-2" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="cost-effectiveness-analysis-3" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title">Cost-Effectiveness Analysis</h2>
 <div class="r-vstack">
-<div class="brown-text" data-id="costA">
+<div data-id="costA" style="color: #B98476;">
 <p>Cost of Intervention</p>
 </div>
-<div class="brown-text" data-id="costB">
+<div data-id="costB" style="color: #B98476;">
 <p>Cost of Alternative</p>
 </div>
-<div class="secondary-text" data-id="benefitA">
+<div data-id="benefitA" style="color: #3FA090;">
 <p>Benefit of Intervention</p>
 </div>
-<div class="secondary-text" data-id="benefitB">
+<div data-id="benefitB" style="color: #3FA090;">
 <p>Benefit of Alternative</p>
 </div>
 </div>
@@ -302,21 +253,21 @@
 <h2 data-id="quarto-animate-title">Cost-Effectiveness Ratio</h2>
 <div class="r-vstack">
 <div class="r-hstack">
-<div class="brown-text" data-id="costA">
+<div data-id="costA" style="color: #B98476;">
 <p>Cost of Intervention</p>
 </div>
 <p><span class="math display"> \quad - \quad </span></p>
-<div class="brown-text" data-id="costB">
+<div data-id="costB" style="color: #B98476;">
 <p>Cost of Alternative</p>
 </div>
 </div>
 <p><span class="math display">\frac{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}</span></p>
 <div class="r-hstack">
-<div class="secondary-text" data-id="benefitA">
+<div data-id="benefitA" style="color: #3FA090;">
 <p>Benefit of Intervention</p>
 </div>
 <p><span class="math display"> \quad - \quad </span></p>
-<div class="secondary-text" data-id="benefitB">
+<div data-id="benefitB" style="color: #3FA090;">
 <p>Benefit of Alternative</p>
 </div>
 </div>
@@ -326,21 +277,21 @@
 <h2 data-id="quarto-animate-title">Cost-Effectiveness Ratio</h2>
 <div class="r-vstack">
 <div class="r-hstack">
-<div class="brown-text" data-id="costA">
+<div data-id="costA" style="color: #B98476;">
 <p><span class="math inline">C_1</span></p>
 </div>
 <p><span class="math display"> \quad - \quad </span></p>
-<div class="brown-text" data-id="costB">
+<div data-id="costB" style="color: #B98476;">
 <p><span class="math inline">C_0</span></p>
 </div>
 </div>
 <p><span class="math display">\frac{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}</span></p>
 <div class="r-hstack">
-<div class="secondary-text" data-id="benefitA">
+<div data-id="benefitA" style="color: #3FA090;">
 <p><span class="math inline">E_0</span></p>
 </div>
 <p><span class="math display"> \quad - \quad </span></p>
-<div class="secondary-text" data-id="benefitB">
+<div data-id="benefitB" style="color: #3FA090;">
 <p><span class="math inline">E_1</span></p>
 </div>
 </div>
@@ -350,41 +301,36 @@
 <h2 data-id="quarto-animate-title">Cost-Effectiveness Ratio</h2>
 <div class="r-vstack">
 <div class="r-hstack">
-<div class="brown-text" data-id="costA">
+<div data-id="costA" style="color: #B98476;">
 <p><span class="math inline">\Delta C</span></p>
 </div>
 </div>
 <p><span class="math display">\frac{\quad \quad \quad \quad }{\quad \quad \quad \quad \quad }</span></p>
 <div class="r-hstack">
-<div class="secondary-text" data-id="benefitA">
+<div data-id="benefitA" style="color: #3FA090;">
 <p><span class="math inline">\Delta E</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="section" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="definition-box">
-<div class="term">
-<p>Incremental Cost-Effectiveness Ratio</p>
-</div>
-<p><span class="math display">
-\begin{aligned}
-ICER &amp;=  \frac{C_1 - C_0}{E_1 - E_0}
-&amp;= \frac{\Delta C}{\Delta E}
-\end{aligned}
-</span></p>
+<section id="incremental-cost-effectiveness-ratio" class="slide level2 smaller center">
+<h2>Incremental Cost-Effectiveness Ratio</h2>
+<p><strong>Most often used, since for most conditions there is already some available treatment.</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li><span class="math inline">C_1</span>: net present value of total lifetime costs of new treatment</li>
-<li><span class="math inline">C_0</span>: net present value of total lifetime costs of comparator</li>
-<li><span class="math inline">E_1</span>: effectiveness of new treatment</li>
-<li><span class="math inline">E_0</span>: effectiveness of comparator
-<ul>
-<li><span style="font-size: 2vh">Effectivness is measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.</span></li>
-</ul></li>
+<li class="fragment"><span class="math inline">C_1</span>: net present value of total lifetime costs of new treatment</li>
+<li class="fragment"><span class="math inline">C_0</span>: net present value of total lifetime costs of default treatment</li>
+<li class="fragment"><span class="math inline">E_1</span>: effectiveness of new treatment, measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.</li>
+<li class="fragment"><span class="math inline">E_0</span>: effectiveness of default treatment</li>
 </ul>
-<p><span class="bold accent-text">Most often used, since for most conditions there is already some available treatment.</span></p>
+</div><div class="column" style="width:50%;">
+<div style="padding-top: 100px;">
+<p><span class="math display">
+\frac{C_1 - C_0 \quad  (\Delta C)}{E_1 - E_0 \quad  (\Delta E)}
+</span></p>
 </div>
+</div></div>
 <!-- # Example: Neurologic Disease -->
 <!-- ## Neurologic Disease Decision Tree -->
 <!-- - Consider a neurologic disease that blocks a certain cell receptor in the brain.  -->
@@ -396,135 +342,109 @@ ICER &amp;=  \frac{C_1 - C_0}{E_1 - E_0}
 <!-- - Rather than treat none or treat all suspected with the disease, a biopsy option is available. -->
 <!-- - TK -->
 </section>
-<section id="neurologic-disease-decision-tree" class="slide level2 title-photo-slide center">
+<section id="neurologic-disease-decision-tree" class="slide level2 center">
 <h2>Neurologic Disease Decision Tree</h2>
-<div class="photo-container">
-<p><img data-src="images/lec6/Neurologic.png"></p>
-</div>
-</section>
+
+<img data-src="images/cea-example1.png" class="r-stretch"></section>
 <section id="outcomes" class="slide level2 center">
 <h2>Outcomes</h2>
-<div class="concept-grid">
-<div class="concept-box">
-<p><span class="math inline">C_{treat}</span> = <span class="db-text">expected cost of treat everyone strategy.</span></p>
-</div>
-<div class="concept-box">
-<p><span class="math inline">C_{no treat}</span> = <span class="db-text">expected cost of treat <em>no one</em> strategy.</span></p>
-</div>
-<div class="concept-box">
-<p><span class="math inline">C_{biopsy}</span> = <span class="db-text">expected cost of biopsy strategy.</span></p>
-</div>
-</div>
-<div class="concept-grid fragment">
-<div class="concept-box accent">
-<p><span class="math inline">E_{treat}</span> = <span class="db-text">expected life expectancy of treat everyone strategy.</span></p>
-</div>
-<div class="concept-box accent">
-<p><span class="math inline">E_{no treat}</span> = <span class="db-text">expected expectancy of treat <em>no one</em> strategy.</span></p>
-</div>
-<div class="concept-box accent">
-<p><span class="math inline">E_{biopsy}</span> = <span class="db-text">expected expectancy of biopsy strategy.</span></p>
-</div>
-</div>
+<ul>
+<li><span class="math inline">C_{treat}</span> = expected cost of treat everyone strategy.</li>
+<li><span class="math inline">C_{no treat}</span> = expected cost of treat <em>no one</em> strategy.</li>
+<li><span class="math inline">C_{biopsy}</span> = expected cost of biopsy strategy.</li>
+</ul>
+</section>
+<section id="outcomes-1" class="slide level2 center">
+<h2>Outcomes</h2>
+<ul>
+<li><span class="math inline">C_{treat}</span> = expected cost of treat everyone strategy.</li>
+<li><span class="math inline">C_{no treat}</span> = expected cost of treat <em>no one</em> strategy.</li>
+<li><span class="math inline">C_{biopsy}</span> = expected cost of biopsy strategy.</li>
+<li><span class="math inline">E_{treat}</span> = expected life expectancy of treat everyone strategy.</li>
+<li><span class="math inline">E_{no treat}</span> = expected expectancy of treat <em>no one</em> strategy.</li>
+<li><span class="math inline">E_{biopsy}</span> = expected expectancy of biopsy strategy.</li>
+</ul>
 </section>
 <section id="outcomes-in-amua" class="slide level2 center">
 <h2>Outcomes in Amua</h2>
 
-<img data-src="images/lec6/outcomes-amua.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="strategy-treat-no-one" class="slide level2 center">
-<h2>Strategy: Treat No One</h2>
-
-<img data-src="images/lec6/NoTreatOutcomes.png" class="r-stretch"></section>
-<section id="strategy-treat-all" class="slide level2 center">
-<h2>Strategy: Treat All</h2>
-
-<img data-src="images/lec6/TreatOutcomes.png" class="r-stretch"></section>
+<img data-src="images/outcomes-amua.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="treat-all-vs.-treat-none" class="slide level2 center">
+<h2>Treat All vs.&nbsp;Treat None</h2>
+<p>Strategy: Treat No One <img data-src="images/cea-example2.png"></p>
+</section>
+<section id="treat-all-vs.-treat-none-1" class="slide level2 center">
+<h2>Treat All vs.&nbsp;Treat None</h2>
+<p>Strategy: Treat All <img data-src="images/cea-example3.png"></p>
+</section>
 <section id="key-takeaways-for-now" class="slide level2 center">
 <h2>Key Takeaways (For Now)</h2>
-<div class="icon-bullets">
 <ul>
-<li class="fragment">Treatment yields <em>higher</em> life expectancy for those with disease, but comes at a cost. (↑ LE, ↑ Cost)</li>
-<li class="fragment">Treatment yields <em>lower</em> life expectancy for those without the disease, <em>and also</em> comes at a cost. (↓ LE, ↑ Cost)</li>
+<li class="fragment">Treatment yields <em>higher</em> life expectancy for those with disease, but comes at a cost.</li>
+<li class="fragment">Treatment yields <em>lower</em> life expectancy for those without the disease, <em>and also</em> comes at a cost.</li>
 <li class="fragment">Biopsy can help balance these two outcomes by better targeting treatment, but also comes with costs and risks.</li>
 <li class="fragment">Incremental CEA provides a transparent framework for quantifying and weighing these considerations.</li>
 </ul>
-</div>
 </section>
-<section id="section-1" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="definition-box">
-<div class="term">
-<p>Average Cost-Effectiveness Ratio</p>
-</div>
+<section id="average-cost-effectiveness-ratio" class="slide level2 smaller center">
+<h2>Average Cost-Effectiveness Ratio</h2>
 <p><strong>Special case where</strong> <span class="math inline">C_0</span> and <span class="math inline">E_0</span> are assumed to be zero.</p>
-<p><span class="math display">
-\begin{aligned}
-ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
-&amp;= \frac{C_1}{E_1 }
-\end{aligned}
-</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><span class="math inline">C_1</span>: net present value of total lifetime costs of new treatment</li>
 <li><span class="math inline">C_0</span>: Assumed zero</li>
-<li><span class="math inline">E_1</span>: effectiveness of new treatment</li>
-<li><span class="math inline">E_0</span>: Assumed zero
-<ul>
-<li><span style="font-size: 2vh">Effectivness is measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.</span></li>
-</ul></li>
+<li><span class="math inline">E_1</span>: effectiveness of new treatment, measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.</li>
+<li><span class="math inline">E_0</span>: Assumed zero</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div style="padding-top: 50px;">
+<p><span class="math display">
+\begin{aligned}
+ICER &amp;=  \frac{C_1 - 0}{E_1 - 0} \\
+&amp;= \frac{C_1}{E_1 }
+\end{aligned}
+</span></p>
 </div>
+</div></div>
+</section></section>
+<section>
+<section id="non-competing-vs.-competing-ceas" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Non-Competing vs.&nbsp;Competing CEAs</h1>
+
 </section>
-<section id="non-competing-vs.-competing-ceas" class="slide level2 section-slide center">
-<h2>Non-Competing vs.&nbsp;Competing CEAs</h2>
-<div class="section-number">
-<p>02</p>
-</div>
-</section>
-<section id="use-of-cea-in-two-situations" class="slide level2 center">
-<h2>Use of CEA in two situations</h2>
-<div class="card fragment">
-<div class="card">
-<p><strong>Shopping Spree</strong></p>
-<p>Decision problem has <span class="bold accent-text">non-competing</span> programs/interventions.</p>
+<section id="use-of-cea-in-two-situations" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Use of CEA in two situations</h2>
+<ol type="1">
+<li><strong>Shopping Spree</strong>: Decision problem has non-competing programs/interventions.</li>
+</ol>
 <ul>
-<li>Each program is compared to a null alternative</li>
-<li>Calculate an “average” cost-effectiveness ratio.</li>
+<li>Each program is compared to a null alternative; therefore, you’re calculating an “average” cost-effectiveness ratio.</li>
 </ul>
-</div>
-<div class="card fragment">
-<p><strong>Competing Choice</strong></p>
-<p>Decision problem has <span class="bold accent-text">competing mutually exclusive</span> programs/ interventions for the same purpose.</p>
+</section>
+<section id="use-of-cea-in-two-situations-1" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Use of CEA in two situations</h2>
+<ol start="2" type="1">
+<li><strong>Competing Choice</strong>: Decision problem has competing programs/interventions for the same purpose; these choices are mutually exclusive.</li>
+</ol>
 <ul>
 <li>Two or more active alternatives in addition to the null option.</li>
-<li>Calculate an “incremental cost- effectiveness ratio” to get the added cost per unit of added benefit of an option, relative to the next less expensive choice</li>
+<li>You need to calculate an “incremental cost- effectiveness ratio”, which gives us the added cost per unit of added benefit of an option, relative to the next less expensive choice</li>
 </ul>
-</div>
-</div>
 </section>
 <section id="non-competing-shopping-spree-decision-problem" class="slide level2 center">
 <h2>Non-Competing (Shopping Spree) Decision Problem</h2>
 <p><strong>How can we measure the relative priority of various health programs that compete for limited resources?</strong></p>
-<div class="concept-grid">
-<div class="concept-box accent fragment">
-<p>Cardiovascular disease program</p>
-</div>
-<div class="concept-box accent fragment">
-<p>Safe motherhood program</p>
-</div>
-<div class="concept-box accent fragment">
-<p>HIV prevention initiative</p>
-</div>
-<div class="concept-box accent fragment">
-<p>Child vaccination</p>
-</div>
-<div class="concept-box accent fragment">
-<p>Depression screening</p>
-</div>
-</div>
+<ol type="1">
+<li class="fragment">Cardiovascular disease program</li>
+<li class="fragment">Safe motherhood program</li>
+<li class="fragment">HIV prevention initiative</li>
+<li class="fragment">Child vaccination</li>
+<li class="fragment">Depression screening</li>
+</ol>
 </section>
 <section id="assumptions" class="slide level2 center">
 <h2>Assumptions</h2>
-<div class="icon-bullets">
 <ul>
 <li class="fragment">Program alternatives are assumed to be independent</li>
 <li class="fragment">Budget constraint is only limitation</li>
@@ -532,31 +452,17 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 <li class="fragment">Programs are assumed to be divisible [programs can be partially implemented]<br>
 </li>
 </ul>
-</div>
 </section>
-<section id="objectives-shopping-spree-problem" class="slide level2 center">
+<section id="objectives-shopping-spree-problem" class="slide level2 center" data-background="#c2f0c2">
 <h2>Objectives: Shopping Spree Problem</h2>
 <h4 id="maximize-the-total-net-effectiveness-health-benefit-of-the-programs-selected."><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Maximize the total net effectiveness (health benefit) of the programs selected.</h4>
 <h4 id="stay-within-budget."><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Stay within budget.</h4>
 </section>
-<section id="shopping-spree-problem" class="slide level2 center">
+<section id="shopping-spree-problem" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<div class="column" style="width:40%;">
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>1</p>
-</div>
-<div class="step-title">
-<p>Remove Dominated Strategies</p>
-</div>
-<div class="step-content">
-<p>Rule out programs that cost $ but have negative health effects. Dominated by alternative of “no program”</p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
-
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Step 1: - Rule out programs that cost $ but have negative health effects <br> - Dominated by alternative of “no program”</p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -567,28 +473,14 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div>
 </div>
-</div></section>
-<section id="shopping-spree-problem-1" class="slide level2 center">
+</div></div>
+</section>
+<section id="shopping-spree-problem-1" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<div class="column" style="width:40%;">
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>2</p>
-</div>
-<div class="step-title">
-<p>Select programs that are cost-saving &amp; offer benefit</p>
-</div>
-<div class="step-content arrow-bullets">
-<ul>
-<li class="fragment"><p>Net savings can also be added to budget</p></li>
-<li class="fragment"><p>Cost-saving compared to alternative of no program</p></li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
-
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Step 2:<br>
+- Select programs that are cost-saving &amp; offer benefit; net savings can also be added to budget <br> - Cost-saving compared to alternative of no program</p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -599,29 +491,14 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div>
 </div>
-</div></section>
-<section id="shopping-spree-problem-2" class="slide level2 center">
+</div></div>
+</section>
+<section id="shopping-spree-problem-2" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<div class="column" style="width:40%;">
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>3</p>
-</div>
-<div class="step-title">
-<p>Rank other programs</p>
-</div>
-<div class="step-content arrow-bullets">
-<ul>
-<li class="fragment"><p>Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)</p></li>
-<li class="fragment"><p>Programs are then selected from the LEAST to the MOST expensive until the budget is expended</p></li>
-<li class="fragment"><p>Final array of programs selected will depend on the budget constraint</p></li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
-
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Step 3:<br>
+- Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest) <br> - Programs are then selected from the LEAST to the MOST expensive until the budget is expended <br> - Final array of programs selected will depend on the budget constraint</p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -632,32 +509,11 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div>
 </div>
-</div></section>
+</div></div>
+</section>
 <section id="shopping-spree-problem-3" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<div class="column" style="width:40%;">
-<div class="process-flow">
-<div class="step">
-<div class="fragment">
-<div class="step-number">
-<p>1</p>
-</div>
-<div class="step-title">
-<p>Rule out dominated options</p>
-</div>
-</div>
-<p><br> <br></p>
-<div class="fragment">
-<div class="step-number">
-<p>2</p>
-</div>
-<div class="step-title">
-<p>Select cost-saving interventions</p>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column table-compact" style="width:50%;">
+<p>Steps 1 &amp; 2: Rule out dominated options &amp; select cost-saving interventions <br></p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -722,17 +578,17 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </table>
 </div>
 </div>
-</div></section>
-<section id="shopping-spree-problem-4" class="slide level2 center">
+</section>
+<section id="shopping-spree-problem-4" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
 <li class="fragment">Initial budget: $80</li>
-<li class="fragment">Budget savings: <span class="accent-text">$20</span></li>
-<li class="fragment">Total budget: $80 + <span class="accent-text">$20</span> = $100</li>
+<li class="fragment">Budget savings: <span style="color: #a8d4a7;">$20</span>.</li>
+<li class="fragment">Total budget: $80 + <span style="color: #a8d4a7;">$20</span> = $100</li>
 </ul>
-</div><div class="column table-compact" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -799,14 +655,14 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div></div>
 </section>
-<section id="shopping-spree-problem-5" class="slide level2 center">
+<section id="shopping-spree-problem-5" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
 <div class="columns">
-<div class="column arrow-bullets" style="width:50%;">
+<div class="column" style="width:50%;">
 <ul>
 <li class="fragment">Calculate average cost-effectiveness ratio.</li>
 </ul>
-</div><div class="column table-compact" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -861,15 +717,15 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div></div>
 </section>
-<section id="shopping-spree-problem-6" class="slide level2 center">
+<section id="shopping-spree-problem-6" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
 <div class="columns">
-<div class="column arrow-bullets" style="width:50%;">
+<div class="column" style="width:50%;">
 <ul>
 <li>Calculate average cost-effectiveness ratio.</li>
 <li>Sort (by C/E) in ascending order .</li>
 </ul>
-</div><div class="column table-compact" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -941,17 +797,15 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="shopping-spree-problem-7" class="slide level2 center">
 <h2>Shopping Spree Problem</h2>
-<div class="arrow-bullets">
 <ul>
 <li class="fragment">Calculate cumulative costs</li>
 <li class="fragment">Determine what is adoptable based on global budget constraint ($100)</li>
 <li class="fragment">Calculate cumulative effects (QALYs)</li>
 </ul>
-</div>
 </section>
 <section id="shopping-spree-problem-8" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<p><span class="bold">Budget: $100</span></p>
+<p>Budget: $100</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top">
@@ -1021,7 +875,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="shopping-spree-problem-9" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<p><span class="bold">Budget: $100</span></p>
+<p>Budget: $100</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -1131,7 +985,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="shopping-spree-problem-10" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<p><span class="bold">Budget: $150</span></p>
+<p>Budget: $150</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -1227,7 +1081,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="shopping-spree-problem-11" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<p><span class="bold">Budget: $150</span></p>
+<p>Budget: $150</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -1323,7 +1177,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="shopping-spree-problem-12" class="slide level2 smaller center">
 <h2>Shopping Spree Problem</h2>
-<p><span class="bold">Budget: $150</span></p>
+<p>Budget: $150</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -1425,36 +1279,23 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="summary-shopping-spree-problem" class="slide level2 center">
 <h2>Summary: Shopping Spree Problem</h2>
-<div class="icon-bullets">
-<ul>
-<li><p>Maximize the total net effectiveness (health benefit)</p></li>
-<li><p>Stay within budget</p></li>
-</ul>
-</div>
-<div class="highlight-box">
-<p>Can do the same with other objectives (e.g., Minimize costs, subject decision to ‘minimum benefit’ constraint, etc.)</p>
+<h4 id="maximize-the-total-net-effectiveness-health-benefit"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Maximize the total net effectiveness (health benefit)</h4>
+<h4 id="stay-within-budget"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Stay within budget</h4>
+<h4 id="can-do-the-same-with-other-objectives-e.g.-minimize-costs-subject-decision-to-minimum-benefit-constraint-etc."><i class="fa-solid fa-note-sticky" aria-label="note-sticky"></i> Can do the same with other objectives (e.g., Minimize costs, subject decision to ‘minimum benefit’ constraint, etc.)</h4>
+</section>
+<section id="use-of-cea-in-two-situations-2" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Use of CEA in two situations</h2>
+<div class="fragment highlight-grey">
+<ol type="1">
+<li><strong>Shopping Spree</strong>: Decision problem has non-competing programs/interventions.</li>
+</ol>
 </div>
 </section>
-<section id="use-of-cea-in-two-situations-1" class="slide level2 center">
-<h2>Use of CEA in two situations</h2>
-<div class="info-cards">
-<div class="card">
-<p><strong>Shopping Spree</strong></p>
-<p>Decision problem has <span class="bold accent-text">non-competing</span> programs/interventions.</p>
-<ul>
-<li>Each program is compared to a null alternative</li>
-<li>Calculate an “average” cost-effectiveness ratio.</li>
-</ul>
-</div>
-<div class="card fragment">
-<p><strong>Competing Choice</strong></p>
-<p>Decision problem has <span class="bold accent-text">competing mutually exclusive</span> programs/ interventions for the same purpose.</p>
-<ul>
-<li>Two or more active alternatives in addition to the null option.</li>
-<li>Calculate an “incremental cost- effectiveness ratio” to get the added cost per unit of added benefit of an option, relative to the next less expensive choice</li>
-</ul>
-</div>
-</div>
+<section id="use-of-cea-in-two-situations-3" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Use of CEA in two situations</h2>
+<ol start="2" type="1">
+<li><strong>Competing Choice</strong>: Decision problem has competing programs/interventions for the same purpose; these choices are mutually exclusive.</li>
+</ol>
 </section>
 <section id="objectives-competing-choice-problem" class="slide level2 center" data-background="#c2f0c2">
 <h2>Objectives: Competing Choice Problem</h2>
@@ -1463,24 +1304,22 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </section>
 <section id="whats-different" class="slide level2 center">
 <h2>What’s different?</h2>
-<div class="info-cards">
-<div class="card">
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Shopping Spree</strong></p>
 <ol type="1">
 <li>Can select multiple programs</li>
 <li>Different costs &amp; effects associated with each</li>
 <li>Requires calculation of an <em>Average Cost-Effectiveness Ratio</em></li>
 </ol>
-</div>
-<div class="card fragment">
+</div><div class="column" style="width:50%;">
 <p><strong>Competing Choice</strong></p>
 <ol type="1">
-<li><span class="bold accent-text">Programs are mutually exclusive.</span></li>
+<li><span style="color: red;">Programs are mutually exclusive.</span></li>
 <li>Different costs &amp; effects associated with each.</li>
-<li><span class="bold accent-text">Requires calculation of an <em>Incremental Cost-Effectiveness Ratio</em> (ICER)</span></li>
+<li><span style="color: red;">Requires calculation of an <em>Incremental Cost-Effectiveness Ratio</em> (ICER)</span></li>
 </ol>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>(1) Opioid pharmacotherapy is the recommended treatment for OUD in pregnancy, as we know that medication reduces the risk of overdose and relapse, improves overall retention to care, and improves pregnancy &amp; fetal outcomes.</p>
 <ol start="2" type="1">
@@ -1512,327 +1351,140 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section></section>
+<section id="incremental-cea" class="title-slide slide level1 center" data-background="black">
+<h1>Incremental CEA</h1>
+
 </section>
-<section id="incremental-cost-effectiveness-analysis" class="slide level2 section-slide center">
-<h2>Incremental Cost-Effectiveness Analysis</h2>
-<div class="section-number">
-<p>03</p>
-</div>
-</section>
+
 <section>
-<section id="a.-incremental-cea-in-pictures" class="title-slide slide level1 center">
-<h1>A. Incremental CEA in <span class="accent-text">Pictures</span></h1>
+<section id="incremental-cea-in-pictures" class="title-slide slide level1 center">
+<h1>1. Incremental CEA in Pictures</h1>
 
 </section>
 <section id="calculate-incremental-costs-and-effects" class="slide level2 center">
-<h2>(1) Calculate incremental costs and effects</h2>
-<div class="split-content">
-<div class="content-text">
+<h2>1. Calculate incremental costs and effects</h2>
 <ul>
 <li class="fragment">Often, a strategy capturing current practice (‘status-quo’, ‘do nothing’, ‘natural history’) is defined.</li>
 <li class="fragment">Costs and effects are then calculated for each strategy relative to the status-quo.</li>
 <li class="fragment">Plot the difference in costs and effects with health effects on x-axis and cost effects on y-axis.</li>
 </ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer1.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
-<section id="a-identify-dominated-strategies" class="slide level2 smaller center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">(2a) Identify Dominated Strategies</h2>
-<div class="split-content">
-<div class="content-text">
+<section id="calculate-cost-and-effects" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">1. Calculate cost and effects</h2>
+
+<img data-src="images/vis_icer1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="identify-dominated-strategies" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Identify Dominated Strategies</h2>
 <ul>
 <li>We can rule out any strategies that result in less health at higher cost.</li>
 </ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer2.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
-<section id="b-identify-dominated-strategies" class="slide level2 smaller center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">(2b) Identify Dominated Strategies</h2>
-<div class="split-content">
-<div class="content-text">
+<section id="identify-dominated-strategies-1" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Identify Dominated Strategies</h2>
+
+<img data-src="images/vis_icer2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="identify-dominated-strategies-2" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Identify Dominated Strategies</h2>
 <ul>
 <li class="fragment">We can also rule out strategies where <em>some other competing strategy</em> results in more (or equal) health at lower (or equal) cost.</li>
 <li class="fragment">This is known as “strong” dominance.</li>
 </ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer3.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
-<section id="c-identify-dominated-strategies" class="slide level2 smaller center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">(2c) Identify Dominated Strategies</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li class="fragment">We can also rule out strategies where <em>some other competing strategy</em> results in more (or equal) health at lower (or equal) cost.</li>
-<li class="fragment">This is known as “strong” dominance.</li>
-</ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer3.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="c-identify-dominated-strategies-1" class="slide level2 smaller center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">(2c) Identify Dominated Strategies</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li class="fragment">We can also rule out strategies where <em>some other competing strategy</em> results in more (or equal) health at lower (or equal) cost.</li>
-<li class="fragment">This is known as “strong” dominance.</li>
-</ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer4.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="what-about-strategy-b" class="slide level2 center" data-auto-animate="true">
+<section id="identify-dominated-strategies-3" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Identify Dominated Strategies</h2>
+
+<img data-src="images/vis_icer3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="identify-dominated-strategies-4" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Identify Dominated Strategies</h2>
+
+<img data-src="images/vis_icer4.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="what-about-strategy-b" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">What about strategy B?</h2>
 
 <img data-src="images/vis_icer5.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="hybrid-strategies" class="slide level2 center">
 <h2>Hybrid Strategies</h2>
-<div class="split-content">
-<div class="content-text">
 <ul>
-<li class="fragment">Suppose it is feasible to partially implement strategies <span class="bold secondary-text">A</span> and <span class="bold secondary-text">D</span> .</li>
-</ul>
-<div class="highlight-box fragment">
-<p>For example, we could implement <span class="bold secondary-text">A</span> for <span class="bold accent">90%</span> of the population and <span class="bold secondary-text">D</span> for <span class="bold accent">10%</span> of the population, or vice versa.</p>
-</div>
-</div>
-<div class="content-visual fragment">
-<p>90% A, 10% D</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer6a.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="hybrid-strategies-1" class="slide level2 center">
-<h2>Hybrid Strategies</h2>
-<div class="split-content">
-<div class="content-text">
+<li class="fragment">Suppose it is feasible to partially implement strategies <strong>A</strong> and <strong>D</strong>.
 <ul>
-<li>Suppose it is feasible to partially implement strategies <span class="bold secondary-text">A</span> and <span class="bold secondary-text">D</span> .</li>
+<li class="fragment">For example, we could implement <strong>A</strong> for 90% of the population and <strong>D</strong> for 10% of the population, or vice versa.</li>
+</ul></li>
 </ul>
-<div class="highlight-box">
-<p>For example, we could implement <span class="bold secondary-text">A</span> for <span class="bold accent">10%</span> of the population and <span class="bold secondary-text">D</span> for <span class="bold accent">90%</span> of the population, or vice versa.</p>
-</div>
-</div>
-<div class="content-visual">
-<p>10% A, 90% D</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer6b.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
-<section id="hybrid-strategies-2" class="slide level2 center">
-<h2>Hybrid Strategies</h2>
-<div class="split-content">
-<div class="content-text">
+<section id="a-10-d" class="slide level2 center">
+<h2>90% A, 10% D</h2>
+
+<img data-src="images/vis_icer6a.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="a-90-d" class="slide level2 center">
+<h2>10% A, 90% D</h2>
+
+<img data-src="images/vis_icer6b.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="a-50-d" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">50% A, 50% D</h2>
 <ul>
-<li>Suppose it is feasible to partially implement strategies <span class="bold secondary-text">A</span> and <span class="bold secondary-text">D</span> .</li>
+<li>Can we make any statements about <strong>B</strong> now?</li>
 </ul>
-<div class="highlight-box">
-<p>For example, we could implement <span class="bold secondary-text">A</span> for <span class="bold accent">50%</span> of the population and <span class="bold secondary-text">D</span> for <span class="bold accent">50%</span> of the population, or vice versa.</p>
-</div>
-<div class="fragment">
-<p><span class="bold">Can we make any statements about <span class="secondary-text">B</span> now?</span></p>
-</div>
-</div>
-<div class="content-visual">
-<p>50% A, 50% D</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer6c.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="extended-weak-dominance" class="slide level2 center" data-auto-animate="true">
+
+<img data-src="images/vis_icer6c.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="extended-weak-dominance" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Extended (Weak) Dominance</h2>
 <ul>
 <li><strong>B</strong> is ruled out by extended (“weak”) dominance.</li>
 </ul>
-<div class="split-content">
-<div class="content-visual">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer7.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer8.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>Efficiency Frontier</p>
-</div>
-<div class="column" style="width:40%;">
-<div class="definition">
-<p>The efficiency frontier is the set of non-dominated strategies.</p>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="example">
-<div class="example-image">
-<p><img data-src="images/vis_icer9.png"></p>
-</div>
-</div>
-</div></div>
-</section>
-<section id="section-3" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>ICERs</p>
-</div>
-<div class="column" style="width:40%;">
-<div class="definition">
-<p>The slope of a line connecting two points is the incremental cost-effectiveness ratio comparing those strategies. <br><br><br><br>
-More on this later!</p>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="example">
-<div class="example-image">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer10.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section></section>
+
+<img data-src="images/vis_icer7.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="extended-weak-dominance-1" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Extended (Weak) Dominance</h2>
+
+<img data-src="images/vis_icer8.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="efficiency-frontier" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Efficiency Frontier</h2>
+<ul>
+<li>The efficiency frontier is the set of non-dominated strategies.</li>
+</ul>
+
+<img data-src="images/vis_icer9.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="icers" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">ICERs</h2>
+<ul>
+<li>The slope of a line connecting two points is the incremental cost-effectiveness ratio comparing those strategies. More on this later!</li>
+</ul>
+
+<img data-src="images/vis_icer10.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
-<section id="b.-incremental-cea-in-tables" class="title-slide slide level1 center">
-<h1>B. Incremental CEA in <span class="accent-text">Tables</span></h1>
+<section id="incremental-cea-in-tables" class="title-slide slide level1 center">
+<h1>2. Incremental CEA in Tables</h1>
 
 </section>
-<section id="incremental-cea" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-1" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
-<div class="highlight-box">
-<div class="box-title">
-<p>Notice:</p>
+<p><br> <br> <br> <br> <br></p>
+<div class="callout callout-important callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-content">
 <p>Please note that the following example uses different strategies and values than the example used in the previous pictures!</p>
 </div>
+</div>
+</div>
 </section>
-<section id="steps-of-incremental-cea" class="slide level2 center">
-<h2>Steps of Incremental CEA</h2>
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>1</p>
-</div>
-<div class="step-content">
-<p>Calculate costs and effects for each strategy.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>2</p>
-</div>
-<div class="step-content">
-<p>Sort table by costs in ascending order.<sup>1</sup></p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>3</p>
-</div>
-<div class="step-content">
-<p>Calculate ICER based on difference in costs and effects.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>4</p>
-</div>
-<div class="step-content">
-<p>Determine dominated strategies (ICER&lt;0).</p>
-</div>
-</div>
-</div>
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>5</p>
-</div>
-<div class="step-content">
-<p>Re-calculate ICERs after eliminating dominated strategies.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>6</p>
-</div>
-<div class="step-content">
-<p>Determine strategies ruled out by extended dominance.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>7</p>
-</div>
-<div class="step-content">
-<p>Determine strategies ruled out by extended dominance.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>8</p>
-</div>
-<div class="step-content">
-<p>Repeat 5-7 as needed.</p>
-</div>
-</div>
-</div>
+<section id="incremental-cea-2" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Incremental CEA</h2>
+<ol type="1">
+<li class="fragment"><p>Calculate costs and effects for each strategy.</p></li>
+<li class="fragment"><p>Sort table by costs in ascending order.<sup>1</sup></p></li>
+<li class="fragment"><p>Calculate ICER based on difference in costs and effects.</p></li>
+<li class="fragment"><p>Determine dominated strategies (ICER&lt;0).</p></li>
+<li class="fragment"><p>Re-calculate ICERs after eliminating dominated strategies.</p></li>
+<li class="fragment"><p>Determine strategies ruled out by extended dominance.</p></li>
+<li class="fragment"><p>Re-calculate ICERs after ruling out all dominated strategies.</p></li>
+<li class="fragment"><p>Repeat 5-7 as needed.</p></li>
+</ol>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="incremental-cea-1" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-3" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1881,7 +1533,7 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="incremental-cea-2" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-4" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1933,7 +1585,7 @@ More on this later!</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn2"><p><span class="fragment highlight-red">Least costly first, most costly last</span></p></li></ol></aside></section>
-<section id="incremental-cea-3" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-5" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2004,7 +1656,7 @@ More on this later!</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="incremental-cea-4" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-6" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2017,12 +1669,6 @@ More on this later!</p>
 <p><span class="fragment highlight-red">4. Determine dominated strategies (ICER&lt;0)</span></p>
 </div></div>
 <aside><ol class="aside-footnotes"><li id="fn4"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="dominance-extended-dominance" class="slide level2 section-slide center">
-<h2>Dominance &amp; extended dominance</h2>
-<div class="section-number">
-<p>04</p>
-</div>
-</section>
 <section id="determining-dominated-strategies" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Determining Dominated Strategies</h2>
 <ul>
@@ -2096,20 +1742,12 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>Strong dominance</p>
-</div>
-<div class="definition">
-<p>Situations where one strategy is preferred over another on both costs and health effects (e.g., QALYs).</p>
-</div>
-<div class="example">
-<div class="example-text">
-<p>When we identify a strongly dominated option, we remove it from the table and re-calculate ICERS based on the remaining strategies.</p>
-</div>
-<div class="table-compact">
+<section id="determining-dominated-strategies-1" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Determining Dominated Strategies</h2>
+<ul>
+<li class="fragment"><strong>Strong dominance</strong> refers to situations where one strategy is preferred over another on both costs and health effects (e.g., QALYs).</li>
+<li class="fragment">When we identify a strongly dominated option, we remove it from the table and re-calculate ICERS based on the remaining strategies.</li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -2174,15 +1812,9 @@ More on this later!</p>
 </table>
 </div>
 </div>
-</div>
-</div>
-</div>
 </section>
 <section id="a-brief-aside-on-negative-icers" class="slide level2 center">
 <h2>A Brief Aside on Negative ICERs</h2>
-<div class="split-content">
-<div class="content-text">
-<div class="arrow-bullets">
 <ul>
 <li>We want to rule out strategies that cost <em>more</em> but result in less health.
 <ul>
@@ -2194,30 +1826,22 @@ More on this later!</p>
 <li>This is a great strategy!</li>
 </ul></li>
 </ul>
-</div>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer-negative.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
+<section id="both-strategies-have-a-negative-icer" class="slide level2 center">
+<h2>Both Strategies Have a Negative ICER</h2>
+
+<img data-src="images/vis_icer-negative.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="a-brief-aside-on-negative-icers-1" class="slide level2 center">
 <h2>A Brief Aside on Negative ICERs</h2>
-<div class="highlight-box">
 <ul>
-<li><p>For this reason, it is poor practice to report negative ICERs.</p></li>
-<li><p>Be careful when deleting a strategy becuase it has a negative ICER!</p>
+<li>For this reason, it is poor practice to report negative ICERs.</li>
+<li>Be careful when deleting a strategy becuase it has a negative ICER!
 <ul>
 <li>It may be a great strategy!</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="incremental-cea-5" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-7" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2294,7 +1918,7 @@ More on this later!</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn5"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="incremental-cea-6" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-8" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2374,7 +1998,7 @@ More on this later!</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn6"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="incremental-cea-7" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-9" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2454,7 +2078,7 @@ More on this later!</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn7"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="determining-dominated-strategies-1" class="slide level2 smaller center" data-auto-animate="true">
+<section id="determining-dominated-strategies-2" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Determining Dominated Strategies</h2>
 <ul>
 <li class="fragment">We’re not quite done yet</li>
@@ -2526,7 +2150,7 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="determining-dominated-strategies-2" class="slide level2 smaller center" data-auto-animate="true">
+<section id="determining-dominated-strategies-3" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Determining Dominated Strategies</h2>
 <ul>
 <li>A telltale sign of extended dominance in a (sorted) CEA table is a strategy with a higher ICER than the next most expensive option.</li>
@@ -2596,14 +2220,14 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="determining-dominated-strategies-3" class="slide level2 smaller center" data-auto-animate="true">
+<section id="determining-dominated-strategies-4" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Determining Dominated Strategies</h2>
 <ul>
 <li>You can see this in the pictures as well ….</li>
 </ul>
 
 <img data-src="images/vis_icer11.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="incremental-cea-8" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-10" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2684,7 +2308,7 @@ More on this later!</p>
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn8"><p>Least costly first, most costly last</p></li></ol></aside></section>
-<section id="incremental-cea-9" class="slide level2 smaller center" data-auto-animate="true">
+<section id="incremental-cea-11" class="slide level2 smaller center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Incremental CEA</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2988,12 +2612,6 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="dominance-extended-dominance-1" class="slide level2 section-slide center">
-<h2>Dominance &amp; extended dominance</h2>
-<div class="section-number">
-<p>04</p>
-</div>
-</section>
 <section id="determine-dominated-strategies" class="slide level2 smaller center">
 <h2>Determine dominated strategies</h2>
 <div style="font-size: 0.7em">
@@ -3078,14 +2696,11 @@ More on this later!</p>
 </div>
 </div>
 </div>
-</section>
-<section id="section-5" class="slide level2 center">
-<h2></h2>
-<div class="concept-grid">
-<div class="concept-box accent" style="font-size: 3em">
-<p>Remove dominated strategies and recalculate</p>
-</div>
-</div>
+</section></section>
+<section>
+<section id="remove-dominated-strategies-and-recalculate" class="title-slide slide level1 center">
+<h1>Remove dominated strategies and recalculate</h1>
+
 </section>
 <section id="determine-dominated-strategies-1" class="slide level2 smaller center">
 <h2>Determine dominated strategies</h2>
@@ -3214,16 +2829,16 @@ More on this later!</p>
 </div>
 </div>
 </div>
-</section>
-<section id="section-6" class="slide level2 center">
-<h2></h2>
-<div class="concept-grid">
-<div class="concept-box accent" style="font-size: 3em">
-<p>Remove dominated strategies and recalculate</p>
-</div>
-</div>
+</section></section>
+<section>
+<section id="remove-dominated-strategies-and-recalculate-1" class="title-slide slide level1 center">
+<h1>Remove dominated strategies and recalculate</h1>
+
 </section>
 <section id="determine-dominated-strategies-3" class="slide level2 smaller center">
+<h2>Determine dominated strategies</h2>
+</section>
+<section id="determine-dominated-strategies-4" class="slide level2 smaller center">
 <h2>Determine dominated strategies</h2>
 <div style="font-size: 0.7em">
 <div class="cell">
@@ -3280,7 +2895,7 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="determine-dominated-strategies-4" class="slide level2 smaller center">
+<section id="determine-dominated-strategies-5" class="slide level2 smaller center">
 <h2>Determine dominated strategies</h2>
 <div style="font-size: 0.7em">
 <div class="cell">
@@ -3422,12 +3037,6 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="comparators" class="slide level2 section-slide center">
-<h2>Comparators</h2>
-<div class="section-number">
-<p>05</p>
-</div>
-</section>
 <section id="a-note-on-comparators" class="slide level2 center">
 <h2>A note on COMPARATORS</h2>
 
@@ -3488,15 +3097,8 @@ More on this later!</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="cea-thresholds" class="slide level2 section-slide center">
-<h2>CEA thresholds</h2>
-<div class="section-number">
-<p>06</p>
-</div>
-</section>
-<section id="cea-thresholds-1" class="slide level2 center">
+<section id="cea-thresholds" class="slide level2 center">
 <h2>CEA Thresholds</h2>
-<div class="arrow-bullets">
 <ul>
 <li class="fragment">So now we have our ICERs, but how do we make a decision?</li>
 <li class="fragment">We must define a <strong>threshold</strong> (<span class="math inline">\lambda</span>), or an ICER value that determines whether or not we implement a given strategy.
@@ -3504,18 +3106,15 @@ More on this later!</p>
 <li class="fragment">Also known as “willingness-to-pay” (WTP) threshold.</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="cea-thresholds-2" class="slide level2 center">
+<section id="cea-thresholds-1" class="slide level2 center">
 <h2>CEA Thresholds</h2>
 <p>What are common thresholds and how are they determined?</p>
-<div class="arrow-bullets">
 <ul>
 <li class="fragment">In high income countries, common thresholds are $50,000/QALY, $100,000/QALY, and $100,000/QALY.</li>
 <li class="fragment">In LMICs, 0.5-3x per capita gross domestic product (GDP) per DALY averted.</li>
 <li class="fragment">More on this in a few minutes.</li>
 </ul>
-</div>
 </section>
 <section id="how-do-cea-thresholds-guide-decisionmaking" class="slide level2 center">
 <h2>How do CEA Thresholds Guide Decisionmaking?</h2>
@@ -3553,19 +3152,19 @@ More on this later!</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="cea-thresholds-3" class="slide level2 smaller center">
+<section id="cea-thresholds-2" class="slide level2 smaller center">
 <h2>CEA Thresholds</h2>
 
 <img data-src="images/vis_icer12.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="cea-thresholds-4" class="slide level2 smaller center">
+<section id="cea-thresholds-3" class="slide level2 smaller center">
 <h2>CEA Thresholds</h2>
 
 <img data-src="images/vis_icer13.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="cea-thresholds-5" class="slide level2 smaller center">
+<section id="cea-thresholds-4" class="slide level2 smaller center">
 <h2>CEA Thresholds</h2>
 
 <img data-src="images/vis_icer14.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="cea-thresholds-6" class="slide level2 smaller center">
+<section id="cea-thresholds-5" class="slide level2 smaller center">
 <h2>CEA Thresholds</h2>
 
 <img data-src="images/thokala.png" class="r-stretch"><p>Different ways thresholds have been estimated: - “supply-side” (UK &amp; Europe) - “demand-side” (US) - per capita consumption (US/LMICs)</p>
@@ -3591,14 +3190,15 @@ More on this later!</p>
 <section id="opportunity-cost-supply-side" class="slide level2 smaller center">
 <h2>Opportunity cost (“supply-side”)</h2>
 <p><br></p>
-<div class="icon-bullets">
 <ul>
-<li class="fragment"><p>Decision should be informed by the value of what will be given up as a consequence of those cost. Known as the “opportunity cost.”</p></li>
+<li class="fragment"><p>Decision should be informed by the value of what will be given up as a consequence of those cost.</p>
+<ul>
+<li class="fragment">Known as the “opportunity cost.”</li>
+</ul></li>
 <li class="fragment"><p>If resources are committed to the funding of one intervention, then they are not available to fund and deliver others <strong>(shopping spree concept)</strong></p></li>
 <li class="fragment"><p>The opportunity cost of a commitment of resources is the health forgone because these “other” interventions that are available to the health system cannot be delivered.</p></li>
+<li class="fragment"><p>Source: See K Claxton on the estimation of the NICE threshold in the UK / Woods et al, &amp; others</p></li>
 </ul>
-</div>
-<p><span style="font-size:2vh">Source: See K Claxton on the estimation of the NICE threshold in the UK / Woods et al, &amp; others</span></p>
 </section>
 <section id="opportunity-cost-supply-side-1" class="slide level2 smaller center">
 <h2>Opportunity cost (“supply-side”)</h2>
@@ -3629,11 +3229,13 @@ More on this later!</p>
 <section id="opportunity-cost-supply-side-2" class="slide level2 smaller center">
 <h2>Opportunity cost (“supply-side”)</h2>
 <p><br></p>
-<div class="highlight-box secondary">
+<div style="font-size: 0.8em">
+<blockquote>
 <p>If you don’t consider the budget under which you are operating, then some medications could take up half the budget and displace interventions that produce significant health gain OR in the US, could increase premiums or take away $$ from other sectors</p>
-</div>
-<div class="highlight-box secondary">
+</blockquote>
+<blockquote>
 <p>Academics have argued that the threshold should be lower/on the more conservative end for higher priced therapies (NICE uses a budget impact threshold of 20,000 GBP/QALY for these higher priced therapies as opposed to 30,000 GBP/QALY for others)</p>
+</blockquote>
 </div>
 </section>
 <section id="willingness-to-pay-demand-side" class="slide level2 center">
@@ -3683,13 +3285,11 @@ More on this later!</p>
 <section id="cea-thresholds-in-lmics-1" class="slide level2 smaller center">
 <h2>CEA Thresholds in LMICs</h2>
 <p><br></p>
-<div class="icon-bullets-triangle">
 <ul>
 <li class="fragment">Past WHO guidelines recommended countries use following guidelines: An intervention is cost-effective if cost/DALY averted is less than 1-3X per capita GDP of country</li>
 <li class="fragment">Some have argued the WHO’s guidelines may be too high and result in adoption of interventions that displace existing services that provide greater health benefit.</li>
 <li class="fragment">Suggest 0.5 GDPpc is a more appropriate benchmark for low-income countries and 0.71 GDPpc for middle-income countries (see Woods et al 2016)</li>
 </ul>
-</div>
 <aside class="notes">
 <ol type="1">
 <li><p>Analysts have also argued that the threshold should be lower for these countries based on a healthcare budget perspective</p></li>
@@ -3821,126 +3421,19 @@ More on this later!</p>
 </div>
 </section>
 <section id="hiv-example-from-earlier-1" class="slide level2 smaller center">
-<h2>HIV Example From Earlier</h2>
-<div class="column" style="width:20%;">
-<p><span class="fragment">If our CE threshold was 2x GDP (GDP = $2,500), which option would we choose as decision makers?</span> <br><br></p>
-<p><span class="fragment">If our CE threshold was 1x GDP (GDP = $2,500), which option would we choose as decision makers?</span></p>
-</div><div class="column" style="width:80%;">
-<div class="table-compact">
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">Strategy</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Incremental Cost</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">DALYs Averted</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Incremental Cost per DALY Averted</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">2.56</td>
-<td style="text-align: right;">1,757</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">TMP-SMX, azithromycin</td>
-<td style="text-align: right;">1,158</td>
-<td style="text-align: right;">0.48</td>
-<td style="text-align: right;">2,413</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
-<td style="text-align: right;">2,652</td>
-<td style="text-align: right;">0.56</td>
-<td style="text-align: right;">4,736</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
-<td style="text-align: right;">12,523</td>
-<td style="text-align: right;">1.02</td>
-<td style="text-align: right;">12,277</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,102</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, ganciclovir</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6,032</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.40</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole, ganciclovir</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,270</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, azithromycin, ganciclovir</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">8,216</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">0.23</td>
-<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
-<td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Extended)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div></section>
-<section id="section-7" class="slide level2 summary-end-slide center">
-<h2></h2>
-<div class="summary-circle">
-<div class="end-title">
-<p>Key Takeaways</p>
-</div>
-<div class="end-subtitle">
-<p>Benefits</p>
-</div>
-<ul class="key-points">
-<li>
-X
-</li>
-<li>
-X
-</li>
-<li>
-X
-</li>
-<li>
-X
-</li>
+<h2>HIV Example from Earlier</h2>
+<p><br></p>
+<ul>
+<li>If our CE threshold was 2x GDP (GDP = $2,500), which option would we choose as decision makers?</li>
+<li>If our CE threshold was 1x GDP (GDP = $2,500), which option would we choose as decision makers?</li>
 </ul>
-</div>
-</section>
-<section id="questions" class="slide level2 questions-slide center">
-<h2>Questions?</h2>
-<div class="next-info">
-<p>Next Lecture: <strong>Markov Models</strong></p>
-</div>
-
 </section></section>
+<section id="next-icer-case-study" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Next: ICER Case Study</h1>
+
+
+</section>
+
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -3951,18 +3444,18 @@ X
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="lec_6.ICERs_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="lec_6.ICERs_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -4247,7 +3740,7 @@ X
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/geratcliff\.github\.io\/vital-2026-Cebu");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
