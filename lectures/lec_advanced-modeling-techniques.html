@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Decision Analysis Workshop - Cebu – Deterministic, Threshold and Scenario Analyses</title>
+  <title>Decision Analysis Workshop - Cebu – Advanced Modeling Techniques</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -142,7 +142,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Deterministic, Threshold and Scenario Analyses</h1>
+  <h1 class="title">Advanced Modeling Techniques</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -153,358 +153,435 @@
 <h1>Learning Objectives and Outline</h1>
 
 </section>
-<section id="learning-objectives" class="slide level2 center">
+<section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
 <ul>
-<li><p>Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.</p></li>
-<li><p>Detail the advantages/disadvantages of deterministic sensitivity analysis.</p></li>
+<li class="fragment"><p>Be able to understand the basic concepts and identify the strengths and limitations of alternative modeling techniques, including:</p>
+<ul>
+<li><p>Microsimulation (Monte Carlo simulation)</p></li>
+<li><p>Discrete event simulation</p></li>
+<li><p>Infectious disease (dynamic) models</p></li>
+</ul></li>
 </ul>
 </section>
-<section id="outline" class="slide level2 center">
+<section id="outline" class="slide level2">
 <h2>Outline</h2>
+<ul>
+<li class="fragment"><p>Microsimulation (Monte Carlo simulation)</p></li>
+<li class="fragment"><p>Discrete event simulation</p></li>
+<li class="fragment"><p>Infectious disease (dynamic) models</p></li>
+<li class="fragment"><p>Comparison of model types</p></li>
+</ul>
+</section></section>
+<section>
+<section id="microsimulation" class="title-slide slide level1 center">
+<h1>Microsimulation</h1>
+
+</section>
+<section id="microsimulation-models" class="slide level2">
+<h2>Microsimulation models</h2>
+<ul>
+<li class="fragment"><p>Markov simulation</p>
+<ul>
+<li class="fragment">Focuses on the average: essentially assuming infinite cohort of individuals transitions through the model simultaneously to obtain the expected values</li>
+</ul></li>
+<li class="fragment"><p>Microsimulation</p>
+<ul>
+<li class="fragment"><p>Synonyms = stochastic microsimulation, individual-based model, 1st order Monte Carlo simulation</p></li>
+<li class="fragment"><p>Hypothetical individuals transition through the model, one at a time</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="steps" class="slide level2 smaller">
+<h2>Steps</h2>
 <ol type="1">
-<li>Net Benefit Outcome Measures</li>
-<li>One-way sensitivity analysis.</li>
-<li>Two-way sensitivity analysis.</li>
-<li>Limitations and extensions.</li>
-<li>Threshold analysis</li>
-<li>Scenario analysis</li>
+<li class="fragment"><p>Determine initial state, using the distribution of starting probabilities</p>
+<ul>
+<li class="fragment">e.g.&nbsp;probability of starting in sick/healthy</li>
+</ul></li>
+<li class="fragment"><p>Simulate individual trajectory through health states, using <strong>random numbers</strong> to determine actual transitions (yes/no) from transition probabilities</p></li>
+<li class="fragment"><p>Record # of cycles in each state</p></li>
+<li class="fragment"><p>Repeat steps 1-3 many times (N)</p></li>
 </ol>
 </section>
-<section id="alternatives-to-icers" class="slide level2 center">
-<h2>Alternatives to ICERs</h2>
+<section id="steps-1" class="slide level2 smaller">
+<h2>Steps</h2>
+<ol start="5" type="1">
+<li class="fragment"><p>Calculate mean # of cycles from sample of N</p>
 <ul>
-<li>ICERs the most common approach for describing CEA results
-<ul>
-<li><span style="color:green">Good</span>: summarize all aspects of decision problem except WTP (which comes from decision-maker)</li>
-<li><span style="color:red">Bad</span>: algorithms a bit complicated, negative ICERs, ratios can act poorly when denominator uncertain</li>
+<li class="fragment">Can weight states by utility, cost, discount factor (same as with Markov models)</li>
 </ul></li>
-</ul>
+</ol>
 </section>
-<section id="an-alternative" class="slide level2 center">
-<h2>An Alternative</h2>
-<ul>
-<li>If willing to choose a fixed willingness-to-pay threshold (e.g., <span class="math inline">\lambda =</span> 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.
-<ul>
-<li>Net Health Benefit (NHB)</li>
-<li>Net Monetary Benefit (NMB)</li>
-</ul></li>
-<li><span style="color:blue">Objective</span>: Select the strategy with the highest NHB/NMB</li>
-</ul>
-</section>
-<section id="net-health-benefit-nhb" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NHB}_s = E_s - \frac{C_s}{\lambda}
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="net-health-benefit-nhb-1" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NMB}_s = E_s \times \lambda - C_s
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="example-nhb" class="slide level2 center">
-<h2>Example: NHB</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">E_1</span> = 0.07 years</p>
-<p><span class="math inline">E_2</span> = 0.10 years</p>
-<p><span class="math inline">C_1</span> = 1,500</p>
-<p><span class="math inline">C_2</span> = 2,800</p>
-<p><span class="math inline">\lambda</span> = 50,000 per year of life saved</p>
-</div><div class="column">
-<p><span class="math display">
-ICER = \frac{2800-1500}{0.10 - 0.07}  \\
-= 43,333 \\
-</span></p>
-</div></div>
-</section>
-<section id="example-nhb-1" class="slide level2 center">
-<h2>Example: NHB</h2>
-<p><span class="math display">
-NHB_1 = 0.07 - 1500/50000 = 0.040 \\
-NHB_2 = 0.10 - 2800/50000 = 0.044
-\\
-\text{Incremental } NHB = 0.044 - 0.040 = 0.004
-</span></p>
-</section>
-<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
-<h2>Example: Net Monetary Benefit (NMB)</h2>
-<p><span class="math display">
-NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
-NHB_2 = 0.10 \times 50000 - 2800 = 2200
-\\
-\text{Incremental } NHB = 2200 - 2000 = 200
-</span></p>
-</section>
-<section id="calculating-nmb-in-amua" class="slide level2 center">
-<h2>Calculating NMB in Amua</h2>
-<div class="r-stack">
-<p><img data-src="images/clipboard-1972470218.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-2080375502.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-975167616.png" class="fragment" width="550" height="300"></p>
-<p><img data-src="images/clipboard-3987091812.png" class="fragment" width="550" height="300"></p>
+<section id="random-numbers" class="slide level2">
+<h2>Random numbers</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-ECA4B291.png" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-65EE9EB8.png" class="quarto-figure quarto-figure-center" width="700" height="259"></p>
+</figure>
 </div>
 </section>
-<section id="sensitivity" class="slide level2 center">
-<h2>Sensitivity</h2>
+<section id="markov-cohort-vs-microsimulation" class="slide level2">
+<h2>Markov cohort vs Microsimulation</h2>
+<p>[Shift to Powerpoint…]</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>Context: Economic evaluation of TB prevention among people living with HIV in Tanzania</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S2214109X22003722"><img data-src="images/paste-693A3914.png"></a></p>
+<figcaption>Zhu et al., The Lancet Global Health, 2022</figcaption>
+</figure>
+</div>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
 <ul>
-<li>ICER for Prevention strategy is just above WTP threshold of $50,000/QALY.</li>
-<li>NMB for treatment only slightly above NMB for prevention.</li>
-<li>How sensitive are these results to changes in specific model inputs?</li>
+<li class="fragment"><p>TB accounts for &gt;25% deaths among people living with HIV</p></li>
+<li class="fragment"><p>Isoniazid preventive therapy (IPT) can prevent TB among people receiving antiretroviral therapy (ART)</p></li>
+<li class="fragment"><p>HIV programmes are now initiating patients on ART with higher average CD4 cell counts and lower tuberculosis risks under test-and-treat guidelines</p></li>
+<li class="fragment"><p>We aimed to investigate how this change has affected the health impact and cost-effectiveness of IPT</p></li>
+</ul>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="images/paste-893141CB.png" class="r-stretch quarto-figure-center"><p class="caption">Zhu et al, The Lancet Global Health, 2022</p></section>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
+<div class="fragment">
+<div class="callout callout-note callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Why choose a microsimulation model?</p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment"><p>Individual-level characteristics on age, sex, CD4 cell count</p></li>
+<li class="fragment"><p>Tracking individual trajectory is crucial for this question</p>
+<ul>
+<li class="fragment"><p>CD4 cell counts change with HIV treatment</p></li>
+<li class="fragment"><p>Event rates (mortality and TB progression rates) are dependent on CD4 cell counts</p></li>
+</ul></li>
+<li class="fragment"><p>A markov cohort model wouldn’t be able to capture these complex mechanisms!</p></li>
 </ul>
 </section></section>
 <section>
-<section id="one-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>One-way sensitivity analysis</h1>
+<section id="discrete-event-simulation" class="title-slide slide level1 center">
+<h1>Discrete event simulation</h1>
 
 </section>
-<section id="one-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>One-way sensitivity analysis</h2>
+<section id="microsimulation-vs-des" class="slide level2 smaller">
+<h2>Microsimulation vs DES</h2>
+<div class="fragment">
+<div style="color: blue">
+<p>Miscrosimulation</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-ADA3A919.png" class="quarto-figure quarto-figure-center" width="1689"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div style="color: blue">
+<p>Discrete event simulation</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-F1424244.png" class="quarto-figure quarto-figure-center" width="1687"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="des" class="slide level2 smaller">
+<h2>DES</h2>
+<div style="font-size: 0.95em">
 <ul>
-<li class="fragment">Usually the starting point for sensitivity analyses</li>
-<li class="fragment">Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant</li>
-<li class="fragment">Determining how this variation impacts the results</li>
-<li class="fragment">One-way sensitivity analyses are often presented in a <strong>tornado diagram</strong>
+<li class="fragment"><p><strong>Similar to microsimulation,</strong> DES simulates one individual at a time <span class="math inline">\rightarrow</span> Subject to stochasticity</p></li>
+<li class="fragment"><p><strong>Different from microsimulation</strong> (where time is discretized), DES models time continuously</p></li>
+<li class="fragment"><p><strong>Pros:</strong></p>
 <ul>
-<li class="fragment">Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs</li>
+<li class="fragment"><p>Faster: Skips unnecessary cycles where no events happen</p></li>
+<li class="fragment"><p>More natural to implement when data are presented as time-to-event distributions (wait time, length of stay in hospital, onset-to-treatment time for acute conditions)</p></li>
+</ul></li>
+<li class="fragment"><p><strong>Cons:</strong></p>
+<ul>
+<li class="fragment"><p>Less intuitive: “time to death is sampled from a Weibull distribution of shape = 2.72, scale = 58.5” (DES) vs.&nbsp;“the probability of death in year 1 is 0.038” (Microsim)</p></li>
+<li class="fragment"><p>Those time steps may be useful even if there’s no event! (In the HIV/TB example, CD4 cell count is updated every cycle to recalculate TB and death risks)</p></li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="images/paste-CFBFCE8E.png" class="r-stretch"></section>
+<section id="example-5" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="images/paste-D21543AB.png" class="r-stretch quarto-figure-center"><p class="caption">Graves et al, 2017</p></section></section>
+<section>
+<section id="infectious-disease-dynamic-models" class="title-slide slide level1 center">
+<h1>Infectious disease (dynamic) models</h1>
+
+</section>
+<section id="why-dynamic-models" class="slide level2">
+<h2>Why dynamic models?</h2>
+<ul>
+<li class="fragment"><p>So far all model types we discussed assume that individuals in the model cohort experience events independently</p>
+<ul>
+<li class="fragment">Appropriate assumption for most chronic disease models</li>
+</ul></li>
+<li class="fragment"><p>But what about infectious diseases (e.g.&nbsp;COVID) where individuals interact with each other?</p>
+<ul>
+<li class="fragment">E.g. the risk of acquiring COVID for a healthy (susceptible) individual depends on how many individuals current have COVID in the population</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-sir-model" class="slide level2">
+<h2>The SIR model</h2>
+<p>The most classic model in infectious disease epidemiology. Appropriate for many common infectious diseases (e.g., the flu).</p>
+
+<img data-src="images/clipboard-1493296139.png" class="r-stretch"></section>
+<section id="the-sir-model-1" class="slide level2">
+<h2>The SIR model</h2>
+
+<img data-src="images/paste-36EB7CF0.png" class="r-stretch quarto-figure-center"><p class="caption">Source: Vynnycky, Emilia; White, Richard. An Introduction to Infectious Disease Modelling.</p></section>
+<section id="variants-of-the-sir-model" class="slide level2 smaller">
+<h2>Variants of the SIR model</h2>
+<ul>
+<li class="fragment"><p>From the simple SIR process, we can add more stuctures to reflect the process of a particular disease, for example:</p>
+<ul>
+<li class="fragment"><p>Age- or sex- mixing: appropriate for sexually transmitted diseases</p></li>
+<li class="fragment"><p>A stage where individuals are infected but not infectious: appropriate for diseases with a latent stage, e.g., TB, COVID-19</p></li>
+</ul></li>
+</ul>
+
+<img data-src="images/SEIR.svg" class="fragment quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
+<p>Dynamic models are often expressed/solved as difference/differential equations</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Example:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-A420C388.png" class="quarto-figure quarto-figure-center" width="262"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>They can be solved by hand or using softwares (e.g.&nbsp;deSolve package in R)</p>
+</div></div>
 </section></section>
 <section>
-<section id="examples-from-publications" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
+<section id="how-to-choose-the-right-model" class="title-slide slide level1 center">
+<h1>How to choose the right model?</h1>
 
 </section>
-<section id="rotavirus-study" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-1" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show2.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-2" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show3.jpeg" class="r-stretch"></section>
-<section id="other-examples" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.33.51 PM.png" class="r-stretch"></section>
-<section id="other-examples-1" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-01.png" class="r-stretch"></section>
-<section id="other-examples-2" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.15.55 AM.png" width="759" class="r-stretch"></section>
-<section id="other-examples-3" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.19.09 AM.png" width="777" class="r-stretch"></section></section>
-<section>
-<section id="interactive-amua-session" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-<section id="primary-results-progressive-disease" class="slide level2 center">
-<h2>Primary Results: Progressive Disease</h2>
-<table class="caption-top">
+<section id="comparison-of-model-types" class="slide level2">
+<h2>Comparison of model types</h2>
+<div style="font-size: 0.5em; line-height: 1">
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 37%">
+<col style="width: 37%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Strategy</th>
-<th>ICER</th>
+<th>Model Type</th>
+<th>Strengths</th>
+<th>Limitations</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Status Quo</td>
-<td>-</td>
+<td>Decision tree</td>
+<td><p>Transparent</p>
+<p>Straightforward calculations</p></td>
+<td>Difficult to capture progression over time or repeated events</td>
 </tr>
 <tr class="even">
-<td>Treatment</td>
-<td>49,513</td>
-</tr>
-<tr class="odd">
-<td>Prevention</td>
-<td>139,630</td>
+<td>Markov cohort</td>
+<td><p>Able to capture repeated events over time</p>
+<p>Fast run speed</p></td>
+<td><p>Difficult to capture individual heterogeneity or track history of events</p>
+<p>Hard to handle complicated disease process (subject to state explosion)</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+</section>
+<section id="comparison-of-model-types-1" class="slide level2">
+<h2>Comparison of model types</h2>
+<div style="font-size: 0.5em; line-height: 1">
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 37%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Type</th>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision tree</td>
+<td><p>Transparent</p>
+<p>Straightforward calculations</p></td>
+<td>Difficult to capture progression over time or repeated events</td>
+</tr>
+<tr class="even">
+<td>Markov cohort</td>
+<td><p>Able to capture repeated events over time</p>
+<p>Fast run speed</p></td>
+<td><p>Difficult to capture individual heterogeneity or track history of events</p>
+<p>Hard to handle complicated disease process (subject to state explosion)</p></td>
+</tr>
+<tr class="odd">
+<td><strong>Microsimulation</strong></td>
+<td><p><strong>Easy to track history</strong></p>
+<p><strong>Very powerful and flexible</strong></p></td>
+<td><p><strong>Requires a large number of runs to converge</strong></p>
+<p><strong>Slowest run speed</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="comparison-of-model-types-2" class="slide level2">
+<h2>Comparison of model types</h2>
+<div style="font-size: 0.58em; line-height: 1">
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 24%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Type</th>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision tree</td>
+<td><p>Transparent</p>
+<p>Straightforward calculations</p></td>
+<td>Difficult to capture progression over time or repeated events</td>
+</tr>
+<tr class="even">
+<td>Markov cohort</td>
+<td><p>Able to capture repeated events over time</p>
+<p>Fast run speed</p></td>
+<td><p>Difficult to capture individual heterogeneity or track history of events</p>
+<p>Hard to handle complicated disease process (subject to state explosion)</p></td>
+</tr>
+<tr class="odd">
+<td>Microsimulation</td>
+<td><p>Easy to track history</p>
+<p>Very powerful and flexible</p></td>
+<td><p>Requires a large number of runs to converge</p>
+<p>Slowest run speed</p></td>
+</tr>
+<tr class="even">
+<td><strong>Discrete event simulation</strong></td>
+<td><p><strong>Easy to track history</strong></p>
+<p><strong>Faster than microsimulation</strong></p></td>
+<td><p><strong>Requires a large number of runs to converge</strong></p>
+<p><strong>Time-to-event distributions are less intuitive and harder to obtain than event rates/probabilities</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="comparison-of-model-types-3" class="slide level2">
+<h2>Comparison of model types</h2>
+<div style="font-size: 0.50em; line-height: 1">
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 26%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model Type</th>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision tree</td>
+<td><p>Transparent</p>
+<p>Straightforward calculations</p></td>
+<td>Difficult to capture progression over time or repeated events</td>
+</tr>
+<tr class="even">
+<td>Markov cohort</td>
+<td><p>Able to capture repeated events over time</p>
+<p>Fast run speed</p></td>
+<td><p>Difficult to capture individual heterogeneity or track history of events</p>
+<p>Hard to handle complicated disease process (subject to state explosion)</p></td>
+</tr>
+<tr class="odd">
+<td>Microsimulation</td>
+<td><p>Easy to track history</p>
+<p>Very powerful and flexible</p></td>
+<td><p>Requires a large number of runs to converge</p>
+<p>Slowest run speed</p></td>
+</tr>
+<tr class="even">
+<td>Discrete event simulation</td>
+<td><p>Easy to track history</p>
+<p>Faster than microsimulation</p></td>
+<td><p>Requires a large number of runs to converge</p>
+<p>Time-to-event distributions are less intuitive and harder to obtain than event rates/probabilities</p></td>
+</tr>
+<tr class="odd">
+<td><strong>Dynamic</strong></td>
+<td><strong>Able to capture transmission of disease</strong></td>
+<td><p><strong>More data requirements (e.g.&nbsp;contact patterns in populaton)</strong></p>
+<p><strong>More black-box</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="how-to-choose-the-right-model-1" class="slide level2">
+<h2>How to choose the right model?</h2>
+<p>Factors to consider:</p>
 <ul>
-<li><p>Treatment is cost-effective at WTP=$50,000/QALY—but <em>barely.</em></p></li>
-<li><p>How sensitive is this result to the input parameter values used?</p></li>
+<li class="fragment"><p>Policy question/interventions</p></li>
+<li class="fragment"><p>Data availability</p></li>
+<li class="fragment"><p>Natural history of disease</p></li>
+<li class="fragment"><p>Computational resources available</p></li>
 </ul>
+
+
 </section></section>
-<section>
-<section id="two-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Two-way sensitivity analysis</h1>
-
-</section>
-<section id="two-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>Two-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">A way to map the interaction effects between two parameters in a decision analysis model</li>
-<li class="fragment">Varies 2 parameters at a time</li>
-<li class="fragment">Explores the robustness of results in more depth</li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications-1" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="hiv-prevention" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 9.54.01 AM.png" width="517" class="r-stretch"></section>
-<section id="hiv-prevention-1" class="slide level2 center">
-<h2>HIV prevention</h2>
-<ul>
-<li class="fragment"><p>Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p></li>
-<li class="fragment"><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
-<li class="fragment"><p>And we also know that PrEP has traditionally been really <strong>costly</strong></p></li>
-</ul>
-</section>
-<section id="hiv-prevention-2" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.22.19 PM.png" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.25.53 PM.png" width="543" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care-1" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<ul>
-<li class="fragment"><p>Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p></li>
-<li class="fragment"><p>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong></p></li>
-</ul>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-2" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<blockquote>
-<p>When administered quickly after stroke onset (within three hours, as approved by the FDA), tPA helps to restore blood flow to brain regions affected by a stroke, thereby limiting the risk of damage and functional impairment</p>
-</blockquote>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-3" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section></section>
-<section id="interactive-amua-session-1" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-
-<section>
-<section id="limitations-of-deterministic-sensitivity-analyses" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Limitations of deterministic sensitivity analyses</h1>
-
-</section>
-<section id="caution-limitations" class="slide level2 center">
-<h2>Caution: Limitations!</h2>
-<ul>
-<li>Limited by the subjectivity of the choice of parameters to analyze</li>
-<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value</li>
-</ul>
-</section></section>
-<section>
-<section id="scenario-analysis" class="title-slide slide level1 center">
-<h1>Scenario analysis</h1>
-
-</section>
-<section id="motivation" class="slide level2 center">
-<h2>Motivation</h2>
-<ul>
-<li>Suppose we wanted to model the impact of these interventions under a “lower cost” scenario.</li>
-<li>One option is to</li>
-<li>It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.</li>
-</ul>
-</section>
-<section id="scenario-analysis-1" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<ul>
-<li>Focuses more on model <strong>assumptions</strong> rather than parameter uncertainty</li>
-<li>Could include separate analysis on:</li>
-</ul>
-<blockquote>
-<p>Subgroups/sub-populations, including different age cohorts &amp; risk levels</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Different perspectives (societal; modified societal; etc)</p>
-</blockquote>
-</section>
-<section id="scenario-analysis-2" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<blockquote>
-<p>Hypothetical scenarios (“optimistic” and “conservative” scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Time horizons</p>
-</blockquote>
-</section>
-<section id="examples" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-02.png" class="r-stretch"></section>
-<section id="examples-1" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.20 AM.png" class="r-stretch"></section>
-<section id="examples-2" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.50 AM.png" class="r-stretch"></section>
-<section id="examples-3" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.26.44 AM.png" class="r-stretch"></section>
-<section id="examples-4" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 8.54.33 AM.png" class="r-stretch"></section>
-<section id="examples-5" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section></section>
-<section>
-<section id="threshold-analysis" class="title-slide slide level1 center">
-<h1>Threshold analysis</h1>
-
-</section>
-<section id="threshold-analysis-1" class="slide level2 center">
-<h2>Threshold analysis</h2>
-<ul>
-<li>Answers the question: What the input parameter need be to meet the country thresholds of:
-<ul>
-<li>$50,000/QALY gained</li>
-<li>$100,000/QALY gained</li>
-<li>$150,000/QALY gained</li>
-<li>$200,000/QALY gained</li>
-</ul></li>
-</ul>
-</section>
-<section id="examples-6" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM.png" class="r-stretch"></section>
-<section id="examples-7" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section></section>
-<section id="thank-you" class="title-slide slide level1 center">
-<h1>Thank you!</h1>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/logos.png" class="slide-logo"></p>
+<p><img src="../vchem.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -587,7 +664,7 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -683,12 +760,12 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 5.0e-2,
+        margin: 0.1,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,

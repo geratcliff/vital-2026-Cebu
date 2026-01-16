@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="lec_7.MarkovModels1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="lec_7.MarkovModels1_files/libs/quarto-html/tabby.min.js"></script>
-<script src="lec_7.MarkovModels1_files/libs/quarto-html/popper.min.js"></script>
-<script src="lec_7.MarkovModels1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="lec_7.MarkovModels1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="lec_7.MarkovModels1_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="lec_7.MarkovModels1_files/libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="lec_7.MarkovModels1_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="lec_7.MarkovModels1_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Markov Models</title>
+  <title>Decision Analysis Workshop - Cebu – Markov Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="lec_7.MarkovModels1_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="lec_7.MarkovModels1_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="lec_7.MarkovModels1_files/libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -66,10 +66,10 @@
 }}});
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-  <link href="lec_7.MarkovModels1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="lec_7.MarkovModels1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="lec_7.MarkovModels1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="lec_7.MarkovModels1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -157,9 +157,9 @@
       margin-right: 0; 
     }
   </style>
-  <script src="lec_7.MarkovModels1_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="lec_7.MarkovModels1_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -172,155 +172,47 @@
 </div>
 
 </section>
-<section id="learning-objectives-and-outline" class="slide level2 section-slide center">
-<h2>Learning Objectives and Outline</h2>
-<div class="section-number">
-<p>00</p>
-</div>
+<section>
+<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
+<h1>Learning Objectives and Outline</h1>
+
 </section>
 <section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
-<div class="icon-bullets">
 <ul>
 <li class="fragment"><p>Discuss pros and cons of decision modeling using decision trees vs. a formal deterministic model</p></li>
 <li class="fragment"><p>Understand the components and structure of discrete time Markov models</p></li>
 <li class="fragment"><p>Calculate Markov cycles by hand, using Markov bubble diagram</p></li>
 <li class="fragment"><p>Apply methods for Markov cycle correction</p></li>
 </ul>
-</div>
-</section>
-<section id="outline" class="slide level2 numbered-list-slide center">
-<h2>Outline</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="number-list">
-<div class="list-item">
-<div class="number">
-<p>01</p>
-</div>
-<div class="text">
-<p>Modeling a Simple Disease Process</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>02</p>
-</div>
-<div class="text">
-<p>Markov Models</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>03</p>
-</div>
-<div class="text">
-<p>Constructing a Markov Model</p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="number-list">
-<div class="list-item">
-<div class="number">
-<p>04</p>
-</div>
-<div class="text">
-<p>Dominance &amp; extended dominance</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>05</p>
-</div>
-<div class="text">
-<p>Comparators</p>
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-<p>06</p>
-</div>
-<div class="text">
-<p>CEA thresholds</p>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="modeling-a-simple-disease-process" class="slide level2 section-slide center">
-<h2>Modeling a Simple Disease Process</h2>
-<div class="section-number">
-<p>01</p>
-</div>
 </section>
 <section id="a-simple-disease-process" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
 <ul>
 <li class="fragment">Suppose we want to model the cost-effectiveness of alternative strategies to prevent a disease from occurring.</li>
-<li class="fragment">We start with a healthy population of 25 year olds and there are three health states people can experience:</li>
+<li class="fragment">We start with a healthy population of 25 year olds and there are three health states people can experience:
+<ol type="1">
+<li class="fragment">Remain <strong>Healthy</strong></li>
+<li class="fragment">Become <strong>Sick</strong></li>
+<li class="fragment"><strong>Death</strong></li>
+</ol></li>
 </ul>
-<div class="concept-grid">
-<div class="concept-box fragment">
-<p>Remain <strong>Healthy</strong></p>
-</div>
-<div class="concept-box fragment">
-<p>Become <strong>Sick</strong></p>
-</div>
-<div class="concept-box fragment">
-<p><strong>Death</strong></p>
-</div>
-</div>
 </section>
 <section id="a-simple-disease-process-1" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
-<div class="concept-grid">
-<div class="concept-box">
-<p><strong>Healthy</strong></p>
-</div>
-<div class="concept-box">
-<p><strong>Sick</strong></p>
-</div>
-<div class="concept-box">
-<p><strong>Death</strong></p>
-</div>
-</div>
-<div class="concept-grid">
-<div class="concept-box accent fragment">
-<p>Remaining healthy carries no utility decrement <br>(utility weight = 1.0 per cycle in healthy state)</p>
-</div>
-<div class="concept-box accent fragment">
-<p>Becoming sick carries a 0.25 utility decrement for the remainder of the person’s life (utility weight = 0.75)</p>
-</div>
-<div class="concept-box accent fragment">
-<p>Death carries a utility value of 0</p>
-</div>
-</div>
+<ul>
+<li class="fragment">Remaining healthy carries no utility decrement (utility weight = 1.0 per cycle in healthy state)</li>
+<li class="fragment">Becoming sick carries a 0.25 utility decrement for the remainder of the person’s life (utility weight = 0.75)</li>
+<li class="fragment">Death carries a utility value of 0.</li>
+</ul>
 </section>
 <section id="a-simple-disease-process-2" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
-<div class="concept-grid">
-<div class="concept-box">
-<p><strong>Healthy</strong></p>
-</div>
-<div class="concept-box">
-<p><strong>Sick</strong></p>
-</div>
-<div class="concept-box">
-<p><strong>Death</strong></p>
-</div>
-</div>
-<div class="concept-grid">
-<div class="concept-box accent fragment">
-<p>There is no cost associated with remaining healthy.</p>
-</div>
-<div class="concept-box accent fragment">
-<p>Becoming sick incurs $1,000 / year in costs. <br> Becoming sick increases the risk of death by 300%.</p>
-</div>
-<div class="concept-box accent fragment">
-<p>There is no cost associated with death.</p>
-</div>
-</div>
+<ul>
+<li class="fragment">There is no cost associated with remaining healthy.</li>
+<li class="fragment">Becoming sick incurs $1,000 / year in costs.</li>
+<li class="fragment">Becoming sick increases the risk of death by 300%.</li>
+</ul>
 </section>
 <section id="a-simple-disease-process-3" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
@@ -369,126 +261,298 @@
 </section>
 <section id="model-option-1-decision-tree" class="slide level2 center">
 <h2>Model Option 1: Decision Tree</h2>
-<div class="icon-bullets">
 <ul>
 <li>One option would be to use a decision tree to model the expected utility and costs associated with each strategy.</li>
 <li>Model time horizon: 10 years</li>
 <li>The next slide shows the decision tree for outcomes experienced in the first year.</li>
 </ul>
-</div>
 </section>
-<section id="model-option-1-decision-tree-1" class="slide level2 center">
+<section id="section" class="slide level2 center" data-background-image="images/paste-01F7F5A9.png" data-background-size="contain">
+<h2></h2>
+<!-- Note: Data to construct are contained in media/decision_tree_markov_health_sick_dead_1y.Rdata -->
+</section>
+<section id="model-option-1-decision-tree-1" class="slide level2 center" data-background-image="images/paste-01F7F5A9.png" data-background-size="contain" data-background-opacity="0.4">
 <h2>Model Option 1: Decision Tree</h2>
-<div class="split-content">
-<div class="content-text fragment">
 <ul>
 <li>What limitations do you see?</li>
 </ul>
-</div>
-<div class="content-image full">
-<p><img data-src="images/paste-01F7F5A9.png"></p>
-</div>
-</div>
 </section>
-<section id="model-option-1-decision-tree-2" class="slide level2 center">
-<h2>Model Option 1: Decision Tree</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li>Decision tree for two full cycles.</li>
-</ul>
-</div>
-<div class="content-image full">
-<p><img data-src="images/paste-55AF9B31.png"></p>
-</div>
-</div>
+<section id="section-1" class="slide level2 center" data-background-image="images/paste-55AF9B31.png" data-background-size="contain">
+<h2></h2>
+<p>Decision tree for two full cycles.</p>
 <!-- Note: Data to construct are contained in media/decision_tree_markov_health_sick_dead_2y.Rdata -->
 </section>
-<section id="model-option-1-decision-tree-3" class="slide level2 center">
-<h2>Model Option 1: Decision Tree</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li>Strategy A decision tree for 5 cycles.</li>
-</ul>
-</div>
-<div class="content-image full">
-<p><img data-src="images/paste-AAAFE3F8.png"></p>
-</div>
-</div>
+<section id="section-2" class="slide level2 center" data-background-image="images/paste-AAAFE3F8.png" data-background-size="contain">
+<h2></h2>
+<p>Strategy A decision tree for 5 cycles.</p>
 <!-- Note: Data to construct are contained in media/decision_tree_markov_health_sick_dead_5y.Rdata -->
 </section>
 <section id="decision-trees" class="slide level2 center">
 <h2>Decision Trees</h2>
-<div class="pros-cons-new">
-<div class="pros-column">
-<div class="column-title">
-Pros
-</div>
-<ul>
-<li class="fragment">Simple, rapid &amp; can provide insights</li>
-<li class="fragment">Easy to describe &amp; understand</li>
-<li class="fragment">Works well with limited time horizon</li>
-</ul>
-</div>
-<div class="cons-column">
-<div class="column-title">
-Disadvantages
-</div>
-<ul>
-<li class="fragment">Difficult to include clinical detail</li>
-<li class="fragment">Elapse of time is not readily evident.</li>
-<li class="fragment">Difficult to model longer (&gt;1 cycle) time horizons</li>
-</ul>
-</div>
-</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple, rapid &amp; can provide insights</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="decision-trees-1" class="slide level2 center">
 <h2>Decision Trees</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple, rapid &amp; can provide insights</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Easy to describe &amp; understand</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision-trees-2" class="slide level2 center">
+<h2>Decision Trees</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple, rapid &amp; can provide insights</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Easy to describe &amp; understand</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Works well with limited time horizon</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision-trees-3" class="slide level2 center">
+<h2>Decision Trees</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple, rapid &amp; can provide insights</td>
+<td>Difficult to include clinical detail</td>
+</tr>
+<tr class="even">
+<td>Easy to describe &amp; understand</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Works well with limited time horizon</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision-trees-4" class="slide level2 center">
+<h2>Decision Trees</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple, rapid &amp; can provide insights</td>
+<td>Difficult to include clinical detail</td>
+</tr>
+<tr class="even">
+<td>Easy to describe &amp; understand</td>
+<td>Elapse of time is not readily evident.</td>
+</tr>
+<tr class="odd">
+<td>Works well with limited time horizon</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision-trees-5" class="slide level2 center">
+<h2>Decision Trees</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple, rapid &amp; can provide insights</td>
+<td>Difficult to include clinical detail</td>
+</tr>
+<tr class="even">
+<td>Easy to describe &amp; understand</td>
+<td>Elapse of time is not readily evident.</td>
+</tr>
+<tr class="odd">
+<td>Works well with limited time horizon</td>
+<td>Difficult to model longer (&gt;1 cycle) time horizons</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision-trees-6" class="slide level2 center">
+<h2>Decision Trees</h2>
 
-<img data-src="images/lec7/3yearTree.png" class="r-stretch"></section>
+<img data-src="images/markov1.png" class="r-stretch"></section>
 <section id="next-steps" class="slide level2 center">
 <h2>Next Steps</h2>
 <ul>
 <li>Ideally we want a modeling approach that can incorporate flexibility and handle the complexities that make decision trees difficult/unwieldy.</li>
 </ul>
-</section>
-<section id="markov-models" class="slide level2 section-slide center">
-<h2>Markov Models</h2>
-<div class="section-number">
-<p>02</p>
-</div>
+</section></section>
+<section>
+<section id="markov-models" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Markov Models</h1>
+
 </section>
 <section id="markov-models-1" class="slide level2 center">
 <h2>Markov Models</h2>
 <p>Common approach in decision analyses that adds additional flexibility.</p>
-<div class="pros-cons-new">
-<div class="pros-column">
-<div class="column-title">
-Pros
-</div>
-<ul>
-<li class="fragment">Can model repeated events</li>
-<li class="fragment">Can model more complex + longitudinal clinical events</li>
-<li class="fragment">Not computationally intensive; efficient to model and debug</li>
-</ul>
-</div>
-<div class="cons-column">
-<div class="column-title">
-Disadvantages
-</div>
-</div>
-</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can model repeated events</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\quad \quad \quad \quad \quad \quad</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="markov-models-2" class="slide level2 center">
 <h2>Markov Models</h2>
-<div class="icon-bullets">
+<p>Common approach in decision analyses that adds additional flexibility.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can model repeated events</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Can model more complex + longitudinal clinical events</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="markov-models-3" class="slide level2 center">
+<h2>Markov Models</h2>
+<p>Common approach in decision analyses that adds additional flexibility.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can model repeated events</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Can model more complex + longitudinal clinical events</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Not computationally intensive; efficient to model and debug</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="markov-models-4" class="slide level2 center">
+<h2>Markov Models</h2>
 <ul>
 <li class="fragment"><p>The advantages of Markov models derive from their structure around mutually exclusive disease states.</p></li>
 <li class="fragment"><p>These disease states represent the possible states or consequences of strategies or options under consideration.</p></li>
 <li class="fragment"><p>Because there are a fixed number of disease states the population can be in, there is no need to model complex pathways, as we saw in the decision tree “explosion” a few slides back.</p></li>
 </ul>
-</div>
 </section>
 <section id="markov-trees" class="slide level2 center">
 <h2>Markov Trees</h2>
@@ -562,92 +626,69 @@ Disadvantages
 <p>Treatment A:<img data-src="images/caroline_model2.png"></p>
 </div></div>
 </section>
-<section id="when-choosing-a-model-structure" class="slide level2 quote-slide center">
+<section id="when-choosing-a-model-structure" class="slide level2 center">
 <h2>When choosing a model structure…</h2>
-<div class="quote-text">
-<p>Things should be made as simple as possible, but not simpler.</p>
-</div>
-<div class="quote-author">
-<p>Albert Einstein</p>
-</div>
-</section>
-<section id="constructing-a-markov-model" class="slide level2 section-slide center">
-<h2>Constructing a Markov Model</h2>
-<div class="section-number">
-<p>03</p>
-</div>
+<p><br></p>
+<blockquote>
+<p>“Things should be made as simple as possible, but not simpler” - Albert Einstein</p>
+</blockquote>
+<aside class="notes">
+<ol type="1">
+<li><p>When choosing a model structure, you want to choose one that best fits your research question &amp; one that adequately represents the clinical background/problem – zeroing in on what’s most important</p></li>
+<li><p>You always want to first build the structure completely independently &amp; data free AND then see how hard it is to get data + calibrate</p></li>
+<li><p><strong>You never want to model based on the data</strong>* nor do you ever want to make something complicated just to make it complicated**</p></li>
+<li><p>Just because a model is “super complicated/complex” doesn’t mean it’s more publishable or better than something that’s more simplistic</p></li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="constructing-a-markov-model" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Constructing a Markov Model</h1>
+
 </section>
 <section id="key-characteristics" class="slide level2 smaller center">
 <h2>Key characteristics</h2>
-<div class="icon-bullets">
 <ul>
-<li class="fragment">Allows for health state transitions <span class="highlight">over time</span></li>
+<li class="fragment">Allows for health state transitions <span style="background-color: yellow;">over time</span></li>
 <li class="fragment">Individuals can only exist in one state at a time (mutually exclusive health states)</li>
-<li class="fragment">At the beginning or end of each cycle, patients transition across health states via transition probabilities &amp; individuals stay in health state <span class="highlight">for entire cycle length</span></li>
+<li class="fragment">At the beginning or end of each cycle, patients transition across health states via transition probabilities &amp; individuals stay in health state <span style="background-color: yellow;">for entire cycle length</span></li>
 <li class="fragment">Probability of transitioning depends on the current state (“no memory”); (tunnel states can account for this potential limitation)</li>
 <li class="fragment">Transition probabilities remain constant over time (apart from embedded lifetables)</li>
 <li class="fragment">Results report “average” of cohort</li>
 </ul>
-</div>
 </section>
-<section id="section" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>CYCLE</p>
-</div>
-<div class="definition">
-<p>Minimum amount of time that any individual will spend in a state before possible transition to another state</p>
-</div>
-</div>
+<section id="key-characteristics-1" class="slide level2 smaller center">
+<h2>Key characteristics</h2>
+<p><br></p>
+<blockquote>
+<p>“CYCLE” = Minimum amount of time that any individual will spend in a state before possible transition to another state</p>
+</blockquote>
+<ul>
+<li>More on this in the next slides</li>
+</ul>
 </section>
 <section id="steps" class="slide level2 center">
 <h2>Steps</h2>
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>1</p>
-</div>
-<div class="step-title">
-<p>Define the decision problem</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>2</p>
-</div>
-<div class="step-title">
-<p>Conceptualize the model</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>3</p>
-</div>
-<div class="step-title">
-<p>Parameterize the model</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>4</p>
-</div>
-<div class="step-title">
-<p>Calculate or define the transition probability matrix</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>5</p>
-</div>
-<div class="step-title">
-<p>Run the model</p>
-</div>
-</div>
-</div>
-</section>
+<ol type="1">
+<li>Define the decision problem</li>
+<li>Conceptualize the model</li>
+<li>Parameterize the model</li>
+<li>Calculate or define the transition probability matrix</li>
+<li>Run the model</li>
+</ol>
+</section></section>
 <section>
-<section id="define-the-decision-problem" class="title-slide slide level1 accent-text center">
+<section id="define-the-decision-problem" class="title-slide slide level1 center" data-background="#c2f0c2">
 <h1>1. Define the Decision Problem</h1>
 
 </section>
@@ -705,7 +746,7 @@ Disadvantages
 
 <img data-src="images/paste-13DB786D.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
-<section id="conceptualize-the-markov-model" class="title-slide slide level1 accent-text center">
+<section id="conceptualize-the-markov-model" class="title-slide slide level1 center" data-background="#c2f0c2">
 <h1>2. Conceptualize the Markov Model</h1>
 
 </section>
@@ -718,33 +759,26 @@ Disadvantages
 <section id="step-2-conceptualize-the-model" class="slide level2 center">
 <h2>Step 2: Conceptualize the Model</h2>
 <h3 id="a.-determine-health-states-1"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2a. Determine health states</h3>
-<div class="concept-grid">
-<div class="concept-box fragment">
-<p>Remain <strong>Healthy</strong></p>
-</div>
-<div class="concept-box fragment">
-<p>Become <strong>Sick</strong></p>
-</div>
-<div class="concept-box fragment">
-<p><strong>Death</strong></p>
-</div>
-</div>
+<ul>
+<li class="fragment">There are three health states people can experience:
+<ol type="1">
+<li class="fragment">Remain <strong>Healthy</strong></li>
+<li class="fragment">Become <strong>Sick</strong></li>
+<li class="fragment"><strong>Death</strong></li>
+</ol></li>
+</ul>
 </section>
 <section id="step-2-conceptualize-the-model-1" class="slide level2 center">
 <h2>Step 2: Conceptualize the Model</h2>
 <h3 id="a.-determine-health-states-2"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2a. Determine health states</h3>
-<div class="concept-grid">
-<div class="concept-box">
-<p>Remain <strong>Healthy</strong></p>
-</div>
-<div class="concept-box">
-<p>Become <strong>Sick</strong></p>
-</div>
-<div class="concept-box">
-<p><strong>Death</strong></p>
-</div>
-</div>
-<p><br><br></p>
+<ul>
+<li>There three health states people can experience:
+<ol type="1">
+<li>Remain <strong>Healthy</strong></li>
+<li>Become <strong>Sick</strong></li>
+<li><strong>Death</strong></li>
+</ol></li>
+</ul>
 <h3 id="b.-determine-transitions-1"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2b. Determine transitions</h3>
 <ul>
 <li class="fragment">Individuals who become sick cannot transition back to healthy.</li>
@@ -753,9 +787,78 @@ Disadvantages
 <section id="bubble-diagram" class="slide level2 center">
 <h2>“Bubble Diagram”</h2>
 <p>State transition (“bubble”) diagrams are useful visualizations of a Markov model.</p>
-
-<img data-src="./images/lec7/bubble.png" class="r-stretch"><div class="footer">
-<p>Diagram constructed using the <a href="https://geratcliff.shinyapps.io/bubble_tool/" target="_blank">Health State Transition Diagram Builder</a></p>
+<div class="cell" data-fig-width="4" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="384" height="480" viewbox="0.00 0.00 171.02 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-184 167.02,-184 167.02,4 -4,4"></polygon>
+<!-- Healthy -->
+<g id="node1" class="node">
+<title>Healthy</title>
+<ellipse fill="none" stroke="black" cx="41.61" cy="-90" rx="41.71" ry="18"></ellipse>
+<text text-anchor="middle" x="41.61" y="-85.8" font-family="Times,serif" font-size="14.00">Healthy</text>
+</g>
+<!-- Healthy&#45;&gt;Healthy -->
+<g id="edge1" class="edge">
+<title>Healthy-&gt;Healthy</title>
+<path fill="none" stroke="black" d="M80.3,-96.74C92.04,-96.57 101.21,-94.32 101.21,-90 101.21,-87.03 96.88,-85.04 90.35,-84.03"></path>
+<polygon fill="black" stroke="black" points="90.54,-80.53 80.3,-83.26 90.01,-87.51 90.54,-80.53"></polygon>
+</g>
+<!-- Sick -->
+<g id="node2" class="node">
+<title>Sick</title>
+<ellipse fill="none" stroke="black" cx="113.61" cy="-162" rx="28.41" ry="18"></ellipse>
+<text text-anchor="middle" x="113.61" y="-157.8" font-family="Times,serif" font-size="14.00">Sick</text>
+</g>
+<!-- Healthy&#45;&gt;Sick -->
+<g id="edge3" class="edge">
+<title>Healthy-&gt;Sick</title>
+<path fill="none" stroke="black" d="M58.31,-106.7C67.93,-116.33 80.17,-128.57 90.69,-139.09"></path>
+<polygon fill="black" stroke="black" points="88.44,-141.78 97.98,-146.38 93.39,-136.83 88.44,-141.78"></polygon>
+</g>
+<!-- Dead -->
+<g id="node3" class="node">
+<title>Dead</title>
+<ellipse fill="none" stroke="black" cx="113.61" cy="-18" rx="31.32" ry="18"></ellipse>
+<text text-anchor="middle" x="113.61" y="-13.8" font-family="Times,serif" font-size="14.00">Dead</text>
+</g>
+<!-- Healthy&#45;&gt;Dead -->
+<g id="edge5" class="edge">
+<title>Healthy-&gt;Dead</title>
+<path fill="none" stroke="black" d="M58.31,-73.3C67.93,-63.67 80.17,-51.43 90.69,-40.91"></path>
+<polygon fill="black" stroke="black" points="93.39,-43.17 97.98,-33.62 88.44,-38.22 93.39,-43.17"></polygon>
+</g>
+<!-- Sick&#45;&gt;Sick -->
+<g id="edge2" class="edge">
+<title>Sick-&gt;Sick</title>
+<path fill="none" stroke="black" d="M140.2,-168.71C150.86,-169.09 159.81,-166.85 159.81,-162 159.81,-158.82 155.96,-156.76 150.29,-155.83"></path>
+<polygon fill="black" stroke="black" points="150.37,-152.33 140.2,-155.29 150,-159.32 150.37,-152.33"></polygon>
+</g>
+<!-- Sick&#45;&gt;Dead -->
+<g id="edge4" class="edge">
+<title>Sick-&gt;Dead</title>
+<path fill="none" stroke="black" d="M113.61,-143.76C113.61,-119.2 113.61,-75.25 113.61,-46.35"></path>
+<polygon fill="black" stroke="black" points="117.11,-46.09 113.61,-36.09 110.11,-46.09 117.11,-46.09"></polygon>
+</g>
+<!-- Dead&#45;&gt;Dead -->
+<g id="edge6" class="edge">
+<title>Dead-&gt;Dead</title>
+<path fill="none" stroke="black" d="M143.03,-24.74C153.99,-24.96 163.02,-22.71 163.02,-18 163.02,-14.91 159.13,-12.88 153.36,-11.91"></path>
+<polygon fill="black" stroke="black" points="153.23,-8.4 143.03,-11.26 152.79,-15.38 153.23,-8.4"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Diagram constructed using the <a href="http://magjac.com/graphviz-visual-editor/">Graphviz Visual Editor</a></p>
 </div>
 </section></section>
 <section>
@@ -773,13 +876,11 @@ Disadvantages
 <h2>3. Parameterize the Model</h2>
 <p>Basic steps</p>
 <h3 id="a.-determine-basic-model-parameters-1"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3a. Determine basic model parameters</h3>
-<div class="arrow-bullets">
 <ul>
 <li class="fragment">Define the population (e.g., 25 year old females)</li>
 <li class="fragment">Define the Markov cycle length (e.g., 1-year cycle)</li>
 <li class="fragment">Define the time horizon (e.g., followed until age 100 or death)</li>
 </ul>
-</div>
 </section>
 <section id="a.-define-the-markov-cycle-length" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
@@ -803,20 +904,8 @@ Disadvantages
 </section>
 <section id="a.-define-the-markov-cycle-length-2" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
-<div class="fragment">
-<p><img data-src="images/lec7/cyclelength1.png"></p>
-</div>
-<div class="fragment">
-<p><img data-src="images/lec7/cyclelength2.png" class="fragement"></p>
-</div>
-<div class="fragment">
-<p><img data-src="images/lec7/cyclelength3.png"></p>
-</div>
-<div class="fragment">
-<p><img data-src="images/lec7/cyclelength4.png"></p>
-</div>
-<div class="fragment">
-<p><img data-src="images/lec7/cyclelength5.png"></p>
+<div style="padding-top: 200px;">
+<p><img data-src="images/paste-9C03CB85.png"></p>
 </div>
 </section>
 <section id="a.-define-the-markov-cycle-length-3" class="slide level2 smaller center">
@@ -1427,23 +1516,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="wdiccfpgxl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wdiccfpgxl table {
+<div id="vodvygmfer" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vodvygmfer table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wdiccfpgxl thead, #wdiccfpgxl tbody, #wdiccfpgxl tfoot, #wdiccfpgxl tr, #wdiccfpgxl td, #wdiccfpgxl th {
+#vodvygmfer thead, #vodvygmfer tbody, #vodvygmfer tfoot, #vodvygmfer tr, #vodvygmfer td, #vodvygmfer th {
   border-style: none;
 }
 
-#wdiccfpgxl p {
+#vodvygmfer p {
   margin: 0;
   padding: 0;
 }
 
-#wdiccfpgxl .gt_table {
+#vodvygmfer .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1469,12 +1558,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_caption {
+#vodvygmfer .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wdiccfpgxl .gt_title {
+#vodvygmfer .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1486,7 +1575,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#wdiccfpgxl .gt_subtitle {
+#vodvygmfer .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1498,7 +1587,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#wdiccfpgxl .gt_heading {
+#vodvygmfer .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1510,13 +1599,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_bottom_border {
+#vodvygmfer .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_col_headings {
+#vodvygmfer .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1531,7 +1620,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_col_heading {
+#vodvygmfer .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1551,7 +1640,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#wdiccfpgxl .gt_column_spanner_outer {
+#vodvygmfer .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1563,15 +1652,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#wdiccfpgxl .gt_column_spanner_outer:first-child {
+#vodvygmfer .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wdiccfpgxl .gt_column_spanner_outer:last-child {
+#vodvygmfer .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wdiccfpgxl .gt_column_spanner {
+#vodvygmfer .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1583,11 +1672,11 @@ Disadvantages
   width: 100%;
 }
 
-#wdiccfpgxl .gt_spanner_row {
+#vodvygmfer .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wdiccfpgxl .gt_group_heading {
+#vodvygmfer .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1613,7 +1702,7 @@ Disadvantages
   text-align: left;
 }
 
-#wdiccfpgxl .gt_empty_group_heading {
+#vodvygmfer .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1628,15 +1717,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#wdiccfpgxl .gt_from_md > :first-child {
+#vodvygmfer .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wdiccfpgxl .gt_from_md > :last-child {
+#vodvygmfer .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wdiccfpgxl .gt_row {
+#vodvygmfer .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1655,7 +1744,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#wdiccfpgxl .gt_stub {
+#vodvygmfer .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1668,7 +1757,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#wdiccfpgxl .gt_stub_row_group {
+#vodvygmfer .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1682,15 +1771,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#wdiccfpgxl .gt_row_group_first td {
+#vodvygmfer .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wdiccfpgxl .gt_row_group_first th {
+#vodvygmfer .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wdiccfpgxl .gt_summary_row {
+#vodvygmfer .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1700,16 +1789,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#wdiccfpgxl .gt_first_summary_row {
+#vodvygmfer .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_first_summary_row.thick {
+#vodvygmfer .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wdiccfpgxl .gt_last_summary_row {
+#vodvygmfer .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1719,7 +1808,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_grand_summary_row {
+#vodvygmfer .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1729,7 +1818,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#wdiccfpgxl .gt_first_grand_summary_row {
+#vodvygmfer .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1739,7 +1828,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_last_grand_summary_row_top {
+#vodvygmfer .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1749,11 +1838,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_striped {
+#vodvygmfer .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wdiccfpgxl .gt_table_body {
+#vodvygmfer .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1762,7 +1851,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_footnotes {
+#vodvygmfer .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1776,7 +1865,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_footnote {
+#vodvygmfer .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1785,7 +1874,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#wdiccfpgxl .gt_sourcenotes {
+#vodvygmfer .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1799,7 +1888,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#wdiccfpgxl .gt_sourcenote {
+#vodvygmfer .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1807,72 +1896,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#wdiccfpgxl .gt_left {
+#vodvygmfer .gt_left {
   text-align: left;
 }
 
-#wdiccfpgxl .gt_center {
+#vodvygmfer .gt_center {
   text-align: center;
 }
 
-#wdiccfpgxl .gt_right {
+#vodvygmfer .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wdiccfpgxl .gt_font_normal {
+#vodvygmfer .gt_font_normal {
   font-weight: normal;
 }
 
-#wdiccfpgxl .gt_font_bold {
+#vodvygmfer .gt_font_bold {
   font-weight: bold;
 }
 
-#wdiccfpgxl .gt_font_italic {
+#vodvygmfer .gt_font_italic {
   font-style: italic;
 }
 
-#wdiccfpgxl .gt_super {
+#vodvygmfer .gt_super {
   font-size: 65%;
 }
 
-#wdiccfpgxl .gt_footnote_marks {
+#vodvygmfer .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wdiccfpgxl .gt_asterisk {
+#vodvygmfer .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wdiccfpgxl .gt_indent_1 {
+#vodvygmfer .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wdiccfpgxl .gt_indent_2 {
+#vodvygmfer .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wdiccfpgxl .gt_indent_3 {
+#vodvygmfer .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wdiccfpgxl .gt_indent_4 {
+#vodvygmfer .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wdiccfpgxl .gt_indent_5 {
+#vodvygmfer .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wdiccfpgxl .katex-display {
+#vodvygmfer .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wdiccfpgxl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vodvygmfer div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2012,7 +2101,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2 smaller center">
+<section id="section-3" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>param</strong> column is the short name of the parameter</p>
 <div class="footer">
@@ -2021,23 +2110,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="bpabnvqzeg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bpabnvqzeg table {
+<div id="hpxxailigl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hpxxailigl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bpabnvqzeg thead, #bpabnvqzeg tbody, #bpabnvqzeg tfoot, #bpabnvqzeg tr, #bpabnvqzeg td, #bpabnvqzeg th {
+#hpxxailigl thead, #hpxxailigl tbody, #hpxxailigl tfoot, #hpxxailigl tr, #hpxxailigl td, #hpxxailigl th {
   border-style: none;
 }
 
-#bpabnvqzeg p {
+#hpxxailigl p {
   margin: 0;
   padding: 0;
 }
 
-#bpabnvqzeg .gt_table {
+#hpxxailigl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2063,12 +2152,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_caption {
+#hpxxailigl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bpabnvqzeg .gt_title {
+#hpxxailigl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2080,7 +2169,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#bpabnvqzeg .gt_subtitle {
+#hpxxailigl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2092,7 +2181,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#bpabnvqzeg .gt_heading {
+#hpxxailigl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2104,13 +2193,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_bottom_border {
+#hpxxailigl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_col_headings {
+#hpxxailigl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2125,7 +2214,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_col_heading {
+#hpxxailigl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2145,7 +2234,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#bpabnvqzeg .gt_column_spanner_outer {
+#hpxxailigl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2157,15 +2246,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#bpabnvqzeg .gt_column_spanner_outer:first-child {
+#hpxxailigl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bpabnvqzeg .gt_column_spanner_outer:last-child {
+#hpxxailigl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bpabnvqzeg .gt_column_spanner {
+#hpxxailigl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2177,11 +2266,11 @@ Disadvantages
   width: 100%;
 }
 
-#bpabnvqzeg .gt_spanner_row {
+#hpxxailigl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bpabnvqzeg .gt_group_heading {
+#hpxxailigl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2207,7 +2296,7 @@ Disadvantages
   text-align: left;
 }
 
-#bpabnvqzeg .gt_empty_group_heading {
+#hpxxailigl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2222,15 +2311,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#bpabnvqzeg .gt_from_md > :first-child {
+#hpxxailigl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bpabnvqzeg .gt_from_md > :last-child {
+#hpxxailigl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bpabnvqzeg .gt_row {
+#hpxxailigl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2249,7 +2338,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#bpabnvqzeg .gt_stub {
+#hpxxailigl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2262,7 +2351,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#bpabnvqzeg .gt_stub_row_group {
+#hpxxailigl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2276,15 +2365,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#bpabnvqzeg .gt_row_group_first td {
+#hpxxailigl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bpabnvqzeg .gt_row_group_first th {
+#hpxxailigl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bpabnvqzeg .gt_summary_row {
+#hpxxailigl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2294,16 +2383,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#bpabnvqzeg .gt_first_summary_row {
+#hpxxailigl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_first_summary_row.thick {
+#hpxxailigl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bpabnvqzeg .gt_last_summary_row {
+#hpxxailigl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2313,7 +2402,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_grand_summary_row {
+#hpxxailigl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2323,7 +2412,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#bpabnvqzeg .gt_first_grand_summary_row {
+#hpxxailigl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2333,7 +2422,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_last_grand_summary_row_top {
+#hpxxailigl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2343,11 +2432,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_striped {
+#hpxxailigl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bpabnvqzeg .gt_table_body {
+#hpxxailigl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2356,7 +2445,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_footnotes {
+#hpxxailigl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2370,7 +2459,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_footnote {
+#hpxxailigl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2379,7 +2468,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#bpabnvqzeg .gt_sourcenotes {
+#hpxxailigl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2393,7 +2482,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#bpabnvqzeg .gt_sourcenote {
+#hpxxailigl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2401,72 +2490,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#bpabnvqzeg .gt_left {
+#hpxxailigl .gt_left {
   text-align: left;
 }
 
-#bpabnvqzeg .gt_center {
+#hpxxailigl .gt_center {
   text-align: center;
 }
 
-#bpabnvqzeg .gt_right {
+#hpxxailigl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bpabnvqzeg .gt_font_normal {
+#hpxxailigl .gt_font_normal {
   font-weight: normal;
 }
 
-#bpabnvqzeg .gt_font_bold {
+#hpxxailigl .gt_font_bold {
   font-weight: bold;
 }
 
-#bpabnvqzeg .gt_font_italic {
+#hpxxailigl .gt_font_italic {
   font-style: italic;
 }
 
-#bpabnvqzeg .gt_super {
+#hpxxailigl .gt_super {
   font-size: 65%;
 }
 
-#bpabnvqzeg .gt_footnote_marks {
+#hpxxailigl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bpabnvqzeg .gt_asterisk {
+#hpxxailigl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bpabnvqzeg .gt_indent_1 {
+#hpxxailigl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bpabnvqzeg .gt_indent_2 {
+#hpxxailigl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bpabnvqzeg .gt_indent_3 {
+#hpxxailigl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bpabnvqzeg .gt_indent_4 {
+#hpxxailigl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bpabnvqzeg .gt_indent_5 {
+#hpxxailigl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bpabnvqzeg .katex-display {
+#hpxxailigl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bpabnvqzeg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hpxxailigl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2606,7 +2695,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2 smaller center">
+<section id="section-4" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>base_case</strong> is the parameter value for the base case.</p>
 <div class="footer">
@@ -2615,23 +2704,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="sxqqbmjudt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#sxqqbmjudt table {
+<div id="wlvolinuiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wlvolinuiz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#sxqqbmjudt thead, #sxqqbmjudt tbody, #sxqqbmjudt tfoot, #sxqqbmjudt tr, #sxqqbmjudt td, #sxqqbmjudt th {
+#wlvolinuiz thead, #wlvolinuiz tbody, #wlvolinuiz tfoot, #wlvolinuiz tr, #wlvolinuiz td, #wlvolinuiz th {
   border-style: none;
 }
 
-#sxqqbmjudt p {
+#wlvolinuiz p {
   margin: 0;
   padding: 0;
 }
 
-#sxqqbmjudt .gt_table {
+#wlvolinuiz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2657,12 +2746,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_caption {
+#wlvolinuiz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#sxqqbmjudt .gt_title {
+#wlvolinuiz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2674,7 +2763,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#sxqqbmjudt .gt_subtitle {
+#wlvolinuiz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2686,7 +2775,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#sxqqbmjudt .gt_heading {
+#wlvolinuiz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2698,13 +2787,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_bottom_border {
+#wlvolinuiz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_col_headings {
+#wlvolinuiz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2719,7 +2808,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_col_heading {
+#wlvolinuiz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2739,7 +2828,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#sxqqbmjudt .gt_column_spanner_outer {
+#wlvolinuiz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2751,15 +2840,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#sxqqbmjudt .gt_column_spanner_outer:first-child {
+#wlvolinuiz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#sxqqbmjudt .gt_column_spanner_outer:last-child {
+#wlvolinuiz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#sxqqbmjudt .gt_column_spanner {
+#wlvolinuiz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2771,11 +2860,11 @@ Disadvantages
   width: 100%;
 }
 
-#sxqqbmjudt .gt_spanner_row {
+#wlvolinuiz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#sxqqbmjudt .gt_group_heading {
+#wlvolinuiz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2801,7 +2890,7 @@ Disadvantages
   text-align: left;
 }
 
-#sxqqbmjudt .gt_empty_group_heading {
+#wlvolinuiz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2816,15 +2905,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#sxqqbmjudt .gt_from_md > :first-child {
+#wlvolinuiz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#sxqqbmjudt .gt_from_md > :last-child {
+#wlvolinuiz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#sxqqbmjudt .gt_row {
+#wlvolinuiz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2843,7 +2932,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#sxqqbmjudt .gt_stub {
+#wlvolinuiz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2856,7 +2945,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#sxqqbmjudt .gt_stub_row_group {
+#wlvolinuiz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2870,15 +2959,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#sxqqbmjudt .gt_row_group_first td {
+#wlvolinuiz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#sxqqbmjudt .gt_row_group_first th {
+#wlvolinuiz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#sxqqbmjudt .gt_summary_row {
+#wlvolinuiz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2888,16 +2977,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#sxqqbmjudt .gt_first_summary_row {
+#wlvolinuiz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_first_summary_row.thick {
+#wlvolinuiz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#sxqqbmjudt .gt_last_summary_row {
+#wlvolinuiz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2907,7 +2996,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_grand_summary_row {
+#wlvolinuiz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2917,7 +3006,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#sxqqbmjudt .gt_first_grand_summary_row {
+#wlvolinuiz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2927,7 +3016,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_last_grand_summary_row_top {
+#wlvolinuiz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2937,11 +3026,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_striped {
+#wlvolinuiz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#sxqqbmjudt .gt_table_body {
+#wlvolinuiz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2950,7 +3039,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_footnotes {
+#wlvolinuiz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2964,7 +3053,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_footnote {
+#wlvolinuiz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2973,7 +3062,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#sxqqbmjudt .gt_sourcenotes {
+#wlvolinuiz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2987,7 +3076,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#sxqqbmjudt .gt_sourcenote {
+#wlvolinuiz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2995,72 +3084,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#sxqqbmjudt .gt_left {
+#wlvolinuiz .gt_left {
   text-align: left;
 }
 
-#sxqqbmjudt .gt_center {
+#wlvolinuiz .gt_center {
   text-align: center;
 }
 
-#sxqqbmjudt .gt_right {
+#wlvolinuiz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#sxqqbmjudt .gt_font_normal {
+#wlvolinuiz .gt_font_normal {
   font-weight: normal;
 }
 
-#sxqqbmjudt .gt_font_bold {
+#wlvolinuiz .gt_font_bold {
   font-weight: bold;
 }
 
-#sxqqbmjudt .gt_font_italic {
+#wlvolinuiz .gt_font_italic {
   font-style: italic;
 }
 
-#sxqqbmjudt .gt_super {
+#wlvolinuiz .gt_super {
   font-size: 65%;
 }
 
-#sxqqbmjudt .gt_footnote_marks {
+#wlvolinuiz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#sxqqbmjudt .gt_asterisk {
+#wlvolinuiz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#sxqqbmjudt .gt_indent_1 {
+#wlvolinuiz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#sxqqbmjudt .gt_indent_2 {
+#wlvolinuiz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#sxqqbmjudt .gt_indent_3 {
+#wlvolinuiz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#sxqqbmjudt .gt_indent_4 {
+#wlvolinuiz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#sxqqbmjudt .gt_indent_5 {
+#wlvolinuiz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#sxqqbmjudt .katex-display {
+#wlvolinuiz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#sxqqbmjudt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wlvolinuiz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3200,7 +3289,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller center">
+<section id="section-5" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>formula</strong> defines model parameter formulas for parameters that are functions of other model parameters.</p>
 <div class="footer">
@@ -3209,23 +3298,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="kjecwuwasu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kjecwuwasu table {
+<div id="wrbgrlulwk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wrbgrlulwk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kjecwuwasu thead, #kjecwuwasu tbody, #kjecwuwasu tfoot, #kjecwuwasu tr, #kjecwuwasu td, #kjecwuwasu th {
+#wrbgrlulwk thead, #wrbgrlulwk tbody, #wrbgrlulwk tfoot, #wrbgrlulwk tr, #wrbgrlulwk td, #wrbgrlulwk th {
   border-style: none;
 }
 
-#kjecwuwasu p {
+#wrbgrlulwk p {
   margin: 0;
   padding: 0;
 }
 
-#kjecwuwasu .gt_table {
+#wrbgrlulwk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3251,12 +3340,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_caption {
+#wrbgrlulwk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kjecwuwasu .gt_title {
+#wrbgrlulwk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3268,7 +3357,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#kjecwuwasu .gt_subtitle {
+#wrbgrlulwk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3280,7 +3369,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#kjecwuwasu .gt_heading {
+#wrbgrlulwk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3292,13 +3381,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_bottom_border {
+#wrbgrlulwk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_col_headings {
+#wrbgrlulwk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3313,7 +3402,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_col_heading {
+#wrbgrlulwk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3333,7 +3422,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#kjecwuwasu .gt_column_spanner_outer {
+#wrbgrlulwk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3345,15 +3434,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#kjecwuwasu .gt_column_spanner_outer:first-child {
+#wrbgrlulwk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kjecwuwasu .gt_column_spanner_outer:last-child {
+#wrbgrlulwk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kjecwuwasu .gt_column_spanner {
+#wrbgrlulwk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3365,11 +3454,11 @@ Disadvantages
   width: 100%;
 }
 
-#kjecwuwasu .gt_spanner_row {
+#wrbgrlulwk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kjecwuwasu .gt_group_heading {
+#wrbgrlulwk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3395,7 +3484,7 @@ Disadvantages
   text-align: left;
 }
 
-#kjecwuwasu .gt_empty_group_heading {
+#wrbgrlulwk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3410,15 +3499,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#kjecwuwasu .gt_from_md > :first-child {
+#wrbgrlulwk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kjecwuwasu .gt_from_md > :last-child {
+#wrbgrlulwk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kjecwuwasu .gt_row {
+#wrbgrlulwk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3437,7 +3526,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#kjecwuwasu .gt_stub {
+#wrbgrlulwk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3450,7 +3539,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#kjecwuwasu .gt_stub_row_group {
+#wrbgrlulwk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3464,15 +3553,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#kjecwuwasu .gt_row_group_first td {
+#wrbgrlulwk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kjecwuwasu .gt_row_group_first th {
+#wrbgrlulwk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kjecwuwasu .gt_summary_row {
+#wrbgrlulwk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3482,16 +3571,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#kjecwuwasu .gt_first_summary_row {
+#wrbgrlulwk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_first_summary_row.thick {
+#wrbgrlulwk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kjecwuwasu .gt_last_summary_row {
+#wrbgrlulwk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3501,7 +3590,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_grand_summary_row {
+#wrbgrlulwk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3511,7 +3600,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#kjecwuwasu .gt_first_grand_summary_row {
+#wrbgrlulwk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3521,7 +3610,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_last_grand_summary_row_top {
+#wrbgrlulwk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3531,11 +3620,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_striped {
+#wrbgrlulwk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kjecwuwasu .gt_table_body {
+#wrbgrlulwk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3544,7 +3633,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_footnotes {
+#wrbgrlulwk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3558,7 +3647,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_footnote {
+#wrbgrlulwk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3567,7 +3656,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#kjecwuwasu .gt_sourcenotes {
+#wrbgrlulwk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3581,7 +3670,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#kjecwuwasu .gt_sourcenote {
+#wrbgrlulwk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3589,72 +3678,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#kjecwuwasu .gt_left {
+#wrbgrlulwk .gt_left {
   text-align: left;
 }
 
-#kjecwuwasu .gt_center {
+#wrbgrlulwk .gt_center {
   text-align: center;
 }
 
-#kjecwuwasu .gt_right {
+#wrbgrlulwk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kjecwuwasu .gt_font_normal {
+#wrbgrlulwk .gt_font_normal {
   font-weight: normal;
 }
 
-#kjecwuwasu .gt_font_bold {
+#wrbgrlulwk .gt_font_bold {
   font-weight: bold;
 }
 
-#kjecwuwasu .gt_font_italic {
+#wrbgrlulwk .gt_font_italic {
   font-style: italic;
 }
 
-#kjecwuwasu .gt_super {
+#wrbgrlulwk .gt_super {
   font-size: 65%;
 }
 
-#kjecwuwasu .gt_footnote_marks {
+#wrbgrlulwk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kjecwuwasu .gt_asterisk {
+#wrbgrlulwk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kjecwuwasu .gt_indent_1 {
+#wrbgrlulwk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kjecwuwasu .gt_indent_2 {
+#wrbgrlulwk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kjecwuwasu .gt_indent_3 {
+#wrbgrlulwk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kjecwuwasu .gt_indent_4 {
+#wrbgrlulwk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kjecwuwasu .gt_indent_5 {
+#wrbgrlulwk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kjecwuwasu .katex-display {
+#wrbgrlulwk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kjecwuwasu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wrbgrlulwk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3794,29 +3883,29 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller center">
+<section id="section-6" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>description</strong> provides a text description of the parameter.</p>
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="ksweyzgtwq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ksweyzgtwq table {
+<div id="lgaimjtboa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lgaimjtboa table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ksweyzgtwq thead, #ksweyzgtwq tbody, #ksweyzgtwq tfoot, #ksweyzgtwq tr, #ksweyzgtwq td, #ksweyzgtwq th {
+#lgaimjtboa thead, #lgaimjtboa tbody, #lgaimjtboa tfoot, #lgaimjtboa tr, #lgaimjtboa td, #lgaimjtboa th {
   border-style: none;
 }
 
-#ksweyzgtwq p {
+#lgaimjtboa p {
   margin: 0;
   padding: 0;
 }
 
-#ksweyzgtwq .gt_table {
+#lgaimjtboa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3842,12 +3931,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_caption {
+#lgaimjtboa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ksweyzgtwq .gt_title {
+#lgaimjtboa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3859,7 +3948,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#ksweyzgtwq .gt_subtitle {
+#lgaimjtboa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3871,7 +3960,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#ksweyzgtwq .gt_heading {
+#lgaimjtboa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3883,13 +3972,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_bottom_border {
+#lgaimjtboa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_col_headings {
+#lgaimjtboa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3904,7 +3993,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_col_heading {
+#lgaimjtboa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3924,7 +4013,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#ksweyzgtwq .gt_column_spanner_outer {
+#lgaimjtboa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3936,15 +4025,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#ksweyzgtwq .gt_column_spanner_outer:first-child {
+#lgaimjtboa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ksweyzgtwq .gt_column_spanner_outer:last-child {
+#lgaimjtboa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ksweyzgtwq .gt_column_spanner {
+#lgaimjtboa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3956,11 +4045,11 @@ Disadvantages
   width: 100%;
 }
 
-#ksweyzgtwq .gt_spanner_row {
+#lgaimjtboa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ksweyzgtwq .gt_group_heading {
+#lgaimjtboa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3986,7 +4075,7 @@ Disadvantages
   text-align: left;
 }
 
-#ksweyzgtwq .gt_empty_group_heading {
+#lgaimjtboa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4001,15 +4090,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#ksweyzgtwq .gt_from_md > :first-child {
+#lgaimjtboa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ksweyzgtwq .gt_from_md > :last-child {
+#lgaimjtboa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ksweyzgtwq .gt_row {
+#lgaimjtboa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4028,7 +4117,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#ksweyzgtwq .gt_stub {
+#lgaimjtboa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4041,7 +4130,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ksweyzgtwq .gt_stub_row_group {
+#lgaimjtboa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4055,15 +4144,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#ksweyzgtwq .gt_row_group_first td {
+#lgaimjtboa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ksweyzgtwq .gt_row_group_first th {
+#lgaimjtboa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ksweyzgtwq .gt_summary_row {
+#lgaimjtboa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4073,16 +4162,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ksweyzgtwq .gt_first_summary_row {
+#lgaimjtboa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_first_summary_row.thick {
+#lgaimjtboa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ksweyzgtwq .gt_last_summary_row {
+#lgaimjtboa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4092,7 +4181,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_grand_summary_row {
+#lgaimjtboa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4102,7 +4191,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ksweyzgtwq .gt_first_grand_summary_row {
+#lgaimjtboa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4112,7 +4201,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_last_grand_summary_row_top {
+#lgaimjtboa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4122,11 +4211,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_striped {
+#lgaimjtboa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ksweyzgtwq .gt_table_body {
+#lgaimjtboa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4135,7 +4224,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_footnotes {
+#lgaimjtboa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4149,7 +4238,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_footnote {
+#lgaimjtboa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4158,7 +4247,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ksweyzgtwq .gt_sourcenotes {
+#lgaimjtboa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4172,7 +4261,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ksweyzgtwq .gt_sourcenote {
+#lgaimjtboa .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4180,72 +4269,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ksweyzgtwq .gt_left {
+#lgaimjtboa .gt_left {
   text-align: left;
 }
 
-#ksweyzgtwq .gt_center {
+#lgaimjtboa .gt_center {
   text-align: center;
 }
 
-#ksweyzgtwq .gt_right {
+#lgaimjtboa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ksweyzgtwq .gt_font_normal {
+#lgaimjtboa .gt_font_normal {
   font-weight: normal;
 }
 
-#ksweyzgtwq .gt_font_bold {
+#lgaimjtboa .gt_font_bold {
   font-weight: bold;
 }
 
-#ksweyzgtwq .gt_font_italic {
+#lgaimjtboa .gt_font_italic {
   font-style: italic;
 }
 
-#ksweyzgtwq .gt_super {
+#lgaimjtboa .gt_super {
   font-size: 65%;
 }
 
-#ksweyzgtwq .gt_footnote_marks {
+#lgaimjtboa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ksweyzgtwq .gt_asterisk {
+#lgaimjtboa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ksweyzgtwq .gt_indent_1 {
+#lgaimjtboa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ksweyzgtwq .gt_indent_2 {
+#lgaimjtboa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ksweyzgtwq .gt_indent_3 {
+#lgaimjtboa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ksweyzgtwq .gt_indent_4 {
+#lgaimjtboa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ksweyzgtwq .gt_indent_5 {
+#lgaimjtboa .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ksweyzgtwq .katex-display {
+#lgaimjtboa .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ksweyzgtwq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lgaimjtboa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4388,7 +4477,7 @@ Disadvantages
 <p>Note: Only a subset of model parameters are shown in table.</p>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller center">
+<section id="section-7" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>notes</strong> is an optional column where you add additional notes or context for the parameter.</p>
 <div class="footer">
@@ -4397,23 +4486,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="cxaepdzcsz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cxaepdzcsz table {
+<div id="nupezetftt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nupezetftt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cxaepdzcsz thead, #cxaepdzcsz tbody, #cxaepdzcsz tfoot, #cxaepdzcsz tr, #cxaepdzcsz td, #cxaepdzcsz th {
+#nupezetftt thead, #nupezetftt tbody, #nupezetftt tfoot, #nupezetftt tr, #nupezetftt td, #nupezetftt th {
   border-style: none;
 }
 
-#cxaepdzcsz p {
+#nupezetftt p {
   margin: 0;
   padding: 0;
 }
 
-#cxaepdzcsz .gt_table {
+#nupezetftt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4439,12 +4528,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_caption {
+#nupezetftt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cxaepdzcsz .gt_title {
+#nupezetftt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4456,7 +4545,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#cxaepdzcsz .gt_subtitle {
+#nupezetftt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4468,7 +4557,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#cxaepdzcsz .gt_heading {
+#nupezetftt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4480,13 +4569,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_bottom_border {
+#nupezetftt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_col_headings {
+#nupezetftt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4501,7 +4590,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_col_heading {
+#nupezetftt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4521,7 +4610,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#cxaepdzcsz .gt_column_spanner_outer {
+#nupezetftt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4533,15 +4622,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#cxaepdzcsz .gt_column_spanner_outer:first-child {
+#nupezetftt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cxaepdzcsz .gt_column_spanner_outer:last-child {
+#nupezetftt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cxaepdzcsz .gt_column_spanner {
+#nupezetftt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4553,11 +4642,11 @@ Disadvantages
   width: 100%;
 }
 
-#cxaepdzcsz .gt_spanner_row {
+#nupezetftt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cxaepdzcsz .gt_group_heading {
+#nupezetftt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4583,7 +4672,7 @@ Disadvantages
   text-align: left;
 }
 
-#cxaepdzcsz .gt_empty_group_heading {
+#nupezetftt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4598,15 +4687,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#cxaepdzcsz .gt_from_md > :first-child {
+#nupezetftt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cxaepdzcsz .gt_from_md > :last-child {
+#nupezetftt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cxaepdzcsz .gt_row {
+#nupezetftt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4625,7 +4714,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#cxaepdzcsz .gt_stub {
+#nupezetftt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4638,7 +4727,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#cxaepdzcsz .gt_stub_row_group {
+#nupezetftt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4652,15 +4741,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#cxaepdzcsz .gt_row_group_first td {
+#nupezetftt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cxaepdzcsz .gt_row_group_first th {
+#nupezetftt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cxaepdzcsz .gt_summary_row {
+#nupezetftt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4670,16 +4759,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#cxaepdzcsz .gt_first_summary_row {
+#nupezetftt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_first_summary_row.thick {
+#nupezetftt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cxaepdzcsz .gt_last_summary_row {
+#nupezetftt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4689,7 +4778,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_grand_summary_row {
+#nupezetftt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4699,7 +4788,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#cxaepdzcsz .gt_first_grand_summary_row {
+#nupezetftt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4709,7 +4798,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_last_grand_summary_row_top {
+#nupezetftt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4719,11 +4808,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_striped {
+#nupezetftt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cxaepdzcsz .gt_table_body {
+#nupezetftt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4732,7 +4821,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_footnotes {
+#nupezetftt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4746,7 +4835,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_footnote {
+#nupezetftt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4755,7 +4844,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#cxaepdzcsz .gt_sourcenotes {
+#nupezetftt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4769,7 +4858,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#cxaepdzcsz .gt_sourcenote {
+#nupezetftt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4777,72 +4866,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#cxaepdzcsz .gt_left {
+#nupezetftt .gt_left {
   text-align: left;
 }
 
-#cxaepdzcsz .gt_center {
+#nupezetftt .gt_center {
   text-align: center;
 }
 
-#cxaepdzcsz .gt_right {
+#nupezetftt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cxaepdzcsz .gt_font_normal {
+#nupezetftt .gt_font_normal {
   font-weight: normal;
 }
 
-#cxaepdzcsz .gt_font_bold {
+#nupezetftt .gt_font_bold {
   font-weight: bold;
 }
 
-#cxaepdzcsz .gt_font_italic {
+#nupezetftt .gt_font_italic {
   font-style: italic;
 }
 
-#cxaepdzcsz .gt_super {
+#nupezetftt .gt_super {
   font-size: 65%;
 }
 
-#cxaepdzcsz .gt_footnote_marks {
+#nupezetftt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cxaepdzcsz .gt_asterisk {
+#nupezetftt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cxaepdzcsz .gt_indent_1 {
+#nupezetftt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cxaepdzcsz .gt_indent_2 {
+#nupezetftt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cxaepdzcsz .gt_indent_3 {
+#nupezetftt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cxaepdzcsz .gt_indent_4 {
+#nupezetftt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cxaepdzcsz .gt_indent_5 {
+#nupezetftt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cxaepdzcsz .katex-display {
+#nupezetftt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cxaepdzcsz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nupezetftt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4982,7 +5071,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2 smaller center">
+<section id="section-8" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>distribution</strong> specifies the uncertainty distribution for the parameter. It is used for probabilistic sensitivity analyses, which we cover in our intermediate (week-long) workshop.</p>
 <div class="footer">
@@ -4991,23 +5080,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="ldioxqudug" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ldioxqudug table {
+<div id="rlmtacwxlu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rlmtacwxlu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ldioxqudug thead, #ldioxqudug tbody, #ldioxqudug tfoot, #ldioxqudug tr, #ldioxqudug td, #ldioxqudug th {
+#rlmtacwxlu thead, #rlmtacwxlu tbody, #rlmtacwxlu tfoot, #rlmtacwxlu tr, #rlmtacwxlu td, #rlmtacwxlu th {
   border-style: none;
 }
 
-#ldioxqudug p {
+#rlmtacwxlu p {
   margin: 0;
   padding: 0;
 }
 
-#ldioxqudug .gt_table {
+#rlmtacwxlu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5033,12 +5122,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_caption {
+#rlmtacwxlu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ldioxqudug .gt_title {
+#rlmtacwxlu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5050,7 +5139,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#ldioxqudug .gt_subtitle {
+#rlmtacwxlu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5062,7 +5151,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#ldioxqudug .gt_heading {
+#rlmtacwxlu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5074,13 +5163,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_bottom_border {
+#rlmtacwxlu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_col_headings {
+#rlmtacwxlu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5095,7 +5184,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_col_heading {
+#rlmtacwxlu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5115,7 +5204,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#ldioxqudug .gt_column_spanner_outer {
+#rlmtacwxlu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5127,15 +5216,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#ldioxqudug .gt_column_spanner_outer:first-child {
+#rlmtacwxlu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ldioxqudug .gt_column_spanner_outer:last-child {
+#rlmtacwxlu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ldioxqudug .gt_column_spanner {
+#rlmtacwxlu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5147,11 +5236,11 @@ Disadvantages
   width: 100%;
 }
 
-#ldioxqudug .gt_spanner_row {
+#rlmtacwxlu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ldioxqudug .gt_group_heading {
+#rlmtacwxlu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5177,7 +5266,7 @@ Disadvantages
   text-align: left;
 }
 
-#ldioxqudug .gt_empty_group_heading {
+#rlmtacwxlu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5192,15 +5281,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#ldioxqudug .gt_from_md > :first-child {
+#rlmtacwxlu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ldioxqudug .gt_from_md > :last-child {
+#rlmtacwxlu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ldioxqudug .gt_row {
+#rlmtacwxlu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5219,7 +5308,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#ldioxqudug .gt_stub {
+#rlmtacwxlu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5232,7 +5321,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ldioxqudug .gt_stub_row_group {
+#rlmtacwxlu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5246,15 +5335,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#ldioxqudug .gt_row_group_first td {
+#rlmtacwxlu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ldioxqudug .gt_row_group_first th {
+#rlmtacwxlu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ldioxqudug .gt_summary_row {
+#rlmtacwxlu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5264,16 +5353,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ldioxqudug .gt_first_summary_row {
+#rlmtacwxlu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_first_summary_row.thick {
+#rlmtacwxlu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ldioxqudug .gt_last_summary_row {
+#rlmtacwxlu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5283,7 +5372,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_grand_summary_row {
+#rlmtacwxlu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5293,7 +5382,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ldioxqudug .gt_first_grand_summary_row {
+#rlmtacwxlu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5303,7 +5392,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_last_grand_summary_row_top {
+#rlmtacwxlu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5313,11 +5402,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_striped {
+#rlmtacwxlu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ldioxqudug .gt_table_body {
+#rlmtacwxlu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5326,7 +5415,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_footnotes {
+#rlmtacwxlu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5340,7 +5429,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_footnote {
+#rlmtacwxlu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5349,7 +5438,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ldioxqudug .gt_sourcenotes {
+#rlmtacwxlu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5363,7 +5452,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#ldioxqudug .gt_sourcenote {
+#rlmtacwxlu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5371,72 +5460,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#ldioxqudug .gt_left {
+#rlmtacwxlu .gt_left {
   text-align: left;
 }
 
-#ldioxqudug .gt_center {
+#rlmtacwxlu .gt_center {
   text-align: center;
 }
 
-#ldioxqudug .gt_right {
+#rlmtacwxlu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ldioxqudug .gt_font_normal {
+#rlmtacwxlu .gt_font_normal {
   font-weight: normal;
 }
 
-#ldioxqudug .gt_font_bold {
+#rlmtacwxlu .gt_font_bold {
   font-weight: bold;
 }
 
-#ldioxqudug .gt_font_italic {
+#rlmtacwxlu .gt_font_italic {
   font-style: italic;
 }
 
-#ldioxqudug .gt_super {
+#rlmtacwxlu .gt_super {
   font-size: 65%;
 }
 
-#ldioxqudug .gt_footnote_marks {
+#rlmtacwxlu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ldioxqudug .gt_asterisk {
+#rlmtacwxlu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ldioxqudug .gt_indent_1 {
+#rlmtacwxlu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ldioxqudug .gt_indent_2 {
+#rlmtacwxlu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ldioxqudug .gt_indent_3 {
+#rlmtacwxlu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ldioxqudug .gt_indent_4 {
+#rlmtacwxlu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ldioxqudug .gt_indent_5 {
+#rlmtacwxlu .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ldioxqudug .katex-display {
+#rlmtacwxlu .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ldioxqudug div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rlmtacwxlu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5576,7 +5665,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-7" class="slide level2 smaller center">
+<section id="section-9" class="slide level2 smaller center">
 <h2></h2>
 <div class="footer">
 <p>Note: Only a subset of model parameters are shown in table.</p>
@@ -5585,23 +5674,23 @@ Disadvantages
 <div style="font-size: 0.6em">
 <div class="cell">
 <div class="cell-output-display">
-<div id="efoaypkwyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#efoaypkwyo table {
+<div id="hvxvhclneg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hvxvhclneg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#efoaypkwyo thead, #efoaypkwyo tbody, #efoaypkwyo tfoot, #efoaypkwyo tr, #efoaypkwyo td, #efoaypkwyo th {
+#hvxvhclneg thead, #hvxvhclneg tbody, #hvxvhclneg tfoot, #hvxvhclneg tr, #hvxvhclneg td, #hvxvhclneg th {
   border-style: none;
 }
 
-#efoaypkwyo p {
+#hvxvhclneg p {
   margin: 0;
   padding: 0;
 }
 
-#efoaypkwyo .gt_table {
+#hvxvhclneg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5627,12 +5716,12 @@ Disadvantages
   border-left-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_caption {
+#hvxvhclneg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#efoaypkwyo .gt_title {
+#hvxvhclneg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5644,7 +5733,7 @@ Disadvantages
   border-bottom-width: 0;
 }
 
-#efoaypkwyo .gt_subtitle {
+#hvxvhclneg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5656,7 +5745,7 @@ Disadvantages
   border-top-width: 0;
 }
 
-#efoaypkwyo .gt_heading {
+#hvxvhclneg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5668,13 +5757,13 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_bottom_border {
+#hvxvhclneg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_col_headings {
+#hvxvhclneg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5689,7 +5778,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_col_heading {
+#hvxvhclneg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5709,7 +5798,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#efoaypkwyo .gt_column_spanner_outer {
+#hvxvhclneg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5721,15 +5810,15 @@ Disadvantages
   padding-right: 4px;
 }
 
-#efoaypkwyo .gt_column_spanner_outer:first-child {
+#hvxvhclneg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#efoaypkwyo .gt_column_spanner_outer:last-child {
+#hvxvhclneg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#efoaypkwyo .gt_column_spanner {
+#hvxvhclneg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5741,11 +5830,11 @@ Disadvantages
   width: 100%;
 }
 
-#efoaypkwyo .gt_spanner_row {
+#hvxvhclneg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#efoaypkwyo .gt_group_heading {
+#hvxvhclneg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5771,7 +5860,7 @@ Disadvantages
   text-align: left;
 }
 
-#efoaypkwyo .gt_empty_group_heading {
+#hvxvhclneg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5786,15 +5875,15 @@ Disadvantages
   vertical-align: middle;
 }
 
-#efoaypkwyo .gt_from_md > :first-child {
+#hvxvhclneg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#efoaypkwyo .gt_from_md > :last-child {
+#hvxvhclneg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#efoaypkwyo .gt_row {
+#hvxvhclneg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5813,7 +5902,7 @@ Disadvantages
   overflow-x: hidden;
 }
 
-#efoaypkwyo .gt_stub {
+#hvxvhclneg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5826,7 +5915,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#efoaypkwyo .gt_stub_row_group {
+#hvxvhclneg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5840,15 +5929,15 @@ Disadvantages
   vertical-align: top;
 }
 
-#efoaypkwyo .gt_row_group_first td {
+#hvxvhclneg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#efoaypkwyo .gt_row_group_first th {
+#hvxvhclneg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#efoaypkwyo .gt_summary_row {
+#hvxvhclneg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5858,16 +5947,16 @@ Disadvantages
   padding-right: 5px;
 }
 
-#efoaypkwyo .gt_first_summary_row {
+#hvxvhclneg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_first_summary_row.thick {
+#hvxvhclneg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#efoaypkwyo .gt_last_summary_row {
+#hvxvhclneg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5877,7 +5966,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_grand_summary_row {
+#hvxvhclneg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5887,7 +5976,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#efoaypkwyo .gt_first_grand_summary_row {
+#hvxvhclneg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5897,7 +5986,7 @@ Disadvantages
   border-top-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_last_grand_summary_row_top {
+#hvxvhclneg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5907,11 +5996,11 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_striped {
+#hvxvhclneg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#efoaypkwyo .gt_table_body {
+#hvxvhclneg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5920,7 +6009,7 @@ Disadvantages
   border-bottom-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_footnotes {
+#hvxvhclneg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5934,7 +6023,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_footnote {
+#hvxvhclneg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5943,7 +6032,7 @@ Disadvantages
   padding-right: 5px;
 }
 
-#efoaypkwyo .gt_sourcenotes {
+#hvxvhclneg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5957,7 +6046,7 @@ Disadvantages
   border-right-color: #D3D3D3;
 }
 
-#efoaypkwyo .gt_sourcenote {
+#hvxvhclneg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5965,72 +6054,72 @@ Disadvantages
   padding-right: 5px;
 }
 
-#efoaypkwyo .gt_left {
+#hvxvhclneg .gt_left {
   text-align: left;
 }
 
-#efoaypkwyo .gt_center {
+#hvxvhclneg .gt_center {
   text-align: center;
 }
 
-#efoaypkwyo .gt_right {
+#hvxvhclneg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#efoaypkwyo .gt_font_normal {
+#hvxvhclneg .gt_font_normal {
   font-weight: normal;
 }
 
-#efoaypkwyo .gt_font_bold {
+#hvxvhclneg .gt_font_bold {
   font-weight: bold;
 }
 
-#efoaypkwyo .gt_font_italic {
+#hvxvhclneg .gt_font_italic {
   font-style: italic;
 }
 
-#efoaypkwyo .gt_super {
+#hvxvhclneg .gt_super {
   font-size: 65%;
 }
 
-#efoaypkwyo .gt_footnote_marks {
+#hvxvhclneg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#efoaypkwyo .gt_asterisk {
+#hvxvhclneg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#efoaypkwyo .gt_indent_1 {
+#hvxvhclneg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#efoaypkwyo .gt_indent_2 {
+#hvxvhclneg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#efoaypkwyo .gt_indent_3 {
+#hvxvhclneg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#efoaypkwyo .gt_indent_4 {
+#hvxvhclneg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#efoaypkwyo .gt_indent_5 {
+#hvxvhclneg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#efoaypkwyo .katex-display {
+#hvxvhclneg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#efoaypkwyo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hvxvhclneg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6314,7 +6403,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-10" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6325,7 +6414,7 @@ Disadvantages
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-11" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6361,91 +6450,91 @@ D 0.000 0.000 1.000</code></pre>
 <p><span class="math inline">\quad \quad \quad \quad</span></p>
 </div></div>
 </section>
-<section id="section-10" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="r-hstack">
-<div data-id="occ">
-<p>Health State Occupancy at Beginning of Cycle</p>
-</div>
-<div data-id="m_P">
-<p>Transition Probability Matrix</p>
-</div>
-<div data-id="occ1">
-<p>Health State Occupancy at End of Cycle</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><span class="math inline">s =</span></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code> H S D
- 1 0 0</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:33%;">
-<p><span class="math inline">P =</span></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>      H     S     D
-H 0.856 0.138 0.007
-S 0.000 0.982 0.018
-D 0.000 0.000 1.000</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:33%;">
-<p><span class="math inline">s \cdot P=</span></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>     H     S     D
- 0.856 0.138 0.007</code></pre>
-</div>
-</div>
-</div></div>
-</section>
-<section id="section-11" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="r-hstack">
-<div data-id="occ">
-<p>Health State Occupancy at Beginning of Cycle</p>
-</div>
-<div data-id="m_P">
-<p>Transition Probability Matrix</p>
-</div>
-<div data-id="occ1">
-<p>Health State Occupancy at End of Cycle</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><span class="math inline">s =</span></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code> H S D
- 1 0 0</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:33%;">
-<p><span class="math inline">P =</span></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>      H     S     D
-H 0.856 0.138 0.007
-S 0.000 0.982 0.018
-D 0.000 0.000 1.000</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:33%;">
-<p><span class="math inline">s \cdot P=</span></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>     H     S     D
- 0.856 0.138 0.007</code></pre>
-</div>
-</div>
-</div></div>
-</section>
 <section id="section-12" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="r-hstack">
+<div data-id="occ">
+<p>Health State Occupancy at Beginning of Cycle</p>
+</div>
+<div data-id="m_P">
+<p>Transition Probability Matrix</p>
+</div>
+<div data-id="occ1">
+<p>Health State Occupancy at End of Cycle</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><span class="math inline">s =</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> H S D
+ 1 0 0</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<p><span class="math inline">P =</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      H     S     D
+H 0.856 0.138 0.007
+S 0.000 0.982 0.018
+D 0.000 0.000 1.000</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<p><span class="math inline">s \cdot P=</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     H     S     D
+ 0.856 0.138 0.007</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-13" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="r-hstack">
+<div data-id="occ">
+<p>Health State Occupancy at Beginning of Cycle</p>
+</div>
+<div data-id="m_P">
+<p>Transition Probability Matrix</p>
+</div>
+<div data-id="occ1">
+<p>Health State Occupancy at End of Cycle</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><span class="math inline">s =</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> H S D
+ 1 0 0</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<p><span class="math inline">P =</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      H     S     D
+H 0.856 0.138 0.007
+S 0.000 0.982 0.018
+D 0.000 0.000 1.000</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<p><span class="math inline">s \cdot P=</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>     H     S     D
+ 0.856 0.138 0.007</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-14" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6515,7 +6604,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="section-13" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-15" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6615,7 +6704,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="section-14" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-16" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div data-id="occ1">
 <p>Health State Occupancy at End of Cycle</p>
@@ -6873,7 +6962,7 @@ D 0.000 0.000 1.000</code></pre>
 </section>
 <section id="an-example-markov-trace-75-year-horizon" class="slide level2 center">
 <h2>An example Markov Trace (75 year horizon)</h2>
-<div class="table-compact">
+<div style="font-size: 0.7em">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -7156,7 +7245,7 @@ D 0.000 0.000 1.000</code></pre>
 </section>
 <section id="example-life-years-5" class="slide level2 center">
 <h2>Example: Life Years</h2>
-<div class="table-compact">
+<div style="font-size: 0.7em">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -7371,7 +7460,7 @@ D 0.000 0.000 1.000</code></pre>
 <section id="total-life-years" class="slide level2 center">
 <h2>Total Life Years</h2>
 <p>Let’s look at the Markov trace and cycle outcomes for the Life Year outcome.</p>
-<div class="table-compact">
+<div style="font-size: 0.7em">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -7446,7 +7535,7 @@ D 0.000 0.000 1.000</code></pre>
 <section id="life-years" class="slide level2 center">
 <h2>Life years</h2>
 <p>We can create a new column that accumulates life years over each cycle.</p>
-<div class="table-compact">
+<div style="font-size: 0.7em">
 <table class="caption-top" style="width:100%;">
 <colgroup>
 <col style="width: 14%">
@@ -7537,7 +7626,7 @@ D 0.000 0.000 1.000</code></pre>
 </section>
 <section id="life-years-1" class="slide level2 center">
 <h2>Life years</h2>
-<div class="table-compact">
+<div style="font-size: 0.7em">
 <table class="caption-top" style="width:100%;">
 <colgroup>
 <col style="width: 16%">
@@ -7632,7 +7721,7 @@ D 0.000 0.000 1.000</code></pre>
 <li><p>The cumulative LYs for an individual starting in the Healthy state is <strong>44.825</strong></p></li>
 <li><p>Note that this is within a 75 years time horizon</p></li>
 </ul>
-<div class="table-compact">
+<div style="font-size: 0.7em">
 <table class="caption-top">
 <colgroup>
 <col style="width: 14%">
@@ -7723,16 +7812,14 @@ D 0.000 0.000 1.000</code></pre>
 </section>
 <section id="total-outcomes-1" class="slide level2 center">
 <h2>Total Outcomes</h2>
-<p>We can do a similar exercise to get total costs, total QALYs, total DALYs, etc. <br><br><br></p>
-<div class="fragment">
-<p>However, it’s not that simple. There are some extra complications we have to deal with.</p>
-<div class="icon-bullets">
+<ul>
+<li>We can do a similar exercise to get total costs, total QALYs, total DALYs, etc.</li>
+<li>However, it’s not that simple. There are some extra complications we have to deal with.
 <ul>
 <li>Discounting</li>
 <li>Cycle correction</li>
+</ul></li>
 </ul>
-</div>
-</div>
 </section></section>
 <section>
 <section id="cycle-correction" class="title-slide slide level1 center" data-background="#c2f0c2">
@@ -7741,7 +7828,6 @@ D 0.000 0.000 1.000</code></pre>
 </section>
 <section id="the-problem" class="slide level2 center">
 <h2>The problem</h2>
-<div class="arrow-bullets">
 <ul>
 <li><p>In real life, events could occur at any points in a given cycle, but a Markov model assumes all events occur either at the beginning or end of each cycle</p></li>
 <li><p>Time is continuous, so are survival/event-free survival curves</p></li>
@@ -7750,7 +7836,6 @@ D 0.000 0.000 1.000</code></pre>
 <li>Suppose this is a simple Well <span class="math inline">\rightarrow</span> Dead process</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="the-problem-1" class="slide level2 smaller center">
 <h2>The problem</h2>
@@ -7977,7 +8062,7 @@ D 0.000 0.000 1.000</code></pre>
 <li>We covered these methods yesterday!</li>
 </ul>
 </section>
-<section id="markov-models-3" class="slide level2 center">
+<section id="markov-models-5" class="slide level2 center">
 <h2>Markov Models</h2>
 <table class="caption-top">
 <colgroup>
@@ -8009,6 +8094,7 @@ D 0.000 0.000 1.000</code></pre>
 <section id="next-up-markov-case-study" class="title-slide slide level1 center" data-background="#43464B">
 <h1>Next up: Markov Case Study</h1>
 
+
 </section>
 
 
@@ -8021,18 +8107,18 @@ D 0.000 0.000 1.000</code></pre>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="lec_7.MarkovModels1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -8317,7 +8403,7 @@ D 0.000 0.000 1.000</code></pre>
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/geratcliff\.github\.io\/vital-2026-Cebu");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

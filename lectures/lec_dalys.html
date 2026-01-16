@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Decision Analysis Workshop - Cebu – Deterministic, Threshold and Scenario Analyses</title>
+  <title>Decision Analysis Workshop - Cebu – Modeling DALYs in Amua</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,8 +27,28 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -142,369 +162,284 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Deterministic, Threshold and Scenario Analyses</h1>
+  <h1 class="title">Modeling DALYs in Amua</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section>
-<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
-<h1>Learning Objectives and Outline</h1>
-
-</section>
-<section id="learning-objectives" class="slide level2 center">
+<section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
 <ul>
-<li><p>Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.</p></li>
-<li><p>Detail the advantages/disadvantages of deterministic sensitivity analysis.</p></li>
+<li>Review of DALY health outcomes</li>
+<li>Tips and tricks for modeling DALYs in Amua</li>
 </ul>
 </section>
-<section id="outline" class="slide level2 center">
-<h2>Outline</h2>
+<section>
+<section id="overview-of-daly-outcomes" class="title-slide slide level1 center">
+<h1>Overview of DALY Outcomes</h1>
+
+</section>
+<section id="common-outcomes" class="slide level2">
+<h2>Common Outcomes</h2>
 <ol type="1">
-<li>Net Benefit Outcome Measures</li>
-<li>One-way sensitivity analysis.</li>
-<li>Two-way sensitivity analysis.</li>
-<li>Limitations and extensions.</li>
-<li>Threshold analysis</li>
-<li>Scenario analysis</li>
+<li class="fragment">Occupancy-based payoffs:</li>
 </ol>
+<ul>
+<li class="fragment">Utility/DALY weight applied for a time period / step.</li>
+<li class="fragment">Treatment/disease cost per time period / step.</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment">Transition-based payoffs:</li>
+</ol>
+<ul>
+<li class="fragment">One-time event-based cost (e.g., disease-related death, initial Dx, etc.).</li>
+<li class="fragment">One-time health outcome (e.g., years of life lost to premature mortality)</li>
+</ul>
 </section>
-<section id="alternatives-to-icers" class="slide level2 center">
-<h2>Alternatives to ICERs</h2>
+<section id="disability-adjusted-life-years-dalys" class="slide level2">
+<h2>Disability-Adjusted Life Years (DALYs)</h2>
 <ul>
-<li>ICERs the most common approach for describing CEA results
+<li class="fragment">Reflect both occupancy- and transition-based payoffs.</li>
+<li class="fragment">There’s also <em>very</em> little guidance on how to structure a decision model for DALY outcomes.</li>
+<li class="fragment">We’ll show you how today!</li>
+</ul>
+</section>
+<section id="dalys" class="slide level2">
+<h2>DALYs</h2>
 <ul>
-<li><span style="color:green">Good</span>: summarize all aspects of decision problem except WTP (which comes from decision-maker)</li>
-<li><span style="color:red">Bad</span>: algorithms a bit complicated, negative ICERs, ratios can act poorly when denominator uncertain</li>
+<li class="fragment"><p>Origin story: Global Burden of Disease Study</p></li>
+<li class="fragment"><p>Deliberately a measure of health, not welfare/utility</p></li>
+<li class="fragment"><p>Similar to QALYs, two dimensions of interest:</p>
+<ul>
+<li class="fragment"><p>Length of life (differences in life expectancy)</p></li>
+<li class="fragment"><p>Quality of life (measured by disability weight)</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="an-alternative" class="slide level2 center">
-<h2>An Alternative</h2>
+<section id="dalys-1" class="slide level2">
+<h2>DALYs</h2>
+<p><a href="https://en.wikipedia.org/wiki/Disability-adjusted_life_year"><img data-src="images/DALY_disability_affected_life_year_infographic.svg" width="1500"></a></p>
+<div class="fragment">
+<p><strong>DALYs = YLL + YLD</strong></p>
 <ul>
-<li>If willing to choose a fixed willingness-to-pay threshold (e.g., <span class="math inline">\lambda =</span> 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.
-<ul>
-<li>Net Health Benefit (NHB)</li>
-<li>Net Monetary Benefit (NMB)</li>
-</ul></li>
-<li><span style="color:blue">Objective</span>: Select the strategy with the highest NHB/NMB</li>
+<li>YLL (Years of Life Lost)</li>
+<li>YLD (Years Lived with Disability)</li>
 </ul>
-</section>
-<section id="net-health-benefit-nhb" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NHB}_s = E_s - \frac{C_s}{\lambda}
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="net-health-benefit-nhb-1" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NMB}_s = E_s \times \lambda - C_s
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="example-nhb" class="slide level2 center">
-<h2>Example: NHB</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">E_1</span> = 0.07 years</p>
-<p><span class="math inline">E_2</span> = 0.10 years</p>
-<p><span class="math inline">C_1</span> = 1,500</p>
-<p><span class="math inline">C_2</span> = 2,800</p>
-<p><span class="math inline">\lambda</span> = 50,000 per year of life saved</p>
-</div><div class="column">
-<p><span class="math display">
-ICER = \frac{2800-1500}{0.10 - 0.07}  \\
-= 43,333 \\
-</span></p>
-</div></div>
-</section>
-<section id="example-nhb-1" class="slide level2 center">
-<h2>Example: NHB</h2>
-<p><span class="math display">
-NHB_1 = 0.07 - 1500/50000 = 0.040 \\
-NHB_2 = 0.10 - 2800/50000 = 0.044
-\\
-\text{Incremental } NHB = 0.044 - 0.040 = 0.004
-</span></p>
-</section>
-<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
-<h2>Example: Net Monetary Benefit (NMB)</h2>
-<p><span class="math display">
-NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
-NHB_2 = 0.10 \times 50000 - 2800 = 2200
-\\
-\text{Incremental } NHB = 2200 - 2000 = 200
-</span></p>
-</section>
-<section id="calculating-nmb-in-amua" class="slide level2 center">
-<h2>Calculating NMB in Amua</h2>
-<div class="r-stack">
-<p><img data-src="images/clipboard-1972470218.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-2080375502.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-975167616.png" class="fragment" width="550" height="300"></p>
-<p><img data-src="images/clipboard-3987091812.png" class="fragment" width="550" height="300"></p>
 </div>
 </section>
-<section id="sensitivity" class="slide level2 center">
-<h2>Sensitivity</h2>
+<section id="years-of-life-lost-to-disease" class="slide level2">
+<h2>Years of Life Lost to Disease</h2>
+<p>For a given condition <span class="math inline">c</span>,</p>
+<p><span class="math display">
+YLD(c) = D_c \cdot L_c
+</span></p>
 <ul>
-<li>ICER for Prevention strategy is just above WTP threshold of $50,000/QALY.</li>
-<li>NMB for treatment only slightly above NMB for prevention.</li>
-<li>How sensitive are these results to changes in specific model inputs?</li>
+<li class="fragment"><span class="math inline">D_c</span> is the condition’s disability weight</li>
+<li class="fragment"><span class="math inline">L_c</span> is the time lived with the disease.</li>
 </ul>
-</section></section>
-<section>
-<section id="one-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>One-way sensitivity analysis</h1>
+</section>
+<section id="years-of-life-lost-to-premature-mortality" class="slide level2">
+<h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
+<ul>
+<li class="fragment">YLL are defined by by a “loss function.”</li>
+<li class="fragment">Drawn from a reference life table, indicating remaining life expectancy at age <span class="math inline">a</span>.</li>
+<li class="fragment"><span class="math display">
+YLL(a)= Ex(a)
+</span></li>
+</ul>
+</section>
+<section id="years-of-life-lost-to-premature-mortality-1" class="slide level2">
+<h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
 
 </section>
-<section id="one-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>One-way sensitivity analysis</h2>
+<section id="dalys-2" class="slide level2">
+<h2>DALYs</h2>
+<p><span class="math display">
+DALY(c,a) = YLD(c) + YLL(a)
+</span></p>
+</section>
+<section id="evolution-of-daly-calculations" class="slide level2">
+<h2>Evolution of DALY Calculations</h2>
 <ul>
-<li class="fragment">Usually the starting point for sensitivity analyses</li>
-<li class="fragment">Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant</li>
-<li class="fragment">Determining how this variation impacts the results</li>
-<li class="fragment">One-way sensitivity analyses are often presented in a <strong>tornado diagram</strong>
+<li class="fragment"><strong>Historical Practice:</strong> Initial GBD studies applied age-weighting and 3% annual time discounting.</li>
+<li class="fragment"><strong>Changes Post-2010:</strong> Discontinuation of these practices for a more descriptive DALY measure.</li>
+</ul>
+</section>
+<section id="current-discounting-practices" class="slide level2">
+<h2>Current Discounting Practices</h2>
 <ul>
-<li class="fragment">Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs</li>
+<li class="fragment"><strong>WHO-CHOICE:</strong> Time discounting of health outcomes.</li>
+</ul>
+</section>
+<section id="takeaways" class="slide level2">
+<h2>Takeaways</h2>
+<ul>
+<li class="fragment">Modeling DALYs in Amua is straightforward if you don’t use discounting.
+<ul>
+<li class="fragment">For YLDs, use disability weight like you would a utility weight.</li>
+<li class="fragment">For YLLs, use one-time “cost” of remaining life expectancy.
+<ul>
+<li class="fragment">YLL = <code>tbl_reference_life_table[initial_age + t, 1]</code></li>
 </ul></li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="rotavirus-study" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-1" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show2.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-2" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show3.jpeg" class="r-stretch"></section>
-<section id="other-examples" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.33.51 PM.png" class="r-stretch"></section>
-<section id="other-examples-1" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-01.png" class="r-stretch"></section>
-<section id="other-examples-2" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.15.55 AM.png" width="759" class="r-stretch"></section>
-<section id="other-examples-3" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.19.09 AM.png" width="777" class="r-stretch"></section></section>
-<section>
-<section id="interactive-amua-session" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-<section id="primary-results-progressive-disease" class="slide level2 center">
-<h2>Primary Results: Progressive Disease</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>ICER</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Status Quo</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>Treatment</td>
-<td>49,513</td>
-</tr>
-<tr class="odd">
-<td>Prevention</td>
-<td>139,630</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Treatment is cost-effective at WTP=$50,000/QALY—but <em>barely.</em></p></li>
-<li><p>How sensitive is this result to the input parameter values used?</p></li>
-</ul>
-</section></section>
-<section>
-<section id="two-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Two-way sensitivity analysis</h1>
-
-</section>
-<section id="two-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>Two-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">A way to map the interaction effects between two parameters in a decision analysis model</li>
-<li class="fragment">Varies 2 parameters at a time</li>
-<li class="fragment">Explores the robustness of results in more depth</li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications-1" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="hiv-prevention" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 9.54.01 AM.png" width="517" class="r-stretch"></section>
-<section id="hiv-prevention-1" class="slide level2 center">
-<h2>HIV prevention</h2>
-<ul>
-<li class="fragment"><p>Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p></li>
-<li class="fragment"><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
-<li class="fragment"><p>And we also know that PrEP has traditionally been really <strong>costly</strong></p></li>
-</ul>
-</section>
-<section id="hiv-prevention-2" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.22.19 PM.png" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.25.53 PM.png" width="543" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care-1" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<ul>
-<li class="fragment"><p>Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p></li>
-<li class="fragment"><p>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong></p></li>
-</ul>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-2" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<blockquote>
-<p>When administered quickly after stroke onset (within three hours, as approved by the FDA), tPA helps to restore blood flow to brain regions affected by a stroke, thereby limiting the risk of damage and functional impairment</p>
-</blockquote>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-3" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section></section>
-<section id="interactive-amua-session-1" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-
-<section>
-<section id="limitations-of-deterministic-sensitivity-analyses" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Limitations of deterministic sensitivity analyses</h1>
-
-</section>
-<section id="caution-limitations" class="slide level2 center">
-<h2>Caution: Limitations!</h2>
-<ul>
-<li>Limited by the subjectivity of the choice of parameters to analyze</li>
-<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value</li>
-</ul>
-</section></section>
-<section>
-<section id="scenario-analysis" class="title-slide slide level1 center">
-<h1>Scenario analysis</h1>
-
-</section>
-<section id="motivation" class="slide level2 center">
-<h2>Motivation</h2>
-<ul>
-<li>Suppose we wanted to model the impact of these interventions under a “lower cost” scenario.</li>
-<li>One option is to</li>
-<li>It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.</li>
-</ul>
-</section>
-<section id="scenario-analysis-1" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<ul>
-<li>Focuses more on model <strong>assumptions</strong> rather than parameter uncertainty</li>
-<li>Could include separate analysis on:</li>
-</ul>
-<blockquote>
-<p>Subgroups/sub-populations, including different age cohorts &amp; risk levels</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Different perspectives (societal; modified societal; etc)</p>
-</blockquote>
-</section>
-<section id="scenario-analysis-2" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<blockquote>
-<p>Hypothetical scenarios (“optimistic” and “conservative” scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Time horizons</p>
-</blockquote>
-</section>
-<section id="examples" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-02.png" class="r-stretch"></section>
-<section id="examples-1" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.20 AM.png" class="r-stretch"></section>
-<section id="examples-2" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.50 AM.png" class="r-stretch"></section>
-<section id="examples-3" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.26.44 AM.png" class="r-stretch"></section>
-<section id="examples-4" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 8.54.33 AM.png" class="r-stretch"></section>
-<section id="examples-5" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section></section>
-<section>
-<section id="threshold-analysis" class="title-slide slide level1 center">
-<h1>Threshold analysis</h1>
-
-</section>
-<section id="threshold-analysis-1" class="slide level2 center">
-<h2>Threshold analysis</h2>
-<ul>
-<li>Answers the question: What the input parameter need be to meet the country thresholds of:
-<ul>
-<li>$50,000/QALY gained</li>
-<li>$100,000/QALY gained</li>
-<li>$150,000/QALY gained</li>
-<li>$200,000/QALY gained</li>
 </ul></li>
 </ul>
 </section>
-<section id="examples-6" class="slide level2 center">
-<h2>Examples</h2>
+<section id="takeaways-1" class="slide level2">
+<h2>Takeaways</h2>
+<ul>
+<li class="fragment">But if you do need to discount …
+<ul>
+<li class="fragment">You’re going to see some math expressions that take care of discounting for YLL outcomes.</li>
+<li class="fragment">This math adds some complexity but not much insight, so I’ll gloss over it a bit</li>
+<li class="fragment">We’ll provide you the formulas to use here and in the .amua model file.</li>
+</ul></li>
+</ul>
+</section>
+<section id="mathematical-formulation-for-dalys-in-amua" class="slide level2">
+<h2>Mathematical Formulation for DALYs in AMUA</h2>
+<ul>
+<li><p><span class="math inline">YLD(c) = D_c</span>.</p></li>
+<li><p><span class="math inline">YLL(a,t)=  Ex(a)\exp(-\ln(1+r)*t)</span>.</p>
+<ul>
+<li><p><span class="math inline">a</span> is the time of death</p></li>
+<li><p><span class="math inline">r</span> is the discount rate you’re using in the model (e.g., 3%).</p></li>
+<li><p><span class="math inline">t</span> is the cycle number at which premature death occurs.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="mathematical-formulation-for-dalys-in-amua-1" class="slide level2">
+<h2>Mathematical Formulation for DALYs in AMUA</h2>
+<ul>
+<li><p><span class="math inline">YLD(c)=</span> <code>dw_c</code>.</p></li>
+<li><p><span class="math inline">YLL(a,t)=</span> <code>tbl_ref_lt[initial_age+t,1]</code> <span class="math inline">*\exp(-\log(1+</span> <code>r_disc</code> <span class="math inline">)*</span> <code>t</code><span class="math inline">)</span>.</p></li>
+</ul>
+</section>
+<section id="overview-of-decision-problem" class="slide level2">
+<h2>Overview of Decision Problem</h2>
+<ul>
+<li class="fragment">Progressive disease model (from case study)</li>
+<li class="fragment">Focus only on cohort of individuals who develop mild disease.</li>
+<li class="fragment">Follow until death (from disease-related or other causes)</li>
+</ul>
+</section>
+<section id="overview-of-decision-problem-1" class="slide level2">
+<h2>Overview of Decision Problem</h2>
+<ul>
+<li class="fragment">Major difference from case study: can ignore Healthy state.</li>
+<li class="fragment">Strategies: Status quo, prevention, treatment</li>
+</ul>
+</section></section>
+<section>
+<section id="methods-structuring-the-model" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Methods: Structuring the Model</h1>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM.png" class="r-stretch"></section>
-<section id="examples-7" class="slide level2 center">
-<h2>Examples</h2>
+</section>
+<section id="state-transition-diagram" class="slide level2 nostretch">
+<h2>State Transition Diagram</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-2723911892.png" class="quarto-figure quarto-figure-center" width="800"></p>
+</figure>
+</div>
+</section>
+<section id="defining-outcomes-in-amua" class="slide level2">
+<h2>Defining Outcomes in Amua</h2>
+<ul>
+<li class="fragment">YLD: New Outcome. Use disability weights instead of utility weights!</li>
+<li class="fragment">YLL: One-time “event” at time of death from disease.
+<ul>
+<li class="fragment">“Cost”: present value of remaining life expectancy at age of death in the model.</li>
+<li class="fragment">Intuition: we penalize premature death from disease using the remaining life expectancy at the age in which the person dies.</li>
+</ul></li>
+<li class="fragment">Need to also define the discount rate as a parameter <code>r_disc</code></li>
+</ul>
+</section>
+<section id="interactive-amua-session" class="slide level2">
+<h2>Interactive Amua Session</h2>
+</section>
+<section id="occupancy-based-payoff-yld" class="slide level2">
+<h2>Occupancy-Based Payoff: YLD</h2>
+<ul>
+<li>YLD is an “occupancy-based” payoff (i.e., YLD increments by disability weight for each cycle in that health state).
+<ul>
+<li>Add <code>dw_mild</code> = 0.08</li>
+<li>Add <code>dw_progressive</code> = 0.15</li>
+<li>Add <code>dw_progressive_treated</code> = 0.13</li>
+</ul></li>
+<li>Mild disease state: <code>dw_mild</code></li>
+<li>Progressive disease state: <code>dw_progressive</code></li>
+</ul>
+</section>
+<section id="transition-based-payoff-yll" class="slide level2">
+<h2>Transition-Based Payoff: YLL</h2>
+<ul>
+<li>Remaining life expectancies are drawn from the reference life table, or from an endogenous life table.</li>
+<li>Import reference life table as lookup table—just like we did with background mortality, etc.</li>
+<li>Remember to use the “Truncate” option because the life table may not extend to the maximum age in the model.</li>
+</ul>
+<div class="footer">
+<p>Additional slides below (hit down button).</p>
+</div>
+</section>
+<section id="life-expectancy-yll" class="slide level2">
+<h2>Life Expectancy &amp; YLL</h2>
+<ul>
+<li class="fragment"><strong>Contextual Choices:</strong> Remaining life expectancy values may vary by research context <span class="citation" data-cites="anand2019">(<a href="#/references" role="doc-biblioref" onclick="">Anand and Reddy 2019</a>)</span>.</li>
+<li class="fragment"><strong>Historical Method:</strong> GBD uses an <em>exogenous</em> life table approximating maximum human lifespan.</li>
+<li class="fragment"><strong>Alternatives:</strong> <em>Endogenous</em> tables or models may be preferred in certain cases.</li>
+</ul>
+</section>
+<section id="exogenous-vs.-endogenous-life-tables" class="slide level2">
+<h2>Exogenous vs.&nbsp;Endogenous Life Tables</h2>
+<ul>
+<li class="fragment"><strong>Distinction:</strong> Source of life expectancy values (external vs. internal).</li>
+<li class="fragment"><strong>Exogenous:</strong> Independent mortality risks, using GBD’s reference table.</li>
+<li class="fragment"><strong>Endogenous:</strong> Specific to the population’s mortality risks and health states.</li>
+</ul>
+</section>
+<section id="incremental-cea" class="slide level2">
+<h2>Incremental CEA</h2>
+<ul>
+<li>ICERs are based on cost per DALYs <em>averted</em></li>
+<li>Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel)</li>
+<li>Alternative: define YLL and YLD outcomes as their negative values.
+<ul>
+<li>CEA will work, but expected values will be negative.</li>
+</ul></li>
+</ul>
+</section></section>
+<section id="thanks" class="title-slide slide level1 center">
+<h1>Thanks!</h1>
+<div class="vertical-center-slide">
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>Draft manuscript (with R code) available online at <a href="https://graveja0.github.io/dalys/" class="uri">https://graveja0.github.io/dalys/</a></p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="media/adobe-express-qr-code.png" class="quarto-figure quarto-figure-center" style="width:25.0%"></p>
+</figure>
+</div>
+</div>
+</section>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section></section>
-<section id="thank-you" class="title-slide slide level1 center">
-<h1>Thank you!</h1>
+<section id="references" class="title-slide slide level1 smaller scrollable">
+<h1>References</h1>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-anand2019" class="csl-entry" role="listitem">
+Anand, Sudhir, and Sanjay G. Reddy. 2019. <span>“The Construction of the DALY: Implications and Anomalies.”</span> <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3451311">https://doi.org/10.2139/ssrn.3451311</a>.
+</div>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/logos.png" class="slide-logo"></p>
+<p><img src="../vchem.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -587,7 +522,7 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -683,12 +618,12 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 5.0e-2,
+        margin: 0.1,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
@@ -699,6 +634,44 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

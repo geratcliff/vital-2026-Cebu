@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="lec_structure_files/libs/clipboard/clipboard.min.js"></script>
-<script src="lec_structure_files/libs/quarto-html/tabby.min.js"></script>
-<script src="lec_structure_files/libs/quarto-html/popper.min.js"></script>
-<script src="lec_structure_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="lec_structure_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="lec_structure_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="lec_structure_files/libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Structuring a Markov Model</title>
+  <title>Decision Analysis Workshop - Cebu – Structuring a Markov Model</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="lec_structure_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="lec_structure_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -114,11 +114,11 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="lec_structure_files/libs/revealjs/dist/theme/quarto-72a17c4bd1693554a4e731b5f3d9ffe5.css">
-  <link href="lec_structure_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="lec_structure_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="lec_structure_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="lec_structure_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -206,8 +206,8 @@
       margin-right: 0; 
     }
   </style>
-  <script src="lec_structure_files/libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="lec_structure_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -1192,8 +1192,8 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li><p>Excel does not easily do matrix exponentiation, however you can use an approximation (we’ll do this in a case study).</p></li>
 <li><p>Modern (free) statistical software can easily exponentiate a matrix:</p></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(expm)</span>
-<span id="cb1-2"><a href=""></a>m_P <span class="ot">=</span> <span class="fu">expm</span>(m_R)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(expm)</span>
+<span id="cb1-2"><a></a>m_P <span class="ot">=</span> <span class="fu">expm</span>(m_R)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="b.-exponentiate-the-transition-rate-matrix-6" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
@@ -1490,7 +1490,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </section>
 <section id="chf-example-continued-9" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
-<div class="quarto-layout-panel" style="font-size: 0.55em" data-layout-ncol="2">
+<div class="quarto-layout-panel" data-layout-ncol="2" style="font-size: 0.55em">
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="cell-output-display">
@@ -1957,6 +1957,7 @@ Zhang, Jun, and Kai F. Yu. 1998. <span>“What’s the <span>Relative Risk</span
 </div>
 </div>
 
+
 </section>
 
 
@@ -1969,19 +1970,19 @@ Zhang, Jun, and Kai F. Yu. 1998. <span>“What’s the <span>Relative Risk</span
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="lec_structure_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="lec_structure_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="lec_structure_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="lec_structure_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -2284,7 +2285,7 @@ Zhang, Jun, and Kai F. Yu. 1998. <span>“What’s the <span>Relative Risk</span
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/geratcliff\.github\.io\/vital-2026-Cebu");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Decision Analysis Workshop - Cebu – Deterministic, Threshold and Scenario Analyses</title>
+  <title>Decision Analysis Workshop - Cebu – Review of Day 1 Concepts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -142,371 +142,235 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Deterministic, Threshold and Scenario Analyses</h1>
+  <h1 class="title">Review of Day 1 Concepts</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section>
-<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
-<h1>Learning Objectives and Outline</h1>
+<section id="decision-trees" class="title-slide slide level1 center">
+<h1>Decision Trees</h1>
 
 </section>
-<section id="learning-objectives" class="slide level2 center">
-<h2>Learning Objectives</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="strengths" class="slide level2">
+<h2>Strengths</h2>
 <ul>
-<li><p>Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.</p></li>
-<li><p>Detail the advantages/disadvantages of deterministic sensitivity analysis.</p></li>
+<li class="fragment">They are easy to describe and understand</li>
+<li class="fragment">Works well with limited time horizon</li>
+<li class="fragment">Decision trees are a powerful framework for analyzing decisions and can provide rapid/useful insights, but they have limitations.</li>
 </ul>
 </section>
-<section id="outline" class="slide level2 center">
-<h2>Outline</h2>
+<section id="limitations" class="slide level2">
+<h2>Limitations</h2>
+<ul>
+<li class="fragment">No explicit accounting for the elapse of time.
+<ul>
+<li class="fragment">Recurrent events must be separately built into model.</li>
+<li class="fragment">Fine for short time cycles (e.g., 12 months) but we often want to model over a lifetime.</li>
+</ul></li>
+<li class="fragment">Difficult to incorporate real clinical detail - Tree structure can quickly become complex.</li>
+</ul>
+</section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+
+<img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome_pB.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<div style="font-size: 0.8em">
+<ul>
+<li class="fragment"><p>Earlier, we solved for the expected payoff of remaining at home: 0.74 (which was a lower expected value than going to the beach when the chance of rain at both was 30%) <br></p></li>
+<li class="fragment"><p><strong>What would</strong> <span class="math inline">p_B</span> need to be to yield an expected payoff <em>at the beach</em> of 0.74?</p>
+<ul>
+<li class="fragment">In other words, at what probability of rain at the beach would you be indifferent between staying at home &amp; going to the beach?</li>
+</ul></li>
+</ul>
+</div>
+<aside class="notes">
 <ol type="1">
-<li>Net Benefit Outcome Measures</li>
-<li>One-way sensitivity analysis.</li>
-<li>Two-way sensitivity analysis.</li>
-<li>Limitations and extensions.</li>
-<li>Threshold analysis</li>
-<li>Scenario analysis</li>
+<li>Now, let’s ask a slightly different question – At what probabiility….</li>
+<li>Let’s now assume that the probability of rain for the HOME option does not change (so stays at 0.3)</li>
+<li>KEY DIFFERENCE FROM THE LAST EXAMPLE: In the last example, the probabilities were the same &amp; we wanted to get our threshold of indifference between the beach and staying at home</li>
+<li>**Now we are assuming that there’s still a probability of 30% that it rains if you stay home, but at what probability of rain at the beach would you be indifferent between the two options? (Since we CHOSE BEACH when the probabilities both equaled 30%)</li>
+</ol>
+<ul>
+<li>In other words, at what probability of RAIN AT THE BEACH would you be indifferent between the beach &amp; home</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<p>Set 0.74 (expected value of remaining at home) equal to the <strong>beach</strong> payoffs and solve for <span class="math inline">p_B</span></p>
+<p><br></p>
+<p>p<sub>B</sub> * 0.4 + (1 - p<sub>B</sub>) * 1.0 = 0.74</p>
+</section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<div class="fragment fade-out">
+<p>p<sub>B</sub> * 0.4 + (1 - p<sub>B</sub>) * 1.0 = 0.74</p>
+</div>
+<p>p<sub>B</sub> * 0.4 + 1 - p<sub>B</sub> = 0.74</p>
+</section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-4" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<div class="fragment fade-out">
+<p>p<sub>B</sub> * 0.4 + 1 - p<sub>B</sub> = 0.74</p>
+</div>
+<p>p<sub>B</sub> * -0.6 = -0.26</p>
+</section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-5" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<div class="fragment fade-out">
+<p>p<sub>B</sub> * -0.6 = -0.26</p>
+</div>
+<p>p<sub>B</sub> = -0.26 / -0.6 = <span style="color:green;"><strong>0.43</strong></span></p>
+</section>
+<section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-6" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<blockquote>
+<p>When the probability of rain at the beach is 43% (probability of rain at home remains at 30%), we would be indifferent between staying at home &amp; going to the beach.</p>
+</blockquote>
+<blockquote>
+<p>If the probability of rain at the beach in &gt; 43%, then we would stay home</p>
+</blockquote>
+</section></section>
+<section>
+<section id="threshold-example-screening-program" class="title-slide slide level1 center">
+<h1>Threshold Example: Screening Program</h1>
+
+</section>
+<section id="decision-tree-pulmonary-embolism" class="slide level2">
+<h2>Decision Tree: Pulmonary Embolism</h2>
+
+<img data-src="images/clipboard-3525292626.png" class="r-stretch"></section>
+<section id="decision-tree-pulmonary-embolism-1" class="slide level2">
+<h2>Decision Tree: Pulmonary Embolism</h2>
+
+<img data-src="images/clipboard-1862969085.png" class="r-stretch"></section>
+<section id="parameter-uncertainty" class="slide level2">
+<h2>Parameter Uncertainty</h2>
+<ul>
+<li><p>Suppose we are not certain about the probability of fatal hemorrhage.</p></li>
+<li><p>At what value of <code>p_fatal_hem</code> would expected survival be equal?</p></li>
+</ul>
+</section>
+<section id="threshold-analysis-idea" class="slide level2">
+<h2>Threshold Analysis: Idea</h2>
+<ul>
+<li class="fragment"><p>Allow the value of <code>p_fatal_hem</code> to vary over a range.</p></li>
+<li class="fragment"><p>Find the value of <code>p_fatal_hem</code> along this range where expected survival is equal for the “Anticoagulant” and “No Anticoagulant” strategies.</p></li>
+</ul>
+</section>
+<section id="threshold-analysis" class="slide level2">
+<h2>Threshold Analysis</h2>
+
+<img data-src="images/clipboard-2537887771.png" class="r-stretch"></section>
+<section id="threshold-analysis-1" class="slide level2">
+<h2>Threshold Analysis</h2>
+
+<img data-src="images/clipboard-820301870.png" class="r-stretch"></section>
+<section id="threshold-analysis-2" class="slide level2">
+<h2>Threshold Analysis</h2>
+
+<img data-src="images/clipboard-3563991472.png" class="r-stretch"></section>
+<section id="threshold-analysis-3" class="slide level2">
+<h2>Threshold Analysis</h2>
+
+<img data-src="images/clipboard-3291599707.png" class="r-stretch"></section>
+<section id="threshold-analysis-4" class="slide level2">
+<h2>Threshold Analysis</h2>
+
+<img data-src="images/clipboard-1452136494.png" class="r-stretch"></section>
+<section id="section-1" class="slide level2" data-background="#43464B" data-background-image="images/clipboard-2596799462.png" data-background-size="contain">
+<h2></h2>
+</section></section>
+<section>
+<section id="example-2-screening-program" class="title-slide slide level1 center">
+<h1>Example 2: Screening Program</h1>
+
+</section>
+<section id="screening-program" class="slide level2">
+<h2>Screening Program</h2>
+<ul>
+<li class="fragment">The Ministry of Health is considering implementation of a population-wide treatment program for a costly disease that affects a subgroup of the population.</li>
+<li class="fragment">The prevalence of the disease is not well-established.</li>
+</ul>
+</section>
+<section id="screening-program-1" class="slide level2">
+<h2>Screening Program</h2>
+<ul>
+<li class="fragment">An inexpensive screening test is available, but it is not perfect at detecting individuals with the disease.</li>
+<li class="fragment">A more expensive (perfect) diagnostic test is available.</li>
+</ul>
+</section>
+<section id="decision-problem" class="slide level2">
+<h2>Decision Problem</h2>
+<ol type="1">
+<li>Do nothing.</li>
+<li>Population screening with the inexpensive test.</li>
+<li>Expensive diagnostic test for everyone.</li>
 </ol>
 </section>
-<section id="alternatives-to-icers" class="slide level2 center">
-<h2>Alternatives to ICERs</h2>
+<section id="decision-problem-1" class="slide level2">
+<h2>Decision Problem</h2>
 <ul>
-<li>ICERs the most common approach for describing CEA results
-<ul>
-<li><span style="color:green">Good</span>: summarize all aspects of decision problem except WTP (which comes from decision-maker)</li>
-<li><span style="color:red">Bad</span>: algorithms a bit complicated, negative ICERs, ratios can act poorly when denominator uncertain</li>
-</ul></li>
+<li class="fragment">Given that we do not know the underlying probability of disease (<code>p_disease</code>), can we make a policy decision?</li>
+<li class="fragment">Perhaps! We can use a threshold analysis.</li>
 </ul>
 </section>
-<section id="an-alternative" class="slide level2 center">
-<h2>An Alternative</h2>
+<section id="threshold-analysis-steps" class="slide level2">
+<h2>Threshold Analysis: Steps</h2>
+<ol type="1">
+<li class="fragment">Allow <code>p_disease</code> to vary over a plausible range.</li>
+<li class="fragment">Find the threshold at which we would be indifferent between:</li>
+</ol>
 <ul>
-<li>If willing to choose a fixed willingness-to-pay threshold (e.g., <span class="math inline">\lambda =</span> 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.
-<ul>
-<li>Net Health Benefit (NHB)</li>
-<li>Net Monetary Benefit (NMB)</li>
-</ul></li>
-<li><span style="color:blue">Objective</span>: Select the strategy with the highest NHB/NMB</li>
+<li class="fragment">Do nothing vs.&nbsp;population screening with inexpensive test.</li>
+<li class="fragment">Population screening vs.&nbsp;diagnostic test for everyone.</li>
 </ul>
 </section>
-<section id="net-health-benefit-nhb" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NHB}_s = E_s - \frac{C_s}{\lambda}
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
+<section id="threshold-analysis-5" class="slide level2">
+<h2>Threshold Analysis</h2>
+
+<img data-src="images/clipboard-2527152312.png" class="r-stretch"></section>
+<section id="section-2" class="slide level2" data-background="#43464B" data-background-image="images/clipboard-3866434634.png" data-background-size="contain">
+<h2></h2>
 </section>
-<section id="net-health-benefit-nhb-1" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NMB}_s = E_s \times \lambda - C_s
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
+<section id="section-3" class="slide level2" data-background="#43464B" data-background-image="images/clipboard-332595108.png" data-background-size="contain">
+<h2></h2>
 </section>
-<section id="example-nhb" class="slide level2 center">
-<h2>Example: NHB</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">E_1</span> = 0.07 years</p>
-<p><span class="math inline">E_2</span> = 0.10 years</p>
-<p><span class="math inline">C_1</span> = 1,500</p>
-<p><span class="math inline">C_2</span> = 2,800</p>
-<p><span class="math inline">\lambda</span> = 50,000 per year of life saved</p>
-</div><div class="column">
-<p><span class="math display">
-ICER = \frac{2800-1500}{0.10 - 0.07}  \\
-= 43,333 \\
-</span></p>
-</div></div>
+<section id="section-4" class="slide level2" data-background="#43464B" data-background-image="images/clipboard-246926963.png" data-background-size="contain">
+<h2></h2>
 </section>
-<section id="example-nhb-1" class="slide level2 center">
-<h2>Example: NHB</h2>
-<p><span class="math display">
-NHB_1 = 0.07 - 1500/50000 = 0.040 \\
-NHB_2 = 0.10 - 2800/50000 = 0.044
-\\
-\text{Incremental } NHB = 0.044 - 0.040 = 0.004
-</span></p>
-</section>
-<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
-<h2>Example: Net Monetary Benefit (NMB)</h2>
-<p><span class="math display">
-NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
-NHB_2 = 0.10 \times 50000 - 2800 = 2200
-\\
-\text{Incremental } NHB = 2200 - 2000 = 200
-</span></p>
-</section>
-<section id="calculating-nmb-in-amua" class="slide level2 center">
-<h2>Calculating NMB in Amua</h2>
-<div class="r-stack">
-<p><img data-src="images/clipboard-1972470218.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-2080375502.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-975167616.png" class="fragment" width="550" height="300"></p>
-<p><img data-src="images/clipboard-3987091812.png" class="fragment" width="550" height="300"></p>
-</div>
-</section>
-<section id="sensitivity" class="slide level2 center">
-<h2>Sensitivity</h2>
+<section id="decision" class="slide level2">
+<h2>Decision</h2>
 <ul>
-<li>ICER for Prevention strategy is just above WTP threshold of $50,000/QALY.</li>
-<li>NMB for treatment only slightly above NMB for prevention.</li>
-<li>How sensitive are these results to changes in specific model inputs?</li>
+<li>We can now solicit expert opinion on a likely range of the disease prevalance.</li>
+<li>If this range falls within the thresholds, we can make a decision despite uncertainty in the underlying disease prevalence.</li>
 </ul>
+
+
 </section></section>
-<section>
-<section id="one-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>One-way sensitivity analysis</h1>
-
-</section>
-<section id="one-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>One-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">Usually the starting point for sensitivity analyses</li>
-<li class="fragment">Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant</li>
-<li class="fragment">Determining how this variation impacts the results</li>
-<li class="fragment">One-way sensitivity analyses are often presented in a <strong>tornado diagram</strong>
-<ul>
-<li class="fragment">Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="rotavirus-study" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-1" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show2.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-2" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show3.jpeg" class="r-stretch"></section>
-<section id="other-examples" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.33.51 PM.png" class="r-stretch"></section>
-<section id="other-examples-1" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-01.png" class="r-stretch"></section>
-<section id="other-examples-2" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.15.55 AM.png" width="759" class="r-stretch"></section>
-<section id="other-examples-3" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.19.09 AM.png" width="777" class="r-stretch"></section></section>
-<section>
-<section id="interactive-amua-session" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-<section id="primary-results-progressive-disease" class="slide level2 center">
-<h2>Primary Results: Progressive Disease</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>ICER</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Status Quo</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>Treatment</td>
-<td>49,513</td>
-</tr>
-<tr class="odd">
-<td>Prevention</td>
-<td>139,630</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Treatment is cost-effective at WTP=$50,000/QALY—but <em>barely.</em></p></li>
-<li><p>How sensitive is this result to the input parameter values used?</p></li>
-</ul>
-</section></section>
-<section>
-<section id="two-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Two-way sensitivity analysis</h1>
-
-</section>
-<section id="two-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>Two-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">A way to map the interaction effects between two parameters in a decision analysis model</li>
-<li class="fragment">Varies 2 parameters at a time</li>
-<li class="fragment">Explores the robustness of results in more depth</li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications-1" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="hiv-prevention" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 9.54.01 AM.png" width="517" class="r-stretch"></section>
-<section id="hiv-prevention-1" class="slide level2 center">
-<h2>HIV prevention</h2>
-<ul>
-<li class="fragment"><p>Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p></li>
-<li class="fragment"><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
-<li class="fragment"><p>And we also know that PrEP has traditionally been really <strong>costly</strong></p></li>
-</ul>
-</section>
-<section id="hiv-prevention-2" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.22.19 PM.png" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.25.53 PM.png" width="543" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care-1" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<ul>
-<li class="fragment"><p>Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p></li>
-<li class="fragment"><p>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong></p></li>
-</ul>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-2" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<blockquote>
-<p>When administered quickly after stroke onset (within three hours, as approved by the FDA), tPA helps to restore blood flow to brain regions affected by a stroke, thereby limiting the risk of damage and functional impairment</p>
-</blockquote>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-3" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section></section>
-<section id="interactive-amua-session-1" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-
-<section>
-<section id="limitations-of-deterministic-sensitivity-analyses" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Limitations of deterministic sensitivity analyses</h1>
-
-</section>
-<section id="caution-limitations" class="slide level2 center">
-<h2>Caution: Limitations!</h2>
-<ul>
-<li>Limited by the subjectivity of the choice of parameters to analyze</li>
-<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value</li>
-</ul>
-</section></section>
-<section>
-<section id="scenario-analysis" class="title-slide slide level1 center">
-<h1>Scenario analysis</h1>
-
-</section>
-<section id="motivation" class="slide level2 center">
-<h2>Motivation</h2>
-<ul>
-<li>Suppose we wanted to model the impact of these interventions under a “lower cost” scenario.</li>
-<li>One option is to</li>
-<li>It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.</li>
-</ul>
-</section>
-<section id="scenario-analysis-1" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<ul>
-<li>Focuses more on model <strong>assumptions</strong> rather than parameter uncertainty</li>
-<li>Could include separate analysis on:</li>
-</ul>
-<blockquote>
-<p>Subgroups/sub-populations, including different age cohorts &amp; risk levels</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Different perspectives (societal; modified societal; etc)</p>
-</blockquote>
-</section>
-<section id="scenario-analysis-2" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<blockquote>
-<p>Hypothetical scenarios (“optimistic” and “conservative” scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Time horizons</p>
-</blockquote>
-</section>
-<section id="examples" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-02.png" class="r-stretch"></section>
-<section id="examples-1" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.20 AM.png" class="r-stretch"></section>
-<section id="examples-2" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.50 AM.png" class="r-stretch"></section>
-<section id="examples-3" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.26.44 AM.png" class="r-stretch"></section>
-<section id="examples-4" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 8.54.33 AM.png" class="r-stretch"></section>
-<section id="examples-5" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section></section>
-<section>
-<section id="threshold-analysis" class="title-slide slide level1 center">
-<h1>Threshold analysis</h1>
-
-</section>
-<section id="threshold-analysis-1" class="slide level2 center">
-<h2>Threshold analysis</h2>
-<ul>
-<li>Answers the question: What the input parameter need be to meet the country thresholds of:
-<ul>
-<li>$50,000/QALY gained</li>
-<li>$100,000/QALY gained</li>
-<li>$150,000/QALY gained</li>
-<li>$200,000/QALY gained</li>
-</ul></li>
-</ul>
-</section>
-<section id="examples-6" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM.png" class="r-stretch"></section>
-<section id="examples-7" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section></section>
-<section id="thank-you" class="title-slide slide level1 center">
-<h1>Thank you!</h1>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/logos.png" class="slide-logo"></p>
+<p><img src="../vchem.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="../index.html">Back to Website</a></p>
+<p><a href="../index.html">Volver al sitio web</a></p>
 </div>
 </div></div>
 
@@ -587,7 +451,7 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -683,12 +547,12 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 5.0e-2,
+        margin: 0.1,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,

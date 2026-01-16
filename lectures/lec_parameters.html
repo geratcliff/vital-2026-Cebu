@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Decision Analysis Workshop - Cebu – Deterministic, Threshold and Scenario Analyses</title>
+  <title>Decision Analysis Workshop - Cebu – Curating model parameters</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -142,7 +142,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Deterministic, Threshold and Scenario Analyses</h1>
+  <h1 class="title">Curating model parameters</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -153,358 +153,284 @@
 <h1>Learning Objectives and Outline</h1>
 
 </section>
-<section id="learning-objectives" class="slide level2 center">
+<section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
 <ul>
-<li><p>Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.</p></li>
-<li><p>Detail the advantages/disadvantages of deterministic sensitivity analysis.</p></li>
+<li class="fragment"><p>Classify model parameters across different economic perspectives</p></li>
+<li class="fragment"><p>Characterize the data collection approaches for cost-effectiveness studies (i.e., alongside clinical trials versus secondary data collection)</p></li>
+<li class="fragment"><p>Identify resources and tools for collecting both cost and benefit parameters</p></li>
 </ul>
 </section>
-<section id="outline" class="slide level2 center">
+<section id="outline" class="slide level2">
 <h2>Outline</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ol type="1">
-<li>Net Benefit Outcome Measures</li>
-<li>One-way sensitivity analysis.</li>
-<li>Two-way sensitivity analysis.</li>
-<li>Limitations and extensions.</li>
-<li>Threshold analysis</li>
-<li>Scenario analysis</li>
+<li class="fragment">ICER review</li>
+<li class="fragment">Perspective</li>
+<li class="fragment">Data collection</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<ol start="4" type="1">
+<li class="fragment">Numerator: Costs</li>
+<li class="fragment">Denominator: Effects</li>
+</ol>
+</div></div>
+</section></section>
+<section>
+<section id="icer-review" class="title-slide slide level1 center" data-background="#43464B">
+<h1>ICER review</h1>
+<p><span class="math display">
+\frac{C_1 - C_0 \quad  (\Delta C)}{E_1 - E_0 \quad  (\Delta E)}
+</span></p>
+</section>
+<section id="numerator-costs" class="slide level2">
+<h2>Numerator (costs)</h2>
+<p>Valued in monetary terms</p>
+<p><br> - E.g., <br> <span style="color: #016301">$USD / ₦NGN / KES / R</span></p>
+</section>
+<section id="denominator-benefits" class="slide level2">
+<h2>Denominator (benefits):</h2>
+<p>Valued in terms of <strong>clinical outcomes</strong></p>
+<p><br> - E.g., <br> <span style="color: #016301"># of HIV cases prevented</span> <br> <span style="color: #016301"># of children seizure free</span> <br> <span style="color: #016301"># of quality-adjusted life years gained</span> <br></p>
+<ul>
+<li class="fragment">What’s important for the question at hand</li>
+<li class="fragment">Most analyses report several different outcomes</li>
+<li class="fragment">QALY/DALYs enable comparability across disease areas</li>
+</ul>
+</section></section>
+<section>
+<section id="perspective-matters" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Perspective matters</h1>
+
+</section>
+<section id="formal-healthcare-sector" class="slide level2" style="font-size: 0.8em">
+<h2>Formal healthcare sector</h2>
+<p><strong>Costs:</strong> Medical costs borne by “third-party payers” &amp; paid for out-of-pocket by patients <br> <strong>Benefits:</strong> Health impact to patient &amp; if relevant, family/unpaid caregiver <br></p>
+<ul>
+<li class="fragment">In many countries, this might mean “donor payers” and/or largely out-of-pocket costs by patients.</li>
+<li class="fragment">This might also include “program costs” paid for by donor of government entities</li>
+<li class="fragment">Ideally, costs from a healthcare sector perspective should include <strong>current + future costs</strong>, related &amp; unrelated to the condition under consideration</li>
+</ul>
+</section>
+<section id="societal-perspective" class="slide level2" style="font-size: 0.8em">
+<h2>Societal perspective</h2>
+<p>Represents the wider “public interest” &amp; inter-sector distribution of resources that are important to consider <br></p>
+<ul>
+<li class="fragment">Includes patient transportation/travel, non-medical out-of-pocket costs, and time/productivity costs</li>
+<li class="fragment">May include family/informal caregiver costs related to transport/travel, non-medical out-of-pocket costs, time/productivity costs <br></li>
+</ul>
+<ul>
+<li class="fragment"><strong>Presenteeism</strong> (i.e., lost productivity when individuals are not fully functional at work due to illness)</li>
+<li class="fragment"><strong>Absenteeism</strong> (i.e., time absent from work as a consequence of illness)</li>
+</ul>
+</section></section>
+<section>
+<section id="data-collection" class="title-slide slide level1 center" data-background="#43464B">
+<h1>Data collection</h1>
+
+</section>
+<section id="two-approaches" class="slide level2">
+<h2>Two approaches:</h2>
+<p><br> (1) Alongside <span style="color: #00589b;"><strong>clinical trials</strong></span> <br> (2) Using <span style="color: #00589b;"><strong>secondary data</strong></span></p>
+</section></section>
+<section>
+<section id="data-collection-alongside-clinical-trials" class="title-slide slide level1 center" data-background="#43464B">
+<h1>1. Data collection alongside <span style="color: aquamarine;">clinical trials</span></h1>
+
+</section>
+<section id="costs-clinical-trials" class="slide level2" style="font-size: 0.8em">
+<h2>Costs (clinical trials)</h2>
+<p>Source: Gold 1996, Drummond 2015, Gray 2012) <br></p>
+<ol type="1">
+<li class="fragment"><p><strong>Identify</strong> – Estimate the different categories of resources likely to be required (e.g., surgical staff, medical equipment, surgical complications, re-admissions) <br> <br></p></li>
+<li class="fragment"><p><strong>Measure</strong> – Estimate how much of each resource category is required (e.g.&nbsp;type of staff performing the surgery and time involved, post-surgery length of stay, re-admission rates) <br> <br></p></li>
+<li class="fragment"><p><strong>Value</strong> – Apply unit costs to each resource category (e.g., salary scales from the relevant hospital or national wage rates for staff inputs, cost per inpatient day for the post-surgery hospital stay)</p></li>
 </ol>
 </section>
-<section id="alternatives-to-icers" class="slide level2 center">
-<h2>Alternatives to ICERs</h2>
+<section id="costs-clinical-trials-1" class="slide level2">
+<h2>Costs (clinical trials)</h2>
+
+<img data-src="images/Screen Shot 2022-09-06 at 11.08.13 AM.jpeg" class="r-stretch"></section>
+<section id="costs-clinical-trials-2" class="slide level2">
+<h2>Costs (clinical trials)</h2>
+
+<img data-src="images/Screen Shot 2022-09-06 at 11.09.38 AM.png" class="r-stretch"></section>
+<section id="costs-clinical-trials-3" class="slide level2">
+<h2>Costs (clinical trials)</h2>
+
+<img data-src="images/Screen Shot 2022-09-06 at 11.09.14 AM.png" class="r-stretch"></section>
+<section id="effects-clinical-trials" class="slide level2">
+<h2>Effects (clinical trials)</h2>
 <ul>
-<li>ICERs the most common approach for describing CEA results
+<li class="fragment">Important clinical outcomes of the trial (e.g.&nbsp;cases or deaths averted)</li>
+<li class="fragment">If seeking to measure <strong>QALYs</strong> gained, the EQ-5D (an indirect preference-based weight tool) can be obtained in several different languages
 <ul>
-<li><span style="color:green">Good</span>: summarize all aspects of decision problem except WTP (which comes from decision-maker)</li>
-<li><span style="color:red">Bad</span>: algorithms a bit complicated, negative ICERs, ratios can act poorly when denominator uncertain</li>
+<li class="fragment">visit: <span style="color: blue;">euroqol.org/eq-5d-instruments/all-eq-5d-versions/</span></li>
+<li class="fragment">Age/proxy requirements can also be found on this site</li>
 </ul></li>
 </ul>
 </section>
-<section id="an-alternative" class="slide level2 center">
-<h2>An Alternative</h2>
+<section id="effects-clinical-trials-1" class="slide level2">
+<h2>Effects (clinical trials)</h2>
+<p>If seeking to measure <strong>DALYs</strong> averted (DALYs typically utilizes standardized disability weights): <br></p>
 <ul>
-<li>If willing to choose a fixed willingness-to-pay threshold (e.g., <span class="math inline">\lambda =</span> 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.
-<ul>
-<li>Net Health Benefit (NHB)</li>
-<li>Net Monetary Benefit (NMB)</li>
-</ul></li>
-<li><span style="color:blue">Objective</span>: Select the strategy with the highest NHB/NMB</li>
+<li class="fragment"><p><strong>Published Global burden of disease weights</strong> can be used alongside other data points collected in the clinical trial, such as “age of onset of disease.”</p></li>
+<li class="fragment"><p>Other data needed to calculate DALYs, such as “life expectancy” due to disease/stages of disease, can also be estimated (more on that in the “secondary data” section)</p></li>
 </ul>
 </section>
-<section id="net-health-benefit-nhb" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NHB}_s = E_s - \frac{C_s}{\lambda}
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="net-health-benefit-nhb-1" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NMB}_s = E_s \times \lambda - C_s
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="example-nhb" class="slide level2 center">
-<h2>Example: NHB</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">E_1</span> = 0.07 years</p>
-<p><span class="math inline">E_2</span> = 0.10 years</p>
-<p><span class="math inline">C_1</span> = 1,500</p>
-<p><span class="math inline">C_2</span> = 2,800</p>
-<p><span class="math inline">\lambda</span> = 50,000 per year of life saved</p>
-</div><div class="column">
-<p><span class="math display">
-ICER = \frac{2800-1500}{0.10 - 0.07}  \\
-= 43,333 \\
-</span></p>
-</div></div>
-</section>
-<section id="example-nhb-1" class="slide level2 center">
-<h2>Example: NHB</h2>
-<p><span class="math display">
-NHB_1 = 0.07 - 1500/50000 = 0.040 \\
-NHB_2 = 0.10 - 2800/50000 = 0.044
-\\
-\text{Incremental } NHB = 0.044 - 0.040 = 0.004
-</span></p>
-</section>
-<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
-<h2>Example: Net Monetary Benefit (NMB)</h2>
-<p><span class="math display">
-NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
-NHB_2 = 0.10 \times 50000 - 2800 = 2200
-\\
-\text{Incremental } NHB = 2200 - 2000 = 200
-</span></p>
-</section>
-<section id="calculating-nmb-in-amua" class="slide level2 center">
-<h2>Calculating NMB in Amua</h2>
-<div class="r-stack">
-<p><img data-src="images/clipboard-1972470218.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-2080375502.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-975167616.png" class="fragment" width="550" height="300"></p>
-<p><img data-src="images/clipboard-3987091812.png" class="fragment" width="550" height="300"></p>
-</div>
-</section>
-<section id="sensitivity" class="slide level2 center">
-<h2>Sensitivity</h2>
-<ul>
-<li>ICER for Prevention strategy is just above WTP threshold of $50,000/QALY.</li>
-<li>NMB for treatment only slightly above NMB for prevention.</li>
-<li>How sensitive are these results to changes in specific model inputs?</li>
-</ul>
-</section></section>
-<section>
-<section id="one-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>One-way sensitivity analysis</h1>
-
-</section>
-<section id="one-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>One-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">Usually the starting point for sensitivity analyses</li>
-<li class="fragment">Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant</li>
-<li class="fragment">Determining how this variation impacts the results</li>
-<li class="fragment">One-way sensitivity analyses are often presented in a <strong>tornado diagram</strong>
-<ul>
-<li class="fragment">Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="rotavirus-study" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-1" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show2.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-2" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show3.jpeg" class="r-stretch"></section>
-<section id="other-examples" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.33.51 PM.png" class="r-stretch"></section>
-<section id="other-examples-1" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-01.png" class="r-stretch"></section>
-<section id="other-examples-2" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.15.55 AM.png" width="759" class="r-stretch"></section>
-<section id="other-examples-3" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.19.09 AM.png" width="777" class="r-stretch"></section></section>
-<section>
-<section id="interactive-amua-session" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-<section id="primary-results-progressive-disease" class="slide level2 center">
-<h2>Primary Results: Progressive Disease</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>ICER</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Status Quo</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>Treatment</td>
-<td>49,513</td>
-</tr>
-<tr class="odd">
-<td>Prevention</td>
-<td>139,630</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Treatment is cost-effective at WTP=$50,000/QALY—but <em>barely.</em></p></li>
-<li><p>How sensitive is this result to the input parameter values used?</p></li>
-</ul>
-</section></section>
-<section>
-<section id="two-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Two-way sensitivity analysis</h1>
-
-</section>
-<section id="two-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>Two-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">A way to map the interaction effects between two parameters in a decision analysis model</li>
-<li class="fragment">Varies 2 parameters at a time</li>
-<li class="fragment">Explores the robustness of results in more depth</li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications-1" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="hiv-prevention" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 9.54.01 AM.png" width="517" class="r-stretch"></section>
-<section id="hiv-prevention-1" class="slide level2 center">
-<h2>HIV prevention</h2>
-<ul>
-<li class="fragment"><p>Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p></li>
-<li class="fragment"><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
-<li class="fragment"><p>And we also know that PrEP has traditionally been really <strong>costly</strong></p></li>
-</ul>
-</section>
-<section id="hiv-prevention-2" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.22.19 PM.png" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.25.53 PM.png" width="543" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care-1" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<ul>
-<li class="fragment"><p>Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p></li>
-<li class="fragment"><p>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong></p></li>
-</ul>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-2" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<blockquote>
-<p>When administered quickly after stroke onset (within three hours, as approved by the FDA), tPA helps to restore blood flow to brain regions affected by a stroke, thereby limiting the risk of damage and functional impairment</p>
-</blockquote>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-3" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section></section>
-<section id="interactive-amua-session-1" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-
-<section>
-<section id="limitations-of-deterministic-sensitivity-analyses" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Limitations of deterministic sensitivity analyses</h1>
-
-</section>
-<section id="caution-limitations" class="slide level2 center">
-<h2>Caution: Limitations!</h2>
-<ul>
-<li>Limited by the subjectivity of the choice of parameters to analyze</li>
-<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value</li>
-</ul>
-</section></section>
-<section>
-<section id="scenario-analysis" class="title-slide slide level1 center">
-<h1>Scenario analysis</h1>
-
-</section>
-<section id="motivation" class="slide level2 center">
-<h2>Motivation</h2>
-<ul>
-<li>Suppose we wanted to model the impact of these interventions under a “lower cost” scenario.</li>
-<li>One option is to</li>
-<li>It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.</li>
-</ul>
-</section>
-<section id="scenario-analysis-1" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<ul>
-<li>Focuses more on model <strong>assumptions</strong> rather than parameter uncertainty</li>
-<li>Could include separate analysis on:</li>
-</ul>
-<blockquote>
-<p>Subgroups/sub-populations, including different age cohorts &amp; risk levels</p>
-</blockquote>
+<section id="effects-clinical-trials-2" class="slide level2">
+<h2>Effects (clinical trials)</h2>
 <p><br></p>
 <blockquote>
-<p>Different perspectives (societal; modified societal; etc)</p>
+<p>Since disability weights are freely &amp; publicly available (these weights are required for DALY calculations), it can reduce costs/time/resources compared to collecting QALY estimates</p>
 </blockquote>
 </section>
-<section id="scenario-analysis-2" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<blockquote>
-<p>Hypothetical scenarios (“optimistic” and “conservative” scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Time horizons</p>
-</blockquote>
-</section>
-<section id="examples" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-02.png" class="r-stretch"></section>
-<section id="examples-1" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.20 AM.png" class="r-stretch"></section>
-<section id="examples-2" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.50 AM.png" class="r-stretch"></section>
-<section id="examples-3" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.26.44 AM.png" class="r-stretch"></section>
-<section id="examples-4" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 8.54.33 AM.png" class="r-stretch"></section>
-<section id="examples-5" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section></section>
+<section id="productivitytime-associated-costs-clinical-trials" class="slide level2">
+<h2>Productivity/time associated costs (clinical trials)</h2>
+<ul>
+<li class="fragment"><strong>Productivity (presenteeism &amp; absenteeism)</strong> can be measured with validated instruments such as the <span style="color: #016301">Work Productivity and Activity Impairment Questionnaire (WPAI)</span>, among others published <br><br></li>
+<li class="fragment">Scores from these instruments can be used to estimate the <strong>% of work-related productivity loss</strong>, which can be monetized based on assumptions on population wage and number of hours typically spent working</li>
+</ul>
+</section></section>
 <section>
-<section id="threshold-analysis" class="title-slide slide level1 center">
-<h1>Threshold analysis</h1>
+<section id="using-secondary-data-only" class="title-slide slide level1 center" data-background="#43464B">
+<h1>2. Using <span style="color: aquamarine;">secondary</span> data only</h1>
 
 </section>
-<section id="threshold-analysis-1" class="slide level2 center">
-<h2>Threshold analysis</h2>
+<section id="costs-secondary-data" class="slide level2" style="font-size: 0.8em">
+<h2>Costs (secondary data)</h2>
+<p>(Same approach as for clinical trials above) <br></p>
+<ol type="1">
+<li class="fragment"><p><strong>Identify</strong> – Estimate the different categories of resources (e.g., surgical staff, medical equipment, surgical complications, re-admissions) <br> <br></p></li>
+<li class="fragment"><p><strong>Measure</strong> – Estimate how much of each resource category is required (e.g.&nbsp;type of staff performing the surgery and time involved, post-surgery length of stay, re-admission rates) <br> <br></p></li>
+<li class="fragment"><p><strong>Value</strong> – Apply unit costs to each resource category (e.g., salary scales from the relevant hospital or national wage rates for staff inputs, cost per inpatient day for the post-surgery hospital stay)</p></li>
+</ol>
+</section>
+<section id="costs-secondary-data-1" class="slide level2">
+<h2>Costs (secondary data)</h2>
+<ol type="1">
+<li class="fragment"><strong>In country/hospital/donor data registries</strong> - key is to get as close to the “true” cost associated with each procedure per patient
 <ul>
-<li>Answers the question: What the input parameter need be to meet the country thresholds of:
-<ul>
-<li>$50,000/QALY gained</li>
-<li>$100,000/QALY gained</li>
-<li>$150,000/QALY gained</li>
-<li>$200,000/QALY gained</li>
+<li class="fragment">E.g., “TB healthcare &amp; diagnostics are from official price list of the National Health Laboratory Service in South Africa; Costs for follow-up reflect local clinic and culture-based screening for active-tuberculosis”</li>
 </ul></li>
+<li class="fragment"><strong>Review of published literature</strong></li>
+<li class="fragment"><strong>Tufts CEA Registry</strong></li>
+<li class="fragment"><strong>DCP3: Disease Control Priorities</strong></li>
+</ol>
+</section>
+<section id="costs-secondary-data-2" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/file_show-01.jpeg" class="r-stretch"></section>
+<section id="costs-secondary-data-3" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/1.png" class="r-stretch"></section>
+<section id="costs-secondary-data-4" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-06 at 2.47.32 PM.jpeg" width="766" class="r-stretch"></section>
+<section id="costs-secondary-data-5" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-06 at 3.53.38 PM.png" class="r-stretch"><p>https://cevr.tuftsmedicalcenter.org/databases/cea-registry</p>
+</section>
+<section id="costs-secondary-data-6" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-10-04 at 3.24.08 PM.png" width="570" class="r-stretch"></section>
+<section id="costs-secondary-data-7" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-10-04 at 3.53.22 PM.png" class="r-stretch"></section>
+<section id="costs-secondary-data-8" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-10-04 at 3.28.14 PM.png" width="529" class="r-stretch"></section>
+<section id="costs-secondary-data-9" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-10-04 at 3.29.14 PM.png" width="499" class="r-stretch"></section>
+<section id="costs-secondary-data-10" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-06 at 3.57.05 PM.png" class="r-stretch"><p>http://ghcearegistry.org/ghcearegistry/</p>
+</section>
+<section id="costs-secondary-data-11" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-10-04 at 3.49.19 PM.png" class="r-stretch"></section>
+<section id="costs-secondary-data-12" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-10-04 at 3.50.18 PM.png" class="r-stretch"></section>
+<section id="costs-secondary-data-13" class="slide level2">
+<h2>Costs (secondary data)</h2>
+<p><img data-src="images/Screen Shot 2022-09-13 at 1.41.55 PM.png" width="180"></p>
+<p><img data-src="images/Screen Shot 2022-09-13 at 1.44.12 PM.jpeg" width="533"></p>
+</section>
+<section id="costs-secondary-data-14" class="slide level2">
+<h2>Costs (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-13 at 1.40.58 PM.png" class="r-stretch"></section>
+<section id="costs-secondary-data-15" class="slide level2">
+<h2>Costs (secondary data)</h2>
+<ul>
+<li class="fragment"><p>Up until now, we focused on <strong>Micro costing</strong> (bottom-up) (e.g., for treatment-specific costs); Identifying &amp; measuring each resource utilized and applying unit costs</p></li>
+<li class="fragment"><p><strong>Gross costing</strong> (top-down) estimates the cost of an event or condition; can capture important downstream costs (e.g., hospitalizations due to “opioid” relapse/recurrence)</p></li>
 </ul>
 </section>
-<section id="examples-6" class="slide level2 center">
-<h2>Examples</h2>
+<section id="costs-secondary-data-16" class="slide level2">
+<h2>Costs (secondary data)</h2>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM.png" class="r-stretch"></section>
-<section id="examples-7" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section></section>
-<section id="thank-you" class="title-slide slide level1 center">
-<h1>Thank you!</h1>
-
-
+<img data-src="images/2.png" class="r-stretch"></section>
+<section id="effects-secondary-data" class="slide level2">
+<h2>Effects (secondary data)</h2>
+<ul>
+<li class="fragment">IHME Disease-specific rates</li>
+<li class="fragment">Global burden of disease | Tufts DALY calculator |</li>
+<li class="fragment">DCP3</li>
+<li class="fragment">Other literature/RCTs/Meta-analyses/etc. - including Tufts registries that we just reviewed + other!</li>
+</ul>
 </section>
+<section id="effects-secondary-data-1" class="slide level2">
+<h2>Effects (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-14 at 9.45.01 AM.png" class="r-stretch"></section>
+<section id="effects-secondary-data-2" class="slide level2">
+<h2>Effects (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-13 at 1.55.26 PM.png" class="r-stretch"><p>(Marx et al 2020)</p>
+</section>
+<section id="effects-secondary-data-3" class="slide level2">
+<h2>Effects (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-13 at 1.56.36 PM.png" class="r-stretch"><p>(Marx et al 2020)</p>
+</section>
+<section id="effects-secondary-data-4" class="slide level2">
+<h2>Effects (secondary data)</h2>
+<p><img data-src="images/Screen Shot 2022-09-06 at 2.48.41 PM.png" width="720" height="144"></p>
+</section>
+<section id="effects-secondary-data-5" class="slide level2">
+<h2>Effects (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-14 at 9.31.26 AM.png" class="r-stretch"><p>A tool that can convert health outcomes expressed in non-DALY metrics (e.g., cases or deaths averted) into DALYs – converted DALY measures can then be used to compare cost-effectiveness ratios of interventions across different disease areas (http://ghcearegistry.org/ghcearegistry/)</p>
+</section>
+<section id="effects-secondary-data-6" class="slide level2">
+<h2>Effects (secondary data)</h2>
+
+<img data-src="images/Screen Shot 2022-09-14 at 9.34.46 AM.png" width="765" class="r-stretch"></section>
+<section id="effects-secondary-data-7" class="slide level2">
+<h2>Effects (secondary data)</h2>
+<p><img data-src="images/DCP1.jpeg" width="172"></p>
+<p><img data-src="images/DCP2.jpeg" width="426"></p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/logos.png" class="slide-logo"></p>
+<p><img src="../vchem.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -587,7 +513,7 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -683,12 +609,12 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 5.0e-2,
+        margin: 0.1,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,

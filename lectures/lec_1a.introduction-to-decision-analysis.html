@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Decision Analysis Workshop - Cebu – Deterministic, Threshold and Scenario Analyses</title>
+  <title>Decision Analysis Workshop - Cebu – Introduction to Decision Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,22 +29,6 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -142,363 +126,460 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Deterministic, Threshold and Scenario Analyses</h1>
+  <h1 class="title">Introduction to Decision Analysis</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section>
-<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
-<h1>Learning Objectives and Outline</h1>
-
-</section>
-<section id="learning-objectives" class="slide level2 center">
-<h2>Learning Objectives</h2>
-<ul>
-<li><p>Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.</p></li>
-<li><p>Detail the advantages/disadvantages of deterministic sensitivity analysis.</p></li>
-</ul>
-</section>
-<section id="outline" class="slide level2 center">
-<h2>Outline</h2>
-<ol type="1">
-<li>Net Benefit Outcome Measures</li>
-<li>One-way sensitivity analysis.</li>
-<li>Two-way sensitivity analysis.</li>
-<li>Limitations and extensions.</li>
-<li>Threshold analysis</li>
-<li>Scenario analysis</li>
-</ol>
-</section>
-<section id="alternatives-to-icers" class="slide level2 center">
-<h2>Alternatives to ICERs</h2>
-<ul>
-<li>ICERs the most common approach for describing CEA results
-<ul>
-<li><span style="color:green">Good</span>: summarize all aspects of decision problem except WTP (which comes from decision-maker)</li>
-<li><span style="color:red">Bad</span>: algorithms a bit complicated, negative ICERs, ratios can act poorly when denominator uncertain</li>
-</ul></li>
-</ul>
-</section>
-<section id="an-alternative" class="slide level2 center">
-<h2>An Alternative</h2>
-<ul>
-<li>If willing to choose a fixed willingness-to-pay threshold (e.g., <span class="math inline">\lambda =</span> 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.
-<ul>
-<li>Net Health Benefit (NHB)</li>
-<li>Net Monetary Benefit (NMB)</li>
-</ul></li>
-<li><span style="color:blue">Objective</span>: Select the strategy with the highest NHB/NMB</li>
-</ul>
-</section>
-<section id="net-health-benefit-nhb" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NHB}_s = E_s - \frac{C_s}{\lambda}
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="net-health-benefit-nhb-1" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NMB}_s = E_s \times \lambda - C_s
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="example-nhb" class="slide level2 center">
-<h2>Example: NHB</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">E_1</span> = 0.07 years</p>
-<p><span class="math inline">E_2</span> = 0.10 years</p>
-<p><span class="math inline">C_1</span> = 1,500</p>
-<p><span class="math inline">C_2</span> = 2,800</p>
-<p><span class="math inline">\lambda</span> = 50,000 per year of life saved</p>
-</div><div class="column">
-<p><span class="math display">
-ICER = \frac{2800-1500}{0.10 - 0.07}  \\
-= 43,333 \\
-</span></p>
-</div></div>
-</section>
-<section id="example-nhb-1" class="slide level2 center">
-<h2>Example: NHB</h2>
-<p><span class="math display">
-NHB_1 = 0.07 - 1500/50000 = 0.040 \\
-NHB_2 = 0.10 - 2800/50000 = 0.044
-\\
-\text{Incremental } NHB = 0.044 - 0.040 = 0.004
-</span></p>
-</section>
-<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
-<h2>Example: Net Monetary Benefit (NMB)</h2>
-<p><span class="math display">
-NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
-NHB_2 = 0.10 \times 50000 - 2800 = 2200
-\\
-\text{Incremental } NHB = 2200 - 2000 = 200
-</span></p>
-</section>
-<section id="calculating-nmb-in-amua" class="slide level2 center">
-<h2>Calculating NMB in Amua</h2>
-<div class="r-stack">
-<p><img data-src="images/clipboard-1972470218.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-2080375502.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-975167616.png" class="fragment" width="550" height="300"></p>
-<p><img data-src="images/clipboard-3987091812.png" class="fragment" width="550" height="300"></p>
+<section id="section" class="slide level2 numbered-list-slide center">
+<h2></h2>
+<h2>
+Outline
+</h2>
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Introductions</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>Motivation</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>03</p>
+</div>
+<div class="text">
+<p>Examples of Decision Analysis</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>04</p>
+</div>
+<div class="text">
+<p>Workshop objectives</p>
+</div>
+</div>
 </div>
 </section>
-<section id="sensitivity" class="slide level2 center">
-<h2>Sensitivity</h2>
+<section id="course-website" class="slide level2 center">
+<h2>Course Website</h2>
+<div class="split-content">
+<div class="content-text">
+<p><strong>What is it?</strong></p>
 <ul>
-<li>ICER for Prevention strategy is just above WTP threshold of $50,000/QALY.</li>
-<li>NMB for treatment only slightly above NMB for prevention.</li>
-<li>How sensitive are these results to changes in specific model inputs?</li>
+<li><p>All course materials (slides, case studies) are posted here.</p></li>
+<li><p>Our (likely evolving) schedule will also be posted here, and updated regularly.</p></li>
+<li><p>Additional Resources (Quick Start Guide, Data Collection Tool, Etc.)</p></li>
 </ul>
-</section></section>
-<section>
-<section id="one-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>One-way sensitivity analysis</h1>
-
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec1/Cebu_Website_Image.png"></p>
+</div>
+</div>
+<div style="font-size: 1.0em; text-align:center;">
+<p><a href="https://geratcliff.github.io/vital-2026-Cebu/" class="uri">https://geratcliff.github.io/vital-2026-Cebu/</a></p>
+</div>
 </section>
-<section id="one-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>One-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">Usually the starting point for sensitivity analyses</li>
-<li class="fragment">Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant</li>
-<li class="fragment">Determining how this variation impacts the results</li>
-<li class="fragment">One-way sensitivity analyses are often presented in a <strong>tornado diagram</strong>
-<ul>
-<li class="fragment">Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
+<section id="introductions" class="slide level2 section-slide center">
+<h2>Introductions</h2>
+<div class="section-number">
+<p>01</p>
+</div>
 </section>
-<section id="rotavirus-study" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-1" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show2.jpeg" class="r-stretch"></section>
-<section id="rotavirus-study-2" class="slide level2 center">
-<h2>Rotavirus study</h2>
-
-<img data-src="images/file_show3.jpeg" class="r-stretch"></section>
-<section id="other-examples" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.33.51 PM.png" class="r-stretch"></section>
-<section id="other-examples-1" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-01.png" class="r-stretch"></section>
-<section id="other-examples-2" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.15.55 AM.png" width="759" class="r-stretch"></section>
-<section id="other-examples-3" class="slide level2 center">
-<h2>Other examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.19.09 AM.png" width="777" class="r-stretch"></section></section>
-<section>
-<section id="interactive-amua-session" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-<section id="primary-results-progressive-disease" class="slide level2 center">
-<h2>Primary Results: Progressive Disease</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>ICER</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Status Quo</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>Treatment</td>
-<td>49,513</td>
-</tr>
-<tr class="odd">
-<td>Prevention</td>
-<td>139,630</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Treatment is cost-effective at WTP=$50,000/QALY—but <em>barely.</em></p></li>
-<li><p>How sensitive is this result to the input parameter values used?</p></li>
-</ul>
-</section></section>
-<section>
-<section id="two-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Two-way sensitivity analysis</h1>
-
-</section>
-<section id="two-way-sensitivity-analysis-1" class="slide level2 center">
-<h2>Two-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">A way to map the interaction effects between two parameters in a decision analysis model</li>
-<li class="fragment">Varies 2 parameters at a time</li>
-<li class="fragment">Explores the robustness of results in more depth</li>
-</ul>
-</section></section>
-<section>
-<section id="examples-from-publications-1" class="title-slide slide level1 center">
-<h1>Examples from publications</h1>
-
-</section>
-<section id="hiv-prevention" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 9.54.01 AM.png" width="517" class="r-stretch"></section>
-<section id="hiv-prevention-1" class="slide level2 center">
-<h2>HIV prevention</h2>
-<ul>
-<li class="fragment"><p>Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p></li>
-<li class="fragment"><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
-<li class="fragment"><p>And we also know that PrEP has traditionally been really <strong>costly</strong></p></li>
-</ul>
-</section>
-<section id="hiv-prevention-2" class="slide level2 center">
-<h2>HIV prevention</h2>
-
-<img data-src="images/Screen Shot 2022-09-26 at 10.22.19 PM.png" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.25.53 PM.png" width="543" class="r-stretch"></section>
-<section id="financial-incentives-for-acute-stroke-care-1" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<ul>
-<li class="fragment"><p>Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p></li>
-<li class="fragment"><p>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong></p></li>
-</ul>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-2" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-<blockquote>
-<p>When administered quickly after stroke onset (within three hours, as approved by the FDA), tPA helps to restore blood flow to brain regions affected by a stroke, thereby limiting the risk of damage and functional impairment</p>
-</blockquote>
-</section>
-<section id="financial-incentives-for-acute-stroke-care-3" class="slide level2 center">
-<h2>Financial incentives for acute stroke care</h2>
-
-<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section></section>
-<section id="interactive-amua-session-1" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-
-<section>
-<section id="limitations-of-deterministic-sensitivity-analyses" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Limitations of deterministic sensitivity analyses</h1>
-
-</section>
-<section id="caution-limitations" class="slide level2 center">
-<h2>Caution: Limitations!</h2>
-<ul>
-<li>Limited by the subjectivity of the choice of parameters to analyze</li>
-<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value</li>
-</ul>
-</section></section>
-<section>
-<section id="scenario-analysis" class="title-slide slide level1 center">
-<h1>Scenario analysis</h1>
-
-</section>
-<section id="motivation" class="slide level2 center">
+<section id="motivation" class="slide level2 section-slide center">
 <h2>Motivation</h2>
+<div class="section-number">
+<p>02</p>
+</div>
+</section>
+<section id="the-past-two-decades" class="slide level2 center">
+<h2>The Past Two Decades …</h2>
+<div class="icon-bullets">
 <ul>
-<li>Suppose we wanted to model the impact of these interventions under a “lower cost” scenario.</li>
-<li>One option is to</li>
-<li>It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.</li>
+<li class="fragment">Cured Hepatitis C</li>
+<li class="fragment">Significantly reduced incidence of HIV</li>
+<li class="fragment">Potential cure for relapsed/refractory leukemia &amp; lymphoma</li>
+<li class="fragment">Perfected vaccines (e.g.&nbsp;HPV vaccine) to prevent diseases such as cervical &amp; other cancers</li>
+<li class="fragment">Strides in preventing cardiovascular disease</li>
 </ul>
+</div>
 </section>
-<section id="scenario-analysis-1" class="slide level2 center">
-<h2>Scenario analysis</h2>
+<section id="despite-these-advances" class="slide level2 center">
+<h2>Despite these advances …</h2>
+</section>
+<section id="section-1" class="slide level2 big-number-slide center">
+<h2></h2>
+<div class="big-number">
+<p>74%</p>
+</div>
+<div class="big-number-label">
+<p>of deaths globally are from non-communicable diseases.</p>
+</div>
+<div class="big-number-context">
+<p>86% of those deaths are in low- and middle-income countries (LMICs) Burden of NCDs like cancer, cardiovascular disease, and diabetes is growing.</p>
+</div>
+<p>Source: <a href="https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases">WHO</a></p>
+</section>
+<section id="section-2" class="slide level2 center">
+<h2></h2>
+<div class="arrow-bullets">
 <ul>
-<li>Focuses more on model <strong>assumptions</strong> rather than parameter uncertainty</li>
-<li>Could include separate analysis on:</li>
+<li><p>Governments cannot afford all the healthcare from which people could possibly benefit</p></li>
+<li><p>Either implicitly or explicitly, we make choices about which programs to fund, which populations to screen, and which expensive new drugs to provide to which patients</p></li>
 </ul>
-<blockquote>
-<p>Subgroups/sub-populations, including different age cohorts &amp; risk levels</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Different perspectives (societal; modified societal; etc)</p>
-</blockquote>
+</div>
+<div class="highlight-box">
+<div class="box-title">
+<p><strong>Decision Analysis can help us ensure that we prioritize the highest value care possible at an efficient price point</strong></p>
+</div>
+</div>
 </section>
-<section id="scenario-analysis-2" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<blockquote>
-<p>Hypothetical scenarios (“optimistic” and “conservative” scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Time horizons</p>
-</blockquote>
+<section id="section-3" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Decision Analysis</p>
+</div>
+<div class="definition">
+<p>a methodology that is uniquely beneficial when there are <strong><em>meaningful tradeoffs</em></strong> between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.</p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Example:</p>
+</div>
+<div class="example-text">
+<p>The introduction of a new drug provides hope at more survival and better quality of life. However, based on the high cost it is unknown if the new drug is worth implementing over the current drug.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="examples" class="slide level2 center">
-<h2>Examples</h2>
+<section id="section-4" class="slide level2 center">
+<h2></h2>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM-02.png" class="r-stretch"></section>
-<section id="examples-1" class="slide level2 center">
-<h2>Examples</h2>
+<img data-src="images/lec1/new_decision-analysis-overview.png" class="r-stretch"></section>
+<section id="section-5" class="slide level2 center">
+<h2></h2>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.20 AM.png" class="r-stretch"></section>
-<section id="examples-2" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.25.50 AM.png" class="r-stretch"></section>
-<section id="examples-3" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.26.44 AM.png" class="r-stretch"></section>
-<section id="examples-4" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 8.54.33 AM.png" class="r-stretch"></section>
-<section id="examples-5" class="slide level2 center">
-<h2>Examples</h2>
-
-<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section></section>
-<section>
-<section id="threshold-analysis" class="title-slide slide level1 center">
-<h1>Threshold analysis</h1>
-
+<img data-src="images/lec1/new_decision-analysis-overview_blank.png" class="r-stretch"></section>
+<section id="value" class="slide level2 center">
+<h2>Value</h2>
+<div class="highlight-box">
+<p>Economists have long defined value as “outcomes relative to costs</p>
+</div>
+<p>If we only consider benefits when we define value, it’s no different than efficacy or effectiveness research.</p>
+<h3 id="but-we-do-not-want-to-just-consider-costs-without-benefits"><span style="text-align: center; display: block;">But, we do NOT want to just consider costs without benefits!</span></h3>
 </section>
-<section id="threshold-analysis-1" class="slide level2 center">
-<h2>Threshold analysis</h2>
+<section id="examples-of-decision-analysis" class="slide level2 section-slide center">
+<h2>Examples of Decision Analysis</h2>
+<div class="section-number">
+<p>03</p>
+</div>
+</section>
+<section id="ex-1.-hiv" class="slide level2 center">
+<h2>Ex 1. HIV</h2>
+<div class="highlight-box primary">
+<p>You have been appointed as Director of a funding allocation committee responsible for prevention &amp; treatment initiatives for HIV.</p>
+</div>
+<ol type="1">
+<li class="fragment"><p>How will the committee decide on the proportion of funds for prevention efforts versus treatment?</p></li>
+<li class="fragment"><p>Should any of the funds be used for research?</p></li>
+<li class="fragment"><p>How do you respond to a member who argues that the funds are better spent on childhood vaccinations?</p></li>
+</ol>
+</section>
+<section id="ex-2.-birth-defects" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ex 2. Birth Defects</h2>
+<p>A hypothetical birth defect…</p>
+<div class="stats-grid">
+<div class="stat-box">
+<div class="stat-value">
+<p>1 in 1,000</p>
+</div>
+<div class="stat-label">
+<p>children</p>
+</div>
+<div class="stat-description">
+<p>are born with it</p>
+</div>
+</div>
+<div class="stat-box">
+<div class="stat-value">
+<p>50%</p>
+</div>
+<div class="stat-label">
+<p>fatality rate</p>
+</div>
+<div class="stat-description">
+<p>unless treated</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ex-2.-birth-defects-1" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ex 2. Birth Defects</h2>
+<div class="highlight-box thin">
+<p><strong><em>Should we test for this hypothetical birth defect?</em></strong></p>
+</div>
+<div class="concept-grid">
+<div class="concept-box fragment" data-fragment-index="1">
+<p>Diagnostic test: Perfectly accurate</p>
+</div>
+<div class="concept-box fragment" data-fragment-index="2">
+<p>All newborns in whom the defect is identified can be successfully cured</p>
+</div>
+<div class="concept-box accent fragment" data-fragment-index="3">
+<p>The test itself can be lethal <strong>4 in every 10,000</strong> infants tested will die as a direct and observable result of the testing procedure</p>
+</div>
+</div>
+</section>
+<section id="ex-2.-birth-defects-2" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ex 2. Birth Defects</h2>
+<div class="highlight-box secondary thin">
+<p><strong>Objective</strong>: Minimize total expected deaths</p>
+</div>
+<p>Consider a population of <strong>100,000 newborns</strong></p>
+<div class="comparison-table">
+<div class="comparison-column">
+<div class="column-header">
+<p>Testing</p>
+</div>
+<div class="column-content">
+<p>Produces: (0.0004 x 100,000) = <strong>40</strong> expected deaths</p>
+<p><span class="fragment" style="color: green;">✓ <strong>Fewer deaths</strong></span></p>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>No testing</p>
+</div>
+<div class="column-content">
+<p>Produces: (0.001 x 0.5 x 100,000) = <strong>50</strong> expected deaths</p>
+</div>
+</div>
 <ul>
-<li>Answers the question: What the input parameter need be to meet the country thresholds of:
-<ul>
-<li>$50,000/QALY gained</li>
-<li>$100,000/QALY gained</li>
-<li>$150,000/QALY gained</li>
-<li>$200,000/QALY gained</li>
-</ul></li>
+<li><span class="fragment" style="color: darkred;"><strong>Anyone got a problem with this??</strong></span></li>
 </ul>
+</div>
 </section>
-<section id="examples-6" class="slide level2 center">
-<h2>Examples</h2>
+<section id="different-lives-are-lost" class="slide level2 center">
+<h2><strong>Different lives are lost</strong></h2>
+<div class="comparison-table">
+<div class="comparison-column fragment" data-fragment-index="1">
+<div class="column-header">
+<p>Testing</p>
+</div>
+<div class="column-content">
+<p>Virtually all 40 deaths occur in infants born <strong>without</strong> the fatal condition</p>
+</div>
+</div>
+<div class="comparison-column fragment" data-fragment-index="2">
+<div class="column-header">
+<p>No testing</p>
+</div>
+<div class="column-content">
+<p>All 50 expected deaths occur from “natural causes” (i.e.&nbsp;unpreventable birth defect)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="different-lives-are-lost-1" class="slide level2 center">
+<h2><strong>Different lives are lost</strong></h2>
+<div class="arrow-bullets">
+<ul>
+<li class="fragment">“Innocent deaths” inflicted on children who had <strong>“nothing to gain”</strong> from testing program</li>
+<li class="fragment">We may treat one child’s death as more tolerable than some other’s – even when we have no way, before the fact, of distinguishing one infant from the other.</li>
+</ul>
+</div>
+</section>
+<section id="ex-3.-substance-use-treatment-in-pregnancy" class="slide level2 center">
+<h2>Ex 3. Substance use treatment in pregnancy</h2>
+<div style="font-size: 0.8em">
+<p><strong>Another example of “Competing interests”</strong></p>
+</div>
+<div style="font-size: 0.6em">
+<p>[Leech AA, 2024]</p>
+</div>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.13.02 AM.png" class="r-stretch"></section>
-<section id="examples-7" class="slide level2 center">
-<h2>Examples</h2>
+<img data-src="images/lec1/ex4-oud-tradeoffs.png" width="395" class="r-stretch"></section>
+<section id="ex-3.-opioidsubstance-use-in-pregnancy" class="slide level2 center">
+<h2>Ex 3. Opioid/substance use in pregnancy</h2>
+<div style="font-size: 0.6em">
+<p>[Leech AA, 2024]</p>
+</div>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section></section>
-<section id="thank-you" class="title-slide slide level1 center">
-<h1>Thank you!</h1>
+<img data-src="images/lec1/oud-schematic-2.png" width="420" class="r-stretch"></section>
+<section id="ex-3.-opioidsubstance-use-in-pregnancy-1" class="slide level2 center">
+<h2>Ex 3. Opioid/substance use in pregnancy</h2>
+<div style="font-size: 0.6em">
+<p>[Leech AA, 2024]</p>
+</div>
+
+<img data-src="images/lec1/oud-methods.png" width="420" class="r-stretch"></section>
+<section id="ex-3.-opioidsubstance-use-in-pregnancy-2" class="slide level2 center">
+<h2>Ex 3. Opioid/substance use in pregnancy</h2>
+<div style="font-size: 0.6em">
+<p>[Leech AA, 2024]</p>
+</div>
+
+<img data-src="images/lec1/ceac.png" width="420" class="r-stretch"></section>
+<section id="ex-3.-opioidsubstance-use-in-pregnancy-3" class="slide level2 center">
+<h2>Ex 3. Opioid/substance use in pregnancy</h2>
+<div class="highlight-box thin">
+<p>The clear winner is buprenorphine!!</p>
+</div>
+<p>Yes, BUT…</p>
+<div class="arrow-bullets">
+<ul>
+<li class="fragment">We know that clinically, patient choice is really important for retention outcomes</li>
+<li class="fragment">We can also see that our final conclusions are driven by the infant outcomes (methadone actually has better retention outcomes)</li>
+<li class="fragment">We did not simulate the birthing parent over their lifetime</li>
+</ul>
+</div>
+</section>
+<section id="section-6" class="slide level2 quote-slide center">
+<h2></h2>
+<div class="quote-text">
+<p>The appropriate balance of competing interests between the pregnant individual and the infant is an ethical exercise that is beyond the scope of simulation modeling.</p>
+</div>
+</section>
+<section id="ex-3.-opioidsubstance-use-in-pregnancy-4" class="slide level2 center">
+<h2>Ex 3. Opioid/substance use in pregnancy</h2>
+<p>Even if buprenorphine is “dominating” in the parlance of decision science and health economics. Requiring this treatment creates poor policy with…</p>
+<div class="concept-grid">
+<div class="concept-box">
+<p>Reduced Retention</p>
+</div>
+<div class="concept-box">
+<p>Worse Outcomes</p>
+</div>
+<div class="concept-box">
+<p>Higher Cost</p>
+</div>
+</div>
+<p>…than allowing individuals to <span class="accent-text"><strong>CHOOSE</strong></span> their preferred option.</p>
+</section>
+<section id="estimating-probabilities-is-fundamental-to-decision-making" class="slide level2 center" data-background="#43464B">
+<h2>Estimating probabilities is fundamental to decision making</h2>
+<div class="icon-bullets-triangle">
+<ul>
+<li class="fragment">Cannot readily obtain needed probabilities</li>
+<li class="fragment">Varying time periods / lengths</li>
+<li class="fragment">Methods to estimate probabilities</li>
+</ul>
+</div>
+<!-- TK This needs to be a full page  -->
+</section>
+<section id="commonality-of-cases" class="slide level2 center">
+<h2>Commonality of cases</h2>
+<div class="icon-bullets-triangle">
+<ul>
+<li class="fragment">Unavoidable tradeoffs</li>
+<li class="fragment">Different perspectives may lead to different conclusions</li>
+<li class="fragment">Multiple competing objectives</li>
+<li class="fragment">Complexity</li>
+<li class="fragment">Uncertainty</li>
+</ul>
+</div>
+</section>
+<section id="section-7" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Decision Analysis</p>
+</div>
+<div class="key-points">
+<ul>
+<li class="fragment">Aims to inform choice under uncertainty using an explicit, quantitative approach</li>
+<li class="fragment">Aims to <span class="accent-text">identify, measure, &amp; value the <strong>consequences of decisions</strong> under uncertainty</span> when a decision needs to be made, most appropriately over time.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="workshop-objectives" class="slide level2 section-slide center">
+<h2>Workshop objectives</h2>
+<div class="section-number">
+<p>04</p>
+</div>
+</section>
+<section id="workshop-design" class="slide level2 center">
+<h2>Workshop Design</h2>
+<ol type="1">
+<li>We’re <em>flexible</em> – if there is a topic that is unclear to you, or that you would like expanded upon, <strong>please let us know</strong>!</li>
+</ol>
+<p><br> 2. Mixed content</p>
+<div class="arrow-bullets">
+<ul>
+<li><p>Lectures</p></li>
+<li><p>Small group case studies</p></li>
+<li><p>Large group case studies and “hands-on” Amua exercises</p></li>
+<li><p>Time for Capstone work and guidance</p></li>
+</ul>
+</div>
+</section>
+<section id="workshop-content" class="slide level2 center">
+<h2>Workshop Content</h2>
+<div class="comparison-table">
+<div class="comparison-column">
+<div class="column-header">
+<p>Day 1</p>
+</div>
+<div class="column-content">
+<p>Basics of decision analysis</p>
+<ul>
+<li><p>Decision trees</p></li>
+<li><p>Introduction to Amua</p></li>
+<li><p>Introduction to Capstone</p></li>
+</ul>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Days 2-3</p>
+</div>
+<div class="column-content">
+<p>Basics of Cost-Effectiveness Analysis</p>
+<ul>
+<li><p>Valuing cost and health outcomes</p></li>
+<li><p>Incremental cost-effectiveness analysis</p></li>
+<li><p>Introduction to Markov Modeling</p></li>
+</ul>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Day 4-5</p>
+</div>
+<div class="column-content">
+<p>Advanced Topic Preview</p>
+<ul>
+<li><p>Risk Matrix</p></li>
+<li><p>Progressive Disease</p></li>
+<li><p>Sensitivity Analysis</p></li>
+<li><p>Common CEA Errors</p></li>
+<li><p>DALYs in Amua</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="questions" class="slide level2 questions-slide center">
+<h2>Questions?</h2>
+<div class="next-info">
+<p>Next: Decision Trees</p>
+</div>
 
 
 </section>
@@ -688,7 +769,12 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
         height: 900,
 
         // Factor of the display size that should remain empty around the content
-        margin: 5.0e-2,
+        margin: 0.1,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
