@@ -3492,39 +3492,46 @@
     "text": "Footnotes\n\n\nSource: “Antanas Mockus: The Prohibition of Fireworks in Bogotá Sequel,” Harvard Kennedy School Case Study. Available fromhttps://case.hks.harvard.edu/antanas-mockus-the-prohibition-of-fireworks-in-bogota-sequel/↩︎"
   },
   {
-    "objectID": "case-studies/cs-decision-tree-additional.html",
-    "href": "case-studies/cs-decision-tree-additional.html",
-    "title": "CS_DecisionTrees_BonusContent",
+    "objectID": "case-studies/cs-markov-additional.html",
+    "href": "case-studies/cs-markov-additional.html",
+    "title": "CS-Markov_BonusContent",
     "section": "",
     "text": "Below are some common “tricky” situations that were not covered in this Case Study but may arise in your capstone."
   },
   {
-    "objectID": "case-studies/cs-decision-tree-additional.html#what-if-my-model-has-mismatching-timelines-for-strategies",
-    "href": "case-studies/cs-decision-tree-additional.html#what-if-my-model-has-mismatching-timelines-for-strategies",
-    "title": "CS_DecisionTrees_BonusContent",
-    "section": "1. What if my model has mismatching timelines for strategies?",
-    "text": "1. What if my model has mismatching timelines for strategies?\nSometimes there will be a strategy that has a delayed component. It is important that all branches of the tree are the same time length. Therefore, this time delay must be accounted for.\nFor example, with the following strategies you have mismatched time lines.\n\n\n\n\nYear 1\nYear 2\n\n\n\n\nNo Vaccination\n❌\n❌\n\n\nOne Dose Vaccination\n✅\n❌\n\n\nTwo Dose Vaccination\n✅\n✅\n\n\n\nTo account for this, additional branches are needed on the decision tree.\n\nCreate your base decision tree. The one below has been simplified for ease of demonstration.\n\nLook at the timeline of the tree. In our example, you can see that the end points of the tree are not the same.\n\n\n\nUpdate the timeframes to match\n\nUse a longer time frame. By using a 5 year time frame in our example, this captures all the events that can happen within those 5 years.\n\nAdd branches to have a matching time frame. Add branches where nothing happens to make the model end at the same point. This is not a great approach if there is common events in the other branches.\n\n\n\n\n\n\n\n\n\nTipWe do this because…"
+    "objectID": "case-studies/cs-markov-additional.html#what-if-my-model-isnt-an-annual-cycle",
+    "href": "case-studies/cs-markov-additional.html#what-if-my-model-isnt-an-annual-cycle",
+    "title": "CS-Markov_BonusContent",
+    "section": "1. What if my model isn’t an annual cycle?",
+    "text": "1. What if my model isn’t an annual cycle?\nThis is not an uncommon problem. Many conditions are not accurately captured in an annual cycle. Cycles can be adjusted to be longer or shorter. Just make sure that you make all the necessary updates to the model to capture the time line.\n\nEnsure Health States are accurate to the new cycle length\nUpdate probabilities to be for the new cycle length\nMax cycles & termination updated\nAdjust outcomes to ensure they are accurate to the cycle length\n\nCosts\nCounts\nUtility\n\nUpdate discounts to match the cycle length"
   },
   {
-    "objectID": "case-studies/cs-decision-tree-additional.html#what-if-my-model-needs-to-be-over-a-long-period-of-time-with-repetitive-events",
-    "href": "case-studies/cs-decision-tree-additional.html#what-if-my-model-needs-to-be-over-a-long-period-of-time-with-repetitive-events",
-    "title": "CS_DecisionTrees_BonusContent",
-    "section": "2. What if my model needs to be over a long period of time with repetitive events?",
-    "text": "2. What if my model needs to be over a long period of time with repetitive events?\nGreat question, you will need a Markov model. Do your best to work on a decision tree now for one portion of the model and then when we get further in the workshop we will learn Markov Models.\nSomethings you might be able to make in the tree include:\n\nThe first year\nOne time screening\nOne time Vaccination\nThe events that happen while sick"
+    "objectID": "case-studies/cs-markov-additional.html#when-do-i-not-do-a-decision-tree-into-a-markov",
+    "href": "case-studies/cs-markov-additional.html#when-do-i-not-do-a-decision-tree-into-a-markov",
+    "title": "CS-Markov_BonusContent",
+    "section": "2. When do I not do a decision tree into a Markov?",
+    "text": "2. When do I not do a decision tree into a Markov?\nIn the case study, the decision tree flows into a markov model. This allows us to capture the one time screening. However, there are times when the only branches before the Markov Chain are the strategy/decision names.\nTimes when to have a decision tree flow before the Markov Chain:\n\nOne time upfront event (Screening, Strategy, Treatment Etc.)\n\nTimes when the Markov Chain is the beginning:\n\nNothing up front"
   },
   {
-    "objectID": "case-studies/cs-decision-tree-additional.html#what-are-other-common-outcomes-to-measure-besides-life-years",
-    "href": "case-studies/cs-decision-tree-additional.html#what-are-other-common-outcomes-to-measure-besides-life-years",
-    "title": "CS_DecisionTrees_BonusContent",
-    "section": "3. What are other common outcomes to measure besides life years?",
-    "text": "3. What are other common outcomes to measure besides life years?\nThis varies greatly based on your research question. Think about why you chose your strategies. What in particular are you trying to improve for the patient? or what does the health department care about improving? That is what you should count.\nExamples:\n\nDeaths adverted\ncases of illness adverted / injuries adverted\nhealthy births/pregnancies\ncases of progression adverted\ncomplications adverted"
-  },
-  {
-    "objectID": "case-studies/cs_prob-decision.html",
-    "href": "case-studies/cs_prob-decision.html",
-    "title": "Case Study: Probabilities & Decision Trees",
+    "objectID": "case-studies/CaseStudy_Index.html",
+    "href": "case-studies/CaseStudy_Index.html",
+    "title": "Case Study Home Base",
     "section": "",
-    "text": "Important\n\n\n\nPlease note that you can download PDF and Microsoft Word versions of this case study using the links on the right.\n\n\n\nCase 1\nIn a hypothetical community, 60% of all people consume at least 6 alcoholic beverages per week and 50% are overweight. The percentage of people who are both overweight and consume this much alcohol is 40%. Construct a 2x2 table to answer (a)-(c) below. For part (d), construct a decision tree.\n\nWhat percentage of people consume at least 6 alcoholic beverages per week, are overweight, or fall into both categories?\n\n\n\n\n\n\n\n\n\n\n\n\nYou sample at random a person from the community and find that they consume at least 6 alcoholic beverages per week. What is the probability that they are overweight?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the probability that someone from this community consumes at least 6 alcoholic beverages per week if they are overweight?\n\n\n\n\n\n\n\n\n\nDraw a decision tree to represent this problem\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 2\nA new screening procedure can detect 80% of women diagnosed with breast cancer but will falsely identify 2% without breast cancer. The prevalence of breast cancer in the population is 1.6 in 100\n\nWhat is the probability that a woman does not have breast cancer if the test is negative?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the probability that a woman has breast cancer if the test is positive?"
+    "text": "This just exists internally as a way to see all the case study frameworks\nIntro To Case Study\nIntro To AMUA\nDecision Trees\nCost Effectiveness Analysis\nMarkov Model\nProgressive Markov Model ** This currently doesn’t exist **"
+  },
+  {
+    "objectID": "case-studies/CommonErrors.html",
+    "href": "case-studies/CommonErrors.html",
+    "title": "CommonErrors",
+    "section": "",
+    "text": "NoneIntroduction and Learning Objectives \n\n\n\nBy the end of this session, participants will be able to:\n\nIdentify errors in their model.\nHave basic intuition for finding errors within a model.\nHave basic intuition for finding errors within ICER tables."
+  },
+  {
+    "objectID": "case-studies/CommonErrors.html#case-background",
+    "href": "case-studies/CommonErrors.html#case-background",
+    "title": "CommonErrors",
+    "section": "Case Background",
+    "text": "Case Background\nSeveral years of teaching workshops has led to a new illness being observed among health economists. As revealed by new research by the pioneering decision scientist, Dr. Grooves, this new disease is a consequence of the enduring sadness that results from the workshop being over. This condition has come to be called the Brief Yearning Episode (commonly abbreviated to BYE). Our team has exclusive access to data on the natural history of BYE.  \nThese data were gathered from an observational study that followed a cohort of 30-year old students for 3 years. At the start of the study, 60% have Mild BYE and 40% were healthy.  \nBYE is associated with reduced quality of life. The utility weight for Mild BYE is 0.88 and the utility weight for Severe BYE in 0.65, whereas individuals without BYE have a utility of 1.0.  \nEveryone represented in the model faces age-specific background mortality, which can be based on the provided life table. Individuals with BYE have a risk of dying from sadness. Mild cases have a 1.4% annual probability of dying from sadness and severe cases have a 4.21% annual probability of dying.   The data also suggested that healthy individuals that survive background mortality have a 40.71% chance of developing BYE within a year of the workshop. Among individuals newly developing BYE, 80% have Mild BYE and the rest have Severe BYE. \nIt has been estimated that 30% of the individuals with Mild progressed to Severe over a 3-year period. Individuals with Mild BYE can fully recover and return to the Well state, with an annual probability of 7%, conditional on surviving to the end of the year. \nPatients with Severe BYE have a 10.5% annual probability of returning to the Mild state. Individuals with Severe BYE cannot return directly to the Well state. \nIndividuals who recover from previous episodes of BYE face the same risk of developing the condition again as those who have not yet had BYE. \nTo treat BYE, the only solution is a beach holiday. For mild cases, a $3,000 trip per year is required and for severe cases, a $9,000 trip is required. It is recommended that patients moving from mild to severe, have a one-time treatment at progression of upgrading to a private jet for $35,000. \nA similar disease CYA that is seen in economic workshops but has slightly more expensive treatment and slightly worse outcomes has been found to cost about $100,00 per person and result in 10 QALYs. \nDr. Grooves develop a 5-state Markov model: (1) Well, (2) Mild, (3) Severe, (4) Disease Death and (4) [All Cause] Death based on the data provided above. He said he used a 3% discounting rate for both costs and utility and half-cycle correction on the model. All costs were converted into the same year. He is hoping to find the life-time impacts of BYE. \nHe also provided you some results from other papers that he think you could use to help understand your results.\nFigure 3: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in A Nearby Region\n\n\n\n\n\n\n\n\n\n\n\nStrategy\nCost (Dis)\nUtility (Dis)\nInc. Cost\nInc. Utility\nICER\n\n\nNo Treatment\n$78,620\n11.56\n-\n-\n-\n\n\nScreen then Treat\n$103,245\n10.18\n$24,625\n-1.38\n-$17,844.20\n\n\nTreatment\n$107,989\n13.45\n$4,744\n3.27\n$1,450.76\n\n\n\nFAKE SOURCE:\nFigure 8: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in Another Region | | | | | | | |—-|—-|—-|—-|—-|—-| | Strategy | Cost (Dis) | Utility (Dis) | Inc. Cost | Inc. Utility | ICER | | No Treatment | $86,340 | 12.35 | - | - | - | | Screen then Treat | $107,650 | 13.79 | $21,310 | 1.44 | $14,799 | | Treatment | $109,145 | 14.08 | $22,805 | 1.73 | $13,182 | FAKE SOURCE:\nOur team has been very busy getting this workshop ready so we are asking that you please review the model that he started for errors.  Thank you!\n\n\n\n\n\n\nNoneWhy are we doing this?\n\n\n\nThe large amount of complexity to models can make it easy to have mistakes. This exercise is built to help you build intuition about how to identify errors within a model and also highlight commonly seen errors in models and results.\n\n\n\n\n\n\n\n\nNoneYour Task\n\n\n\nDetermine which errors are in the model and decide if the sources he provided you are helpful.\n\n\nADD FILE"
   },
   {
     "objectID": "case-studies/cs_decision-tree-amua.html",
@@ -3948,35 +3955,49 @@
     "href": "case-studies/CaseStudy_MarkovSimple.html",
     "title": "Case Study - Markov Simple",
     "section": "",
-    "text": "NoneIntroduction and Learning Objectives \n\n\n\nBy the end of this session, participants will be able to:\n\n\n\n\n\nThe decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.\nIn our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.\n\n\n\n\n\n\nNoneWhy are we doing this?\n\n\n\nThe decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.\n\n\nTo help visualize how this will work, here is a bubble diagram\n\nAs shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.\nDECIDE WHAT WE WANT TO PROVIDE THEM\n\nUploading a Table\n\n\nStarting Probabilities\n\n\nAdjusting to match strategy\n\n\n\n\n\n\nTipCheck your answer\n\n\n\nWhat is the ICER of the strategy you would choose?\nEnter your result:  Check"
+    "text": "NoneIntroduction and Learning Objectives \n\n\n\nBy the end of this session, participants will be able to:\n\n\n\n\n\nThe decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.\nIn our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.\n\n\n\n\n\n\nNoneWhy are we doing this?\n\n\n\nThe decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.\n\n\nTo help visualize how this will work, here is a bubble diagram\nAs shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.\nDECIDE WHAT WE WANT TO PROVIDE THEM\n\nUse Bubble Diagram Tool\n\n\n\nStarting Probabilities\n\n\nAdjusting to match strategy\n\n\n\n\n\n\nTipCheck your answer\n\n\n\nWhat is the ICER of the strategy you would choose?\nEnter your result:  Check"
   },
   {
-    "objectID": "case-studies/CaseStudy_Index.html",
-    "href": "case-studies/CaseStudy_Index.html",
-    "title": "Case Study Home Base",
+    "objectID": "case-studies/cs_prob-decision.html",
+    "href": "case-studies/cs_prob-decision.html",
+    "title": "Case Study: Probabilities & Decision Trees",
     "section": "",
-    "text": "This just exists internally as a way to see all the case study frameworks\nIntro To Case Study\nIntro To AMUA\nDecision Trees\nCost Effectiveness Analysis\nMarkov Model\nProgressive Markov Model ** This currently doesn’t exist **"
+    "text": "Important\n\n\n\nPlease note that you can download PDF and Microsoft Word versions of this case study using the links on the right.\n\n\n\nCase 1\nIn a hypothetical community, 60% of all people consume at least 6 alcoholic beverages per week and 50% are overweight. The percentage of people who are both overweight and consume this much alcohol is 40%. Construct a 2x2 table to answer (a)-(c) below. For part (d), construct a decision tree.\n\nWhat percentage of people consume at least 6 alcoholic beverages per week, are overweight, or fall into both categories?\n\n\n\n\n\n\n\n\n\n\n\n\nYou sample at random a person from the community and find that they consume at least 6 alcoholic beverages per week. What is the probability that they are overweight?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the probability that someone from this community consumes at least 6 alcoholic beverages per week if they are overweight?\n\n\n\n\n\n\n\n\n\nDraw a decision tree to represent this problem\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 2\nA new screening procedure can detect 80% of women diagnosed with breast cancer but will falsely identify 2% without breast cancer. The prevalence of breast cancer in the population is 1.6 in 100\n\nWhat is the probability that a woman does not have breast cancer if the test is negative?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the probability that a woman has breast cancer if the test is positive?"
   },
   {
-    "objectID": "case-studies/cs-markov-additional.html",
-    "href": "case-studies/cs-markov-additional.html",
-    "title": "CS-Markov_BonusContent",
+    "objectID": "case-studies/cs-decision-tree-additional.html",
+    "href": "case-studies/cs-decision-tree-additional.html",
+    "title": "CS_DecisionTrees_BonusContent",
     "section": "",
     "text": "Below are some common “tricky” situations that were not covered in this Case Study but may arise in your capstone."
   },
   {
-    "objectID": "case-studies/cs-markov-additional.html#what-if-my-model-isnt-an-annual-cycle",
-    "href": "case-studies/cs-markov-additional.html#what-if-my-model-isnt-an-annual-cycle",
-    "title": "CS-Markov_BonusContent",
-    "section": "1. What if my model isn’t an annual cycle?",
-    "text": "1. What if my model isn’t an annual cycle?\nThis is not an uncommon problem. Many conditions are not accurately captured in an annual cycle. Cycles can be adjusted to be longer or shorter. Just make sure that you make all the necessary updates to the model to capture the time line.\n\nEnsure Health States are accurate to the new cycle length\nUpdate probabilities to be for the new cycle length\nMax cycles & termination updated\nAdjust outcomes to ensure they are accurate to the cycle length\n\nCosts\nCounts\nUtility\n\nUpdate discounts to match the cycle length"
+    "objectID": "case-studies/cs-decision-tree-additional.html#what-if-my-model-has-mismatching-timelines-for-strategies",
+    "href": "case-studies/cs-decision-tree-additional.html#what-if-my-model-has-mismatching-timelines-for-strategies",
+    "title": "CS_DecisionTrees_BonusContent",
+    "section": "1. What if my model has mismatching timelines for strategies?",
+    "text": "1. What if my model has mismatching timelines for strategies?\nSometimes there will be a strategy that has a delayed component. It is important that all branches of the tree are the same time length. Therefore, this time delay must be accounted for.\nFor example, with the following strategies you have mismatched time lines.\n\n\n\n\nYear 1\nYear 2\n\n\n\n\nNo Vaccination\n❌\n❌\n\n\nOne Dose Vaccination\n✅\n❌\n\n\nTwo Dose Vaccination\n✅\n✅\n\n\n\nTo account for this, additional branches are needed on the decision tree.\n\nCreate your base decision tree. The one below has been simplified for ease of demonstration.\n\nLook at the timeline of the tree. In our example, you can see that the end points of the tree are not the same.\n\n\n\nUpdate the timeframes to match\n\nUse a longer time frame. By using a 5 year time frame in our example, this captures all the events that can happen within those 5 years.\n\nAdd branches to have a matching time frame. Add branches where nothing happens to make the model end at the same point. This is not a great approach if there is common events in the other branches.\n\n\n\n\n\n\n\n\n\nTipWe do this because…"
   },
   {
-    "objectID": "case-studies/cs-markov-additional.html#when-do-i-not-do-a-decision-tree-into-a-markov",
-    "href": "case-studies/cs-markov-additional.html#when-do-i-not-do-a-decision-tree-into-a-markov",
-    "title": "CS-Markov_BonusContent",
-    "section": "2. When do I not do a decision tree into a Markov?",
-    "text": "2. When do I not do a decision tree into a Markov?\nIn the case study, the decision tree flows into a markov model. This allows us to capture the one time screening. However, there are times when the only branches before the Markov Chain are the strategy/decision names.\nTimes when to have a decision tree flow before the Markov Chain:\n\nOne time upfront event (Screening, Strategy, Treatment Etc.)\n\nTimes when the Markov Chain is the beginning:\n\nNothing up front"
+    "objectID": "case-studies/cs-decision-tree-additional.html#what-if-my-model-needs-to-be-over-a-long-period-of-time-with-repetitive-events",
+    "href": "case-studies/cs-decision-tree-additional.html#what-if-my-model-needs-to-be-over-a-long-period-of-time-with-repetitive-events",
+    "title": "CS_DecisionTrees_BonusContent",
+    "section": "2. What if my model needs to be over a long period of time with repetitive events?",
+    "text": "2. What if my model needs to be over a long period of time with repetitive events?\nGreat question, you will need a Markov model. Do your best to work on a decision tree now for one portion of the model and then when we get further in the workshop we will learn Markov Models.\nSomethings you might be able to make in the tree include:\n\nThe first year\nOne time screening\nOne time Vaccination\nThe events that happen while sick"
+  },
+  {
+    "objectID": "case-studies/cs-decision-tree-additional.html#what-are-other-common-outcomes-to-measure-besides-life-years",
+    "href": "case-studies/cs-decision-tree-additional.html#what-are-other-common-outcomes-to-measure-besides-life-years",
+    "title": "CS_DecisionTrees_BonusContent",
+    "section": "3. What are other common outcomes to measure besides life years?",
+    "text": "3. What are other common outcomes to measure besides life years?\nThis varies greatly based on your research question. Think about why you chose your strategies. What in particular are you trying to improve for the patient? or what does the health department care about improving? That is what you should count.\nExamples:\n\nDeaths adverted\ncases of illness adverted / injuries adverted\nhealthy births/pregnancies\ncases of progression adverted\ncomplications adverted"
+  },
+  {
+    "objectID": "case-studies/CaseStudy_MarkovProg.html",
+    "href": "case-studies/CaseStudy_MarkovProg.html",
+    "title": "CaseStudy_MarkovProg",
+    "section": "",
+    "text": "NoneIntroduction and Learning Objectives \n\n\n\nBy the end of this session, participants will be able to:\n\n\n\n\n\n\n\n\n\n\n\nNoneWhy are we doing this?\n\n\n\n\n\n\nTo help visualize how this will work, here is a bubble diagram\n\nUploading a Table\n\n\nAdditional Parameters\n\n\n\n\n\n\nTipCheck your answer\n\n\n\nWhat is the ICER of the strategy you would choose?\nEnter your result:  Check"
   },
   {
     "objectID": "case-studies/cs_markov_alive-dead.html",

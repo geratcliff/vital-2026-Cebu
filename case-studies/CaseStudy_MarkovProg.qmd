@@ -1,5 +1,5 @@
 ---
-title: "Case Study - Markov Simple"
+title: "CaseStudy_MarkovProg"
 ---
 
 ```{=html}
@@ -62,32 +62,19 @@ By the end of this session, participants will be able to:
 1.  
 :::
 
-The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.
-
-In our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.
-
 ::: {.callout .fill-box .why-box}
 ## Why are we doing this?
 
-The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.
 :::
 
 To help visualize how this will work, here is a bubble diagram
 
 
 
-As shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.
+# Uploading a Table
 
-DECIDE WHAT WE WANT TO PROVIDE THEM
+# Additional Parameters
 
-# Use Bubble Diagram Tool
-
-
-![](images/simpleMarkov/SimpleBubble.png)
-
-# Starting Probabilities
-
-# Adjusting to match strategy
 
 ::: {.callout-tip}
 ## Check your answer
@@ -95,19 +82,19 @@ DECIDE WHAT WE WANT TO PROVIDE THEM
 **What is the ICER of the strategy you would choose?**
 
 Enter your result:
-<input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5" />
-<button id="check3">Check</button>
-<span id="feedback3" style="margin-left:0.5rem;"></span>
+<input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5" />
+<button id="check4">Check</button>
+<span id="feedback4" style="margin-left:0.5rem;"></span>
 
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 43.5;
+  const CORRECT = 44.5;
   const TOL = 0.01; // accept +/- 0.01
 
-  const input = document.getElementById('answer3');
-  const button = document.getElementById('check3');
-  const feedback = document.getElementById('feedback3');
+  const input = document.getElementById('answer4');
+  const button = document.getElementById('check4');
+  const feedback = document.getElementById('feedback4');
 
   function setFeedback(msg, status) {
     feedback.textContent = msg;

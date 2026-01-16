@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Case Study - Markov Simple – Decision Analysis Workshop - Cebu</title>
+<title>CommonErrors – Decision Analysis Workshop - Cebu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Case Study - Markov Simple</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">CommonErrors</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -283,9 +283,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-bubble-diagram-tool" id="toc-use-bubble-diagram-tool" class="nav-link active" data-scroll-target="#use-bubble-diagram-tool">Use Bubble Diagram Tool</a></li>
-  <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a></li>
-  <li><a href="#adjusting-to-match-strategy" id="toc-adjusting-to-match-strategy" class="nav-link" data-scroll-target="#adjusting-to-match-strategy">Adjusting to match strategy</a></li>
+  <li><a href="#case-background" id="toc-case-background" class="nav-link active" data-scroll-target="#case-background">Case Background</a></li>
   </ul>
 </nav>
     </div>
@@ -294,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Case Study - Markov Simple</h1>
+<h1 class="title">CommonErrors</h1>
 </div>
 
 
@@ -355,8 +353,8 @@ ul.task-list li input[type="checkbox"] {
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
@@ -372,12 +370,73 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>By the end of this session, participants will be able to:</p>
 <ol type="1">
-<li></li>
+<li><p>Identify errors in their model.</p></li>
+<li><p>Have basic intuition for finding errors within a model.</p></li>
+<li><p>Have basic intuition for finding errors within ICER tables.</p></li>
 </ol>
 </div>
 </div>
-<p>The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.</p>
-<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.</p>
+<section id="case-background" class="level2">
+<h2 class="anchored" data-anchor-id="case-background">Case Background</h2>
+<p>Several years of teaching workshops has led to a new illness being observed among health economists. As revealed by new research by the pioneering decision scientist, Dr.&nbsp;Grooves, this new disease is a consequence of the enduring sadness that results from the workshop being over. This condition has come to be called the Brief Yearning Episode (commonly abbreviated to BYE). Our team has exclusive access to data on the natural history of BYE. <br> <br></p>
+<p>These data were gathered from an observational study that followed a cohort of 30-year old students for 3 years. At the start of the study, 60% have Mild BYE and 40% were healthy. <br> <br></p>
+<p>BYE is associated with reduced quality of life. The utility weight for Mild BYE is 0.88 and the utility weight for Severe BYE in 0.65, whereas individuals without BYE have a utility of 1.0. <br> <br></p>
+<p>Everyone represented in the model faces age-specific background mortality, which can be based on the provided life table. Individuals with BYE have a risk of dying from sadness. Mild cases have a 1.4% annual probability of dying from sadness and severe cases have a 4.21% annual probability of dying. <br> <br> The data also suggested that healthy individuals that survive background mortality have a 40.71% chance of developing BYE within a year of the workshop. Among individuals newly developing BYE, 80% have Mild BYE and the rest have Severe BYE. <br><br></p>
+<p>It has been estimated that 30% of the individuals with Mild progressed to Severe over a 3-year period. Individuals with Mild BYE can fully recover and return to the Well state, with an annual probability of 7%, conditional on surviving to the end of the year. <br><br></p>
+<p>Patients with Severe BYE have a 10.5% annual probability of returning to the Mild state. Individuals with Severe BYE cannot return directly to the Well state. <br><br></p>
+<p>Individuals who recover from previous episodes of BYE face the same risk of developing the condition again as those who have not yet had BYE. <br><br></p>
+<p>To treat BYE, the only solution is a beach holiday. For mild cases, a $3,000 trip per year is required and for severe cases, a $9,000 trip is required. It is recommended that patients moving from mild to severe, have a one-time treatment at progression of upgrading to a private jet for $35,000. <br><br></p>
+<p>A similar disease CYA that is seen in economic workshops but has slightly more expensive treatment and slightly worse outcomes has been found to cost about $100,00 per person and result in 10 QALYs. <br><br></p>
+<p>Dr.&nbsp;Grooves develop a 5-state Markov model: (1) Well, (2) Mild, (3) Severe, (4) Disease Death and (4) [All Cause] Death based on the data provided above. He said he used a 3% discounting rate for both costs and utility and half-cycle correction on the model. All costs were converted into the same year. He is hoping to find the life-time impacts of BYE. <br><br></p>
+<p>He also provided you some results from other papers that he think you could use to help understand your results.</p>
+<p><em>Figure 3: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in A Nearby Region</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Strategy</strong></td>
+<td><strong>Cost (Dis)</strong></td>
+<td><strong>Utility (Dis)</strong></td>
+<td><strong>Inc.&nbsp;Cost</strong></td>
+<td><strong>Inc.&nbsp;Utility</strong></td>
+<td><strong>ICER</strong></td>
+</tr>
+<tr class="even">
+<td>No Treatment</td>
+<td>$78,620</td>
+<td>11.56</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Screen then Treat</td>
+<td>$103,245</td>
+<td>10.18</td>
+<td>$24,625</td>
+<td>-1.38</td>
+<td>-$17,844.20</td>
+</tr>
+<tr class="even">
+<td>Treatment</td>
+<td>$107,989</td>
+<td>13.45</td>
+<td>$4,744</td>
+<td>3.27</td>
+<td>$1,450.76</td>
+</tr>
+</tbody>
+</table>
+<p>FAKE SOURCE:</p>
+<p>Figure 8: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in Another Region | | | | | | | |—-|—-|—-|—-|—-|—-| | <strong>Strategy</strong> | <strong>Cost (Dis)</strong> | <strong>Utility (Dis)</strong> | <strong>Inc.&nbsp;Cost</strong> | <strong>Inc.&nbsp;Utility</strong> | <strong>ICER</strong> | | No Treatment | $86,340 | 12.35 | - | - | - | | Screen then Treat | $107,650 | 13.79 | $21,310 | 1.44 | $14,799 | | Treatment | $109,145 | 14.08 | $22,805 | 1.73 | $13,182 | FAKE SOURCE:</p>
+<p><br><br>Our team has been very busy getting this workshop ready so we are asking that you please review the model that he started for errors. <br><br> Thank you!</p>
 <div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -388,66 +447,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.</p>
+<p>The large amount of complexity to models can make it easy to have mistakes. This exercise is built to help you build intuition about how to identify errors within a model and also highlight commonly seen errors in models and results.</p>
 </div>
 </div>
-<p>To help visualize how this will work, here is a bubble diagram</p>
-<p>As shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.</p>
-<p>DECIDE WHAT WE WANT TO PROVIDE THEM</p>
-<section id="use-bubble-diagram-tool" class="level1">
-<h1>Use Bubble Diagram Tool</h1>
-<p><img src="images/simpleMarkov/SimpleBubble.png" class="img-fluid"></p>
-</section>
-<section id="starting-probabilities" class="level1">
-<h1>Starting Probabilities</h1>
-</section>
-<section id="adjusting-to-match-strategy" class="level1">
-<h1>Adjusting to match strategy</h1>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="task-box why-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Check your answer
+<span class="screen-reader-only">None</span>Your Task
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>What is the ICER of the strategy you would choose?</strong></p>
-<p>Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="check3">Check</button> <span id="feedback3" style="margin-left:0.5rem;"></span></p>
-<script>
-(function() {
-  // Set the correct value and tolerance
-  const CORRECT = 43.5;
-  const TOL = 0.01; // accept +/- 0.01
-
-  const input = document.getElementById('answer3');
-  const button = document.getElementById('check3');
-  const feedback = document.getElementById('feedback3');
-
-  function setFeedback(msg, status) {
-    feedback.textContent = msg;
-    feedback.style.fontWeight = '600';
-    feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
-  }
-
-  button.addEventListener('click', function() {
-    const val = parseFloat(input.value);
-    if (isNaN(val)) {
-      setFeedback('Please enter a number.', 'warn');
-      return;
-    }
-    const ok = Math.abs(val - CORRECT) <= TOL;
-    if (ok) {
-      setFeedback('✅ Correct!', 'ok');
-    } else {
-      setFeedback('❌ Not quite. Try again.', 'bad');
-    }
-  });
-})();
-</script>
+<p>Determine which errors are in the model and decide if the sources he provided you are helpful.</p>
 </div>
 </div>
+<p>ADD FILE</p>
 
 
 </section>

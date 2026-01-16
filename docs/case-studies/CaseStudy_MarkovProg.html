@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Case Study - Markov Simple – Decision Analysis Workshop - Cebu</title>
+<title>CaseStudy_MarkovProg – Decision Analysis Workshop - Cebu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Case Study - Markov Simple</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">CaseStudy_MarkovProg</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -283,9 +283,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-bubble-diagram-tool" id="toc-use-bubble-diagram-tool" class="nav-link active" data-scroll-target="#use-bubble-diagram-tool">Use Bubble Diagram Tool</a></li>
-  <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a></li>
-  <li><a href="#adjusting-to-match-strategy" id="toc-adjusting-to-match-strategy" class="nav-link" data-scroll-target="#adjusting-to-match-strategy">Adjusting to match strategy</a></li>
+  <li><a href="#uploading-a-table" id="toc-uploading-a-table" class="nav-link active" data-scroll-target="#uploading-a-table">Uploading a Table</a></li>
+  <li><a href="#additional-parameters" id="toc-additional-parameters" class="nav-link" data-scroll-target="#additional-parameters">Additional Parameters</a></li>
   </ul>
 </nav>
     </div>
@@ -294,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Case Study - Markov Simple</h1>
+<h1 class="title">CaseStudy_MarkovProg</h1>
 </div>
 
 
@@ -376,9 +375,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </div>
 </div>
-<p>The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.</p>
-<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.</p>
-<div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
+<div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -388,21 +385,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.</p>
+
 </div>
 </div>
 <p>To help visualize how this will work, here is a bubble diagram</p>
-<p>As shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.</p>
-<p>DECIDE WHAT WE WANT TO PROVIDE THEM</p>
-<section id="use-bubble-diagram-tool" class="level1">
-<h1>Use Bubble Diagram Tool</h1>
-<p><img src="images/simpleMarkov/SimpleBubble.png" class="img-fluid"></p>
+<section id="uploading-a-table" class="level1">
+<h1>Uploading a Table</h1>
 </section>
-<section id="starting-probabilities" class="level1">
-<h1>Starting Probabilities</h1>
-</section>
-<section id="adjusting-to-match-strategy" class="level1">
-<h1>Adjusting to match strategy</h1>
+<section id="additional-parameters" class="level1">
+<h1>Additional Parameters</h1>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -414,16 +405,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>What is the ICER of the strategy you would choose?</strong></p>
-<p>Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="check3">Check</button> <span id="feedback3" style="margin-left:0.5rem;"></span></p>
+<p>Enter your result: <input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5"> <button id="check4">Check</button> <span id="feedback4" style="margin-left:0.5rem;"></span></p>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 43.5;
+  const CORRECT = 44.5;
   const TOL = 0.01; // accept +/- 0.01
 
-  const input = document.getElementById('answer3');
-  const button = document.getElementById('check3');
-  const feedback = document.getElementById('feedback3');
+  const input = document.getElementById('answer4');
+  const button = document.getElementById('check4');
+  const feedback = document.getElementById('feedback4');
 
   function setFeedback(msg, status) {
     feedback.textContent = msg;

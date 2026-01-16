@@ -1,0 +1,175 @@
+---
+title: "CommonErrors"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{=html}
+<style>
+/* Base: make Quarto callouts behave like full cards */
+.callout.fill-box {
+  /* Unified background & border for the whole card */
+  --box-bg: #eaf6ee;   /* default soft green if no class overrides */
+  --edge-color: #1f6f43; /* default darker edge/title color */
+  background: var(--box-bg);
+  border: 1px solid var(--edge-color);
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden; /* keeps rounded corners clean when title is darker */
+}
+
+/* Title bar: darker shade; full-width across top */
+.callout.fill-box .callout-title {
+  background: var(--edge-color);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--edge-color);
+}
+
+/* Body: same light color as the card, not a separate “stripe” */
+.callout.fill-box .callout-body {
+  background: transparent; /* let the parent set the background */
+  padding: 0.9rem 1rem;
+}
+
+
+/* --- Specific palettes --- */
+/* Green: "Why are we doing this?" */
+.callout.why-box {
+  --box-bg: #eaf6ee;    /* light green fill */
+  --edge-color: #1f6f43;/* dark green edge/title */
+}
+
+/* Purple: "Your Task" */
+.callout.task-box {
+  --box-bg: #f3ecfb;    /* light purple fill */
+  --edge-color: #7140a6;/* deep purple edge/title */
+}
+
+/* Yellow: "Objectives" */
+.callout.objectives {
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
+}
+
+</style>
+```
+
+::: {.callout .fill-box .objectives}
+# Introduction and Learning Objectives {{< fa regular clipboard >}}
+
+By the end of this session, participants will be able to:
+
+1.  Identify errors in their model.
+
+2.  Have basic intuition for finding errors within a model.
+
+3.  Have basic intuition for finding errors within ICER tables.
+:::
+
+## Case Background
+
+Several years of teaching workshops has led to a new illness being
+observed among health economists. As revealed by new research by the
+pioneering decision scientist, Dr. Grooves, this new disease is a
+consequence of the enduring sadness that results from the workshop being
+over. This condition has come to be called the Brief Yearning Episode
+(commonly abbreviated to BYE). Our team has exclusive access to data on
+the natural history of BYE. <br> <br>
+
+These data were gathered from an observational study that followed a
+cohort of 30-year old students for 3 years. At the start of the study,
+60% have Mild BYE and 40% were healthy. <br> <br>
+
+BYE is associated with reduced quality of life. The utility weight for
+Mild BYE is 0.88 and the utility weight for Severe BYE in 0.65, whereas
+individuals without BYE have a utility of 1.0. <br> <br>
+
+Everyone represented in the model faces age-specific background
+mortality, which can be based on the provided life table. Individuals
+with BYE have a risk of dying from sadness. Mild cases have a 1.4%
+annual probability of dying from sadness and severe cases have a 4.21%
+annual probability of dying. <br> <br> The data also suggested that
+healthy individuals that survive background mortality have a 40.71%
+chance of developing BYE within a year of the workshop. Among
+individuals newly developing BYE, 80% have Mild BYE and the rest have
+Severe BYE. <br><br>
+
+It has been estimated that 30% of the individuals with Mild progressed
+to Severe over a 3-year period. Individuals with Mild BYE can fully
+recover and return to the Well state, with an annual probability of 7%,
+conditional on surviving to the end of the year. <br><br>
+
+Patients with Severe BYE have a 10.5% annual probability of returning to
+the Mild state. Individuals with Severe BYE cannot return directly to
+the Well state. <br><br>
+
+Individuals who recover from previous episodes of BYE face the same risk
+of developing the condition again as those who have not yet had BYE.
+<br><br>
+
+To treat BYE, the only solution is a beach holiday. For mild cases, a
+\$3,000 trip per year is required and for severe cases, a \$9,000 trip
+is required. It is recommended that patients moving from mild to severe,
+have a one-time treatment at progression of upgrading to a private jet
+for \$35,000. <br><br>
+
+A similar disease CYA that is seen in economic workshops but has
+slightly more expensive treatment and slightly worse outcomes has been
+found to cost about \$100,00 per person and result in 10 QALYs. <br><br>
+
+Dr. Grooves develop a 5-state Markov model: (1) Well, (2) Mild, (3)
+Severe, (4) Disease Death and (4) \[All Cause\] Death based on the data
+provided above. He said he used a 3% discounting rate for both costs and
+utility and half-cycle correction on the model. All costs were converted
+into the same year. He is hoping to find the life-time impacts of BYE.
+<br><br>
+
+He also provided you some results from other papers that he think you
+could use to help understand your results.
+
+*Figure 3: Incremental Cost-Effectiveness of Varies Strategies to
+Improve the BYE Endemic in A Nearby Region*
+
+|  |  |  |  |  |  |
+|----|----|----|----|----|----|
+| **Strategy** | **Cost (Dis)** | **Utility (Dis)** | **Inc. Cost** | **Inc. Utility** | **ICER** |
+| No Treatment | \$78,620 | 11.56 | \- | \- | \- |
+| Screen then Treat | \$103,245 | 10.18 | \$24,625 | -1.38 | -\$17,844.20 |
+| Treatment | \$107,989 | 13.45 | \$4,744 | 3.27 | \$1,450.76 |
+FAKE SOURCE:
+
+
+Figure 8: Incremental Cost-Effectiveness of  Varies Strategies to Improve the BYE Endemic in Another Region
+|  |  |  |  |  |  |
+|----|----|----|----|----|----|
+| **Strategy** | **Cost (Dis)** | **Utility (Dis)** | **Inc. Cost** | **Inc. Utility** | **ICER** |
+| No Treatment | \$86,340 | 12.35 | \- | \- | \- |
+| Screen then Treat | \$107,650 | 13.79 | \$21,310 | 1.44 | \$14,799 |
+| Treatment | \$109,145 | 14.08 | \$22,805 | 1.73 | \$13,182 |
+FAKE SOURCE:
+
+
+<br><br>Our team has been very busy getting this workshop ready so we
+are asking that you please review the model that he started for errors.
+<br><br> Thank you!
+
+::: {.callout .fill-box .why-box}
+## Why are we doing this?
+
+The large amount of complexity to models can make it easy to have
+mistakes. This exercise is built to help you build intuition about how
+to identify errors within a model and also highlight commonly seen
+errors in models and results.
+:::
+
+::: {.callout .task-box .why-box}
+## Your Task
+
+Determine which errors are in the model and decide if the sources he
+provided you are helpful.
+:::
+
+ADD FILE
