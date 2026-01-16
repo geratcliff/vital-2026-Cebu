@@ -49,7 +49,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -177,7 +177,7 @@
 <h1>Learning Objectives and Outline</h1>
 
 </section>
-<section id="learning-objectives" class="slide level2">
+<section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
 <ul>
 <li class="fragment"><p>Discuss pros and cons of decision modeling using decision trees vs. a formal deterministic model</p></li>
@@ -186,7 +186,7 @@
 <li class="fragment"><p>Apply methods for Markov cycle correction</p></li>
 </ul>
 </section>
-<section id="a-simple-disease-process" class="slide level2">
+<section id="a-simple-disease-process" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
 <ul>
 <li class="fragment">Suppose we want to model the cost-effectiveness of alternative strategies to prevent a disease from occurring.</li>
@@ -198,7 +198,7 @@
 </ol></li>
 </ul>
 </section>
-<section id="a-simple-disease-process-1" class="slide level2">
+<section id="a-simple-disease-process-1" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
 <ul>
 <li class="fragment">Remaining healthy carries no utility decrement (utility weight = 1.0 per cycle in healthy state)</li>
@@ -206,7 +206,7 @@
 <li class="fragment">Death carries a utility value of 0.</li>
 </ul>
 </section>
-<section id="a-simple-disease-process-2" class="slide level2">
+<section id="a-simple-disease-process-2" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
 <ul>
 <li class="fragment">There is no cost associated with remaining healthy.</li>
@@ -214,7 +214,7 @@
 <li class="fragment">Becoming sick increases the risk of death by 300%.</li>
 </ul>
 </section>
-<section id="a-simple-disease-process-3" class="slide level2">
+<section id="a-simple-disease-process-3" class="slide level2 center">
 <h2>A Simple Disease Process</h2>
 <p>A country’s health institute is considering five preventive care strategies that reduce the risk of becoming sick:</p>
 <table class="caption-top">
@@ -259,35 +259,35 @@
 </tbody>
 </table>
 </section>
-<section id="model-option-1-decision-tree" class="slide level2">
+<section id="model-option-1-decision-tree" class="slide level2 center">
 <h2>Model Option 1: Decision Tree</h2>
 <ul>
-<li class="fragment">One option would be to use a decision tree to model the expected utility and costs associated with each strategy.</li>
-<li class="fragment">Model time horizon: 10 years</li>
-<li class="fragment">The next slide shows the decision tree for outcomes experienced in the first year.</li>
+<li>One option would be to use a decision tree to model the expected utility and costs associated with each strategy.</li>
+<li>Model time horizon: 10 years</li>
+<li>The next slide shows the decision tree for outcomes experienced in the first year.</li>
 </ul>
 </section>
-<section id="section" class="slide level2" data-background-image="images/paste-01F7F5A9.png" data-background-size="contain">
+<section id="section" class="slide level2 center" data-background-image="images/paste-01F7F5A9.png" data-background-size="contain">
 <h2></h2>
 <!-- Note: Data to construct are contained in media/decision_tree_markov_health_sick_dead_1y.Rdata -->
 </section>
-<section id="model-option-1-decision-tree-1" class="slide level2" data-background-image="images/paste-01F7F5A9.png" data-background-size="contain" data-background-opacity="0.4">
+<section id="model-option-1-decision-tree-1" class="slide level2 center" data-background-image="images/paste-01F7F5A9.png" data-background-size="contain" data-background-opacity="0.4">
 <h2>Model Option 1: Decision Tree</h2>
 <ul>
-<li class="fragment">What limitations do you see?</li>
+<li>What limitations do you see?</li>
 </ul>
 </section>
-<section id="section-1" class="slide level2" data-background-image="images/paste-55AF9B31.png" data-background-size="contain">
+<section id="section-1" class="slide level2 center" data-background-image="images/paste-55AF9B31.png" data-background-size="contain">
 <h2></h2>
 <p>Decision tree for two full cycles.</p>
 <!-- Note: Data to construct are contained in media/decision_tree_markov_health_sick_dead_2y.Rdata -->
 </section>
-<section id="section-2" class="slide level2" data-background-image="images/paste-AAAFE3F8.png" data-background-size="contain">
+<section id="section-2" class="slide level2 center" data-background-image="images/paste-AAAFE3F8.png" data-background-size="contain">
 <h2></h2>
 <p>Strategy A decision tree for 5 cycles.</p>
 <!-- Note: Data to construct are contained in media/decision_tree_markov_health_sick_dead_5y.Rdata -->
 </section>
-<section id="decision-trees" class="slide level2">
+<section id="decision-trees" class="slide level2 center">
 <h2>Decision Trees</h2>
 <table class="caption-top">
 <colgroup>
@@ -308,7 +308,7 @@
 </tbody>
 </table>
 </section>
-<section id="decision-trees-1" class="slide level2">
+<section id="decision-trees-1" class="slide level2 center">
 <h2>Decision Trees</h2>
 <table class="caption-top">
 <colgroup>
@@ -333,7 +333,7 @@
 </tbody>
 </table>
 </section>
-<section id="decision-trees-2" class="slide level2">
+<section id="decision-trees-2" class="slide level2 center">
 <h2>Decision Trees</h2>
 <table class="caption-top">
 <colgroup>
@@ -362,7 +362,7 @@
 </tbody>
 </table>
 </section>
-<section id="decision-trees-3" class="slide level2">
+<section id="decision-trees-3" class="slide level2 center">
 <h2>Decision Trees</h2>
 <table class="caption-top">
 <colgroup>
@@ -391,7 +391,7 @@
 </tbody>
 </table>
 </section>
-<section id="decision-trees-4" class="slide level2">
+<section id="decision-trees-4" class="slide level2 center">
 <h2>Decision Trees</h2>
 <table class="caption-top">
 <colgroup>
@@ -420,7 +420,7 @@
 </tbody>
 </table>
 </section>
-<section id="decision-trees-5" class="slide level2">
+<section id="decision-trees-5" class="slide level2 center">
 <h2>Decision Trees</h2>
 <table class="caption-top">
 <colgroup>
@@ -449,14 +449,14 @@
 </tbody>
 </table>
 </section>
-<section id="decision-trees-6" class="slide level2">
+<section id="decision-trees-6" class="slide level2 center">
 <h2>Decision Trees</h2>
 
 <img data-src="images/markov1.png" class="r-stretch"></section>
-<section id="next-steps" class="slide level2">
+<section id="next-steps" class="slide level2 center">
 <h2>Next Steps</h2>
 <ul>
-<li class="fragment">Ideally we want a modeling approach that can incorporate flexibility and handle the complexities that make decision trees difficult/unwieldy.</li>
+<li>Ideally we want a modeling approach that can incorporate flexibility and handle the complexities that make decision trees difficult/unwieldy.</li>
 </ul>
 </section></section>
 <section>
@@ -464,7 +464,7 @@
 <h1>Markov Models</h1>
 
 </section>
-<section id="markov-models-1" class="slide level2">
+<section id="markov-models-1" class="slide level2 center">
 <h2>Markov Models</h2>
 <p>Common approach in decision analyses that adds additional flexibility.</p>
 <table class="caption-top">
@@ -490,7 +490,7 @@
 </tbody>
 </table>
 </section>
-<section id="markov-models-2" class="slide level2">
+<section id="markov-models-2" class="slide level2 center">
 <h2>Markov Models</h2>
 <p>Common approach in decision analyses that adds additional flexibility.</p>
 <table class="caption-top">
@@ -516,7 +516,7 @@
 </tbody>
 </table>
 </section>
-<section id="markov-models-3" class="slide level2">
+<section id="markov-models-3" class="slide level2 center">
 <h2>Markov Models</h2>
 <p>Common approach in decision analyses that adds additional flexibility.</p>
 <table class="caption-top">
@@ -546,7 +546,7 @@
 </tbody>
 </table>
 </section>
-<section id="markov-models-4" class="slide level2">
+<section id="markov-models-4" class="slide level2 center">
 <h2>Markov Models</h2>
 <ul>
 <li class="fragment"><p>The advantages of Markov models derive from their structure around mutually exclusive disease states.</p></li>
@@ -554,7 +554,7 @@
 <li class="fragment"><p>Because there are a fixed number of disease states the population can be in, there is no need to model complex pathways, as we saw in the decision tree “explosion” a few slides back.</p></li>
 </ul>
 </section>
-<section id="markov-trees" class="slide level2">
+<section id="markov-trees" class="slide level2 center">
 <h2>Markov Trees</h2>
 <p>It is also common to pair a Markov model with a decision tree.<sup>1</sup></p>
 <div class="columns">
@@ -568,7 +568,7 @@
 
 </div></div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Gasauskas et al.&nbsp;2022</p></li></ol></aside></section>
-<section id="markov-trees-1" class="slide level2">
+<section id="markov-trees-1" class="slide level2 center">
 <h2>Markov Trees</h2>
 <p>It is also common to pair a Markov model with a decision tree.<sup>1</sup></p>
 <div class="columns">
@@ -586,7 +586,7 @@
 </div>
 </div></div>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>Gasauskas et al.&nbsp;2022</p></li></ol></aside></section>
-<section id="markov-tree" class="slide level2 smaller">
+<section id="markov-tree" class="slide level2 smaller center">
 <h2>Markov Tree</h2>
 <p>A simple decision tree is implicit in nearly every decision analysis.</p>
 <div class="columns">
@@ -600,7 +600,7 @@
 
 </div></div>
 </section>
-<section id="markov-tree-example" class="slide level2 smaller">
+<section id="markov-tree-example" class="slide level2 smaller center">
 <h2>Markov Tree: Example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -613,7 +613,7 @@
 <p>Treatment A:<img data-src="images/paste-BA42AD3E.png"></p>
 </div></div>
 </section>
-<section id="markov-tree-example-1" class="slide level2 smaller">
+<section id="markov-tree-example-1" class="slide level2 smaller center">
 <h2>Markov Tree: Example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -626,7 +626,7 @@
 <p>Treatment A:<img data-src="images/caroline_model2.png"></p>
 </div></div>
 </section>
-<section id="when-choosing-a-model-structure" class="slide level2">
+<section id="when-choosing-a-model-structure" class="slide level2 center">
 <h2>When choosing a model structure…</h2>
 <p><br></p>
 <blockquote>
@@ -656,7 +656,7 @@
 <h1>Constructing a Markov Model</h1>
 
 </section>
-<section id="key-characteristics" class="slide level2 smaller">
+<section id="key-characteristics" class="slide level2 smaller center">
 <h2>Key characteristics</h2>
 <ul>
 <li class="fragment">Allows for health state transitions <span style="background-color: yellow;">over time</span></li>
@@ -667,24 +667,24 @@
 <li class="fragment">Results report “average” of cohort</li>
 </ul>
 </section>
-<section id="key-characteristics-1" class="slide level2 smaller">
+<section id="key-characteristics-1" class="slide level2 smaller center">
 <h2>Key characteristics</h2>
 <p><br></p>
 <blockquote>
 <p>“CYCLE” = Minimum amount of time that any individual will spend in a state before possible transition to another state</p>
 </blockquote>
 <ul>
-<li class="fragment">More on this in the next slides</li>
+<li>More on this in the next slides</li>
 </ul>
 </section>
-<section id="steps" class="slide level2">
+<section id="steps" class="slide level2 center">
 <h2>Steps</h2>
 <ol type="1">
-<li class="fragment">Define the decision problem</li>
-<li class="fragment">Conceptualize the model</li>
-<li class="fragment">Parameterize the model</li>
-<li class="fragment">Calculate or define the transition probability matrix</li>
-<li class="fragment">Run the model</li>
+<li>Define the decision problem</li>
+<li>Conceptualize the model</li>
+<li>Parameterize the model</li>
+<li>Calculate or define the transition probability matrix</li>
+<li>Run the model</li>
 </ol>
 </section></section>
 <section>
@@ -692,11 +692,11 @@
 <h1>1. Define the Decision Problem</h1>
 
 </section>
-<section id="step-1-define-the-decision-problem" class="slide level2">
+<section id="step-1-define-the-decision-problem" class="slide level2 center">
 <h2>Step 1: Define the Decision Problem</h2>
 <p>We defined the decision problem earlier in this lecture, so we’ll repeat the basic objectives briefly here.</p>
 </section>
-<section id="step-1-define-the-decision-problem-1" class="slide level2">
+<section id="step-1-define-the-decision-problem-1" class="slide level2 center">
 <h2>Step 1: Define the Decision Problem</h2>
 <p><strong>Goal:</strong> model the cost-effectiveness of alternative strategies to prevent a disease from occurring.</p>
 <table class="caption-top">
@@ -741,7 +741,7 @@
 </tbody>
 </table>
 </section>
-<section id="step-1-define-the-decision-problem-2" class="slide level2">
+<section id="step-1-define-the-decision-problem-2" class="slide level2 center">
 <h2>Step 1: Define the Decision Problem</h2>
 
 <img data-src="images/paste-13DB786D.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
@@ -750,13 +750,13 @@
 <h1>2. Conceptualize the Markov Model</h1>
 
 </section>
-<section id="conceptualize-the-markov-model-1" class="slide level2">
+<section id="conceptualize-the-markov-model-1" class="slide level2 center">
 <h2>2. Conceptualize the Markov Model</h2>
 <p>Two major steps:</p>
 <h3 id="a.-determine-health-states"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2a. Determine health states</h3>
 <h3 id="b.-determine-transitions"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2b. Determine transitions</h3>
 </section>
-<section id="step-2-conceptualize-the-model" class="slide level2">
+<section id="step-2-conceptualize-the-model" class="slide level2 center">
 <h2>Step 2: Conceptualize the Model</h2>
 <h3 id="a.-determine-health-states-1"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2a. Determine health states</h3>
 <ul>
@@ -768,7 +768,7 @@
 </ol></li>
 </ul>
 </section>
-<section id="step-2-conceptualize-the-model-1" class="slide level2">
+<section id="step-2-conceptualize-the-model-1" class="slide level2 center">
 <h2>Step 2: Conceptualize the Model</h2>
 <h3 id="a.-determine-health-states-2"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 2a. Determine health states</h3>
 <ul>
@@ -784,7 +784,7 @@
 <li class="fragment">Individuals who become sick cannot transition back to healthy.</li>
 </ul>
 </section>
-<section id="bubble-diagram" class="slide level2">
+<section id="bubble-diagram" class="slide level2 center">
 <h2>“Bubble Diagram”</h2>
 <p>State transition (“bubble”) diagrams are useful visualizations of a Markov model.</p>
 <div class="cell" data-fig-width="4" data-layout-align="center">
@@ -866,13 +866,13 @@
 <h1>3. Parameterize the Model</h1>
 
 </section>
-<section id="parameterize-the-model-1" class="slide level2">
+<section id="parameterize-the-model-1" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <p>Basic steps</p>
 <h3 id="a.-determine-basic-model-parameters"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3a. Determine basic model parameters</h3>
 <h3 id="b.-curate-and-define-model-inputs"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b. Curate and define model inputs</h3>
 </section>
-<section id="parameterize-the-model-2" class="slide level2">
+<section id="parameterize-the-model-2" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <p>Basic steps</p>
 <h3 id="a.-determine-basic-model-parameters-1"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3a. Determine basic model parameters</h3>
@@ -882,7 +882,7 @@
 <li class="fragment">Define the time horizon (e.g., followed until age 100 or death)</li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length" class="slide level2">
+<section id="a.-define-the-markov-cycle-length" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <!-- https://www.youtube.com/watch?v=bVlMq67HT48 -->
 <ul>
@@ -891,7 +891,7 @@
 <li class="fragment">A consequence is that the model will show us what fraction start out a cycle in a given state, and what fraction end up in each state at the end of the cycle.</li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length-1" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-1" class="slide level2 center">
 <h2>3a. Define the Markov cycle length</h2>
 <ul>
 <li class="fragment">Suppose we used a one-year cycle for the healthy-sick-dead model.</li>
@@ -902,13 +902,13 @@
 <li class="fragment">If we’re not careful, what are we (implicitly) assuming <em>can</em> and <em>can’t</em> happen in a single cycle?</li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length-2" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-2" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <div style="padding-top: 200px;">
 <p><img data-src="images/paste-9C03CB85.png"></p>
 </div>
 </section>
-<section id="a.-define-the-markov-cycle-length-3" class="slide level2 smaller">
+<section id="a.-define-the-markov-cycle-length-3" class="slide level2 smaller center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <p>The challenge of selecting an appropriate cycle length boils down to how we deal with <strong>competing risks</strong>.</p>
 <div class="columns">
@@ -989,7 +989,7 @@
 </div>
 </div></div>
 </section>
-<section id="a.-define-the-markov-cycle-length-4" class="slide level2 smaller">
+<section id="a.-define-the-markov-cycle-length-4" class="slide level2 smaller center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <p>The challenge of selecting an appropriate cycle length boils down to how we deal with <strong>competing risks</strong>.</p>
 <div class="columns">
@@ -1071,7 +1071,7 @@
 </div>
 </div></div>
 </section>
-<section id="a.-define-the-markov-cycle-length-5" class="slide level2 smaller">
+<section id="a.-define-the-markov-cycle-length-5" class="slide level2 smaller center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <table class="caption-top">
 <colgroup>
@@ -1100,10 +1100,10 @@
 </tbody>
 </table>
 </section>
-<section id="a.-define-the-markov-cycle-length-6" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-6" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <ul>
-<li class="fragment">It may be tempting to simply shorten the cycle length (e.g., use 1 day cycle vs.&nbsp;1 year cycle).</li>
+<li>It may be tempting to simply shorten the cycle length (e.g., use 1 day cycle vs.&nbsp;1 year cycle).</li>
 </ul>
 <ul>
 <li class="fragment">For a 75 year horizon, how many cycles would that be?
@@ -1113,10 +1113,10 @@
 <li class="fragment">Any possible issues with this?</li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length-7" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-7" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <ul>
-<li class="fragment">Shortening the cycle creates a computational challenge.</li>
+<li>Shortening the cycle creates a computational challenge.</li>
 </ul>
 <ul>
 <li class="fragment">Base case requires 27,375 daily cycles.</li>
@@ -1126,7 +1126,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length-8" class="slide level2 smaller">
+<section id="a.-define-the-markov-cycle-length-8" class="slide level2 smaller center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <table class="caption-top">
 <colgroup>
@@ -1155,31 +1155,31 @@
 </tbody>
 </table>
 </section>
-<section id="a.-define-the-markov-cycle-length-9" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-9" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <p>More challenges …</p>
 </section>
-<section id="a.-define-the-markov-cycle-length-10" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-10" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <p>More challenges …</p>
 <ul>
-<li class="fragment">Markov models are “memoryless” – they don’t remember what happened before the current cycle.
+<li>Markov models are “memoryless” – they don’t remember what happened before the current cycle.
 <ul>
-<li class="fragment">If your risk of transition to a sicker health state depends on events that happened earlier in time, the model can’t explicitly account for this.</li>
+<li>If your risk of transition to a sicker health state depends on events that happened earlier in time, the model can’t explicitly account for this.</li>
 </ul></li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length-11" class="slide level2">
+<section id="a.-define-the-markov-cycle-length-11" class="slide level2 center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <p>More challenges …</p>
 <ul>
-<li class="fragment">There are workarounds known as “tunnel states” to get around this problem, though these are difficult to do and present their own challenges
+<li>There are workarounds known as “tunnel states” to get around this problem, though these are difficult to do and present their own challenges
 <ul>
-<li class="fragment">We won’t cover them this week but we can provide references if you want to explore!</li>
+<li>We won’t cover them this week but we can provide references if you want to explore!</li>
 </ul></li>
 </ul>
 </section>
-<section id="a.-define-the-markov-cycle-length-12" class="slide level2 smaller">
+<section id="a.-define-the-markov-cycle-length-12" class="slide level2 smaller center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <table class="caption-top">
 <colgroup>
@@ -1208,7 +1208,7 @@
 </tbody>
 </table>
 </section>
-<section id="a.-define-the-markov-cycle-length-13" class="slide level2 smaller">
+<section id="a.-define-the-markov-cycle-length-13" class="slide level2 smaller center">
 <h2>3a. Define the Markov Cycle Length</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1293,17 +1293,17 @@
 </div>
 </div></div>
 </section>
-<section id="parameterize-the-model-3" class="slide level2">
+<section id="parameterize-the-model-3" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <h3 id="b.-curate-and-define-model-inputs-1"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b. Curate and define model inputs</h3>
 <div class="nobullet">
 <ul>
-<li class="fragment"><p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b.i. Source and define the base case values.</p></li>
-<li class="fragment"><p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b.ii. Source and define sources of uncertainty.</p></li>
+<li><p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b.i. Source and define the base case values.</p></li>
+<li><p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b.ii. Source and define sources of uncertainty.</p></li>
 </ul>
 </div>
 </section>
-<section id="parameterize-the-model-4" class="slide level2">
+<section id="parameterize-the-model-4" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <h3 id="b.-curate-and-define-model-inputs-2"><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> 3b. Curate and define model inputs</h3>
 <ul>
@@ -1313,14 +1313,14 @@
 <li class="fragment">… and so on.</li>
 </ul>
 </section>
-<section id="parameterize-the-model-5" class="slide level2">
+<section id="parameterize-the-model-5" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <p>We defined many of the underlying parameters earlier in this lecture, so we’ll repeat them briefly here.</p>
 </section>
-<section id="parameterize-the-model-6" class="slide level2">
+<section id="parameterize-the-model-6" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <ul>
-<li class="fragment">We start with a healthy population of 25 year olds and follow them until age 100 (or death, if earlier).</li>
+<li>We start with a healthy population of 25 year olds and follow them until age 100 (or death, if earlier).</li>
 </ul>
 <ul>
 <li class="fragment">Remaining healthy carries no utility decrement (utility weight= 1.0)</li>
@@ -1328,17 +1328,17 @@
 <li class="fragment">Death carries a utility weight value of 0.</li>
 </ul>
 </section>
-<section id="parameterize-the-model-7" class="slide level2">
+<section id="parameterize-the-model-7" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <ul>
-<li class="fragment">There is no cost associated with remaining healthy.</li>
+<li>There is no cost associated with remaining healthy.</li>
 </ul>
 <ul>
 <li class="fragment">Becoming sick incurs $1,000 / year in costs.</li>
 <li class="fragment">Becoming sick increases the risk of death by 300%.</li>
 </ul>
 </section>
-<section id="parameterize-the-model-8" class="slide level2">
+<section id="parameterize-the-model-8" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <p>Each strategy has a different cost and impact on the likelihood of becoming sick.</p>
 <table class="caption-top">
@@ -1383,7 +1383,7 @@
 </tbody>
 </table>
 </section>
-<section id="parameterize-the-model-9" class="slide level2">
+<section id="parameterize-the-model-9" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <div class="callout callout-important callout-style-simple">
 <div class="callout-body">
@@ -1403,7 +1403,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="parameterize-the-model-10" class="slide level2 smaller">
+<section id="parameterize-the-model-10" class="slide level2 smaller center">
 <h2>3. Parameterize the Model</h2>
 <div class="callout callout-important callout-style-simple">
 <div class="callout-body">
@@ -1425,7 +1425,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="parameterize-the-model-11" class="slide level2">
+<section id="parameterize-the-model-11" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <div class="callout callout-important callout-style-simple">
 <div class="callout-body">
@@ -1449,7 +1449,7 @@
 </ol></li>
 </ul>
 </section>
-<section id="parameterize-the-model-12" class="slide level2">
+<section id="parameterize-the-model-12" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <div class="callout callout-important callout-style-simple">
 <div class="callout-body">
@@ -1466,7 +1466,7 @@
 <li class="fragment"><p>We recommend a structured approach based on parameter naming conventions and parameter tables.</p></li>
 </ul>
 </section>
-<section id="parameterize-the-model-13" class="slide level2">
+<section id="parameterize-the-model-13" class="slide level2 center">
 <h2>3. Parameterize the Model</h2>
 <p>Naming conventions:</p>
 <div class="cell">
@@ -1508,7 +1508,7 @@
 </div>
 </div>
 </section>
-<section id="parameter-table" class="slide level2 smaller">
+<section id="parameter-table" class="slide level2 smaller center">
 <h2>Parameter Table</h2>
 <div class="footer">
 <p>Note: Only a subset of model parameters are shown in table.</p>
@@ -2101,7 +2101,7 @@
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-3" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>param</strong> column is the short name of the parameter</p>
 <div class="footer">
@@ -2695,7 +2695,7 @@
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-4" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>base_case</strong> is the parameter value for the base case.</p>
 <div class="footer">
@@ -3289,7 +3289,7 @@
 </div>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>formula</strong> defines model parameter formulas for parameters that are functions of other model parameters.</p>
 <div class="footer">
@@ -3883,7 +3883,7 @@
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>description</strong> provides a text description of the parameter.</p>
 <div style="font-size: 0.6em">
@@ -4477,7 +4477,7 @@
 <p>Note: Only a subset of model parameters are shown in table.</p>
 </div>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>notes</strong> is an optional column where you add additional notes or context for the parameter.</p>
 <div class="footer">
@@ -5071,7 +5071,7 @@
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller center">
 <h2></h2>
 <p><strong>distribution</strong> specifies the uncertainty distribution for the parameter. It is used for probabilistic sensitivity analyses, which we cover in our intermediate (week-long) workshop.</p>
 <div class="footer">
@@ -5665,7 +5665,7 @@
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller center">
 <h2></h2>
 <div class="footer">
 <p>Note: Only a subset of model parameters are shown in table.</p>
@@ -6264,17 +6264,17 @@
 <h1>4. Calculate or define the transition probability matrix</h1>
 
 </section>
-<section id="defining-the-transition-probability-matrix" class="slide level2">
+<section id="defining-the-transition-probability-matrix" class="slide level2 center">
 <h2>Defining the Transition Probability Matrix</h2>
 <ul>
-<li class="fragment"><p>The transition probability matrix is a square matrix that defines the probability of transitioning from one health state to another health state in a single time step.</p></li>
-<li class="fragment"><p>Constructing the matrix is a fairly technical, but fairly straightforward process.</p>
+<li><p>The transition probability matrix is a square matrix that defines the probability of transitioning from one health state to another health state in a single time step.</p></li>
+<li><p>Constructing the matrix is a fairly technical, but fairly straightforward process.</p>
 <ul>
-<li class="fragment">We will skip over this process for now, but come back to it later today!</li>
+<li>We will skip over this process for now, but come back to it later today!</li>
 </ul></li>
 </ul>
 </section>
-<section id="transition-probability-matrix" class="slide level2">
+<section id="transition-probability-matrix" class="slide level2 center">
 <h2>Transition Probability Matrix</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -6392,7 +6392,7 @@
 <h1>5. Run the Model</h1>
 
 </section>
-<section id="executing-the-model-requires-two-inputs" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="executing-the-model-requires-two-inputs" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title">Executing the model requires two inputs</h2>
 <div class="r-vstack">
 <div data-id="occ">
@@ -6403,7 +6403,7 @@
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-10" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6414,7 +6414,7 @@
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-11" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6450,7 +6450,7 @@ D 0.000 0.000 1.000</code></pre>
 <p><span class="math inline">\quad \quad \quad \quad</span></p>
 </div></div>
 </section>
-<section id="section-12" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-12" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6492,7 +6492,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="section-13" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-13" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6534,7 +6534,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="section-14" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-14" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6604,7 +6604,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="section-15" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-15" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="r-hstack">
 <div data-id="occ">
@@ -6704,7 +6704,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="section-16" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="section-16" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title"></h2>
 <div data-id="occ1">
 <p>Health State Occupancy at End of Cycle</p>
@@ -6734,7 +6734,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div>
 </section>
-<section id="markov-trace" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="markov-trace" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title">Markov Trace</h2>
 <div data-id="occ1">
 <p>Health State Occupancy Over Ten Cycles</p>
@@ -6764,7 +6764,7 @@ D 0.000 0.000 1.000</code></pre>
 <h1>Calculate cycles by hand</h1>
 
 </section>
-<section id="in-class-example" class="slide level2 smaller">
+<section id="in-class-example" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <ul>
 <li class="fragment">A new drug was developed for cancer patients in remission to decrease their chance of relapse</li>
@@ -6773,7 +6773,7 @@ D 0.000 0.000 1.000</code></pre>
 <li class="fragment">Let’s say we want to model this over a 4-year time horizon</li>
 </ul>
 </section>
-<section id="in-class-example-1" class="slide level2 smaller">
+<section id="in-class-example-1" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <p><br></p>
 <div style="font-size: 0.6em">
@@ -6850,7 +6850,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="in-class-example-2" class="slide level2 smaller">
+<section id="in-class-example-2" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -6867,7 +6867,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="in-class-example-3" class="slide level2 smaller">
+<section id="in-class-example-3" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -6884,7 +6884,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="in-class-example-4" class="slide level2 smaller">
+<section id="in-class-example-4" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -6901,7 +6901,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="in-class-example-5" class="slide level2 smaller">
+<section id="in-class-example-5" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -6918,7 +6918,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="in-class-example-6" class="slide level2 smaller">
+<section id="in-class-example-6" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -6935,7 +6935,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div></div>
 </section>
-<section id="in-class-example-7" class="slide level2 smaller">
+<section id="in-class-example-7" class="slide level2 smaller center">
 <h2>In-class example</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -6960,7 +6960,7 @@ D 0.000 0.000 1.000</code></pre>
 <h1>Calculating Outcomes</h1>
 
 </section>
-<section id="an-example-markov-trace-75-year-horizon" class="slide level2">
+<section id="an-example-markov-trace-75-year-horizon" class="slide level2 center">
 <h2>An example Markov Trace (75 year horizon)</h2>
 <div style="font-size: 0.7em">
 <table class="caption-top">
@@ -7025,30 +7025,30 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="markov-traces" class="slide level2">
+<section id="markov-traces" class="slide level2 center">
 <h2>Markov Traces</h2>
 <ul>
-<li class="fragment">Often we are modeling several competing strategies.</li>
-<li class="fragment">Each strategy has its own transition probability matrix.</li>
-<li class="fragment">Therefore, each strategy will have it’s own Markov trace.</li>
+<li>Often we are modeling several competing strategies.</li>
+<li>Each strategy has its own transition probability matrix.</li>
+<li>Therefore, each strategy will have it’s own Markov trace.</li>
 </ul>
 </section>
-<section id="calculating-outcomes-1" class="slide level2">
+<section id="calculating-outcomes-1" class="slide level2 center">
 <h2>Calculating Outcomes</h2>
 <ul>
-<li class="fragment">With our markov traces complete, we can calculate expected outcomes (e.g., costs, QALYs, DALYs, etc.).</li>
-<li class="fragment">Much like we did with decision trees, we need to define “payoffs” for each health state.</li>
+<li>With our markov traces complete, we can calculate expected outcomes (e.g., costs, QALYs, DALYs, etc.).</li>
+<li>Much like we did with decision trees, we need to define “payoffs” for each health state.</li>
 </ul>
 </section>
-<section id="defining-payoffs" class="slide level2">
+<section id="defining-payoffs" class="slide level2 center">
 <h2>Defining Payoffs</h2>
 <ul>
-<li class="fragment">Cost outcomes: Cost of being healthy, sick, dead (including any additional costs of treatment/intervention, if applicable).</li>
-<li class="fragment">QALY outcomes: Utility weight of being healthy (usually 1.0), sick, dead (usually 0.0).</li>
-<li class="fragment">DALY outcomes: Disability weights of being sick (YLD) and remaining life expectancy based on reference life table (YLL)</li>
+<li>Cost outcomes: Cost of being healthy, sick, dead (including any additional costs of treatment/intervention, if applicable).</li>
+<li>QALY outcomes: Utility weight of being healthy (usually 1.0), sick, dead (usually 0.0).</li>
+<li>DALY outcomes: Disability weights of being sick (YLD) and remaining life expectancy based on reference life table (YLL)</li>
 </ul>
 </section>
-<section id="defining-payoffs-1" class="slide level2">
+<section id="defining-payoffs-1" class="slide level2 center">
 <h2>Defining Payoffs</h2>
 <ul>
 <li>We can calculate the total payoff for each cycle by multiplying the number or fraction of the cohort in each health state by its payoff value, and adding them together.</li>
@@ -7081,23 +7081,23 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-life-years" class="slide level2">
+<section id="example-life-years" class="slide level2 center">
 <h2>Example: Life Years</h2>
 <ul>
-<li class="fragment">We’ll build our example using a simple outcome: expected life years under a given strategy.</li>
-<li class="fragment">Payoffs:
+<li>We’ll build our example using a simple outcome: expected life years under a given strategy.</li>
+<li>Payoffs:
 <ul>
-<li class="fragment">Healthy: <span style="color:green;">1.0</span></li>
-<li class="fragment">Sick: <span style="color:green;">1.0</span> [they’re still alive!]</li>
-<li class="fragment">Dead: <span style="color:green;">0.0</span></li>
+<li>Healthy: <span style="color:green;">1.0</span></li>
+<li>Sick: <span style="color:green;">1.0</span> [they’re still alive!]</li>
+<li>Dead: <span style="color:green;">0.0</span></li>
 </ul></li>
 </ul>
 </section>
-<section id="example-life-years-1" class="slide level2">
+<section id="example-life-years-1" class="slide level2 center">
 <h2>Example: Life Years</h2>
 <ul>
-<li class="fragment">To get the total “payoff” for a given cycle, we multiply the fraction of the cohort in a given health state by the payoff associated with that health state.</li>
-<li class="fragment">Do this for each health state, and add them together to get the total.</li>
+<li>To get the total “payoff” for a given cycle, we multiply the fraction of the cohort in a given health state by the payoff associated with that health state.</li>
+<li>Do this for each health state, and add them together to get the total.</li>
 </ul>
 <div style="font-size: 0.7em">
 <table class="caption-top">
@@ -7129,7 +7129,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-life-years-2" class="slide level2">
+<section id="example-life-years-2" class="slide level2 center">
 <h2>Example: Life Years</h2>
 <p>What is the LY “payoff” for Cycle 0?</p>
 <div style="font-size: 0.7em">
@@ -7162,7 +7162,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-life-years-3" class="slide level2">
+<section id="example-life-years-3" class="slide level2 center">
 <h2>Example: Life Years</h2>
 <p>What is the LY “payoff” for Cycle 0?</p>
 <div style="font-size: 0.7em">
@@ -7202,7 +7202,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-life-years-4" class="slide level2">
+<section id="example-life-years-4" class="slide level2 center">
 <h2>Example: Life Years</h2>
 <p>What is the LY “payoff” for Cycle 1?</p>
 <div style="font-size: 0.7em">
@@ -7243,7 +7243,7 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 <p>… and so on.</p>
 </section>
-<section id="example-life-years-5" class="slide level2">
+<section id="example-life-years-5" class="slide level2 center">
 <h2>Example: Life Years</h2>
 <div style="font-size: 0.7em">
 <table class="caption-top">
@@ -7317,19 +7317,19 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-costs" class="slide level2">
+<section id="example-costs" class="slide level2 center">
 <h2>Example: Costs</h2>
 <ul>
-<li class="fragment">Now suppose we want to calculate costs.</li>
-<li class="fragment">Payoffs:
+<li>Now suppose we want to calculate costs.</li>
+<li>Payoffs:
 <ul>
-<li class="fragment">Healthy: <span style="color:blue;">$0</span></li>
-<li class="fragment">Sick: <span style="color:blue;">$1,000</span></li>
-<li class="fragment">Dead: <span style="color:blue;">$0</span></li>
+<li>Healthy: <span style="color:blue;">$0</span></li>
+<li>Sick: <span style="color:blue;">$1,000</span></li>
+<li>Dead: <span style="color:blue;">$0</span></li>
 </ul></li>
 </ul>
 </section>
-<section id="example-costs-1" class="slide level2">
+<section id="example-costs-1" class="slide level2 center">
 <h2>Example: Costs</h2>
 <p>What is the Cost “payoff” for Cycle 0?</p>
 <div style="font-size: 0.7em">
@@ -7362,7 +7362,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-costs-2" class="slide level2">
+<section id="example-costs-2" class="slide level2 center">
 <h2>Example: Costs</h2>
 <p>What is the Cost “payoff” for Cycle 0?</p>
 <div style="font-size: 0.7em">
@@ -7402,7 +7402,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="example-costs-3" class="slide level2">
+<section id="example-costs-3" class="slide level2 center">
 <h2>Example: Costs</h2>
 <p>What is the cost “payoff” for Cycle 1?</p>
 <div style="font-size: 0.7em">
@@ -7443,10 +7443,10 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 <p>… and so on.</p>
 </section>
-<section id="other-outcomes" class="slide level2">
+<section id="other-outcomes" class="slide level2 center">
 <h2>Other Outcomes</h2>
 <ul>
-<li class="fragment">We can repeat a similar process for health outcomes (e.g., QALYs, YLDs) by multiplying the “payoff” (e.g., utility weight, disability weight) for a given health state by the fraction of the cohort in that health state in the cycle.</li>
+<li>We can repeat a similar process for health outcomes (e.g., QALYs, YLDs) by multiplying the “payoff” (e.g., utility weight, disability weight) for a given health state by the fraction of the cohort in that health state in the cycle.</li>
 </ul>
 </section></section>
 <section>
@@ -7454,10 +7454,10 @@ D 0.000 0.000 1.000</code></pre>
 <h1>Calculating Total Expected Outcomes</h1>
 
 </section>
-<section id="total-outcomes" class="slide level2">
+<section id="total-outcomes" class="slide level2 center">
 <h2>Total Outcomes</h2>
 </section>
-<section id="total-life-years" class="slide level2">
+<section id="total-life-years" class="slide level2 center">
 <h2>Total Life Years</h2>
 <p>Let’s look at the Markov trace and cycle outcomes for the Life Year outcome.</p>
 <div style="font-size: 0.7em">
@@ -7532,7 +7532,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="life-years" class="slide level2">
+<section id="life-years" class="slide level2 center">
 <h2>Life years</h2>
 <p>We can create a new column that accumulates life years over each cycle.</p>
 <div style="font-size: 0.7em">
@@ -7624,7 +7624,7 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="life-years-1" class="slide level2">
+<section id="life-years-1" class="slide level2 center">
 <h2>Life years</h2>
 <div style="font-size: 0.7em">
 <table class="caption-top" style="width:100%;">
@@ -7715,11 +7715,11 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="life-years-2" class="slide level2 smaller">
+<section id="life-years-2" class="slide level2 smaller center">
 <h2>Life years</h2>
 <ul>
-<li class="fragment"><p>The cumulative LYs for an individual starting in the Healthy state is <strong>44.825</strong></p></li>
-<li class="fragment"><p>Note that this is within a 75 years time horizon</p></li>
+<li><p>The cumulative LYs for an individual starting in the Healthy state is <strong>44.825</strong></p></li>
+<li><p>Note that this is within a 75 years time horizon</p></li>
 </ul>
 <div style="font-size: 0.7em">
 <table class="caption-top">
@@ -7810,14 +7810,14 @@ D 0.000 0.000 1.000</code></pre>
 </table>
 </div>
 </section>
-<section id="total-outcomes-1" class="slide level2">
+<section id="total-outcomes-1" class="slide level2 center">
 <h2>Total Outcomes</h2>
 <ul>
-<li class="fragment">We can do a similar exercise to get total costs, total QALYs, total DALYs, etc.</li>
-<li class="fragment">However, it’s not that simple. There are some extra complications we have to deal with.
+<li>We can do a similar exercise to get total costs, total QALYs, total DALYs, etc.</li>
+<li>However, it’s not that simple. There are some extra complications we have to deal with.
 <ul>
-<li class="fragment">Discounting</li>
-<li class="fragment">Cycle correction</li>
+<li>Discounting</li>
+<li>Cycle correction</li>
 </ul></li>
 </ul>
 </section></section>
@@ -7826,18 +7826,18 @@ D 0.000 0.000 1.000</code></pre>
 <h1>Cycle correction</h1>
 
 </section>
-<section id="the-problem" class="slide level2">
+<section id="the-problem" class="slide level2 center">
 <h2>The problem</h2>
 <ul>
-<li class="fragment"><p>In real life, events could occur at any points in a given cycle, but a Markov model assumes all events occur either at the beginning or end of each cycle</p></li>
-<li class="fragment"><p>Time is continuous, so are survival/event-free survival curves</p></li>
-<li class="fragment"><p>When we discretize time by using a fixed cycle length, we can make two assumptions</p>
+<li><p>In real life, events could occur at any points in a given cycle, but a Markov model assumes all events occur either at the beginning or end of each cycle</p></li>
+<li><p>Time is continuous, so are survival/event-free survival curves</p></li>
+<li><p>When we discretize time by using a fixed cycle length, we can make two assumptions</p>
 <ul>
-<li class="fragment">Suppose this is a simple Well <span class="math inline">\rightarrow</span> Dead process</li>
+<li>Suppose this is a simple Well <span class="math inline">\rightarrow</span> Dead process</li>
 </ul></li>
 </ul>
 </section>
-<section id="the-problem-1" class="slide level2 smaller">
+<section id="the-problem-1" class="slide level2 smaller center">
 <h2>The problem</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -7857,7 +7857,7 @@ D 0.000 0.000 1.000</code></pre>
 </div></div>
 <p><a href="https://doi.org/10.1177/0272989X08315241">Source</a></p>
 </section>
-<section id="the-problem-2" class="slide level2 smaller">
+<section id="the-problem-2" class="slide level2 smaller center">
 <h2>The problem</h2>
 
 <img data-src="images/half-cycle.png" width="513" class="r-stretch"><aside class="notes">
@@ -7885,7 +7885,7 @@ D 0.000 0.000 1.000</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="half-cycle-correction" class="slide level2">
+<section id="half-cycle-correction" class="slide level2 center">
 <h2>Half-cycle correction</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -7895,7 +7895,7 @@ D 0.000 0.000 1.000</code></pre>
 </div></div>
 <p><a href="https://doi.org/10.1177/0272989X08315241">Source</a></p>
 </section>
-<section id="half-cycle-correction-1" class="slide level2">
+<section id="half-cycle-correction-1" class="slide level2 center">
 <h2>Half-cycle correction</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -7907,17 +7907,17 @@ D 0.000 0.000 1.000</code></pre>
 </div></div>
 <p><a href="https://doi.org/10.1177/0272989X08315241">Source</a></p>
 </section>
-<section id="half-cycle-correction-2" class="slide level2 smaller">
+<section id="half-cycle-correction-2" class="slide level2 smaller center">
 <h2>Half-cycle correction</h2>
 
 <img data-src="images/paste-86501A0D.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li class="fragment"><p>Multiply the outcomes by 1/2 in the first and last cycle.</p></li>
-<li class="fragment"><p>Shifting the computed, discrete state membership curve to the left by 1/2 cycle.</p></li>
-<li class="fragment"><p>Essentially assuming that events happen in the middle of cycle</p></li>
+<li><p>Multiply the outcomes by 1/2 in the first and last cycle.</p></li>
+<li><p>Shifting the computed, discrete state membership curve to the left by 1/2 cycle.</p></li>
+<li><p>Essentially assuming that events happen in the middle of cycle</p></li>
 </ul>
 <p><a href="https://doi.org/10.1177/0272989X08315241">Source</a></p>
 </section>
-<section id="half-cycle-correction-3" class="slide level2">
+<section id="half-cycle-correction-3" class="slide level2 center">
 <h2>Half-cycle correction</h2>
 <p><br></p>
 
@@ -7944,10 +7944,10 @@ D 0.000 0.000 1.000</code></pre>
 <h1>Apply cycle correction methods to our markov trace…</h1>
 
 </section>
-<section id="half-cycle-correction-4" class="slide level2 smaller">
+<section id="half-cycle-correction-4" class="slide level2 smaller center">
 <h2>Half-cycle correction</h2>
 <ul>
-<li class="fragment">Multiply the outcomes by 1/2 in the first and last cycle.</li>
+<li>Multiply the outcomes by 1/2 in the first and last cycle.</li>
 </ul>
 <div class="fragment">
 <div style="font-size: 0.7em">
@@ -8055,14 +8055,14 @@ D 0.000 0.000 1.000</code></pre>
 </div>
 </div>
 </section>
-<section id="summary" class="slide level2">
+<section id="summary" class="slide level2 center">
 <h2>Summary</h2>
 <ul>
-<li class="fragment">Once we have total (discounted, half-cycle corrected) outcomes for each strategy, we can turn to conducting incremental cost-effectiveness analysis.</li>
-<li class="fragment">We covered these methods yesterday!</li>
+<li>Once we have total (discounted, half-cycle corrected) outcomes for each strategy, we can turn to conducting incremental cost-effectiveness analysis.</li>
+<li>We covered these methods yesterday!</li>
 </ul>
 </section>
-<section id="markov-models-5" class="slide level2">
+<section id="markov-models-5" class="slide level2 center">
 <h2>Markov Models</h2>
 <table class="caption-top">
 <colgroup>
@@ -8100,7 +8100,7 @@ D 0.000 0.000 1.000</code></pre>
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../vchem.png" class="slide-logo"></p>
+<p><img src="images/logos.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -8183,7 +8183,7 @@ D 0.000 0.000 1.000</code></pre>
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -8279,12 +8279,12 @@ D 0.000 0.000 1.000</code></pre>
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 5.0e-2,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,

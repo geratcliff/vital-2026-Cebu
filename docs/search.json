@@ -101,6 +101,13 @@
     "text": "Refine the Decision Problem"
   },
   {
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#learning-objectives-and-outline",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#learning-objectives-and-outline",
+    "title": "CEA Fundamentals: Valuing Outcomes",
+    "section": "Learning Objectives and Outline",
+    "text": "Learning Objectives and Outline\n\n00"
+  },
+  {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#learning-objectives",
     "href": "lectures/lec_5b.cea-fundamentals2.html#learning-objectives",
     "title": "CEA Fundamentals: Valuing Outcomes",
@@ -115,18 +122,25 @@
     "text": "Outline\n\n\n\n01\n\n\nValuing health outcomes: QALYs/DALYs\n\n\n\n\n02\n\n\nUtility weights/instruments\n\n\n\n\n03\n\n\nWhere to get values"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#numerator-costs",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#numerator-costs",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Numerator (costs)",
-    "text": "Numerator (costs)\nValued in monetary terms\n - E.g.,  $USD / ₦NGN / KES / R"
+    "section": "",
+    "text": "Numerator (costs)\n\n\nValued in monetary terms\n\n\n\n\nExamples:\n\n\n$USD\n₦NGN\nKES\nR\n\n\n\n\n\n\n\\frac{\\colorbox{#CfAE70}{$C_1 - C_0 \\quad  (\\Delta C)$}}{E_1 - E_0 \\quad  (\\Delta E)}"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#denominator-benefits",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#denominator-benefits",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-1",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-1",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Denominator (benefits):",
-    "text": "Denominator (benefits):\nValued in terms of clinical outcomes\n - E.g.,  # of HIV cases prevented  # of children seizure free  # of quality-adjusted life years gained \n\nWhat’s important for the question at hand\nMost analyses report several different outcomes\nQALYs/DALYs enable comparability across disease areas"
+    "section": "",
+    "text": "Denominator (benefits)\n\n\nValued in terms of clinical outcomes\n\n\n\n\nExamples:\n\n\n# of HIV cases prevented\n# of children seizure free\n# of quality-adjusted life years gained\n\n\n\n\n\n\nWhat’s important for the question at hand\nMost analyses report several different outcomes\nQALYs/DALYs enable comparability across disease areas\n\n\n\n\n\\frac{C_1 - C_0 \\quad  (\\Delta C)}{\\colorbox{#CfAE70}{$E_1 - E_0 \\quad  (\\Delta E)$}}"
+  },
+  {
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#valuing-health-outcomes",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#valuing-health-outcomes",
+    "title": "CEA Fundamentals: Valuing Outcomes",
+    "section": "Valuing Health Outcomes",
+    "text": "Valuing Health Outcomes\n\n01"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#why-summary-measures-of-health",
@@ -136,25 +150,18 @@
     "text": "Why summary measures of health?\nQALYs and DALYs both provide a summary measure of health\nAllow comparison of health attainment/disease burden\n\n\nAcross diseases\nAcross populations\nOver time\nEtc."
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#qalys",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#qalys",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#intro-to-qalys",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#intro-to-qalys",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "QALYs",
-    "text": "QALYs\n\nOrigin story: welfare economics\n\nUtility = holistic measure of satisfaction or well-being\n\nWith QALYs, two dimensions of interest:\n\nLength of life (measured in life-years)\nQuality of life (measured by utility weight, usually between 0 and 1)"
+    "section": "Intro to QALYs",
+    "text": "Intro to QALYs\n\n\nOrigin story: welfare economics\n\nUtility = holistic measure of satisfaction or well-being\n\nWith QALYs, two dimensions of interest:\n\n\nLength of life measured in life-years\n\n\nQuality of life  measured by utility weight, usually between 0 and 1"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#qalys-1",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#qalys-1",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-2",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-2",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "QALYs",
-    "text": "QALYs\n\n\nQALY: A metric that reflects both changes in life expectancy and quality of life (pain, function, or both)"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#qalys-2",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#qalys-2",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "QALYs",
-    "text": "QALYs"
+    "section": "",
+    "text": "QALYs\n\n\nA metric that reflects both changes in life expectancy and quality of life (pain, function, or both).\n\n\n\nFormula:\n\n\n\nQuality Adjusted Life Years =  Sum of weight * duration of life"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#example-patient-with-coronary-heart-disease-with-surgery",
@@ -162,13 +169,6 @@
     "title": "CEA Fundamentals: Valuing Outcomes",
     "section": "Example: Patient with coronary heart disease (with surgery)",
     "text": "Example: Patient with coronary heart disease (with surgery)\n\n\n\n\n\n\n\n\n\nQALYS = (3yrs * 1.000) + (1.5yrs * 0.5) + (5yrs * 0.75) + (0.5yrs * 0.25) \n\n\n= 7.625 QALYs \n\n\nSource: Harvard Decision Science"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#example-patient-with-coronary-heart-disease-with-surgery-1",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#example-patient-with-coronary-heart-disease-with-surgery-1",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Example: Patient with coronary heart disease (with surgery)",
-    "text": "Example: Patient with coronary heart disease (with surgery)"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#example-patient-with-coronary-heart-disease-without-surgery",
@@ -206,34 +206,6 @@
     "text": "Direct methods - Standard Gamble (SG)\nWhat risk of death would you accept in order to avoid [living withstroke for the rest of your life] and livethe rest of your life in perfect health?\n\n\n\n\n\nAs a result of a stroke, you\n\n\nHave impaired use of your left arm and leg\nNeed some help bathing and dressing\nNeed a cane or other device to walk\nExperience mild pain a few days per week\nAre able to work, with some modifications\nNeed assistance with shopping, household chores, errands\nFeel anxious and depressed sometimes"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---standard-gamble-sg-2",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---standard-gamble-sg-2",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Direct methods - Standard Gamble (SG)",
-    "text": "Direct methods - Standard Gamble (SG)\n\n\n“What risk of death would you accept in order to avoid [living with an amputated leg for the rest of your life] and live the rest of your life in perfect health?”"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---standard-gamble-sg-3",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---standard-gamble-sg-3",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Direct methods - Standard Gamble (SG)",
-    "text": "Direct methods - Standard Gamble (SG)\n\n\n“What risk of death would you accept in order to avoid [living with stroke for the rest of your life] and live the rest of your life in perfect health?”"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#how-bad-is-having-a-stroke",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#how-bad-is-having-a-stroke",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "How bad is having a stroke?",
-    "text": "How bad is having a stroke?\n\nAs a result of a stroke, you\n\nHave impaired use of your left arm and leg\nNeed some help bathing and dressing\nNeed a cane or other device to walk\nExperience mild pain a few days per week\nAre able to work, with some modifications\nNeed assistance with shopping, household chores, errands\nFeel anxious and depressed sometimes"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---standard-gamble-sg-4",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---standard-gamble-sg-4",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Direct methods - Standard Gamble (SG)",
-    "text": "Direct methods - Standard Gamble (SG)\n\n\n“What risk of death you would accept in order to avoid [living with stroke the rest of your life] and live the rest of your life in perfect health?”\n\n\n\n\n\n\n\n\n\n\n\n\n\nFind the threshold p_T that sets EV(A) = EV(B)\nAssume respondent answered that they would be indifferent between A and B at a threshold p_T = 0.2\nThen U(Stroke) = p_T*U(Death) + (1-p_T)*U(Perfect Health) = 0.2*0 + (1-0.2)*1 = 0.8"
-  },
-  {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---time-trade-off-tto",
     "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods---time-trade-off-tto",
     "title": "CEA Fundamentals: Valuing Outcomes",
@@ -255,11 +227,11 @@
     "text": "SG vs TTO\n\n\n\nStandard Gamble\n\n\n\nRepresents decision-making under uncertainty\nOnly valuing the health state\nRisk postureis captured (risk aversion for death)\nUtility values usually &gt; TTO for same state\n\n\n\n\n\nTime Trade-Off\n\n\n\nIs decision-making under certainty\nMight inadvertently capture time preference (i.e., we might value health in the future less than we do today)\nRisk postureis NOT captured\nUtility values usually &lt; SG for same state"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods-rating-scales",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods-rating-scales",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-3",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-3",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Direct methods – Rating scales",
-    "text": "Direct methods – Rating scales\n\n\nEasy to use: Rating scales often used where time or cognitive ability/literacy prevents use of other methods\nVery subjective and prone to more extreme answers! Usually, utilities for VAS &lt; TTO &lt; SG"
+    "section": "",
+    "text": "Rating scales\n\n\n\nExample:\n\n\nOn a scale where 0 represents death and 100 represents perfect health, what number would you say best describes your health state over the past 2 weeks?“.\n\n\n\n\nProblem:\n\n\nIt does not have the interval property we desire. For example, a value of “90” on this scale is not necessarily twice as good as a value of “45”"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#visual-analogue-scale-vas",
@@ -269,18 +241,18 @@
     "text": "Visual Analogue Scale (VAS)\nThe Visual Analog Scale (VAS) is a commonly-used rating scale\n\n\n\n\nSource: https://assessment-module.yale.edu/im-palliative/visual-analogue-scale"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods-rating-scales-1",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods-rating-scales-1",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#direct-methods-rating-scales",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#direct-methods-rating-scales",
     "title": "CEA Fundamentals: Valuing Outcomes",
     "section": "Direct methods – Rating scales",
-    "text": "Direct methods – Rating scales\n\nEasy to use: Rating scales often used where time or cognitive ability/literacy prevents use of other methods\nVery subjective and prone to more extreme answers! Usually, utilities for VAS &lt; TTO &lt; SG"
+    "text": "Direct methods – Rating scales\n\n\nEasy to use: Rating scales often used where time or cognitive ability/literacy prevents use of other methods\nVery subjective and prone to more extreme answers! Usually, utilities for VAS &lt; TTO &lt; SG"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#indirect-methods---eq-5d",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#indirect-methods---eq-5d",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-4",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-4",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Indirect methods - EQ-5D",
-    "text": "Indirect methods - EQ-5D\n\n\n\nSystem for describing health states\n5 domains: mobility; self-care; usual activities; pain/discomfort; and anxiety/depression\n3 levels: 243 distinct health states (e.g. 11223)\nValuations elicited through population based surveys with VAS, TTO\n\n\n\n\n\n\nIndirect utility measures map preferences onto a utility scale via a generic health-related quality of life questionnaire"
+    "section": "",
+    "text": "Indirect methods - EQ-5D\n\n\nSystem for describing health states\n5 domains: mobility; self-care; usual activities; pain/discomfort; and anxiety/depression\n3 levels: 243 distinct health states (e.g. 11223)\nValuations elicited through population based surveys with VAS, TTO\n\n\n\n\n\n\n\n\nIndirect utility measures map preferences onto a utility scale via a generic health-related quality of life questionnaire"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#indirect-methods",
@@ -290,25 +262,25 @@
     "text": "Indirect methods\n\n\nHUI  Health Utility Index\n\n\nEQ5D  EuroQol health status measure\n\n\nSF-6D  Converts SF-36 & SF-12 scores to utilities\n\n\nQWB  Quality of well-being scale\n\n\n\n\nI’m not going to get into detail for each of these since you don’t need to know the granularity of each right now until you start exploring for your studies in the future, but just as an overview of some of the more well-known ones:\nHUI (Health Utility Index), based on a large, Canadian community sample (copyrighted, not free to use), patients are asked to consider their health over the past 2, 3, & 4 weeks\nEQ5D, European & US-based, asks participants to consider their health during the day of the interview; free but need to request permission & if you need to translate into other languages then it can be quite pricey\nSF-6D, 4 to 1-week recall period, converts the SF-36 & SF-12 (validated, generic quality of life measures) into utility scores, conversion done by University of Sheffield developer John Brazier; published articles on the methodology to convert these\nQWB (Quality of Well-Being scale), asks participants to consider their health over the previous three days, primary care patients in San Diego, CA; contact UCSD health outcomes assessment program for access"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#intro-to-dalys",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#intro-to-dalys",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "DALYs",
-    "text": "DALYs\n\nOrigin story: Global Burden of Disease Study\nDeliberately a measure of health, not welfare/utility\nSimilar to QALYs, two dimensions of interest:\n\nLength of life (differences in life expectancy)\nQuality of life (measured by disability weight)"
+    "section": "Intro to DALYs",
+    "text": "Intro to DALYs\n\n\nOrigin story: Global Burden of Disease Study \nDeliberately a measure of health, not welfare/utility\nWith DALYs, two dimensions of interest:\n\n\nLength of life differences in life expectancy\n\n\nQuality of life  measured by disability weight"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-1",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-1",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-formula",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-formula",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "DALYs",
-    "text": "DALYs\n\n\nDALYs = YLL + YLD\n\nYLL (Years of Life Lost)\nYLD (Years Lived with Disability)"
+    "section": "DALYs Formula",
+    "text": "DALYs Formula"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-5",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-5",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "DALYs = YLL + YLD",
-    "text": "DALYs = YLL + YLD\n\nYears Lived with Disability (YLD): calculated similar to QALYs, utility weight ≈ 1 - disability weight\nYLD example: Effective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = 0.133\nDisability weight (controlled asthma) = 0.015\nYLD = 10 * 0.015 - 10 * 0.133 = -1.18 DALYs = 1.18 DALYs averted"
+    "section": "",
+    "text": "Years of Life Lost (YLL)\n\n\nChanges in life expectancy, calculated from comparison to synthetic life table   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nProviding HIV treatment delays death from age 30 to age 50.  Life years gained = 20 years  YLL = ??"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#synthetic-reference-life-table",
@@ -325,18 +297,18 @@
     "text": "Synthetic, Reference Life Table\n\n\n\n\n\nAge\nLife Expectancy\n\n\n\n\n0\n88.9\n\n\n1\n88.0\n\n\n5\n84.0\n\n\n10\n79.0\n\n\n15\n74.1\n\n\n20\n69.1\n\n\n25\n64.1\n\n\n30\n59.2\n\n\n35\n54.3\n\n\n40\n49.3\n\n\n45\n44.4\n\n\n\n\n\n\n\n\nAge\nLife Expectancy\n\n\n\n\n50\n39.6\n\n\n55\n34.9\n\n\n60\n30.3\n\n\n65\n25.7\n\n\n70\n21.3\n\n\n75\n17.1\n\n\n80\n13.2\n\n\n85\n10.0\n\n\n90\n7.6\n\n\n95\n5.9\n\n\n\n\nSource: http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd-2019-reference-life-table"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld-1",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld-1",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-6",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-6",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "DALYs = YLL + YLD",
-    "text": "DALYs = YLL + YLD\n\nYears of Life Lost (YLL): changes in life expectancy, calculated from comparison to synthetic life table\nYLL example: Providing HIV treatment delays death from age 30 to age 50\n\nLife years (LYs) gained: 20 years\nYLL: LE(50) - LE(30) = 39.6 - 59.2 = -19.6 DALYs = 19.6 DALYs averted\n\n\n\n\n\n\n\n\n\nNote\n\n\nYLL (measured as DALYs averted) \\neq LYs gained!"
+    "section": "",
+    "text": "Years of Life Lost (YLL)\n\n\nChanges in life expectancy, calculated from comparison to synthetic life table   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nProviding HIV treatment delays death from age 30 to age 50.  Life years gained = 20 years  YLL = ?? LE(50) - LE(30) = 39.6 - 59.2 = -19.6 DALYs =19.6 DALYs averted\n\nYLL (measured as DALYs averted) \\neq LYs gained!"
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld-2",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld-2",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-7",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-7",
     "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "DALYs = YLL + YLD",
-    "text": "DALYs = YLL + YLD\n\nYears Lived with Disability (YLD): calculated similar to QALYs, utility weight ≈ 1 - disability weight\nYLD example: Effective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = ?\nDisability weight (controlled asthma) = ?"
+    "section": "",
+    "text": "Years Lived with Disability (YLD)\n\n\nCalculated similar to QALYs, utility weight ≈ 1 - disability weight   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nEffective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = ?\nDisability weight (controlled asthma) = ?\n\n\n\n\n::::::::"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#disability-weights",
@@ -346,11 +318,18 @@
     "text": "Disability Weights\n\n\n\nCommon values for small set of named health conditions (e.g. early/late HIV, HIV/ART)\nFirst iteration: expert opinion\nSecond iteration: Pop-based HH surveys in several world regions (13,902 respondents)\n\nPaired comparison of two health state descriptions which worse\nProbit regression to calculate disability weights\n235 unique health states\n\n\n\n\n\n\n\n\n\nSource: Salomon, Joshua A., et al. “Disability weights for the Global Burden of Disease 2013 study.” The Lancet Global Health 3.11 (2015): e712-e723."
   },
   {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld-3",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld-3",
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-yll-yld",
     "title": "CEA Fundamentals: Valuing Outcomes",
     "section": "DALYs = YLL + YLD",
     "text": "DALYs = YLL + YLD\n\nYears Lived with Disability (YLD): calculated similar to QALYs, utility weight ≈ 1 - disability weight\nYLD example: Effective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = 0.133\nDisability weight (controlled asthma) = 0.015\nYLD = 10 * 0.015 - 10 * 0.133 = -1.18 DALYs = 1.18 DALYs averted"
+  },
+  {
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-8",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-8",
+    "title": "CEA Fundamentals: Valuing Outcomes",
+    "section": "",
+    "text": "Years Lived with Disability (YLD)\n\n\nCalculated similar to QALYs, utility weight ≈ 1 - disability weight   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nEffective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = ? 0.133\nDisability weight (controlled asthma) = ? 0.015\nYLD = (10 * 0.015) - (10 * 0.133) = -1.18 DALYs = 1.18 DALYs averted\n\n\n\n\n::::::::"
   },
   {
     "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-for-cea",
@@ -358,6 +337,20 @@
     "title": "CEA Fundamentals: Valuing Outcomes",
     "section": "DALYs for CEA",
     "text": "DALYs for CEA\n\n\nRecommended calculation approach has changed over time (age weighting, discounting, now both out)\nSome will calculate a “QALY-like” DALY, using utility weight = 1- disability weight\nDiscounting still generally done for CEA\n\n\n\n\nCommon Practice\n\nHigh-income setting: QALYs\nLow- and middle-income setting: DALYs\n\nDisability weights are freely & publicly available (these weights are required for DALY calculations), it can reduce costs/time/resources compared to collecting QALY estimates"
+  },
+  {
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-9",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#section-9",
+    "title": "CEA Fundamentals: Valuing Outcomes",
+    "section": "",
+    "text": "Key Takeaways\n\n\nBenefits\n\n\n\nX\n\n\nX\n\n\nX\n\n\nX"
+  },
+  {
+    "objectID": "lectures/lec_5b.cea-fundamentals2.html#questions",
+    "href": "lectures/lec_5b.cea-fundamentals2.html#questions",
+    "title": "CEA Fundamentals: Valuing Outcomes",
+    "section": "Questions?",
+    "text": "Questions?\n\nNext Lecture: Incremental CEA"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#learning-objectives",
@@ -3531,7 +3524,7 @@
     "href": "case-studies/CommonErrors.html#case-background",
     "title": "CommonErrors",
     "section": "Case Background",
-    "text": "Case Background\nSeveral years of teaching workshops has led to a new illness being observed among health economists. As revealed by new research by the pioneering decision scientist, Dr. Grooves, this new disease is a consequence of the enduring sadness that results from the workshop being over. This condition has come to be called the Brief Yearning Episode (commonly abbreviated to BYE). Our team has exclusive access to data on the natural history of BYE.  \nThese data were gathered from an observational study that followed a cohort of 30-year old students for 3 years. At the start of the study, 60% have Mild BYE and 40% were healthy.  \nBYE is associated with reduced quality of life. The utility weight for Mild BYE is 0.88 and the utility weight for Severe BYE in 0.65, whereas individuals without BYE have a utility of 1.0.  \nEveryone represented in the model faces age-specific background mortality, which can be based on the provided life table. Individuals with BYE have a risk of dying from sadness. Mild cases have a 1.4% annual probability of dying from sadness and severe cases have a 4.21% annual probability of dying.   The data also suggested that healthy individuals that survive background mortality have a 40.71% chance of developing BYE within a year of the workshop. Among individuals newly developing BYE, 80% have Mild BYE and the rest have Severe BYE. \nIt has been estimated that 30% of the individuals with Mild progressed to Severe over a 3-year period. Individuals with Mild BYE can fully recover and return to the Well state, with an annual probability of 7%, conditional on surviving to the end of the year. \nPatients with Severe BYE have a 10.5% annual probability of returning to the Mild state. Individuals with Severe BYE cannot return directly to the Well state. \nIndividuals who recover from previous episodes of BYE face the same risk of developing the condition again as those who have not yet had BYE. \nTo treat BYE, the only solution is a beach holiday. For mild cases, a $3,000 trip per year is required and for severe cases, a $9,000 trip is required. It is recommended that patients moving from mild to severe, have a one-time treatment at progression of upgrading to a private jet for $35,000. \nA similar disease CYA that is seen in economic workshops but has slightly more expensive treatment and slightly worse outcomes has been found to cost about $100,00 per person and result in 10 QALYs. \nDr. Grooves develop a 5-state Markov model: (1) Well, (2) Mild, (3) Severe, (4) Disease Death and (4) [All Cause] Death based on the data provided above. He said he used a 3% discounting rate for both costs and utility and half-cycle correction on the model. All costs were converted into the same year. He is hoping to find the life-time impacts of BYE. \nHe also provided you some results from other papers that he think you could use to help understand your results.\nFigure 3: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in A Nearby Region\n\n\n\n\n\n\n\n\n\n\n\nStrategy\nCost (Dis)\nUtility (Dis)\nInc. Cost\nInc. Utility\nICER\n\n\nNo Treatment\n$78,620\n11.56\n-\n-\n-\n\n\nScreen then Treat\n$103,245\n10.18\n$24,625\n-1.38\n-$17,844.20\n\n\nTreatment\n$107,989\n13.45\n$4,744\n3.27\n$1,450.76\n\n\n\nFAKE SOURCE:\nFigure 8: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in Another Region | | | | | | | |—-|—-|—-|—-|—-|—-| | Strategy | Cost (Dis) | Utility (Dis) | Inc. Cost | Inc. Utility | ICER | | No Treatment | $86,340 | 12.35 | - | - | - | | Screen then Treat | $107,650 | 13.79 | $21,310 | 1.44 | $14,799 | | Treatment | $109,145 | 14.08 | $22,805 | 1.73 | $13,182 | FAKE SOURCE:\nOur team has been very busy getting this workshop ready so we are asking that you please review the model that he started for errors.  Thank you!\n\n\n\n\n\n\nNoneWhy are we doing this?\n\n\n\nThe large amount of complexity to models can make it easy to have mistakes. This exercise is built to help you build intuition about how to identify errors within a model and also highlight commonly seen errors in models and results.\n\n\n\n\n\n\n\n\nNoneYour Task\n\n\n\nDetermine which errors are in the model and decide if the sources he provided you are helpful.\n\n\nADD FILE"
+    "text": "Case Background\nSeveral years of teaching workshops has led to a new illness being observed among health economists. As revealed by new research by the pioneering decision scientist, Dr. Grooves, this new disease is a consequence of the enduring sadness that results from the workshop being over. This condition has come to be called the Brief Yearning Episode (commonly abbreviated to BYE). Our team has exclusive access to data on the natural history of BYE.  \nThese data were gathered from an observational study that followed a cohort of 30-year old students for 3 years. At the start of the study, 60% have Mild BYE and 40% were healthy.  \nBYE is associated with reduced quality of life. The utility weight for Mild BYE is 0.88 and the utility weight for Severe BYE in 0.65, whereas individuals without BYE have a utility of 1.0.  \nEveryone represented in the model faces age-specific background mortality, which can be based on the provided life table. Individuals with BYE have a risk of dying from sadness. Mild cases have a 1.4% annual probability of dying from sadness and severe cases have a 4.21% annual probability of dying.   The data also suggested that healthy individuals that survive background mortality have a 40.71% chance of developing BYE within a year of the workshop. Among individuals newly developing BYE, 80% have Mild BYE and the rest have Severe BYE. \nIt has been estimated that 30% of the individuals with Mild progressed to Severe over a 3-year period. Individuals with Mild BYE can fully recover and return to the Well state, with an annual probability of 7%, conditional on surviving to the end of the year. \nPatients with Severe BYE have a 10.5% annual probability of returning to the Mild state. Individuals with Severe BYE cannot return directly to the Well state. \nIndividuals who recover from previous episodes of BYE face the same risk of developing the condition again as those who have not yet had BYE. \nTo treat BYE, the only solution is a beach holiday. For mild cases, a $3,000 trip per year is required and for severe cases, a $9,000 trip is required. It is recommended that patients moving from mild to severe, have a one-time treatment at progression of upgrading to a private jet for $35,000. \nA similar disease CYA that is seen in economic workshops but has slightly more expensive treatment and slightly worse outcomes has been found to cost about $100,00 per person and result in 10 QALYs. \nDr. Grooves develop a 5-state Markov model: (1) Well, (2) Mild, (3) Severe, (4) Disease Death and (4) [All Cause] Death based on the data provided above. He said he used a 3% discounting rate for both costs and utility and half-cycle correction on the model. All costs were converted into the same year. He is hoping to find the life-time impacts of BYE. \nHe also provided you some results from other papers that he think you could use to help understand your results.\nFigure 3: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in A Nearby Region\n\n\n\n\n\n\n\n\n\n\n\nStrategy\nCost (Dis)\nUtility (Dis)\nInc. Cost\nInc. Utility\nICER\n\n\nNo Treatment\n$78,620\n11.56\n-\n-\n-\n\n\nScreen then Treat\n$103,245\n10.18\n$24,625\n-1.38\n-$17,844.20\n\n\nTreatment\n$107,989\n13.45\n$4,744\n3.27\n$1,450.76\n\n\n\nFAKE SOURCE:\nFigure 8: Incremental Cost-Effectiveness of Varies Strategies to Improve the BYE Endemic in Another Region\n\n\n\n\n\n\n\n\n\n\n\nStrategy\nCost (Dis)\nUtility (Dis)\nInc. Cost\nInc. Utility\nICER\n\n\nNo Treatment\n$86,340\n12.35\n-\n-\n-\n\n\nScreen then Treat\n$107,650\n13.79\n$21,310\n1.44\n$14,799\n\n\nTreatment\n$109,145\n14.08\n$22,805\n1.73\n$13,182\n\n\n\nFAKE SOURCE:\nOur team has been very busy getting this workshop ready so we are asking that you please review the model that he started for errors.  Thank you!\n\n\n\n\n\n\nNoneWhy are we doing this?\n\n\n\nThe large amount of complexity to models can make it easy to have mistakes. This exercise is built to help you build intuition about how to identify errors within a model and also highlight commonly seen errors in models and results.\n\n\n\n\n\n\n\n\nNoneYour Task\n\n\n\nDetermine which errors are in the model and decide if the sources he provided you are helpful.\n\n\nADD FILE"
   },
   {
     "objectID": "case-studies/cs_decision-tree-amua.html",
@@ -4357,6 +4350,13 @@
     "text": "Take a screenshot and save it as a .png file.\nBring it into Adobe Illustrator then load up the “Image Trace” toolbar. Make sure to unclick the preview button, then press Trace once the right settings are there. \nGo to Object -&gt; Artboards -&gt; Fit to Artwork Bounds to resize the canvas.\nExport to an .svg file.\n\nDecision Node:"
   },
   {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#learning-objectives-and-outline",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#learning-objectives-and-outline",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "Learning Objectives and Outline",
+    "text": "Learning Objectives and Outline\n\n00"
+  },
+  {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#learning-objectives",
     "href": "lectures/lec_5a.cea-fundamentals1.html#learning-objectives",
     "title": "CEA Fundamentals: Valuing Costs",
@@ -4371,6 +4371,13 @@
     "text": "Outline\n\n\n\n01\n\n\nIntroduction to economic evaluations\n\n\n\n\n02\n\n\nCEAs: Identifying Alternatives\n\n\n\n\n03\n\n\nValuing Costs\n\n\n\n\n04\n\n\nData Collection"
   },
   {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#introduction-to-economic-evaluations",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#introduction-to-economic-evaluations",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "Introduction to Economic Evaluations",
+    "text": "Introduction to Economic Evaluations\n\n01"
+  },
+  {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#so-far",
     "href": "lectures/lec_5a.cea-fundamentals1.html#so-far",
     "title": "CEA Fundamentals: Valuing Costs",
@@ -4378,11 +4385,11 @@
     "text": "So far…\nWe’ve touched on the basic framework for decision analysis, focusing on: \n\n\nDecision trees & probabilities\nBayes theorem & probability revision\nConstructing decision trees using Amua"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#today",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#today",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#now",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#now",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Today…",
-    "text": "Today…\n\n\nWe will touch on some of the core concepts for representing costs and health benefits within decision problems"
+    "section": "Now…",
+    "text": "Now…\nWe will start to touch on some of the core concepts for representing costs and health benefits within decision problems."
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#economic-evaluation",
@@ -4427,11 +4434,11 @@
     "text": "Cost-Effectiveness Analysis (CEA)\nMost useful when decision makers consider multiple options within a budget, and the relevant outcome is common across strategies\n\n\nCosts\nCosts are valued in monetary terms ($)\n\n\nBenefits\nBenefits are valued in terms of clinical outcomes (e.g., cases prevented, lives saved, years of life gained)\n\n\nResults\nResults reported as a cost-effectiveness ratio"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-example",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-example",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Cost-Effectiveness Analysis",
-    "text": "Cost-Effectiveness Analysis\n\nSuppose we are interested in the prolongation of life after an intervention.\nOutcome of interest: life-years gained.\nThe outcome is common to alternative strategies; they differ only in the magnitude of life-years gained.\nWe can report results in terms of $/Life-years gained"
+    "section": "Cost-Effectiveness Analysis Example",
+    "text": "Cost-Effectiveness Analysis Example\n\n\nLife Extension Example\n\nSuppose we are interested in the prolongation of life after an intervention:\n\nOutcome of interest: life-years gained\nThe outcome is common to alternative strategies; they differ only in the magnitude of life-years gained\nResults reported as: $/Life-years gained"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#techniques-for-economic-evaluation-2",
@@ -4476,11 +4483,11 @@
     "text": "Cost-Benefit Analysis\n\nhttps://www.cambridge.org/core/product/identifier/S2194588818000271/type/journal_article"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#back-to-cost-effectiveness-analysis",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#back-to-cost-effectiveness-analysis",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-formula",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-formula",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Back to Cost-Effectiveness Analysis!",
-    "text": "Back to Cost-Effectiveness Analysis!\n\n\nRelevant when healthcare alternatives have different costs & health consequences \n\n\n\\frac{\\text{Cost (Intervention A) - Cost (Intervention B)}}{\\text{Benefit (A) - Benefit (B)}}\n\n\nRelative VALUE of an intervention in comparison to its alternative is expressed as a cost-effectiveness RATIO (the focus of next lecture!)\n\n\n\nCost-effectiveness analysis is relevant when healthcare alternatives between different services/interventions have DIFFERENT costs AND varying health consequences EXAMPLE: Different types of chemotherapy\nA KEY OUTCOME in cost-effectiveness analyses is what’s called the ICER [or incremental cost-effectiveness ratio], which gives us the relative VALUE of an intervention compared to an alternative.\nIn other words, THE PRICE PER UNIT BENEFIT of one intervention over the other\nWe have 2 full classes on ICERs in the coming weeks & how to interpret these ratios across interventions What we will focus on TODAY is the components that make up the numerator (i.e. COSTS) & the denominator (i.e. BENEFITS)\nWHAT’S IMPORTANT HERE - By estimating the magnitude of health outcomes and costs of interventions, cost-effectiveness analyses can show the trade-offs involved across interventions AND THEREFORE, hopefully contribute to better decision making"
+    "section": "Cost-Effectiveness Analysis Formula",
+    "text": "Cost-Effectiveness Analysis Formula\n\n\nThe CEA Formula\n\nRelevant when healthcare alternatives have different costs & health consequences\n\\frac{\\text{Cost (Intervention A) - Cost (Intervention B)}}{\\text{Benefit (A) - Benefit (B)}}\nRelative VALUE of an intervention in comparison to its alternative is expressed as a cost-effectiveness RATIO\n\n\n\nCost-effectiveness analysis is relevant when healthcare alternatives between different services/interventions have DIFFERENT costs AND varying health consequences EXAMPLE: Different types of chemotherapy\nA KEY OUTCOME in cost-effectiveness analyses is what’s called the ICER [or incremental cost-effectiveness ratio], which gives us the relative VALUE of an intervention compared to an alternative.\nIn other words, THE PRICE PER UNIT BENEFIT of one intervention over the other\nWe have 2 full classes on ICERs in the coming weeks & how to interpret these ratios across interventions What we will focus on TODAY is the components that make up the numerator (i.e. COSTS) & the denominator (i.e. BENEFITS)\nWHAT’S IMPORTANT HERE - By estimating the magnitude of health outcomes and costs of interventions, cost-effectiveness analyses can show the trade-offs involved across interventions AND THEREFORE, hopefully contribute to better decision making"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#who-uses-economic-evaluations",
@@ -4488,6 +4495,13 @@
     "title": "CEA Fundamentals: Valuing Costs",
     "section": "Who uses economic evaluations?",
     "text": "Who uses economic evaluations?\n\n\n\nHealth Technology Advisory Committees\n\n\n\nNICE (The National Institute for Health and Care Excellence, UK)\nCanada’s Drug and Health Technology Agency\nPBAC (Pharmaceutical Benefits Advisory Committee in Australia)\nBrazil’s health technology assessment institute\n\n\n\n\n\nGroups developing clinical guidelines\n\n\n\nWHO\nCDC\nDisease-specific organizations: American Cancer Society; American Heart Association; European Stroke Organisation\n\n\n\n\n\nRegulatory agencies\n\n\n\nFDA (U.S. Food and Drug Administration)\nEPA (U.S. Environmental Protection Agency)\n\n\n\n\n\nWhen we look at how cost-effectiveness is used around the world –\nUnlike the US, many country governments have their own institutional bodies that conduct formal assessments on the cost-effectiveness of drugs & devices – some of which include:\n\nThe UK - which is a single-payer system known as the NHS & has an independent body called NICE that evaluates the cost-effectiveness of health strategies for the NHS – NICE recommends to the NHS what they should cover based on VALUE (i.e. cost-effectiveness).\n\n\n& the NHS is legally obligated to fund medicines/treatments recommended by NICE\n\n\nCanada also has a health technology assessment body called the Canadian Agency for Drugs and Technologies in Health (CADTH), which works in a similar way as NICE\n& likewise, Australia as well as Brazil, Germany, France, Italy, Sweden, the Netherlands, etc. all have similar government institutions\nGroups developing clinical guidelines around CEA, includes…"
+  },
+  {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#ceas-identifying-alternatives",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#ceas-identifying-alternatives",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "CEAs: Identifying Alternatives",
+    "text": "CEAs: Identifying Alternatives\n\n02"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#identifying-alternatives",
@@ -4504,6 +4518,13 @@
     "text": "CEA components\n\n\n\\frac{\\text{Cost (Intervention A) - Cost (Intervention B)}}{\\text{Benefit (A) - Benefit (B)}}\n\n\n\nWe will now get into the components of cost-effectiveness analyses by first looking at what comprises the NUMERATOR of the cost-effectiveness ratio & then delving into the DENOMINATOR"
   },
   {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#valuing-costs",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#valuing-costs",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "Valuing Costs",
+    "text": "Valuing Costs\n\n03"
+  },
+  {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#valuing-costs-steps",
     "href": "lectures/lec_5a.cea-fundamentals1.html#valuing-costs-steps",
     "title": "CEA Fundamentals: Valuing Costs",
@@ -4518,11 +4539,11 @@
     "text": "We can identify different types of healthcare costs\n\n\n\nDirect Health Care Costs\n\n\n\nHospital, office, home, facilities\nMedications, procedures, tests, professional fees\n\n\n\n\n\nDirect Non-Health Care Costs\n\n\n\nChildcare, transportation costs\n\n\n\n\n\nTime Costs\n\n\n\nPatient time receiving care, opportunity cost of time\n\n\n\n\n\nProductivity Costs\n\n\n\nImpaired ability to work due to morbidity\nLost economic productivity due to death\n\n\n\n\n\nUnrelated Healthcare Costs\n\n\n\nCumulative trajectory of total healthcare costs over time (unrelated to medical interventions)"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#identifying-costs-continued",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#identifying-costs-continued",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#identifying-costs-in-practice",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#identifying-costs-in-practice",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Identifying costs (continued)",
-    "text": "Identifying costs (continued)\n\n\nIn practice, we count what is likely to matter\n\nExclude what is likely to have little effect or equal effects across alternatives\n\nAny exclusion must be noted & possible bias examined\nWe are constrained by what data are available"
+    "section": "Identifying Costs in Practice",
+    "text": "Identifying Costs in Practice\n\n\nCount what is likely to matter\n\n\n\n\nExclude what is likely to have little effect or equal effects across alternatives\nAny exclusion must be noted & possible bias examined\nWe are constrained by what data are available"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#we-can-measure-costs-using-different-approaches",
@@ -4546,32 +4567,25 @@
     "text": "Whose perspective?\nPERSPECTIVE MATTERS\n\n\nFormal Healthcare Sector: Medical costs borne by third-partypayers & paid for out-of-pocket by patients. Should include current + future costs, related & unrelated to the condition under consideration\n\n\nSocietal perspective: Represents the wider “public interest” & inter-sectoral distribution of resources that are important to consider - reflects costs on all affected parties\n\n\n\n\nPERSPECTIVE really matters when you’re deciding what costs to include in your analysis; we typically conduct CEAs from two different perspectives:\n\n\n\nThe formal healthcare sector perspective includes medical costs borne by third-party payers & paid for out-of-pocket by patients. Modelers should include current + future costs, related & unrelated to the condition under consideration.\n\n\nAnalysts have mostly used this perspective over the last 20 years\nIt is the most useful perspective to decision makers within the healthcare sector\nAs mentioned earlier NICE in the UK usually takes the perspective of the healthcare payer, whereas ICER tries to do analysis from both a formal healthcare sector & wider societal perspective\n\n\nSocietal perspective includes everything in the formal health sector PLUS other things like time costs of patients seeking and receiving care, time costs of informal (unpaid) caregivers, transportation costs, effects on future productivity and consumption, and other costs and effects outside the healthcare sector.\n\n\n\nThe second panel on cost-effectiveness in health & medicine (the “gold standard” CEA recommendations in the US) recommends that studies be conducted from BOTH healthcare sector + societal perspectives so then we can more fully understand the wider implications of decision making."
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#whose-perspective-2",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#whose-perspective-2",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#perspective-example-mammography",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#perspective-example-mammography",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Whose perspective?",
-    "text": "Whose perspective?\n\nHealthcare sector perspective\n\nMAMMOGRAPHY (Healthcare Sector): \n\nCosts associated with the screening itself [mammogram procedure + physician time]\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs\nCosts unrelated to medical intervention/disease; of living longer due to mammography\n\n\n\nLet’s look at an example - Mammography for breast cancer screening\nIf we were going to cost this out from a Healthcare Sector perspective, we would need to account for:\n\n\nCosts associated with the screening itself – accounting for the costs of the procedure + clinician time\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, including hospitalizations & treatment costs\n\n***EXAMPLE: Let’s say that we wanted to examine the difference between routine mammography screening at age 40 versus 50 – - There will be higher upfront costs for Age 40, BUT if we catch more cases of breast cancer than if we waited, then that could potentially save a lot of treatment/hospitalization costs down the line\nLISA, BOOK says AVERTED COSTS for downstream costs\n\nCosts unrelated to the medical intervention due to living longer (we will discuss in the next few slides)"
+    "section": "Perspective Example: Mammography",
+    "text": "Perspective Example: Mammography\n\n\nFormal Healthcare Sector:\n\n\nCosts associated with the screening itself [mammogram procedure + physician time]\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs\nCosts unrelated to medical intervention/disease; of living longer due to mammography\n\n\n\n\nSocietal perspective:\n\n\nCosts associated with the screening itself [mammogram procedure + physician time]\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs\nCosts unrelated to medical intervention/disease; of living longer due to mammography\n\n\n\n\nPatient productivity losses associated with the screening or cancer treatment\nChildcare/transportation costs\n\n\n\n\n\n\nLet’s look at an example - Mammography for breast cancer screening\nIf we were going to cost this out from a Healthcare Sector perspective, we would need to account for:\n\n\nCosts associated with the screening itself – accounting for the costs of the procedure + clinician time\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, including hospitalizations & treatment costs\n\n***EXAMPLE: Let’s say that we wanted to examine the difference between routine mammography screening at age 40 versus 50 – - There will be higher upfront costs for Age 40, BUT if we catch more cases of breast cancer than if we waited, then that could potentially save a lot of treatment/hospitalization costs down the line\nLISA, BOOK says AVERTED COSTS for downstream costs\n\nCosts unrelated to the medical intervention due to living longer (we will discuss in the next few slides)"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#whose-perspective-3",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#whose-perspective-3",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#data-collection",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#data-collection",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Whose perspective?",
-    "text": "Whose perspective?\n\nSocietal perspective\n\nMAMMOGRAPHY (Societal perspective): \n\nCosts associated with the screening itself [mammogram procedure + physician time]\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs\nCosts unrelated to medical intervention/disease; of living longer due to mammography\nPatient productivity losses associated with the screening or cancer treatment\nChildcare/transportation costs"
+    "section": "Data Collection",
+    "text": "Data Collection\n\n04"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#two-approaches",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#two-approaches",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#two-approaches-for-data-collection",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#two-approaches-for-data-collection",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Two approaches:",
-    "text": "Two approaches:\n (1) Alongside clinical trials  (2) Using secondary data"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#costs-secondary-data",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#costs-secondary-data",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Costs (secondary data)",
-    "text": "Costs (secondary data)\n\n\nInternational versus US will have different approaches"
+    "section": "Two Approaches for Data Collection",
+    "text": "Two Approaches for Data Collection\n\n\nApproach 1\nAlongside clinical trials\nCollect cost data directly during the trial\n\n\nApproach 2\nUsing secondary data\nLeverage existing databases, registries, and published literature\n\n\n\nInternational versus US will have different approaches"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#costs-international",
@@ -4644,6 +4658,13 @@
     "text": "Adjustments needed for Valuing Costs\n\n\n\n01\n\n\nInflation adjustment\n\n\n\n\n02\n\n\nAdjusting for currency and currency year\n\n\n\n\n03\n\n\nDiscounting"
   },
   {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#inflation-adjustment",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#inflation-adjustment",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "Inflation Adjustment",
+    "text": "Inflation Adjustment"
+  },
+  {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#inflation-adjustment-motivation",
     "href": "lectures/lec_5a.cea-fundamentals1.html#inflation-adjustment-motivation",
     "title": "CEA Fundamentals: Valuing Costs",
@@ -4672,11 +4693,11 @@
     "text": "Inflation Adjustment: Example\n\n\nExample Problem\n\n\nCost of hospitalization for mild stroke in the US was ~$15,000 USD in 2016. Convert to 2020 USD.\n\n\n\nSolution:\n\n\n\nPCE (Personal Consumption Expenditure Health Price Index) in 2016: 105.430\nPCE in 2020: 112.978\n\n\n\\textbf{Cost(2020)} = 15,000 \\times \\frac{112.978}{105.430} = \\$16,674 \\text{ (2020 USD)}\n\n\n\n(second column of Table 3 (PCE,health))"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#currency-conversion-1",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#currency-conversion-1",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#currency-conversion-basics",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#currency-conversion-basics",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Currency Conversion",
-    "text": "Currency Conversion\n\n\nIsn’t required for CEA but may be useful in some situations:\n\nExample: may need to convert local currency to USD because cost-effectiveness thresholds are often estimated in the unit of USD per DALY.\n\nHow do we convert 1,000 Turkish Liras to USD?\nCurrent exchange rate in 2024: 1 Turkish Lira = ~0.029 USD\n1,000 Liras = 29 USD"
+    "section": "Currency Conversion Basics",
+    "text": "Currency Conversion Basics\n\n\nWhen Needed\nNot required for CEA but may be useful:\n\nConvert local currency to USD for international comparisons\nCost-effectiveness thresholds often estimated in USD per DALY\n\n\n\nHow to Convert\nExample: 1,000 Philippine Peso to USD\n\nCurrent exchange rate (2026): 1 Philippine Peso = ~0.017 USD\nResult: 1,000 Peso = $16.87 USD"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#why-discounting",
@@ -4693,18 +4714,18 @@
     "text": "Discounting\nA $ today is NOT worth a $ tomorrow\n\n\n$100 now\n\n\n2% net return\n\n\n$102 next year\n\n\n\nThe “present value” of $102 next year is $100 today. Similarly, $100 next year = $98.04 today\n\n\nIf you have $100 now, this could either be consumed or invested in the most profitable alternative (e.g., risk free government bond)\nLet’s say the net return on the bond is 2%, then this means that next year the current $100 has grown to $102\nThe “present value” of $102 next year is $100 today\nSimilarly, $100 next year = $98.04 today"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#discounting-2",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#discounting-2",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#inflation-vs.-discounting",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#inflation-vs.-discounting",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Discounting",
-    "text": "Discounting\n\n\n\n\nInflation: We convert PAST cost to present-day values\n\n\n\n\n\n\nDiscounting: We convert FUTURE costs to present-day values"
+    "section": "Inflation vs. Discounting",
+    "text": "Inflation vs. Discounting\n\n\n\nInflation Adjustment\n\n\nWe convert PAST costs to present-day values\n\n\n\n\nDiscounting\n\n\nWe convert FUTURE costs to present-day values"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#how-do-we-discount",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#how-do-we-discount",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#section",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#section",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "How do we discount?",
-    "text": "How do we discount?\n\n\nPresent value: PV = FV/(1+r)^t\n\nFV = future value, the nominal cost incurred in the future\nr = annual discount rate (analogous to interest rate)\nt = number of years in future when cost is incurred\n\nReasonable consensus around 3% per year\nMay vary according to country guidelines\n\n\n\n\n\n\n\n\nAdjust for inflation and currency first, then discount"
+    "section": "",
+    "text": "Present Value Formula\n\n\nPV = \\frac{FV}{(1+r)^t}\nWhere:\n\nFV = future value, the nominal cost incurred in the future\nr = annual discount rate (analogous to interest rate)\nt = number of years in future when cost is incurred\n\nStandard rate: Reasonable consensus around 3% per year (may vary by country guidelines)\n\n\n\nImportant! Adjust for inflation and currency first, then discount"
   },
   {
     "objectID": "lectures/lec_5a.cea-fundamentals1.html#intuition",
@@ -4714,11 +4735,25 @@
     "text": "Intuition\n\n\nr = 0.03\nPV = FV/(1+r)^t, and we’re at Year 0:\n\n\n\nYear\nFormula\nValue of $1\n\n\n\n\n0\n$1/1.03^0\n$1\n\n\n1\n$1/1.03^1\n$0.97\n\n\n2\n$1/1.03^2\n$0.94\n\n\n3\n$1/1.03^3\n$0.92\n\n\n\n\n\n\nWhat would $1 be in Year 2 be in the PRESENT VALUE of today?\nToday, it will be 0.94.\n\n\n\n\n\nWe generally value future costs and effects less than current costs and effects AND their value diminishes the more distant into the future they occur\nBecause we can invest in a dollar today to yield a higher return on investment later"
   },
   {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#example",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#example",
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#discounting-example",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#discounting-example",
     "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Example",
-    "text": "Example\n\n\nAssume in year 5, a patient develops disease, and there is a treatment cost of $500\n\nThis is the future value (FV) of the cost!\n\nPresent value PV = FV/(1+r)^t = 500/(1+0.03)^5 = \\$ 431.3"
+    "section": "Discounting Example",
+    "text": "Discounting Example\n\n\nExample Problem\n\n\nAssume in year 5, a patient develops disease, and there is a treatment cost of $500. What is the present value?\n\n\n\nSolution:\n\n\nPV = \\frac{FV}{(1+r)^t} = \\frac{500}{(1+0.03)^5} = \\$431.30"
+  },
+  {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#section-1",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#section-1",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "",
+    "text": "Key Takeaways\n\n\nCosts\n\n\n\nDifferent types of economic evaluation\n\n\nCEA uses cost-effectiveness ratios\n\n\nPerspective matters for cost inclusion\n\n\nAdjust for inflation & discount future costs"
+  },
+  {
+    "objectID": "lectures/lec_5a.cea-fundamentals1.html#questions",
+    "href": "lectures/lec_5a.cea-fundamentals1.html#questions",
+    "title": "CEA Fundamentals: Valuing Costs",
+    "section": "Questions?",
+    "text": "Questions?\n\nNext Lecture: Benefits & QALYs"
   },
   {
     "objectID": "lectures/lec_1a.introduction-to-decision-analysis.html#section",
@@ -6665,243 +6700,5 @@
     "title": "Structuring a Markov Model",
     "section": "Tunnel States: Healthy, Sick, Dead",
     "text": "Tunnel States: Healthy, Sick, Dead\n\nIf we run out the Markov trace for five cycles, here are the results.\n\n\n\n\n\n\n\ncycle\nH\nS1\nS2\nS\nS_total\nD\n\n\n\n\n0\n1000\n0\n0\n0\n0\n0\n\n\n1\n960\n30\n0\n0\n30\n10\n\n\n2\n922\n29\n28\n0\n57\n22\n\n\n3\n885\n28\n26\n26\n80\n35\n\n\n4\n849\n27\n25\n50\n102\n49\n\n\n5\n815\n25\n24\n72\n121\n63"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#learning-objectives-and-outline",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#learning-objectives-and-outline",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Learning Objectives and Outline",
-    "text": "Learning Objectives and Outline\n\n00"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#introduction-to-economic-evaluations",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#introduction-to-economic-evaluations",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Introduction to Economic Evaluations",
-    "text": "Introduction to Economic Evaluations\n\n01"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#now",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#now",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Now…",
-    "text": "Now…\nWe will start to touch on some of the core concepts for representing costs and health benefits within decision problems."
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-example",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-example",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Cost-Effectiveness Analysis Example",
-    "text": "Cost-Effectiveness Analysis Example\n\n\nLife Extension Example\n\nSuppose we are interested in the prolongation of life after an intervention:\n\nOutcome of interest: life-years gained\nThe outcome is common to alternative strategies; they differ only in the magnitude of life-years gained\nResults reported as: $/Life-years gained"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-formula",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#cost-effectiveness-analysis-formula",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Cost-Effectiveness Analysis Formula",
-    "text": "Cost-Effectiveness Analysis Formula\n\n\nThe CEA Formula\n\nRelevant when healthcare alternatives have different costs & health consequences\n\\frac{\\text{Cost (Intervention A) - Cost (Intervention B)}}{\\text{Benefit (A) - Benefit (B)}}\nRelative VALUE of an intervention in comparison to its alternative is expressed as a cost-effectiveness RATIO\n\n\n\nCost-effectiveness analysis is relevant when healthcare alternatives between different services/interventions have DIFFERENT costs AND varying health consequences EXAMPLE: Different types of chemotherapy\nA KEY OUTCOME in cost-effectiveness analyses is what’s called the ICER [or incremental cost-effectiveness ratio], which gives us the relative VALUE of an intervention compared to an alternative.\nIn other words, THE PRICE PER UNIT BENEFIT of one intervention over the other\nWe have 2 full classes on ICERs in the coming weeks & how to interpret these ratios across interventions What we will focus on TODAY is the components that make up the numerator (i.e. COSTS) & the denominator (i.e. BENEFITS)\nWHAT’S IMPORTANT HERE - By estimating the magnitude of health outcomes and costs of interventions, cost-effectiveness analyses can show the trade-offs involved across interventions AND THEREFORE, hopefully contribute to better decision making"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#ceas-identifying-alternatives",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#ceas-identifying-alternatives",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "CEAs: Identifying Alternatives",
-    "text": "CEAs: Identifying Alternatives\n\n02"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#valuing-costs",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#valuing-costs",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Valuing Costs",
-    "text": "Valuing Costs\n\n03"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#identifying-costs-in-practice",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#identifying-costs-in-practice",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Identifying Costs in Practice",
-    "text": "Identifying Costs in Practice\n\n\nCount what is likely to matter\n\n\n\n\nExclude what is likely to have little effect or equal effects across alternatives\nAny exclusion must be noted & possible bias examined\nWe are constrained by what data are available"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#perspective-example-mammography",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#perspective-example-mammography",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Perspective Example: Mammography",
-    "text": "Perspective Example: Mammography\n\n\nFormal Healthcare Sector:\n\n\nCosts associated with the screening itself [mammogram procedure + physician time]\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs\nCosts unrelated to medical intervention/disease; of living longer due to mammography\n\n\n\n\nSocietal perspective:\n\n\nCosts associated with the screening itself [mammogram procedure + physician time]\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, such as: Hospitalization + treatment costs\nCosts unrelated to medical intervention/disease; of living longer due to mammography\n\n\n\n\nPatient productivity losses associated with the screening or cancer treatment\nChildcare/transportation costs\n\n\n\n\n\n\nLet’s look at an example - Mammography for breast cancer screening\nIf we were going to cost this out from a Healthcare Sector perspective, we would need to account for:\n\n\nCosts associated with the screening itself – accounting for the costs of the procedure + clinician time\nCosts of follow-up tests for both false-positive & true positive results\nDownstream costs (or savings) associated with cases of breast cancer, including hospitalizations & treatment costs\n\n***EXAMPLE: Let’s say that we wanted to examine the difference between routine mammography screening at age 40 versus 50 – - There will be higher upfront costs for Age 40, BUT if we catch more cases of breast cancer than if we waited, then that could potentially save a lot of treatment/hospitalization costs down the line\nLISA, BOOK says AVERTED COSTS for downstream costs\n\nCosts unrelated to the medical intervention due to living longer (we will discuss in the next few slides)"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#data-collection",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#data-collection",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Data Collection",
-    "text": "Data Collection\n\n04"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#two-approaches-for-data-collection",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#two-approaches-for-data-collection",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Two Approaches for Data Collection",
-    "text": "Two Approaches for Data Collection\n\n\nApproach 1\nAlongside clinical trials\nCollect cost data directly during the trial\n\n\nApproach 2\nUsing secondary data\nLeverage existing databases, registries, and published literature\n\n\n\nInternational versus US will have different approaches"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#inflation-adjustment",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#inflation-adjustment",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Inflation Adjustment",
-    "text": "Inflation Adjustment"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#currency-conversion-basics",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#currency-conversion-basics",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Currency Conversion Basics",
-    "text": "Currency Conversion Basics\n\n\nWhen Needed\nNot required for CEA but may be useful:\n\nConvert local currency to USD for international comparisons\nCost-effectiveness thresholds often estimated in USD per DALY\n\n\n\nHow to Convert\nExample: 1,000 Philippine Peso to USD\n\nCurrent exchange rate (2026): 1 Philippine Peso = ~0.017 USD\nResult: 1,000 Peso = $16.87 USD"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#inflation-vs.-discounting",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#inflation-vs.-discounting",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Inflation vs. Discounting",
-    "text": "Inflation vs. Discounting\n\n\n\nInflation Adjustment\n\n\nWe convert PAST costs to present-day values\n\n\n\n\nDiscounting\n\n\nWe convert FUTURE costs to present-day values"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#section",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#section",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "",
-    "text": "Present Value Formula\n\n\nPV = \\frac{FV}{(1+r)^t}\nWhere:\n\nFV = future value, the nominal cost incurred in the future\nr = annual discount rate (analogous to interest rate)\nt = number of years in future when cost is incurred\n\nStandard rate: Reasonable consensus around 3% per year (may vary by country guidelines)\n\n\n\nImportant! Adjust for inflation and currency first, then discount"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#discounting-example",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#discounting-example",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Discounting Example",
-    "text": "Discounting Example\n\n\nExample Problem\n\n\nAssume in year 5, a patient develops disease, and there is a treatment cost of $500. What is the present value?\n\n\n\nSolution:\n\n\nPV = \\frac{FV}{(1+r)^t} = \\frac{500}{(1+0.03)^5} = \\$431.30"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#section-1",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#section-1",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "",
-    "text": "Key Takeaways\n\n\nCosts\n\n\n\nDifferent types of economic evaluation\n\n\nCEA uses cost-effectiveness ratios\n\n\nPerspective matters for cost inclusion\n\n\nAdjust for inflation & discount future costs"
-  },
-  {
-    "objectID": "lectures/lec_5a.cea-fundamentals1.html#questions",
-    "href": "lectures/lec_5a.cea-fundamentals1.html#questions",
-    "title": "CEA Fundamentals: Valuing Costs",
-    "section": "Questions?",
-    "text": "Questions?\n\nNext Lecture: Benefits & QALYs"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#learning-objectives-and-outline",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#learning-objectives-and-outline",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Learning Objectives and Outline",
-    "text": "Learning Objectives and Outline\n\n00"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Numerator (costs)\n\n\nValued in monetary terms\n\n\n\n\nExamples:\n\n\n$USD\n₦NGN\nKES\nR\n\n\n\n\n\n\n\\frac{\\colorbox{#CfAE70}{$C_1 - C_0 \\quad  (\\Delta C)$}}{E_1 - E_0 \\quad  (\\Delta E)}"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-1",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-1",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Denominator (benefits)\n\n\nValued in terms of clinical outcomes\n\n\n\n\nExamples:\n\n\n# of HIV cases prevented\n# of children seizure free\n# of quality-adjusted life years gained\n\n\n\n\n\n\nWhat’s important for the question at hand\nMost analyses report several different outcomes\nQALYs/DALYs enable comparability across disease areas\n\n\n\n\n\\frac{C_1 - C_0 \\quad  (\\Delta C)}{\\colorbox{#CfAE70}{$E_1 - E_0 \\quad  (\\Delta E)$}}"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#valuing-health-outcomes",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#valuing-health-outcomes",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Valuing Health Outcomes",
-    "text": "Valuing Health Outcomes\n\n01"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#intro-to-qalys",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#intro-to-qalys",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Intro to QALYs",
-    "text": "Intro to QALYs\n\n\nOrigin story: welfare economics\n\nUtility = holistic measure of satisfaction or well-being\n\nWith QALYs, two dimensions of interest:\n\n\nLength of life measured in life-years\n\n\nQuality of life  measured by utility weight, usually between 0 and 1"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-2",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-2",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "QALYs\n\n\nA metric that reflects both changes in life expectancy and quality of life (pain, function, or both).\n\n\n\nFormula:\n\n\n\nQuality Adjusted Life Years =  Sum of weight * duration of life"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-3",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-3",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Rating scales\n\n\n\nExample:\n\n\nOn a scale where 0 represents death and 100 represents perfect health, what number would you say best describes your health state over the past 2 weeks?“.\n\n\n\n\nProblem:\n\n\nIt does not have the interval property we desire. For example, a value of “90” on this scale is not necessarily twice as good as a value of “45”"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-4",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-4",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Indirect methods - EQ-5D\n\n\nSystem for describing health states\n5 domains: mobility; self-care; usual activities; pain/discomfort; and anxiety/depression\n3 levels: 243 distinct health states (e.g. 11223)\nValuations elicited through population based surveys with VAS, TTO\n\n\n\n\n\n\n\n\nIndirect utility measures map preferences onto a utility scale via a generic health-related quality of life questionnaire"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#intro-to-dalys",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#intro-to-dalys",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Intro to DALYs",
-    "text": "Intro to DALYs\n\n\nOrigin story: Global Burden of Disease Study \nDeliberately a measure of health, not welfare/utility\nWith DALYs, two dimensions of interest:\n\n\nLength of life differences in life expectancy\n\n\nQuality of life  measured by disability weight"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#dalys-formula",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#dalys-formula",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "DALYs Formula",
-    "text": "DALYs Formula"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-5",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-5",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Years of Life Lost (YLL)\n\n\nChanges in life expectancy, calculated from comparison to synthetic life table   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nProviding HIV treatment delays death from age 30 to age 50.  Life years gained = 20 years  YLL = ??"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-6",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-6",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Years of Life Lost (YLL)\n\n\nChanges in life expectancy, calculated from comparison to synthetic life table   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nProviding HIV treatment delays death from age 30 to age 50.  Life years gained = 20 years  YLL = ?? LE(50) - LE(30) = 39.6 - 59.2 = -19.6 DALYs =19.6 DALYs averted\n\nYLL (measured as DALYs averted) \\neq LYs gained!"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-7",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-7",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Years Lived with Disability (YLD)\n\n\nCalculated similar to QALYs, utility weight ≈ 1 - disability weight   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nEffective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = ?\nDisability weight (controlled asthma) = ?\n\n\n\n\n::::::::"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-8",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-8",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Years Lived with Disability (YLD)\n\n\nCalculated similar to QALYs, utility weight ≈ 1 - disability weight   DALYs = YLL + YLD\n\n\n\nExample:\n\n\nEffective asthma control for 10 years\n\nDisability weight (uncontrolled asthma) = ? 0.133\nDisability weight (controlled asthma) = ? 0.015\nYLD = (10 * 0.015) - (10 * 0.133) = -1.18 DALYs = 1.18 DALYs averted\n\n\n\n\n::::::::"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#section-9",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#section-9",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "",
-    "text": "Key Takeaways\n\n\nBenefits\n\n\n\nX\n\n\nX\n\n\nX\n\n\nX"
-  },
-  {
-    "objectID": "lectures/lec_5b.cea-fundamentals2.html#questions",
-    "href": "lectures/lec_5b.cea-fundamentals2.html#questions",
-    "title": "CEA Fundamentals: Valuing Outcomes",
-    "section": "Questions?",
-    "text": "Questions?\n\nNext Lecture: Incremental CEA"
   }
 ]
