@@ -94,10 +94,24 @@ Other Concepts in Decision Analysis
 :::
 
 ::: text
-Strengths/limitations of decision trees
+Strengths and limitations of decision trees
+:::
+:::::
+
+::::: list-item
+::: number
+06
+:::
+
+::: text
+Decision tree do’s and don’ts
 :::
 :::::
 :::::::::::::::
+
+
+
+
 
 ## The Structure of a Decision Analysis {.section-slide}
 
@@ -1296,8 +1310,13 @@ to die.
 :::
 :::
 
+## Some Do's & "Dont's {.section-slide}
 
-## Some Do's & "Dont's"
+::: section-number
+06
+:::
+
+## Some Do's & "Dont's as you think about your own trees
 <br>
 
 1. **Balance risks and benefits** <br>

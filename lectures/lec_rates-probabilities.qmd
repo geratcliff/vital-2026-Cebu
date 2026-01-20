@@ -1,0 +1,129 @@
+---
+title: "Rates & Probabilities"
+format:
+  revealjs:
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.1     # Minimal margins for max space
+    minScale: 0.2    # Allow more scaling down
+    maxScale: 2.0    # Allow more scaling up
+    center: true     # Vertically center content
+    slide-number: true
+    logo: images/logos.png 
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: |
+      [Back to Website](../index.html)
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+## Learning Objectives and Outline {.section-slide}
+
+::: section-number
+00
+:::
+
+## Learning Objectives
+
+::: arrow-bullets
+-   Differentiate between rates and probabilities
+
+-   Interpret rates and probabilities in applied examples
+
+:::
+
+## Outline {.numbered-list-slide}
+
+::::::::::::::: number-list
+::::: list-item
+::: number
+01
+:::
+
+::: text
+Probability review
+:::
+:::::
+
+::::: list-item
+::: number
+02
+:::
+
+::: text
+Rates review
+:::
+:::::
+
+::::: list-item
+::: number
+03
+:::
+
+::: text
+Rates versus probabilities
+:::
+:::::
+
+
+::::: list-item
+::: number
+04
+:::
+
+::: text
+Summary
+:::
+:::::
+
+
+::::: list-item
+::: number
+05
+:::
+
+::: text
+Identifying rates/probabilities through the literature
+:::
+:::::
+:::::::::::::::
+
+## The Structure of a Decision Analysis {.section-slide}
+
+::: section-number
+01
+:::
+
+## Recap: [Decision Analysis]{.accent-text}
+
+
+
+
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
