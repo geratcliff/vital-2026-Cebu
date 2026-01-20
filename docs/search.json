@@ -5215,63 +5215,63 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#learning-objectives",
     "title": "Decision Trees & Probabilities",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nConstruct and solve a decision problem by calculating an intervention’s expected value across competing strategies in a decision tree\nDetermine the decision threshold across a range of scenarios\nDifferentiate between joint and conditional probabilities and demonstrate their use in decision trees"
+    "text": "Learning Objectives\n\n\nConstruct and solve a decision problem by calculating an intervention’s expected value across competing strategies in a decision tree\nDetermine the decision threshold across a range of scenarios\nDifferentiate between joint and conditional probabilities and demonstrate their use in decision trees"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#outline",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#outline",
     "title": "Decision Trees & Probabilities",
     "section": "Outline",
-    "text": "Outline\n\n\n\nStructure\nProbability review\nProbabilities within decision trees\n\n\n\nStrengths/limitations of decision trees"
+    "text": "Outline\n\n\n\n01\n\n\nStructure of a Decision Analysis\n\n\n\n\n02\n\n\nDetermining the Decision Threshold\n\n\n\n\n03\n\n\nProbability Review\n\n\n\n\n04\n\n\nOther Concepts in Decision Analysis\n\n\n\n\n05\n\n\nStrengths/limitations of decision trees"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#recap-decision-analysis",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#recap-decision-analysis",
     "title": "Decision Trees & Probabilities",
     "section": "Recap: Decision Analysis",
-    "text": "Recap: Decision Analysis\n\n\nAims to inform choice under uncertainty using an explicit, quantitative approach\nAims to identify, measure, & value the consequences of decisions (risks/benefits) & uncertainty when a decision needs to be made, most appropriately over time"
+    "text": "Recap: Decision Analysis\n\n\nAims to inform choice under uncertainty using an explicit, quantitative approach\n\n\nAims to identify, measure, & value the consequences of decisions (risks/benefits) & uncertainty when a decision needs to be made, most appropriately over time"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-1",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-1",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nPossible States of the World:\n\nAt the beach with no rain.\nAt the beach with rain.\nAt home with no rain.\nAt home with rain."
+    "text": "Should I go to the beach or stay home?\n\nPossible States of the World:\n\n\n\n\nAt the beach with no rain.\n\n\n\n\n\nAt the beach with rain.\n\n\n\n\n\nAt home with no rain.\n\n\n\n\n\nAt home with rain."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-2",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-2",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nConsiderations:\n\nLikelihood of rain\nMy overall well being when\n\nAt the beach with no rain.\nAt the beach with rain.\nAt home with no rain.\nAt home with rain."
+    "text": "Should I go to the beach or stay home?\n\nConsiderations:\n\n\n\nProbabilities\n\n\n\nLikelihood of Rain\n\n\n\n\nPayoff\n\n\n\nMy overall well being in each state."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-3",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-3",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nConsiderations:\n\nLikelihood of rain –&gt; probabilities\nMy overall well being when\n\nAt the beach with no rain.\nAt the beach with rain.\nAt home with no rain.\nAt home with rain."
+    "text": "Should I go to the beach or stay home?\n\nConsiderations:\n\n\nProbabilities\n\n\nLikelihood of Rain\n\n\n\n\nPayoff\n\n\nMood when it is sunny at the beach\n\n\n\nPayoff\n\n\nMood when it is raining at the beach\n\n\n\nPayoff\n\n\nMood when it is sunny at home\n\n\n\nPayoff\n\n\nMood when it is raining at home"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-4",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-4",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nConsiderations:\n\nLikelihood of rain –&gt; probabilities\nMy overall well being when\n\nAt the beach with no rain. –&gt; payoff\nAt the beach with rain. –&gt; payoff\nAt home with no rain. –&gt; payoff\nAt home with rain. –&gt; payoff"
+    "text": "Should I go to the beach or stay home?\n\nDecision Tree:\n\n\n\n\n\n\n\nThe outcomes we care about for this model are RAIN versus NO RAIN, so we add that to the end of our branches, which represent the terminal nodes – or the end states of our model"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#decision-trees",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#decision-trees",
     "title": "Decision Trees & Probabilities",
     "section": "Decision Trees",
-    "text": "Decision Trees\n\n\n\nA square decision node indicates a decision point between alternative options.\nA circular chance node shows a point where two or more alternative events for a patient are possible."
+    "text": "Decision Trees\n\n\n\n\nSquare decision node\n\n\n\nIndicates a decision point between alternative options\n\n\n\n\n\n\n\n\n\n\nCircular Chance Node\n\n\n\nShows a point where two or more alternative events for a patient are possible\n\n\n\n\n\n\n\n\n\n\nWe start with a decision node – which just visually shows the decision point (so no probabilities are attached here)\nFrom our decision node, we would then want to create chance nodes, or probability nodes, to model out the probabilities of our different options\nThe corresponding events from the chance nodes need to sum to 1 as per the “law of total probability”"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#decision-trees-1",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#decision-trees-1",
     "title": "Decision Trees & Probabilities",
     "section": "Decision Trees",
-    "text": "Decision Trees\n\n\n\nA square decision node indicates a decision point between alternative options.\nA circular chance node shows a point where two or more alternative events for a patient are possible.\n\n\n\n\n\n\nWe start with a decision node – which just visually shows the decision point (so no probabilities are attached here)\nFrom our decision node, we would then want to create chance nodes, or probability nodes, to model out the probabilities of our different options\nThe corresponding events from the chance nodes need to sum to 1 as per the “law of total probability”"
+    "text": "Decision Trees\n\n\n\nPathways are mutually exclusive sequences of events and are the routes through the tree.\nProbabilities show the likelihood of particular event occurring at a chance node."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#decision-trees-2",
@@ -5285,21 +5285,21 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-5",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nDecision Tree:\n\n\n\nThe outcomes we care about for this model are RAIN versus NO RAIN, so we add that to the end of our branches, which represent the terminal nodes – or the end states of our model"
+    "text": "Should I go to the beach or stay home?\n\nDecision Tree:\n\n\n\n\n\n\n\nThe probability of rain is 30% - whether you stay home or go to the beach & we know that the branches have to add to 1 because of the law of total probability\n\nHowever, we aren’t done yet, as ***It would be helpful if we had some way to VALUE the outcomes – in terms of say, rain at the beach, versus if it rained at home, etc.\n**If you don’t place value on the different outcomes, then we are essentially saying that we value RAIN versus NO RAIN the same among the beach and home options\nBut if I had to guess, this probably isn’t true unless you’re the type of person that likes rain at the beach just as much as rain at home)"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-6",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-6",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nDecision Tree:\n\n\n\nThe probability of rain is 30% - whether you stay home or go to the beach & we know that the branches have to add to 1 because of the law of total probability\n\nHowever, we aren’t done yet, as ***It would be helpful if we had some way to VALUE the outcomes – in terms of say, rain at the beach, versus if it rained at home, etc.\n**If you don’t place value on the different outcomes, then we are essentially saying that we value RAIN versus NO RAIN the same among the beach and home options\nBut if I had to guess, this probably isn’t true unless you’re the type of person that likes rain at the beach just as much as rain at home)"
+    "text": "Should I go to the beach or stay home?\n\nPayoffs\n\n\n\n\n\n\n\n\n\nScenario\nPayoff\n\n\n\n\n At beach, no rain\n1.0\n\n\n At beach, rain ↓\n0.4\n\n\n At home, no rain ↑\n0.8\n\n\n At home, rain ↑\n0.6\n\n\n\n\n\n\n\n\n\n\n\n\nScenario\nPayoff\n\n\n\n\n At beach, no rain BEST\n1.0\n\n\n At home, no rain\n0.8\n\n\n At home, rain\n0.6\n\n\n At beach, rain WORSE\n0.4\n\n\n\n\n\n\n\nWe will get into this down the line, but utilities are measured between 0 and 1.\nFor health states, for example, 0 = worst health & 1 = perfect health\nHere, we are valuing “beach, no rain” as the “most ideal state” we want to be in"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-7",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-7",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nPayoffs\n\n\n\nScenario\nPayoff\n\n\n\n\nAt beach, no rain\n1.0\n\n\nAt beach, rain\n0.4\n\n\nAt home, no rain\n0.8\n\n\nAt home, rain\n0.6\n\n\n\n\nAt beach, no rain &gt; At home, no rain &gt; At home, rain &gt; At beach, rain\n\n\n\nWe will get into this down the line, but utilities are measured between 0 and 1.\nFor health states, for example, 0 = worst health & 1 = perfect health\nHere, we are valuing “beach, no rain” as the “most ideal state” we want to be in"
+    "text": "Should I go to the beach or stay home?\n\nDecision Tree:"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-8",
@@ -5313,14 +5313,14 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#what-is-the-expected-value-of-going-to-the-beach",
     "title": "Decision Trees & Probabilities",
     "section": "What is the expected value of going to the beach?",
-    "text": "What is the expected value of going to the beach?\n\n\n\\color{green}{0.82} = \\underbrace{\\color{red}{0.3} * \\color{blue}{0.4}}_{\\text{Rain}} + \\underbrace{\\color{red}{0.7} * \\color{blue}{1.0}}_{\\text{No Rain}}\n\nProbabilities in red.\nPayoffs in blue.\nExpected value in green."
+    "text": "What is the expected value of going to the beach?\n\n\n\\(\\color{green}{0.82} = \\underbrace{\\color{red}{0.3} * \\color{blue}{0.4}}_{\\text{Rain}} + \\underbrace{\\color{red}{0.7} * \\color{blue}{1.0}}_{\\text{No Rain}}\\)\n\nProbabilities in red.\nPayoffs in blue.\nExpected value in green."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#what-is-the-expected-value-of-staying-home",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#what-is-the-expected-value-of-staying-home",
     "title": "Decision Trees & Probabilities",
     "section": "What is the expected value of staying home?",
-    "text": "What is the expected value of staying home?\n\n\n\\color{green}{0.74} = \\underbrace{\\color{red}{0.3} \\cdot \\color{blue}{0.6}}_{\\text{Rain}} + \\underbrace{\\color{red}{0.7} \\cdot \\color{blue}{0.8}}_{\\text{No Rain}}\n\nProbabilities in red.\nPayoffs in blue.\nExpected value in green."
+    "text": "What is the expected value of staying home?\n\n\n\\(\\color{green}{0.74} = \\underbrace{\\color{red}{0.3} \\cdot \\color{blue}{0.6}}_{\\text{Rain}} + \\underbrace{\\color{red}{0.7} \\cdot \\color{blue}{0.8}}_{\\text{No Rain}}\\)\n\nProbabilities in red.\nPayoffs in blue.\nExpected value in green."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#expected-values",
@@ -5340,106 +5340,106 @@
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\n\nSuppose we want to know at what probability of rain p we are indifferent between going to the beach vs. staying at home…\n\n\nWrite the equation for each choice using a variable, p, for the probability in question\nSet the equations equal to to one other and solve for p."
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\n\nSuppose we want to know at what probability of rain \\(p\\) we are indifferent between going to the beach vs. staying at home…\n\n\n\n\nWrite the equation for each choice using a variable, p, for the probability in question\nSet the equations equal to to one other and solve for p."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-1",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-1",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\nBeach: 0.82 = 0.3 x 0.4 + 0.7 x 1.0\nHome: 0.74 = 0.3 x 0.6 + 0.7 x 0.8"
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\nBeach: 0.82 = 0.3 x 0.4 + 0.7 x 1.0\nHome: 0.74 = 0.3 x 0.6 + 0.7 x 0.8"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-2",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-2",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\n\\underbrace{0.3 * 0.4 + 0.7 * 1.0}_{\\text{Beach}} = \\underbrace{0.3 * 0.6 + 0.7 * 0.8}_{\\text{Home}}"
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\n\\(\\underbrace{0.3 * 0.4 + 0.7 * 1.0}_{\\text{Beach}} = \\underbrace{0.3 * 0.6 + 0.7 * 0.8}_{\\text{Home}}\\)"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-3",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-3",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\nReplace probability of rain with P and 1-P and solve for “P”\n\np * 0.4 + (1-p) * 1.0 = p * 0.6 + (1-p) * 0.8\n\n\\underbrace{0.3 * 0.4 + 0.7 * 1.0}_{\\text{Beach}} = \\underbrace{0.3 * 0.6 + 0.7 * 0.8}_{\\text{Home}}"
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\nReplace probability of rain with P and 1-P and solve for “P”\n\np * 0.4 + (1-p) * 1.0 = p * 0.6 + (1-p) * 0.8\n\n\\(\\underbrace{0.3 * 0.4 + 0.7 * 1.0}_{\\text{Beach}} = \\underbrace{0.3 * 0.6 + 0.7 * 0.8}_{\\text{Home}}\\)"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-4",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-4",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\np * 0.4 + (1-p) * 1.0 = p * 0.6 + (1-p) * 0.8"
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\np * 0.4 + (1-p) * 1.0 = p * 0.6 + (1-p) * 0.8"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-5",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-5",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\np * 0.4 + (1-p) * 1.0 = p * 0.6 + (1-p) * 0.8\n\n0.4p + 1-p = 0.6p + 0.8 - 0.8p\n1-0.6p = 0.8 - 0.2p\n1-0.8 = 0.6p - 0.2p\n0.2 = 0.4 * p\n0.5 = p"
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\np * 0.4 + (1-p) * 1.0 = p * 0.6 + (1-p) * 0.8\n\n0.4p + 1-p = 0.6p + 0.8 - 0.8p\n1-0.6p = 0.8 - 0.2p\n1-0.8 = 0.6p - 0.2p\n0.2 = 0.4 * p\n0.5 = p"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-6",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p-are-the-two-choices-equal-6",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability p are the two choices equal?",
-    "text": "At what probability p are the two choices equal?\n\nWhen the probability of rain is 50% at BOTH the beach and home, given how we weighted the outcomes, going to the beach would be the same as staying at home\n\n\n\nIn other words, you would be indifferent between the two – staying at home or going to the beach"
+    "section": "At what probability \\(p\\) are the two choices equal?",
+    "text": "At what probability \\(p\\) are the two choices equal?\nWhen the probability of rain is 50% at BOTH the beach and home, givenhow we weighted the outcomes, going to the beach would be the same as staying at home\n\n\nIn other words, you would be indifferent between the two – staying at home or going to the beach"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-1",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-1",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\n\n\nEarlier, we solved for the expected payoff of remaining at home: 0.74 (which was a lower expected value than going to the beach when the chance of rain at both was 30%) \nWhat would p_B need to be to yield an expected payoff at the beach of 0.74?\n\nIn other words, at what probability of rain at the beach would you be indifferent between staying at home & going to the beach?\n\n\n\n\n\nNow, let’s ask a slightly different question – At what probabiility….\nLet’s now assume that the probability of rain for the HOME option does not change (so stays at 0.3)\nKEY DIFFERENCE FROM THE LAST EXAMPLE: In the last example, the probabilities were the same & we wanted to get our threshold of indifference between the beach and staying at home\n**Now we are assuming that there’s still a probability of 30% that it rains if you stay home, but at what probability of rain at the beach would you be indifferent between the two options? (Since we CHOSE BEACH when the probabilities both equaled 30%)\n\n\nIn other words, at what probability of RAIN AT THE BEACH would you be indifferent between the beach & home"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?\nEarlier, we solved for the expected payoff of remaining at home:\n0.74 (which was a lower expected value than going to the beach when the chance of rain at both was 30%)\n\n\n\nWhat would \\(p_B\\) need to be to yield an expected payoff at the beach of 0.74?\nIn other words, at what probability of rain at the beach would you be indifferent between staying at home & going to the beach?\n\n\n\n\n\nNow, let’s ask a slightly different question – At what probabiility….\nLet’s now assume that the probability of rain for the HOME option does not change (so stays at 0.3)\nKEY DIFFERENCE FROM THE LAST EXAMPLE: In the last example, the probabilities were the same & we wanted to get our threshold of indifference between the beach and staying at home\n**Now we are assuming that there’s still a probability of 30% that it rains if you stay home, but at what probability of rain at the beach would you be indifferent between the two options? (Since we CHOSE BEACH when the probabilities both equaled 30%)\n\n\nIn other words, at what probability of RAIN AT THE BEACH would you be indifferent between the beach & home"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-2",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-2",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\n\nSet 0.74 (expected value of remaining at home) equal to the beach payoffs and solve for p_B\n\npB * 0.4 + (1 - pB) * 1.0 = 0.74"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?\n\nSet 0.74 (expected value of remaining at home) equal to the beach payoffs and solve for \\(p_B\\)\n\npB * 0.4 + (1 - pB) * 1.0 = 0.74"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-3",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-3",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\n\npB * 0.4 + (1 - pB) * 1.0 = 0.74\n\npB * 0.4 + 1 - pB = 0.74"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?\n\npB * 0.4 + (1 - pB) * 1.0 = 0.74\n\n\npB * 0.4 + 1 - pB = 0.74"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-4",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-4",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\npB * -0.6 = -0.26"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?\n\npB * -0.6 = -0.26"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-5",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-5",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\npB = -0.26 / -0.6 = 0.43"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?\n\npB = -0.26 / -0.6 = 0.43"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-6",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-6",
     "title": "Decision Trees & Probabilities",
-    "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\n\nWhen the probability of rain at the beach is 43% (probability of rain at home remains at 30%), we would be indifferent between staying at home & going to the beach.\n\n\nIf the probability of rain at the beach in &gt; 43%, then we would stay home"
+    "section": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?",
+    "text": "At what probability (\\(p_B\\)) of rain for the beach are you indifferent between the two options?\nWhen the probability of rain at the beach is 43% (probability of rain at home remains at 30%), we would be indifferent between staying at home & going to the beach.\n\n\nIf the probability of rain at the beach in &gt;43%, then we would stay home"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#probabilities-within-decision-trees",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#probabilities-within-decision-trees",
     "title": "Decision Trees & Probabilities",
     "section": "Probabilities within Decision Trees",
-    "text": "Probabilities within Decision Trees\nMutually exclusive events\n\n2 things that cannot occur together (one event cannot occur at the same time as the other event)\n\nExample: 2 events, survive or die; mutually exclusive because a person cannot be both at the same time\nExample: 2 events, cured or not cured"
+    "text": "Probabilities within Decision Trees\n\n\nJoint probability\n\n\nP(A and B): The probability of two events occurring at the same time.\n\n\n\n\nConditional probability\n\n\nP(A|B): The probability of an event A given that an event B is known to have occurred."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#probabilities-within-decision-trees-1",
@@ -5467,14 +5467,14 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#probabilities",
     "title": "Decision Trees & Probabilities",
     "section": "Probabilities",
-    "text": "Probabilities\n\nMoving from left to right, the first probabilities in the tree show the probability of an event.\nSubsequent probabilities are conditional.\n\nThe probability of an event given that an earlier event did or did not occur.\n\nMultiplying probabilities along pathways estimates the pathway probability, which is a joint probability."
+    "text": "Probabilities\n\n\n\nMoving from left to right, the first probabilities in the tree show the probability of an event.\nSubsequent probabilities are conditional. The probability of an event given that an earlier event did or did not occur.\nMultiplying probabilities along pathways estimates the pathway probability, which is a joint probability.\n\n\n\n\nDecision Tree"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#pathways",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#pathways",
     "title": "Decision Trees & Probabilities",
     "section": "Pathways",
-    "text": "Pathways\n\n\nPathways = sequence of events that lead to a subsequent “pay off”\nIn other words, a sequence of events leads to an outcome/consequence, or payoff\nExample below: Our beach example has 4 pathways."
+    "text": "Pathways\n\n\n\nPathway A: This person goes to the beach but it rains\n\n\n\nPathway B: This person goes to the beach but there is no rain"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#pathways-1",
@@ -5495,14 +5495,14 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-2x2-review",
     "title": "Decision Trees & Probabilities",
     "section": "Conditional probability, 2x2 review",
-    "text": "Conditional probability, 2x2 review\n\nWhat is the conditional probability of death within a year of birth, given the infant has a mother who smokes?\n\n*A= death in first year; B=mother who smokes\nP(A|B) = 16,712 / (1,197,142 + 16,712)  = 14 per 1,000 births"
+    "text": "Conditional probability, 2x2 review\n\nWhat is the conditional probability of death within a year of birth, given the infant has a mother who smokes?\n\n\n\nP(A|B)  = P(death in first year | mother who smokes)  = 16,712 / (1,197,142 + 16,712)  = 14 per 1,000 births"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-2x2-review-1",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-2x2-review-1",
     "title": "Decision Trees & Probabilities",
     "section": "Conditional probability, 2x2 review",
-    "text": "Conditional probability, 2x2 review\n\nOr, if we wanted to use the conditional probability equation\n\nP(A|B) = P(A and B)/P(B)  *A= death in first year; B=mother who smokes \nP(A and B) = 16,712 / 4,111,059 = 0.0041  P(B) = 1,213,854/4,111,059 = 0.295  P(A|B) = 0.0041/0.295 = 0.014"
+    "text": "Conditional probability, 2x2 review\nOr, if we wanted to use the conditional probability equation\n\n\nP(A|B) = P(A and B)/P(B)  *A= death in first year; B=mother who smokes \nP(A and B) = 16,712 / 4,111,059 = 0.0041  P(B) = 1,213,854/4,111,059 = 0.295  P(A|B) = 0.0041/0.295 = 0.014"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-2x2-review-2",
@@ -5544,7 +5544,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#decision-philosophies",
     "title": "Decision Trees & Probabilities",
     "section": "Decision Philosophies",
-    "text": "Decision Philosophies\n\n\n\n\n\n\nMaximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual.\n\n\n\n\nMini-max regret\nMaxi-max\nExpected utility"
+    "text": "Decision Philosophies\n\nMaximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual.\n\n\n\n\nMini-max regret\n\n\n\nNever go to the beach unless 0% rain.\n\n\n\n\n\nMaxi-max\n\n\n\nAlways go to the beach unless 100% rain.\n\n\n\n\n\nExpected utility\n\n\n\nDepends on the weather.\n\n\n\n\n\n\nLet’s quickly touch on decision philosophies when it comes to preference weighting. There are different levels of risk aversion & there are different decision philosophies for these behaviors\nMini-max regret philosophy essentially means that you would never go to the beach unless there was 0% rain\n\n\nFor instance, physicians may be risk averse & therefore minimize max regret\n\n(3)(a) Maxi-max gain is the reverse – where you would always go to the beach unless there was 100% rain – you are risk seeking – you love the beach so much that you’re going to give it a try.\n(3)(b) Another example of this in a medical context – is the desperate patient example – you’re going to die anyways, so we are going to give you this treatment, but it has nasty side effects – cancer – chemotherapies – even bone marrow transplants, 2nd or third line – a high probability of bad outcome but if you do nothing then you’re going to die.\n\nIf you’re going to base your decision on expected utility, then your decision depends on the weather & how much value you give to certain outcomes – this is the rationale thinker approach – how much you value sitting at home weighed by the utility loss of not having the beach experience, for example."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#decision-philosophies-1",
@@ -5572,7 +5572,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#payoffs-1",
     "title": "Decision Trees & Probabilities",
     "section": "Payoffs",
-    "text": "Payoffs\n\nEach state of the world is assigned a cost or outcome.\nOur goal is often to calculate the expected value of these payoffs.\nWe’ll cover more on the theories and frameworks underlying various payoffs in the next few lectures"
+    "text": "Payoffs\n\n\nEach state of the world is assigned a cost or outcome.\nOur goal is often to calculate the expected value of these payoffs.\n\n\nWe’ll cover more on the theories and frameworks underlying various payoffs in the next few lectures"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#strengths",
@@ -5593,7 +5593,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#preview-of-whats-to-come",
     "title": "Decision Trees & Probabilities",
     "section": "Preview of what’s to come",
-    "text": "Preview of what’s to come\n\n\n\nMore complex tree!"
+    "text": "Preview of what’s to come\nMore complex trees!"
   },
   {
     "objectID": "lectures/lec_3a.bayes-probrevision.html#learning-objectives",
@@ -6721,5 +6721,166 @@
     "title": "Structuring a Markov Model",
     "section": "Tunnel States: Healthy, Sick, Dead",
     "text": "Tunnel States: Healthy, Sick, Dead\n\nIf we run out the Markov trace for five cycles, here are the results.\n\n\n\n\n\n\n\ncycle\nH\nS1\nS2\nS\nS_total\nD\n\n\n\n\n0\n1000\n0\n0\n0\n0\n0\n\n\n1\n960\n30\n0\n0\n30\n10\n\n\n2\n922\n29\n28\n0\n57\n22\n\n\n3\n885\n28\n26\n26\n80\n35\n\n\n4\n849\n27\n25\n50\n102\n49\n\n\n5\n815\n25\n24\n72\n121\n63"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#learning-objectives-and-outline",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#learning-objectives-and-outline",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "00"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#the-structure-of-a-decision-analysis",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#the-structure-of-a-decision-analysis",
+    "title": "Decision Trees & Probabilities",
+    "section": "The Structure of a Decision Analysis",
+    "text": "The Structure of a Decision Analysis\n\n01"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#probability-of-rain-30",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#probability-of-rain-30",
+    "title": "Decision Trees & Probabilities",
+    "section": "Probability of rain = 30%",
+    "text": "Probability of rain = 30%"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#section",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#section",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "Beach\n\n\nEV(Beach)=0.82 &gt; EV(Home)=0.74"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#section-1",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#section-1",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "Expected Values\n\n\n\nThe expected value within the context of decision trees are the “payoffs” weighted by their preceding probabilities\nWhat we get is: the result that is expected ON AVERAGE for any one decision alternative (e.g. length of life, quality of life, lifetime costs)\n\n\n\n\nExample:\n\n\nOn average, patients given Treatment A will live 0.30 years longer than patients given Treatment B\n\n\n\n\n\n\n\n\n\nMaximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#determining-the-decision-threshold",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#determining-the-decision-threshold",
+    "title": "Decision Trees & Probabilities",
+    "section": "Determining the Decision Threshold",
+    "text": "Determining the Decision Threshold\n\n02"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#probability-review",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#probability-review",
+    "title": "Decision Trees & Probabilities",
+    "section": "Probability Review",
+    "text": "Probability Review\n\n03"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#section-2",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#section-2",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "Mutually exclusive events\n\n\n2 things that cannot occur together (one event cannot occur at the same time as the other event)\n\n\n\nExamples:\n\n\n\n2 events – survive or die\n2 events – cured or not cured"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#mutually-exclusive-events-in-decision-trees",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#mutually-exclusive-events-in-decision-trees",
+    "title": "Decision Trees & Probabilities",
+    "section": "Mutually exclusive events in Decision Trees",
+    "text": "Mutually exclusive events in Decision Trees"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#mutually-exclusive-events",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#mutually-exclusive-events",
+    "title": "Decision Trees & Probabilities",
+    "section": "Mutually exclusive events",
+    "text": "Mutually exclusive events\nAssuming events are mutually exclusive, then the probability of 2 events occurring is the sum of the probability of each event occurring individually\n\n\\[\nP(A or B) = P(A) + P(B)\n\\]"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#section-4",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#section-4",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "Pathways\n\n\nA sequence of events that lead to a subsequent “pay off” In other words, a sequence of events leads to an outcome/consequence, or payoff.\n\n\n\nExample:\n\n\nOur beach example has 4 pathways; At home with sun, at home with rain, at the beach with sun, and at the beach with rain."
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#section-5",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#section-5",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "Conditional probability\n\n\nProbability of an event occurring (B) given that another event occurred (A) \\[\nP(A|B) = P(A and B) / P(B)\n\\]\n\n\n\nExample:\n\n\nWhat is the conditional probability of death within a year of birth, given the infant has a mother who smokes?"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba",
+    "title": "Decision Trees & Probabilities",
+    "section": "Conditional probability, A|B vs B|A",
+    "text": "Conditional probability, A|B vs B|A\n\nProbability of A|B is different from that of B|A\n\n\n\nIf A = death in first year; B=normal birth weight infant, then the conditional probability of P(A|B) = the probability of an infant death, given that the child has a normal birth weight"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-1",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-1",
+    "title": "Decision Trees & Probabilities",
+    "section": "Conditional probability, A|B vs B|A",
+    "text": "Conditional probability, A|B vs B|A\n\nWhat is the conditional probability of an infant death, given that the child has a normal birth weight?\n\n\n\nIf A = death in first year; B=normal birth weight infant \nP(A|B)  = 14,442 / (14,442+ 3,804,294)  = 3.8 deaths per 1,000 births"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-2",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-2",
+    "title": "Decision Trees & Probabilities",
+    "section": "Conditional probability, A|B vs B|A",
+    "text": "Conditional probability, A|B vs B|A\nOr, if we wanted to use the conditional probability equation\n\n\nP(A|B) = P(A and B)/P(B) \nP(A and B) = 14,442  P(B)= 3,818,736  P(A|B) = 14,442/3,818,736 = 0.0038\n* A= death in first year; B=normal birth weight infant"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-3",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-3",
+    "title": "Decision Trees & Probabilities",
+    "section": "Conditional probability, A|B vs B|A",
+    "text": "Conditional probability, A|B vs B|A\n\n\nOn the other hand, the conditional probability of P(B|A) is the probability that an infant had normal birth weight, given that the infant died within 1 year from birth\n*B=normal birth weight infant; A = death in first year"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-4",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#conditional-probability-ab-vs-ba-4",
+    "title": "Decision Trees & Probabilities",
+    "section": "Conditional probability, A|B vs B|A",
+    "text": "Conditional probability, A|B vs B|A\n\nProbability of A|B is 3.8 deaths per 1,000 births\n\n\n\nSolve P(B|A) – the probability that an infant had normal birthweight, given that the infant died within 1 year from birth\nP(B|A) = 14,442 / (14,442+ 21,054)  = 0.41\n4.1 normal birthweights of 1,000 baby deaths within 1 year from birth\n*B=normal birth weight infant; A = death in first year"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#other-concepts-in-decision-analysis",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#other-concepts-in-decision-analysis",
+    "title": "Decision Trees & Probabilities",
+    "section": "Other Concepts in Decision Analysis",
+    "text": "Other Concepts in Decision Analysis\n\n04"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#strengthslimitations-of-decision-trees",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#strengthslimitations-of-decision-trees",
+    "title": "Decision Trees & Probabilities",
+    "section": "Strengths/limitations of decision trees",
+    "text": "Strengths/limitations of decision trees\n\n05"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#strengthslimitations-of-decision-trees-1",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#strengthslimitations-of-decision-trees-1",
+    "title": "Decision Trees & Probabilities",
+    "section": "Strengths/limitations of decision trees",
+    "text": "Strengths/limitations of decision trees\n\n\n\nStrengths\n\n\n\nThey are easy to describe and understand\nWorks well with limited time horizon\nDecision trees are a powerful framework for analyzing decisions and can provide rapid/useful insights, but they have limitations.\n\n\n\n\n\nLimitations\n\n\n\nNo explicit accounting for the elapse of time.\n\nRecurrent events must be separately built into model.\nFine for short time cycles (e.g., 12 months) but we often want to model over a lifetime.\n\nDifficult to incorporate real clinical detail - Tree structure can quickly become complex."
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#section-6",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#section-6",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "Key Takeaways\n\n\nDecision Trees\n\n\n\n\nPoint 1\nPoint 2"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#questions",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#questions",
+    "title": "Decision Trees & Probabilities",
+    "section": "Questions?",
+    "text": "Questions?\n\nNext: CEA Fundamentals 1: Costs"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html",
+    "title": "Decision Trees & Probabilities",
+    "section": "",
+    "text": "00"
   }
 ]
