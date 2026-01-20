@@ -283,8 +283,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-bubble-diagram-tool" id="toc-use-bubble-diagram-tool" class="nav-link active" data-scroll-target="#use-bubble-diagram-tool">Use Bubble Diagram Tool</a></li>
+  <li><a href="#use-bubble-diagram-tool" id="toc-use-bubble-diagram-tool" class="nav-link active" data-scroll-target="#use-bubble-diagram-tool">Use Bubble Diagram Tool</a>
+  <ul class="collapse">
+  <li><a href="#a-add-the-health-states" id="toc-a-add-the-health-states" class="nav-link" data-scroll-target="#a-add-the-health-states">A: Add the Health States</a></li>
+  <li><a href="#b-define-the-transitions" id="toc-b-define-the-transitions" class="nav-link" data-scroll-target="#b-define-the-transitions">B: Define the Transitions</a></li>
+  <li><a href="#c-generate-the-model" id="toc-c-generate-the-model" class="nav-link" data-scroll-target="#c-generate-the-model">C: Generate the Model</a></li>
+  </ul></li>
   <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a></li>
+  <li><a href="#uploading-a-table" id="toc-uploading-a-table" class="nav-link" data-scroll-target="#uploading-a-table">Uploading a Table</a></li>
   <li><a href="#adjusting-to-match-strategy" id="toc-adjusting-to-match-strategy" class="nav-link" data-scroll-target="#adjusting-to-match-strategy">Adjusting to match strategy</a></li>
   </ul>
 </nav>
@@ -355,8 +361,8 @@ ul.task-list li input[type="checkbox"] {
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
@@ -372,12 +378,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>By the end of this session, participants will be able to:</p>
 <ol type="1">
-<li></li>
+<li><p>Create a visualization of the model using the Bubble Diagram tool</p></li>
+<li><p>Build and structure a Markov model in Amua to represent clinical decision problems.</p></li>
+<li><p>Evaluate model outcomes for alternative clinical strategies.</p></li>
+<li><p>Add and compare multiple strategies (e.g., diagnostic testing options) in a single decision framework.</p></li>
 </ol>
 </div>
 </div>
 <p>The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.</p>
-<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.</p>
+<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if: - There is a small percentage of people that can get sick again - The data does not exist for “Life Years Gained”.</p>
+<p>A Markov Model will allow us to cleanly integrate this into our model.</p>
 <div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -391,15 +401,75 @@ ul.task-list li input[type="checkbox"] {
 <p>The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.</p>
 </div>
 </div>
-<p>To help visualize how this will work, here is a bubble diagram</p>
-<p>As shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.</p>
-<p>DECIDE WHAT WE WANT TO PROVIDE THEM</p>
+<p>More Background on Disease X: After the initial treatment has happened at 50 years old, it cannot be repeated. The small percentage of individuals that get sick again will just get the palliative care that is currently provided. They will not be able to heal but will remain sick until death. Both all-cause deaths and disease deaths will be in the death state.</p>
+<p><strong>NOTE:</strong> For simplicity, we will be dropping the screening strategy from the exercise. A version with screening will be added for reviewing.</p>
 <section id="use-bubble-diagram-tool" class="level1">
 <h1>Use Bubble Diagram Tool</h1>
-<p><img src="images/simpleMarkov/SimpleBubble.png" class="img-fluid"></p>
+<p>We will keep the decision tree for the one time treatment. The Markov Model will capture individuals healing, getting sick again, and dying.</p>
+<div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Your Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Create a bubble diagram for Disease X using the <a href="https://geratcliff.shinyapps.io/bubble_tool/" target="_blank">Bubble Diagram Tool</a></p>
+</div>
+</div>
+<details>
+<summary style="color: orange;">
+<p>More assistance with step</p>
+</summary>
+<p style="color: black;">
+</p><section id="a-add-the-health-states" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-the-health-states">A: Add the Health States</h3>
+<p>In the Bubble Diagram tool:</p>
+<ol type="1">
+<li>Type the name of the state into the “State Name” text box on the left side bar.</li>
+<li>Click “Add State”</li>
+</ol>
+<p><img src="images/simpleMarkov/BubbleToolAddState.png" class="img-fluid"> 3. Repeat for all the states</p>
+<p>You should get:</p>
+<p><img src="images/simpleMarkov/BubbleToolAllStates.png" class="img-fluid"></p>
 </section>
+<section id="b-define-the-transitions" class="level3">
+<h3 class="anchored" data-anchor-id="b-define-the-transitions">B: Define the Transitions</h3>
+<p>You need to select where transitions between states are possible. This also includes the ability to return to a current state.</p>
+<ol type="1">
+<li>On the main screen you should see the transition matrix</li>
+</ol>
+<p><img src="images/simpleMarkov/BubbleToolTableEmpty.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Click on the box (<img src="images/simpleMarkov/BubbleToolCheck.png" class="img-fluid">) within the cell to allow a transition between the two states</li>
+</ol>
+<p><img src="images/simpleMarkov/BubbleToolTable.png" class="img-fluid"> 3. Repeat for all possible transitions.</p>
+</section>
+<section id="c-generate-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="c-generate-the-model">C: Generate the Model</h3>
+<p>Once you have added all the possible transitions. Click the “Generate Diagram” Button on the left side bar (you may need to scroll down to see the button).</p>
+<p><img src="images/simpleMarkov/BubbleToolGenerate.png" class="img-fluid"></p>
+<p>Then click to the “Bubble Diagram” tab to see your diagram</p>
+<p><strong>Note:</strong> You can download your diagram from the “Bubble Diagram” tab. You do not need to for this model but you will for your capstone if you are doing a Markov Model.</p>
+<p></p>
+</section></details>
+<details>
+<summary style="color: green; font-size: 4vh;">
+<p>Check your Bubble Diagram</p>
+</summary>
+<p style="color: black;">
+</p><p><img src="images/simpleMarkov/BubbleToolFinal.png" class="img-fluid"></p>
+<p></p>
+</details>
+</section>
+
 <section id="starting-probabilities" class="level1">
 <h1>Starting Probabilities</h1>
+</section>
+<section id="uploading-a-table" class="level1">
+<h1>Uploading a Table</h1>
 </section>
 <section id="adjusting-to-match-strategy" class="level1">
 <h1>Adjusting to match strategy</h1>
@@ -414,7 +484,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>What is the ICER of the strategy you would choose?</strong></p>
-<p>Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="check3">Check</button> <span id="feedback3" style="margin-left:0.5rem;"></span></p>
+<p>Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="check3">Check</button></p>
 <script>
 (function() {
   // Set the correct value and tolerance

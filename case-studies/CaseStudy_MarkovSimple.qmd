@@ -47,8 +47,8 @@ title: "Case Study - Markov Simple"
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
@@ -59,12 +59,25 @@ title: "Case Study - Markov Simple"
 
 By the end of this session, participants will be able to:
 
-1.  
+1.  Create a visualization of the model using the Bubble Diagram tool 
+
+2.  Build and structure a Markov model in Amua to represent
+    clinical decision problems.
+    
+3.  Evaluate model outcomes for alternative clinical strategies.
+
+4.  Add and compare multiple strategies (e.g., diagnostic testing
+    options) in a single decision framework.
 :::
 
 The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.
 
-In our decision tree, we have a one time screening and calculations for if someone gets sick. However, people will heal at different time points. We can use a Markov Model to capture this.
+In our decision tree, we have a one time screening and calculations for if someone gets sick. 
+However, what if:
+-  There is a small percentage of people that can get sick again
+-  The data does not exist for "Life Years Gained". 
+
+A Markov Model will allow us to cleanly integrate this into our model. 
 
 ::: {.callout .fill-box .why-box}
 ## Why are we doing this?
@@ -72,33 +85,114 @@ In our decision tree, we have a one time screening and calculations for if someo
 The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.
 :::
 
-To help visualize how this will work, here is a bubble diagram
+
+More Background on Disease X: 
+After the initial treatment has happened at 50 years old, it cannot be repeated. The small percentage of individuals that get sick again will just get the palliative care that is currently provided. They will not be able to heal but will remain sick until death. Both all-cause deaths and disease deaths will be in the death state.
 
 
+**NOTE:** For simplicity, we will be dropping the screening strategy from the exercise. A version with screening will be added for reviewing.
 
-As shown in the bubble diagram, we will keep the decision tree for the one time screening and treat. The Markov Model will capture individuals healing, getting sick again, and dying.
 
-DECIDE WHAT WE WANT TO PROVIDE THEM
 
 # Use Bubble Diagram Tool
 
+We will keep the decision tree for the one time treatment. The Markov Model will capture individuals healing, getting sick again, and dying.
 
-![](images/simpleMarkov/SimpleBubble.png)
+::: {.callout .fill-box .task-box}
+## Your Task
+
+Create a bubble diagram for Disease X using the [Bubble Diagram Tool](https://geratcliff.shinyapps.io/bubble_tool/){target="_blank"}
+:::
+
+
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+### A: Add the Health States
+
+In the Bubble Diagram tool:
+
+1.  Type the name of the state into the "State Name" text box on the left side bar.
+2.  Click "Add State"
+
+![](images/simpleMarkov/BubbleToolAddState.png)
+3.  Repeat for all the states
+
+You should get: 
+
+![](images/simpleMarkov/BubbleToolAllStates.png)
+
+### B: Define the Transitions
+
+You need to select where transitions between states are possible. This also includes the ability to return to a current state. 
+
+1.  On the main screen you should see the transition matrix
+
+![](images/simpleMarkov/BubbleToolTableEmpty.png)
+
+2.  Click on the box (![](images/simpleMarkov/BubbleToolCheck.png)) within the cell to allow a transition between the two states 
+
+
+![](images/simpleMarkov/BubbleToolTable.png)
+3. Repeat for all possible transitions.
+
+### C: Generate the Model
+
+Once you have added all the possible transitions. Click the "Generate Diagram" Button on the left side bar (you may need to scroll down to see the button). 
+
+
+![](images/simpleMarkov/BubbleToolGenerate.png)
+
+Then click to the "Bubble Diagram" tab to see your diagram 
+
+**Note:** You can download your diagram from the "Bubble Diagram" tab. You do not need to for this model but you will for your capstone if you are doing a Markov Model.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Bubble Diagram
+
+</summary>
+
+<p style="color: black;">
+
+![](images/simpleMarkov/BubbleToolFinal.png)
+
+</p>
+
+</details>
 
 # Starting Probabilities
 
+
+# Uploading a Table
+
+
 # Adjusting to match strategy
 
-::: {.callout-tip}
+
+::: callout-tip
 ## Check your answer
 
 **What is the ICER of the strategy you would choose?**
 
-Enter your result:
-<input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5" />
-<button id="check3">Check</button>
-<span id="feedback3" style="margin-left:0.5rem;"></span>
+Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="check3">Check</button>
 
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
@@ -130,4 +224,5 @@ Enter your result:
   });
 })();
 </script>
+```
 :::

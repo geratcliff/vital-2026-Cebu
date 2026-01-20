@@ -287,11 +287,29 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-1-download-the-tree-file" id="toc-step-1-download-the-tree-file" class="nav-link" data-scroll-target="#step-1-download-the-tree-file">Step 1: Download the Tree File</a></li>
   <li><a href="#step-2-build-out-the-strategies" id="toc-step-2-build-out-the-strategies" class="nav-link" data-scroll-target="#step-2-build-out-the-strategies">Step 2: Build Out the Strategies</a>
   <ul class="collapse">
-  <li><a href="#screen-all-strategy" id="toc-screen-all-strategy" class="nav-link" data-scroll-target="#screen-all-strategy">Screen all strategy</a></li>
-  <li><a href="#treat-all-strategy" id="toc-treat-all-strategy" class="nav-link" data-scroll-target="#treat-all-strategy">Treat all strategy</a></li>
+  <li><a href="#treat-all-strategy" id="toc-treat-all-strategy" class="nav-link" data-scroll-target="#treat-all-strategy">Treat all strategy</a>
+  <ul class="collapse">
+  <li><a href="#a-map-out-the-branches" id="toc-a-map-out-the-branches" class="nav-link" data-scroll-target="#a-map-out-the-branches">A: Map out the Branches</a></li>
+  <li><a href="#b-add-the-branches" id="toc-b-add-the-branches" class="nav-link" data-scroll-target="#b-add-the-branches">B: Add the Branches</a></li>
   </ul></li>
-  <li><a href="#step-3-add-probabilities" id="toc-step-3-add-probabilities" class="nav-link" data-scroll-target="#step-3-add-probabilities">Step 3: Add Probabilities</a></li>
-  <li><a href="#step-4-add-outcomes" id="toc-step-4-add-outcomes" class="nav-link" data-scroll-target="#step-4-add-outcomes">Step 4: Add outcomes</a></li>
+  <li><a href="#screen-all-strategy" id="toc-screen-all-strategy" class="nav-link" data-scroll-target="#screen-all-strategy">Screen all strategy</a>
+  <ul class="collapse">
+  <li><a href="#a-map-out-the-branches-1" id="toc-a-map-out-the-branches-1" class="nav-link" data-scroll-target="#a-map-out-the-branches-1">A: Map out the Branches</a></li>
+  <li><a href="#b-add-the-branches-1" id="toc-b-add-the-branches-1" class="nav-link" data-scroll-target="#b-add-the-branches-1">B: Add the Branches</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#step-3-add-probabilities" id="toc-step-3-add-probabilities" class="nav-link" data-scroll-target="#step-3-add-probabilities">Step 3: Add Probabilities</a>
+  <ul class="collapse">
+  <li><a href="#a-add-the-probabilities-to-amua" id="toc-a-add-the-probabilities-to-amua" class="nav-link" data-scroll-target="#a-add-the-probabilities-to-amua">A: Add the Probabilities To Amua</a></li>
+  <li><a href="#b-add-the-parameters-to-the-branches" id="toc-b-add-the-parameters-to-the-branches" class="nav-link" data-scroll-target="#b-add-the-parameters-to-the-branches">B: Add The Parameters to the branches</a></li>
+  <li><a href="#c-add-the-complimentary-probabilities" id="toc-c-add-the-complimentary-probabilities" class="nav-link" data-scroll-target="#c-add-the-complimentary-probabilities">C: Add The Complimentary Probabilities</a></li>
+  </ul></li>
+  <li><a href="#step-4-add-outcomes" id="toc-step-4-add-outcomes" class="nav-link" data-scroll-target="#step-4-add-outcomes">Step 4: Add outcomes</a>
+  <ul class="collapse">
+  <li><a href="#a-add-the-parameters-to-amua" id="toc-a-add-the-parameters-to-amua" class="nav-link" data-scroll-target="#a-add-the-parameters-to-amua">A: Add the parameters to Amua</a></li>
+  <li><a href="#b-update-the-model-properties-to-have-both-outcomes" id="toc-b-update-the-model-properties-to-have-both-outcomes" class="nav-link" data-scroll-target="#b-update-the-model-properties-to-have-both-outcomes">B: Update the model properties to have both outcomes</a></li>
+  <li><a href="#c-add-the-parameters-to-the-branches" id="toc-c-add-the-parameters-to-the-branches" class="nav-link" data-scroll-target="#c-add-the-parameters-to-the-branches">C: Add The Parameters to the branches</a></li>
+  </ul></li>
   <li><a href="#step-5-run-the-tree" id="toc-step-5-run-the-tree" class="nav-link" data-scroll-target="#step-5-run-the-tree">Step 5: Run the Tree</a></li>
   </ul>
 </nav>
@@ -362,8 +380,8 @@ ul.task-list li input[type="checkbox"] {
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
@@ -377,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Now that we have identified the strat and downloaded AMUA on your computer. You are ready to start build a decision tree for the research question.</p>
+<p>Now that we have identified the strategies and downloaded Amua on your computer. You are ready to start build a decision tree for the research question.</p>
 <p>By the end of this session, participants will be able to:</p>
 <ol type="1">
 <li><p>Build and structure a decision tree model in Amua to represent clinical decision problems.</p></li>
@@ -387,7 +405,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </div>
 </div>
-<p>Another member of the lab has completed the data collection for you already, you just need to build the model in Amua</p>
+<p>Another member of the lab has completed the data collection for you already, you just need to build the model in Amua.</p>
 <div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -398,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A decision tree will allow us to determine how the life years that are gained varies by each strategy. This will be important data to provide in a policy brief on why one decision should be considered over another.</p>
+<p>A decision tree will allow us to determine how the life years gained varies by each strategy. This will be important data to provide in a policy brief on why one decision should be considered over another.</p>
 </div>
 </div>
 <div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
@@ -416,8 +434,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="reminder-of-decision-problem" class="level1">
 <h1>Reminder of Decision Problem</h1>
-<p>There has been an increase in cases of Cancer within your country and you’ve been assigned to look into methods other countries near by have implemented.</p>
-<p>You find that one country has implemented <strong>screening for all</strong> and provides treatment only for those that test positive. Another country has launched a campaign to <strong>treat everyone</strong> regardless of having the disease.. The Ministry of Health has asked us to <strong>determine the cost effectiveness of the different strategies.</strong></p>
+<p>There has been an increase in cases of Disease X within your country and you’ve been assigned to look into methods other countries near by have implemented.</p>
+<p>Disease X is a non-communicable disease that mostly effects people in their 50s. There is currently palliative care to help reduce the disease burden for Disease X. You can assume that everyone with Disease X receives this palliative care.</p>
+<p>A new out-patient procedure that can treat the disease has started to become popular in surrounding regions. It has a high rate of success. Researchers have also developed a screening method to determine who qualifies for the care. The screening has 100% specificity but only a 90% sensitivity.</p>
+<p>You find that one neighboring country has implemented <strong>screening for all (50 year olds)</strong> and provides treatment only for those that test positive. Another country has launched a campaign to <strong>treat everyone (50 years old)</strong> regardless of having the disease. The Ministry of Health has asked us to <strong>determine the cost effectiveness of the different strategies.</strong></p>
 <ol type="1">
 <li><p>No Screen, No Treat</p></li>
 <li><p>Screen All, then Treat</p></li>
@@ -427,25 +447,80 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-1-download-the-tree-file" class="level1">
 <h1>Step 1: Download the Tree File</h1>
 <p>To assist you with the limited time for the case study, we have created the initial layout of the decision tree for you.</p>
-<p>** ADD AN IMAGE OF AMUA FILE WITH THE FOLLOWING BUILT ** - NO SCREEN/TREAT branch structure built (no outcomes or probabilities) - Initial branches for SCREEN ALL strategy and TREAT ALL strategy</p>
+<p><img src="images/tree/InitialStructure.png" class="img-fluid"></p>
 </section>
 <section id="step-2-build-out-the-strategies" class="level1">
 <h1>Step 2: Build Out the Strategies</h1>
-<section id="screen-all-strategy" class="level2">
-<h2 class="anchored" data-anchor-id="screen-all-strategy">Screen all strategy</h2>
-<p>Things to remember when building the strategy out: - The specificity is 100% (the test is 100% accurate for individuals that are not sick) - The specificity is <strong>NOT</strong> 100%. Some sick people will get a negative test result. - Only individuals that have a positive screening will get treated</p>
-</section>
 <section id="treat-all-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="treat-all-strategy">Treat all strategy</h2>
-<p>Things to remember when building the strategy out: - Everyone that is sick will get treatment immediately</p>
+<p>Things to remember when building the strategy out:</p>
+<ul>
+<li>Everyone that is sick will get treatment immediately</li>
+</ul>
 <details>
-<summary>
-Show solution
+<summary style="color: orange;">
+<p>More assistance with step</p>
 </summary>
-<p>** ADD AN IMAGE OF AMUA WITH THE FULL TREE BUILT ** - no outcomes or probabilities</p>
+<p style="color: black;">
+</p><section id="a-map-out-the-branches" class="level3">
+<h3 class="anchored" data-anchor-id="a-map-out-the-branches">A: Map out the Branches</h3>
+<p>In the Treatment scenario there are two things that can happen:</p>
+<ol type="1">
+<li><p>You are sick and get treated</p></li>
+<li><p>You are not sick and get treated</p></li>
+</ol>
+</section>
+<section id="b-add-the-branches" class="level3">
+<h3 class="anchored" data-anchor-id="b-add-the-branches">B: Add the Branches</h3>
+<p>You need to build a branch for each of these</p>
+<p><img src="images/tree/AddTreatmentBranches.png" class="img-fluid"></p>
+<p></p>
+</section></details>
+</section>
+</section>
+<section id="screen-all-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="screen-all-strategy">Screen all strategy</h2>
+<p>Things to remember when building the strategy out:</p>
+<ul>
+<li><p>The specificity is 100% (the test is 100% accurate for individuals that are not sick)</p></li>
+<li><p>The sensitivity is <strong>NOT</strong> 100%. Some sick people will get a negative test result.</p></li>
+<li><p>Only individuals that have a positive screening will get treated</p></li>
+</ul>
+<details>
+<summary style="color: orange;">
+<p>More assistance with step</p>
+</summary>
+<p style="color: black;">
+</p><section id="a-map-out-the-branches-1" class="level3">
+<h3 class="anchored" data-anchor-id="a-map-out-the-branches-1">A: Map out the Branches</h3>
+<p>In the Screening scenario there are multiple things that can happen:</p>
+<ol type="1">
+<li><p>You get screened, test positive, and ARE sick</p></li>
+<li><p>You get screened, test negative, and ARE sick</p></li>
+<li><p>You get screened, test negative, and are NOT sick</p></li>
+<li><p><del><em>You get screened, test positive, and are NOT sick</em></del> <em>(this is typically an option but in our model the specificity is 100% so this never occurs)</em></p></li>
+</ol>
+</section>
+<section id="b-add-the-branches-1" class="level3">
+<h3 class="anchored" data-anchor-id="b-add-the-branches-1">B: Add the Branches</h3>
+<p>You need to build a branch for each of these. Although the screening happens first, it is typically easier to model the illness status first. The decision tree does not need to be in chronological order (aka it does not need to follow the order that things take place in real life).</p>
+<p>We will start by adding the illness status branches.</p>
+<p><img src="images/tree/AddScreeningBranches1.png" class="img-fluid"></p>
+<p>Now we can add in the test results.</p>
+<p><img src="images/tree/AddScreeningBranches2.png" class="img-fluid"></p>
+<p></p>
+</section></details>
+<details>
+<summary style="color: green; font-size: 4vh;">
+<p>Check your Model</p>
+</summary>
+<p style="color: black;">
+</p><p><img src="images/tree/AddScreeningBranches2.png" class="img-fluid"></p>
+<p></p>
 </details>
 </section>
-</section>
+
+
 <section id="step-3-add-probabilities" class="level1">
 <h1>Step 3: Add Probabilities</h1>
 <table class="caption-top table">
@@ -459,23 +534,68 @@ Show solution
 <tbody>
 <tr class="odd">
 <td>p_sick</td>
-<td>ADD VALUE</td>
+<td>0.08</td>
 <td>Probability of getting sick (Prevelance)</td>
 </tr>
 <tr class="even">
 <td>sens</td>
-<td>ADD VALUE</td>
+<td>0.9</td>
 <td>Sensitivity of Screening Test</td>
+</tr>
+<tr class="odd">
+<td>spec</td>
+<td>1</td>
+<td>Spesificity of Screening Test</td>
 </tr>
 </tbody>
 </table>
 <details>
-<summary>
-Show solution
+<summary style="color: orange;">
+<p>More assistance with step</p>
 </summary>
-<p>** ADD AN IMAGE OF AMUA WITH THE FULL TREE BUILT WITH PROBABILITIES ** - no outcomes</p>
+<p style="color: black;">
+</p><section id="a-add-the-probabilities-to-amua" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-the-probabilities-to-amua">A: Add the Probabilities To Amua</h3>
+<p>You will need to create new parameters for each probability in the table above.</p>
+<ol type="1">
+<li><p>Make sure that you are on the “Parameter” tab of the right side bar</p>
+<p><img src="images/tree/AddParameter.png" class="img-fluid"></p></li>
+<li><p>Click on the blue plus sign <img src="../amua-images/add_16.png" class="img-fluid"></p></li>
+<li><p>In the pop-up window, enter a parameter name and the parameter value. The description is optional but useful if the model is being shared with others.</p>
+<p><img src="images/tree/AddParameterPopUp.png" class="img-fluid"></p></li>
+<li><p>Click save and repeat for all parameters.</p></li>
+</ol>
+<p>You should end up with this: <img src="images/tree/AddParameterSidebar.png" class="img-fluid"></p>
+</section>
+<section id="b-add-the-parameters-to-the-branches" class="level3">
+<h3 class="anchored" data-anchor-id="b-add-the-parameters-to-the-branches">B: Add The Parameters to the branches</h3>
+<p>The probabilities that we have are:</p>
+<p>p_sick: which will go on any branch where someone gets sick sens: which will go on any branch where someone is sick AND tests positive</p>
+<p>To add a probability: 1. Click next to the grey “p:” under the branch that you want to edit</p>
+<pre><code>![](images/tree/AddParameterBranch.png)</code></pre>
+<ol start="2" type="1">
+<li><p>Type the NAME of the parameter you want to add</p>
+<p><img src="images/tree/AddParameterBranch2.png" class="img-fluid"></p></li>
+</ol>
+<p>NOTE: You never want to add the value as it will make the model harder to update later and you will not be able to do sensitivity analysis.</p>
+<ol start="3" type="1">
+<li><p>Repeat for all parameters.</p>
+<p><img src="images/tree/AddParameterBranch3.png" class="img-fluid"></p></li>
+</ol>
+</section>
+<section id="c-add-the-complimentary-probabilities" class="level3">
+<h3 class="anchored" data-anchor-id="c-add-the-complimentary-probabilities">C: Add The Complimentary Probabilities</h3>
+<p>In Amua, there is a built in variable “<em>C</em>” that will calculate the complementary probability (1-[p of the opposing branch]). You need to add this to all the remaining branches.</p>
+<p></p>
+</section></details>
+<details>
+<summary style="color: green; font-size: 4vh;">
+<p>Check your Model</p>
+</summary>
+<p><img src="images/tree/AddProbsSolution.png" class="img-fluid"></p>
 </details>
 </section>
+
 <section id="step-4-add-outcomes" class="level1">
 <h1>Step 4: Add outcomes</h1>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -493,23 +613,18 @@ Show solution
 <tbody>
 <tr class="odd">
 <td>c_untreated</td>
-<td>ADD VALUE</td>
+<td>$300,000</td>
 <td>Cost of being sick and untreated</td>
 </tr>
 <tr class="even">
 <td>c_treated</td>
-<td>ADD VALUE</td>
+<td>$900,000</td>
 <td>Cost of being sick and treated</td>
 </tr>
 <tr class="odd">
 <td>c_screen</td>
-<td>ADD VALUE</td>
+<td>$6,000</td>
 <td>Cost of screening</td>
-</tr>
-<tr class="even">
-<td>c_screen_imp</td>
-<td>ADD VALUE</td>
-<td>Cost to implement screening</td>
 </tr>
 </tbody>
 </table>
@@ -526,22 +641,22 @@ Show solution
 <tbody>
 <tr class="odd">
 <td>LY_untreated</td>
-<td>ADD VALUE</td>
+<td>8</td>
 <td>Cost of being sick and untreated</td>
 </tr>
 <tr class="even">
 <td>LY_treated</td>
-<td>ADD VALUE</td>
+<td>16</td>
 <td>Cost of being sick and treated</td>
 </tr>
 <tr class="odd">
 <td>LY_healthy</td>
-<td>ADD VALUE</td>
+<td>20</td>
 <td>Cost of screening</td>
 </tr>
 <tr class="even">
 <td>LY_healthy_treated</td>
-<td>ADD VALUE</td>
+<td>19.7</td>
 <td>Cost to implement screening</td>
 </tr>
 </tbody>
@@ -550,15 +665,67 @@ Show solution
 </div>
 </div>
 <details>
-<summary>
-Show solution
+<summary style="color: orange;">
+<p>More assistance with step</p>
 </summary>
-<p>** ADD AN IMAGE OF AMUA WITH THE FULL TREE BUILT **</p>
+<p style="color: black;">
+</p><section id="a-add-the-parameters-to-amua" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-the-parameters-to-amua">A: Add the parameters to Amua</h3>
+<p>You will need to create new parameters for each cost and life years variable in the table above.</p>
+<ol type="1">
+<li><p>Make sure that you are on the “Parameter” tab of the right side bar</p>
+<p><img src="images/tree/AddParameter.png" class="img-fluid"></p></li>
+<li><p>Click on the blue plus sign <img src="../amua-images/add_16.png" class="img-fluid"></p></li>
+<li><p>In the pop-up window, enter a parameter name and the parameter value. The description is optional but useful if the model is being shared with others.</p>
+<p><img src="images/tree/AddParameterPopUp.png" class="img-fluid"></p></li>
+<li><p>Click save and repeat for all parameters.</p></li>
+</ol>
+<p>You should end up with this: <img src="images/tree/AddOutcomeParameters.png" class="img-fluid"></p>
+</section>
+<section id="b-update-the-model-properties-to-have-both-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="b-update-the-model-properties-to-have-both-outcomes">B: Update the model properties to have both outcomes</h3>
+<ol type="1">
+<li><p>On the top menu select “Model” &gt; “Properties”</p>
+<p><img src="images/tree/ModelProperties.png" class="img-fluid"></p></li>
+<li><p>Click to the analysis tab</p>
+<p><img src="images/tree/ModelPropertiesAnalysis.png" class="img-fluid"></p></li>
+<li><p>The “Cost” outcome is likely already added. If not, click the blue plus sign <img src="../amua-images/add_16.png" class="img-fluid"> . This will add a new row to the outcomes table</p>
+<p><img src="images/tree/AddNewOutcomeRow.png" class="img-fluid"></p></li>
+<li><p>Add a “Dimension” [the name of the variable], a “Symbol” [how you want it to show in the model], and the “Decimals” [number of decimal places you want to show].</p></li>
+<li><p>Repeat for the “Life Years outcome. You should end up with this:</p>
+<p><img src="images/tree/AddOutcomes.png" class="img-fluid"></p></li>
+<li><p>Click the “Refresh Button to update your model</p>
+<p><img src="images/tree/Refresh.png" class="img-fluid"></p></li>
+</ol>
+</section>
+<section id="c-add-the-parameters-to-the-branches" class="level3">
+<h3 class="anchored" data-anchor-id="c-add-the-parameters-to-the-branches">C: Add The Parameters to the branches</h3>
+<p>At the end of each branch you will need to add the corresponding cost and LY gained outcomes.</p>
+<p>To add a probability:</p>
+<ol type="1">
+<li><p>Click on the outcome at the branch that you want to edit</p>
+<p><img src="images/tree/EditOutcomeValue.png" class="img-fluid"></p></li>
+<li><p>Type the NAME of the parameter you want to add. This can be typed within the model view or at the top in the formula bar</p>
+<p>Formula Bar: <img src="images/tree/FormulaBar.png" class="img-fluid"></p>
+<p><img src="images/tree/AddOutcomeBranch.png" class="img-fluid"></p></li>
+</ol>
+<p>NOTE: You never want to add the value as it will make the model harder to update later and you will not be able to do sensitivity analysis.</p>
+<ol start="3" type="1">
+<li>Repeat for all parameters. Hint: Some branches may have multiple costs that need to be summed</li>
+</ol>
+<p></p>
+</section></details>
+<details>
+<summary style="color: green; font-size: 4vh;">
+<p>Check Your Model</p>
+</summary>
+<p><img src="images/tree/OutcomesAddedFull.png" class="img-fluid"></p>
 </details>
 </section>
+
 <section id="step-5-run-the-tree" class="level1">
 <h1>Step 5: Run the Tree</h1>
-<p>Run the tree to check your results</p>
+<p>Run the tree (<img src="../amua-images/runModel_24.png" class="img-fluid">) to check your results</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -569,23 +736,23 @@ Show solution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Enter your result: <input id="answer1" type="number" step="0.01" placeholder="e.g., 42.5"> <button id="check1">Check</button> <span id="feedback1" style="margin-left:0.5rem;"></span></p>
+<br> Enter your EV($) for the Screening: <br> <input id="answertree" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checktree">Check</button>
+<div id="feedbacktree" style="margin-top: 10px;">
+
+</div>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 42.5;
+  const CORRECT = 73200.0;
   const TOL = 0.01; // accept +/- 0.01
-
-  const input = document.getElementById('answer1');
-  const button = document.getElementById('check1');
-  const feedback = document.getElementById('feedback1');
-
+  const input = document.getElementById('answertree');
+  const button = document.getElementById('checktree');
+  const feedback = document.getElementById('feedbacktree');
   function setFeedback(msg, status) {
     feedback.textContent = msg;
     feedback.style.fontWeight = '600';
     feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
   }
-
   button.addEventListener('click', function() {
     const val = parseFloat(input.value);
     if (isNaN(val)) {
@@ -601,6 +768,7 @@ Show solution
   });
 })();
 </script>
+<p><br></p>
 </div>
 </div>
 

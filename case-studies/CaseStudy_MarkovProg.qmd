@@ -71,7 +71,7 @@ To help visualize how this will work, here is a bubble diagram
 
 
 
-# Uploading a Table
+
 
 # Additional Parameters
 
