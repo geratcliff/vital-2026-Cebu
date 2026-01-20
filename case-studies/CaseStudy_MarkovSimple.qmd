@@ -59,25 +59,20 @@ title: "Case Study - Markov Simple"
 
 By the end of this session, participants will be able to:
 
-1.  Create a visualization of the model using the Bubble Diagram tool 
+1.  Create a visualization of the model using the Bubble Diagram tool
 
-2.  Build and structure a Markov model in Amua to represent
-    clinical decision problems.
-    
+2.  Build and structure a Markov model in Amua to represent clinical decision problems.
+
 3.  Evaluate model outcomes for alternative clinical strategies.
 
-4.  Add and compare multiple strategies (e.g., diagnostic testing
-    options) in a single decision framework.
+4.  Add and compare multiple strategies (e.g., diagnostic testing options) in a single decision framework.
 :::
 
 The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.
 
-In our decision tree, we have a one time screening and calculations for if someone gets sick. 
-However, what if:
--  There is a small percentage of people that can get sick again
--  The data does not exist for "Life Years Gained". 
+In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if: - There is a small percentage of people that can get sick again - The data does not exist for "Life Years Gained".
 
-A Markov Model will allow us to cleanly integrate this into our model. 
+A Markov Model will allow us to cleanly integrate this into our model.
 
 ::: {.callout .fill-box .why-box}
 ## Why are we doing this?
@@ -85,14 +80,9 @@ A Markov Model will allow us to cleanly integrate this into our model.
 The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.
 :::
 
-
-More Background on Disease X: 
-After the initial treatment has happened at 50 years old, it cannot be repeated. The small percentage of individuals that get sick again will just get the palliative care that is currently provided. They will not be able to heal but will remain sick until death. Both all-cause deaths and disease deaths will be in the death state.
-
+More Background on Disease X: After the initial treatment has happened at 50 years old, it cannot be repeated. The small percentage of individuals that get sick again will just get the palliative care that is currently provided. They will not be able to heal but will remain sick until death. Both all-cause deaths and disease deaths will be in the death state.
 
 **NOTE:** For simplicity, we will be dropping the screening strategy from the exercise. A version with screening will be added for reviewing.
-
-
 
 # Use Bubble Diagram Tool
 
@@ -103,8 +93,6 @@ We will keep the decision tree for the one time treatment. The Markov Model will
 
 Create a bubble diagram for Disease X using the [Bubble Diagram Tool](https://geratcliff.shinyapps.io/bubble_tool/){target="_blank"}
 :::
-
-
 
 <details>
 
@@ -123,42 +111,37 @@ In the Bubble Diagram tool:
 1.  Type the name of the state into the "State Name" text box on the left side bar.
 2.  Click "Add State"
 
-![](images/simpleMarkov/BubbleToolAddState.png)
-3.  Repeat for all the states
+![](images/simpleMarkov/BubbleToolAddState.png) 3. Repeat for all the states
 
-You should get: 
+You should get:
 
 ![](images/simpleMarkov/BubbleToolAllStates.png)
 
 ### B: Define the Transitions
 
-You need to select where transitions between states are possible. This also includes the ability to return to a current state. 
+You need to select where transitions between states are possible. This also includes the ability to return to a current state.
 
 1.  On the main screen you should see the transition matrix
 
 ![](images/simpleMarkov/BubbleToolTableEmpty.png)
 
-2.  Click on the box (![](images/simpleMarkov/BubbleToolCheck.png)) within the cell to allow a transition between the two states 
+2.  Click on the box (![](images/simpleMarkov/BubbleToolCheck.png)) within the cell to allow a transition between the two states
 
-
-![](images/simpleMarkov/BubbleToolTable.png)
-3. Repeat for all possible transitions.
+![](images/simpleMarkov/BubbleToolTable.png) 3. Repeat for all possible transitions.
 
 ### C: Generate the Model
 
-Once you have added all the possible transitions. Click the "Generate Diagram" Button on the left side bar (you may need to scroll down to see the button). 
-
+Once you have added all the possible transitions. Click the "Generate Diagram" Button on the left side bar (you may need to scroll down to see the button).
 
 ![](images/simpleMarkov/BubbleToolGenerate.png)
 
-Then click to the "Bubble Diagram" tab to see your diagram 
+Then click to the "Bubble Diagram" tab to see your diagram
 
 **Note:** You can download your diagram from the "Bubble Diagram" tab. You do not need to for this model but you will for your capstone if you are doing a Markov Model.
 
 </p>
 
 </details>
-
 
 <details>
 
@@ -176,13 +159,196 @@ Check your Bubble Diagram
 
 </details>
 
+# Building the model
+
+In the Disease X model, we will be flowing the tree into the Markov model. 
+
+Click Model > New > Markov Model
+
+![](images/simpleMarkov/MarkovFile.png)
+
+You should get a empty page with a decision node (![](/amua-images/decisionNode_24.png))
+
+::: {.callout .fill-box .task-box}
+## Your Task
+Build out the Markov Structure for the "Treat None" arm of the model
+:::
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+
+### A: Add Markov Chain
+1.  Add the Markov Chain (![](/amua-images/markovChain_24.png)) for the "Treat None" arm. 
+    Option 1: Select the decision node. Right click > Add > Markov Chain. 
+    Option 2: Select the decision node and click the Markov Chain button (![](/amua-images/markovChain_24.png)) in the top bar
+    
+![](images/simpleMarkov/AddMarkovChain1.png)
+2.  Name that chain "Treat None"
+
+### B: Add the Health States
+
+This model has three health states: Healthy, Sick, and Dead
+
+1. Select the Markov chain labeled "Treat None" 
+![](images/simpleMarkov/AddState1.png)
+
+2. Add the health states
+    Option 1: Right click > Add > Markov State (![](/amua-images/markovState_24.png). 
+    Option 2: Click the Markov State button (![](/amua-images/markovState_24.png)) in the top bar
+    Option 3: Double click on the Markov Chain to get two Markov states added
+    
+![](images/simpleMarkov/AddState2.png)  
+    
+3. Rename the State to "Health" 
+
+4. Repeat for Sick and Dead
+
+![](images/simpleMarkov/AddState3.png)  
+### C: Add events within each health state
+
+Typically within Markov models events are modeled from worst to best. For ease of sensitivity analysis, we recommend only having two branches off each decision node. 
+
+1. Select the Markov State labeled "Healthy". It will outline red when selected
+
+![](images/simpleMarkov/AddStateEvent1.png)
+
+2. Add a chance node
+    Option 1: Right click > Add > Chance Node (![](/amua-images/chanceNode_24.png). 
+    Option 2: Click the Chance Node button (![](/amua-images/chanceNode_24.png)) in the top bar
+    Option 3: Double click on the Markov State to get two chance nodes added
+    
+![](images/simpleMarkov/AddStateEvent2.png)  
+    
+3. Change the labels to "Survive" and "Die". 
+
+4. Nothing can happen after you die so we will change that to a state transition node.
+
+5. Select the "Die" branch and click the "Change to State Transition" ((![](/amua-images/changeTypeTrans_24.png).) button on the top bar. You should get something like this. [It may have auto filled a state or it may also be blank]
+
+![](images/simpleMarkov/AddStateEvent3.png)  
+
+6. Click on the drop down arrow that is to the right of the state transition blue arrow to set the state transition. 
+ 
+![](images/simpleMarkov/AddStateTransition.png)  
+
+7. Select the correct state for that decision branch from the drop down. For "Die", it should be "Dead"
+
+![](images/simpleMarkov/AddStateEvent4.png)  
+
+Now let's look back at the "Survive" branch. The proportion of the cohort that survives death, will have the chance of getting sick. 
+
+8. Add a chance node for getting sick.
+
+![](images/simpleMarkov/AddStateEvent5.png)  
+
+9. At the end of each branch, change the chance nodes to state transitions. 
+
+![](images/simpleMarkov/AddStateEvent6.png)  
+
+10.  Update the state transitions to match the transition for that branch. 
+
+![](images/simpleMarkov/AddStateEvent6.png)  
+
+11. Build out the events for the other two health states. 
+
+[Don't worry about the Treat branch, we will come back to it]
+
+
+</p>
+
+</details>
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Bubble Diagram
+
+</summary>
+
+<p style="color: black;">
+
+![](images/simpleMarkov/TreatNoneStructure.png)  
+</p>
+
+</details>
+# Add Parameters 
+
+To help with time, we have created a parameters file you can upload to your model. 
+
+1. On the top bar click Model > Import
+
+2. An pop-up should appear to help "Import Objects" 
+
+    ![](images/simpleMarkov/import1.png)  
+3. Select the CSV source 
+
+    ![](images/simpleMarkov/import2.png)  
+    
+4. Click the "Browse" button
+
+5. Select the parameter file and click "Open"
+
+6. Make sure the "Object Type" is set to "Parameters" and click "Import C..."
+
+You're side bar should now be populated with the model parameters
+
 # Starting Probabilities
+
+For a Markov Model, you have to determine where people start. Some models everyone starts in the same state and in other models people start spread out across multiple states.
+
+In the "Treat None" branch, we know that some people will start sick and some will be healthy. 
+
+The current prevalence of Disease X in 50 year olds is 8%. 
+
+
+
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+
+### A: Add Markov Chain
+1.  Add the Markov Chain (![](/amua-images/markovChain_24.png)) for the "Treat None" arm. 
 
 
 # Uploading a Table
 
+# Copy and Paste in Amua
+
+Once your model matches the one in the dropdown above, you can copy and paste if for the "Not Sick -> Treat" arm. 
+
+1. Select the item you want to copy. In this case it is the "Sick -> Treat" arm of the model. 
+
+2. Right click and copy or use Ctrl + C [On Mac, CMD + C]
+
+3. Select the Treat All Node 
+
+4. Right click and paste or use Ctrl + P  [On Mac, CMD + P]
+
+5. Click the "OCD" button to clean up the model
+
+6. Rename one of the branches to "Not Sick -> Treat" 
+
+CHECK YOUR MODEL
 
 # Adjusting to match strategy
+
 
 
 ::: callout-tip
