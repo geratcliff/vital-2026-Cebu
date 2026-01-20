@@ -357,28 +357,28 @@
     "href": "lectures/lec_6.ICERs.html#learning-objectives",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nDifferentiate between average & incremental CEA ratios\nCharacterize decision problems by whether they are competing or non-competing\nCompute and interpret ICERs\nPractice ruling out “dominated” and “extendedly dominated” strategies\nIdentify “high-value” versus “low value” care strategies, based on generally accepted cost-effectiveness thresholds"
+    "text": "Learning Objectives\n\n\nDifferentiate between average & incremental CEA ratios\nCharacterize decision problems by whether they are competing or non-competing\nCompute and interpret ICERs\nPractice ruling out “dominated” and “extendedly dominated” strategies\nIdentify “high-value” versus “low value” care strategies, based on generally accepted cost-effectiveness thresholds"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#outline",
     "href": "lectures/lec_6.ICERs.html#outline",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Outline",
-    "text": "Outline\n\n\n\n\nReview of CEA ratio\nNon-competing versus competing CEAs\nIncremental CEA\n\n\n\nDominance & extended dominance\nComparators\nCEA thresholds"
+    "text": "Outline\n\n\n\n\n\n01\n\n\nReview of CEA ratio\n\n\n\n\n02\n\n\nNon-competing versus competing CEAs\n\n\n\n\n03\n\n\nIncremental CEA\n\n\n\n\n\n\n\n04\n\n\nDominance & extended dominance\n\n\n\n\n05\n\n\nComparators\n\n\n\n\n06\n\n\nCEA thresholds"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis-1",
     "href": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Cost-Effectiveness Analysis",
-    "text": "Cost-Effectiveness Analysis\n\nQuantifies how to maximize the quality & quantity of life from among competing alternatives, given restricted resources\nIt’s an explicit measure of value for money\nA POPULATION-LEVEL decision-making tool"
+    "text": "Cost-Effectiveness Analysis\n\n\nCost of Intervention\n\n\nCost of Alternative\n\n\nBenefit of Intervention\n\n\nBenefit of Alternative"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis-is-not",
     "href": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis-is-not",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Cost-Effectiveness Analysis IS NOT",
-    "text": "Cost-Effectiveness Analysis IS NOT\n\nIndiscriminate cost-cutting\nDownsizing\nFor individual-level decision making\nThe only tool for decision-making"
+    "text": "Cost-Effectiveness Analysis IS NOT\n\n\nIndiscriminate cost-cutting\nDownsizing\nFor individual-level decision making\nThe only tool for decision-making"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis-2",
@@ -434,7 +434,7 @@
     "href": "lectures/lec_6.ICERs.html#outcomes",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Outcomes",
-    "text": "Outcomes\n\nC_{treat} = expected cost of treat everyone strategy.\nC_{no treat} = expected cost of treat no one strategy.\nC_{biopsy} = expected cost of biopsy strategy."
+    "text": "Outcomes\n\n\nC_{treat} = expected cost of treat everyone strategy.\n\n\nC_{no treat} = expected cost of treat no one strategy.\n\n\nC_{biopsy} = expected cost of biopsy strategy.\n\n\n\n\nE_{treat} = expected life expectancy of treat everyone strategy.\n\n\nE_{no treat} = expected expectancy of treat no one strategy.\n\n\nE_{biopsy} = expected expectancy of biopsy strategy."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#outcomes-1",
@@ -469,7 +469,7 @@
     "href": "lectures/lec_6.ICERs.html#key-takeaways-for-now",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Key Takeaways (For Now)",
-    "text": "Key Takeaways (For Now)\n\nTreatment yields higher life expectancy for those with disease, but comes at a cost.\nTreatment yields lower life expectancy for those without the disease, and also comes at a cost.\nBiopsy can help balance these two outcomes by better targeting treatment, but also comes with costs and risks.\nIncremental CEA provides a transparent framework for quantifying and weighing these considerations."
+    "text": "Key Takeaways (For Now)\n\n\nTreatment yields higher life expectancy for those with disease, but comes at a cost. (↑ LE, ↑ Cost)\nTreatment yields lower life expectancy for those without the disease, and also comes at a cost. (↓ LE, ↑ Cost)\nBiopsy can help balance these two outcomes by better targeting treatment, but also comes with costs and risks.\nIncremental CEA provides a transparent framework for quantifying and weighing these considerations."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#average-cost-effectiveness-ratio",
@@ -483,28 +483,28 @@
     "href": "lectures/lec_6.ICERs.html#use-of-cea-in-two-situations",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Use of CEA in two situations",
-    "text": "Use of CEA in two situations\n\nShopping Spree: Decision problem has non-competing programs/interventions.\n\n\nEach program is compared to a null alternative; therefore, you’re calculating an “average” cost-effectiveness ratio."
+    "text": "Use of CEA in two situations\n\n\nShopping Spree\nDecision problem has non-competing programs/interventions.\n\nEach program is compared to a null alternative\nCalculate an “average” cost-effectiveness ratio.\n\n\n\nCompeting Choice\nDecision problem has competing mutually exclusive programs/ interventions for the same purpose.\n\nTwo or more active alternatives in addition to the null option.\nCalculate an “incremental cost- effectiveness ratio” to get the added cost per unit of added benefit of an option, relative to the next less expensive choice"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#use-of-cea-in-two-situations-1",
     "href": "lectures/lec_6.ICERs.html#use-of-cea-in-two-situations-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Use of CEA in two situations",
-    "text": "Use of CEA in two situations\n\nCompeting Choice: Decision problem has competing programs/interventions for the same purpose; these choices are mutually exclusive.\n\n\nTwo or more active alternatives in addition to the null option.\nYou need to calculate an “incremental cost- effectiveness ratio”, which gives us the added cost per unit of added benefit of an option, relative to the next less expensive choice"
+    "text": "Use of CEA in two situations\n\n\nShopping Spree\nDecision problem has non-competing programs/interventions.\n\nEach program is compared to a null alternative\nCalculate an “average” cost-effectiveness ratio.\n\n\n\nCompeting Choice\nDecision problem has competing mutually exclusive programs/ interventions for the same purpose.\n\nTwo or more active alternatives in addition to the null option.\nCalculate an “incremental cost- effectiveness ratio” to get the added cost per unit of added benefit of an option, relative to the next less expensive choice"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#non-competing-shopping-spree-decision-problem",
     "href": "lectures/lec_6.ICERs.html#non-competing-shopping-spree-decision-problem",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Non-Competing (Shopping Spree) Decision Problem",
-    "text": "Non-Competing (Shopping Spree) Decision Problem\nHow can we measure the relative priority of various health programs that compete for limited resources?\n\nCardiovascular disease program\nSafe motherhood program\nHIV prevention initiative\nChild vaccination\nDepression screening"
+    "text": "Non-Competing (Shopping Spree) Decision Problem\nHow can we measure the relative priority of various health programs that compete for limited resources?\n\n\nCardiovascular disease program\n\n\nSafe motherhood program\n\n\nHIV prevention initiative\n\n\nChild vaccination\n\n\nDepression screening"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#assumptions",
     "href": "lectures/lec_6.ICERs.html#assumptions",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Assumptions",
-    "text": "Assumptions\n\nProgram alternatives are assumed to be independent\nBudget constraint is only limitation\nNeither the net cost nor the net effectiveness depend on what other programs are selected\nPrograms are assumed to be divisible [programs can be partially implemented]"
+    "text": "Assumptions\n\n\nProgram alternatives are assumed to be independent\nBudget constraint is only limitation\nNeither the net cost nor the net effectiveness depend on what other programs are selected\nPrograms are assumed to be divisible [programs can be partially implemented]"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#objectives-shopping-spree-problem",
@@ -518,35 +518,35 @@
     "href": "lectures/lec_6.ICERs.html#shopping-spree-problem",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Shopping Spree Problem",
-    "text": "Shopping Spree Problem\n\n\nStep 1: - Rule out programs that cost $ but have negative health effects  - Dominated by alternative of “no program”"
+    "text": "Shopping Spree Problem\n\n\n\n\n1\n\n\nRemove Dominated Strategies\n\n\nRule out programs that cost $ but have negative health effects. Dominated by alternative of “no program”"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#shopping-spree-problem-1",
     "href": "lectures/lec_6.ICERs.html#shopping-spree-problem-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Shopping Spree Problem",
-    "text": "Shopping Spree Problem\n\n\nStep 2:\n- Select programs that are cost-saving & offer benefit; net savings can also be added to budget  - Cost-saving compared to alternative of no program"
+    "text": "Shopping Spree Problem\n\n\n\n\n2\n\n\nSelect programs that are cost-saving & offer benefit\n\n\n\nNet savings can also be added to budget\nCost-saving compared to alternative of no program"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#shopping-spree-problem-2",
     "href": "lectures/lec_6.ICERs.html#shopping-spree-problem-2",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Shopping Spree Problem",
-    "text": "Shopping Spree Problem\n\n\nStep 3:\n- Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)  - Programs are then selected from the LEAST to the MOST expensive until the budget is expended  - Final array of programs selected will depend on the budget constraint"
+    "text": "Shopping Spree Problem\n\n\n\n\n3\n\n\nRank other programs\n\n\n\nRank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)\nPrograms are then selected from the LEAST to the MOST expensive until the budget is expended\nFinal array of programs selected will depend on the budget constraint"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#shopping-spree-problem-3",
     "href": "lectures/lec_6.ICERs.html#shopping-spree-problem-3",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Shopping Spree Problem",
-    "text": "Shopping Spree Problem\nSteps 1 & 2: Rule out dominated options & select cost-saving interventions \n\n\n\n\n\nProgram\nCost\nQALYs\nStatus\n\n\n\n\nA\n27\n30\n\n\n\nB\n30\n20\n\n\n\nC\n56\n70\n\n\n\nD\n20\n40\n\n\n\nE\n30\n50\n\n\n\nF\n50\n75\n\n\n\nG\n40\n-30\nRuled Out\n\n\nH\n-20\n20\nAdopted"
+    "text": "Shopping Spree Problem\n\n\n\n\n\n1\n\n\nRule out dominated options\n\n\n \n\n\n2\n\n\nSelect cost-saving interventions\n\n\n\n\n\n\n\n\n\n\nProgram\nCost\nQALYs\nStatus\n\n\n\n\nA\n27\n30\n\n\n\nB\n30\n20\n\n\n\nC\n56\n70\n\n\n\nD\n20\n40\n\n\n\nE\n30\n50\n\n\n\nF\n50\n75\n\n\n\nG\n40\n-30\nRuled Out\n\n\nH\n-20\n20\nAdopted"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#shopping-spree-problem-4",
     "href": "lectures/lec_6.ICERs.html#shopping-spree-problem-4",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Shopping Spree Problem",
-    "text": "Shopping Spree Problem\n\n\n\nInitial budget: $80\nBudget savings: $20.\nTotal budget: $80 + $20 = $100\n\n\n\n\n\n\n\nProgram\nCost\nQALYs\nStatus\n\n\n\n\nA\n27\n30\n\n\n\nB\n30\n20\n\n\n\nC\n56\n70\n\n\n\nD\n20\n40\n\n\n\nE\n30\n50\n\n\n\nF\n50\n75\n\n\n\nG\n40\n-30\nRuled Out\n\n\nH\n-20\n20\nAdopted"
+    "text": "Shopping Spree Problem\n\n\n\nInitial budget: $80\nBudget savings: $20\nTotal budget: $80 + $20 = $100\n\n\n\n\n\n\n\nProgram\nCost\nQALYs\nStatus\n\n\n\n\nA\n27\n30\n\n\n\nB\n30\n20\n\n\n\nC\n56\n70\n\n\n\nD\n20\n40\n\n\n\nE\n30\n50\n\n\n\nF\n50\n75\n\n\n\nG\n40\n-30\nRuled Out\n\n\nH\n-20\n20\nAdopted"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#shopping-spree-problem-5",
@@ -567,7 +567,7 @@
     "href": "lectures/lec_6.ICERs.html#shopping-spree-problem-7",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Shopping Spree Problem",
-    "text": "Shopping Spree Problem\n\nCalculate cumulative costs\nDetermine what is adoptable based on global budget constraint ($100)\nCalculate cumulative effects (QALYs)"
+    "text": "Shopping Spree Problem\n\n\nCalculate cumulative costs\nDetermine what is adoptable based on global budget constraint ($100)\nCalculate cumulative effects (QALYs)"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#shopping-spree-problem-8",
@@ -609,7 +609,7 @@
     "href": "lectures/lec_6.ICERs.html#summary-shopping-spree-problem",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Summary: Shopping Spree Problem",
-    "text": "Summary: Shopping Spree Problem\n Maximize the total net effectiveness (health benefit)\n Stay within budget\n Can do the same with other objectives (e.g., Minimize costs, subject decision to ‘minimum benefit’ constraint, etc.)"
+    "text": "Summary: Shopping Spree Problem\n\n\nMaximize the total net effectiveness (health benefit)\nStay within budget\n\n\n\nCan do the same with other objectives (e.g., Minimize costs, subject decision to ‘minimum benefit’ constraint, etc.)"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#use-of-cea-in-two-situations-2",
@@ -637,14 +637,14 @@
     "href": "lectures/lec_6.ICERs.html#whats-different",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "What’s different?",
-    "text": "What’s different?\n\n\nShopping Spree\n\nCan select multiple programs\nDifferent costs & effects associated with each\nRequires calculation of an Average Cost-Effectiveness Ratio\n\n\nCompeting Choice\n\nPrograms are mutually exclusive.\nDifferent costs & effects associated with each.\nRequires calculation of an Incremental Cost-Effectiveness Ratio (ICER)\n\n\n\n(1) Opioid pharmacotherapy is the recommended treatment for OUD in pregnancy, as we know that medication reduces the risk of overdose and relapse, improves overall retention to care, and improves pregnancy & fetal outcomes.\n\nThere are three classes of medications approved by the FDA – & there are several sub-modalities that are not listed here that we are modeling – such as injectable formulations versus monotherapy / etc.\nBut overall – there are options like Methadone that are full “agonists” – where the effects of the treatment increase as the dose increases\nBuprenorphine which is a partial agonist – in other words, buprenorphine has a “ceiling effect”, so its effects can only be felt up to a certain point & then plateaus thereafter\nAnd Naltrexone, which is an “antagonist” and works by blocking opioid receptors & reduces & suppresses opioid cravings\nThe difficult tradeoffs of these therapies, include:\n\n\nAccess challenges & delays in care – for instance, there’s a limited # of methadone clinics across the US – there are only 3 methadone clinics in Nashville (22 total in the state) & 5 total in neighboring Mississippi\n& while buprenorphine & naltrexone, for example, can be administered in any office-based setting, methadone can only be dispensed in these specialty OTP clinics that I had mentioned earlier\nFor opioid recurrence or disengagement from treatment rates, Methadone may have better outcomes BUT methadone also poses a significant risk of mortality from opioid overdose due to respiratory depression during treatment induction\nRegarding infant outcomes, buprenorphine has performed better than methadone when it comes to outcomes like preterm birth, neonatal withdrawal syndrome, & length of hospital stay, but infants exposed to Naltrexone have the least severe withdrawal overall & lowest hospital length of stay\nThere are also different tradeoffs associated with treatment modalities such as tablets, film, injectables\nAnd then there’s many other things to consider such as inpatient versus outpatient induction periods versus continuation of care AND outcomes associated with injection versus non-injection users\n\n\nWhile individuals can switch back & forth between these medications, they can only be on ONE medication at a time & we have to decide what is the best option for pregnant invidivudals with OUD given all of the tradeoffs just mentioned"
+    "text": "What’s different?\n\n\nShopping Spree\n\nCan select multiple programs\nDifferent costs & effects associated with each\nRequires calculation of an Average Cost-Effectiveness Ratio\n\n\n\nCompeting Choice\n\nPrograms are mutually exclusive.\nDifferent costs & effects associated with each.\nRequires calculation of an Incremental Cost-Effectiveness Ratio (ICER)\n\n\n\n\n(1) Opioid pharmacotherapy is the recommended treatment for OUD in pregnancy, as we know that medication reduces the risk of overdose and relapse, improves overall retention to care, and improves pregnancy & fetal outcomes.\n\nThere are three classes of medications approved by the FDA – & there are several sub-modalities that are not listed here that we are modeling – such as injectable formulations versus monotherapy / etc.\nBut overall – there are options like Methadone that are full “agonists” – where the effects of the treatment increase as the dose increases\nBuprenorphine which is a partial agonist – in other words, buprenorphine has a “ceiling effect”, so its effects can only be felt up to a certain point & then plateaus thereafter\nAnd Naltrexone, which is an “antagonist” and works by blocking opioid receptors & reduces & suppresses opioid cravings\nThe difficult tradeoffs of these therapies, include:\n\n\nAccess challenges & delays in care – for instance, there’s a limited # of methadone clinics across the US – there are only 3 methadone clinics in Nashville (22 total in the state) & 5 total in neighboring Mississippi\n& while buprenorphine & naltrexone, for example, can be administered in any office-based setting, methadone can only be dispensed in these specialty OTP clinics that I had mentioned earlier\nFor opioid recurrence or disengagement from treatment rates, Methadone may have better outcomes BUT methadone also poses a significant risk of mortality from opioid overdose due to respiratory depression during treatment induction\nRegarding infant outcomes, buprenorphine has performed better than methadone when it comes to outcomes like preterm birth, neonatal withdrawal syndrome, & length of hospital stay, but infants exposed to Naltrexone have the least severe withdrawal overall & lowest hospital length of stay\nThere are also different tradeoffs associated with treatment modalities such as tablets, film, injectables\nAnd then there’s many other things to consider such as inpatient versus outpatient induction periods versus continuation of care AND outcomes associated with injection versus non-injection users\n\n\nWhile individuals can switch back & forth between these medications, they can only be on ONE medication at a time & we have to decide what is the best option for pregnant invidivudals with OUD given all of the tradeoffs just mentioned"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#calculate-incremental-costs-and-effects",
     "href": "lectures/lec_6.ICERs.html#calculate-incremental-costs-and-effects",
     "title": "Incremental Cost-Effectiveness Analysis",
-    "section": "1. Calculate incremental costs and effects",
-    "text": "1. Calculate incremental costs and effects\n\nOften, a strategy capturing current practice (‘status-quo’, ‘do nothing’, ‘natural history’) is defined.\nCosts and effects are then calculated for each strategy relative to the status-quo.\nPlot the difference in costs and effects with health effects on x-axis and cost effects on y-axis."
+    "section": "(1) Calculate incremental costs and effects",
+    "text": "(1) Calculate incremental costs and effects\n\n\n\nOften, a strategy capturing current practice (‘status-quo’, ‘do nothing’, ‘natural history’) is defined.\nCosts and effects are then calculated for each strategy relative to the status-quo.\nPlot the difference in costs and effects with health effects on x-axis and cost effects on y-axis."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#calculate-cost-and-effects",
@@ -700,7 +700,7 @@
     "href": "lectures/lec_6.ICERs.html#hybrid-strategies",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Hybrid Strategies",
-    "text": "Hybrid Strategies\n\nSuppose it is feasible to partially implement strategies A and D.\n\nFor example, we could implement A for 90% of the population and D for 10% of the population, or vice versa."
+    "text": "Hybrid Strategies\n\n\n\nSuppose it is feasible to partially implement strategies A and D .\n\n\nFor example, we could implement A for 90% of the population and D for 10% of the population, or vice versa.\n\n\n\n90% A, 10% D"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#a-10-d",
@@ -756,42 +756,42 @@
     "href": "lectures/lec_6.ICERs.html#incremental-cea-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n    \n\n\n\n\n\n\nPlease note that the following example uses different strategies and values than the example used in the previous pictures!"
+    "text": "Incremental CEA\n\n\n1. Calculate costs and effects for each strategy.\n\n\n\n\n\n\n\n\nStrategy\nCost\nQALYs\n\n\n\n\nA\n16,453.99\n17.332\n\n\nD\n24,504.08\n17.491\n\n\nC\n33,443.25\n17.580\n\n\nB\n21,456.58\n17.409\n\n\nE\n43,331.68\n17.491"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-2",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-2",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\nDetermine dominated strategies (ICER&lt;0).\nRe-calculate ICERs after eliminating dominated strategies.\nDetermine strategies ruled out by extended dominance.\nRe-calculate ICERs after ruling out all dominated strategies.\nRepeat 5-7 as needed.\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\n\n2. Sort table by costs in ascending order.1\n\n\n\n\n\n\n\n\nStrategy\nCost\nQALYs\n\n\n\n\nA\n16,454\n17.332\n\n\nB\n21,457\n17.409\n\n\nD\n24,504\n17.491\n\n\nC\n33,443\n17.580\n\n\nE\n43,332\n17.491\n\n\n\n\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-3",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-3",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n1. Calculate costs and effects for each strategy.\n\n\n\n\n\n\n\n\nStrategy\nCost\nQALYs\n\n\n\n\nA\n16,453.99\n17.332\n\n\nD\n24,504.08\n17.491\n\n\nC\n33,443.25\n17.580\n\n\nB\n21,456.58\n17.409\n\n\nE\n43,331.68\n17.491"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\n\n3. Calculate ICER based on difference in costs and effects.\n\n\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\nE\n43,332\n9,888\n17.491\n-0.088\n-112,364\n\n\n\n\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-4",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-4",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\n\n2. Sort table by costs in ascending order.1\n\n\n\n\n\n\n\n\nStrategy\nCost\nQALYs\n\n\n\n\nA\n16,454\n17.332\n\n\nB\n21,457\n17.409\n\n\nD\n24,504\n17.491\n\n\nC\n33,443\n17.580\n\n\nE\n43,332\n17.491\n\n\n\n\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n4. Determine dominated strategies (ICER&lt;0)\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-5",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-5",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\n\n3. Calculate ICER based on difference in costs and effects.\n\n\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\nE\n43,332\n9,888\n17.491\n-0.088\n-112,364\n\n\n\n\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n4. Determine dominated strategies (ICER&lt;0)\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n9,888\n17.491\n-0.088\n-112,364\nDominated\n\n\n\n\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-6",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-6",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n4. Determine dominated strategies (ICER&lt;0)\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n\nDetermine dominated strategies (ICER&lt;0).\n\n5. Re-calculate ICERs after eliminating dominated strategies.\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n-112,364\nDominated\n\n\n\n\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#determining-dominated-strategies",
@@ -805,14 +805,14 @@
     "href": "lectures/lec_6.ICERs.html#determining-dominated-strategies-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Determining Dominated Strategies",
-    "text": "Determining Dominated Strategies\n\nStrong dominance refers to situations where one strategy is preferred over another on both costs and health effects (e.g., QALYs).\nWhen we identify a strongly dominated option, we remove it from the table and re-calculate ICERS based on the remaining strategies.\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n9,888\n17.491\n-0.088\n-112,364\nDominated"
+    "text": "Determining Dominated Strategies\n\nWe’re not quite done yet\nNotice something odd about strategy B?\nIts ICER is higher than the next most costly alternative (strategy D)\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#a-brief-aside-on-negative-icers",
     "href": "lectures/lec_6.ICERs.html#a-brief-aside-on-negative-icers",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "A Brief Aside on Negative ICERs",
-    "text": "A Brief Aside on Negative ICERs\n\nWe want to rule out strategies that cost more but result in less health.\n\nThis implies a negative ICER.\n\nBut what other scenario would result in a negative ICER?\n\nStrategy adds health but reduces costs.\nThis is a great strategy!"
+    "text": "A Brief Aside on Negative ICERs\n\n\n\n\nWe want to rule out strategies that cost more but result in less health.\n\nThis implies a negative ICER.\n\nBut what other scenario would result in a negative ICER?\n\nStrategy adds health but reduces costs.\nThis is a great strategy!"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#both-strategies-have-a-negative-icer",
@@ -826,42 +826,42 @@
     "href": "lectures/lec_6.ICERs.html#a-brief-aside-on-negative-icers-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "A Brief Aside on Negative ICERs",
-    "text": "A Brief Aside on Negative ICERs\n\nFor this reason, it is poor practice to report negative ICERs.\nBe careful when deleting a strategy becuase it has a negative ICER!\n\nIt may be a great strategy!"
+    "text": "A Brief Aside on Negative ICERs\n\n\nFor this reason, it is poor practice to report negative ICERs.\nBe careful when deleting a strategy becuase it has a negative ICER!\n\nIt may be a great strategy!"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-7",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-7",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n4. Determine dominated strategies (ICER&lt;0)\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n9,888\n17.491\n-0.088\n-112,364\nDominated\n\n\n\n\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n\nDetermine dominated strategies (ICER&lt;0).\nRe-calculate ICERs after eliminating dominated strategies.\n\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n\n\n\n\n\n\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-8",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-8",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n\nDetermine dominated strategies (ICER&lt;0).\n\n5. Re-calculate ICERs after eliminating dominated strategies.\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n-112,364\nDominated\n\n\n\n\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n\nDetermine dominated strategies (ICER&lt;0).\nRe-calculate ICERs after eliminating dominated strategies.\n\n6. Determine strategies ruled out by extended dominance.\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\nDominated (Extended)\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n\nDominated\n\n\n\n\n\nLeast costly first, most costly last"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#incremental-cea-9",
     "href": "lectures/lec_6.ICERs.html#incremental-cea-9",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Incremental CEA",
-    "text": "Incremental CEA\n\n\n\nCalculate costs and effects for each strategy.\nSort table by costs in ascending order.1\nCalculate ICER based on difference in costs and effects.\n\n\n\nDetermine dominated strategies (ICER&lt;0).\nRe-calculate ICERs after eliminating dominated strategies.\n\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n\n\n\n\n\n\n\nLeast costly first, most costly last"
+    "text": "Incremental CEA\n\n\n7. Re-calculate ICERs after ruling out all dominated strategies.\n\n\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nD\n24,504\n8,050\n17.491\n0.159\n50,629\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n\nDominated\n\n\nB\n21,457\n\n17.409\n\n\nDominated (Extended)\n\n\n\n\n\n\n\nStrategy D is more expensive than Strategy B, but Strategy D is gaining health MORE EFFICIENTLY than Strategy B"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#determining-dominated-strategies-2",
     "href": "lectures/lec_6.ICERs.html#determining-dominated-strategies-2",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Determining Dominated Strategies",
-    "text": "Determining Dominated Strategies\n\nWe’re not quite done yet\nNotice something odd about strategy B?\nIts ICER is higher than the next most costly alternative (strategy D)\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491"
+    "text": "Determining Dominated Strategies\n\nA telltale sign of extended dominance in a (sorted) CEA table is a strategy with a higher ICER than the next most expensive option.\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\nDominated (Extended)\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n\nDominated"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#determining-dominated-strategies-3",
     "href": "lectures/lec_6.ICERs.html#determining-dominated-strategies-3",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Determining Dominated Strategies",
-    "text": "Determining Dominated Strategies\n\nA telltale sign of extended dominance in a (sorted) CEA table is a strategy with a higher ICER than the next most expensive option.\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\nDominated (Extended)\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n\n17.491\n\n\nDominated"
+    "text": "Determining Dominated Strategies\n\nYou can see this in the pictures as well …."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#determining-dominated-strategies-4",
@@ -931,14 +931,14 @@
     "href": "lectures/lec_6.ICERs.html#determine-dominated-strategies-3",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Determine dominated strategies",
-    "text": "Determine dominated strategies"
+    "text": "Determine dominated strategies\n\n\n\n\n\n\nStrategy\nCost\nIncremental Cost\nDALYs\nDALYs Averted\n\n\n\n\nNo prophylaxis\n40,288\n0\n9.50\n0.00\n\n\nTMP-SMX\n44,786\n4,498\n6.94\n2.56\n\n\nTMP-SMX, azithromycin\n45,944\n1,158\n6.46\n0.48\n\n\nTMP-SMX, azithromycin, fluconazole\n48,596\n2,652\n5.90\n0.56\n\n\nTMP-SMX, azithromycin, fluconazole, ganciclovir\n61,119\n12,523\n4.88\n1.02"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#determine-dominated-strategies-4",
     "href": "lectures/lec_6.ICERs.html#determine-dominated-strategies-4",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Determine dominated strategies",
-    "text": "Determine dominated strategies\n\n\n\n\n\n\nStrategy\nCost\nIncremental Cost\nDALYs\nDALYs Averted\n\n\n\n\nNo prophylaxis\n40,288\n0\n9.50\n0.00\n\n\nTMP-SMX\n44,786\n4,498\n6.94\n2.56\n\n\nTMP-SMX, azithromycin\n45,944\n1,158\n6.46\n0.48\n\n\nTMP-SMX, azithromycin, fluconazole\n48,596\n2,652\n5.90\n0.56\n\n\nTMP-SMX, azithromycin, fluconazole, ganciclovir\n61,119\n12,523\n4.88\n1.02"
+    "text": "Determine dominated strategies\n\n\n\n\n\n\nStrategy\nIncremental Cost\nDALYs Averted\nIncremental Cost per DALY Averted\nStatus\n\n\n\n\nNo prophylaxis\n0\n0.00\n\n\n\n\nTMP-SMX\n4,498\n2.56\n1,757\n\n\n\nTMP-SMX, azithromycin\n1,158\n0.48\n2,413\n\n\n\nTMP-SMX, azithromycin, fluconazole\n2,652\n0.56\n4,736\n\n\n\nTMP-SMX, azithromycin, fluconazole, ganciclovir\n12,523\n1.02\n12,277"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#determine-dominated-strategies-5",
@@ -972,15 +972,15 @@
     "objectID": "lectures/lec_6.ICERs.html#cea-thresholds",
     "href": "lectures/lec_6.ICERs.html#cea-thresholds",
     "title": "Incremental Cost-Effectiveness Analysis",
-    "section": "CEA Thresholds",
-    "text": "CEA Thresholds\n\nSo now we have our ICERs, but how do we make a decision?\nWe must define a threshold (\\lambda), or an ICER value that determines whether or not we implement a given strategy.\n\nAlso known as “willingness-to-pay” (WTP) threshold."
+    "section": "CEA thresholds",
+    "text": "CEA thresholds\n\n06"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#cea-thresholds-1",
     "href": "lectures/lec_6.ICERs.html#cea-thresholds-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "CEA Thresholds",
-    "text": "CEA Thresholds\nWhat are common thresholds and how are they determined?\n\nIn high income countries, common thresholds are $50,000/QALY, $100,000/QALY, and $100,000/QALY.\nIn LMICs, 0.5-3x per capita gross domestic product (GDP) per DALY averted.\nMore on this in a few minutes."
+    "text": "CEA Thresholds\n\n\nSo now we have our ICERs, but how do we make a decision?\nWe must define a threshold (\\lambda), or an ICER value that determines whether or not we implement a given strategy.\n\nAlso known as “willingness-to-pay” (WTP) threshold."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#how-do-cea-thresholds-guide-decisionmaking",
@@ -1008,7 +1008,7 @@
     "href": "lectures/lec_6.ICERs.html#cea-thresholds-2",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "CEA Thresholds",
-    "text": "CEA Thresholds"
+    "text": "CEA Thresholds\nWhat are common thresholds and how are they determined?\n\n\nIn high income countries, common thresholds are $50,000/QALY, $100,000/QALY, and $100,000/QALY.\nIn LMICs, 0.5-3x per capita gross domestic product (GDP) per DALY averted.\nMore on this in a few minutes."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#cea-thresholds-3",
@@ -1029,14 +1029,14 @@
     "href": "lectures/lec_6.ICERs.html#cea-thresholds-5",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "CEA Thresholds",
-    "text": "CEA Thresholds\n\nDifferent ways thresholds have been estimated: - “supply-side” (UK & Europe) - “demand-side” (US) - per capita consumption (US/LMICs)\n\n\nThere are different ways to determine a cost-effective threshold & it’s done a bit differently around the world, which we talk about in a recent paper I collaborated with UK colleagues on, which discusses the evolution of these thresholds.\nSome countries like the UK, use what has been referred to as a “supply-side threshold” – which represents the notion of opportunity cost – whether the health generated from an adopted intervention from NICE, for instance, is greater than the health that could have been generated if the money had been spent on something else - Under a fixed budget.\nAnother way that countries like the US have defined CE thresholds is by what’s called a “demand-side” perspective, or society’s “willingness to pay” for health gains. There’s still an opportunity cost associated with this but it’s from the perspective of the goods & services we would be willing to forego for these additional health gains.\nSimilarly, another way that countries have looked at the threshold is in terms of per capita consumption - consistent with the idea that people living in countries with higher incomes are able and willing to pay more for health - which makes intuitive sense"
+    "text": "CEA Thresholds"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#opportunity-cost-supply-side",
     "href": "lectures/lec_6.ICERs.html#opportunity-cost-supply-side",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Opportunity cost (“supply-side”)",
-    "text": "Opportunity cost (“supply-side”)\n\n\nDecision should be informed by the value of what will be given up as a consequence of those cost.\n\nKnown as the “opportunity cost.”\n\nIf resources are committed to the funding of one intervention, then they are not available to fund and deliver others (shopping spree concept)\nThe opportunity cost of a commitment of resources is the health forgone because these “other” interventions that are available to the health system cannot be delivered.\nSource: See K Claxton on the estimation of the NICE threshold in the UK / Woods et al, & others"
+    "text": "Opportunity cost (“supply-side”)\n\n\n\nDecision should be informed by the value of what will be given up as a consequence of those cost. Known as the “opportunity cost.”\nIf resources are committed to the funding of one intervention, then they are not available to fund and deliver others (shopping spree concept)\nThe opportunity cost of a commitment of resources is the health forgone because these “other” interventions that are available to the health system cannot be delivered.\n\n\nSource: See K Claxton on the estimation of the NICE threshold in the UK / Woods et al, & others"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#opportunity-cost-supply-side-1",
@@ -1050,7 +1050,7 @@
     "href": "lectures/lec_6.ICERs.html#opportunity-cost-supply-side-2",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "Opportunity cost (“supply-side”)",
-    "text": "Opportunity cost (“supply-side”)\n\n\n\nIf you don’t consider the budget under which you are operating, then some medications could take up half the budget and displace interventions that produce significant health gain OR in the US, could increase premiums or take away $$ from other sectors\n\n\nAcademics have argued that the threshold should be lower/on the more conservative end for higher priced therapies (NICE uses a budget impact threshold of 20,000 GBP/QALY for these higher priced therapies as opposed to 30,000 GBP/QALY for others)"
+    "text": "Opportunity cost (“supply-side”)\n\n\nIf you don’t consider the budget under which you are operating, then some medications could take up half the budget and displace interventions that produce significant health gain OR in the US, could increase premiums or take away $$ from other sectors\n\n\nAcademics have argued that the threshold should be lower/on the more conservative end for higher priced therapies (NICE uses a budget impact threshold of 20,000 GBP/QALY for these higher priced therapies as opposed to 30,000 GBP/QALY for others)"
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#willingness-to-pay-demand-side",
@@ -1071,7 +1071,7 @@
     "href": "lectures/lec_6.ICERs.html#cea-thresholds-in-lmics-1",
     "title": "Incremental Cost-Effectiveness Analysis",
     "section": "CEA Thresholds in LMICs",
-    "text": "CEA Thresholds in LMICs\n\n\nPast WHO guidelines recommended countries use following guidelines: An intervention is cost-effective if cost/DALY averted is less than 1-3X per capita GDP of country\nSome have argued the WHO’s guidelines may be too high and result in adoption of interventions that displace existing services that provide greater health benefit.\nSuggest 0.5 GDPpc is a more appropriate benchmark for low-income countries and 0.71 GDPpc for middle-income countries (see Woods et al 2016)\n\n\n\nAnalysts have also argued that the threshold should be lower for these countries based on a healthcare budget perspective\nIn Peru, for example, a study found that the addition of one breast cancer treatment could be cost-effective under the broad 1-3X per capita GDP criteria; however, the cost of adding the new drug would exceed Peru’s entire budget for breast cancer treatment."
+    "text": "CEA Thresholds in LMICs\n\n\n\nPast WHO guidelines recommended countries use following guidelines: An intervention is cost-effective if cost/DALY averted is less than 1-3X per capita GDP of country\nSome have argued the WHO’s guidelines may be too high and result in adoption of interventions that displace existing services that provide greater health benefit.\nSuggest 0.5 GDPpc is a more appropriate benchmark for low-income countries and 0.71 GDPpc for middle-income countries (see Woods et al 2016)\n\n\n\n\nAnalysts have also argued that the threshold should be lower for these countries based on a healthcare budget perspective\nIn Peru, for example, a study found that the addition of one breast cancer treatment could be cost-effective under the broad 1-3X per capita GDP criteria; however, the cost of adding the new drug would exceed Peru’s entire budget for breast cancer treatment."
   },
   {
     "objectID": "lectures/lec_6.ICERs.html#cea-thresholds-in-lmics-2",
@@ -1091,8 +1091,8 @@
     "objectID": "lectures/lec_6.ICERs.html#hiv-example-from-earlier-1",
     "href": "lectures/lec_6.ICERs.html#hiv-example-from-earlier-1",
     "title": "Incremental Cost-Effectiveness Analysis",
-    "section": "HIV Example from Earlier",
-    "text": "HIV Example from Earlier\n\n\nIf our CE threshold was 2x GDP (GDP = $2,500), which option would we choose as decision makers?\nIf our CE threshold was 1x GDP (GDP = $2,500), which option would we choose as decision makers?"
+    "section": "HIV Example From Earlier",
+    "text": "HIV Example From Earlier\n\nIf our CE threshold was 2x GDP (GDP = $2,500), which option would we choose as decision makers? \nIf our CE threshold was 1x GDP (GDP = $2,500), which option would we choose as decision makers?\n\n\n\n\n\n\n\nStrategy\nIncremental Cost\nDALYs Averted\nIncremental Cost per DALY Averted\nStatus\n\n\n\n\nNo prophylaxis\n0\n0.00\n\n\n\n\nTMP-SMX\n4,498\n2.56\n1,757\n\n\n\nTMP-SMX, azithromycin\n1,158\n0.48\n2,413\n\n\n\nTMP-SMX, azithromycin, fluconazole\n2,652\n0.56\n4,736\n\n\n\nTMP-SMX, azithromycin, fluconazole, ganciclovir\n12,523\n1.02\n12,277\n\n\n\nTMP-SMX, fluconazole\n1,102\n-0.03\n\nDominated (Strong)\n\n\nTMP-SMX, ganciclovir\n6,032\n-0.40\n\nDominated (Strong)\n\n\nTMP-SMX, fluconazole, ganciclovir\n1,270\n-0.03\n\nDominated (Strong)\n\n\nTMP-SMX, azithromycin, ganciclovir\n8,216\n0.23\n\nDominated (Extended)"
   },
   {
     "objectID": "lectures/lec_psa.html#learning-objectives",
@@ -6700,5 +6700,201 @@
     "title": "Structuring a Markov Model",
     "section": "Tunnel States: Healthy, Sick, Dead",
     "text": "Tunnel States: Healthy, Sick, Dead\n\nIf we run out the Markov trace for five cycles, here are the results.\n\n\n\n\n\n\n\ncycle\nH\nS1\nS2\nS\nS_total\nD\n\n\n\n\n0\n1000\n0\n0\n0\n0\n0\n\n\n1\n960\n30\n0\n0\n30\n10\n\n\n2\n922\n29\n28\n0\n57\n22\n\n\n3\n885\n28\n26\n26\n80\n35\n\n\n4\n849\n27\n25\n50\n102\n49\n\n\n5\n815\n25\n24\n72\n121\n63"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#learning-objectives-and-outline",
+    "href": "lectures/lec_6.ICERs.html#learning-objectives-and-outline",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Learning Objectives and Outline",
+    "text": "Learning Objectives and Outline\n\n00"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#review-of-cea-ratio",
+    "href": "lectures/lec_6.ICERs.html#review-of-cea-ratio",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Review of CEA ratio",
+    "text": "Review of CEA ratio\n\n01"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis",
+    "href": "lectures/lec_6.ICERs.html#cost-effectiveness-analysis",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Cost-Effectiveness Analysis",
+    "text": "Cost-Effectiveness Analysis\n\n\nQuantifies how to maximize the quality & quantity of life from among competing alternatives, given restricted resources\nIt’s an explicit measure of value for money\nA POPULATION-LEVEL decision-making tool"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section",
+    "href": "lectures/lec_6.ICERs.html#section",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Incremental Cost-Effectiveness Ratio\n\n\n\\begin{aligned}\nICER &=  \\frac{C_1 - C_0}{E_1 - E_0}\n&= \\frac{\\Delta C}{\\Delta E}\n\\end{aligned}\n\n\nC_1: net present value of total lifetime costs of new treatment\nC_0: net present value of total lifetime costs of comparator\nE_1: effectiveness of new treatment\nE_0: effectiveness of comparator\n\nEffectivness is measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.\n\n\nMost often used, since for most conditions there is already some available treatment."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#strategy-treat-no-one",
+    "href": "lectures/lec_6.ICERs.html#strategy-treat-no-one",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Strategy: Treat No One",
+    "text": "Strategy: Treat No One"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#strategy-treat-all",
+    "href": "lectures/lec_6.ICERs.html#strategy-treat-all",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Strategy: Treat All",
+    "text": "Strategy: Treat All"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-1",
+    "href": "lectures/lec_6.ICERs.html#section-1",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Average Cost-Effectiveness Ratio\n\nSpecial case where C_0 and E_0 are assumed to be zero.\n\n\\begin{aligned}\nICER &=  \\frac{C_1 - 0}{E_1 - 0}\n&= \\frac{C_1}{E_1 }\n\\end{aligned}\n\n\nC_1: net present value of total lifetime costs of new treatment\nC_0: Assumed zero\nE_1: effectiveness of new treatment\nE_0: Assumed zero\n\nEffectivness is measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#non-competing-vs.-competing-ceas",
+    "href": "lectures/lec_6.ICERs.html#non-competing-vs.-competing-ceas",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Non-Competing vs. Competing CEAs",
+    "text": "Non-Competing vs. Competing CEAs\n\n02"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#incremental-cost-effectiveness-analysis",
+    "href": "lectures/lec_6.ICERs.html#incremental-cost-effectiveness-analysis",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Incremental Cost-Effectiveness Analysis",
+    "text": "Incremental Cost-Effectiveness Analysis\n\n03"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#a-identify-dominated-strategies",
+    "href": "lectures/lec_6.ICERs.html#a-identify-dominated-strategies",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "(2a) Identify Dominated Strategies",
+    "text": "(2a) Identify Dominated Strategies\n\n\n\nWe can rule out any strategies that result in less health at higher cost."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#b-identify-dominated-strategies",
+    "href": "lectures/lec_6.ICERs.html#b-identify-dominated-strategies",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "(2b) Identify Dominated Strategies",
+    "text": "(2b) Identify Dominated Strategies\n\n\n\nWe can also rule out strategies where some other competing strategy results in more (or equal) health at lower (or equal) cost.\nThis is known as “strong” dominance."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#c-identify-dominated-strategies",
+    "href": "lectures/lec_6.ICERs.html#c-identify-dominated-strategies",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "(2c) Identify Dominated Strategies",
+    "text": "(2c) Identify Dominated Strategies\n\n\n\nWe can also rule out strategies where some other competing strategy results in more (or equal) health at lower (or equal) cost.\nThis is known as “strong” dominance."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#c-identify-dominated-strategies-1",
+    "href": "lectures/lec_6.ICERs.html#c-identify-dominated-strategies-1",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "(2c) Identify Dominated Strategies",
+    "text": "(2c) Identify Dominated Strategies\n\n\n\nWe can also rule out strategies where some other competing strategy results in more (or equal) health at lower (or equal) cost.\nThis is known as “strong” dominance."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#hybrid-strategies-1",
+    "href": "lectures/lec_6.ICERs.html#hybrid-strategies-1",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Hybrid Strategies",
+    "text": "Hybrid Strategies\n\n\n\nSuppose it is feasible to partially implement strategies A and D .\n\n\nFor example, we could implement A for 10% of the population and D for 90% of the population, or vice versa.\n\n\n\n10% A, 90% D"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#hybrid-strategies-2",
+    "href": "lectures/lec_6.ICERs.html#hybrid-strategies-2",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Hybrid Strategies",
+    "text": "Hybrid Strategies\n\n\n\nSuppose it is feasible to partially implement strategies A and D .\n\n\nFor example, we could implement A for 50% of the population and D for 50% of the population, or vice versa.\n\n\nCan we make any statements about B now?\n\n\n\n50% A, 50% D"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-2",
+    "href": "lectures/lec_6.ICERs.html#section-2",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Efficiency Frontier\n\n\n\nThe efficiency frontier is the set of non-dominated strategies."
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-3",
+    "href": "lectures/lec_6.ICERs.html#section-3",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "ICERs\n\n\n\nThe slope of a line connecting two points is the incremental cost-effectiveness ratio comparing those strategies. \nMore on this later!"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#incremental-cea",
+    "href": "lectures/lec_6.ICERs.html#incremental-cea",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Incremental CEA",
+    "text": "Incremental CEA\n\n\nNotice:\n\nPlease note that the following example uses different strategies and values than the example used in the previous pictures!"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#steps-of-incremental-cea",
+    "href": "lectures/lec_6.ICERs.html#steps-of-incremental-cea",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Steps of Incremental CEA",
+    "text": "Steps of Incremental CEA\n\n\n\n1\n\n\nCalculate costs and effects for each strategy.\n\n\n\n\n2\n\n\nSort table by costs in ascending order.1\n\n\n\n\n3\n\n\nCalculate ICER based on difference in costs and effects.\n\n\n\n\n4\n\n\nDetermine dominated strategies (ICER&lt;0).\n\n\n\n\n\n\n5\n\n\nRe-calculate ICERs after eliminating dominated strategies.\n\n\n\n\n6\n\n\nDetermine strategies ruled out by extended dominance.\n\n\n\n\n7\n\n\nDetermine strategies ruled out by extended dominance.\n\n\n\n\n8\n\n\nRepeat 5-7 as needed.\n\n\n\nLeast costly first, most costly last"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#dominance-extended-dominance",
+    "href": "lectures/lec_6.ICERs.html#dominance-extended-dominance",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Dominance & extended dominance",
+    "text": "Dominance & extended dominance\n\n04"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-4",
+    "href": "lectures/lec_6.ICERs.html#section-4",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Strong dominance\n\n\nSituations where one strategy is preferred over another on both costs and health effects (e.g., QALYs).\n\n\n\nWhen we identify a strongly dominated option, we remove it from the table and re-calculate ICERS based on the remaining strategies.\n\n\n\n\n\n\n\nStrategy\nCost\ndCost\nQALYs\ndQALYs\nICER\n\n\n\n\n\nA\n16,454\n\n17.332\n\n\n\n\n\nB\n21,457\n5,003\n17.409\n0.077\n64,974\n\n\n\nD\n24,504\n3,048\n17.491\n0.082\n37,171\n\n\n\nC\n33,443\n8,939\n17.580\n0.088\n101,580\n\n\n\nE\n43,332\n9,888\n17.491\n-0.088\n-112,364\nDominated"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#dominance-extended-dominance-1",
+    "href": "lectures/lec_6.ICERs.html#dominance-extended-dominance-1",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Dominance & extended dominance",
+    "text": "Dominance & extended dominance\n\n04"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-5",
+    "href": "lectures/lec_6.ICERs.html#section-5",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Remove dominated strategies and recalculate"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-6",
+    "href": "lectures/lec_6.ICERs.html#section-6",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Remove dominated strategies and recalculate"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#comparators",
+    "href": "lectures/lec_6.ICERs.html#comparators",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Comparators",
+    "text": "Comparators\n\n05"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#cea-thresholds-6",
+    "href": "lectures/lec_6.ICERs.html#cea-thresholds-6",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "CEA Thresholds",
+    "text": "CEA Thresholds\n\nDifferent ways thresholds have been estimated: - “supply-side” (UK & Europe) - “demand-side” (US) - per capita consumption (US/LMICs)\n\n\nThere are different ways to determine a cost-effective threshold & it’s done a bit differently around the world, which we talk about in a recent paper I collaborated with UK colleagues on, which discusses the evolution of these thresholds.\nSome countries like the UK, use what has been referred to as a “supply-side threshold” – which represents the notion of opportunity cost – whether the health generated from an adopted intervention from NICE, for instance, is greater than the health that could have been generated if the money had been spent on something else - Under a fixed budget.\nAnother way that countries like the US have defined CE thresholds is by what’s called a “demand-side” perspective, or society’s “willingness to pay” for health gains. There’s still an opportunity cost associated with this but it’s from the perspective of the goods & services we would be willing to forego for these additional health gains.\nSimilarly, another way that countries have looked at the threshold is in terms of per capita consumption - consistent with the idea that people living in countries with higher incomes are able and willing to pay more for health - which makes intuitive sense"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#section-7",
+    "href": "lectures/lec_6.ICERs.html#section-7",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "",
+    "text": "Key Takeaways\n\n\nBenefits\n\n\n\nX\n\n\nX\n\n\nX\n\n\nX"
+  },
+  {
+    "objectID": "lectures/lec_6.ICERs.html#questions",
+    "href": "lectures/lec_6.ICERs.html#questions",
+    "title": "Incremental Cost-Effectiveness Analysis",
+    "section": "Questions?",
+    "text": "Questions?\n\nNext Lecture: Markov Models"
   }
 ]
