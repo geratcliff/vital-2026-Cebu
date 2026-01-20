@@ -289,8 +289,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#b-define-the-transitions" id="toc-b-define-the-transitions" class="nav-link" data-scroll-target="#b-define-the-transitions">B: Define the Transitions</a></li>
   <li><a href="#c-generate-the-model" id="toc-c-generate-the-model" class="nav-link" data-scroll-target="#c-generate-the-model">C: Generate the Model</a></li>
   </ul></li>
-  <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a></li>
+  <li><a href="#building-the-model" id="toc-building-the-model" class="nav-link" data-scroll-target="#building-the-model">Building the model</a>
+  <ul class="collapse">
+  <li><a href="#a-add-markov-chain" id="toc-a-add-markov-chain" class="nav-link" data-scroll-target="#a-add-markov-chain">A: Add Markov Chain</a></li>
+  <li><a href="#b-add-the-health-states" id="toc-b-add-the-health-states" class="nav-link" data-scroll-target="#b-add-the-health-states">B: Add the Health States</a></li>
+  </ul></li>
+  <li><a href="#add-parameters" id="toc-add-parameters" class="nav-link" data-scroll-target="#add-parameters">Add Parameters</a></li>
+  <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a>
+  <ul class="collapse">
+  <li><a href="#a-add-markov-chain-1" id="toc-a-add-markov-chain-1" class="nav-link" data-scroll-target="#a-add-markov-chain-1">A: Add Markov Chain</a></li>
+  </ul></li>
   <li><a href="#uploading-a-table" id="toc-uploading-a-table" class="nav-link" data-scroll-target="#uploading-a-table">Uploading a Table</a></li>
+  <li><a href="#copy-and-paste-in-amua" id="toc-copy-and-paste-in-amua" class="nav-link" data-scroll-target="#copy-and-paste-in-amua">Copy and Paste in Amua</a></li>
   <li><a href="#adjusting-to-match-strategy" id="toc-adjusting-to-match-strategy" class="nav-link" data-scroll-target="#adjusting-to-match-strategy">Adjusting to match strategy</a></li>
   </ul>
 </nav>
@@ -465,11 +475,151 @@ ul.task-list li input[type="checkbox"] {
 </details>
 </section>
 
+<section id="building-the-model" class="level1">
+<h1>Building the model</h1>
+<p>In the Disease X model, we will be flowing the tree into the Markov model.</p>
+<p>Click Model &gt; New &gt; Markov Model</p>
+<p><img src="images/simpleMarkov/MarkovFile.png" class="img-fluid"></p>
+<p>You should get a empty page with a decision node (<img src="../amua-images/decisionNode_24.png" class="img-fluid">)</p>
+<div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Your Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Build out the Markov Structure for the “Treat None” arm of the model</p>
+</div>
+</div>
+<details>
+<summary style="color: orange;">
+<p>More assistance with step</p>
+</summary>
+<p style="color: black;">
+</p><section id="a-add-markov-chain" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-markov-chain">A: Add Markov Chain</h3>
+<ol type="1">
+<li>Add the Markov Chain (<img src="../amua-images/markovChain_24.png" class="img-fluid">) for the “Treat None” arm. Option 1: Select the decision node. Right click &gt; Add &gt; Markov Chain. Option 2: Select the decision node and click the Markov Chain button (<img src="../amua-images/markovChain_24.png" class="img-fluid">) in the top bar</li>
+</ol>
+<p><img src="images/simpleMarkov/AddMarkovChain1.png" class="img-fluid"> 2. Name that chain “Treat None”</p>
+</section>
+<section id="b-add-the-health-states" class="level3">
+<h3 class="anchored" data-anchor-id="b-add-the-health-states">B: Add the Health States</h3>
+<p>This model has three health states: Healthy, Sick, and Dead</p>
+<ol type="1">
+<li><p>Select the Markov chain labeled “Treat None” <img src="images/simpleMarkov/AddState1.png" class="img-fluid"></p></li>
+<li><p>Add the health states Option 1: Right click &gt; Add &gt; Markov State (<img src="../amua-images/markovState_24.png" class="img-fluid">. Option 2: Click the Markov State button (<img src="../amua-images/markovState_24.png" class="img-fluid">) in the top bar Option 3: Double click on the Markov Chain to get two Markov states added</p></li>
+</ol>
+<p><img src="images/simpleMarkov/AddState2.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li><p>Rename the State to “Health”</p></li>
+<li><p>Repeat for Sick and Dead</p></li>
+</ol>
+<p><img src="images/simpleMarkov/AddState3.png" class="img-fluid"><br>
+### C: Add events within each health state</p>
+<p>Typically within Markov models events are modeled from worst to best. For ease of sensitivity analysis, we recommend only having two branches off each decision node.</p>
+<ol type="1">
+<li>Select the Markov State labeled “Healthy”. It will outline red when selected</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent1.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Add a chance node Option 1: Right click &gt; Add &gt; Chance Node (<img src="../amua-images/chanceNode_24.png" class="img-fluid">. Option 2: Click the Chance Node button (<img src="../amua-images/chanceNode_24.png" class="img-fluid">) in the top bar Option 3: Double click on the Markov State to get two chance nodes added</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent2.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li><p>Change the labels to “Survive” and “Die”.</p></li>
+<li><p>Nothing can happen after you die so we will change that to a state transition node.</p></li>
+<li><p>Select the “Die” branch and click the “Change to State Transition” ((<img src="../amua-images/changeTypeTrans_24.png" class="img-fluid">.) button on the top bar. You should get something like this. [It may have auto filled a state or it may also be blank]</p></li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent3.png" class="img-fluid"></p>
+<ol start="6" type="1">
+<li>Click on the drop down arrow that is to the right of the state transition blue arrow to set the state transition.</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateTransition.png" class="img-fluid"></p>
+<ol start="7" type="1">
+<li>Select the correct state for that decision branch from the drop down. For “Die”, it should be “Dead”</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent4.png" class="img-fluid"></p>
+<p>Now let’s look back at the “Survive” branch. The proportion of the cohort that survives death, will have the chance of getting sick.</p>
+<ol start="8" type="1">
+<li>Add a chance node for getting sick.</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent5.png" class="img-fluid"></p>
+<ol start="9" type="1">
+<li>At the end of each branch, change the chance nodes to state transitions.</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent6.png" class="img-fluid"></p>
+<ol start="10" type="1">
+<li>Update the state transitions to match the transition for that branch.</li>
+</ol>
+<p><img src="images/simpleMarkov/AddStateEvent6.png" class="img-fluid"></p>
+<ol start="11" type="1">
+<li>Build out the events for the other two health states.</li>
+</ol>
+<p>[Don’t worry about the Treat branch, we will come back to it]</p>
+<p></p>
+</section></details>
+<details>
+<summary style="color: green; font-size: 4vh;">
+<p>Check your Bubble Diagram</p>
+</summary>
+<p style="color: black;">
+<img src="images/simpleMarkov/TreatNoneStructure.png" class="img-fluid">
+</p>
+</details>
+</section>
+
+<section id="add-parameters" class="level1">
+<h1>Add Parameters</h1>
+<p>To help with time, we have created a parameters file you can upload to your model.</p>
+<ol type="1">
+<li><p>On the top bar click Model &gt; Import</p></li>
+<li><p>An pop-up should appear to help “Import Objects”</p>
+<p><img src="images/simpleMarkov/import1.png" class="img-fluid"><br>
+</p></li>
+<li><p>Select the CSV source</p>
+<p><img src="images/simpleMarkov/import2.png" class="img-fluid"></p></li>
+<li><p>Click the “Browse” button</p></li>
+<li><p>Select the parameter file and click “Open”</p></li>
+<li><p>Make sure the “Object Type” is set to “Parameters” and click “Import C…”</p></li>
+</ol>
+<p>You’re side bar should now be populated with the model parameters</p>
+</section>
 <section id="starting-probabilities" class="level1">
 <h1>Starting Probabilities</h1>
+<p>For a Markov Model, you have to determine where people start. Some models everyone starts in the same state and in other models people start spread out across multiple states.</p>
+<p>In the “Treat None” branch, we know that some people will start sick and some will be healthy.</p>
+<p>The current prevalence of Disease X in 50 year olds is 8%.</p>
+<details>
+<summary style="color: orange;">
+<p>More assistance with step</p>
+</summary>
+<p style="color: black;">
+</p><section id="a-add-markov-chain-1" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-markov-chain-1">A: Add Markov Chain</h3>
+<ol type="1">
+<li>Add the Markov Chain (<img src="../amua-images/markovChain_24.png" class="img-fluid">) for the “Treat None” arm.</li>
+</ol>
 </section>
+</details></section>
 <section id="uploading-a-table" class="level1">
 <h1>Uploading a Table</h1>
+</section>
+<section id="copy-and-paste-in-amua" class="level1">
+<h1>Copy and Paste in Amua</h1>
+<p>Once your model matches the one in the dropdown above, you can copy and paste if for the “Not Sick -&gt; Treat” arm.</p>
+<ol type="1">
+<li><p>Select the item you want to copy. In this case it is the “Sick -&gt; Treat” arm of the model.</p></li>
+<li><p>Right click and copy or use Ctrl + C [On Mac, CMD + C]</p></li>
+<li><p>Select the Treat All Node</p></li>
+<li><p>Right click and paste or use Ctrl + P [On Mac, CMD + P]</p></li>
+<li><p>Click the “OCD” button to clean up the model</p></li>
+<li><p>Rename one of the branches to “Not Sick -&gt; Treat”</p></li>
+</ol>
+<p>CHECK YOUR MODEL</p>
 </section>
 <section id="adjusting-to-match-strategy" class="level1">
 <h1>Adjusting to match strategy</h1>
