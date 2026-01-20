@@ -150,47 +150,84 @@
 </div>
 
 </section>
-<section>
-<section id="learning-objectives-and-outline" class="title-slide slide level1 center">
-<h1>Learning Objectives and Outline</h1>
-
+<section id="learning-objectives-and-outline" class="slide level2 section-slide center">
+<h2>Learning Objectives and Outline</h2>
+<div class="section-number">
+<p>00</p>
+</div>
 </section>
 <section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
+<div class="arrow-bullets">
 <ul>
 <li><p>Construct and solve a decision problem by calculating an intervention’s <strong>expected value</strong> across competing strategies in a decision tree</p></li>
 <li><p>Determine the decision threshold across a range of scenarios</p></li>
 <li><p>Differentiate between joint and conditional probabilities and demonstrate their use in decision trees</p></li>
 </ul>
+</div>
 </section>
-<section id="outline" class="slide level2 center">
+<section id="outline" class="slide level2 numbered-list-slide center">
 <h2>Outline</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ol type="1">
-<li>Structure</li>
-<li>Probability review</li>
-<li>Probabilities within decision trees</li>
-</ol>
-</div><div class="column" style="width:50%;">
-<ol start="4" type="1">
-<li>Strengths/limitations of decision trees</li>
-</ol>
-</div></div>
-</section></section>
-<section>
-<section id="the-structure-of-a-decision-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>The Structure of a Decision Analysis</h1>
-
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Structure of a Decision Analysis</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>Determining the Decision Threshold</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>03</p>
+</div>
+<div class="text">
+<p>Probabilities within Decision Trees</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>04</p>
+</div>
+<div class="text">
+<p>Other Concepts in Decision Analysis</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>05</p>
+</div>
+<div class="text">
+<p>Strengths/limitations of decision trees</p>
+</div>
+</div>
+</div>
 </section>
-<section id="recap-decision-analysis" class="slide level2 center" data-background="#43464B">
-<h2>Recap: Decision Analysis</h2>
-<p><br></p>
-<ul>
-<li class="fragment"><p>Aims to inform choice under uncertainty using an explicit, quantitative approach</p></li>
-<li class="fragment"><p>Aims to identify, measure, &amp; value the <strong>consequences of decisions</strong> (risks/benefits) &amp; uncertainty when a decision needs to be made, most appropriately over time</p></li>
-</ul>
-</section></section>
+<section id="the-structure-of-a-decision-analysis" class="slide level2 section-slide center">
+<h2>The Structure of a Decision Analysis</h2>
+<div class="section-number">
+<p>01</p>
+</div>
+</section>
+<section id="recap-decision-analysis" class="slide level2 center">
+<h2>Recap: <span class="accent-text">Decision Analysis</span></h2>
+<div class="concept-grid">
+<div class="concept-box">
+<p>Aims to inform choice under uncertainty using an explicit, quantitative approach</p>
+</div>
+<div class="concept-box">
+<p>Aims to identify, measure, &amp; value the <strong>consequences of decisions</strong> (risks/benefits) &amp; uncertainty when a decision needs to be made, most appropriately over time</p>
+</div>
+</div>
+</section>
 <section>
 <section id="should-i-go-to-the-beach-or-stay-home" class="title-slide slide level1 center" data-background="#c2f0c2">
 <h1>Should I go to the beach or stay home?</h1>
@@ -199,76 +236,134 @@
 <section id="should-i-go-to-the-beach-or-stay-home-1" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Should I go to the beach or stay home?</h2>
 <h4 id="possible-states-of-the-world">Possible States of the World:</h4>
-<ul>
-<li>At the beach with no rain.</li>
-<li>At the beach with rain.</li>
-<li>At home with no rain.</li>
-<li>At home with rain.</li>
-</ul>
+<div class="image-grid grid-2x2">
+<div class="image-item">
+<p><img data-src="images/lec2/sun_beach.png"></p>
+<div class="image-caption">
+<p>At the beach with no rain.</p>
+</div>
+</div>
+<div class="image-item">
+<p><img data-src="images/lec2/rain_beach.png"></p>
+<div class="image-caption">
+<p>At the beach with rain.</p>
+</div>
+</div>
+<div class="image-item">
+<p><img data-src="images/lec2/sun_home.png"></p>
+<div class="image-caption">
+<p>At home with no rain.</p>
+</div>
+</div>
+<div class="image-item">
+<p><img data-src="images/lec2/rain_home.png"></p>
+<div class="image-caption">
+<p>At home with rain.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="should-i-go-to-the-beach-or-stay-home-2" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Should I go to the beach or stay home?</h2>
 <h3 id="considerations">Considerations:</h3>
-<ul>
-<li><span style="color: green;">Likelihood of rain</span></li>
-<li><span style="color: green;">My overall well being when</span>
-<ul>
-<li>At the beach with no rain.</li>
-<li>At the beach with rain.</li>
-<li>At home with no rain.</li>
-<li>At home with rain.</li>
-</ul></li>
-</ul>
+<div class="image-grid">
+<div class="image-item">
+<div class="fragment">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0.5em;"><strong>Probabilities</strong></span></p>
+</div>
+<p><img data-src="images/lec2/weatherman.png"></p>
+<div class="image-caption">
+<p>Likelihood of Rain</p>
+</div>
+</div>
+<div class="image-item">
+<div class="fragment">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0.5em;"><strong>Payoff</strong></span></p>
+</div>
+<p><img data-src="images/lec2/moods.png"></p>
+<div class="image-caption">
+<p>My overall well being in each state.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="should-i-go-to-the-beach-or-stay-home-3" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Should I go to the beach or stay home?</h2>
 <h3 id="considerations-1">Considerations:</h3>
-<ul>
-<li><span style="color: green;">Likelihood of rain</span> –&gt; <strong>probabilities</strong></li>
-<li><span style="color: green;">My overall well being when</span>
-<ul>
-<li>At the beach with no rain.</li>
-<li>At the beach with rain.</li>
-<li>At home with no rain.</li>
-<li>At home with rain.</li>
-</ul></li>
-</ul>
-</section>
-<section id="should-i-go-to-the-beach-or-stay-home-4" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Should I go to the beach or stay home?</h2>
-<h3 id="considerations-2">Considerations:</h3>
-<ul>
-<li><span style="color: green;">Likelihood of rain</span> –&gt; <strong>probabilities</strong></li>
-<li><span style="color: green;">My overall well being when</span>
-<ul>
-<li>At the beach with no rain. –&gt; <strong>payoff</strong></li>
-<li>At the beach with rain. –&gt; <strong>payoff</strong></li>
-<li>At home with no rain. –&gt; <strong>payoff</strong></li>
-<li>At home with rain. –&gt; <strong>payoff</strong></li>
-</ul></li>
-</ul>
+<div class="image-grid" style="grid-template-columns: 1fr 2fr;">
+<div class="image-item">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0.1em;"><strong>Probabilities</strong></span></p>
+<p><img data-src="images/lec2/weatherman.png"></p>
+<div class="image-caption">
+<p>Likelihood of Rain</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em;">
+<div class="image-item" data-id="payoff-1">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0em; font-size: 0.85em;"><strong>Payoff</strong></span></p>
+<p><img data-src="images/lec2/sun_beach.png" style="max-height: 12vh; margin-top: 0em;"></p>
+<div class="image-caption">
+<p>Mood when it is sunny at the beach</p>
+</div>
+</div>
+<div class="image-item" data-id="payoff-2">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0em; font-size: 0.85em;"><strong>Payoff</strong></span></p>
+<p><img data-src="images/lec2/rain_beach.png" style="max-height: 12vh; margin-top: 0em;"></p>
+<div class="image-caption">
+<p>Mood when it is raining at the beach</p>
+</div>
+</div>
+<div class="image-item" data-id="payoff-3">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0em; font-size: 0.85em;"><strong>Payoff</strong></span></p>
+<p><img data-src="images/lec2/sun_home.png" style="max-height: 12vh; margin-top: 0em;"></p>
+<div class="image-caption">
+<p>Mood when it is sunny at home</p>
+</div>
+</div>
+<div class="image-item" data-id="payoff-4">
+<p><span class="secondary-text" style="display: block; text-align: center; margin-bottom: 0em; font-size: 0.85em;"><strong>Payoff</strong></span></p>
+<p><img data-src="images/lec2/rain_home.png" style="max-height: 12vh; margin-top: 0em;"></p>
+<div class="image-caption">
+<p>Mood when it is raining at home</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="decision-trees" class="slide level2 center">
 <h2>Decision Trees</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="simple-comparison">
+<div class="fragment">
+<div class="comparison-column">
+<div class="column-header">
+<p><u>Square decision node</u></p>
+</div>
+<div class="column-content">
 <ul>
-<li class="fragment">A square decision node indicates a decision point between alternative options.</li>
-<li class="fragment">A circular chance node shows a point where two or more alternative events for a patient are possible.</li>
+<li>Indicates a decision point between alternative options</li>
 </ul>
-</div></div>
-</section>
-<section id="decision-trees-1" class="slide level2 center">
-<h2>Decision Trees</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div style="text-align: center; margin-top: 1.5em;">
+<p><img data-src="images/lec2/decision_node.png" style="max-height: 12vh;"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="comparison-column">
+<div class="column-header">
+<p><u>Circular Chance Node</u></p>
+</div>
+<div class="column-content">
 <ul>
-<li>A square decision node indicates a decision point between alternative options.</li>
-<li>A circular chance node shows a point where two or more alternative events for a patient are possible.</li>
+<li>Shows a point where two or more alternative events for a patient are possible</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_key.png"></p>
-</div></div>
+<div style="text-align: center; margin-top: 1.5em;">
+<p><img data-src="images/lec2/chance_node.png" style="max-height: 12vh;"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <aside class="notes">
 <ol type="1">
 <li><p>We start with a decision node – which just visually shows the decision point (so no probabilities are attached here)</p></li>
@@ -287,18 +382,20 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="decision-trees-2" class="slide level2 center">
+<section id="decision-trees-1" class="slide level2 center">
 <h2>Decision Trees</h2>
+<div class="icon-bullets">
 <ul>
-<li class="fragment">Pathways are mutually exclusive sequences of events and are the routes through the tree.</li>
+<li class="fragment">Pathways are <span class="accent-text"><strong>mutually exclusive</strong></span> sequences of events and are the routes through the tree.</li>
 <li class="fragment">Probabilities show the likelihood of particular event occurring at a chance node.</li>
 </ul>
+</div>
 </section>
-<section id="should-i-go-to-the-beach-or-stay-home-5" class="slide level2 center" data-auto-animate="true">
+<section id="should-i-go-to-the-beach-or-stay-home-4" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Should I go to the beach or stay home?</h2>
 <h3 id="decision-tree">Decision Tree:</h3>
 
-<img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome1.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<img data-src="images/lec2/decision_tree.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
 <ol start="2" type="1">
 <li>The outcomes we care about for this model are RAIN versus NO RAIN, so we add that to the end of our branches, which represent the terminal nodes – or the end states of our model</li>
 </ol>
@@ -313,17 +410,16 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section></section>
-<section>
-<section id="section" class="title-slide slide level1 center" data-background="#c2f0c2">
-<h1><i class="fa-solid fa-cloud-rain" aria-label="cloud-rain"></i></h1>
-<p>Probability of rain = 30%</p>
 </section>
-<section id="should-i-go-to-the-beach-or-stay-home-6" class="slide level2 center" data-auto-animate="true">
+<section id="probability-of-rain-30" class="slide level2 center">
+<h2>Probability of rain = 30%</h2>
+
+<img data-src="images/lec2/weatherman.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="should-i-go-to-the-beach-or-stay-home-5" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Should I go to the beach or stay home?</h2>
 <h3 id="decision-tree-1">Decision Tree:</h3>
 
-<img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome2.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<img data-src="images/lec2/decision_tree_prob.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
 <ol type="1">
 <li>The probability of rain is 30% - whether you stay home or go to the beach &amp; we know that the branches have to add to 1 because of the law of total probability<br>
 </li>
@@ -343,10 +439,16 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="should-i-go-to-the-beach-or-stay-home-7" class="slide level2 center">
+<section id="should-i-go-to-the-beach-or-stay-home-6" class="slide level2 center">
 <h2>Should I go to the beach or stay home?</h2>
 <h3 id="payoffs">Payoffs</h3>
+<div style="position: relative; min-height: 300px;">
+<div class="fragment fade-out" data-fragment-index="2" style="position: absolute; top: 0; left: 0; width: 100%;">
 <table class="caption-top">
+<colgroup>
+<col style="width: 66%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Scenario</th>
@@ -355,25 +457,56 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>At beach, no rain</td>
+<td><img data-src="images/lec2/sun_beach.png" style="max-height: 5vh; margin-bottom: 0"> At beach, no rain</td>
 <td>1.0</td>
 </tr>
 <tr class="even">
-<td>At beach, rain</td>
+<td><img data-src="images/lec2/rain_beach.png" style="max-height: 5vh; margin-bottom: 0"> At beach, rain <span class="fragment accent-text" data-fragment-index="1">↓</span></td>
 <td>0.4</td>
 </tr>
 <tr class="odd">
-<td>At home, no rain</td>
+<td><img data-src="images/lec2/sun_home.png" style="max-height: 5vh; margin-bottom: 0"> At home, no rain <span class="fragment accent-text" data-fragment-index="1">↑</span></td>
 <td>0.8</td>
 </tr>
 <tr class="even">
-<td>At home, rain</td>
+<td><img data-src="images/lec2/rain_home.png" style="max-height: 5vh; margin-bottom: 0"> At home, rain <span class="fragment accent-text" data-fragment-index="1">↑</span></td>
 <td>0.6</td>
 </tr>
 </tbody>
 </table>
-<div class="fragment">
-<p>At beach, no rain &gt; At home, no rain &gt; At home, rain &gt; At beach, rain</p>
+</div>
+<div class="fragment fade-in" data-fragment-index="2" style="position: absolute; top: 0; left: 0; width: 100%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 66%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Payoff</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img data-src="images/lec2/sun_beach.png" style="max-height: 5vh; margin-bottom: 0"> At beach, no rain <span class="accent-text">BEST</span></td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td><img data-src="images/lec2/sun_home.png" style="max-height: 5vh; margin-bottom: 0"> At home, no rain</td>
+<td>0.8</td>
+</tr>
+<tr class="odd">
+<td><img data-src="images/lec2/rain_home.png" style="max-height: 5vh; margin-bottom: 0"> At home, rain</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<td><img data-src="images/lec2/rain_beach.png" style="max-height: 5vh; margin-bottom: 0"> At beach, rain <span class="accent-text">WORSE</span></td>
+<td>0.4</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <aside class="notes">
 <ol type="1">
@@ -393,11 +526,11 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="should-i-go-to-the-beach-or-stay-home-8" class="slide level2 center">
+<section id="should-i-go-to-the-beach-or-stay-home-7" class="slide level2 center">
 <h2>Should I go to the beach or stay home?</h2>
 <h3 id="decision-tree-2">Decision Tree:</h3>
 
-<img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome3.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+<img data-src="images/lec2/decision_tree_payoff.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="what-is-the-expected-value-of-going-to-the-beach" class="slide level2 center">
 <h2>What is the expected value of going to the beach?</h2>
 <div class="columns">
@@ -411,7 +544,7 @@
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome_EVbeach.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/lec2/ev_beach.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div></div>
@@ -429,15 +562,19 @@
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome_EVhome.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/lec2/ev_home.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div></div>
-</section></section>
-<section>
-<section id="beach" class="title-slide slide level1 center" data-background="#c2f0c2">
-<h1><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Beach</h1>
+</section>
+<section id="section" class="slide level2 big-number-slide center">
+<h2></h2>
+<div class="big-number">
+<p><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Beach</p>
+</div>
+<div class="big-number-context">
 <p>EV(Beach)=0.82 &gt; EV(Home)=0.74</p>
+</div>
 </section>
 <section id="expected-values" class="slide level2 center">
 <h2>Expected Values</h2>
@@ -445,7 +582,7 @@
 <li>Expected value = The sum of the multiplied probabilities for each chance option or intervention</li>
 </ul>
 
-<img data-src="images/expected value.png" width="269" class="r-stretch"><aside class="notes">
+<img data-src="images/lec2/expected_value.png" width="269" class="r-stretch"><aside class="notes">
 <p>Equation: 1 to infinity – represents the infinite # of branches in the decision tree. In our example, we only had 2 branches, but if you had 3 or 4 or 5… you would represent it as i=3, 4, 5 and then you multiply the probabilities.</p>
 <p>Xi = payoff and P = probability</p>
 <style type="text/css">
@@ -460,17 +597,27 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="expected-values-1" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Expected Values</h2>
-<div style="font-size: 0.8em">
+<section id="section-1" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Expected Values</p>
+</div>
+<div class="definition arrow-bullets">
 <ul>
-<li class="fragment"><p>The expected value within the context of decision trees are the “payoffs” weighted by their preceding probabilities</p></li>
-<li class="fragment"><p>What we get is: the result that is expected ON AVERAGE for any one decision alternative (e.g.&nbsp;length of life, quality of life, lifetime costs)</p>
-<ul>
-<li class="fragment">Example: On average, patients given Treatment A will live 0.30 years longer than patients given Treatment B</li>
-</ul></li>
+<li>The expected value within the context of decision trees are the “payoffs” weighted by their preceding probabilities</li>
+<li>What we get is: the result that is expected ON AVERAGE for any one decision alternative (e.g.&nbsp;length of life, quality of life, lifetime costs)</li>
 </ul>
-<div class="fragment">
+</div>
+<div class="example fragment fade-in" data-fragment-index="2">
+<div class="example-label">
+<p>Example:</p>
+</div>
+<div class="example-text">
+<p>On average, patients given Treatment A will live 0.30 years (or 3.6 months [=0.30*12]) longer than patients given Treatment B</p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
 <div class="callout callout-important callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -483,21 +630,24 @@
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="determining-the-decision-threshold" class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Determining the Decision Threshold</h1>
-
+</section>
+<section id="determining-the-decision-threshold" class="slide level2 section-slide center">
+<h2>Determining the Decision Threshold</h2>
+<div class="section-number">
+<p>02</p>
+</div>
 </section>
 <section id="at-what-probability-p-are-the-two-choices-equal" class="slide level2 center">
 <h2>At what probability <span class="math inline">p</span> are the two choices equal?</h2>
 <div class="fragment">
 <p>Suppose we want to know at what probability of rain <span class="math inline">p</span> we are indifferent between going to the beach vs.&nbsp;staying at home…</p>
 </div>
+<div class="arrow-bullets">
 <ul>
 <li class="fragment"><p>Write the equation for each choice using a variable, p, for the probability in question</p></li>
 <li class="fragment"><p>Set the equations equal to to one other and solve for p.</p></li>
 </ul>
+</div>
 </section>
 <section id="at-what-probability-p-are-the-two-choices-equal-1" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability <span class="math inline">p</span> are the two choices equal?</h2>
@@ -532,27 +682,29 @@
 </section>
 <section id="at-what-probability-p-are-the-two-choices-equal-6" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability <span class="math inline">p</span> are the two choices equal?</h2>
-<blockquote>
 <p>When the probability of rain is 50% at BOTH the beach and home, given how we weighted the outcomes, going to the beach would be the same as staying at home</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>In other words, you would be indifferent between the two – staying at home or going to the beach</p>
-</blockquote>
+<div class="highlight-box">
+<div class="box-title">
+<p>In other words, you would be indifferent between the two – staying at home or going to the beach; &lt;50%, you would choose the beach.</p>
+</div>
+</div>
 </section>
 <section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
+<h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for <u>the beach</u> are you indifferent between the two options?</h2>
 
-<img data-src="media/lec_conceptual-and-theoretical-frameworks/dt_beachhome_pB.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+<img data-src="images/lec2/indifferent.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-1" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
-<div style="font-size: 0.8em">
+<p>Earlier, we solved for the expected payoff of remaining at home:</p>
+<p><span class="accent-text"><strong>0.74</strong></span> (which was a lower expected value than going to the beach when the chance of rain at both was 30%)</p>
+<div class="highlight-box primary" style="font-size:0.95em">
 <ul>
-<li class="fragment"><p>Earlier, we solved for the expected payoff of remaining at home: 0.74 (which was a lower expected value than going to the beach when the chance of rain at both was 30%) <br></p></li>
-<li class="fragment"><p><strong>What would</strong> <span class="math inline">p_B</span> need to be to yield an expected payoff <em>at the beach</em> of 0.74?</p>
+<li class="fragment"><strong>What would</strong> <span class="math inline">p_B</span> need to be to yield an expected payoff <em>at the beach</em> of 0.74?
 <ul>
-<li class="fragment">In other words, at what probability of rain at the beach would you be indifferent between staying at home &amp; going to the beach?</li>
+<li class="fragment">We just solved for the <strong>indifference threshold</strong> assuming the probability of rain was the same at the beach and at home.</li>
+<li class="fragment">Now we <strong>vary rain at the beach</strong> while keeping the probability of rain at home fixed at <strong>30%</strong>.</li>
 </ul></li>
+<li class="fragment">In other words, at what probability of rain at the beach would you be indifferent between staying at home &amp; going to the beach?</li>
 </ul>
 </div>
 <aside class="notes">
@@ -580,7 +732,7 @@
 <section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-2" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
 <p><br></p>
-<p>Set 0.74 (expected value of remaining at home) equal to the <strong>beach</strong> payoffs and solve for <span class="math inline">p_B</span></p>
+<p>Set 0.74 (expected value of remaining at home) equal to the <strong>beach</strong> payoffs and solve for <span class="math inline">p_B</span>, <strong>because we are varying the probability of rain at the beach (<span class="math inline">p_B</span>), not the probability of rain at home (<span class="math inline">p_H</span>).</strong></p>
 <p><br></p>
 <p>p<sub>B</sub> * 0.4 + (1 - p<sub>B</sub>) * 1.0 = 0.74</p>
 </section>
@@ -601,215 +753,291 @@
 </section>
 <section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-6" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
-<blockquote>
-<p>When the probability of rain at the beach is 43% (probability of rain at home remains at 30%), we would be indifferent between staying at home &amp; going to the beach.</p>
-</blockquote>
-<blockquote>
-<p>If the probability of rain at the beach in &gt; 43%, then we would stay home</p>
-</blockquote>
-</section></section>
-<section>
-<section id="probability-review" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Probability Review</h1>
-
+<p>When the probability of rain at the beach is 43% (probability of rain at home remains at 30%), we would be indifferent between staying at home &amp; going to the beach (because the EV would both = 0.74).</p>
+<div class="highlight-box primary">
+<div class="box-title">
+<p>If the probability of rain at the beach in &gt;43%, then we would stay home</p>
+</div>
+</div>
+<p><em>Remember:</em> when the probability of rain was <strong>30% at both locations</strong>, we would choose the <strong>beach</strong>.</p>
 </section>
-<section id="probabilities-within-decision-trees" class="slide level2 center">
+<section id="probabilities-within-decision-trees" class="slide level2 section-slide center">
 <h2>Probabilities within Decision Trees</h2>
-<p><strong>Mutually exclusive events</strong></p>
-<ul>
-<li class="fragment">2 things that cannot occur together (one event cannot occur at the same time as the other event)
-<ul>
-<li class="fragment">Example: 2 events, survive or die; mutually exclusive because a person cannot be both at the same time</li>
-<li class="fragment">Example: 2 events, cured or not cured</li>
-</ul></li>
-</ul>
+<div class="section-number">
+<p>03</p>
+</div>
 </section>
-<section id="probabilities-within-decision-trees-1" class="slide level2 center">
-<h2>Probabilities within Decision Trees</h2>
-<p><strong>Mutually exclusive events</strong></p>
-
-<img data-src="images/vaccine.png" class="r-stretch"></section>
-<section id="probabilities-within-decision-trees-2" class="slide level2 center">
-<h2>Probabilities within Decision Trees</h2>
-<p><strong>Mutually exclusive events</strong></p>
+<section id="section-2" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Mutually exclusive events</p>
+</div>
+<div class="definition">
+<p>2 things that cannot occur together (one event cannot occur at the same time as the other event)</p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Examples:</p>
+</div>
+<div class="example-text arrow-bullets">
 <ul>
-<li>Assuming events are mutually exclusive, then the probability of 2 events occurring is the <strong>sum of the probability of each event occurring individually</strong></li>
+<li>2 events – survive or die</li>
+<li>2 events – cured or not cured</li>
 </ul>
+</div>
+</div>
+</div>
+</section>
+<section id="mutually-exclusive-events-in-decision-trees" class="slide level2 center">
+<h2>Mutually exclusive events in Decision Trees</h2>
+
+<img data-src="images/lec2/vaccine.png" class="r-stretch"></section>
+<section id="mutually-exclusive-events" class="slide level2 center">
+<h2>Mutually exclusive events</h2>
+<p>Assuming events are mutually exclusive, then the probability of 2 events occurring is the <u>sum of the probability of each event occurring individually</u></p>
+<div class="highlight-box">
 <p><span class="math display">
 P(A or B) = P(A) + P(B)
 </span></p>
+</div>
+<p><em>This is what we do when summing pathways for a single decision</em><br>
+(e.g., <strong>Beach</strong> = rain <strong>or</strong> no rain; <strong>Home</strong> = rain <strong>or</strong> no rain).</p>
 </section>
-<section id="probabilities-within-decision-trees-3" class="slide level2 center">
+<section id="probabilities-within-decision-trees-1" class="slide level2 center">
 <h2>Probabilities within Decision Trees</h2>
-<div class="callout callout-note callout-titled callout-style-simple">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="definition-box">
+<div class="term">
+<p>Joint probability</p>
 </div>
-<p><strong>Joint probability</strong></p>
-</div>
-<div class="callout-content">
+<div class="definition">
 <p>P(A and B): The probability of two events occurring at the same time.</p>
 </div>
 </div>
+<div class="definition-box">
+<div class="term">
+<p>Conditional probability</p>
 </div>
-<div class="callout callout-note callout-titled callout-style-simple">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Conditional probability</strong></p>
-</div>
-<div class="callout-content">
+<div class="definition">
 <p>P(A|B): The probability of an event A given that an event B is known to have occurred.</p>
 </div>
 </div>
+</section>
+<section id="section-3" class="slide level2 center">
+<h2></h2>
+
+<img data-src="images/lec2/dt_evans97.png" class="r-stretch"></section>
+<section id="probabilities" class="slide level2 center">
+<h2>Probabilities</h2>
+<div class="split-content">
+<div class="content-text arrow-bullets">
+<ul>
+<li>Moving from left to right, the first probabilities in the tree show the probability of an event.</li>
+<li>Subsequent probabilities are <span class="bold primary-text">conditional</span>. The probability of an event given that an earlier event did or did not occur.</li>
+<li>Multiplying probabilities along pathways estimates the pathway probability, which is a <span class="bold primary-text">joint</span> probability.</li>
+</ul>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/dt_evans97.png"></p>
+<p><em>Decision Tree</em></p>
+</div>
 </div>
 </section>
-<section id="section-1" class="slide level2 center" data-background="#43464B" data-background-image="media/lec_conceptual-and-theoretical-frameworks/dt_evans97.png" data-background-size="contain">
+<section id="section-4" class="slide level2 center">
 <h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Pathways</p>
+</div>
+<div class="definition">
+<p>A sequence of events that lead to a subsequent “pay off” In other words, a sequence of events leads to an outcome/consequence, or payoff.</p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Example:</p>
+</div>
+<div class="example-text">
+<p>Our beach example has 4 pathways; At home with sun, at home with rain, at the beach with sun, and at the beach with rain.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="probabilities" class="slide level2 center" data-background-image="media/lec_conceptual-and-theoretical-frameworks/dt_evans97.png" data-background-size="contain" data-background-opacity="0.2">
-<h2>Probabilities</h2>
-<ul>
-<li class="fragment">Moving from left to right, the first probabilities in the tree show the probability of an event.</li>
-<li class="fragment">Subsequent probabilities are <strong>conditional.</strong>
-<ul>
-<li class="fragment">The probability of an event given that an earlier event did or did not occur.</li>
-</ul></li>
-<li class="fragment">Multiplying probabilities along pathways estimates the pathway probability, which is a <strong>joint</strong> probability.</li>
-</ul>
-</section>
-<section id="pathways" class="slide level2 center">
+<section id="pathways" class="slide level2 split-wrapper center">
 <h2>Pathways</h2>
-<p><br></p>
-<ul>
-<li>Pathways = sequence of events that lead to a subsequent “pay off”</li>
-<li>In other words, a sequence of events leads to an outcome/consequence, or payoff</li>
-<li>Example below: Our beach example has 4 pathways.</li>
-</ul>
+<div class="split-content">
+<div class="content-visual">
+<p><img data-src="images/lec2/path_A.png"></p>
+<p><em>Pathway A: This person goes to the beach but it rains</em></p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/path_B.png"></p>
+<p><em>Pathway B: This person goes to the beach but there is no rain</em></p>
+</div>
+</div>
 </section>
-<section id="pathways-1" class="slide level2 center">
-<h2>Pathways</h2>
-<ul>
-<li>Pathway A: This person goes to the beach but it rains</li>
-<li>Pathway B: This person goes to the beach but there is no rain</li>
-</ul>
-
-<img data-src="images/pathways.png" class="r-stretch"></section>
-<section id="conditional-probability-1" class="slide level2 center">
-<h2>Conditional probability</h2>
-<p><br></p>
-<p>Example: What is the conditional probability of death within a year of birth, given the infant has a mother who smokes?</p>
-<p>(Probability of an event occurring (B) given that another event occurred (A))</p>
-<p><span class="math display">
+<section id="section-5" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Conditional probability</p>
+</div>
+<div class="definition">
+<p>Probability of an event occurring (B) given that another event occurred (A) <span class="math display">
 P(A|B) = P(A and B) / P(B)
 </span></p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Example:</p>
+</div>
+<div class="example-text">
+<p>What is the conditional probability of death within a year of birth, given the infant has a mother who smokes?</p>
+</div>
+</div>
+</div>
 </section>
 <section id="conditional-probability-2x2-review" class="slide level2 center">
 <h2>Conditional probability, 2x2 review</h2>
-<div style="font-size: 0.8em">
+<div class="highlight-box thin">
 <p>What is the conditional probability of death within a year of birth, given the infant has a mother who smokes?</p>
-<p><img data-src="images/condition1.png" width="470"></p>
-<p><em>*A= death in first year; B=mother who smokes</em></p>
-<p><span style="color: #169873;">P(A|B)</span> = 16,712 / (1,197,142 + 16,712) <br> = 14 per 1,000 births</p>
+</div>
+<div class="split-content">
+<div class="content-text">
+<p><span class="bold accent-text">P(A|B)</span> <br> = P(death in first year | mother who smokes) <br> = 16,712 / (1,197,142 + 16,712) <br> = 14 per 1,000 births</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition1.png"></p>
+</div>
 </div>
 </section>
 <section id="conditional-probability-2x2-review-1" class="slide level2 center">
 <h2>Conditional probability, 2x2 review</h2>
-<div style="font-size: 0.8em">
 <p>Or, if we wanted to use the conditional probability equation</p>
-<p><img data-src="images/condition1.png" width="470"></p>
-<p><span style="color: #169873;">P(A|B) = P(A and B)/P(B)</span> <br> <em>*A= death in first year; B=mother who smokes</em> <br></p>
-<p><span style="color: #169873;">P(A and B)</span> = 16,712 / 4,111,059 = 0.0041 <br> <span style="color: #169873;">P(B)</span> = 1,213,854/4,111,059 = 0.295 <br> <span style="color: #169873;">P(A|B)</span> = 0.0041/0.295 = 0.014</p>
+<div class="split-content">
+<div class="content-text">
+<p><span class="bold accent-text">P(A|B) = P(A and B)/P(B)</span> <br> <em>*A= death in first year; B=mother who smokes</em> <br></p>
+<p><span class="bold accent-text">P(A and B)</span> = 16,712 / 4,111,059 = 0.0041 <br> <span class="bold accent-text">P(B)</span> = 1,213,854/4,111,059 = 0.295 <br> <span class="bold accent-text">P(A|B)</span> = 0.0041/0.295 = 0.014</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition1.png"></p>
+</div>
 </div>
 </section>
-<section id="conditional-probability-2x2-review-2" class="slide level2 center">
-<h2>Conditional probability, 2x2 review</h2>
-<div style="font-size: 0.8em">
+<section id="conditional-probability-ab-vs-ba" class="slide level2 center">
+<h2>Conditional probability, A|B vs B|A</h2>
+<div class="highlight-box thin">
 <p>Probability of A|B is different from that of B|A</p>
-<p><img data-src="images/condition2.png" width="470"></p>
-<p>If A = death in first year; B=normal birth weight infant, then the conditional probability of P(A|B) = the probability of an infant death, given that the child has a normal birth weight</p>
+</div>
+<div class="split-content">
+<div class="content-text">
+<p>If A = death in first year; B=normal birth weight infant, <br> THEN, the conditional probability of P(A|B) = the probability of an infant death, given that the child has a normal birth weight</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition2.png"></p>
+</div>
 </div>
 </section>
-<section id="conditional-probability-2x2-review-3" class="slide level2 center">
-<h2>Conditional probability, 2x2 review</h2>
-<div style="font-size: 0.8em">
-<p>What is the conditional probability of an infant death, given that the child has a normal birth weight</p>
-<p><img data-src="images/condition2.png" width="470"></p>
+<section id="conditional-probability-ab-vs-ba-1" class="slide level2 center">
+<h2>Conditional probability, A|B vs B|A</h2>
+<div class="highlight-box thin">
+<p>What is the conditional probability of an infant death, given that the child has a normal birth weight?</p>
+</div>
+<div class="split-content">
+<div class="content-text">
 <p>If A = death in first year; B=normal birth weight infant <br></p>
-<p><span style="color: #169873;">P(A|B)</span> = 14,442 / (14,442+ 3,804,294) <br> = 3.8 deaths per 1,000 births</p>
+<p><span class="bold accent-text">P(A|B)</span> <br> = 14,442 / (14,442+ 3,804,294) <br> = 3.8 deaths per 1,000 births</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition2.png"></p>
+</div>
 </div>
 </section>
-<section id="conditional-probability-2x2-review-4" class="slide level2 center">
-<h2>Conditional probability, 2x2 review</h2>
-<div style="font-size: 0.8em">
-<p>Or, if we wanted to use equation</p>
-<p><img data-src="images/condition2.png" width="470"></p>
-<p><span style="color: #169873;">P(A|B) = P(A and B)/P(B)</span><br>
-</p>
-<p><span style="color: #169873;">P(A and B)</span> = 14,442 <br> <span style="color: #169873;">P(B)</span> = 3,818,736 <br> <span style="color: #169873;">P(A|B)</span> = 14,442/3,818,736 = 0.0038</p>
+<section id="conditional-probability-ab-vs-ba-2" class="slide level2 center">
+<h2>Conditional probability, A|B vs B|A</h2>
+<p>Or, if we wanted to use the conditional probability equation</p>
+<div class="split-content">
+<div class="content-text">
+<p><span class="bold accent-text">P(A|B) = P(A and B)/P(B)</span> <br></p>
+<p><span class="bold accent-text">P(A and B)</span> = 14,442 <br> <span class="bold accent-text">P(B)</span>= 3,818,736 <br> <span class="bold accent-text">P(A|B)</span> = 14,442/3,818,736 = 0.0038</p>
+<p><em>* A= death in first year; B=normal birth weight infant</em></p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition2.png"></p>
+</div>
 </div>
 </section>
-<section id="conditional-probability-2x2-review-5" class="slide level2 center">
-<h2>Conditional probability, 2x2 review</h2>
-<div style="font-size: 0.8em">
+<section id="conditional-probability-ab-vs-ba-3" class="slide level2 center">
+<h2>Conditional probability, A|B vs B|A</h2>
+<div class="split-content">
+<div class="content-text">
 <p>On the other hand, the conditional probability of P(B|A) is the probability that an infant had normal birth weight, given that the infant died within 1 year from birth</p>
-<p><img data-src="images/condition2.png" width="470"></p>
 <p><em>*B=normal birth weight infant; A = death in first year</em></p>
 </div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition2.png"></p>
+</div>
+</div>
 </section>
-<section id="conditional-probability-2x2-review-6" class="slide level2 center">
-<h2>Conditional probability, 2x2 review</h2>
+<section id="conditional-probability-ab-vs-ba-4" class="slide level2 center">
+<h2>Conditional probability, A|B vs B|A</h2>
+<div class="highlight-box thin">
+<p>Probability of A|B is 3.8 deaths per 1,000 births</p>
+</div>
+<div class="split-content">
+<div class="content-text">
 <p>Solve P(B|A) – the probability that an infant had normal birthweight, given that the infant died within 1 year from birth</p>
-
-<img data-src="images/condition2.png" width="470" class="r-stretch"><p><span style="color: #169873;">P(B|A)</span> = 14,442 / (14,442+ 21,054) = 0.41</p>
-</section></section>
-<section>
-<section id="other-concepts-in-decision-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Other Concepts in Decision Analysis</h1>
-
+<p><span class="bold accent-text">P(B|A)</span><br> = 14,442 / (14,442+ 21,054) <br> = 0.41</p>
+<p><span class="bold accent-text">4.1 normal birthweights of 1,000 baby deaths within 1 year from birth</span></p>
+<p><em>*B=normal birth weight infant; A = death in first year</em></p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec2/condition2.png"></p>
+</div>
+</div>
+</section>
+<section id="other-concepts-in-decision-analysis" class="slide level2 section-slide center">
+<h2>Other Concepts in Decision Analysis</h2>
+<div class="section-number">
+<p>04</p>
+</div>
 </section>
 <section id="decision-philosophies" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Decision Philosophies</h2>
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
+<div class="highlight-box">
 <p>Maximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual.</p>
 </div>
+<div class="comparison-table">
+<div class="comparison-column">
+<div class="column-header">
+<p>Mini-max regret</p>
 </div>
-</div>
-<ul>
-<li><p>Mini-max regret</p></li>
-<li><p>Maxi-max</p></li>
-<li><p>Expected utility</p></li>
-</ul>
-</section>
-<section id="decision-philosophies-1" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Decision Philosophies</h2>
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Maximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual.</p>
-</div>
-</div>
-</div>
-<ul>
-<li><p>Mini-max regret</p>
+<div class="column-content fragment" data-fragment-index="1">
 <ul>
 <li>Never go to the beach unless 0% rain.</li>
-</ul></li>
-<li><p>Maxi-max gain</p></li>
-<li><p>Expected utility</p></li>
 </ul>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Maxi-max</p>
+</div>
+<div class="column-content fragment" data-fragment-index="2">
+<ul>
+<li>Always go to the beach unless 100% rain.</li>
+</ul>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Expected utility</p>
+</div>
+<div class="column-content fragment" data-fragment-index="3">
+<ul>
+<li>Depends on the weather.</li>
+</ul>
+</div>
+</div>
+</div>
 <aside class="notes">
 <ol type="1">
 <li><p>Let’s quickly touch on decision philosophies when it comes to preference weighting. There are different levels of risk aversion &amp; there are different decision philosophies for these behaviors</p></li>
@@ -818,83 +1046,8 @@ P(A|B) = P(A and B) / P(B)
 <ul>
 <li>For instance, physicians may be risk averse &amp; therefore minimize max regret</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="decision-philosophies-2" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Decision Philosophies</h2>
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Maximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual.</p>
-</div>
-</div>
-</div>
-<ul>
-<li>Mini-max regret
-<ul>
-<li>Never go to the beach unless 0% rain.</li>
-</ul></li>
-<li>Maxi-max
-<ul>
-<li>Always go to the beach unless 100% rain.</li>
-</ul></li>
-<li>Expected utility</li>
-</ul>
-<aside class="notes">
 <p>(3)(a) Maxi-max gain is the reverse – where you would always go to the beach unless there was 100% rain – you are risk seeking – you love the beach so much that you’re going to give it a try.</p>
 <p>(3)(b) Another example of this in a medical context – is the desperate patient example – you’re going to die anyways, so we are going to give you this treatment, but it has nasty side effects – cancer – chemotherapies – even bone marrow transplants, 2nd or third line – a high probability of bad outcome but if you do nothing then you’re going to die.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="decision-philosophies-3" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Decision Philosophies</h2>
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Maximizing expected value is a reasonable criterion for choice given uncertain prospects; though it does not necessarily promise the best results for any one individual.</p>
-</div>
-</div>
-</div>
-<ul>
-<li>Mini-max regret
-<ul>
-<li>Never go to the beach unless 0% rain.</li>
-</ul></li>
-<li>Maxi-max
-<ul>
-<li>Always go to the beach unless 100% rain.</li>
-</ul></li>
-<li>Expected utility
-<ul>
-<li>Depends on the weather.</li>
-</ul></li>
-</ul>
-<aside class="notes">
 <ol start="4" type="1">
 <li>If you’re going to base your decision on expected utility, then your decision depends on the weather &amp; how much value you give to certain outcomes – this is the rationale thinker approach – how much you value sitting at home weighed by the utility loss of not having the beach experience, for example.</li>
 </ol>
@@ -912,27 +1065,37 @@ P(A|B) = P(A and B) / P(B)
 </section>
 <section id="payoffs-1" class="slide level2 center">
 <h2>Payoffs</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">Each state of the world is assigned a cost or outcome.</li>
 <li class="fragment">Our goal is often to calculate the expected value of these payoffs.</li>
-<li class="fragment">We’ll cover more on the theories and frameworks underlying various payoffs in the next few lectures</li>
 </ul>
-</section></section>
-<section>
-<section id="strengthslimitations-of-decision-trees" class="title-slide slide level1 center">
-<h1>Strengths/limitations of decision trees</h1>
-
+</div>
+<p><span class="fragment">We’ll cover more on the theories and frameworks underlying various payoffs in the next few lectures</span></p>
 </section>
-<section id="strengths" class="slide level2 center">
-<h2>Strengths</h2>
+<section id="strengthslimitations-of-decision-trees" class="slide level2 section-slide center">
+<h2>Strengths/limitations of decision trees</h2>
+<div class="section-number">
+<p>05</p>
+</div>
+</section>
+<section id="strengthslimitations-of-decision-trees-1" class="slide level2 center">
+<h2>Strengths/limitations of decision trees</h2>
+<div class="pros-cons-new">
+<div class="pros-column">
+<div class="column-title">
+Strengths
+</div>
 <ul>
 <li class="fragment">They are easy to describe and understand</li>
 <li class="fragment">Works well with limited time horizon</li>
 <li class="fragment">Decision trees are a powerful framework for analyzing decisions and can provide rapid/useful insights, but they have limitations.</li>
 </ul>
-</section>
-<section id="limitations" class="slide level2 center">
-<h2>Limitations</h2>
+</div>
+<div class="cons-column">
+<div class="column-title">
+Limitations
+</div>
 <ul>
 <li class="fragment">No explicit accounting for the elapse of time.
 <ul>
@@ -941,14 +1104,66 @@ P(A|B) = P(A and B) / P(B)
 </ul></li>
 <li class="fragment">Difficult to incorporate real clinical detail - Tree structure can quickly become complex.</li>
 </ul>
+</div>
+</div>
+</section>
+<section id="some-dos-donts" class="slide level2 center">
+<h2>Some Do’s &amp; “Dont’s”</h2>
+<p><br></p>
+<ol type="1">
+<li><strong>Balance risks and benefits</strong> <br></li>
+</ol>
+<blockquote>
+<p>Each strategy must include all relevant risks <em>and</em> benefits. <br> If one option carries only risks or only benefits, either the model is misspecified or the clinical problem does not require a decision analysis (the decision would be “obvious” in the latter case).</p>
+</blockquote>
+</section>
+<section id="some-dos-donts-1" class="slide level2 center">
+<h2>Some Do’s &amp; “Dont’s”</h2>
+<p><br></p>
+<ol start="2" type="1">
+<li><strong>2 branches versus 3</strong> <br></li>
+</ol>
+<blockquote>
+<p>There is nothing inherently wrong with having three (or more) branches, as long as events are mutually exclusive and probabilities sum to 1. <br> However, additional branches increase model complexity and can complicate sensitivity analyses without necessarily adding insight.</p>
+</blockquote>
+
+<img data-src="images/HighLow.png" class="r-stretch"></section>
+<section id="some-dos-donts-2" class="slide level2 center">
+<h2>Some Do’s &amp; “Dont’s”</h2>
+<p><br></p>
+<ol start="3" type="1">
+<li><strong>No embedded decisions</strong> <br></li>
+</ol>
+<blockquote>
+<p>Each decision tree should address a single decision problem. <br> Embedding multiple decisions (e.g., screening <em>and</em> downstream treatment choices) complicates interpretation and validation.</p>
+</blockquote>
+</section>
+<section id="section-6" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Decision Trees</p>
+</div>
+<div class="key-points">
+<ul>
+<li class="fragment">Point 1</li>
+<li class="fragment">Point 2</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="preview-of-whats-to-come" class="slide level2 center">
 <h2>Preview of what’s to come</h2>
+<p>More complex trees!</p>
 
-<img data-src="images/VOI5.png" width="591" class="r-stretch"><div style="font-size: 0.8em">
-<ul>
-<li>More complex tree!</li>
-</ul>
+<img data-src="images/VOI5.png" width="591" class="r-stretch"></section>
+<section id="questions" class="slide level2 questions-slide center">
+<h2>Questions?</h2>
+<div class="next-info">
+<p>Next: CEA Fundamentals 1: Costs</p>
 </div>
 
 
