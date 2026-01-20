@@ -114,7 +114,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1a0450a74e8bf778967ef0c390f51b5d.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -220,7 +220,7 @@
 </div>
 
 </section>
-<section class="slide level2">
+<section class="slide level2 center">
 
 <style>
 .nobullet li {
@@ -237,7 +237,7 @@
 <!-- https://link.springer.com/article/10.1007/s40273-020-00937-z -->
 <!-- https://www.valueinhealthjournal.com/article/S1098-3015(12)01654-3/fulltext?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1098301512016543%3Fshowall%3Dtrue -->
 </section>
-<section id="learning-objectives" class="slide level2">
+<section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
 <ul>
 <li class="fragment">Understand differences between rates and probabilities, hazard rates, relative risks, and other relevant model inputs.</li>
@@ -259,18 +259,18 @@
 <li class="fragment">Tunnel states and other disease-specific transition dynamics</li>
 </ul>
 </section>
-<section id="goal" class="slide level2">
+<section id="goal" class="slide level2 center">
 <h2>Goal</h2>
 
 <img data-src="images/paste-DE23E852.png" class="r-stretch"></section>
-<section id="what-never-happens" class="slide level2">
+<section id="what-never-happens" class="slide level2 center">
 <h2>What <em>Never</em> Happens</h2>
 
 <img data-src="images/paste-35C55E40.png" class="r-stretch"></section>
-<section id="problem" class="slide level2">
+<section id="problem" class="slide level2 center">
 <h2>Problem</h2>
 <ul>
-<li class="fragment">Need transition probabilities but literature-based parameters are reported as:</li>
+<li>Need transition probabilities but literature-based parameters are reported as:</li>
 </ul>
 <ol type="1">
 <li class="fragment">Rates</li>
@@ -285,30 +285,30 @@
 <h1>How can we deal with this?</h1>
 
 </section>
-<section id="solution" class="slide level2">
+<section id="solution" class="slide level2 center">
 <h2>Solution</h2>
 <ul>
 <li class="fragment">Need “common ground” where we can combine and transform different model inputs.</li>
 <li class="fragment">This “common ground” is often found in a <strong>transition rate matrix.</strong></li>
 </ul>
 </section>
-<section id="solution-1" class="slide level2">
+<section id="solution-1" class="slide level2 center">
 <h2>Solution</h2>
 
 <img data-src="images/paste-23D41BA7.png" class="r-stretch"></section>
-<section id="solution-2" class="slide level2">
+<section id="solution-2" class="slide level2 center">
 <h2>Solution</h2>
 
 <img data-src="images/paste-7BE7C6AF.png" class="r-stretch"></section>
-<section id="solution-3" class="slide level2">
+<section id="solution-3" class="slide level2 center">
 <h2>Solution</h2>
 
 <img data-src="images/paste-EFB5816C.png" class="r-stretch"></section>
-<section id="solution-4" class="slide level2">
+<section id="solution-4" class="slide level2 center">
 <h2>Solution</h2>
 
 <img data-src="images/paste-500FB9B7.png" class="r-stretch"></section>
-<section id="transition-rate-matrix" class="slide level2" data-background-image="images/paste-7BE7C6AF.png" data-background-size="contain" data-background-opacity="0.2">
+<section id="transition-rate-matrix" class="slide level2 center" data-background-image="images/paste-7BE7C6AF.png" data-background-size="contain" data-background-opacity="0.2">
 <h2>Transition Rate Matrix</h2>
 <ul>
 <li class="fragment">The central “hub” of a Markov model.</li>
@@ -321,7 +321,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="four-step-process" class="slide level2">
+<section id="four-step-process" class="slide level2 center">
 <h2>Four-Step Process</h2>
 <ol type="1">
 <li class="fragment">Use data inputs/published literature to define a rate matrix <span class="math inline">\(\mathbf{R}\)</span>.</li>
@@ -335,7 +335,7 @@
 <h1>What is the difference between a rate and a probability?</h1>
 
 </section>
-<section id="rates-vs.-probabilities" class="slide level2">
+<section id="rates-vs.-probabilities" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities</h2>
 <ul>
 <li class="fragment"><strong>Rate</strong>: number of occurrences of an event per unit of time.</li>
@@ -343,11 +343,11 @@
 <li class="fragment">Major difference is in denominator: rates take into account <strong>time at risk</strong> while probabilities do not.</li>
 </ul>
 </section>
-<section id="rates-vs.-probabilities-1" class="slide level2">
+<section id="rates-vs.-probabilities-1" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities</h2>
 
 <img data-src="images/paste-83525383.png" class="r-stretch"></section>
-<section id="rates" class="slide level2">
+<section id="rates" class="slide level2 center">
 <h2>Rates</h2>
 <ul>
 <li class="fragment">Number of events divided by the total time at risk experienced by all people followed.</li>
@@ -355,15 +355,15 @@
 <li class="fragment"><span class="math inline">\(\frac{\# \text{events in time period}}{\text{Total time period experienced by all subjects followed}}\)</span></li>
 </ul>
 </section>
-<section id="rates-1" class="slide level2">
+<section id="rates-1" class="slide level2 center">
 <h2>Rates</h2>
 
 <img data-src="images/paste-8191B0E3.png" class="r-stretch"></section>
-<section id="probabilities" class="slide level2">
+<section id="probabilities" class="slide level2 center">
 <h2>Probabilities</h2>
 
 <img data-src="images/paste-62FF1911.png" class="r-stretch"></section>
-<section id="rates-vs.-probabilities-example1" class="slide level2">
+<section id="rates-vs.-probabilities-example1" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example<sup>1</sup></h2>
 <ul>
 <li class="fragment">Suppose a study followed 100 people with congestive heart failure for 4 years.</li>
@@ -371,7 +371,7 @@
 <li class="fragment">The probability of death over 4 years is <span class="math inline">\(40/100=0.40\)</span>.</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Source: <span class="citation" data-cites="gidwaniEstimatingTransitionProbabilities2020">Gidwani and Russell (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
-<section id="rates-vs.-probabilities-example2" class="slide level2">
+<section id="rates-vs.-probabilities-example2" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example<sup>1</sup></h2>
 <ul>
 <li class="fragment">A rate takes into acccount the time each person was at risk.</li>
@@ -379,14 +379,14 @@
 <li class="fragment">Once a person dies, he/she is no longer at risk.</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>Source: <span class="citation" data-cites="gidwaniEstimatingTransitionProbabilities2020">Gidwani and Russell (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
-<section id="rates-vs.-probabilities-example3" class="slide level2">
+<section id="rates-vs.-probabilities-example3" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example<sup>1</sup></h2>
 <ul>
 <li class="fragment">When a study does not report time at risk, the conventional assumption is that the events were spread evenly over the time period.</li>
 <li class="fragment">Using this assumption, the average time at risk for the 40 who died was 2 years, adding 40 × 2 = 80 years at risk.</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Source: <span class="citation" data-cites="gidwaniEstimatingTransitionProbabilities2020">Gidwani and Russell (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
-<section id="rates-vs.-probabilities-example4" class="slide level2">
+<section id="rates-vs.-probabilities-example4" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example<sup>1</sup></h2>
 <ul>
 <li class="fragment">Total time at risk for the cohort of 100 people is 320 person-years (240+80).</li>
@@ -394,7 +394,7 @@
 <li class="fragment">Let’s now construct a rate matrix with three states: CHF, Death from CHF, and Death from other causes.</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn4"><p>Source: <span class="citation" data-cites="gidwaniEstimatingTransitionProbabilities2020">Gidwani and Russell (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
-<section id="rates-vs.-probabilities-example" class="slide level2">
+<section id="rates-vs.-probabilities-example" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -431,14 +431,14 @@
 </div>
 </div>
 </section>
-<section id="rates-vs.-probabilities-example-1" class="slide level2">
+<section id="rates-vs.-probabilities-example-1" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example</h2>
 <ul>
 <li class="fragment">0.125 per person year is the <strong>rate</strong> we’d enter into our rate matrix.</li>
 <li class="fragment">We could also think of a separate death rate from background causes (e.g., 0.006 per person-year).<sup>1</sup></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn5"><p>This often comes from separate vital statistics / life-table data sources.</p></li></ol></aside></section>
-<section id="rates-vs.-probabilities-example-2" class="slide level2">
+<section id="rates-vs.-probabilities-example-2" class="slide level2 center">
 <h2>Rates vs.&nbsp;Probabilities: Example</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -475,7 +475,7 @@
 </div>
 </div>
 </section>
-<section id="rates-vs.-probabilities-example-3" class="slide level2 smaller">
+<section id="rates-vs.-probabilities-example-3" class="slide level2 smaller center">
 <h2>Rates vs.&nbsp;Probabilities: Example</h2>
 <div class="columns">
 <div class="column">
@@ -523,7 +523,7 @@
 </div>
 </div></div>
 </section>
-<section id="summary-rates-vs.-probabilities" class="slide level2">
+<section id="summary-rates-vs.-probabilities" class="slide level2 center">
 <h2>Summary: Rates vs.&nbsp;Probabilities</h2>
 <div style="font-size: 0.6em">
 <table class="caption-top">
@@ -558,11 +558,11 @@
 </table>
 </div>
 </section>
-<section id="place-rates-in-a-rate-matrix-mathbfr." class="slide level2">
+<section id="place-rates-in-a-rate-matrix-mathbfr." class="slide level2 center">
 <h2>1. Place rates in a rate matrix <span class="math inline">\(\mathbf{R}\)</span>.</h2>
 
 <img data-src="images/paste-01DABA0F.png" class="r-stretch"></section>
-<section id="place-rates-in-a-rate-matrix-mathbfr.-1" class="slide level2 smaller">
+<section id="place-rates-in-a-rate-matrix-mathbfr.-1" class="slide level2 smaller center">
 <h2>1. Place rates in a rate matrix <span class="math inline">\(\mathbf{R}\)</span>.</h2>
 <div class="columns">
 <div class="column">
@@ -611,7 +611,7 @@
 </div>
 </div></div>
 </section>
-<section id="place-rates-in-a-rate-matrix-mathbfr.-2" class="slide level2">
+<section id="place-rates-in-a-rate-matrix-mathbfr.-2" class="slide level2 center">
 <h2>1. Place rates in a rate matrix <span class="math inline">\(\mathbf{R}\)</span>.</h2>
 <ul>
 <li class="fragment">What we have just done is contruct a rate matrix for a “natural history” model of the disease (CHF).</li>
@@ -619,7 +619,7 @@
 <li class="fragment">Sometimes called a “do nothing” strategy.</li>
 </ul>
 </section>
-<section id="place-rates-in-a-rate-matrix-mathbfr.-3" class="slide level2">
+<section id="place-rates-in-a-rate-matrix-mathbfr.-3" class="slide level2 center">
 <h2>1. Place rates in a rate matrix <span class="math inline">\(\mathbf{R}\)</span>.</h2>
 <ul>
 <li class="fragment">The “natural history” model is useful because it can help us verify that the model matches what we see in the “real world.”</li>
@@ -627,7 +627,7 @@
 <li class="fragment">For example, we could recalibrate the model so the CHF mortality transition rate matches our country-specific data.</li>
 </ul>
 </section>
-<section id="place-rates-in-a-rate-matrix-mathbfr.-4" class="slide level2">
+<section id="place-rates-in-a-rate-matrix-mathbfr.-4" class="slide level2 center">
 <h2>1. Place rates in a rate matrix <span class="math inline">\(\mathbf{R}\)</span>.</h2>
 <ul>
 <li class="fragment">Alternatively, suppose we “borrow” a model developed in another country/context.</li>
@@ -638,11 +638,11 @@
 </ul></li>
 </ul>
 </section>
-<section id="make-adjustments-to-mathbfr-as-needed." class="slide level2">
+<section id="make-adjustments-to-mathbfr-as-needed." class="slide level2 center">
 <h2>2. Make adjustments to <span class="math inline">\(\mathbf{R}\)</span> as needed.</h2>
 
 <img data-src="images/paste-20350F55.png" class="r-stretch"></section>
-<section id="make-adjustments-to-mathbfr-as-needed.-1" class="slide level2 smaller">
+<section id="make-adjustments-to-mathbfr-as-needed.-1" class="slide level2 smaller center">
 <h2>2. Make adjustments to <span class="math inline">\(\mathbf{R}\)</span> as needed.</h2>
 <div class="columns">
 <div class="column">
@@ -692,7 +692,7 @@
 </div>
 </div></div>
 </section>
-<section id="make-adjustments-to-mathbfr-as-needed.-2" class="slide level2 smaller">
+<section id="make-adjustments-to-mathbfr-as-needed.-2" class="slide level2 smaller center">
 <h2>2. Make adjustments to <span class="math inline">\(\mathbf{R}\)</span> as needed.</h2>
 <div class="columns">
 <div class="column">
@@ -779,7 +779,7 @@
 </div>
 </div></div>
 </section>
-<section id="make-adjustments-to-mathbfr-as-needed.-3" class="slide level2 smaller">
+<section id="make-adjustments-to-mathbfr-as-needed.-3" class="slide level2 smaller center">
 <h2>2. Make adjustments to <span class="math inline">\(\mathbf{R}\)</span> as needed.</h2>
 <div class="columns">
 <div class="column">
@@ -828,7 +828,7 @@
 </div>
 </div></div>
 </section>
-<section id="make-adjustments-to-mathbfr-as-needed.-4" class="slide level2 smaller">
+<section id="make-adjustments-to-mathbfr-as-needed.-4" class="slide level2 smaller center">
 <h2>2. Make adjustments to <span class="math inline">\(\mathbf{R}\)</span> as needed.</h2>
 <div class="columns">
 <div class="column">
@@ -912,18 +912,18 @@
 </div>
 </div></div>
 </section>
-<section id="embed-the-transition-probability-matrix-using-the-rate-matrix" class="slide level2">
+<section id="embed-the-transition-probability-matrix-using-the-rate-matrix" class="slide level2 center">
 <h2>3. “Embed” the transition probability matrix using the rate matrix</h2>
 
 <img data-src="images/paste-CC9FEF98.png" class="r-stretch"></section>
-<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-1" class="slide level2">
+<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-1" class="slide level2 center">
 <h2>3. “Embed” the transition probability matrix using the rate matrix</h2>
 <ul>
 <li class="fragment">Our next step is to convert the transition rate matrix into a transition probability matrix.</li>
 <li class="fragment">Common practice is to use rate-to-probability conversion formulas</li>
 </ul>
 </section>
-<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-2" class="slide level2">
+<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-2" class="slide level2 center">
 <h2>3. “Embed” the transition probability matrix using the rate matrix</h2>
 <ul>
 <li>Our next step is to convert the transition rate matrix into a transition probability matrix.</li>
@@ -933,14 +933,14 @@
 p = 1 - \exp(-rt)
 \]</span> where <span class="math inline">\(r\)</span> is the rate and <span class="math inline">\(t\)</span> is the time-step.</p>
 </section>
-<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-3" class="slide level2">
+<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-3" class="slide level2 center">
 <h2>3. “Embed” the transition probability matrix using the rate matrix</h2>
 <ul>
 <li class="fragment">This formula works fine when there is only one possible state an individual can transition to.</li>
 <li class="fragment">The formula <strong>will not</strong> calculate the correct transition probability if there are two or more states someone can transition to. <!-- -   See the [workshop blog posting](../blog/posts/embedding-a-transition-probability-matrix.html) for more. --></li>
 </ul>
 </section>
-<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-4" class="slide level2">
+<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-4" class="slide level2 center">
 <h2>3. “Embed” the transition probability matrix using the rate matrix</h2>
 <ul>
 <li class="fragment">We will cover <strong>two</strong> approaches for constructing a transition probability matrix.</li>
@@ -949,7 +949,7 @@ p = 1 - \exp(-rt)
 </li>
 </ul>
 </section>
-<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-5" class="slide level2">
+<section id="embed-the-transition-probability-matrix-using-the-rate-matrix-5" class="slide level2 center">
 <h2>3. “Embed” the transition probability matrix using the rate matrix</h2>
 <p>The two approaches</p>
 <div class="nobullet">
@@ -959,14 +959,14 @@ p = 1 - \exp(-rt)
 </ul>
 </div>
 </section>
-<section id="a.-rate-to-probability-conversion" class="slide level2">
+<section id="a.-rate-to-probability-conversion" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>The probability of transitioning from health state <span class="math inline">\(A\)</span> to health state <span class="math inline">\(B\)</span> is:</p>
 <p><span class="math display">\[
 p_{AB}= \frac{r_{AB}}{\sum_S r_{AS}}\big ( 1 - e^{-(\sum_S r_{AS}) t}\big )
 \]</span> where <span class="math inline">\(S\)</span> captures all the health states (i.e., columns) in the transition rate matrix, and <span class="math inline">\(t\)</span> is the time-step (e.g., <span class="math inline">\(t=1\)</span> if 1 year, <span class="math inline">\(t=1/12\)</span> if one month, etc.).</p>
 </section>
-<section id="a.-rate-to-probability-conversion-1" class="slide level2">
+<section id="a.-rate-to-probability-conversion-1" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Let’s build on our chronic heart failure example from earlier. Here is the transition rate matrix we constructed:</p>
 <div class="cell">
@@ -1004,11 +1004,11 @@ p_{AB}= \frac{r_{AB}}{\sum_S r_{AS}}\big ( 1 - e^{-(\sum_S r_{AS}) t}\big )
 </div>
 </div>
 </section>
-<section id="a.-rate-to-probability-conversion-2" class="slide level2">
+<section id="a.-rate-to-probability-conversion-2" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Let’s now calculate the probability of transitioning from the <strong>CHF</strong> state to <strong>D_CHF</strong> (death from heart failure).</p>
 </section>
-<section id="a.-rate-to-probability-conversion-3" class="slide level2">
+<section id="a.-rate-to-probability-conversion-3" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Annual probability of transitioning from CHF to death from CHF:</p>
 <p><span class="math display">\[
@@ -1016,7 +1016,7 @@ p_{\text{CHF,D_CHF}}= \frac{r_{\text{CHF,D_CHF}}}{r_{\text{CHF,D_CHF}} + r_{\tex
 \]</span></p>
 <p>We can find each of these rates in our transition rate matrix…</p>
 </section>
-<section id="a.-rate-to-probability-conversion-4" class="slide level2">
+<section id="a.-rate-to-probability-conversion-4" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Annual probability of transitioning from CHF to death from CHF:</p>
 <p><span class="math display">\[
@@ -1057,11 +1057,11 @@ p_{\text{CHF,D_CHF}}= \frac{\color{red}{0.125}}{\color{red}{0.125}+\color{green}
 </div>
 </div>
 </section>
-<section id="a.-rate-to-probability-conversion-5" class="slide level2">
+<section id="a.-rate-to-probability-conversion-5" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Let’s now calculate the probability of transitioning from the <strong>CHF</strong> state to <strong>D_OTH</strong> (death from other causes).</p>
 </section>
-<section id="a.-rate-to-probability-conversion-6" class="slide level2">
+<section id="a.-rate-to-probability-conversion-6" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Annual probability of transitioning from CHF to death from <strong>other causes</strong>:</p>
 <p><span class="math display">\[
@@ -1102,14 +1102,14 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="a.-rate-to-probability-conversion-7" class="slide level2">
+<section id="a.-rate-to-probability-conversion-7" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <ul>
 <li class="fragment"><p>We now have the quantities needed to complete the first row of our transition rate matrix.</p></li>
 <li class="fragment"><p>Recall that the diagonal elements of the transition probability matrix are just 1 minus the other transition probabilities.</p></li>
 </ul>
 </section>
-<section id="a.-rate-to-probability-conversion-8" class="slide level2">
+<section id="a.-rate-to-probability-conversion-8" class="slide level2 center">
 <h2>3a. Rate-to-probability conversion</h2>
 <p>Calculated transition probability matrix:</p>
 <div class="cell">
@@ -1147,20 +1147,20 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <ul>
 <li class="fragment"><p>The most technically correct approach for “embedding” a transition probability matrix is using the rate matrix exponential.</p></li>
 <li class="fragment"><p>This is a matrix analogue to the cellwise rate-to-probability matrix process we just went through.</p></li>
 </ul>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix-1" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix-1" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <p><span class="math display">\[
 \mathbf{P} = e^{\mathbf{R}}
 \]</span></p>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix-2" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix-2" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <p>Pros:</p>
 <ul>
@@ -1169,7 +1169,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment"><p>This ensures that our discrete time Markov model accurately represents the underlying continuous time process.</p></li>
 </ul>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix-3" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix-3" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <p>Cons:</p>
 <ul>
@@ -1177,7 +1177,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment"><p>Accounting for “hidden” transitions and jumpover states requires augmenting the transition probability matrix (again, see blog for details).</p></li>
 </ul>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix-4" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix-4" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <p>Cons, cont’d:</p>
 <ul>
@@ -1185,17 +1185,17 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment"><p>Modern (free) statistical software can easily exponentiate a matrix:</p></li>
 </ul>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix-5" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix-5" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <p>Cons, cont’d:</p>
 <ul>
-<li class="fragment"><p>Excel does not easily do matrix exponentiation, however you can use an approximation (we’ll do this in a case study).</p></li>
-<li class="fragment"><p>Modern (free) statistical software can easily exponentiate a matrix:</p></li>
+<li><p>Excel does not easily do matrix exponentiation, however you can use an approximation (we’ll do this in a case study).</p></li>
+<li><p>Modern (free) statistical software can easily exponentiate a matrix:</p></li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(expm)</span>
 <span id="cb1-2"><a></a>m_P <span class="ot">=</span> <span class="fu">expm</span>(m_R)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="b.-exponentiate-the-transition-rate-matrix-6" class="slide level2">
+<section id="b.-exponentiate-the-transition-rate-matrix-6" class="slide level2 center">
 <h2>3b. Exponentiate the transition rate matrix</h2>
 <p>For our chronic heart failure example, the exponentiated matrix yields a very similar answer to the first approach:</p>
 <div class="cell">
@@ -1233,11 +1233,11 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="so-where-are-we-now" class="slide level2">
+<section id="so-where-are-we-now" class="slide level2 center">
 <h2>So Where Are We Now?</h2>
 
 <img data-src="images/paste-EFB5816C.png" class="r-stretch"></section>
-<section id="so-where-are-we-now-1" class="slide level2">
+<section id="so-where-are-we-now-1" class="slide level2 center">
 <h2>So Where Are We Now?</h2>
 <ul>
 <li class="fragment"><p>By constructing our model using the “roots” of a transition rate matrix, we can incorporate disparate sources of information.</p></li>
@@ -1245,14 +1245,14 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment"><p>Facilitates standardizing inputs measured at different time intervals.</p></li>
 </ul>
 </section>
-<section id="so-where-are-we-now-2" class="slide level2">
+<section id="so-where-are-we-now-2" class="slide level2 center">
 <h2>So Where Are We Now?</h2>
 <ul>
 <li class="fragment"><p>Not all literature-based parameters operate on transition rates.</p></li>
 <li class="fragment"><p>You will often find that the strategies you want to model have inputs based on odds ratios, relative risks, risk differences, etc.</p></li>
 </ul>
 </section>
-<section id="chf-example-continued" class="slide level2">
+<section id="chf-example-continued" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <ul>
 <li class="fragment"><p>Recall from earlier that we constructed two transition rate matrices:</p>
@@ -1262,7 +1262,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </ol></li>
 </ul>
 </section>
-<section id="chf-example-continued-1" class="slide level2">
+<section id="chf-example-continued-1" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <p>These two rate matrices can be used to construct the following transition probability matrices:</p>
 <div style="font-size: 0.7em">
@@ -1342,7 +1342,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div></div>
 </div>
 </section>
-<section id="chf-example-continued-2" class="slide level2">
+<section id="chf-example-continued-2" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <ul>
 <li>Now suppose we wanted to model a second strategy (“B”) based on a randomized trial of another drug.</li>
@@ -1350,7 +1350,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li>The probability of CHF death in the placebo (control) arm in that trial was 0.15.<sup>1</sup></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn6"><p>Note this is slightly higher than the corresponding probability in our natural history transition probability matrix (0.1172), reflecting the fact that randomized trial participants are not necessarily representative of the entire population!</p></li></ol></aside></section>
-<section id="chf-example-continued-3" class="slide level2">
+<section id="chf-example-continued-3" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <ul>
 <li class="fragment">An odds ratio is based on the odds of an outcome happening, which is directly related to the probability.</li>
@@ -1358,7 +1358,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">Odds Ratio = <span class="math inline">\(\frac{\text{Odds of outcome in exposed}}{\text{Odds of outcome in unexposed}}\)</span></li>
 </ul>
 </section>
-<section id="chf-example-continued-4" class="slide level2">
+<section id="chf-example-continued-4" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -1374,11 +1374,11 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="make-adjustments-to-mathbfp-as-needed." class="slide level2">
+<section id="make-adjustments-to-mathbfp-as-needed." class="slide level2 center">
 <h2>4. Make adjustments to <span class="math inline">\(\mathbf{P}\)</span> as needed.</h2>
 
 <img data-src="images/paste-369710A3.png" class="r-stretch"></section>
-<section id="make-adjustments-to-mathbfp-as-needed.-1" class="slide level2">
+<section id="make-adjustments-to-mathbfp-as-needed.-1" class="slide level2 center">
 <h2>4. Make adjustments to <span class="math inline">\(\mathbf{P}\)</span> as needed.</h2>
 <ul>
 <li class="fragment">Constructing our final transition probability matrix—for natural history or more specifically for for a stratgey under consideration–may require further adjustment.</li>
@@ -1386,7 +1386,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">Odds ratios, relative risks, and risk differences all operate on the <em>probability</em> scale.</li>
 </ul>
 </section>
-<section id="make-adjustments-to-mathbfp-as-needed.-2" class="slide level2">
+<section id="make-adjustments-to-mathbfp-as-needed.-2" class="slide level2 center">
 <h2>4. Make adjustments to <span class="math inline">\(\mathbf{P}\)</span> as needed.</h2>
 <div style="font-size: 0.5em">
 <table class="caption-top">
@@ -1451,11 +1451,11 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </table>
 </div>
 </section>
-<section id="make-adjustments-to-mathbfp_s-as-needed." class="slide level2">
+<section id="make-adjustments-to-mathbfp_s-as-needed." class="slide level2 center">
 <h2>4. Make adjustments to <span class="math inline">\(\mathbf{P_s}\)</span> as needed.</h2>
 
 <img data-src="images/paste-369710A3.png" class="r-stretch"></section>
-<section id="chf-example-continued-5" class="slide level2">
+<section id="chf-example-continued-5" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <p>Let’s turn back to our CHF example.</p>
 <ul>
@@ -1464,7 +1464,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">The probability of CHF death in the placebo (control) arm in that trial was 0.15.</li>
 </ul>
 </section>
-<section id="chf-example-continued-6" class="slide level2">
+<section id="chf-example-continued-6" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <ul>
 <li>We can convert an odds ratio to a relative risk (i.e., ratio of probabilities) if we know the baseline (unexposed) probability of the outcome, <span class="math inline">\(p_0\)</span>.</li>
@@ -1472,7 +1472,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li>If we didn’t have this information, we might <strong>assume</strong> its the same (0.1172) as in our underlying natural history probability matrix<sup>1</sup></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn7"><p>Though note this is an assumption, so we should incorporate a lot of uncertainty around it in our model!</p></li></ol></aside></section>
-<section id="chf-example-continued-7" class="slide level2">
+<section id="chf-example-continued-7" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <ul>
 <li class="fragment">We can convert an odds ratio to a <strong>relative risk</strong> (RR).<sup>1</sup></li>
@@ -1480,7 +1480,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">A relative risk is the ratio of the probability of the outcome in the exposed group to the probability of the outcome in the unexposed group.</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn8"><p>If the incidence of the outcome is fairly rare (<span class="math inline">\(p_0&lt;0.10\)</span>), you will often see people simply use the OR as a RR. Source for conversion formula: <span class="citation" data-cites="zhangWhatRelativeRisk1998">Zhang and Yu (<a href="#/references" role="doc-biblioref" onclick="">1998</a>)</span></p></li></ol></aside></section>
-<section id="chf-example-continued-8" class="slide level2">
+<section id="chf-example-continued-8" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
 <ul>
 <li class="fragment"><span class="math inline">\(RR = \frac{p_1}{p_0}\)</span></li>
@@ -1488,9 +1488,9 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment"><span class="math inline">\(p_{D_{CHF}} = 0.75 \times .15 = 0.1125\)</span></li>
 </ul>
 </section>
-<section id="chf-example-continued-9" class="slide level2">
+<section id="chf-example-continued-9" class="slide level2 center">
 <h2>CHF Example, Continued</h2>
-<div class="quarto-layout-panel" data-layout-ncol="2" style="font-size: 0.55em">
+<div class="quarto-layout-panel" style="font-size: 0.55em" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="cell-output-display">
@@ -1605,7 +1605,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="full-process" class="slide level2">
+<section id="full-process" class="slide level2 center">
 <h2>Full Process</h2>
 
 <img data-src="images/paste-E2EB7E3D.png" class="r-stretch"></section></section>
@@ -1614,14 +1614,14 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <h1>Nonstationary Transitions</h1>
 
 </section>
-<section id="transition-dynamics" class="slide level2">
+<section id="transition-dynamics" class="slide level2 center">
 <h2>Transition Dynamics</h2>
 <ul>
 <li class="fragment">We have focused on “static” transition rate/probability matrices.</li>
 <li class="fragment">Often, transitions vary as a function of time.</li>
 </ul>
 </section>
-<section id="transition-dynamics-1" class="slide level2">
+<section id="transition-dynamics-1" class="slide level2 center">
 <h2>Transition Dynamics</h2>
 <ul>
 <li class="fragment">Nonstationary rates: background mortality rate rises with age.</li>
@@ -1629,7 +1629,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">Time-dependent event transitions: rate of adverse events after disease onset is higher in first cycle, lower in subsequent cycles.</li>
 </ul>
 </section>
-<section id="age-varying-background-mortality" class="slide level2">
+<section id="age-varying-background-mortality" class="slide level2 center">
 <h2>Age-Varying Background Mortality</h2>
 <ul>
 <li class="fragment">Useful data source is life table data. You used this in the Alive-Dead case study!</li>
@@ -1637,27 +1637,27 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">Also available (by region) <a href="https://www.un.org/development/desa/pd/data/model-life-tables">from the UN</a> and other organizations.</li>
 </ul>
 </section>
-<section id="section" class="slide level2" data-background-image="media/life-table-un.png" data-background-size="contain">
+<section id="section" class="slide level2 center" data-background-image="media/life-table-un.png" data-background-size="contain">
 <h2></h2>
 </section>
-<section id="nonstationary-rates" class="slide level2">
+<section id="nonstationary-rates" class="slide level2 center">
 <h2>Nonstationary Rates</h2>
 <ul>
-<li class="fragment">You may have other parameters that vary by age.
+<li>You may have other parameters that vary by age.
 <ul>
-<li class="fragment">Disease specific mortality rate:</li>
+<li>Disease specific mortality rate:</li>
 </ul></li>
 </ul>
 
 <img data-src="images/paste-EA4566AA.png" class="r-stretch"><p>Source: <span class="citation" data-cites="russellWhatPertussisMortality2016">Russell et al. (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
 </section>
-<section id="nonstationary-rates-1" class="slide level2">
+<section id="nonstationary-rates-1" class="slide level2 center">
 <h2>Nonstationary Rates</h2>
 <ul>
-<li class="fragment">You may have other parameters that vary by age.
+<li>You may have other parameters that vary by age.
 <ul>
-<li class="fragment">Disease specific mortality rate:</li>
-<li class="fragment">Age-specific intervention rates/probabilities</li>
+<li>Disease specific mortality rate:</li>
+<li>Age-specific intervention rates/probabilities</li>
 </ul></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -1667,7 +1667,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 <p>Source: <span class="citation" data-cites="russellWhatPertussisMortality2016">Russell et al. (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
 </section>
-<section id="nonstationary-rates-2" class="slide level2">
+<section id="nonstationary-rates-2" class="slide level2 center">
 <h2>Nonstationary Rates</h2>
 <ul>
 <li class="fragment">It is straightforward to incorporate these dynamics into a Markov model.</li>
@@ -1676,7 +1676,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">Amua can handle all of this for you, provided you enter the age-specific “lookup table” in the model (just as with background mortality).</li>
 </ul>
 </section>
-<section id="other-transition-dynamics" class="slide level2">
+<section id="other-transition-dynamics" class="slide level2 center">
 <h2>Other Transition Dynamics</h2>
 <ul>
 <li class="fragment">Suppose, instead, that event/transition rates, costs, quality of life vary over the course of a disease or other process in our model.</li>
@@ -1684,21 +1684,21 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">These types of dynamics are more challenging to implement – but you can often do it!</li>
 </ul>
 </section>
-<section id="other-transition-dynamics-1" class="slide level2">
+<section id="other-transition-dynamics-1" class="slide level2 center">
 <h2>Other Transition Dynamics</h2>
 <ul>
 <li class="fragment"><p>One option is to simply build a decision tree around events that occur at higher rates shortly after disease onset, surgery, drug initiation, etc.</p></li>
 <li class="fragment"><p>The decision tree can follow people until they reach a “steady state” — then the Markov model can pick up from there.</p></li>
 </ul>
 </section>
-<section id="other-transition-dynamics-2" class="slide level2">
+<section id="other-transition-dynamics-2" class="slide level2 center">
 <h2>Other Transition Dynamics</h2>
 <ul>
 <li class="fragment"><p>Another option is “tunnel states” — simply expand the health state to follow people over the first few cycles of onset.</p></li>
 <li class="fragment"><p>Tunnel states are “non-markovian,” so they need to be added once you have the transition probability matrix defined.</p></li>
 </ul>
 </section>
-<section id="tunnel-states-healthy-sick-dead" class="slide level2">
+<section id="tunnel-states-healthy-sick-dead" class="slide level2 center">
 <h2>Tunnel States: Healthy, Sick, Dead</h2>
 <ul>
 <li class="fragment">Let’s take a simple healthy, sick, dead model.</li>
@@ -1707,7 +1707,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment">Illness increases the risk of death by a hazard ratio of 5.45.</li>
 </ul>
 </section>
-<section id="tunnel-states-healthy-sick-dead-1" class="slide level2">
+<section id="tunnel-states-healthy-sick-dead-1" class="slide level2 center">
 <h2>Tunnel States: Healthy, Sick, Dead</h2>
 <p>Transition rate matrix: <span class="math inline">\(\mathbf{R}\)</span></p>
 <div class="cell">
@@ -1745,7 +1745,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="tunnel-states-healthy-sick-dead-2" class="slide level2">
+<section id="tunnel-states-healthy-sick-dead-2" class="slide level2 center">
 <h2>Tunnel States: Healthy, Sick, Dead</h2>
 <p>Transition probability matrix: <span class="math inline">\(\exp(\mathbf{R})\)</span></p>
 <div class="cell">
@@ -1783,7 +1783,7 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="tunnel-states-healthy-sick-dead-3" class="slide level2">
+<section id="tunnel-states-healthy-sick-dead-3" class="slide level2 center">
 <h2>Tunnel States: Healthy, Sick, Dead</h2>
 <ul>
 <li class="fragment"><p>Now suppose that the probability of death from disease varies by time since disease onset.</p>
@@ -1795,11 +1795,11 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 <li class="fragment"><p>We can add tunnel states to our transition probability matrix to accomodate this.</p></li>
 </ul>
 </section>
-<section id="tunnel-states-healthy-sick-dead-4" class="slide level2">
+<section id="tunnel-states-healthy-sick-dead-4" class="slide level2 center">
 <h2>Tunnel States: Healthy, Sick, Dead</h2>
 <ul>
-<li class="fragment">Here is the new transition probability matrix.</li>
-<li class="fragment">Notice how the tunnel states “force” people to transition either to the next disease state if they do not die of the disease in the cycle.</li>
+<li>Here is the new transition probability matrix.</li>
+<li>Notice how the tunnel states “force” people to transition either to the next disease state if they do not die of the disease in the cycle.</li>
 </ul>
 <div style="font-size: 0.8em">
 <div class="cell">
@@ -1862,10 +1862,10 @@ p_{\text{CHF,D_CHF}}= \frac{\color{green}{0.006}}{\color{red}{0.125}+\color{gree
 </div>
 </div>
 </section>
-<section id="tunnel-states-healthy-sick-dead-5" class="slide level2 smaller">
+<section id="tunnel-states-healthy-sick-dead-5" class="slide level2 smaller center">
 <h2>Tunnel States: Healthy, Sick, Dead</h2>
 <ul>
-<li class="fragment">If we run out the Markov trace for five cycles, here are the results.</li>
+<li>If we run out the Markov trace for five cycles, here are the results.</li>
 </ul>
 <div style="font-size: 0.75em">
 <div class="cell">
@@ -1963,7 +1963,7 @@ Zhang, Jun, and Kai F. Yu. 1998. <span>“What’s the <span>Relative Risk</span
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../vchem.png" class="slide-logo"></p>
+<p><img src="images/logos.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -2047,7 +2047,7 @@ Zhang, Jun, and Kai F. Yu. 1998. <span>“What’s the <span>Relative Risk</span
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -2143,12 +2143,12 @@ Zhang, Jun, and Kai F. Yu. 1998. <span>“What’s the <span>Relative Risk</span
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 5.0e-2,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
