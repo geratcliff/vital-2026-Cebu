@@ -92,11 +92,27 @@ $breakpoint-large: 1440px;
   display: inline;
 }
 
+// Add these to any slide
+.text-larger {
+  font-size: 110% !important;
+  
+  li, p { font-size: 110% !important; }
+}
+
+.text-largest {
+  font-size: 125% !important;
+  
+  li, p { font-size: 125% !important; }
+}
+
+.text-smaller {
+  font-size: 90% !important;
+}
+
 
 // ============================================================================
 // GLOBAL PARAGRAPH & TEXT SPACING
 // ============================================================================
-
 
 
 .reveal p:last-child {

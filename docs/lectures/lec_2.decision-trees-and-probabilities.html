@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-995752423a1562fa520fdf0141122555.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-4f840b438583d4eaedcf47ce2b69200c.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -454,8 +454,8 @@
 <div class="fragment fade-out" data-fragment-index="2" style="position: absolute; top: 0; left: 0; width: 100%;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 66%">
-<col style="width: 33%">
+<col style="width: 65%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -486,8 +486,8 @@
 <div class="fragment fade-in" data-fragment-index="2" style="position: absolute; top: 0; left: 0; width: 100%;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 66%">
-<col style="width: 33%">
+<col style="width: 65%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -509,7 +509,7 @@
 <td>0.6</td>
 </tr>
 <tr class="even">
-<td><img data-src="images/lec2/rain_beach.png" style="max-height: 5vh; margin-bottom: 0"> At beach, rain <span class="accent-text">WORSE</span></td>
+<td><img data-src="images/lec2/rain_beach.png" style="max-height: 5vh; margin-bottom: 0"> At beach, rain <span class="accent-text">WORST</span></td>
 <td>0.4</td>
 </tr>
 </tbody>
@@ -542,14 +542,14 @@
 <section id="what-is-the-expected-value-of-going-to-the-beach" class="slide level2 center">
 <h2>What is the expected value of going to the beach?</h2>
 <div class="columns">
-<div class="column" style="font-size: 1.1em;">
+<div class="column" style="width:50%;">
 <p><span class="math inline">\color{green}{0.82} = \underbrace{\color{red}{0.3} * \color{blue}{0.4}}_{\text{Rain}} + \underbrace{\color{red}{0.7} * \color{blue}{1.0}}_{\text{No Rain}}</span></p>
 <ul>
 <li>Probabilities in <span style="color: red;">red</span>.</li>
 <li>Payoffs in <span style="color: blue;">blue</span>.</li>
 <li>Expected value in <span style="color: green;">green</span>.</li>
 </ul>
-</div><div class="column" style="font-size: 1.1em;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/lec2/ev_beach.png" class="quarto-figure quarto-figure-center"></p>
@@ -590,7 +590,7 @@
 <li>Expected value = The sum of the multiplied probabilities for each chance option or intervention</li>
 </ul>
 
-<img data-src="images/lec2/expected_value.png" width="269" class="r-stretch"><aside class="notes">
+<img data-src="images/lec2/expected_value.png" width="187" class="r-stretch"><aside class="notes">
 <p>Equation: 1 to infinity – represents the infinite # of branches in the decision tree. In our example, we only had 2 branches, but if you had 3 or 4 or 5… you would represent it as i=3, 4, 5 and then you multiply the probabilities.</p>
 <p>Xi = payoff and P = probability</p>
 <style type="text/css">
@@ -703,11 +703,11 @@
 <img data-src="images/lec2/indifferent.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-1" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
-<p>Earlier, we solved for the expected payoff of remaining at home:</p>
+<p>Earlier, we solved for the expected value of remaining at home:</p>
 <p><span class="accent-text"><strong>0.74</strong></span> (which was a lower expected value than going to the beach when the chance of rain at both was 30%)</p>
-<div class="highlight-box primary" style="font-size:0.95em">
+<div class="highlight-box primary">
 <ul>
-<li class="fragment"><strong>What would</strong> <span class="math inline">p_B</span> need to be to yield an expected payoff <em>at the beach</em> of 0.74?
+<li class="fragment"><strong>What would</strong> <span class="math inline">p_B</span> need to be to yield an expected value <em>at the beach</em> of 0.74?
 <ul>
 <li class="fragment">We just solved for the <strong>indifference threshold</strong> assuming the probability of rain was the same at the beach and at home.</li>
 <li class="fragment">Now we <strong>vary rain at the beach</strong> while keeping the probability of rain at home fixed at <strong>30%</strong>.</li>
@@ -740,7 +740,7 @@
 <section id="at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-2" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">At what probability (<span class="math inline">p_B</span>) of rain for the beach are you indifferent between the two options?</h2>
 <p><br></p>
-<p>Set 0.74 (expected value of remaining at home) equal to the <strong>beach</strong> payoffs and solve for <span class="math inline">p_B</span>, <strong>because we are varying the probability of rain at the beach (<span class="math inline">p_B</span>), not the probability of rain at home (<span class="math inline">p_H</span>).</strong></p>
+<p>Set 0.74 (expected value of remaining at home) equal to the <strong>beach</strong> payoffs and solve for <span class="math inline">p_B</span>, <strong>because we are varying the probability of rain at the beach (</strong><span class="math inline">p_B</span>), not the probability of rain at home (<span class="math inline">p_H</span>).</p>
 <p><br></p>
 <p>p<sub>B</sub> * 0.4 + (1 - p<sub>B</sub>) * 1.0 = 0.74</p>
 </section>
@@ -800,7 +800,7 @@
 <section id="mutually-exclusive-events-in-decision-trees" class="slide level2 center">
 <h2>Mutually exclusive events in Decision Trees</h2>
 
-<img data-src="images/lec2/vaccine.png" class="r-stretch"></section>
+<img data-src="images/lec2/vaccine.png" width="356" class="r-stretch"></section>
 <section id="mutually-exclusive-events" class="slide level2 center">
 <h2>Mutually exclusive events</h2>
 <p>Assuming events are mutually exclusive, then the probability of 2 events occurring is the <u>sum of the probability of each event occurring individually</u></p>
@@ -1092,7 +1092,7 @@ P(A|B) = P(A and B) / P(B)
 <div class="pros-cons-new">
 <div class="pros-column">
 <div class="column-title">
-Strengths
+<p>Strengths</p>
 </div>
 <ul>
 <li class="fragment">They are easy to describe and understand</li>
@@ -1102,7 +1102,7 @@ Strengths
 </div>
 <div class="cons-column">
 <div class="column-title">
-Limitations
+<p>Limitations</p>
 </div>
 <ul>
 <li class="fragment">No explicit accounting for the elapse of time.
@@ -1135,10 +1135,10 @@ Limitations
 <h2>Some Do’s &amp; “Dont’s”</h2>
 <p><br></p>
 <ol start="2" type="1">
-<li><strong>2 branches versus 3</strong> <br></li>
+<li><strong>Two branches versus three</strong> <br></li>
 </ol>
 <blockquote>
-<p>There is nothing inherently wrong with having three (or more) branches, as long as events are mutually exclusive and probabilities sum to 1. <br> However, additional branches increase model complexity and can complicate sensitivity analyses without necessarily adding insight.</p>
+<p>There is nothing inherently wrong with having three (or more) branches, as long as events are mutually exclusive and probabilities sum to 1. <br> However, additional branches increase model complexity &amp; can complicate sensitivity analyses without necessarily adding insight.</p>
 </blockquote>
 
 <img data-src="images/HighLow.png" class="r-stretch"></section>
@@ -1163,8 +1163,9 @@ Limitations
 </div>
 <div class="key-points">
 <ul>
-<li class="fragment">Point 1</li>
-<li class="fragment">Point 2</li>
+<li class="fragment">Decision trees compare strategies by expected value</li>
+<li class="fragment">Probabilities in trees are conditional by construction</li>
+<li class="fragment">Good trees require mutually exclusive, exhaustive branches</li>
 </ul>
 </div>
 </div>

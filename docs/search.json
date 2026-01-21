@@ -5593,7 +5593,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-6",
     "title": "Decision Trees & Probabilities",
     "section": "Should I go to the beach or stay home?",
-    "text": "Should I go to the beach or stay home?\nPayoffs\n\n\n\n\n\n\n\n\n\nScenario\nPayoff\n\n\n\n\n At beach, no rain\n1.0\n\n\n At beach, rain ↓\n0.4\n\n\n At home, no rain ↑\n0.8\n\n\n At home, rain ↑\n0.6\n\n\n\n\n\n\n\n\n\n\n\n\nScenario\nPayoff\n\n\n\n\n At beach, no rain BEST\n1.0\n\n\n At home, no rain\n0.8\n\n\n At home, rain\n0.6\n\n\n At beach, rain WORSE\n0.4\n\n\n\n\n\n\n\nWe will get into this down the line, but utilities are measured between 0 and 1.\nFor health states, for example, 0 = worst health & 1 = perfect health\nHere, we are valuing “beach, no rain” as the “most ideal state” we want to be in"
+    "text": "Should I go to the beach or stay home?\nPayoffs\n\n\n\n\n\n\n\n\n\nScenario\nPayoff\n\n\n\n\n At beach, no rain\n1.0\n\n\n At beach, rain ↓\n0.4\n\n\n At home, no rain ↑\n0.8\n\n\n At home, rain ↑\n0.6\n\n\n\n\n\n\n\n\n\n\n\n\nScenario\nPayoff\n\n\n\n\n At beach, no rain BEST\n1.0\n\n\n At home, no rain\n0.8\n\n\n At home, rain\n0.6\n\n\n At beach, rain WORST\n0.4\n\n\n\n\n\n\n\nWe will get into this down the line, but utilities are measured between 0 and 1.\nFor health states, for example, 0 = worst health & 1 = perfect health\nHere, we are valuing “beach, no rain” as the “most ideal state” we want to be in"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#should-i-go-to-the-beach-or-stay-home-7",
@@ -5705,7 +5705,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-1",
     "title": "Decision Trees & Probabilities",
     "section": "At what probability (p_B) of rain for the beach are you indifferent between the two options?",
-    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\nEarlier, we solved for the expected payoff of remaining at home:\n0.74 (which was a lower expected value than going to the beach when the chance of rain at both was 30%)\n\n\nWhat would p_B need to be to yield an expected payoff at the beach of 0.74?\n\nWe just solved for the indifference threshold assuming the probability of rain was the same at the beach and at home.\nNow we vary rain at the beach while keeping the probability of rain at home fixed at 30%.\n\nIn other words, at what probability of rain at the beach would you be indifferent between staying at home & going to the beach?\n\n\n\n\nNow, let’s ask a slightly different question – At what probabiility….\nLet’s now assume that the probability of rain for the HOME option does not change (so stays at 0.3)\nKEY DIFFERENCE FROM THE LAST EXAMPLE: In the last example, the probabilities were the same & we wanted to get our threshold of indifference between the beach and staying at home\n**Now we are assuming that there’s still a probability of 30% that it rains if you stay home, but at what probability of rain at the beach would you be indifferent between the two options? (Since we CHOSE BEACH when the probabilities both equaled 30%)\n\n\nIn other words, at what probability of RAIN AT THE BEACH would you be indifferent between the beach & home"
+    "text": "At what probability (p_B) of rain for the beach are you indifferent between the two options?\nEarlier, we solved for the expected value of remaining at home:\n0.74 (which was a lower expected value than going to the beach when the chance of rain at both was 30%)\n\n\nWhat would p_B need to be to yield an expected value at the beach of 0.74?\n\nWe just solved for the indifference threshold assuming the probability of rain was the same at the beach and at home.\nNow we vary rain at the beach while keeping the probability of rain at home fixed at 30%.\n\nIn other words, at what probability of rain at the beach would you be indifferent between staying at home & going to the beach?\n\n\n\n\nNow, let’s ask a slightly different question – At what probabiility….\nLet’s now assume that the probability of rain for the HOME option does not change (so stays at 0.3)\nKEY DIFFERENCE FROM THE LAST EXAMPLE: In the last example, the probabilities were the same & we wanted to get our threshold of indifference between the beach and staying at home\n**Now we are assuming that there’s still a probability of 30% that it rains if you stay home, but at what probability of rain at the beach would you be indifferent between the two options? (Since we CHOSE BEACH when the probabilities both equaled 30%)\n\n\nIn other words, at what probability of RAIN AT THE BEACH would you be indifferent between the beach & home"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#at-what-probability-p_b-of-rain-for-the-beach-are-you-indifferent-between-the-two-options-2",
@@ -5908,7 +5908,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts-1",
     "title": "Decision Trees & Probabilities",
     "section": "Some Do’s & “Dont’s”",
-    "text": "Some Do’s & “Dont’s”\n\n\n2 branches versus 3 \n\n\nThere is nothing inherently wrong with having three (or more) branches, as long as events are mutually exclusive and probabilities sum to 1.  However, additional branches increase model complexity and can complicate sensitivity analyses without necessarily adding insight."
+    "text": "Some Do’s & “Dont’s”\n\n\nTwo branches versus three \n\n\nThere is nothing inherently wrong with having three (or more) branches, as long as events are mutually exclusive and probabilities sum to 1.  However, additional branches increase model complexity & can complicate sensitivity analyses without necessarily adding insight."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts-2",
@@ -5922,7 +5922,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#section-6",
     "title": "Decision Trees & Probabilities",
     "section": "",
-    "text": "Key Takeaways\n\n\nDecision Trees\n\n\n\nPoint 1\nPoint 2"
+    "text": "Key Takeaways\n\n\nDecision Trees\n\n\n\nDecision trees compare strategies by expected value\nProbabilities in trees are conditional by construction\nGood trees require mutually exclusive, exhaustive branches"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#preview-of-whats-to-come",
