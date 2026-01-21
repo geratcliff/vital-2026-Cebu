@@ -43,7 +43,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | 10:50 - 12:00 | [Lecture]{.lecture} | [Decision Trees](lectures/lec_2.decision-trees-and-probabilities.qmd) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 13:55 | [Capstone]{.capstone} | Example Presentation |
-| 13:55 - 14:55 | [Capstone]{.capstone} | Discuss Decision Problem \[Small Groups\] |
+| 13:55 - 14:55 | [Capstone]{.capstone} | [Discuss Decision Problem \[Small Groups\]](capstone/01_smallgroups.qmd) |
 | 14:55 -15:40 | [Case Study]{.casestudy}  | [Introduction to AMUA](case-studies/CaseStudy_AMUA.qmd) |
 | 15:40-16:30 | [Lecture]{.lecture}| [CEA Fundamentals 1: Costs](lectures/lec_5a.cea-fundamentals1.qmd) |
 | 16:30 | Check-Ins | Daily Recap & Discussion |
@@ -55,13 +55,13 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | Time | Type | Topic |
 |------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy}  | [Decision Trees in Amua](case-studies/CaseStudy_Tree.qmd) |
-| 9:00 - 10:30 | [Capstone]{.capstone} | Make a Decision Tree |
+| 9:00 - 10:30 | [Capstone]{.capstone} | [Make a Decision Tree](capstone/02_decision-tree.qmd) |
 | 10:30 - 11:30 | Break | Coffee/Tea |
 | 11:30 - 12:30 | [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits](lectures/lec_5b.cea-fundamentals2.qmd) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 14:45 | [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits (Cont.)](lectures/lec_5b.cea-fundamentals2.qmd) |
 | 14:45 - 16:00 | [Lecture]{.lecture} | [CEA Fundamentals 3: Incremental CEA](lectures/lec_6.ICERs.qmd) |
-| 16:00 - 16:30 | [Capstone]{.capstone} | Add Outcomes to your decision tree |
+| 16:00 - 16:30 | [Capstone]{.capstone} | [Add Outcomes to your decision tree](capstone/02_decision-tree.qmd) |
 | 16:30 | Check-Ins | Daily Recap |
 
 : {tbl-colwidths="\[20,10,50\]"}
@@ -78,7 +78,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | 11:15 - 12:30 | [Lecture]{.lecture} | [Rates, Probabilities & More](lectures/lec_rates-probabilities.qmd) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 14:45 | [Case Study]{.casestudy}  | [Simple Markov Model in Amua](case-studies/CaseStudy_MarkovSimple.qmd) |
-| 14:45 - 16:30 | [Capstone]{.capstone} | Start Markov Model |
+| 14:45 - 16:30 | [Capstone]{.capstone} | [Design Markov Model](capstone/03_design-markov.qmd) |
 | 16:30 | Check-Ins | Daily Recap and Group Discussion |
 
 : {tbl-colwidths="\[20,10,50\]"}
@@ -93,7 +93,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | 10:30- 12:30 | [Lecture]{.lecture} | [Determinisitic, Threshold and Scenario Analyses](lectures/lec_sensitivity.qmd) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 14:00 | [Capstone]{.capstone} | Example Presentation |
-| 14:00 - 14:45 | [Capstone]{.capstone} | Run CEA and Stop work on Model to complete slides |
+| 14:00 - 14:45 | [Capstone]{.capstone} | [Run CEA and Stop work on Model to complete slides](capstone/04_build-markov.qmd) |
 | 14:45 - 16:00 | [Case Study]{.casestudy}  | [Common CEA Errors](case-studies/CommonErrors.qmd) |
 | 16:00 | Check-Ins | Daily Recap |
 
