@@ -2,6 +2,7 @@
 title: "Rates & Probabilities"
 format:
   revealjs:
+    incremental: true
     theme: [default, _extensions/branding/custom-brand.scss]
     width: 1600      # Wider canvas
     height: 900      # Taller canvas (16:9 ratio)
@@ -24,7 +25,6 @@ editor:
     wrap: 72
 ---
 
-
 ## Learning Objectives and Outline {.section-slide}
 
 ::: section-number
@@ -38,14 +38,14 @@ editor:
 
 -   Interpret rates and probabilities in applied examples
 
--   Identify and correctly interpret rates and probabilities in the literature
-
+-   Identify and correctly interpret rates and probabilities in the
+    literature
 :::
 
 ## Outline {.numbered-list-slide}
 
-::::::::::::::: number-list
-::::: list-item
+::: number-list
+::: list-item
 ::: number
 01
 :::
@@ -53,9 +53,9 @@ editor:
 ::: text
 Probability review
 :::
-:::::
+:::
 
-::::: list-item
+::: list-item
 ::: number
 02
 :::
@@ -63,9 +63,9 @@ Probability review
 ::: text
 Rates review
 :::
-:::::
+:::
 
-::::: list-item
+::: list-item
 ::: number
 03
 :::
@@ -73,9 +73,9 @@ Rates review
 ::: text
 Rates versus probabilities
 :::
-:::::
+:::
 
-::::: list-item
+::: list-item
 ::: number
 04
 :::
@@ -83,9 +83,9 @@ Rates versus probabilities
 ::: text
 Summary
 :::
-:::::
+:::
 
-::::: list-item
+::: list-item
 ::: number
 05
 :::
@@ -93,9 +93,9 @@ Summary
 ::: text
 Identifying rates and probabilities in the literature
 :::
-:::::
+:::
 
-::::: list-item
+::: list-item
 ::: number
 06
 :::
@@ -103,10 +103,8 @@ Identifying rates and probabilities in the literature
 ::: text
 Translating between rates and probabilities
 :::
-:::::
-:::::::::::::::
-
-
+:::
+:::
 
 ## Probability Review {.section-slide background="#43464B"}
 
@@ -114,32 +112,30 @@ Translating between rates and probabilities
 01
 :::
 
-
 ## Probability
 
-Probability is the likelihood that an event occurs **within a specified time period**.
+Probability is the likelihood that an event occurs **within a specified
+time period**.
 
 ::: {layout-ncol="1"}
 ![](images/paste-62FF1911.png){width="539"}
 
-$\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
+> Out of everyone we followed for this period, what fraction experienced
+> the event?
 :::
 
-
 ## Probability can be reported in different ways
+<br>
 
-::: {style="font-size: 0.85em"}
-- **Proportion / percentage:** 0.40 or 40%
-- **Frequency:** 40 per 100 (or 4 per 1,000)
-- **Odds:** $P/(1-P)$ (ranges from 0 to $\infty$)
+-   **Proportion / percentage:** 0.40 or 40%
+-   **Frequency:** 40 per 100 (or 4 per 1,000)
+-   **Odds:** $P/(1-P)$ (ranges from 0 to $\infty$)
 
 <br>
 
-**Epidemiologic terminology:**
-- **Cumulative incidence (risk):** the probability of experiencing the event by time *t*
-  - Examples: “1-year risk,” “5-year cumulative incidence”
-:::
-
+**Epidemiologic terminology:** - **Cumulative incidence (risk):** the
+probability of experiencing the event by time *t* - Examples: "1-year
+risk," "5-year cumulative incidence"
 
 ## Rates {.section-slide}
 
@@ -147,15 +143,13 @@ $\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
 02
 :::
 
-
 ## Rates involve person-time
+<br>
 
-::: {style="font-size: 0.85em"}
-- **Incidence (hazard) rate:** number of events per unit of **person-time**
-- Rates describe **how fast** events occur
-- Rates can range from 0 to $\infinity$
-:::
-
+-   **Incidence (hazard) rate:** number of events per unit of
+    **person-time**
+-   Rates describe **how fast** events occur
+-   Rates can range from 0 to $\infinity$
 
 # What is the difference between a rate and a probability? {background="#c2f0c2"}
 
@@ -165,22 +159,19 @@ $\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
 03
 :::
 
-::: incremental
-- **Probability (risk):** chance an individual experiences an event by a specified time  
-- **Rate:** speed at which events occur per unit of person-time  
-- **Key distinction:** rates use **person-time** in the denominator; probabilities do not
-:::
+## Rates vs. probabilities
 
+::: incremental
+-   **Probability (risk):** chance an individual experiences an event by
+    a specified time\
+-   **Rate:** speed at which events occur per unit of person-time\
+-   **Key distinction:** rates use **person-time** in the denominator;
+    probabilities do not
+:::
 
 ## Rate (incidence rate)
 
-::: incremental
-- $\text{Rate} = \dfrac{\# \text{events}}{\text{total person-time}}$
-- Interpreted as events per unit time at risk
-- Can exceed 1
-:::
-
-![](images/paste-8191B0E3.png){.fragment}
+![](images/paste-8191B0E3.png){.fragment width="784"}
 
 
 
@@ -195,54 +186,52 @@ $\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
 **Study:** 100 people followed for up to 4 years; 40 deaths.
 
 ::: incremental
-- **Probability (risk) over 4 years:**  
-  $40/100 = 0.40$  
-  *Interpretation:* 40% died within 4 years.
+-   **Probability (risk) over 4 years:**\
+    $40/100 = 0.40$\
+    *Interpretation:* 40% died within 4 years.
+<br>
 
-<br>  
-  
-- **Rate (if all 100 followed for 4 years)**  
-  Total person-time = $100 \times 4 = 400$ person-years; $40/400 = 0.10$ deaths per person-year  <br>
-  *Interpretation:* ≈1 death per 10 years of total follow-up across the study population (aggregated person time)
-:::  
-  
-  
-## Timing & censoring 
+-   **Rate (if all 100 followed for 4 years)**\
+    Total person-time = $100 \times 4 = 400$ person-years;
+    $40/400 = 0.10$ deaths per person-year <br> *Interpretation:* ≈1
+    death per 10 years of total follow-up across the study population
+    (aggregated person time)
+:::
+
+## Timing & censoring
 <br>
 
 ::: incremental
-- Rates change when **follow-up time differs**, even if the number of events is the same
-- **Censoring or dropout** reduces person-time and can increase the estimated rate
-:::
+-   Rates change when **follow-up time differs**, even if the number of
+    events is the same
+-   **Censoring or dropout** reduces person-time and can increase the
+    estimated rate
 :::
 
 
 ## Example: events happen early vs. late
 <br>
 
-**Study:** 100 people, planned follow-up = 4 years  
+**Study:** 100 people, planned follow-up = 4 years\
 **Case:** 40 deaths occur in Year 1
 
 ::: incremental
-- Person-time = $(40 \times 1) + (60 \times 4) = 280$ person-years  
-- **Rate:** $40/280 = 0.143$ deaths per person-year  
-- **Probability (risk):** $40/100 = 0.40$
+-   Person-time = $(40 \times 1) + (60 \times 4) = 280$ person-years\
+-   **Rate:** $40/280 = 0.143$ deaths per person-year\
+-   **Probability (risk):** $40/100 = 0.40$
 :::
 
+## When time-at-risk is not reported[^1]
 
-## When time-at-risk is not reported[^3]
+[^1]: Source: @gidwaniEstimatingTransitionProbabilities2020
 
-[^3]: Source: @gidwaniEstimatingTransitionProbabilities2020
-
-::: {style="font-size: 0.85em"}
 ::: incremental
-- When individual follow-up time is unavailable, events are often assumed to be **evenly distributed**
-- This approximates equal person-time for everyone
-- If events occurred earlier, the true rate would be higher (and vice versa)
+-   When individual follow-up time is unavailable, events are often
+    assumed to be **evenly distributed**
+-   This approximates equal person-time for everyone
+-   If events occurred earlier, the true rate would be higher (and vice
+    versa)
 :::
-:::
-
-
 
 ## Summary: Rates vs. Probabilities {.section-slide}
 
@@ -250,25 +239,23 @@ $\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
 04
 :::
 
-**To sum up:**
-
-::: incremental
-- **Probability**
-  - Answers: *What proportion of people experience the event by time X?*
-- **Rate**
-  - Answers: *How fast do events occur, per unit of time at risk?*
-:::
-
+## Summary: Rates vs. Probabilities
 <br>
 
+-   **Probability**
+    -   Answers: *What proportion of people experience the event by time
+        X?*
+-   **Rate**
+    -   Answers: *How fast do events occur, per unit of time at risk?*
+<br>
+
+
 ::: {style="font-size: 0.55em; line-height: 1.2;"}
-| Measure | Formula | Range | Used in |
-|--------|---------|-------|---------|
-| **Rate** | $\dfrac{\# \text{events}}{\text{total person-time}}$ | $0$–$\infty$ | Rate matrices |
-| **Probability / risk** | $\dfrac{\# \text{events}}{\# \text{people followed}}$ | $0$–$1$ | Probability matrices |
+| Measure                | Formula                                               | Range         | Used in              |
+|-----------------|-------------------|-----------------|-------------------|
+| **Rate**               | $\dfrac{\# \text{events}}{\text{total person-time}}$  | $0$--$\infty$ | Rate matrices        |
+| **Probability / risk** | $\dfrac{\# \text{events}}{\# \text{people followed}}$ | $0$--$1$      | Probability matrices |
 :::
-
-
 
 
 ## Identifying rates/probabilities through the literature {.section-slide}
@@ -277,16 +264,13 @@ $\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
 05
 :::
 
+## Identifying rates/probabilities through the literature
 
 ![](images/literature-probability.png)
 
-
 ## Identifying rates/probabilities through the literature
 
-
 ![](images/literature-rate.png)
-
-
 
 ## Translating between rates and probabilities {.section-slide}
 
@@ -297,59 +281,74 @@ $\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}$
 ## Converting rates/probabilities
 
 ::: incremental
--   **Rates** are instantaneous; they represent the speed of an event happening & because speed scales linearly with time, you can multiply or divide rates when the time period changes. <br>
--   **Probabilities** are accumulated outcomes (they are cumulative & bounded between 0-1); they do not scale linearly with time. You can't have more than 100% risk; so dividing/multiplying them does not preserve the correct relationship over time. 
+-   **Rates** are instantaneous; they represent the speed of an event
+    happening & because speed scales linearly with time, you can
+    multiply or divide rates when the time period changes. 
+<br>
+-   **Probabilities** are accumulated outcomes (they are cumulative &
+    bounded between 0-1); they do not scale linearly with time. You
+    can't have more than 100% risk; so dividing/multiplying them does
+    not preserve the correct relationship over time.
 :::
 
-## Another way of saying the same thing: 
+## Another way of saying the same thing:
 
--   A rate tells us how fast an event occurs; it scales with time. 
--   A probability tells us whether an event occurs within time "t"; it is cumulative & bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it's "cumulative")
+-   A rate tells us how fast an event occurs; it scales with time.
+<br>
+-   A probability tells us whether an event occurs within time "t"; it
+    is cumulative & bounded. The relationship with time is non-linear
+    because the chance of an event slows as fewer people remain at risk
+    (i.e., why we say it's "cumulative")
 
+## Conversions
 
-## Conversions 
+-   A standard Markov model assumes an exponential (constant-hazard)
+    transition process, so we can easily move between rates
+    (instantaneous) and probabilities (over a time period).
 
-::: {style="font-size: 0.8em"}
--   A standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period). 
--   In other words, the risk per unit time doesn't change over time. If the hazard were not constant (say risk increases the longer you're sick), you would need a more complex time-dependent model.  
+-   In other words, the risk per unit time doesn't change over time. If
+    the hazard were not constant (say risk increases the longer you're
+    sick), you would need a more complex time-dependent model.
 
 -   It is common to use the following formula to convert [rates to
-probabilities]{style="background-color: yellow;"} under a constant (exponential) hazard. 
-
+    probabilities]{style="background-color: yellow;"} under a constant
+    (exponential) hazard.
 
 $$
 p = 1 - e^{-rt} 
-$$
-*p=probability* ; *r=rate* ; *t=time* 
-:::
+$$ 
 
-## Conversions 
+
+## Conversions
+
 <br>
 
-[Probability to Rate]{style="background-color: yellow;"}
-<br>
+[Probability to Rate]{style="background-color: yellow;"} <br>
 
 $$ r = \frac{-ln(1-p)} {t} $$
 
+## Conversions
 
-## Conversions 
 <br>
 
-**Example:** Consider we have a 12-month probability of 10.8% that a child under age 6 is newly diagnosed with elevated blood lead levels. If your Markov model has a 3-month cycle length, a 3-month probability is needed. 
-
-
+**Example:** Consider we have a 12-month probability of 10.8% that a
+child under age 6 is newly diagnosed with elevated blood lead levels. If
+your Markov model has a 3-month cycle length, a 3-month probability is
+needed.
 
 ## Conversions {.smaller}
+
 <br>
 
-[STEP 1]{style="background-color: yellow;"} Convert the 12-month probability to a 12-month rate (or 12-month probability to a 3-month rate) 
+[STEP 1]{style="background-color: yellow;"} Convert the 12-month
+probability to a 12-month rate (or 12-month probability to a 3-month
+rate)
 
 ::: callout-note
-Cannot divide/multiply probabilities 
+Cannot divide/multiply probabilities
 :::
 
 $$ r = \frac{-ln(1-p)} {t} $$
-
 
 $$ r = \frac{-ln(1-.108)} {1} = 0.1142891 $$
 
@@ -362,17 +361,20 @@ Ln = log
 :::
 
 ## Conversions {.smaller}
+
 <br>
 
-[STEP 2]{style="background-color: yellow;"} Convert the 12-month rate to a 3-month rate
+[STEP 2]{style="background-color: yellow;"} Convert the 12-month rate to
+a 3-month rate
 
 $$ \frac{0.1142891}{4} = 0.02857228 $$
 
-
 ## Conversions {.smaller}
+
 <br>
 
-[STEP 2]{style="background-color: yellow;"} Convert 3-month rate to 3-month probability
+[STEP 2]{style="background-color: yellow;"} Convert 3-month rate to
+3-month probability
 
 $$
 p = 1 - e^{-r\Delta t} 
@@ -385,26 +387,29 @@ $$
 ::: notes
 3/12 = 1/4
 
-If we wanted to convert to 1M rate, we would take 1/12 
+If we wanted to convert to 1M rate, we would take 1/12
 
-*** You take # of months / 12. So, if you want a 5-year probability, you take 60/12 = 5, so multiply by 5
+\*\*\* You take \# of months / 12. So, if you want a 5-year probability,
+you take 60/12 = 5, so multiply by 5
 :::
 
-
 ## Conversions {.smaller}
+
 <br>
 
-OR, [Step 1]{style="background-color: aquamarine;"} Convert the 12-month probability to a 3-month rate
+OR, [Step 1]{style="background-color: aquamarine;"} Convert the 12-month
+probability to a 3-month rate
 
 $$ r = \frac{-ln(1-p)} {t} $$
 
-$$ r = \frac{-ln(1-.108)} {4} = 0.02857229 $$ 
-
+$$ r = \frac{-ln(1-.108)} {4} = 0.02857229 $$
 
 ## Conversions {.smaller}
+
 <br>
 
-[STEP 2]{style="background-color: aquamarine;"} Convert 3-month rate to a 3-month probability
+[STEP 2]{style="background-color: aquamarine;"} Convert 3-month rate to
+a 3-month probability
 
 $$
 p = 1 - e^{-r\Delta t} 
@@ -414,35 +419,39 @@ $$
 p = 1 - e^{−0.02857229∗1} = 0.028168 
 $$
 
-## Conversions 
-<br> 
+## Conversions
 
+<br>
 
 ::: callout-note
-***IF we took the probability of .108 / 4 to get the 3M probability, we would get 0.027. This is CLOSE but it could make a huge difference when modeling hundredths of thousands of individuals, for example
+\*\*\*IF we took the probability of .108 / 4 to get the 3M probability,
+we would get 0.027. This is CLOSE but it could make a huge difference
+when modeling hundredths of thousands of individuals, for example
 :::
-
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 
 ::: {style="font-size: 0.8em"}
-
 ::: columns
 ::: {.column width="50%"}
-- With longer cycle lengths (e.g., 1 year), individuals may experience **multiple transitions within a single cycle** (e.g., healthy → sick → dead).
 
-- The standard Markov conversion  
-  $p_{HS}= 1 - e^{-r_{HS}\Delta t}$  
-  converts each transition **independently**, ignoring that death competes with sickness within the same time interval.
+::: incremental
+-   Long cycles can include multiple transitions (healthy → sick → dead).
 
-- As a result, individuals who become sick and then die within the same cycle
-  **cannot be represented as experiencing both transitions**.
+-   Standard rate/probability conversions\
+    $p_{HS}= 1 - e^{-r_{HS}\Delta t}$\
+    converts transitions independently, ignoring that death
+    competes with sickness within the same time interval.
 
-- In practice, this leads to **underestimation of deaths** when cycle lengths are long.
+-   This hides within-cycle events. 
 
-- This problem can be mitigated by using **shorter cycle lengths** or **competing-risk rate-to-probability conversions** that properly allocate transitions within each cycle.
+-   Can lead to **underestimation of deaths** with long cycles.
+
+-   Fix: Shorter cycles or competing risk conversions
 :::
 
+:::
+:::
 
 ::: {.column width="50%"}
 ```{dot}
@@ -463,12 +472,9 @@ digraph G {
     Dead -> Dead [color="#d9d0d0"];
   }
 ```
-
 :::
 :::
-
 :::
-
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 
@@ -488,24 +494,41 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 $$
 
 
-## What to use {.smaller}
 
-## What to use {.smaller}
+## What to use 
 
-| Equation | Use case | Advantage |
-|-----------|-----------|------------|
-| $p = 1 - e^{-rt}$ | When you know a **rate** but need a **probability** for a fixed cycle length | Simple closed-form conversion under a constant (exponential) hazard |
-| $r = -\ln(1-p)/t$ | When you have a **probability** but need a **rate** to rescale across time intervals | Preserves the correct exponential relationship when changing cycle length |
+| Equation                                 | Use case                                                                                             | Advantage                                                                       |
+|-----------------------|-----------------------|-------------------------|
+| $p = 1 - e^{-rt}$                        | When you know a rate but need a probability for a fixed cycle length                         | Simple closed-form conversion under a constant (exponential) hazard             |
+| $r = -\ln(1-p)/t$                        | When you have a probability but need a rate to rescale across time intervals                 | Preserves the correct exponential relationship when changing cycle length       |
 | Competing-risk formulas $p_{HS}, p_{HD}$ | When more than one event can occur from the same state (e.g., *Healthy → Sick* and *Healthy → Dead*) | Properly accounts for competing hazards and prevents hidden within-cycle events |
-
-
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 <br>
 
 ::: callout-note
-There's an even more accurate way to correct for "competing risks" & while it's beyond the scope of this introductory workshop, we will briefly review how to do this within the Markov lecture. 
+There's an even more accurate way to correct for "competing risks" &
+while it's beyond the scope of this introductory workshop, we will
+briefly review how to do this within the Markov lecture.
 :::
 
+##  {.summary-end-slide}
 
+::: summary-circle
+::: end-title
+Key Takeaways
+:::
+
+::: end-subtitle
+Rates & Probabilities
+:::
+
+::: key-points
+::: incremental
+-   Probabilities are cumulative and bounded (0-1)
+-   Rates are instantaneous and scale with time
+-   Conversions require a constant hazard assumption
+:::
+:::
+:::
 
