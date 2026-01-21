@@ -522,7 +522,7 @@ $$
 ## Alternative Rate-to-Probability Conversions {.smaller}
 <br>
 
-::: callout-note
+::: {.highlight-box .thin}
 There's an even more accurate way to correct for "competing risks" &
 while it's beyond the scope of this introductory workshop, we will
 briefly review how to do this within the Markov lecture.
