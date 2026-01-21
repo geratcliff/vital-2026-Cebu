@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Case Study - Markov Simple – Decision Analysis Workshop - Cebu</title>
+<title>Rates &amp; Probabilities – Decision Analysis Workshop - Cebu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -41,8 +76,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Case Study - Markov Simple</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Rates &amp; Probabilities</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -283,31 +316,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#use-bubble-diagram-tool" id="toc-use-bubble-diagram-tool" class="nav-link active" data-scroll-target="#use-bubble-diagram-tool">Use Bubble Diagram Tool</a>
-  <ul class="collapse">
-  <li><a href="#a-add-the-health-states" id="toc-a-add-the-health-states" class="nav-link" data-scroll-target="#a-add-the-health-states">A: Add the Health States</a></li>
-  <li><a href="#b-define-the-transitions" id="toc-b-define-the-transitions" class="nav-link" data-scroll-target="#b-define-the-transitions">B: Define the Transitions</a></li>
-  <li><a href="#c-generate-the-model" id="toc-c-generate-the-model" class="nav-link" data-scroll-target="#c-generate-the-model">C: Generate the Model</a></li>
-  </ul></li>
-  <li><a href="#building-the-model" id="toc-building-the-model" class="nav-link" data-scroll-target="#building-the-model">Building the model</a>
-  <ul class="collapse">
-  <li><a href="#a-add-markov-chain" id="toc-a-add-markov-chain" class="nav-link" data-scroll-target="#a-add-markov-chain">A: Add Markov Chain</a></li>
-  <li><a href="#b-add-the-health-states" id="toc-b-add-the-health-states" class="nav-link" data-scroll-target="#b-add-the-health-states">B: Add the Health States</a></li>
-  </ul></li>
-  <li><a href="#add-parameters" id="toc-add-parameters" class="nav-link" data-scroll-target="#add-parameters">Add Parameters</a></li>
-  <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a></li>
-  <li><a href="#uploading-a-table" id="toc-uploading-a-table" class="nav-link" data-scroll-target="#uploading-a-table">Uploading a Table</a></li>
-  <li><a href="#copy-and-paste-in-amua" id="toc-copy-and-paste-in-amua" class="nav-link" data-scroll-target="#copy-and-paste-in-amua">Copy and Paste in Amua</a></li>
-  <li><a href="#adjusting-to-match-strategy" id="toc-adjusting-to-match-strategy" class="nav-link" data-scroll-target="#adjusting-to-match-strategy">Adjusting to match strategy</a></li>
+  <li><a href="#learning-objectives-and-outline" id="toc-learning-objectives-and-outline" class="nav-link active" data-scroll-target="#learning-objectives-and-outline">Learning Objectives and Outline</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#the-structure-of-a-decision-analysis" id="toc-the-structure-of-a-decision-analysis" class="nav-link" data-scroll-target="#the-structure-of-a-decision-analysis">The Structure of a Decision Analysis</a></li>
+  <li><a href="#recap-decision-analysis" id="toc-recap-decision-analysis" class="nav-link" data-scroll-target="#recap-decision-analysis">Recap: <span class="accent-text">Decision Analysis</span></a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#bullets" id="toc-bullets" class="nav-link" data-scroll-target="#bullets">Bullets</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lec_rates-probabilities.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Case Study - Markov Simple</h1>
+<h1 class="title">Rates &amp; Probabilities</h1>
 </div>
 
 
@@ -324,355 +349,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<style>
-/* Base: make Quarto callouts behave like full cards */
-.callout.fill-box {
-  /* Unified background & border for the whole card */
-  --box-bg: #eaf6ee;   /* default soft green if no class overrides */
-  --edge-color: #1f6f43; /* default darker edge/title color */
-  background: var(--box-bg);
-  border: 1px solid var(--edge-color);
-  border-radius: 8px;
-  margin: 1rem 0;
-  overflow: hidden; /* keeps rounded corners clean when title is darker */
-}
-
-/* Title bar: darker shade; full-width across top */
-.callout.fill-box .callout-title {
-  background: var(--edge-color);
-  color: #fff;
-  padding: 0.6rem 0.8rem;
-  font-weight: 600;
-  border-bottom: 1px solid var(--edge-color);
-}
-
-/* Body: same light color as the card, not a separate “stripe” */
-.callout.fill-box .callout-body {
-  background: transparent; /* let the parent set the background */
-  padding: 0.9rem 1rem;
-}
-
-
-/* --- Specific palettes --- */
-/* Green: "Why are we doing this?" */
-.callout.why-box {
-  --box-bg: #eaf6ee;    /* light green fill */
-  --edge-color: #1f6f43;/* dark green edge/title */
-}
-
-/* Purple: "Your Task" */
-.callout.task-box {
-  --box-bg: #f3ecfb;    /* light purple fill */
-  --edge-color: #7140a6;/* deep purple edge/title */
-}
-
-/* Yellow: "Objectives" */
-.callout.objectives {
-  --box-bg: #f2eee4;    /* light yellow fill */
-  --edge-color: #CfAE70; /* deep yellow edge/title */
-}
-
-</style>
-<div class="fill-box objectives callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<section id="learning-objectives-and-outline" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="learning-objectives-and-outline">Learning Objectives and Outline</h2>
+<div class="section-number">
+<p>00</p>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Introduction and Learning Objectives <i class="fa-regular fa-clipboard" aria-label="clipboard"></i>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>By the end of this session, participants will be able to:</p>
-<ol type="1">
-<li><p>Create a visualization of the model using the Bubble Diagram tool</p></li>
-<li><p>Build and structure a Markov model in Amua to represent clinical decision problems.</p></li>
-<li><p>Evaluate model outcomes for alternative clinical strategies.</p></li>
-<li><p>Add and compare multiple strategies (e.g., diagnostic testing options) in a single decision framework.</p></li>
-</ol>
-</div>
-</div>
-<p>The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.</p>
-<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if: - There is a small percentage of people that can get sick again - The data does not exist for “Life Years Gained”.</p>
-<p>A Markov Model will allow us to cleanly integrate this into our model.</p>
-<div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Why are we doing this?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The decision tree allows us to understand the results at one time point. From our tree we can use set metrics of life years to understand how participant’s quality of life is impacted but we do not get a full picture of the long term impacts like the annual effect of being sick or the increase risk of death. A Markov creates a framework to understand impacts over time in a much cleaner and computationally friendly way.</p>
-</div>
-</div>
-<p>More Background on Disease X: After the initial treatment has happened at 50 years old, it cannot be repeated. The small percentage of individuals that get sick again will just get the palliative care that is currently provided. They will not be able to heal but will remain sick until death. Both all-cause deaths and disease deaths will be in the death state.</p>
-<p><strong>NOTE:</strong> For simplicity, we will be dropping the screening strategy from the exercise. A version with screening will be added for reviewing.</p>
-<section id="use-bubble-diagram-tool" class="level1">
-<h1>Use Bubble Diagram Tool</h1>
-<p>We will keep the decision tree for the one time treatment. The Markov Model will capture individuals healing, getting sick again, and dying.</p>
-<div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Your Task
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Create a bubble diagram for Disease X using the <a href="https://geratcliff.shinyapps.io/bubble_tool/" target="_blank">Bubble Diagram Tool</a></p>
-</div>
-</div>
-<details>
-<summary style="color: orange;">
-<p>More assistance with step</p>
-</summary>
-<p style="color: black;">
-</p><section id="a-add-the-health-states" class="level3">
-<h3 class="anchored" data-anchor-id="a-add-the-health-states">A: Add the Health States</h3>
-<p>In the Bubble Diagram tool:</p>
-<ol type="1">
-<li>Type the name of the state into the “State Name” text box on the left side bar.</li>
-<li>Click “Add State”</li>
-</ol>
-<p><img src="images/simpleMarkov/BubbleToolAddState.png" class="img-fluid"> 3. Repeat for all the states</p>
-<p>You should get:</p>
-<p><img src="images/simpleMarkov/BubbleToolAllStates.png" class="img-fluid"></p>
 </section>
-<section id="b-define-the-transitions" class="level3">
-<h3 class="anchored" data-anchor-id="b-define-the-transitions">B: Define the Transitions</h3>
-<p>You need to select where transitions between states are possible. This also includes the ability to return to a current state.</p>
-<ol type="1">
-<li>On the main screen you should see the transition matrix</li>
-</ol>
-<p><img src="images/simpleMarkov/BubbleToolTableEmpty.png" class="img-fluid"></p>
-<ol start="2" type="1">
-<li>Click on the box (<img src="images/simpleMarkov/BubbleToolCheck.png" class="img-fluid">) within the cell to allow a transition between the two states</li>
-</ol>
-<p><img src="images/simpleMarkov/BubbleToolTable.png" class="img-fluid"> 3. Repeat for all possible transitions.</p>
-</section>
-<section id="c-generate-the-model" class="level3">
-<h3 class="anchored" data-anchor-id="c-generate-the-model">C: Generate the Model</h3>
-<p>Once you have added all the possible transitions. Click the “Generate Diagram” Button on the left side bar (you may need to scroll down to see the button).</p>
-<p><img src="images/simpleMarkov/BubbleToolGenerate.png" class="img-fluid"></p>
-<p>Then click to the “Bubble Diagram” tab to see your diagram</p>
-<p><strong>Note:</strong> You can download your diagram from the “Bubble Diagram” tab. You do not need to for this model but you will for your capstone if you are doing a Markov Model.</p>
-<p></p>
-</section></details>
-<details>
-<summary style="color: green; font-size: 4vh;">
-<p>Check your Bubble Diagram</p>
-</summary>
-<p style="color: black;">
-</p><p><img src="images/simpleMarkov/BubbleToolFinal.png" class="img-fluid"></p>
-<p></p>
-</details>
-</section>
-
-<section id="building-the-model" class="level1">
-<h1>Building the model</h1>
-<p>In the Disease X model, we will be flowing the tree into the Markov model.</p>
-<p>Click Model &gt; New &gt; Markov Model</p>
-<p><img src="images/simpleMarkov/MarkovFile.png" class="img-fluid"></p>
-<p>You should get a empty page with a decision node (<img src="../amua-images/decisionNode_24.png" class="img-fluid">)</p>
-<div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<div class="arrow-bullets">
+<ul>
+<li><p>Differentiate between rates and probabilities</p></li>
+<li><p>Interpret rates and probabilities in applied examples</p></li>
+</ul>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Your Task
+</section>
+<section id="outline" class="level2 numbered-list-slide">
+<h2 class="numbered-list-slide anchored" data-anchor-id="outline">Outline</h2>
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Probability review</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Build out the Markov Structure for the “Treat None” arm of the model</p>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>Rates review</p>
 </div>
 </div>
-<details>
-<summary style="color: orange;">
-<p>More assistance with step</p>
-</summary>
-<p style="color: black;">
-</p><section id="a-add-markov-chain" class="level3">
-<h3 class="anchored" data-anchor-id="a-add-markov-chain">A: Add Markov Chain</h3>
-<ol type="1">
-<li>Add the Markov Chain (<img src="../amua-images/markovChain_24.png" class="img-fluid">) for the “Treat None” arm. Option 1: Select the decision node. Right click &gt; Add &gt; Markov Chain. Option 2: Select the decision node and click the Markov Chain button (<img src="../amua-images/markovChain_24.png" class="img-fluid">) in the top bar</li>
-</ol>
-<p><img src="images/simpleMarkov/AddMarkovChain1.png" class="img-fluid"> 2. Name that chain “Treat None”</p>
-</section>
-<section id="b-add-the-health-states" class="level3">
-<h3 class="anchored" data-anchor-id="b-add-the-health-states">B: Add the Health States</h3>
-<p>This model has three health states: Healthy, Sick, and Dead</p>
-<ol type="1">
-<li><p>Select the Markov chain labeled “Treat None” <img src="images/simpleMarkov/AddState1.png" class="img-fluid"></p></li>
-<li><p>Add the health states Option 1: Right click &gt; Add &gt; Markov State (<img src="../amua-images/markovState_24.png" class="img-fluid">. Option 2: Click the Markov State button (<img src="../amua-images/markovState_24.png" class="img-fluid">) in the top bar Option 3: Double click on the Markov Chain to get two Markov states added</p></li>
-</ol>
-<p><img src="images/simpleMarkov/AddState2.png" class="img-fluid"></p>
-<ol start="3" type="1">
-<li><p>Rename the State to “Health”</p></li>
-<li><p>Repeat for Sick and Dead</p></li>
-</ol>
-<p><img src="images/simpleMarkov/AddState3.png" class="img-fluid"><br>
-### C: Add events within each health state</p>
-<p>Typically within Markov models events are modeled from worst to best. For ease of sensitivity analysis, we recommend only having two branches off each decision node.</p>
-<ol type="1">
-<li>Select the Markov State labeled “Healthy”. It will outline red when selected</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent1.png" class="img-fluid"></p>
-<ol start="2" type="1">
-<li>Add a chance node Option 1: Right click &gt; Add &gt; Chance Node (<img src="../amua-images/chanceNode_24.png" class="img-fluid">. Option 2: Click the Chance Node button (<img src="../amua-images/chanceNode_24.png" class="img-fluid">) in the top bar Option 3: Double click on the Markov State to get two chance nodes added</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent2.png" class="img-fluid"></p>
-<ol start="3" type="1">
-<li><p>Change the labels to “Survive” and “Die”.</p></li>
-<li><p>Nothing can happen after you die so we will change that to a state transition node.</p></li>
-<li><p>Select the “Die” branch and click the “Change to State Transition” ((<img src="../amua-images/changeTypeTrans_24.png" class="img-fluid">.) button on the top bar. You should get something like this. [It may have auto filled a state or it may also be blank]</p></li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent3.png" class="img-fluid"></p>
-<ol start="6" type="1">
-<li>Click on the drop down arrow that is to the right of the state transition blue arrow to set the state transition.</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateTransition.png" class="img-fluid"></p>
-<ol start="7" type="1">
-<li>Select the correct state for that decision branch from the drop down. For “Die”, it should be “Dead”</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent4.png" class="img-fluid"></p>
-<p>Now let’s look back at the “Survive” branch. The proportion of the cohort that survives death, will have the chance of getting sick.</p>
-<ol start="8" type="1">
-<li>Add a chance node for getting sick.</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent5.png" class="img-fluid"></p>
-<ol start="9" type="1">
-<li>At the end of each branch, change the chance nodes to state transitions.</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent6.png" class="img-fluid"></p>
-<ol start="10" type="1">
-<li>Update the state transitions to match the transition for that branch.</li>
-</ol>
-<p><img src="images/simpleMarkov/AddStateEvent6.png" class="img-fluid"></p>
-<ol start="11" type="1">
-<li>Build out the events for the other two health states.</li>
-</ol>
-<p>[Don’t worry about the Treat branch, we will come back to it]</p>
-<p></p>
-</section></details>
-<details>
-<summary style="color: green; font-size: 4vh;">
-<p>Check your Model</p>
-</summary>
-<p style="color: black;">
-<img src="images/simpleMarkov/TreatNoneStructure.png" class="img-fluid">
-</p>
-</details>
-</section>
-
-<section id="add-parameters" class="level1">
-<h1>Add Parameters</h1>
-<p>To help with time, we have created a parameters file you can upload to your model.</p>
-<ol type="1">
-<li><p>On the top bar click Model &gt; Import</p></li>
-<li><p>An pop-up should appear to help “Import Objects”</p>
-<p><img src="images/simpleMarkov/import1.png" class="img-fluid"><br>
-</p></li>
-<li><p>Select the CSV source</p>
-<p><img src="images/simpleMarkov/import2.png" class="img-fluid"></p></li>
-<li><p>Click the “Browse” button</p></li>
-<li><p>Select the parameter file and click “Open”</p></li>
-<li><p>Make sure the “Object Type” is set to “Parameters” and click “Import C…”</p></li>
-</ol>
-<p>You’re side bar should now be populated with the model parameters</p>
-</section>
-<section id="starting-probabilities" class="level1">
-<h1>Starting Probabilities</h1>
-<p>For a Markov Model, you have to determine where people start. Some models everyone starts in the same state and in other models people start spread out across multiple states.</p>
-<p>In the “Treat None” branch, we know that some people will start sick and some will be healthy.</p>
-<p>The current prevalence of Disease X in 50 year olds is 8%.</p>
-<details>
-<summary style="color: orange;">
-<p>More assistance with step</p>
-</summary>
-<p style="color: black;">
-</p><p>The grey “p” before the bubble is the starting probability</p>
-<ol type="1">
-<li><p>Click the “0” right after the starting probability for the “Sick” state</p></li>
-<li><p>Set the starting probability to “prev”</p></li>
-</ol>
-<p>Leave the starting probability of death at 0. And the starting probability of Healthy to be “<em>C</em>” [the complimentary probability to Sick]</p>
-<p></p>
-</details>
-<details>
-<summary style="color: green; font-size: 4vh;">
-<p>Check your Model</p>
-</summary>
-<p style="color: black;">
-<img src="images/simpleMarkov/StartProbFinal.png" class="img-fluid">
-</p>
-</details>
-</section>
-<section id="uploading-a-table" class="level1">
-<h1>Uploading a Table</h1>
-</section>
-<section id="copy-and-paste-in-amua" class="level1">
-<h1>Copy and Paste in Amua</h1>
-<p>Once your model matches the one in the dropdown above, you can copy and paste if for the “Not Sick -&gt; Treat” arm.</p>
-<ol type="1">
-<li><p>Select the item you want to copy. In this case it is the “Sick -&gt; Treat” arm of the model.</p></li>
-<li><p>Right click and copy or use Ctrl + C [On Mac, CMD + C]</p></li>
-<li><p>Select the Treat All Node</p></li>
-<li><p>Right click and paste or use Ctrl + P [On Mac, CMD + P]</p></li>
-<li><p>Click the “OCD” button to clean up the model</p></li>
-<li><p>Rename one of the branches to “Not Sick -&gt; Treat”</p></li>
-</ol>
-<p>CHECK YOUR MODEL</p>
-</section>
-<section id="adjusting-to-match-strategy" class="level1">
-<h1>Adjusting to match strategy</h1>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="list-item">
+<div class="number">
+<p>03</p>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Check your answer
+<div class="text">
+<p>Rates versus probabilities</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p><strong>What is the ICER of the strategy you would choose?</strong></p>
-<p>Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="check3">Check</button></p>
-<script>
-(function() {
-  // Set the correct value and tolerance
-  const CORRECT = 43.5;
-  const TOL = 0.01; // accept +/- 0.01
-
-  const input = document.getElementById('answer3');
-  const button = document.getElementById('check3');
-  const feedback = document.getElementById('feedback3');
-
-  function setFeedback(msg, status) {
-    feedback.textContent = msg;
-    feedback.style.fontWeight = '600';
-    feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
-  }
-
-  button.addEventListener('click', function() {
-    const val = parseFloat(input.value);
-    if (isNaN(val)) {
-      setFeedback('Please enter a number.', 'warn');
-      return;
-    }
-    const ok = Math.abs(val - CORRECT) <= TOL;
-    if (ok) {
-      setFeedback('✅ Correct!', 'ok');
-    } else {
-      setFeedback('❌ Not quite. Try again.', 'bad');
-    }
-  });
-})();
-</script>
+<div class="list-item">
+<div class="number">
+<p>04</p>
+</div>
+<div class="text">
+<p>Summary</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>05</p>
+</div>
+<div class="text">
+<p>Identifying rates/probabilities through the literature</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-structure-of-a-decision-analysis" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="the-structure-of-a-decision-analysis">The Structure of a Decision Analysis</h2>
+<div class="section-number">
+<p>01</p>
+</div>
+</section>
+<section id="recap-decision-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="recap-decision-analysis">Recap: <span class="accent-text">Decision Analysis</span></h2>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+</section>
+<section id="bullets" class="level2">
+<h2 class="anchored" data-anchor-id="bullets">Bullets</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<ul>
+<li>Content authored with markdown</li>
+<li>Output from executable code</li>
+</ul>
+</section>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">Code</h2>
+<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
 

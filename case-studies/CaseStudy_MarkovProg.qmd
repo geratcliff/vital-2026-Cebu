@@ -64,28 +64,44 @@ By the end of this session, participants will be able to:
 
 ::: {.callout .fill-box .why-box}
 ## Why are we doing this?
-
 :::
 
 To help visualize how this will work, here is a bubble diagram
 
+Adding in progression in our model can help create a more realistic clinical model.
 
-
-
+Previously we assumed that everyone with Disease X received palliative care but in clinical reality it is only provided with progressed disease. There is also a one time cost for a higher dose of palliative care when transitioning from mild to progressive disease. While treatment lowers your probability of getting sick again, if you do get sick again, the probability of progression is the same. We will assume that no one starts in progressed disease. Disease death can only happen from the progressed state. The % of deaths from Disease X is minimal in the total death rate so there is no need to remove it from the all cause deaths.
 
 # Additional Parameters
 
+| Name | Value | Description |
+|---------------|-----------------|----------------------------------------|
+| p_sicker | 0.12 | Probability of getting sicker from a mild case of Disease X |
+| p_diseasedeath | 0.15 | Probability of dying from disease death |
+| c_mild | \$1,000 | Cost of being mildly sick (doctors appointments) |
+| c_initialsicker | \$50,000 | One-time cost between mild and progression |
 
-::: {.callout-tip}
+# Add the additional states to your model
+
+1.  Add a Sicker state to the "Treat None" markov model
+2.  Set the starting probability to 0
+3.  Add all cause death event
+4.  Add Disease Death event
+5.  Update outcomes and probabilities
+6.  Update Sick to go to Sicker
+7.  Add one time cost of sick to sicker
+8.  Set cost off sick to c_sick
+
+Repeat for the markov models on Treat ALL
+
+::: callout-tip
 ## Check your answer
 
 **What is the ICER of the strategy you would choose?**
 
-Enter your result:
-<input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5" />
-<button id="check4">Check</button>
-<span id="feedback4" style="margin-left:0.5rem;"></span>
+Enter your result: <input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5" /> <button id="check4">Check</button>
 
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
@@ -117,4 +133,5 @@ Enter your result:
   });
 })();
 </script>
+```
 :::

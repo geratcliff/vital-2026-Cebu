@@ -161,9 +161,9 @@ Check your Bubble Diagram
 
 # Building the model
 
-In the Disease X model, we will be flowing the tree into the Markov model. 
+In the Disease X model, we will be flowing the tree into the Markov model.
 
-Click Model > New > Markov Model
+Click Model \> New \> Markov Model
 
 ![](images/simpleMarkov/MarkovFile.png)
 
@@ -171,7 +171,182 @@ You should get a empty page with a decision node (![](/amua-images/decisionNode_
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
+
 Build out the Markov Structure for the "Treat None" arm of the model
+:::
+
+Anatomy of a Markov Model in Amua: ![](images/simpleMarkov/MarkovParts.png)
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+### A: Add Markov Chain
+
+1.  Add the Markov Chain (![](/amua-images/markovChain_24.png)) for the "Treat None" arm.
+
+    Option 1: Select the decision node. Right click \> Add \> Markov Chain.
+
+    Option 2: Select the decision node and click the Markov Chain button (![](/amua-images/markovChain_24.png)) in the top bar
+
+![](images/simpleMarkov/AddMarkovChain1.png)
+
+2\. Name that chain "Treat None"
+
+### B: Add the Health States
+
+This model has three health states: Healthy, Sick, and Dead
+
+1.  Select the Markov chain labeled "Treat None" ![](images/simpleMarkov/AddState1.png)
+
+2.  Add the health states
+
+    Option 1: Right click \> Add \> Markov State (![](/amua-images/markovState_24.png)).
+
+    Option 2: Click the Markov State button (![](/amua-images/markovState_24.png)) in the top bar.
+
+    Option 3: Double click on the Markov Chain to get two Markov states added
+
+![](images/simpleMarkov/AddState2.png)
+
+3.  Rename the State to "Health"
+
+4.  Repeat for Sick and Dead
+
+![](images/simpleMarkov/AddState3.png)\
+
+\### C: Add events within each health state
+
+::: {.callout-important appearance="minimal"}
+It is common practice in teaching decision modeling to model events sequentially. Suppose, for example, that an individual can experience the following events from a diseased state:
+
+```         
+-   Die from disease (Event A)
+-   Die from background causes (Event B)
+-   Survive
+```
+
+The image below shows two alternative approaches to modeling these events. **Panel A** uses a non-sequential approach in which events in a cycle are not conditional on other events not occurring. **Panel B**, by comparison, first considers death from Event A. Conditional on surviving A, it then considers death from Event B.
+
+![](images/simpleMarkov/branching-options.png)
+
+If you are converting rates to probabilities using standard formulas (e.g., $1-\exp(-r)$) you should use a sequential approach where only two events are considered at at time (Panel B). This ensures that the converted probabilities work correctly.
+
+If you are using transition probabilities derived from embedding the transition probabilities from the underlying transition rate matrix, as we covered in lecture, you do not need to undertake the sequential approach: you can use the approach in Panel A, though you will also need to make sure that your model structure captures all non-zero probabilities in your transition probability matrix.
+
+**For the remainder of this case study we will model the disease progression using the sequential approach (e.g., the approach in Panel B).**
+:::
+
+1.  Select the Markov State labeled "Healthy". It will outline red when selected
+
+![](images/simpleMarkov/AddStateEvent1.png)
+
+2.  Add a chance node
+
+    Option 1: Right click \> Add \> Chance Node (![](/amua-images/chanceNode_24.png)).
+
+    Option 2: Click the Chance Node button (![](/amua-images/chanceNode_24.png)) in the top bar
+
+    Option 3: Double click on the Markov State to get two chance nodes added
+
+![](images/simpleMarkov/AddStateEvent2.png)
+
+3.  Change the labels to "Survive" and "Die".
+
+4.  Nothing can happen after you die so we will change that to a state transition node. Select the "Die" branch and click the "Change to State Transition" ((![](/amua-images/changeTypeTrans_24.png).) button on the top bar. You should get something like this. \[It may have auto filled a state or it may also be blank\]
+
+![](images/simpleMarkov/AddStateEvent3.png)
+
+6.  Click on the drop down arrow that is to the right of the state transition blue arrow to set the state transition.
+
+![](images/simpleMarkov/AddStateTransition.png)
+
+7.  Select the correct state for that decision branch from the drop down. For "Die", it should be "Dead"
+
+![](images/simpleMarkov/AddStateEvent4.png)
+
+Now let's look back at the "Survive" branch. The proportion of the cohort that survives death, will have the chance of getting sick.
+
+8.  Add a chance node for getting sick.
+
+![](images/simpleMarkov/AddStateEvent5.png)
+
+9.  At the end of each branch, change the chance nodes to state transitions.
+
+![](images/simpleMarkov/AddStateEvent6.png)
+
+10. Update the state transitions to match the transition for that branch.
+
+![](images/simpleMarkov/AddStateEvent7.png)
+
+11. Build out the events for the other two health states.
+
+\[Don't worry about the Treat strategy, we will come back to it\]
+
+</p>
+
+</details>
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+![](images/simpleMarkov/TreatNoneStructure.png)
+
+</p>
+
+</details>
+
+# Add Parameters
+
+To help with time, we have created a parameters file you can upload to your model.
+
+1.  On the top bar click Model \> Import
+
+2.  An pop-up should appear to help "Import Objects"
+
+    ![](images/simpleMarkov/import1.png)\
+
+3.  Select the CSV source
+
+    ![](images/simpleMarkov/import2.png)
+
+4.  Click the "Browse" button
+
+5.  Select the parameter file and click "Open"
+
+6.  Make sure the "Object Type" is set to "Parameters" and click "Import C..."
+
+You're side bar should now be populated with the model parameters
+
+Here are the parameters if you need to add them manually:
+
+ADD PARAMETER TABLE
+
+# Starting Probabilities
+
+For a Markov Model, you have to determine where people start. Some models everyone starts in the same state and in other models people start spread out across multiple states.
+
+In the "Treat None" branch, we know that some people will start sick and some will be healthy.
+
+The current prevalence of Disease X in 50 year olds is 8%.
+
+::: {.callout .fill-box .task-box}
+## Your Task
+
+Update the Markov model with starting probabilities
 :::
 
 <details>
@@ -184,83 +359,17 @@ More assistance with step
 
 <p style="color: black;">
 
+The grey "p" before the bubble is the starting probability
 
-### A: Add Markov Chain
-1.  Add the Markov Chain (![](/amua-images/markovChain_24.png)) for the "Treat None" arm. 
-    Option 1: Select the decision node. Right click > Add > Markov Chain. 
-    Option 2: Select the decision node and click the Markov Chain button (![](/amua-images/markovChain_24.png)) in the top bar
-    
-![](images/simpleMarkov/AddMarkovChain1.png)
-2.  Name that chain "Treat None"
+![](images/simpleMarkov/StartProb1.png)
 
-### B: Add the Health States
+1.  Click the "0" right after the starting probability for the "Sick" state
 
-This model has three health states: Healthy, Sick, and Dead
+2.  Set the starting probability to "prev"
 
-1. Select the Markov chain labeled "Treat None" 
-![](images/simpleMarkov/AddState1.png)
+![](images/simpleMarkov/StartProb2.png)
 
-2. Add the health states
-    Option 1: Right click > Add > Markov State (![](/amua-images/markovState_24.png). 
-    Option 2: Click the Markov State button (![](/amua-images/markovState_24.png)) in the top bar
-    Option 3: Double click on the Markov Chain to get two Markov states added
-    
-![](images/simpleMarkov/AddState2.png)  
-    
-3. Rename the State to "Health" 
-
-4. Repeat for Sick and Dead
-
-![](images/simpleMarkov/AddState3.png)  
-### C: Add events within each health state
-
-Typically within Markov models events are modeled from worst to best. For ease of sensitivity analysis, we recommend only having two branches off each decision node. 
-
-1. Select the Markov State labeled "Healthy". It will outline red when selected
-
-![](images/simpleMarkov/AddStateEvent1.png)
-
-2. Add a chance node
-    Option 1: Right click > Add > Chance Node (![](/amua-images/chanceNode_24.png). 
-    Option 2: Click the Chance Node button (![](/amua-images/chanceNode_24.png)) in the top bar
-    Option 3: Double click on the Markov State to get two chance nodes added
-    
-![](images/simpleMarkov/AddStateEvent2.png)  
-    
-3. Change the labels to "Survive" and "Die". 
-
-4. Nothing can happen after you die so we will change that to a state transition node.
-
-5. Select the "Die" branch and click the "Change to State Transition" ((![](/amua-images/changeTypeTrans_24.png).) button on the top bar. You should get something like this. [It may have auto filled a state or it may also be blank]
-
-![](images/simpleMarkov/AddStateEvent3.png)  
-
-6. Click on the drop down arrow that is to the right of the state transition blue arrow to set the state transition. 
- 
-![](images/simpleMarkov/AddStateTransition.png)  
-
-7. Select the correct state for that decision branch from the drop down. For "Die", it should be "Dead"
-
-![](images/simpleMarkov/AddStateEvent4.png)  
-
-Now let's look back at the "Survive" branch. The proportion of the cohort that survives death, will have the chance of getting sick. 
-
-8. Add a chance node for getting sick.
-
-![](images/simpleMarkov/AddStateEvent5.png)  
-
-9. At the end of each branch, change the chance nodes to state transitions. 
-
-![](images/simpleMarkov/AddStateEvent6.png)  
-
-10.  Update the state transitions to match the transition for that branch. 
-
-![](images/simpleMarkov/AddStateEvent6.png)  
-
-11. Build out the events for the other two health states. 
-
-[Don't worry about the Treat branch, we will come back to it]
-
+Leave the starting probability of death at 0. And the starting probability of Healthy to be "*C*" \[the complimentary probability to Sick\]
 
 </p>
 
@@ -270,47 +379,29 @@ Now let's look back at the "Survive" branch. The proportion of the cohort that s
 
 <summary style="color: green; font-size: 4vh;">
 
-Check your Bubble Diagram
+Check your Model
 
 </summary>
 
 <p style="color: black;">
 
-![](images/simpleMarkov/TreatNoneStructure.png)  
+![](images/simpleMarkov/StartProbFinal.png)
+
 </p>
 
 </details>
-# Add Parameters 
 
-To help with time, we have created a parameters file you can upload to your model. 
+# Uploading a Table
 
-1. On the top bar click Model > Import
+You may have noticed that there is no probability of death in the uploaded parameters. Parameters are set values that do not change over time. However, the probability of death increases with age. To accommodate this, we will upload a table and create a p_die variable.
 
-2. An pop-up should appear to help "Import Objects" 
+Table File:
 
-    ![](images/simpleMarkov/import1.png)  
-3. Select the CSV source 
+::: {.callout .fill-box .task-box}
+## Your Task
 
-    ![](images/simpleMarkov/import2.png)  
-    
-4. Click the "Browse" button
-
-5. Select the parameter file and click "Open"
-
-6. Make sure the "Object Type" is set to "Parameters" and click "Import C..."
-
-You're side bar should now be populated with the model parameters
-
-# Starting Probabilities
-
-For a Markov Model, you have to determine where people start. Some models everyone starts in the same state and in other models people start spread out across multiple states.
-
-In the "Treat None" branch, we know that some people will start sick and some will be healthy. 
-
-The current prevalence of Disease X in 50 year olds is 8%. 
-
-
-
+Add in the life table and p_die variable.
+:::
 
 <details>
 
@@ -322,59 +413,276 @@ More assistance with step
 
 <p style="color: black;">
 
+### A: Add a table:
 
-### A: Add Markov Chain
-1.  Add the Markov Chain (![](/amua-images/markovChain_24.png)) for the "Treat None" arm. 
+1.  Click to the "![](/amua-images/table_16.png) Tables" tab on the right sidebar
 
+![](images/simpleMarkov/AddTable.png)
 
-# Uploading a Table
+2.  Click on the blue plus sign ![](/amua-images/add_16.png)
+
+3.  The "Define Table" pop-up will open
+
+![](images/simpleMarkov/AddTablePopup.png)
+
+4.  Add a name for your table. (Example: tbl_p_die)
+
+5.  There are two ways to add the table value from the downloaded CSV:
+
+::: panel-tabset
+### Import Table
+
+1.  Click the "![](/amua-images/import_16.png) Import" button on the top bar of the pop-up
+
+2.  Select the downloaded table from where you saved it.
+
+3.  Click Import
+
+### Copy & Paste
+
+1.  Open the downloaded table in a spreadsheet software (Example: Excel)
+
+2.  Select and copy the entire table
+
+3.  Click the paste (![](/amua-images/paste_16.png)) button on the top bar of the pop-up
+:::
+
+6.  Ensure that your table has no extra columns or rows. If it does, select and delete them with the remove (![](/amua-images/remove_16.png)) options on the top bar of the pop-up
+
+7.  Save your table
+
+![](images/simpleMarkov/AddTableFull.png)
+
+### B: Create a p_die variable
+
+1.  Click to the "![](/amua-images/variable_16.png) Variables" tab on the right sidebar
+
+![](images/simpleMarkov/AddVariables.png)
+
+2.  Click on the blue plus sign ![](/amua-images/add_16.png). The "Define Variable" pop-up will open
+
+![](images/simpleMarkov/AddVariablePopup.png)
+
+3.  Name the variable "p_die"
+
+4.  Use the following formula to define the variable `tbl_p_die[initial_age + t, 1]`
+
+![](images/simpleMarkov/variableformula.png) Note: We use "initial_age +t" for the row value because "*t*" alone is just the Amua built in variable for the cycle number. If we used just "*t*" the p_die for cycle 10 would be for 10 year olds not 60 year olds.
+
+5.  Save the variable
+
+</p>
+
+</details>
+
+# Set Termination Condition
+
+In a Markov model you have to define a horizon for the model to run. In Amua this is the termination condition. Since this is a lifetime model, running it to 110 years old or 60 more years is probably enough.
+
+Remember that "*t*" is a built in cycle variable. Therefore, the termination condition can be set to end when t equals 60.
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+1.  Below the Markov Chain is the termination condition
+
+![](images/simpleMarkov/termination.png)
+
+2.  Click on the *\[termination\]* and delete the text. Input `t==60`
+
+</p>
+
+</details>
+
+# Parameterize the Model
+
+::: {.callout .fill-box .task-box}
+## Your Task
+
+Input the parameters, outcomes, and variable into the model structure.
+
+1.  Add probabilities and complimentary probabilities to all events
+2.  Add in a outcome for LY in Model \> Properties \> Analysis
+3.  Add costs and benefits below the starting probabilities on the health state bubble
+
+Hint: LY = 1 when you are alive and 0 when you are dead.
+:::
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+![](images/simpleMarkov/AddParametersAll.png)
+
+</p>
+
+</details>
+
+# Create the Treat All Branch
+
+Once your model matches the one in the drop-down above, you can move on to the Treat All Branch
+
+1.  Add a "Treat All" branch from the decision node
+
+![](images/simpleMarkov/TreatAllAdded.png)
 
 # Copy and Paste in Amua
 
-Once your model matches the one in the dropdown above, you can copy and paste if for the "Not Sick -> Treat" arm. 
+Copy and paste the "Treat None for the "Sick -\> Treat" and "Not Sick -\> Treat" arm.
 
-1. Select the item you want to copy. In this case it is the "Sick -> Treat" arm of the model. 
+1.  Select the item you want to copy. In this case it is the "Treat None" arm of the model.
 
-2. Right click and copy or use Ctrl + C [On Mac, CMD + C]
+2.  Right click and copy or use Ctrl + C \[On Mac, CMD + C\]
 
-3. Select the Treat All Node 
+3.  Select the Treat All Node
 
-4. Right click and paste or use Ctrl + P  [On Mac, CMD + P]
+4.  Right click and paste or use Ctrl + P \[On Mac, CMD + P\]
 
-5. Click the "OCD" button to clean up the model
+5.  Click the "OCD" button to clean up the model
 
-6. Rename one of the branches to "Not Sick -> Treat" 
+6.  Rename the branch to "Sick -\> Treat"
 
-CHECK YOUR MODEL
+7.  Repeat for "Not Sick -\> Treat"
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+![](images/simpleMarkov/FullSimple.png)
+
+</p>
+
+</details>
 
 # Adjusting to match strategy
 
+Copy and pasting the strategy helped us save time but we need to make sure that the model accurately matches the strategy that it is running for.
 
+Things that need fixed: - Set probability of sick or not sick in the tree part of "Treat All" - Set initial probabilities to match the corresponding branch - Add in treatment costs - Add in a rate reduction of getting sick again and needing palliative care
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+### A: Set probability of sick or not sick
+
+In the tree portion of the "Treat All" branch, set the probability of sick to `prev` and the probability of not sick to "*C*"
+
+![](images/simpleMarkov/SetTreatProb.png)
+
+### B: Set initial probabilities
+
+We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. Therefore the initial probabilities for both "Sick -\> Treat" and "Not Sick -\> Treat" are Healthy = 1, Sick = 0, and Dead = 0.
+
+![](images/simpleMarkov/TreatInitialProb.png) \### C: Add Treatment Cost
+
+The needs to be a one-time cost added to the "Treat All" branch.
+
+```         
+Option 1: Right click the "Treat All" branch and select "$ Add Cost (One-Time Event)"
+Option 2: Select the "Treat All" branch and select the $ on the top banner
+```
+
+Update the cost to have the cost of treatment
+
+![](images/simpleMarkov/OneTimeCost.png)
+
+### D: Add reduction in p_sick for those treated
+
+In both the "Sick -\> Treat" and "Not Sick -\> Treat" branches. Change the p_sick to p_sick\*hr_treated.
+
+![](images/simpleMarkov/hr_treat.png)
+
+</p>
+
+</details>
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+| Strategy   | Cost (\$ for 1000 people) | LY (for 1000 people) |
+|------------|---------------------------|----------------------|
+| Treat None | \$318,696,724             | 31219.7721           |
+| Treat All  | \$821,600,790             | 31219.7721           |
+
+</p>
+
+</details>
+
+## Define Cycle Adjustments and Discounting
+
+-   Go to Model \> Properties \> select the Markov tab.
+-   Select the "Half-Cycle Correction" option.
+-   Select the "Discount Rewards" option and enter the discount rates (3%) for cost and LY
+-   Click "OK"
+
+## Get individual cost and LY
+
+It is often easier to understand the impact of the different strategies when they are at an individual level.
+
+-   Go to Model \> Properties \> select the Simulation tab.
+-   Set Cohort Size to 1
+
+## Check your answer:
+
+Run a CEA on a cohort size of 1 with Treat None as the basecase and a WTP of \$100,000/LY
+
+
+Enter your result:
 
 ::: callout-tip
 ## Check your answer
-
-**What is the ICER of the strategy you would choose?**
-
-Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="check3">Check</button>
-
-```{=html}
+<br>
+What is the cost (to two decimal places) of the strategy you would choose?
+<br>
+<input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5" />
+<button id="checksimp">Check</button>
+<div id="feedbacksimp" style="margin-top: 10px;"></div>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 43.5;
+  const CORRECT = 170151.4614;
   const TOL = 0.01; // accept +/- 0.01
-
-  const input = document.getElementById('answer3');
-  const button = document.getElementById('check3');
-  const feedback = document.getElementById('feedback3');
-
+  const input = document.getElementById('answersimp');
+  const button = document.getElementById('checksimp');
+  const feedback = document.getElementById('feedbacksimp');
   function setFeedback(msg, status) {
     feedback.textContent = msg;
     feedback.style.fontWeight = '600';
     feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
   }
-
   button.addEventListener('click', function() {
     const val = parseFloat(input.value);
     if (isNaN(val)) {
@@ -390,5 +698,22 @@ Enter your result: <input id="answer3" type="number" step="0.01" placeholder="e.
   });
 })();
 </script>
-```
+<br>
 :::
+
+
+<details>
+      
+<summary style="color: green; font-size: 4vh;">
+        
+Screening Added
+      
+</summary>
+        
+<p style="color: black;">
+          
+ADD FILE
+        
+</p>
+          
+</details>
