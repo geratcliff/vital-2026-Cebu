@@ -284,6 +284,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#additional-parameters" id="toc-additional-parameters" class="nav-link active" data-scroll-target="#additional-parameters">Additional Parameters</a></li>
+  <li><a href="#add-the-additional-states-to-your-model" id="toc-add-the-additional-states-to-your-model" class="nav-link" data-scroll-target="#add-the-additional-states-to-your-model">Add the additional states to your model</a></li>
   </ul>
 </nav>
     </div>
@@ -388,8 +389,60 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>To help visualize how this will work, here is a bubble diagram</p>
+<p>Adding in progression in our model can help create a more realistic clinical model.</p>
+<p>Previously we assumed that everyone with Disease X received palliative care but in clinical reality it is only provided with progressed disease. There is also a one time cost for a higher dose of palliative care when transitioning from mild to progressive disease. While treatment lowers your probability of getting sick again, if you do get sick again, the probability of progression is the same. We will assume that no one starts in progressed disease. Disease death can only happen from the progressed state. The % of deaths from Disease X is minimal in the total death rate so there is no need to remove it from the all cause deaths.</p>
 <section id="additional-parameters" class="level1">
 <h1>Additional Parameters</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 23%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>p_sicker</td>
+<td>0.12</td>
+<td>Probability of getting sicker from a mild case of Disease X</td>
+</tr>
+<tr class="even">
+<td>p_diseasedeath</td>
+<td>0.15</td>
+<td>Probability of dying from disease death</td>
+</tr>
+<tr class="odd">
+<td>c_mild</td>
+<td>$1,000</td>
+<td>Cost of being mildly sick (doctors appointments)</td>
+</tr>
+<tr class="even">
+<td>c_initialsicker</td>
+<td>$50,000</td>
+<td>One-time cost between mild and progression</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="add-the-additional-states-to-your-model" class="level1">
+<h1>Add the additional states to your model</h1>
+<ol type="1">
+<li>Add a Sicker state to the “Treat None” markov model</li>
+<li>Set the starting probability to 0</li>
+<li>Add all cause death event</li>
+<li>Add Disease Death event</li>
+<li>Update outcomes and probabilities</li>
+<li>Update Sick to go to Sicker</li>
+<li>Add one time cost of sick to sicker</li>
+<li>Set cost off sick to c_sick</li>
+</ol>
+<p>Repeat for the markov models on Treat ALL</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -401,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>What is the ICER of the strategy you would choose?</strong></p>
-<p>Enter your result: <input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5"> <button id="check4">Check</button> <span id="feedback4" style="margin-left:0.5rem;"></span></p>
+<p>Enter your result: <input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5"> <button id="check4">Check</button></p>
 <script>
 (function() {
   // Set the correct value and tolerance
