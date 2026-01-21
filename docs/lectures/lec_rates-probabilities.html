@@ -158,9 +158,9 @@
 <h2>Learning Objectives</h2>
 <div class="arrow-bullets">
 <ul>
-<li><p>Differentiate between rates and probabilities conceptually</p></li>
-<li><p>Interpret rates and probabilities in applied examples</p></li>
-<li><p>Identify and correctly interpret rates and probabilities in the literature</p></li>
+<li class="fragment"><p>Differentiate between rates and probabilities conceptually</p></li>
+<li class="fragment"><p>Interpret rates and probabilities in applied examples</p></li>
+<li class="fragment"><p>Identify and correctly interpret rates and probabilities in the literature</p></li>
 </ul>
 </div>
 </section>
@@ -234,22 +234,23 @@
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><span class="math inline">\frac{\# \text{Favorable outcomes}}{\text{Total # of possible outcomes}}</span></p>
+<blockquote>
+<p>Out of everyone we followed for this period, what fraction experienced the event?</p>
+</blockquote>
 </div>
 </div>
 </div>
 </section>
 <section id="probability-can-be-reported-in-different-ways" class="slide level2 center">
 <h2>Probability can be reported in different ways</h2>
-<div style="font-size: 0.85em">
+<p><br></p>
 <ul>
-<li><strong>Proportion / percentage:</strong> 0.40 or 40%</li>
-<li><strong>Frequency:</strong> 40 per 100 (or 4 per 1,000)</li>
-<li><strong>Odds:</strong> <span class="math inline">P/(1-P)</span> (ranges from 0 to <span class="math inline">\infty</span>)</li>
+<li class="fragment"><strong>Proportion / percentage:</strong> 0.40 or 40%</li>
+<li class="fragment"><strong>Frequency:</strong> 40 per 100 (or 4 per 1,000)</li>
+<li class="fragment"><strong>Odds:</strong> <span class="math inline">P/(1-P)</span> (ranges from 0 to <span class="math inline">\infty</span>)</li>
 </ul>
 <p><br></p>
 <p><strong>Epidemiologic terminology:</strong> - <strong>Cumulative incidence (risk):</strong> the probability of experiencing the event by time <em>t</em> - Examples: “1-year risk,” “5-year cumulative incidence”</p>
-</div>
 </section>
 <section id="rates" class="slide level2 section-slide center">
 <h2>Rates</h2>
@@ -259,13 +260,12 @@
 </section>
 <section id="rates-involve-person-time" class="slide level2 center">
 <h2>Rates involve person-time</h2>
-<div style="font-size: 0.85em">
+<p><br></p>
 <ul>
-<li><strong>Incidence (hazard) rate:</strong> number of events per unit of <strong>person-time</strong></li>
-<li>Rates describe <strong>how fast</strong> events occur</li>
-<li>Rates can range from 0 to <span class="math inline">\infinity</span></li>
+<li class="fragment"><strong>Incidence (hazard) rate:</strong> number of events per unit of <strong>person-time</strong></li>
+<li class="fragment">Rates describe <strong>how fast</strong> events occur</li>
+<li class="fragment">Rates can range from 0 to <span class="math inline">\infinity</span></li>
 </ul>
-</div>
 </section>
 <section>
 <section id="what-is-the-difference-between-a-rate-and-a-probability" class="title-slide slide level1 center" data-background="#c2f0c2">
@@ -277,6 +277,9 @@
 <div class="section-number">
 <p>03</p>
 </div>
+</section>
+<section id="rates-vs.-probabilities-1" class="slide level2 center">
+<h2>Rates vs.&nbsp;probabilities</h2>
 <ul>
 <li class="fragment"><strong>Probability (risk):</strong> chance an individual experiences an event by a specified time<br>
 </li>
@@ -287,13 +290,8 @@
 </section>
 <section id="rate-incidence-rate" class="slide level2 center">
 <h2>Rate (incidence rate)</h2>
-<ul>
-<li class="fragment"><span class="math inline">\text{Rate} = \dfrac{\# \text{events}}{\text{total person-time}}</span></li>
-<li class="fragment">Interpreted as events per unit time at risk</li>
-<li class="fragment">Can exceed 1</li>
-</ul>
 
-<img data-src="images/paste-8191B0E3.png" class="fragment r-stretch"></section>
+<img data-src="images/paste-8191B0E3.png" class="fragment r-stretch" width="784"></section>
 <section id="probability-risk" class="slide level2 center">
 <h2>Probability (risk)</h2>
 
@@ -303,14 +301,11 @@
 <p><br></p>
 <p><strong>Study:</strong> 100 people followed for up to 4 years; 40 deaths.</p>
 <ul>
-<li class="fragment"><strong>Probability (risk) over 4 years:</strong><br>
+<li class="fragment"><p><strong>Probability (risk) over 4 years:</strong><br>
 <span class="math inline">40/100 = 0.40</span><br>
-<em>Interpretation:</em> 40% died within 4 years.</li>
-</ul>
-<p><br></p>
-<ul>
-<li class="fragment"><strong>Rate (if all 100 followed for 4 years)</strong><br>
-Total person-time = <span class="math inline">100 \times 4 = 400</span> person-years; <span class="math inline">40/400 = 0.10</span> deaths per person-year <br> <em>Interpretation:</em> ≈1 death per 10 years of total follow-up across the study population (aggregated person time)</li>
+<em>Interpretation:</em> 40% died within 4 years. <br></p></li>
+<li class="fragment"><p><strong>Rate (if all 100 followed for 4 years)</strong><br>
+Total person-time = <span class="math inline">100 \times 4 = 400</span> person-years; <span class="math inline">40/400 = 0.10</span> deaths per person-year <br> <em>Interpretation:</em> ≈1 death per 10 years of total follow-up across the study population (aggregated person time)</p></li>
 </ul>
 </section>
 <section id="timing-censoring" class="slide level2 center">
@@ -320,7 +315,6 @@ Total person-time = <span class="math inline">100 \times 4 = 400</span> person-y
 <li class="fragment">Rates change when <strong>follow-up time differs</strong>, even if the number of events is the same</li>
 <li class="fragment"><strong>Censoring or dropout</strong> reduces person-time and can increase the estimated rate</li>
 </ul>
-<p>:::</p>
 </section>
 <section id="example-events-happen-early-vs.-late" class="slide level2 center">
 <h2>Example: events happen early vs.&nbsp;late</h2>
@@ -335,22 +329,23 @@ Total person-time = <span class="math inline">100 \times 4 = 400</span> person-y
 <li class="fragment"><strong>Probability (risk):</strong> <span class="math inline">40/100 = 0.40</span></li>
 </ul>
 </section>
-<section id="when-time-at-risk-is-not-reported3" class="slide level2 center">
+<section id="when-time-at-risk-is-not-reported1" class="slide level2 center">
 <h2>When time-at-risk is not reported<sup>1</sup></h2>
-<div style="font-size: 0.85em">
 <ul>
 <li class="fragment">When individual follow-up time is unavailable, events are often assumed to be <strong>evenly distributed</strong></li>
 <li class="fragment">This approximates equal person-time for everyone</li>
 <li class="fragment">If events occurred earlier, the true rate would be higher (and vice versa)</li>
 </ul>
-</div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Source: <span class="citation" data-cites="gidwaniEstimatingTransitionProbabilities2020">@gidwaniEstimatingTransitionProbabilities2020</span></p></li></ol></aside></section>
 <section id="summary-rates-vs.-probabilities" class="slide level2 section-slide center">
 <h2>Summary: Rates vs.&nbsp;Probabilities</h2>
 <div class="section-number">
 <p>04</p>
 </div>
-<p><strong>To sum up:</strong></p>
+</section>
+<section id="summary-rates-vs.-probabilities-1" class="slide level2 center">
+<h2>Summary: Rates vs.&nbsp;Probabilities</h2>
+<p><br></p>
 <ul>
 <li class="fragment"><strong>Probability</strong>
 <ul>
@@ -358,17 +353,16 @@ Total person-time = <span class="math inline">100 \times 4 = 400</span> person-y
 </ul></li>
 <li class="fragment"><strong>Rate</strong>
 <ul>
-<li class="fragment">Answers: <em>How fast do events occur, per unit of time at risk?</em></li>
+<li class="fragment">Answers: <em>How fast do events occur, per unit of time at risk?</em> <br></li>
 </ul></li>
 </ul>
-<p><br></p>
 <div style="font-size: 0.55em; line-height: 1.2;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 27%">
-<col style="width: 21%">
-<col style="width: 27%">
+<col style="width: 23%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -400,9 +394,12 @@ Total person-time = <span class="math inline">100 \times 4 = 400</span> person-y
 <div class="section-number">
 <p>05</p>
 </div>
+</section>
+<section id="identifying-ratesprobabilities-through-the-literature-1" class="slide level2 center">
+<h2>Identifying rates/probabilities through the literature</h2>
 
 <img data-src="images/literature-probability.png" class="r-stretch"></section>
-<section id="identifying-ratesprobabilities-through-the-literature-1" class="slide level2 center">
+<section id="identifying-ratesprobabilities-through-the-literature-2" class="slide level2 center">
 <h2>Identifying rates/probabilities through the literature</h2>
 
 <img data-src="images/literature-rate.png" class="r-stretch"></section>
@@ -422,22 +419,20 @@ Total person-time = <span class="math inline">100 \times 4 = 400</span> person-y
 <section id="another-way-of-saying-the-same-thing" class="slide level2 center">
 <h2>Another way of saying the same thing:</h2>
 <ul>
-<li>A rate tells us how fast an event occurs; it scales with time.</li>
-<li>A probability tells us whether an event occurs within time “t”; it is cumulative &amp; bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it’s “cumulative”)</li>
+<li class="fragment">A rate tells us how fast an event occurs; it scales with time. <br></li>
+<li class="fragment">A probability tells us whether an event occurs within time “t”; it is cumulative &amp; bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it’s “cumulative”)</li>
 </ul>
 </section>
 <section id="conversions" class="slide level2 center">
 <h2>Conversions</h2>
-<div style="font-size: 0.8em">
 <ul>
-<li><p>A standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period).</p></li>
-<li><p>In other words, the risk per unit time doesn’t change over time. If the hazard were not constant (say risk increases the longer you’re sick), you would need a more complex time-dependent model.</p></li>
-<li><p>It is common to use the following formula to convert <span style="background-color: yellow;">rates to probabilities</span> under a constant (exponential) hazard.</p></li>
+<li class="fragment"><p>A standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period).</p></li>
+<li class="fragment"><p>In other words, the risk per unit time doesn’t change over time. If the hazard were not constant (say risk increases the longer you’re sick), you would need a more complex time-dependent model.</p></li>
+<li class="fragment"><p>It is common to use the following formula to convert <span style="background-color: yellow;">rates to probabilities</span> under a constant (exponential) hazard.</p></li>
 </ul>
 <p><span class="math display">
 p = 1 - e^{-rt}
-</span> <em>p=probability</em> ; <em>r=rate</em> ; <em>t=time</em></p>
-</div>
+</span></p>
 </section>
 <section id="conversions-1" class="slide level2 center">
 <h2>Conversions</h2>
@@ -569,15 +564,16 @@ p = 1 - e^{−0.02857229∗1} = 0.028168
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>With longer cycle lengths (e.g., 1 year), individuals may experience <strong>multiple transitions within a single cycle</strong> (e.g., healthy → sick → dead).</p></li>
-<li><p>The standard Markov conversion<br>
+<li class="fragment"><p>Long cycles can include multiple transitions (healthy → sick → dead).</p></li>
+<li class="fragment"><p>Standard rate/probability conversions<br>
 <span class="math inline">p_{HS}= 1 - e^{-r_{HS}\Delta t}</span><br>
-converts each transition <strong>independently</strong>, ignoring that death competes with sickness within the same time interval.</p></li>
-<li><p>As a result, individuals who become sick and then die within the same cycle <strong>cannot be represented as experiencing both transitions</strong>.</p></li>
-<li><p>In practice, this leads to <strong>underestimation of deaths</strong> when cycle lengths are long.</p></li>
-<li><p>This problem can be mitigated by using <strong>shorter cycle lengths</strong> or <strong>competing-risk rate-to-probability conversions</strong> that properly allocate transitions within each cycle.</p></li>
+converts transitions independently, ignoring that death competes with sickness within the same time interval.</p></li>
+<li class="fragment"><p>This hides within-cycle events.</p></li>
+<li class="fragment"><p>Can lead to <strong>underestimation of deaths</strong> with long cycles.</p></li>
+<li class="fragment"><p>Fix: Shorter cycles or competing risk conversions</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div></div>
+<div class="column" style="width:50%;">
 <div class="cell" data-fig-width="4" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-comp-st" class="quarto-float quarto-figure quarto-figure-center">
@@ -654,7 +650,7 @@ Figure&nbsp;1: compound Transition Patterns Using Standard Rate to Probability C
 </div>
 </div>
 </div></div>
-</div>
+<p>:::</p>
 </section>
 <section id="alternative-rate-to-probability-conversions-1" class="slide level2 smaller center">
 <h2>Alternative Rate-to-Probability Conversions</h2>
@@ -669,10 +665,7 @@ p_{HD}= \frac{r_{HD}}{r_{HS}+r_{HD}}\big ( 1 - e^{-(r_{HS}+r_{HD})\Delta t}\big 
 p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 </span></p>
 </section>
-<section id="what-to-use" class="slide level2 smaller center">
-<h2>What to use</h2>
-</section>
-<section id="what-to-use-1" class="slide level2 smaller center">
+<section id="what-to-use" class="slide level2 center">
 <h2>What to use</h2>
 <table class="caption-top">
 <colgroup>
@@ -690,12 +683,12 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 <tbody>
 <tr class="odd">
 <td><span class="math inline">p = 1 - e^{-rt}</span></td>
-<td>When you know a <strong>rate</strong> but need a <strong>probability</strong> for a fixed cycle length</td>
+<td>When you know a rate but need a probability for a fixed cycle length</td>
 <td>Simple closed-form conversion under a constant (exponential) hazard</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">r = -\ln(1-p)/t</span></td>
-<td>When you have a <strong>probability</strong> but need a <strong>rate</strong> to rescale across time intervals</td>
+<td>When you have a probability but need a rate to rescale across time intervals</td>
 <td>Preserves the correct exponential relationship when changing cycle length</td>
 </tr>
 <tr class="odd">
@@ -720,6 +713,24 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 <div class="callout-content">
 <p>There’s an even more accurate way to correct for “competing risks” &amp; while it’s beyond the scope of this introductory workshop, we will briefly review how to do this within the Markov lecture.</p>
 </div>
+</div>
+</div>
+</section>
+<section id="section" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Rates &amp; Probabilities</p>
+</div>
+<div class="key-points">
+<ul>
+<li class="fragment">Probabilities are cumulative and bounded (0-1)</li>
+<li class="fragment">Rates are instantaneous and scale with time</li>
+<li class="fragment">Conversions require a constant hazard assumption</li>
+</ul>
 </div>
 </div>
 

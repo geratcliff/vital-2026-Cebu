@@ -2982,7 +2982,7 @@
     "href": "lectures/lec_rates-probabilities.html#probability",
     "title": "Rates & Probabilities",
     "section": "Probability",
-    "text": "Probability\nProbability is the likelihood that an event occurs within a specified time period.\n\n\n\n\n\n\n\n\n\\frac{\\# \\text{Favorable outcomes}}{\\text{Total # of possible outcomes}}"
+    "text": "Probability\nProbability is the likelihood that an event occurs within a specified time period.\n\n\n\n\n\n\n\n\n\nOut of everyone we followed for this period, what fraction experienced the event?"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#probability-can-be-reported-in-different-ways",
@@ -3010,14 +3010,21 @@
     "href": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities",
     "title": "Rates & Probabilities",
     "section": "Rates vs. probabilities",
-    "text": "Rates vs. probabilities\n\n03\n\n\nProbability (risk): chance an individual experiences an event by a specified time\n\nRate: speed at which events occur per unit of person-time\n\nKey distinction: rates use person-time in the denominator; probabilities do not"
+    "text": "Rates vs. probabilities\n\n03"
+  },
+  {
+    "objectID": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities-1",
+    "href": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities-1",
+    "title": "Rates & Probabilities",
+    "section": "Rates vs. probabilities",
+    "text": "Rates vs. probabilities\n\nProbability (risk): chance an individual experiences an event by a specified time\n\nRate: speed at which events occur per unit of person-time\n\nKey distinction: rates use person-time in the denominator; probabilities do not"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#rate-incidence-rate",
     "href": "lectures/lec_rates-probabilities.html#rate-incidence-rate",
     "title": "Rates & Probabilities",
     "section": "Rate (incidence rate)",
-    "text": "Rate (incidence rate)\n\n\\text{Rate} = \\dfrac{\\# \\text{events}}{\\text{total person-time}}\nInterpreted as events per unit time at risk\nCan exceed 1"
+    "text": "Rate (incidence rate)"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#probability-risk",
@@ -3031,14 +3038,14 @@
     "href": "lectures/lec_rates-probabilities.html#example-same-study-probability-vs.-rate",
     "title": "Rates & Probabilities",
     "section": "Example: same study, probability vs. rate",
-    "text": "Example: same study, probability vs. rate\n\nStudy: 100 people followed for up to 4 years; 40 deaths.\n\nProbability (risk) over 4 years:\n40/100 = 0.40\nInterpretation: 40% died within 4 years.\n\n\n\nRate (if all 100 followed for 4 years)\nTotal person-time = 100 \\times 4 = 400 person-years; 40/400 = 0.10 deaths per person-year  Interpretation: ≈1 death per 10 years of total follow-up across the study population (aggregated person time)"
+    "text": "Example: same study, probability vs. rate\n\nStudy: 100 people followed for up to 4 years; 40 deaths.\n\nProbability (risk) over 4 years:\n40/100 = 0.40\nInterpretation: 40% died within 4 years. \nRate (if all 100 followed for 4 years)\nTotal person-time = 100 \\times 4 = 400 person-years; 40/400 = 0.10 deaths per person-year  Interpretation: ≈1 death per 10 years of total follow-up across the study population (aggregated person time)"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#timing-censoring",
     "href": "lectures/lec_rates-probabilities.html#timing-censoring",
     "title": "Rates & Probabilities",
     "section": "Timing & censoring",
-    "text": "Timing & censoring\n\n\nRates change when follow-up time differs, even if the number of events is the same\nCensoring or dropout reduces person-time and can increase the estimated rate\n\n:::"
+    "text": "Timing & censoring\n\n\nRates change when follow-up time differs, even if the number of events is the same\nCensoring or dropout reduces person-time and can increase the estimated rate"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#example-events-happen-early-vs.-late",
@@ -3048,18 +3055,25 @@
     "text": "Example: events happen early vs. late\n\nStudy: 100 people, planned follow-up = 4 years\nCase: 40 deaths occur in Year 1\n\nPerson-time = (40 \\times 1) + (60 \\times 4) = 280 person-years\n\nRate: 40/280 = 0.143 deaths per person-year\n\nProbability (risk): 40/100 = 0.40"
   },
   {
-    "objectID": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported3",
-    "href": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported3",
+    "objectID": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported1",
+    "href": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported1",
     "title": "Rates & Probabilities",
     "section": "When time-at-risk is not reported1",
-    "text": "When time-at-risk is not reported1\n\n\nWhen individual follow-up time is unavailable, events are often assumed to be evenly distributed\nThis approximates equal person-time for everyone\nIf events occurred earlier, the true rate would be higher (and vice versa)\n\n\nSource: @gidwaniEstimatingTransitionProbabilities2020"
+    "text": "When time-at-risk is not reported1\n\nWhen individual follow-up time is unavailable, events are often assumed to be evenly distributed\nThis approximates equal person-time for everyone\nIf events occurred earlier, the true rate would be higher (and vice versa)\n\nSource: @gidwaniEstimatingTransitionProbabilities2020"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities",
     "href": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities",
     "title": "Rates & Probabilities",
     "section": "Summary: Rates vs. Probabilities",
-    "text": "Summary: Rates vs. Probabilities\n\n04\n\nTo sum up:\n\nProbability\n\nAnswers: What proportion of people experience the event by time X?\n\nRate\n\nAnswers: How fast do events occur, per unit of time at risk?\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\nRange\nUsed in\n\n\n\n\nRate\n\\dfrac{\\# \\text{events}}{\\text{total person-time}}\n0–\\infty\nRate matrices\n\n\nProbability / risk\n\\dfrac{\\# \\text{events}}{\\# \\text{people followed}}\n0–1\nProbability matrices"
+    "text": "Summary: Rates vs. Probabilities\n\n04"
+  },
+  {
+    "objectID": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities-1",
+    "href": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities-1",
+    "title": "Rates & Probabilities",
+    "section": "Summary: Rates vs. Probabilities",
+    "text": "Summary: Rates vs. Probabilities\n\n\nProbability\n\nAnswers: What proportion of people experience the event by time X?\n\nRate\n\nAnswers: How fast do events occur, per unit of time at risk? \n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\nRange\nUsed in\n\n\n\n\nRate\n\\dfrac{\\# \\text{events}}{\\text{total person-time}}\n0–\\infty\nRate matrices\n\n\nProbability / risk\n\\dfrac{\\# \\text{events}}{\\# \\text{people followed}}\n0–1\nProbability matrices"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature",
@@ -3071,6 +3085,13 @@
   {
     "objectID": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature-1",
     "href": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature-1",
+    "title": "Rates & Probabilities",
+    "section": "Identifying rates/probabilities through the literature",
+    "text": "Identifying rates/probabilities through the literature"
+  },
+  {
+    "objectID": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature-2",
+    "href": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature-2",
     "title": "Rates & Probabilities",
     "section": "Identifying rates/probabilities through the literature",
     "text": "Identifying rates/probabilities through the literature"
@@ -3094,14 +3115,14 @@
     "href": "lectures/lec_rates-probabilities.html#another-way-of-saying-the-same-thing",
     "title": "Rates & Probabilities",
     "section": "Another way of saying the same thing:",
-    "text": "Another way of saying the same thing:\n\nA rate tells us how fast an event occurs; it scales with time.\nA probability tells us whether an event occurs within time “t”; it is cumulative & bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it’s “cumulative”)"
+    "text": "Another way of saying the same thing:\n\nA rate tells us how fast an event occurs; it scales with time. \nA probability tells us whether an event occurs within time “t”; it is cumulative & bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it’s “cumulative”)"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#conversions",
     "href": "lectures/lec_rates-probabilities.html#conversions",
     "title": "Rates & Probabilities",
     "section": "Conversions",
-    "text": "Conversions\n\n\nA standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period).\nIn other words, the risk per unit time doesn’t change over time. If the hazard were not constant (say risk increases the longer you’re sick), you would need a more complex time-dependent model.\nIt is common to use the following formula to convert rates to probabilities under a constant (exponential) hazard.\n\n\np = 1 - e^{-rt}\n p=probability ; r=rate ; t=time"
+    "text": "Conversions\n\nA standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period).\nIn other words, the risk per unit time doesn’t change over time. If the hazard were not constant (say risk increases the longer you’re sick), you would need a more complex time-dependent model.\nIt is common to use the following formula to convert rates to probabilities under a constant (exponential) hazard.\n\n\np = 1 - e^{-rt}"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#conversions-1",
@@ -3164,7 +3185,7 @@
     "href": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions",
     "title": "Rates & Probabilities",
     "section": "Alternative Rate-to-Probability Conversions",
-    "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\nWith longer cycle lengths (e.g., 1 year), individuals may experience multiple transitions within a single cycle (e.g., healthy → sick → dead).\nThe standard Markov conversion\np_{HS}= 1 - e^{-r_{HS}\\Delta t}\nconverts each transition independently, ignoring that death competes with sickness within the same time interval.\nAs a result, individuals who become sick and then die within the same cycle cannot be represented as experiencing both transitions.\nIn practice, this leads to underestimation of deaths when cycle lengths are long.\nThis problem can be mitigated by using shorter cycle lengths or competing-risk rate-to-probability conversions that properly allocate transitions within each cycle.\n\n\n\n\n\n\n\n\n\n\nG\n\n\n\nHealthy\n\nHealthy\n\n\n\nHealthy-&gt;Healthy\n\n\n\n\n\nSick\n\nSick\n\n\n\nHealthy-&gt;Sick\n\n\n\n\n\nDead\n\nDead\n\n\n\nHealthy-&gt;Dead\n\n\n\n\n\nSick-&gt;Sick\n\n\n\n\n\nSick-&gt;Dead\n\n\n\n\n\nDead-&gt;Dead\n\n\n\n\n\n\n\n\nFigure 1: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas"
+    "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\nLong cycles can include multiple transitions (healthy → sick → dead).\nStandard rate/probability conversions\np_{HS}= 1 - e^{-r_{HS}\\Delta t}\nconverts transitions independently, ignoring that death competes with sickness within the same time interval.\nThis hides within-cycle events.\nCan lead to underestimation of deaths with long cycles.\nFix: Shorter cycles or competing risk conversions\n\n\n\n\n\n\n\n\n\n\n\nG\n\n\n\nHealthy\n\nHealthy\n\n\n\nHealthy-&gt;Healthy\n\n\n\n\n\nSick\n\nSick\n\n\n\nHealthy-&gt;Sick\n\n\n\n\n\nDead\n\nDead\n\n\n\nHealthy-&gt;Dead\n\n\n\n\n\nSick-&gt;Sick\n\n\n\n\n\nSick-&gt;Dead\n\n\n\n\n\nDead-&gt;Dead\n\n\n\n\n\n\n\n\nFigure 1: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas\n\n\n\n\n\n\n:::"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions-1",
@@ -3178,13 +3199,6 @@
     "href": "lectures/lec_rates-probabilities.html#what-to-use",
     "title": "Rates & Probabilities",
     "section": "What to use",
-    "text": "What to use"
-  },
-  {
-    "objectID": "lectures/lec_rates-probabilities.html#what-to-use-1",
-    "href": "lectures/lec_rates-probabilities.html#what-to-use-1",
-    "title": "Rates & Probabilities",
-    "section": "What to use",
     "text": "What to use\n\n\n\n\n\n\n\n\nEquation\nUse case\nAdvantage\n\n\n\n\np = 1 - e^{-rt}\nWhen you know a rate but need a probability for a fixed cycle length\nSimple closed-form conversion under a constant (exponential) hazard\n\n\nr = -\\ln(1-p)/t\nWhen you have a probability but need a rate to rescale across time intervals\nPreserves the correct exponential relationship when changing cycle length\n\n\nCompeting-risk formulas p_{HS}, p_{HD}\nWhen more than one event can occur from the same state (e.g., Healthy → Sick and Healthy → Dead)\nProperly accounts for competing hazards and prevents hidden within-cycle events"
   },
   {
@@ -3193,6 +3207,13 @@
     "title": "Rates & Probabilities",
     "section": "Alternative Rate-to-Probability Conversions",
     "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\n\n\n\nNote\n\n\nThere’s an even more accurate way to correct for “competing risks” & while it’s beyond the scope of this introductory workshop, we will briefly review how to do this within the Markov lecture."
+  },
+  {
+    "objectID": "lectures/lec_rates-probabilities.html#section",
+    "href": "lectures/lec_rates-probabilities.html#section",
+    "title": "Rates & Probabilities",
+    "section": "",
+    "text": "Key Takeaways\n\n\nRates & Probabilities\n\n\n\nProbabilities are cumulative and bounded (0-1)\nRates are instantaneous and scale with time\nConversions require a constant hazard assumption"
   },
   {
     "objectID": "lectures/lec_dalys.html#learning-objectives",
