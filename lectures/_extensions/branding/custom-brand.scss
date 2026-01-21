@@ -41,14 +41,15 @@ $breakpoint-large: 1440px;
 }
 
 .reveal h2 {
-  font-size: clamp(1.5em, 3vw, 4 em);
+  font-size: clamp(1.5em, 3vw, 4em);
   margin-bottom: 0.5em;
 }
 
-//paragraphs
 .reveal p {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0;
+  margin-bottom: 0.5em;  // Reduced from default
+  line-height: 1.5;
+  font-size: clamp(1.1em, 1.4vw, 1.7em);
 }
 
 // ============================================================================
@@ -96,11 +97,7 @@ $breakpoint-large: 1440px;
 // GLOBAL PARAGRAPH & TEXT SPACING
 // ============================================================================
 
-.reveal p {
-  margin-top: 0;
-  margin-bottom: 0.5em;  // Reduced from default
-  line-height: 1.5;
-}
+
 
 .reveal p:last-child {
   margin-bottom: 0;  // Remove bottom margin from last paragraph
@@ -250,7 +247,7 @@ $breakpoint-large: 1440px;
     li {
       padding: 0.5em 0 0.5em 2em;
       position: relative;
-      font-size: clamp(0.9em, 1.8vw, 1em);
+      font-size: clamp(1.2em, 1.8vw, 1em);
       
       &::before {
         content: "→";
@@ -959,7 +956,7 @@ $breakpoint-large: 1440px;
       background: $white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      font-size: clamp(0.9em, 1.8vw, 1em);
+      font-size: clamp(1.3em, 1.8vw, 1em);
       
       &::before {
         content: "✓";
@@ -994,7 +991,7 @@ $breakpoint-large: 1440px;
       background: $white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      font-size: clamp(0.9em, 1.8vw, 1em);
+      font-size: clamp(1.3em, 1.8vw, 1em);
       
       &::before {
         content: "︎▶︎";
@@ -1029,7 +1026,7 @@ $breakpoint-large: 1440px;
       background: $white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      font-size: clamp(0.9em, 1.8vw, 1em);
+      font-size: clamp(1.3em, 1.8vw, 1em);
       
       &::before {
         content: "✕";
