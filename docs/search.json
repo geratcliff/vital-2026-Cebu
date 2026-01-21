@@ -2989,7 +2989,7 @@
     "href": "lectures/lec_rates-probabilities.html#probability-can-be-reported-in-different-ways",
     "title": "Rates & Probabilities",
     "section": "Probability can be reported in different ways",
-    "text": "Probability can be reported in different ways\n\n\nProportion / percentage: 0.40 or 40%\nFrequency: 40 per 100 (or 4 per 1,000)\nOdds: P/(1-P) (ranges from 0 to \\infty)\n\n\nEpidemiologic terminology: - Cumulative incidence (risk): the probability of experiencing the event by time t - Examples: “1-year risk,” “5-year cumulative incidence”"
+    "text": "Probability can be reported in different ways\n\n\n\nProportion / percentage: 0.40 or 40%\nFrequency: 40 per 100 (or 4 per 1,000)\nOdds: P/(1-P) (ranges from 0 to \\infty)\nEpidemiologic terminology: - Cumulative incidence (risk): the probability of experiencing the event by time t - Examples: “1-year risk,” “5-year cumulative incidence”"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#rates",
@@ -3003,7 +3003,7 @@
     "href": "lectures/lec_rates-probabilities.html#rates-involve-person-time",
     "title": "Rates & Probabilities",
     "section": "Rates involve person-time",
-    "text": "Rates involve person-time\n\n\nIncidence (hazard) rate: number of events per unit of person-time\nRates describe how fast events occur\nRates can range from 0 to \\infinity"
+    "text": "Rates involve person-time\n\n\n\nIncidence (hazard) rate: number of events per unit of person-time\nRates describe how fast events occur\nRates can range from 0 to \\infinity"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities",
@@ -3017,7 +3017,7 @@
     "href": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities-1",
     "title": "Rates & Probabilities",
     "section": "Rates vs. probabilities",
-    "text": "Rates vs. probabilities\n\nProbability (risk): chance an individual experiences an event by a specified time\n\nRate: speed at which events occur per unit of person-time\n\nKey distinction: rates use person-time in the denominator; probabilities do not"
+    "text": "Rates vs. probabilities\n\n\nProbability (risk): chance an individual experiences an event by a specified time\n\nRate: speed at which events occur per unit of person-time\n\nKey distinction: rates use person-time in the denominator; probabilities do not"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#rate-incidence-rate",
@@ -3038,28 +3038,28 @@
     "href": "lectures/lec_rates-probabilities.html#example-same-study-probability-vs.-rate",
     "title": "Rates & Probabilities",
     "section": "Example: same study, probability vs. rate",
-    "text": "Example: same study, probability vs. rate\n\nStudy: 100 people followed for up to 4 years; 40 deaths.\n\nProbability (risk) over 4 years:\n40/100 = 0.40\nInterpretation: 40% died within 4 years. \nRate (if all 100 followed for 4 years)\nTotal person-time = 100 \\times 4 = 400 person-years; 40/400 = 0.10 deaths per person-year  Interpretation: ≈1 death per 10 years of total follow-up across the study population (aggregated person time)"
+    "text": "Example: same study, probability vs. rate\n\n\n\nStudy: 100 people followed for up to 4 years; 40 deaths.\nProbability (risk) over 4 years: 40/100 = 0.40 ;\nInterpretation: 40% died within 4 years. \nRate (if all 100 followed for 4 years): Total person-time = 100 \\times 4 = 400 person-years; 40/400 = 0.10 deaths per person-year \nInterpretation: ≈1 death per 10 years of total follow-up across the study population (aggregated person time)"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#timing-censoring",
     "href": "lectures/lec_rates-probabilities.html#timing-censoring",
     "title": "Rates & Probabilities",
     "section": "Timing & censoring",
-    "text": "Timing & censoring\n\n\nRates change when follow-up time differs, even if the number of events is the same\nCensoring or dropout reduces person-time and can increase the estimated rate"
+    "text": "Timing & censoring\n\n\n\nRates change when follow-up time differs, even if the number of events is the same\nCensoring or dropout reduces person-time and can increase the estimated rate"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#example-events-happen-early-vs.-late",
     "href": "lectures/lec_rates-probabilities.html#example-events-happen-early-vs.-late",
     "title": "Rates & Probabilities",
     "section": "Example: events happen early vs. late",
-    "text": "Example: events happen early vs. late\n\nStudy: 100 people, planned follow-up = 4 years\nCase: 40 deaths occur in Year 1\n\nPerson-time = (40 \\times 1) + (60 \\times 4) = 280 person-years\n\nRate: 40/280 = 0.143 deaths per person-year\n\nProbability (risk): 40/100 = 0.40"
+    "text": "Example: events happen early vs. late\n\n\n\nStudy: 100 people, planned follow-up = 4 years  Case: 40 deaths occur in Year 1\n\n\n\nPerson-time = (40 \\times 1) + (60 \\times 4) = 280 person-years\n\nRate: 40/280 = 0.143 deaths per person-year\n\nProbability (risk): 40/100 = 0.40"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported1",
     "href": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported1",
     "title": "Rates & Probabilities",
     "section": "When time-at-risk is not reported1",
-    "text": "When time-at-risk is not reported1\n\nWhen individual follow-up time is unavailable, events are often assumed to be evenly distributed\nThis approximates equal person-time for everyone\nIf events occurred earlier, the true rate would be higher (and vice versa)\n\nSource: @gidwaniEstimatingTransitionProbabilities2020"
+    "text": "When time-at-risk is not reported1\n\n\nWhen individual follow-up time is unavailable, events are often assumed to be evenly distributed\nThis approximates equal person-time for everyone\nIf events occurred earlier, the true rate would be higher (and vice versa)\n\n\nSource: @gidwaniEstimatingTransitionProbabilities2020"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities",
@@ -3073,7 +3073,7 @@
     "href": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities-1",
     "title": "Rates & Probabilities",
     "section": "Summary: Rates vs. Probabilities",
-    "text": "Summary: Rates vs. Probabilities\n\n\nProbability\n\nAnswers: What proportion of people experience the event by time X?\n\nRate\n\nAnswers: How fast do events occur, per unit of time at risk? \n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\nRange\nUsed in\n\n\n\n\nRate\n\\dfrac{\\# \\text{events}}{\\text{total person-time}}\n0–\\infty\nRate matrices\n\n\nProbability / risk\n\\dfrac{\\# \\text{events}}{\\# \\text{people followed}}\n0–1\nProbability matrices"
+    "text": "Summary: Rates vs. Probabilities\n\n\n\nProbability\n\nAnswers: What proportion of people experience the event by time X?\n\nRate\n\nAnswers: How fast do events occur, per unit of time at risk?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\nRange\nUsed in\n\n\n\n\nRate\n\\dfrac{\\# \\text{events}}{\\text{total person-time}}\n0–\\infty\nRate matrices\n\n\nProbability / risk\n\\dfrac{\\# \\text{events}}{\\# \\text{people followed}}\n0–1\nProbability matrices"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature",
@@ -3108,14 +3108,14 @@
     "href": "lectures/lec_rates-probabilities.html#converting-ratesprobabilities",
     "title": "Rates & Probabilities",
     "section": "Converting rates/probabilities",
-    "text": "Converting rates/probabilities\n\nRates are instantaneous; they represent the speed of an event happening & because speed scales linearly with time, you can multiply or divide rates when the time period changes. \nProbabilities are accumulated outcomes (they are cumulative & bounded between 0-1); they do not scale linearly with time. You can’t have more than 100% risk; so dividing/multiplying them does not preserve the correct relationship over time."
+    "text": "Converting rates/probabilities\n\n\nRates are instantaneous; they represent the speed of an event happening & because speed scales linearly with time, you can multiply or divide rates when the time period changes. \nProbabilities are accumulated outcomes (they are cumulative & bounded between 0-1); they do not scale linearly with time. You can’t have more than 100% risk; so dividing/multiplying them does not preserve the correct relationship over time."
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#another-way-of-saying-the-same-thing",
     "href": "lectures/lec_rates-probabilities.html#another-way-of-saying-the-same-thing",
     "title": "Rates & Probabilities",
     "section": "Another way of saying the same thing:",
-    "text": "Another way of saying the same thing:\n\nA rate tells us how fast an event occurs; it scales with time. \nA probability tells us whether an event occurs within time “t”; it is cumulative & bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it’s “cumulative”)"
+    "text": "Another way of saying the same thing:\n\n\nA rate tells us how fast an event occurs; it scales with time. \nA probability tells us whether an event occurs within time “t”; it is cumulative & bounded. The relationship with time is non-linear because the chance of an event slows as fewer people remain at risk (i.e., why we say it’s “cumulative”)"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#conversions",
@@ -3185,7 +3185,7 @@
     "href": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions",
     "title": "Rates & Probabilities",
     "section": "Alternative Rate-to-Probability Conversions",
-    "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\nLong cycles can include multiple transitions (healthy → sick → dead).\nStandard rate/probability conversions\np_{HS}= 1 - e^{-r_{HS}\\Delta t}\nconverts transitions independently, ignoring that death competes with sickness within the same time interval.\nThis hides within-cycle events.\nCan lead to underestimation of deaths with long cycles.\nFix: Shorter cycles or competing risk conversions\n\n\n\n\n\n\n\n\n\n\n\nG\n\n\n\nHealthy\n\nHealthy\n\n\n\nHealthy-&gt;Healthy\n\n\n\n\n\nSick\n\nSick\n\n\n\nHealthy-&gt;Sick\n\n\n\n\n\nDead\n\nDead\n\n\n\nHealthy-&gt;Dead\n\n\n\n\n\nSick-&gt;Sick\n\n\n\n\n\nSick-&gt;Dead\n\n\n\n\n\nDead-&gt;Dead\n\n\n\n\n\n\n\n\nFigure 1: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas\n\n\n\n\n\n\n:::"
+    "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\n\n\n\nLong cycles can include multiple transitions (healthy → sick → dead).\nStandard rate/probability conversions\np_{HS}= 1 - e^{-r_{HS}\\Delta t}\nconverts transitions independently, ignoring that death competes with sickness within the same time interval.\nThis hides within-cycle events.\nCan lead to underestimation of deaths with long cycles.\nFix: Shorter cycles or competing risk conversions\n\n\n::: :::\n\n\n\n\n\n\n\n\n\nG\n\n\n\nHealthy\n\nHealthy\n\n\n\nHealthy-&gt;Healthy\n\n\n\n\n\nSick\n\nSick\n\n\n\nHealthy-&gt;Sick\n\n\n\n\n\nDead\n\nDead\n\n\n\nHealthy-&gt;Dead\n\n\n\n\n\nSick-&gt;Sick\n\n\n\n\n\nSick-&gt;Dead\n\n\n\n\n\nDead-&gt;Dead\n\n\n\n\n\n\n\n\nFigure 1: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas\n\n\n\n\n\n::: :::"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions-1",
@@ -3206,7 +3206,7 @@
     "href": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions-2",
     "title": "Rates & Probabilities",
     "section": "Alternative Rate-to-Probability Conversions",
-    "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\n\n\n\nNote\n\n\nThere’s an even more accurate way to correct for “competing risks” & while it’s beyond the scope of this introductory workshop, we will briefly review how to do this within the Markov lecture."
+    "text": "Alternative Rate-to-Probability Conversions\n\n\nThere’s an even more accurate way to correct for “competing risks” & while it’s beyond the scope of this introductory workshop, we will briefly review how to do this within the Markov lecture."
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#section",
