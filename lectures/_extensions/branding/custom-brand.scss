@@ -292,7 +292,7 @@ $breakpoint-large: 1440px;
   text-align: left;
 
   h1 {
-    font-size: clamp(3em, 10vw, 10em);
+    font-size: clamp(5em, 10vw, 10em);
     font-weight: 1000;
     color: $primary-color !important;
     margin-bottom: 0.3em;
@@ -530,7 +530,7 @@ $breakpoint-large: 1440px;
     border-radius: 12px;
     text-align: center;
     font-weight: 500;
-    font-size: clamp(0.9em, 2vw, 1.1em);
+    font-size: clamp(1.1em, 2vw, 1.3em);
     box-shadow: 0 4px 12px rgba(0, 131, 169, 0.3);
     transition: transform 0.2s;
     min-height: clamp(80px, 15vw, 100px);
@@ -760,7 +760,7 @@ $breakpoint-large: 1440px;
       text-align: center; // ← Center headers by default
       padding: clamp(1em, 2vw, 1.4em) clamp(1.2em, 2.5vw, 1.8em);
       border: none;
-      font-size: clamp(0.95em, 1.9vw, 1.1em);
+      font-size: clamp(1.1em, 1.9vw, 1.2em);
       
       &:first-child {
         border-radius: 8px 0 0 0;
@@ -802,7 +802,7 @@ $breakpoint-large: 1440px;
       border: none;
       vertical-align: middle; // ← Better alignment
       text-align: center; // ← Center data by default
-      font-size: clamp(0.9em, 1.8vw, 1.05em);
+      font-size: clamp(1.1em, 1.8vw, 1.2em);
       
       &:first-child {
         font-weight: 500;
@@ -1546,7 +1546,7 @@ $breakpoint-large: 1440px;
           padding: 0.5em 0 0.5em 1.5em;
           position: relative;
           margin: 0.5em 0;
-          font-size: clamp(0.9em, 1.8vw, 1em);
+          font-size: clamp(1.1em, 1.8vw, 1em);
 
           &::before {
             content: "→";
@@ -1604,7 +1604,7 @@ $breakpoint-large: 1440px;
 
     .image-caption {
       padding: clamp(0.05em, 0.1vw, 1em);
-      font-size: clamp(0.6em, 0.7vw, 0.9em);
+      font-size: clamp(0.9em, 1.1vw, 1em);
       margin: 0;
       color: $text-dark;
       text-align: center;
@@ -1795,7 +1795,7 @@ $breakpoint-large: 1440px;
         padding: 0.1em 0 0.2em 1em;
         position: relative;
         margin: 0.7em 0;
-        font-size: clamp(0.9em, 1.9vw, 1.05em);
+        font-size: clamp(1.1em, 1.9vw, 1.2em);
         line-height: 1.5;
         
         &::before {
@@ -1878,7 +1878,7 @@ $breakpoint-large: 1440px;
   }
   
   .big-number-context {
-    font-size: clamp(1em, 2vw, 1.3em);
+    font-size: clamp(1.1em, 2vw, 1.3em);
     color: $text-light;
     max-width: 70%;
     margin: 0 auto;

@@ -571,7 +571,7 @@ dt_beachhome_pB <- mermaid("graph LR
 ## What is the expected value of going to the beach?
 
 ::::: columns
-::: {.column width="50%"}
+::: {.column width="50%" style="font-size: 1.1em;"}
 $\color{green}{0.82} = \underbrace{\color{red}{0.3} * \color{blue}{0.4}}_{\text{Rain}} + \underbrace{\color{red}{0.7} * \color{blue}{1.0}}_{\text{No Rain}}$
 
 -   Probabilities in [red]{style="color: red;"}.
@@ -587,7 +587,7 @@ $\color{green}{0.82} = \underbrace{\color{red}{0.3} * \color{blue}{0.4}}_{\text{
 ## What is the expected value of staying home?
 
 ::::: columns
-::: {.column width="50%"}
+::: {.column width="50%" style="font-size: 1.1em;"}
 $\color{green}{0.74} = \underbrace{\color{red}{0.3} \cdot \color{blue}{0.6}}_{\text{Rain}} + \underbrace{\color{red}{0.7} \cdot \color{blue}{0.8}}_{\text{No Rain}}$
 
 -   Probabilities in [red]{style="color: red;"}.

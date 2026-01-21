@@ -5495,7 +5495,7 @@
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#outline",
     "title": "Decision Trees & Probabilities",
     "section": "Outline",
-    "text": "Outline\n\n\n\n01\n\n\nStructure of a Decision Analysis\n\n\n\n\n02\n\n\nDetermining the Decision Threshold\n\n\n\n\n03\n\n\nProbabilities within Decision Trees\n\n\n\n\n04\n\n\nOther Concepts in Decision Analysis\n\n\n\n\n05\n\n\nStrengths/limitations of decision trees"
+    "text": "Outline\n\n\n\n01\n\n\nStructure of a Decision Analysis\n\n\n\n\n02\n\n\nDetermining the Decision Threshold\n\n\n\n\n03\n\n\nProbabilities within Decision Trees\n\n\n\n\n04\n\n\nOther Concepts in Decision Analysis\n\n\n\n\n05\n\n\nStrengths and limitations of decision trees\n\n\n\n\n06\n\n\nDecision tree do’s and don’ts"
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#the-structure-of-a-decision-analysis",
@@ -5872,8 +5872,15 @@
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts",
     "href": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts",
     "title": "Decision Trees & Probabilities",
-    "section": "Some Do’s & “Dont’s”",
-    "text": "Some Do’s & “Dont’s”\n\n\nBalance risks and benefits \n\n\nEach strategy must include all relevant risks and benefits.  If one option carries only risks or only benefits, either the model is misspecified or the clinical problem does not require a decision analysis (the decision would be “obvious” in the latter case)."
+    "section": "Some Do’s & “Dont’s",
+    "text": "Some Do’s & “Dont’s\n\n06"
+  },
+  {
+    "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts-as-you-think-about-your-own-trees",
+    "href": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts-as-you-think-about-your-own-trees",
+    "title": "Decision Trees & Probabilities",
+    "section": "Some Do’s & “Dont’s as you think about your own trees",
+    "text": "Some Do’s & “Dont’s as you think about your own trees\n\n\nBalance risks and benefits \n\n\nEach strategy must include all relevant risks and benefits.  If one option carries only risks or only benefits, either the model is misspecified or the clinical problem does not require a decision analysis (the decision would be “obvious” in the latter case)."
   },
   {
     "objectID": "lectures/lec_2.decision-trees-and-probabilities.html#some-dos-donts-1",
