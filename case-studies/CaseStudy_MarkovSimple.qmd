@@ -74,6 +74,8 @@ In our decision tree, we have a one time screening and calculations for if someo
 
 A Markov Model will allow us to cleanly integrate this into our model.
 
+**Although we are calling this the "Simple Markov Model", we understand that this is a really long case study, there will also be time to work on it tomorrow but we wanted to make sure that you had all the information for your model**
+
 ::: {.callout .fill-box .why-box}
 ## Why are we doing this?
 
@@ -313,6 +315,8 @@ Check your Model
 
 To help with time, we have created a parameters file you can upload to your model.
 
+**Download this file:** [PARAMETER TABLE](parameters_markovsimp.csv)
+
 1.  On the top bar click Model \> Import
 
 2.  An pop-up should appear to help "Import Objects"
@@ -333,7 +337,14 @@ You're side bar should now be populated with the model parameters
 
 Here are the parameters if you need to add them manually:
 
-ADD PARAMETER TABLE
+| Name        | Expression | Description                                     |
+|-------------|------------|-------------------------------------------------|
+| prev        | 0.08       | Prevelence of Disease X at age 50               |
+| p_sick      | 0.03       | Annual probability of getting Disease X         |
+| hr_treated  | 0.5        | Hazard ratio of getting Disease X after treated |
+| initial_age | 50         | Initial Age                                     |
+| c_treatment | 30000      | Cost of Treatment                               |
+| c_pall      | 15000      | Cost of Palliative Care                         |
 
 # Starting Probabilities
 
@@ -395,7 +406,7 @@ Check your Model
 
 You may have noticed that there is no probability of death in the uploaded parameters. Parameters are set values that do not change over time. However, the probability of death increases with age. To accommodate this, we will upload a table and create a p_die variable.
 
-Table File:
+**Table File:** [probability of death by age](tbl_p_die.csv)
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
@@ -634,8 +645,8 @@ Check your Model
 
 | Strategy   | Cost (\$ for 1000 people) | LY (for 1000 people) |
 |------------|---------------------------|----------------------|
-| Treat None | \$318,696,724             | 31219.7721           |
-| Treat All  | \$821,600,790             | 31219.7721           |
+| Treat None | \$317,998,311.33          | 30713.17             |
+| Treat All  | \$241,509,685.61          | 31219.7721           |
 
 </p>
 
@@ -659,21 +670,21 @@ It is often easier to understand the impact of the different strategies when the
 
 Run a CEA on a cohort size of 1 with Treat None as the basecase and a WTP of \$100,000/LY
 
-
 Enter your result:
 
-::: callout-tip
+:::: callout-tip
 ## Check your answer
-<br>
-What is the cost (to two decimal places) of the strategy you would choose?
-<br>
-<input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5" />
-<button id="checksimp">Check</button>
-<div id="feedbacksimp" style="margin-top: 10px;"></div>
+
+<br> What is the cost (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="checksimp">Check</button>
+
+::: {#feedbacksimp style="margin-top: 10px;"}
+:::
+
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 170151.4614;
+  const CORRECT = 131958.7514;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answersimp');
   const button = document.getElementById('checksimp');
@@ -698,22 +709,23 @@ What is the cost (to two decimal places) of the strategy you would choose?
   });
 })();
 </script>
-<br>
-:::
+```
 
+<br>
+::::
 
 <details>
-      
+
 <summary style="color: green; font-size: 4vh;">
-        
+
 Screening Added
-      
+
 </summary>
-        
+
 <p style="color: black;">
-          
-ADD FILE
-        
+
+[Amua File With Screening Added](/MarkovSimpleWithScreening.amua)
+
 </p>
-          
+
 </details>

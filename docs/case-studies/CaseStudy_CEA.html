@@ -285,7 +285,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#verify-your-results-in-amua" id="toc-verify-your-results-in-amua" class="nav-link active" data-scroll-target="#verify-your-results-in-amua">Verify your results in Amua</a></li>
   <li><a href="#additional-strategies" id="toc-additional-strategies" class="nav-link" data-scroll-target="#additional-strategies">Additional Strategies</a></li>
-  <li><a href="#verify-your-results-in-amua-1" id="toc-verify-your-results-in-amua-1" class="nav-link" data-scroll-target="#verify-your-results-in-amua-1">Verify your results in Amua</a></li>
   </ul>
 </nav>
     </div>
@@ -355,8 +354,8 @@ ul.task-list li input[type="checkbox"] {
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
@@ -372,7 +371,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>By the end of this session, participants will be able to:</p>
 <ol type="1">
-<li></li>
+<li>Calculate incremental costs and effectiveness</li>
+<li>Apply dominance rules to eliminate both dominated and extendedly dominated strategies</li>
+<li>Calculate ICERs</li>
+<li>Apply WTP thresholds to make policy decisions</li>
 </ol>
 </div>
 </div>
@@ -416,18 +418,18 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>No Screen/Treat</td>
-<td>ADD VALUE</td>
-<td>ADD VALUE</td>
+<td>2,800</td>
+<td>19.04</td>
 </tr>
 <tr class="even">
-<td>Screen all</td>
-<td>ADD VALUE</td>
-<td>ADD VALUE</td>
+<td>Treat all</td>
+<td>30,000</td>
+<td>19.484</td>
 </tr>
 <tr class="odd">
-<td>Treat all</td>
-<td>ADD VALUE</td>
-<td>ADD VALUE</td>
+<td>Screen all</td>
+<td>4,950</td>
+<td>19.68</td>
 </tr>
 </tbody>
 </table>
@@ -577,7 +579,25 @@ ul.task-list li input[type="checkbox"] {
 <h1>Verify your results in Amua</h1>
 <p>Update the properties in Amua to have the model run a cost-effectiveness analysis with LY as the effect.</p>
 <p>Note: The basecase is No Screen/Treat</p>
-<p>** ADD IMAGE OF AMUA PROPERTIES **</p>
+<details>
+<summary style="color: orange;">
+<p>More assistance with step</p>
+</summary>
+<p style="color: black;">
+</p><ol type="1">
+<li>Go to Model &gt; Properties &gt; Analysis</li>
+</ol>
+<p><img src="images/CEA/Properties.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Under “Analysis Type” choose “Cost-Effectiveness Analysis (CEA)”</li>
+</ol>
+<p><img src="images/CEA/AnalysisType.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>Set the settings to the following:</li>
+</ol>
+<p><img src="images/CEA/CEASettings.png" class="img-fluid"></p>
+<p></p>
+</details>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -588,24 +608,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>What is the ICER of the strategy you would choose?</p>
-<p>Enter your result: <input id="answer1" type="number" step="0.01" placeholder="e.g., 42.5"> <button id="check1">Check</button></p>
+<br> Enter the ICER of the strategy you would choose (to two decimal places) <br> <input id="answercea1" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checkcea1">Check</button>
+<div id="feedbackcea1" style="margin-top: 10px;">
+
+</div>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 42.5;
+  const CORRECT = 3317.90;
   const TOL = 0.01; // accept +/- 0.01
-
-  const input = document.getElementById('answer1');
-  const button = document.getElementById('check1');
-  const feedback = document.getElementById('feedback1');
-
+  const input = document.getElementById('answercea1');
+  const button = document.getElementById('checkcea1');
+  const feedback = document.getElementById('feedbackcea1');
   function setFeedback(msg, status) {
     feedback.textContent = msg;
     feedback.style.fontWeight = '600';
     feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
   }
-
   button.addEventListener('click', function() {
     const val = parseFloat(input.value);
     if (isNaN(val)) {
@@ -621,6 +640,7 @@ ul.task-list li input[type="checkbox"] {
   });
 })();
 </script>
+<p><br></p>
 </div>
 </div>
 </section>
@@ -638,13 +658,13 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Screen High Risk Only</td>
-<td>ADD VALUE</td>
-<td>ADD VALUE</td>
+<td>$28,000</td>
+<td>19.89</td>
 </tr>
 <tr class="even">
 <td>Treat High Risk Only</td>
-<td>ADD VALUE</td>
-<td>ADD VALUE</td>
+<td>$29,000</td>
+<td>19.91</td>
 </tr>
 </tbody>
 </table>
@@ -865,12 +885,6 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="verify-your-results-in-amua-1" class="level1">
-<h1>Verify your results in Amua</h1>
-<p>Update the properties in Amua to have the model run a cost-effectiveness analysis with LY as the effect.</p>
-<p>Note: The basecase is No Screen/Treat</p>
-<p>** ADD IMAGE OF AMUA PROPERTIES **</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -881,17 +895,62 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>What is the ICER of the strategy you would choose?</strong></p>
-<p>Enter your result: <input id="answer2" type="number" step="0.01" placeholder="e.g., 42.5"> <button id="check2">Check</button> <span id="feedback2" style="margin-left:0.5rem;"></span></p>
+<p><strong>What is the ICER of the strategy you would choose? (to 2 decimal places)</strong></p>
+<p>Enter your result: <input id="answercea2" type="number" step="0.01" placeholder="e.g., 42.5"> <button id="checkcea2">Check</button> <span id="feedbackcea2" style="margin-left:0.5rem;"></span></p>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 42.5;
+  const CORRECT = 3317.90;
   const TOL = 0.01; // accept +/- 0.01
 
-  const input = document.getElementById('answer2');
-  const button = document.getElementById('check2');
-  const feedback = document.getElementById('feedback2');
+  const input = document.getElementById('answercea2');
+  const button = document.getElementById('checkcea2');
+  const feedback = document.getElementById('feedbackcea2');
+
+  function setFeedback(msg, status) {
+    feedback.textContent = msg;
+    feedback.style.fontWeight = '600';
+    feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
+  }
+
+  button.addEventListener('click', function() {
+    const val = parseFloat(input.value);
+    if (isNaN(val)) {
+      setFeedback('Please enter a number.', 'warn');
+      return;
+    }
+    const ok = Math.abs(val - CORRECT) <= TOL;
+    if (ok) {
+      setFeedback('✅ Correct!', 'ok');
+    } else {
+      setFeedback('❌ Not quite. Try again.', 'bad');
+    }
+  });
+})();
+</script>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check your answer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What is the ICER of the strategy you would choose if the WTP was $200,000/LY? (to 2 decimal places)</strong></p>
+<p>Enter your result: <input id="answercea3" type="number" step="0.01" placeholder="e.g., 42.5"> <button id="checkcea3">Check</button> <span id="feedbackcea3" style="margin-left:0.5rem;"></span></p>
+<script>
+(function() {
+  // Set the correct value and tolerance
+  const CORRECT = 108333.33;
+  const TOL = 0.01; // accept +/- 0.01
+
+  const input = document.getElementById('answercea3');
+  const button = document.getElementById('checkcea3');
+  const feedback = document.getElementById('feedbackcea3');
 
   function setFeedback(msg, status) {
     feedback.textContent = msg;

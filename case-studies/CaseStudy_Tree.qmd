@@ -332,16 +332,16 @@ Check your Model
 
 | Label       | Value     | Description                      |
 |-------------|-----------|----------------------------------|
-| c_untreated | \$300,000 | Cost of being sick and untreated |
-| c_treated   | \$900,000 | Cost of being sick and treated   |
-| c_screen    | \$6,000   | Cost of screening                |
+| c_untreated | \$35,000 | Cost of being sick and untreated |
+| c_treated   | \$30,000 | Cost of being sick and treated   |
+| c_screen    | \$2,510   | Cost of screening                |
 
 ### Life Years
 
 | Label              | Value | Description                      |
 |--------------------|-------|----------------------------------|
 | LY_untreated       | 8     | Cost of being sick and untreated |
-| LY_treated         | 16    | Cost of being sick and treated   |
+| LY_treated         | 17    | Cost of being sick and treated   |
 | LY_healthy         | 20    | Cost of screening                |
 | LY_healthy_treated | 19.7  | Cost to implement screening      |
 :::
@@ -375,7 +375,9 @@ variable in the table above.
 
 4.  Click save and repeat for all parameters.
 
-You should end up with this: ![](images/tree/AddOutcomeParameters.png)
+You should end up with this: 
+<br>
+![](images/tree/AddOutcomeParameters.png)
 
 ### B: Update the model properties to have both outcomes
 
@@ -468,7 +470,7 @@ Enter your EV($) for the Screening:
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 73200.0;
+  const CORRECT = 4950.0;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answertree');
   const button = document.getElementById('checktree');
