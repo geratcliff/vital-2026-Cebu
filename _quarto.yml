@@ -24,6 +24,8 @@ website:
         text: Home
       - href: prework.qmd
         text: Before you arrive
+      - href: capstone/capstone_full.qmd
+        text: Capstone Help
       - section: "Model Diagram Drawing Resources"
         contents:
           - text: VCHEM Health State Transition Diagram Builder

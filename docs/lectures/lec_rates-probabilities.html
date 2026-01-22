@@ -301,11 +301,15 @@
 <img data-src="images/paste-62FF1911.png" width="539" class="r-stretch"></section>
 <section id="example-same-study-probability-vs.-rate" class="slide level2 center">
 <h2>Example: same study, probability vs.&nbsp;rate</h2>
-<p>::: arrow-bullets {style=“line-height:1.1”} - <strong>Study:</strong> 100 people followed for up to 4 years; 40 deaths. - <strong>Probability (risk) over 4 years:</strong> <span class="math inline">40/100 = 0.40</span>&nbsp;; - <em>Interpretation:</em> 40% died within 4 years.</p>
+<div class="arrow-bullets">
 <ul>
-<li class="fragment"><strong>Rate (if all 100 followed for 4 years):</strong> Total person-time = <span class="math inline">100 \times 4 = 400</span> person-years; <span class="math inline">40/400 = 0.10</span> deaths per person-year <br></li>
-<li class="fragment"><em>Interpretation:</em> ≈1 death per 10 years of total follow-up across the study population (aggregated person time) :::</li>
+<li class="fragment"><p><strong>Study:</strong> 100 people followed for up to 4 years; 40 deaths.</p></li>
+<li class="fragment"><p><strong>Probability (risk) over 4 years:</strong> <span class="math inline">40/100 = 0.40</span>&nbsp;;</p></li>
+<li class="fragment"><p><em>Interpretation:</em> 40% died within 4 years.</p></li>
+<li class="fragment"><p><strong>Rate (if all 100 followed for 4 years):</strong> Total person-time = <span class="math inline">100 \times 4 = 400</span> person-years; <span class="math inline">40/400 = 0.10</span> deaths per person-year <br></p></li>
+<li class="fragment"><p><em>Interpretation:</em> ≈1 death per 10 years of total follow-up across the study population (aggregated person time)</p></li>
 </ul>
+</div>
 </section>
 <section id="timing-censoring" class="slide level2 center">
 <h2>Timing &amp; censoring</h2>
@@ -331,7 +335,7 @@
 <li class="fragment"><strong>Probability (risk):</strong> <span class="math inline">40/100 = 0.40</span></li>
 </ul>
 </div>
-<p>:::</p>
+<p>::::</p>
 </section>
 <section id="when-time-at-risk-is-not-reported1" class="slide level2 center">
 <h2>When time-at-risk is not reported<sup>1</sup></h2>
@@ -442,13 +446,18 @@
 <h2>Conversions</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>::: arrow-bullets {.smaller} - A standard Markov model assumes an <strong>exponential (constant-hazard)</strong> process. - This allows conversion between <strong>rates</strong> (instantaneous) and <strong>probabilities</strong> (over time). - If the hazard changes over time, simple conversions no longer apply.</p>
-</div></div>
-<div class="column" style="display:flex; align-items:center; justify-content:center;">
+<div class="arrow-bullets smaller">
+<ul>
+<li class="fragment">A standard Markov model assumes an <strong>exponential (constant-hazard)</strong> process.</li>
+<li class="fragment">This allows conversion between <strong>rates</strong> (instantaneous) and <strong>probabilities</strong> (over time).</li>
+<li class="fragment">If the hazard changes over time, simple conversions no longer apply.</li>
+</ul>
+</div>
+</div><div class="column" style="display:flex; align-items:center; justify-content:center;">
 <p><span class="math display">
 p = 1 - e^{-rt}
 </span></p>
-</div><p>:::</p>
+</div></div>
 </section>
 <section id="conversions-1" class="slide level2 center">
 <h2>Conversions</h2>
@@ -578,11 +587,18 @@ p = 1 - e^{−0.02857229∗1} = 0.028168
 <h2>Alternative Rate-to-Probability Conversions</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p>::: arrow-bullets {.smaller style=“line-height:1.15”} - Long cycles can include multiple transitions (healthy → sick → dead). - Standard rate–probability conversion<br>
+<div class="arrow-bullets smaller" style="line-height:1.15">
+<ul>
+<li class="fragment">Long cycles can include multiple transitions (healthy → sick → dead).</li>
+<li class="fragment">Standard rate–probability conversion<br>
 <span class="math inline">p_{HS}= 1 - e^{-r_{HS}\Delta t}</span><br>
-treats transitions independently, ignoring competing risks. - This hides within-cycle events. - Can <strong>underestimate deaths</strong> with long cycles. - Fix: shorter cycles or competing-risk conversions.</p>
-</div></div>
-<div class="column" style="display:flex; align-items:center; justify-content:center;">
+treats transitions independently, ignoring competing risks.</li>
+<li class="fragment">This hides within-cycle events.</li>
+<li class="fragment">Can <strong>underestimate deaths</strong> with long cycles.</li>
+<li class="fragment">Fix: shorter cycles or competing-risk conversions.</li>
+</ul>
+</div>
+</div><div class="column" style="display:flex; align-items:center; justify-content:center;">
 <div class="cell" data-fig-width="4" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-comp-st" class="quarto-float quarto-figure quarto-figure-center">
@@ -658,7 +674,7 @@ Figure&nbsp;1: Compound transition patterns under standard conversion
 </div>
 </div>
 </div>
-</div><p>:::</p>
+</div></div>
 </section>
 <section id="alternative-rate-to-probability-conversions-1" class="slide level2 smaller center">
 <h2>Alternative Rate-to-Probability Conversions</h2>

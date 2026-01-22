@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Case Study: ICERs – Decision Analysis Workshop - Cebu</title>
+<title>Case Study: DALYs – Decision Analysis Workshop - Cebu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,6 +41,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/font-awesome-6.5.2/js/script.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -82,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Case Study: ICERs</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Case Study: DALYs</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -293,13 +296,44 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="cs_icer.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#decision-trees" id="toc-decision-trees" class="nav-link active" data-scroll-target="#decision-trees">Decision Trees</a>
+  <ul class="collapse">
+  <li><a href="#add-a-daly-dimension" id="toc-add-a-daly-dimension" class="nav-link" data-scroll-target="#add-a-daly-dimension">Add a DALY Dimension</a></li>
+  </ul></li>
+  <li><a href="#markov-models" id="toc-markov-models" class="nav-link" data-scroll-target="#markov-models">Markov Models</a>
+  <ul class="collapse">
+  <li><a href="#add-a-daly-dimension-1" id="toc-add-a-daly-dimension-1" class="nav-link" data-scroll-target="#add-a-daly-dimension-1">Add a DALY Dimension</a>
+  <ul class="collapse">
+  <li><a href="#a-important-parameters" id="toc-a-important-parameters" class="nav-link" data-scroll-target="#a-important-parameters">A: Important Parameters</a></li>
+  <li><a href="#b-add-ylds" id="toc-b-add-ylds" class="nav-link" data-scroll-target="#b-add-ylds">B: Add YLDs</a></li>
+  </ul></li>
+  <li><a href="#add-disability-weights-to-model" id="toc-add-disability-weights-to-model" class="nav-link" data-scroll-target="#add-disability-weights-to-model">Add Disability Weights to Model</a></li>
+  </ul></li>
+  <li><a href="#add-ylls" id="toc-add-ylls" class="nav-link" data-scroll-target="#add-ylls">Add YLLs</a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-outcome-1" id="toc-create-a-new-outcome-1" class="nav-link" data-scroll-target="#create-a-new-outcome-1">Create A New Outcome</a></li>
+  <li><a href="#add-life-expectancy-table" id="toc-add-life-expectancy-table" class="nav-link" data-scroll-target="#add-life-expectancy-table">Add Life Expectancy Table</a></li>
+  <li><a href="#add-variable" id="toc-add-variable" class="nav-link" data-scroll-target="#add-variable">Add Variable</a></li>
+  <li><a href="#add-yll-to-the-model" id="toc-add-yll-to-the-model" class="nav-link" data-scroll-target="#add-yll-to-the-model">Add YLL to the Model</a></li>
+  </ul></li>
+  <li><a href="#add-dalys" id="toc-add-dalys" class="nav-link" data-scroll-target="#add-dalys">Add DALYs</a>
+  <ul class="collapse">
+  <li><a href="#a-add-a-daly-outcome" id="toc-a-add-a-daly-outcome" class="nav-link" data-scroll-target="#a-add-a-daly-outcome">A: Add A DALY Outcome</a></li>
+  <li><a href="#add-outcome" id="toc-add-outcome" class="nav-link" data-scroll-target="#add-outcome">Add Outcome</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Case Study: ICERs</h1>
+<h1 class="title">Case Study: DALYs</h1>
 </div>
 
 
@@ -316,6 +350,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="decision-trees" class="level1">
+<h1>Decision Trees</h1>
+<section id="add-a-daly-dimension" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-daly-dimension">Add a DALY Dimension</h2>
+<p>We now want to add a new outcome dimension: <strong>DALYs (Disability-Adjusted Life Years)</strong>. DALYs are a measure of disease burden, where <strong>0 = perfect health</strong> and <strong>1 = death</strong> per year lost. For this model, we will assume we have estimated DALYs available for each terminal node.</p>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision_tree_diseaseX_ANS.amua">
+<button class="btn btn-primary"><i class="fa fa-save"></i> Download Completed Decision Tree</button>
+</a>
+</div>
+</div>
+<section id="instructions" class="level4">
+<h4 class="anchored" data-anchor-id="instructions"><strong>Instructions:</strong></h4>
+<ol type="1">
+<li><p>In Amua, go to <strong>Model → Properties → Analysis tab</strong>.</p></li>
+<li><p>Add a new dimension:</p>
+<ul>
+<li><p><strong>Dimension</strong>: DALYs</p></li>
+<li><p><strong>Symbol</strong>: D</p></li>
+<li><p><strong>Decimals:</strong> 2</p></li>
+</ul></li>
+<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
+<li><p>Because DALY is a gap measure, change the objective to <strong>minimize DALYs (analogous to maximizing QALYs)</strong></p>
+<p><img src="images/DALYs/DALYProperties.png" class="img-fluid" width="555"></p></li>
+<li><p>We can now return to the tree and enter DALY values at each terminal node</p></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Clinical State</strong></th>
+<th><strong>DALYs Lost</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Untreated</td>
+<td>7.0</td>
+<td>Large loss of expected healthy life years</td>
+</tr>
+<tr class="even">
+<td>Sick Treated</td>
+<td>2.5</td>
+<td>Some expected healthy life years lost due to time sick and treatment</td>
+</tr>
+<tr class="odd">
+<td>Healthy</td>
+<td>0</td>
+<td>No loss due to disability or premature death</td>
+</tr>
+<tr class="even">
+<td>Healthy Treated</td>
+<td>0.6</td>
+<td>Some expected healthy life years lost due to treatment</td>
+</tr>
+</tbody>
+</table>
+<p>You can apply these DALY values to <strong>terminal nodes</strong> in Amua accordingly. Your tree should like this:</p>
+<p><img src="images/DALYs/AddDALYs.png" class="img-fluid"></p>
+<p>Now, you’re ready to perform a cost-effectiveness analysis with DALYs as the outcome!</p>
+<p>Click <img src="../amua-images/runModel_16.png" class="img-fluid"> Run Model and check out the CEA Results report.</p>
+</section>
+</section>
+</section>
+<section id="markov-models" class="level1">
+<h1>Markov Models</h1>
+<section id="add-a-daly-dimension-1" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-daly-dimension-1">Add a DALY Dimension</h2>
+<p>We now want to add a new outcome dimension: <strong>DALYs (Disability-Adjusted Life Years)</strong>. DALYs are a measure of disease burden, where <strong>0 = perfect health</strong> and <strong>1 = death</strong> per year lost. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.</p>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_ANS.amua">
+<button class="btn btn-primary"><i class="fa fa-save"></i> Download Completed Markov Model</button>
+</a>
+</div>
+</div>
+<section id="a-important-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="a-important-parameters">A: Important Parameters</h3>
+<section id="disability-weights" class="level4">
+<h4 class="anchored" data-anchor-id="disability-weights">Disability Weights</h4>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -326,527 +446,417 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Please note that you can download PDF and Microsoft Word versions of this case study using the links on the right.</p>
+<p>Since we are using DALYs instead of QALYs, we now use disability weights instead of Quality-of-life (QoL) weights.</p>
 </div>
 </div>
-<section id="case-1-description" class="level1">
-<h1>Case 1 Description</h1>
-<p>You seek to explore different drug strategies to treat HIV infection. Single agent therapy with retrocyclovir at 200mg per day has a mean discounted lifetime cost of $20,000 and results in a quality-adjusted life expectancy of 70 years. Single agent therapy with retrocyclovir at 400mg per day has a mean discounted lifetime cost of $22,000 and a quality adjusted life expectancy of 65 years (given the increased incidence of side effects with the higher dose). Another drug, centroflexavir (which comes only in one dose of 250 mg/day) has a mean total lifetime cost of $10,000 and a quality-adjusted life expectancy of 50 years. The combination of centroflexavir with low-dose retrocyclovir has a mean-life time cost of $40,000 and an average quality adjusted life expectancy of 80 years, while the combination of centroflexavir with high-dose retrocyclovir has a mean lifetime cost of $35,000 and a quality-adjusted life expectancy of 75 years.</p>
-<p>Newer ARTs are also available and their lifetime costs/QALYs are detailed below:</p>
 <table class="caption-top table">
-<caption>Cost and QALY Outcomes for ARTs</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th></th>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dw_sick</td>
+<td>0.15</td>
+<td>Disability weight for Sick health state.</td>
+</tr>
+<tr class="even">
+<td>dw_sicker</td>
+<td>0.37</td>
+<td>Disability weight for Sicker health state.</td>
+</tr>
+<tr class="odd">
+<td>dw_treated</td>
+<td>0.05</td>
+<td>Disability weight for being treated</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="life-expectancy-by-age" class="level4">
+<h4 class="anchored" data-anchor-id="life-expectancy-by-age">Life Expectancy by Age</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>LE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>88.8718951</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>88.00051053</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>84.03008056</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>79.04633476</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>74.0665492</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>69.10756792</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>64.14930031</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>59.1962771</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td>54.25261364</td>
+</tr>
+<tr class="even">
+<td>40</td>
+<td>49.31739311</td>
+</tr>
+<tr class="odd">
+<td>45</td>
+<td>44.43332057</td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>39.63473787</td>
+</tr>
+<tr class="odd">
+<td>55</td>
+<td>34.91488095</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td>30.25343822</td>
+</tr>
+<tr class="odd">
+<td>65</td>
+<td>25.68089534</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>21.28820012</td>
+</tr>
+<tr class="odd">
+<td>75</td>
+<td>17.10351469</td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>13.23872477</td>
+</tr>
+<tr class="odd">
+<td>85</td>
+<td>9.990181244</td>
+</tr>
+<tr class="even">
+<td>90</td>
+<td>7.617724915</td>
+</tr>
+<tr class="odd">
+<td>95</td>
+<td>5.922359078</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="b-add-ylds" class="level3">
+<h3 class="anchored" data-anchor-id="b-add-ylds">B: Add YLDs</h3>
+<section id="create-a-new-outcome" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-new-outcome">Create A New Outcome</h4>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Add in the years of life lost to the model. You will need to create a new outcome and add the disability weights to each health state.</strong></p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Go to Model &gt; Properties &gt; select the Analysis tab.</p></li>
+<li><p>Use the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">)to add Years Lived with Disability (YLD). You can use YLD as the symbol and round on 4 decimals.</p></li>
+<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong> to apply.</p></li>
+<li><p>Set the “Analysis Type” to Expected Value (EV)</p></li>
+<li><p>We want to reset the objective to <strong>minimize</strong>. In DALYs, we want to decrease the YLDs and YLLs.</p></li>
+<li><p>Go to the Markov tab and add in the discount rate for YLDs. (3.0) <img src="images/DALYs/AddYLDOutcome.png" class="img-fluid" width="500"></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="add-disability-weights-to-model" class="level2">
+<h2 class="anchored" data-anchor-id="add-disability-weights-to-model">Add Disability Weights to Model</h2>
+<p>First you will need to define the disability weights as new parameters. To add a parameter, use the plus sign above the parameter menu (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">). Each parameter needs a name and an expression. Use the defined values from [Model Parameters].</p>
+<p>Now set YLD outcomes equal to the parameters in both strategies. <em>Remember that for YLD, 0 is healthy.</em></p>
+<p>Your model should look like:</p>
+<p><img src="images/HSD_AddYLD.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Now check (<img src="../amua-images/checkModel_128.png" class="img-fluid" alt="Custom Icon" width="15">) and run (<img src="../amua-images/runModel_128.png" class="img-fluid" alt="Custom Icon" width="15">)</strong> <strong>the model to verify that it calculates expected YLD!</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Strategy</th>
+<th>YLD</th>
+<th>YLD (Dis)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Status Quo</td>
+<td>2.8697</td>
+<td>1.7484</td>
+</tr>
+<tr class="even">
+<td>Treatment</td>
+<td>3.8058</td>
+<td>1.9969</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="add-ylls" class="level1">
+<h1>Add YLLs</h1>
+<section id="create-a-new-outcome-1" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-outcome-1">Create A New Outcome</h2>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Add in the years of life lost to the model. You will need to create a new outcome and add a one time cost to the transition from sick to death when the individual dies of the disease.</strong></p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Go to Model <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Properties <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> select the Analysis tab.</p></li>
+<li><p>Click the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">) to add a new outcome. Add YLL.</p></li>
+<li><p>Click the refresh button</p></li>
+<li><p>The “Analysis Type” should be still be set to Expected Value (EV) with the object of minimize.</p></li>
+<li><p>Change outcome to YLLs</p></li>
+<li><p>Go to the Markov tab and add in the discount rate for YLLs. (3.0)</p></li>
+</ul>
+<p><img src="images/HSD_AddYLLOutcome.png" class="img-fluid" width="500"></p>
+<ul>
+<li>Next, we will define cycle-specific payoffs in the model itself based on the values in the tables above. We need to add YLLs for people transitioning from the sick to the dead state.</li>
+</ul>
+</section>
+<section id="add-life-expectancy-table" class="level2">
+<h2 class="anchored" data-anchor-id="add-life-expectancy-table">Add Life Expectancy Table</h2>
+<ul>
+<li>We need to add a table to pull the estimated reaminaing life expectancy by age so that we can properly calculate the YLLs.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://ihea2025-vanderbilt.netlify.app/exercises_amua/tbl_ref_lt.csv">
+<button class="btn btn-primary"><i class="fa fa-save"></i> Download Table Data</button>
+</a>
+</div>
+</div>
+<ul>
+<li><p>Select the tables tab and then click the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">) to add a new table.</p></li>
+<li><p>Click Import (<img src="../amua-images/import_128.png" class="img-fluid" alt="Custom Icon" width="18"> ) and select the downloaded document</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you cannot get the import to work, you can copy the table from above and use the paste button</p>
+<p>( <img src="../amua-images/paste_128.png" class="img-fluid" alt="Custom Icon" width="18">)to add the data.</p>
+</div>
+</div></li>
+<li><p>Verify that there are no blank rows at the bottom of the table</p></li>
+<li><p>Name the table <code>tbl_ref_lt</code></p></li>
+<li><p>Change the lookup method to “Truncate”</p></li>
+<li><p>The table window should look like this:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/HSD_TblforYLL.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="add-variable" class="level2">
+<h2 class="anchored" data-anchor-id="add-variable">Add Variable</h2>
+<ul>
+<li><p>You will need to define <code>yll_t</code> as a parameter.</p>
+<ul>
+<li><p>This will reference the table we just added (<strong>tbl_ref_lt</strong>)</p></li>
+<li><p>To properly add YLLs with discounting from the time of death, we will use the following formula:</p></li>
+</ul>
+<p><img src="images/Markov Case Study (9).png" class="img-fluid"></p></li>
+<li><p>Select the variables tab and then click the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">) to add a new variable.</p></li>
+<li><p>Set the name of the variable to <code>yll_t</code></p></li>
+<li><p>Using the formula above to set the expression: <code>tbl_ref_lt[initial_age + t, 1] * (exp(-log(1+r_disc_health)*t))</code></p>
+<p><img src="images/HSD_YLLVariable.png" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="add-yll-to-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="add-yll-to-the-model">Add YLL to the Model</h2>
+<ul>
+<li><p>Add the YLL outcome as a one time outcome on the Die (Disease) arm.</p>
+<ul>
+<li><div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>To define a one time treatment:</strong> We will add this cost by assigning a one-time cost at the time an individual transitions to the Death (Disease) state from the Sick state. You can add this one-time cost by <em>right-clicking</em> on the transition node <img src="../amua-images/arrow_48.png" alt="Custom Icon" width="20" height="20"> after “Dead (Disease)” in the Sick health state, and then clicking on <img src="../amua-images/cost_24.png" alt="Custom Icon" width="20" height="20"> Add Cost.</p>
+</div>
+</div>
+</div></li>
+</ul></li>
+</ul>
+<p>After inputting the outcomes, your Markov model should look like this:</p>
+<p><img src="images/HSD_AddYLL.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Now check (<img src="../amua-images/checkModel_128.png" class="img-fluid" alt="Custom Icon" width="15">) and run (<img src="../amua-images/runModel_128.png" class="img-fluid" alt="Custom Icon" width="15">)</strong> <strong>the model to verify that it calculates expected YLL!</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Strategy</th>
+<th>YLL</th>
+<th>YLL (Dis)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Status Quo</td>
+<td>46.5828</td>
+<td>33.4476</td>
+</tr>
+<tr class="even">
+<td>Treatment</td>
+<td>35.1637</td>
+<td>23.8311</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="add-dalys" class="level1">
+<h1>Add DALYs</h1>
+<p>Our final objective is to add DALYs to the markov model. We have seen how to add all the elements but we want to combine them for DALYs.</p>
+<section id="a-add-a-daly-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-a-daly-outcome">A: Add A DALY Outcome</h3>
+<ol type="1">
+<li><p>In Amua, go to <strong>Model → Properties → Analysis tab</strong>.</p></li>
+<li><p>Add a new dimension:</p>
+<ul>
+<li><p><strong>Dimension</strong>: DALYs</p></li>
+<li><p><strong>Symbol</strong>: D</p></li>
+<li><p><strong>Decimals:</strong> 2</p></li>
+</ul></li>
+<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
+<li><p>Because DALY is a gap measure, change the objective to <strong>minimize DALYs (analogous to maximizing QALYs)</strong></p>
+<p><img src="images/DALYs/DALYPropsMarkov.png" class="img-fluid" width="555"></p></li>
+</ol>
+</section>
+<section id="add-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="add-outcome">Add Outcome</h3>
+<ul>
+<li><p>Go to Model <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Properties <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> select the Analysis tab.</p></li>
+<li><p>Click the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">) to add a new outcome. Add DALYs.</p></li>
+<li><p>Click the refresh button</p></li>
+<li><p>Change the “Analysis Type” to Cost-Effectiveness Analysis (CEA).</p></li>
+<li><p>Set the Cost, Effect, Baseline Strategy and Willingness-to-pay (WTP). Ensure that the Effect Objective is still set to minimize.</p></li>
+<li><p>Go to the Markov tab and add in the discount rate for DALYs. (3.0)</p>
+<p><img src="images/HSD_AddDALYOutcome.png" class="img-fluid"></p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Next, in the model itself, define the cycle-specific payoffs based on the values in the tables above.</p>
+<ul>
+<li>Every place in the model where there is a value for YLD or YLL, we will put that in DALYs so that it sums them all together.
+<ul>
+<li>For Example: Under sick where it now has($) c_sick; (YLD) dw_sick ; (YLL) 0, we will have ($) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick</li>
+</ul></li>
+</ul></li>
+<li><p>After inputting the outcomes, your Markov model should look like this:<img src="images/HSD_AddDALY.png" class="img-fluid"></p></li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Check and run the model to get the CEA for DALYs</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Strategy</th>
 <th>Cost</th>
-<th>QALY</th>
+<th>DALY</th>
+<th>ICER</th>
+<th>Note</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>ART 1/2</td>
-<td>11,000</td>
-<td>63.4</td>
+<td>Status Quo</td>
+<td>40,795.37</td>
+<td>35.1959</td>
+<td></td>
+<td>Baseline</td>
 </tr>
 <tr class="even">
-<td>ART 1</td>
-<td>15,525</td>
-<td>73.52</td>
-</tr>
-</tbody>
-</table>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<p><em>Perform a cost-effectiveness analysis of the treatment options using QALYs as the measure of health effects. Which strategy would you choose and why, if the willingness-to-pay threshold is $50,000 per quality-adjusted life year?</em></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Treatment</th>
-<th>Costs</th>
-<th>QALYs</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Do nothing</td>
-<td>36,000</td>
-<td>43.8</td>
-</tr>
-<tr class="even">
-<td>ART 1</td>
-<td>15,525</td>
-<td>73.52</td>
-</tr>
-<tr class="odd">
-<td>ART 1/2</td>
-<td>11,000</td>
-<td>63.4</td>
-</tr>
-<tr class="even">
-<td>Retro 200</td>
-<td>20,000</td>
-<td>70.0</td>
-</tr>
-<tr class="odd">
-<td>Retro 400</td>
-<td>22,000</td>
-<td>65.0</td>
-</tr>
-<tr class="even">
-<td>Centro</td>
-<td>10,000</td>
-<td>50.0</td>
-</tr>
-<tr class="odd">
-<td>Centro / Retro 200</td>
-<td>40,000</td>
-<td>80.0</td>
-</tr>
-<tr class="even">
-<td>Centro / Retro 400</td>
-<td>35,000</td>
-<td>75.0</td>
-</tr>
-</tbody>
-</table>
-<!-- ![](images/cs_icer_ans_1.1.png)    -->
-<!-- ![](images/cs_icer_ans_1.1.2.png)   -->
-<!-- ![](images/cs_icer_ans_1.1.3.png)    -->
-<!-- ![](images/cs_icer_ans_1.1.4.png)    -->
-<table class="caption-top table">
-<caption>Treatment Options</caption>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>Discounted Costs</th>
-<th>Discounted QALYs</th>
-<th>Incremental Costs</th>
-<th>Incremental QALYs</th>
-<th>ICER ($/QALY)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Treatment</td>
+<td>79,896.29</td>
+<td>25.828</td>
+<td>4,173.8912</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<table class="caption-top table">
-<caption>ICER Calculation Table 1</caption>
-<colgroup>
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>Discounted Costs</th>
-<th>Discounted QALYs</th>
-<th>Incremental Costs</th>
-<th>Incremental QALYs</th>
-<th>ICER ($/QALY)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>ICER Calculation Table 2</caption>
-<colgroup>
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>Discounted Costs</th>
-<th>Discounted QALYs</th>
-<th>Incremental Costs</th>
-<th>Incremental QALYs</th>
-<th>ICER ($/QALY)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="case-2-description" class="level1">
-<h1>Case 2 Description</h1>
-<p>You are interested in performing a cost-effectiveness analysis of different cancer screening recommendations for anal squamous intraepithelial lesions and anal cancer in men.</p>
-<p>Below is a table of the costs and quality-adjusted life years gained associated with different screening strategies over a six-year time span.</p>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p><em>Calculate incremental cost-effectiveness ratios for each strategy and determine which screening strategy you would choose if, as a decision maker, you were prepared to pay $50,000/QALY (using discounted quality-adjusted life years)</em></p>
-<!-- ![](images/cs_icer_ans_2.1.png) -->
-<table class="caption-top table">
-<caption>Cost and QALY Outcomes, by Strategy</caption>
-<thead>
-<tr class="header">
-<th>Screening Strategy</th>
-<th>Discounted QALYs</th>
-<th>Discounted Costs ($2022)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>No screening</td>
-<td>10.05</td>
-<td>4,130</td>
-</tr>
-<tr class="even">
-<td>Every 3 years</td>
-<td>10.798</td>
-<td>5,178</td>
-</tr>
-<tr class="odd">
-<td>Every 2 years</td>
-<td>10.830</td>
-<td>5,583</td>
-</tr>
-<tr class="even">
-<td>Every 1 year</td>
-<td>10.973</td>
-<td>6,417</td>
-</tr>
-<tr class="odd">
-<td>Every 6 months</td>
-<td>10.988</td>
-<td>8,744</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>ICER Calculation Table 1</caption>
-<colgroup>
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>Discounted Costs</th>
-<th>Discounted QALYs</th>
-<th>Incremental Costs</th>
-<th>Incremental QALYs</th>
-<th>ICER ($/QALY)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>ICER Calculation Table 2</caption>
-<colgroup>
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>Discounted Costs</th>
-<th>Discounted QALYs</th>
-<th>Incremental Costs</th>
-<th>Incremental QALYs</th>
-<th>ICER ($/QALY)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
 
 
 </section>

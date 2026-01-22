@@ -1,0 +1,131 @@
+---
+title: "Full Capstone Help"
+---
+
+## Exercises:
+
++-----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| Capstone                                                                          | Goal                                                                                            | Related Case Study(ies)                                                    |
++===================================================================================+=================================================================================================+============================================================================+
+| [Discuss Decision Problem \[Small Groups\]](capstone/01_smallgroups.qmd)          | Talk with others to understand how your research question and data collection could be improved | *Use of data collection tool and pre-work*                                 |
++-----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| [Make a Decision Tree](capstone/02_decision-tree.qmd)                             | Create a decision tree for part or all of your research question                                | [Decision Trees in Amua](case-studies/CaseStudy_Tree.qmd)                  |
++-----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| [Add Outcomes to your decision tree](capstone/02_decision-tree.qmd)               | Add outcomes so that you can get estimate value results.                                        | [Decision Trees in Amua](case-studies/CaseStudy_Tree.qmd)                  |
++-----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| [Design Markov Model](capstone/03_design-markov.qmd)                              | If needed, create a markov model. Otherwise continue working on your tree                       | [Simple Markov Model in Amua](case-studies/CaseStudy_MarkovSimple.qmd)\    |
+|                                                                                   |                                                                                                 | [Progressive Disease Model in Amua](case-studies/CaseStudy_MarkovProg.qmd) |
++-----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| [Run CEA and Stop work on Model to complete slides](capstone/04_build-markov.qmd) | Run a CEA on your Model                                                                         | [Incremental CEA](case-studies/CaseStudy_CEA.qmd)                          |
++-----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+
+## Final Presentation:
+
+**Remember that there are a lot of people to present so to be respectful to all participants, please keep your presentation short**
+
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/capstone/CapstonePPTTemplate_Cebu.pptx",
+  button_label = "Download PPT Template for Final Presentation",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
+### Title
+
+-   Add the name of your project and names of Team members
+
+### Slide 1: About Me/Us
+
+-   Add brief information about your country, your job title, your workplace(s), and areas of interest/focus
+
+### Slide 2: Background
+
+-   Add VERY SHORT introduction to your disease/health issue. This should be 1-3 sentences or bullets
+
+    -   Name of Disease
+
+    -   Current Status of health condition/issue/disease
+
+    -   Who is affected
+
+    -   How their lives are effected
+
+-   Add VERY SHORT reason why this disease/health issue is important to your country. This should be 1-2 sentences or bullets
+
+### Slide 3: Research Question
+
+-   Describe the decision problem you are trying to solve in [one sentence]{.underline} using the PICOT formatSlide 4: Research Question
+
+### Slide 4: Strategy Options
+
+-   Describe each strategy being modeled in [one sentence]{.underline}
+
+-   Graphically display differences between the strategies
+
+Ideas for graphic:
+
+::: panel-tabset
+### Pros & Cons
+
+```         
+    +-----------------+---------------------------------+----------------------------+
+    | Strategy        | Pros                            | Cons                       |
+    +=================+=================================+============================+
+    | Stay Home       | -   Brain Doesn't Hurt          | -   No New Friends         |
+    |                 |                                 |                            |
+    |                 | -   Time with friends and Famly | -   Less Amua knowledge    |
+    |                 |                                 |                            |
+    |                 | -   More Work done              |                            |
+    +-----------------+---------------------------------+----------------------------+
+    | Attend Workshop | -   Bigger Network              | -   It will eventually end |
+    |                 |                                 |                            |
+    |                 | -   An Amua-zing time           | -   Hotel and Travel Costs |
+    |                 |                                 |                            |
+    |                 | -   Thrilling Lectures          |                            |
+    +-----------------+---------------------------------+----------------------------+
+    
+```
+
+### Matrix
+
++-----------------+----------------+-------------------+-------------+----------------+
+| Strategy        | Network        | Cost              | Brain Pain  | Amua Knowledge |
++=================+================+===================+=============+================+
+| Stay Home       | Stays the same | Normal Daily Cost | None        | None           |
++-----------------+----------------+-------------------+-------------+----------------+
+| Attend Workshop | Grows          | Hotel & Flights   | High        | I'm Amuazing   |
++-----------------+----------------+-------------------+-------------+----------------+
+:::
+
+### Slide 5: Markov Bubble Diagaram (SKIP IF DOING A TREE)
+
+-   Include a bubble diagram
+
+### Slide 6: Model Graphic
+
+-   Include a READABLE section of your tree or Markov model.
+-   Plan to discuss in your presentation how the other branches differ from the one you included
+
+### Slide 7: Parameter Table & Transition Matrix Estimates
+
+-   A small table with 5-10 of the most important variables in your model. These should be the variables that differentiate the strategies.
+
+    -   Plan to discuss in your presentation how the other branches differ from the one you included
+
+-   A table of the transition matrix
+
+### Slide 8: Parameter Table & Transition Matrix Estimates
+
+-   Define your outcome
+
+    -   Name of Outcome
+
+    -   How you defined this outcome
+
+    -   Why is this outcome important to your research question
