@@ -29,22 +29,6 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b9f537af43a82684849d92d60960a7b0.css">
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -155,113 +139,55 @@
 </section>
 <section id="learning-objectives" class="slide level2 center">
 <h2>Learning Objectives</h2>
+<div class="arrow-bullets">
 <ul>
 <li><p>Explain the purpose of deterministic sensitivity analysis and provide examples of one-way versus two-way analyses.</p></li>
 <li><p>Detail the advantages/disadvantages of deterministic sensitivity analysis.</p></li>
 </ul>
-</section>
-<section id="outline" class="slide level2 center">
-<h2>Outline</h2>
-<ol type="1">
-<li>Net Benefit Outcome Measures</li>
-<li>One-way sensitivity analysis.</li>
-<li>Two-way sensitivity analysis.</li>
-<li>Limitations and extensions.</li>
-<li>Threshold analysis</li>
-<li>Scenario analysis</li>
-</ol>
-</section>
-<section id="alternatives-to-icers" class="slide level2 center">
-<h2>Alternatives to ICERs</h2>
-<ul>
-<li>ICERs the most common approach for describing CEA results
-<ul>
-<li><span style="color:green">Good</span>: summarize all aspects of decision problem except WTP (which comes from decision-maker)</li>
-<li><span style="color:red">Bad</span>: algorithms a bit complicated, negative ICERs, ratios can act poorly when denominator uncertain</li>
-</ul></li>
-</ul>
-</section>
-<section id="an-alternative" class="slide level2 center">
-<h2>An Alternative</h2>
-<ul>
-<li>If willing to choose a fixed willingness-to-pay threshold (e.g., <span class="math inline">\lambda =</span> 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.
-<ul>
-<li>Net Health Benefit (NHB)</li>
-<li>Net Monetary Benefit (NMB)</li>
-</ul></li>
-<li><span style="color:blue">Objective</span>: Select the strategy with the highest NHB/NMB</li>
-</ul>
-</section>
-<section id="net-health-benefit-nhb" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NHB}_s = E_s - \frac{C_s}{\lambda}
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="net-health-benefit-nhb-1" class="slide level2 center">
-<h2>Net Health Benefit (NHB)</h2>
-<p><span class="math display">
-\text{NMB}_s = E_s \times \lambda - C_s
-</span> where <span class="math inline">E_s</span> is effectiveness of strategy <span class="math inline">s</span>, <span class="math inline">C_s</span> is cost of <span class="math inline">s</span> and <span class="math inline">\lambda</span> is WTP threshold.</p>
-</section>
-<section id="example-nhb" class="slide level2 center">
-<h2>Example: NHB</h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">E_1</span> = 0.07 years</p>
-<p><span class="math inline">E_2</span> = 0.10 years</p>
-<p><span class="math inline">C_1</span> = 1,500</p>
-<p><span class="math inline">C_2</span> = 2,800</p>
-<p><span class="math inline">\lambda</span> = 50,000 per year of life saved</p>
-</div><div class="column">
-<p><span class="math display">
-ICER = \frac{2800-1500}{0.10 - 0.07}  \\
-= 43,333 \\
-</span></p>
-</div></div>
-</section>
-<section id="example-nhb-1" class="slide level2 center">
-<h2>Example: NHB</h2>
-<p><span class="math display">
-NHB_1 = 0.07 - 1500/50000 = 0.040 \\
-NHB_2 = 0.10 - 2800/50000 = 0.044
-\\
-\text{Incremental } NHB = 0.044 - 0.040 = 0.004
-</span></p>
-</section>
-<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
-<h2>Example: Net Monetary Benefit (NMB)</h2>
-<p><span class="math display">
-NHB_1 = 0.07 \times 50000 - 1500 = 2000 \\
-NHB_2 = 0.10 \times 50000 - 2800 = 2200
-\\
-\text{Incremental } NHB = 2200 - 2000 = 200
-</span></p>
-</section>
-<section id="calculating-nmb-in-amua" class="slide level2 center">
-<h2>Calculating NMB in Amua</h2>
-<div class="r-stack">
-<p><img data-src="images/clipboard-1972470218.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-2080375502.png" class="fragment" width="750" height="500"></p>
-<p><img data-src="images/clipboard-975167616.png" class="fragment" width="550" height="300"></p>
-<p><img data-src="images/clipboard-3987091812.png" class="fragment" width="550" height="300"></p>
 </div>
 </section>
-<section id="sensitivity" class="slide level2 center">
-<h2>Sensitivity</h2>
-<ul>
-<li>ICER for Prevention strategy is just above WTP threshold of $50,000/QALY.</li>
-<li>NMB for treatment only slightly above NMB for prevention.</li>
-<li>How sensitive are these results to changes in specific model inputs?</li>
-</ul>
-</section></section>
-<section>
-<section id="one-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>One-way sensitivity analysis</h1>
-
+<section id="outline" class="slide level2 numbered-list-slide center">
+<h2>Outline</h2>
+<div class="number-list">
+<div class="list-item">
+<p>::: number 01 ::: ::: text One-way sensitivity analysis</p>
+</div>
+</div>
+<div class="list-item">
+<p>::: number 02 ::: ::: text Two-way sensitivity analysis</p>
+</div>
+<p>:::</p>
+<div class="list-item">
+<p>::: number 03 ::: ::: text Limitations and extensions</p>
+</div>
+<p>:::</p>
+<div class="list-item">
+<p>::: number 04 ::: ::: text Scenarios analysis</p>
+</div>
+<p>:::</p>
+<div class="list-item">
+<p>::: number 05 ::: ::: text Threshold analysis</p>
+</div>
+<p>:::</p>
+<div class="list-item">
+<p>::: number 06 ::: ::: text Summing up analyses beyond the base case</p>
+</div>
+<p>:::</p>
+<p>:::</p>
+</section>
+<section id="sensitivity-analyses" class="slide level2 center">
+<h2>Sensitivity Analyses</h2>
+<p>::: ::: arrow-bullets - ICER for Prevention strategy is just above WTP threshold of $50,000/QALY. - When evaluated using net monetary benefit at a $50,000/QALY threshold, treatment has a slightly higher NMB than prevention, indicating that the two strategies deliver nearly equivalent value for money. - How sensitive are these results to changes in specific model inputs? ::: :::</p>
+</section>
+<section id="one-way-sensitivity-analysis" class="slide level2 section-slide center">
+<h2>One-way sensitivity analysis</h2>
+<div class="section-number">
+<p>01</p>
+</div>
 </section>
 <section id="one-way-sensitivity-analysis-1" class="slide level2 center">
 <h2>One-way sensitivity analysis</h2>
+<div class="arrow-bullets">
 <ul>
 <li class="fragment">Usually the starting point for sensitivity analyses</li>
 <li class="fragment">Sequentially testing one variable at a time (i.e., Age, BMI, QALY, other clinically important parameters), while holding everything else constant</li>
@@ -271,6 +197,7 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <li class="fragment">Used to visually rank the different variables in order of their overall influence on the magnitude of the model outputs</li>
 </ul></li>
 </ul>
+</div>
 </section></section>
 <section>
 <section id="examples-from-publications" class="title-slide slide level1 center">
@@ -306,8 +233,8 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 
 <img data-src="images/Screen Shot 2022-10-06 at 9.19.09 AM.png" width="777" class="r-stretch"></section></section>
 <section>
-<section id="interactive-amua-session" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
+<section id="a-hypothetical-problem" class="title-slide slide level1 center" data-background="#43464B">
+<h1>A hypothetical problem</h1>
 
 </section>
 <section id="primary-results-progressive-disease" class="slide level2 center">
@@ -338,19 +265,16 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <li><p>Treatment is cost-effective at WTP=$50,000/QALY—but <em>barely.</em></p></li>
 <li><p>How sensitive is this result to the input parameter values used?</p></li>
 </ul>
-</section></section>
-<section>
-<section id="two-way-sensitivity-analysis" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Two-way sensitivity analysis</h1>
-
+</section>
+<section id="two-way-sensitivity-analysis" class="slide level2 section-slide center">
+<h2>Two-way sensitivity analysis</h2>
+<div class="section-number">
+<p>02</p>
+</div>
 </section>
 <section id="two-way-sensitivity-analysis-1" class="slide level2 center">
 <h2>Two-way sensitivity analysis</h2>
-<ul>
-<li class="fragment">A way to map the interaction effects between two parameters in a decision analysis model</li>
-<li class="fragment">Varies 2 parameters at a time</li>
-<li class="fragment">Explores the robustness of results in more depth</li>
-</ul>
+<p>::: ::: arrow-bullets - A way to map the interaction effects between two parameters in a decision analysis model - Varies 2 parameters at a time - Explores the robustness of results in more depth ::: :::</p>
 </section></section>
 <section>
 <section id="examples-from-publications-1" class="title-slide slide level1 center">
@@ -363,10 +287,10 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <img data-src="images/Screen Shot 2022-09-28 at 9.54.01 AM.png" width="517" class="r-stretch"></section>
 <section id="hiv-prevention-1" class="slide level2 center">
 <h2>HIV prevention</h2>
+<p>::: ::: arrow-bullets - Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p>
 <ul>
-<li class="fragment"><p>Markov model examining strategies for HIV prevention among serodiscordant couples seeking conception (woman does not have HIV and male has HIV)</p></li>
-<li class="fragment"><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
-<li class="fragment"><p>And we also know that PrEP has traditionally been really <strong>costly</strong></p></li>
+<li><p>We know that if the <strong>male partner is consistently on medication for HIV</strong> (i.e., resulting in virologic suppression), then the risk of transmission is small regardless of the woman taking PrEP (pre-exposure prophylaxis)</p></li>
+<li><p>And we also know that PrEP has traditionally been really <strong>costly</strong> ::: :::</p></li>
 </ul>
 </section>
 <section id="hiv-prevention-2" class="slide level2 center">
@@ -379,9 +303,9 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <img data-src="images/Screen Shot 2022-09-28 at 10.25.53 PM.png" width="543" class="r-stretch"></section>
 <section id="financial-incentives-for-acute-stroke-care-1" class="slide level2 center">
 <h2>Financial incentives for acute stroke care</h2>
+<p>::: ::: arrow-bullets - Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p>
 <ul>
-<li class="fragment"><p>Under pay for performance policies in the US, <strong>physicians or hospitals are paid more for meeting evidence-based quality targets</strong></p></li>
-<li class="fragment"><p>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong></p></li>
+<li>Study objective: Illustrate how pay-for-performance incentives can be quantitatively bounded using cost-effectiveness modeling, through the <strong>application of reimbursement to hospitals for faster time-to-tPA for acute ischemic stroke</strong> ::: :::</li>
 </ul>
 </section>
 <section id="financial-incentives-for-acute-stroke-care-2" class="slide level2 center">
@@ -393,12 +317,13 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <section id="financial-incentives-for-acute-stroke-care-3" class="slide level2 center">
 <h2>Financial incentives for acute stroke care</h2>
 
-<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section></section>
-<section id="interactive-amua-session-1" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Interactive Amua Session</h1>
-
-</section>
-
+<img data-src="images/Screen Shot 2022-09-28 at 10.14.03 PM.png" width="520" class="r-stretch"></section>
+<section id="limitations-extensions" class="slide level2 section-slide center">
+<h2>Limitations &amp; extensions</h2>
+<div class="section-number">
+<p>03</p>
+</div>
+</section></section>
 <section>
 <section id="limitations-of-deterministic-sensitivity-analyses" class="title-slide slide level1 center" data-background="#43464B">
 <h1>Limitations of deterministic sensitivity analyses</h1>
@@ -406,47 +331,34 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 </section>
 <section id="caution-limitations" class="slide level2 center">
 <h2>Caution: Limitations!</h2>
+<div class="arrow-bullets">
 <ul>
 <li>Limited by the subjectivity of the choice of parameters to analyze</li>
-<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value</li>
+<li>That’s why we also run PSAs!, i.e., varying ALL input parameters at the same time, using priors to play a distribution around each value
+<ul>
+<li>PSA lecture will be available asynchronously</li>
+</ul></li>
 </ul>
-</section></section>
-<section>
-<section id="scenario-analysis" class="title-slide slide level1 center">
-<h1>Scenario analysis</h1>
-
+</div>
+</section>
+<section id="scenario-analysis" class="slide level2 section-slide center">
+<h2>Scenario analysis</h2>
+<div class="section-number">
+<p>04</p>
+</div>
 </section>
 <section id="motivation" class="slide level2 center">
 <h2>Motivation</h2>
+<div class="arrow-bullets">
 <ul>
-<li>Suppose we wanted to model the impact of these interventions under a “lower cost” scenario.</li>
-<li>One option is to</li>
-<li>It may be more efficient to define different scenarios rather than add additional strategies to the model structure itself.</li>
+<li>Rather than adding new strategies, we can model interventions under alternative assumptions—e.g., medication initiated pre-pregnancy versus during pregnancy, which has different startup risks and costs (hospital-based initiation vs no required stay if already stable).</li>
 </ul>
+</div>
 </section>
 <section id="scenario-analysis-1" class="slide level2 center">
 <h2>Scenario analysis</h2>
-<ul>
-<li>Focuses more on model <strong>assumptions</strong> rather than parameter uncertainty</li>
-<li>Could include separate analysis on:</li>
-</ul>
-<blockquote>
-<p>Subgroups/sub-populations, including different age cohorts &amp; risk levels</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Different perspectives (societal; modified societal; etc)</p>
-</blockquote>
-</section>
-<section id="scenario-analysis-2" class="slide level2 center">
-<h2>Scenario analysis</h2>
-<blockquote>
-<p>Hypothetical scenarios (“optimistic” and “conservative” scenarios; for example, if we have little evidence of long-term survival associated with medication X, we might have an optimistic versus conservative scenario)</p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>Time horizons</p>
-</blockquote>
+<p>::: ::: arrow-bullets - Examines uncertainty in <strong>model assumptions or structure</strong>, often resulting in different parameter values across scenarios (while interventions/strategies remain the same) - Uses hypothetical or alternative scenarios (e.g., optimistic vs conservative assumptions about long-term survival). - Can include separate analyses by: - Subgroups or sub-populations (e.g., age cohorts, risk levels) - Perspective (societal vs healthcare sector) - Time horizon</p>
+<p>::: :::</p>
 </section>
 <section id="examples" class="slide level2 center">
 <h2>Examples</h2>
@@ -471,16 +383,17 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <section id="examples-5" class="slide level2 center">
 <h2>Examples</h2>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section></section>
-<section>
-<section id="threshold-analysis" class="title-slide slide level1 center">
-<h1>Threshold analysis</h1>
-
+<img data-src="images/Screen Shot 2022-10-06 at 9.11.39 AM.png" width="748" class="r-stretch"></section>
+<section id="scenario-analysis-2" class="slide level2 section-slide center">
+<h2>Scenario analysis</h2>
+<div class="section-number">
+<p>05</p>
+</div>
 </section>
-<section id="threshold-analysis-1" class="slide level2 center">
+<section id="threshold-analysis" class="slide level2 center">
 <h2>Threshold analysis</h2>
 <ul>
-<li>Answers the question: What the input parameter need be to meet the country thresholds of:
+<li>Answers the question: What does the input parameter need to be to meet the country thresholds of:
 <ul>
 <li>$50,000/QALY gained</li>
 <li>$100,000/QALY gained</li>
@@ -496,7 +409,82 @@ NHB_2 = 0.10 \times 50000 - 2800 = 2200
 <section id="examples-7" class="slide level2 center">
 <h2>Examples</h2>
 
-<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section></section>
+<img data-src="images/Screen Shot 2022-10-06 at 9.14.02 AM.png" class="r-stretch"></section>
+<section id="summing-up-analyses-beyond-the-base-case" class="slide level2 section-slide center">
+<h2>Summing up analyses beyond the base case</h2>
+<div class="section-number">
+<p>06</p>
+</div>
+</section>
+<section id="analyses-beyond-the-base-case" class="slide level2 center">
+<h2>Analyses Beyond the Base Case</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 14%">
+<col style="width: 32%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analysis type</th>
+<th>What varies</th>
+<th>What question it answers</th>
+<th>What it does <em>not</em> tell you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>One-way sensitivity analysis</td>
+<td>One parameter at a time</td>
+<td>Which inputs most influence results?</td>
+<td>Joint uncertainty</td>
+</tr>
+<tr class="even">
+<td>Two-way sensitivity analysis</td>
+<td>Two parameters jointly</td>
+<td>How do two key inputs interact?</td>
+<td>Full parameter uncertainty</td>
+</tr>
+<tr class="odd">
+<td>Threshold analysis</td>
+<td>A single parameter</td>
+<td>At what value does the preferred strategy change?</td>
+<td>How plausible that value is</td>
+</tr>
+<tr class="even">
+<td>Scenario analysis</td>
+<td>Model assumptions or structure (with re-specified parameters)</td>
+<td>How do results change under alternative plausible scenarios?</td>
+<td>Key inputs may be unavailable, leading to partial or simplified scenario assumptions</td>
+</tr>
+<tr class="odd">
+<td>Probabilistic sensitivity analysis (PSA)</td>
+<td>All uncertain parameters simultaneously</td>
+<td>What is the probability each strategy is cost-effective at a given WTP?</td>
+<td>Does not address uncertainty in model structure or assumptions</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="probabilistic-sensitivity-analysis-psas" class="title-slide slide level1 center">
+<h1>Probabilistic Sensitivity Analysis (PSAs)</h1>
+
+</section>
+<section id="psas-asynchronous-lecture" class="slide level2 center">
+<h2>PSAs: Asynchronous lecture</h2>
+<div class="arrow-bullets">
+<ul>
+<li>Goes beyond other sensitivity analyses; instead of testing changes 1 at a time, PSA:
+<ul>
+<li>Reflects how uncertain we actually are about each input simultaneously</li>
+<li>Combines that uncertainty across the entire model</li>
+<li>Estimates the proportion of simulations in which each strategy is cost-effective at a given WTP (e.g., out of 10,000 iterations)</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank you!</h1>
 
