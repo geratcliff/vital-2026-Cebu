@@ -270,10 +270,8 @@
 </ul>
 </div>
 </section>
-<section>
-<section id="what-is-the-difference-between-a-rate-and-a-probability" class="title-slide slide level1 center" data-background="#c2f0c2">
-<h1>What is the difference between a rate and a probability?</h1>
-
+<section id="what-is-the-difference-between-a-rate-and-a-probability" class="slide level2 center" data-background="#c2f0c2">
+<h2>What is the difference between a rate and a probability?</h2>
 </section>
 <section id="rates-vs.-probabilities" class="slide level2 section-slide center">
 <h2>Rates vs.&nbsp;probabilities</h2>
@@ -303,16 +301,11 @@
 <img data-src="images/paste-62FF1911.png" width="539" class="r-stretch"></section>
 <section id="example-same-study-probability-vs.-rate" class="slide level2 center">
 <h2>Example: same study, probability vs.&nbsp;rate</h2>
-<p><br></p>
-<div class="arrow-bullets">
+<p>::: arrow-bullets {style=“line-height:1.1”} - <strong>Study:</strong> 100 people followed for up to 4 years; 40 deaths. - <strong>Probability (risk) over 4 years:</strong> <span class="math inline">40/100 = 0.40</span>&nbsp;; - <em>Interpretation:</em> 40% died within 4 years.</p>
 <ul>
-<li class="fragment"><p><strong>Study:</strong> 100 people followed for up to 4 years; 40 deaths.</p></li>
-<li class="fragment"><p><strong>Probability (risk) over 4 years:</strong> <span class="math inline">40/100 = 0.40</span>&nbsp;;</p></li>
-<li class="fragment"><p><em>Interpretation:</em> 40% died within 4 years. <br></p></li>
-<li class="fragment"><p><strong>Rate (if all 100 followed for 4 years):</strong> Total person-time = <span class="math inline">100 \times 4 = 400</span> person-years; <span class="math inline">40/400 = 0.10</span> deaths per person-year <br></p></li>
-<li class="fragment"><p><em>Interpretation:</em> ≈1 death per 10 years of total follow-up across the study population (aggregated person time)</p></li>
+<li class="fragment"><strong>Rate (if all 100 followed for 4 years):</strong> Total person-time = <span class="math inline">100 \times 4 = 400</span> person-years; <span class="math inline">40/400 = 0.10</span> deaths per person-year <br></li>
+<li class="fragment"><em>Interpretation:</em> ≈1 death per 10 years of total follow-up across the study population (aggregated person time) :::</li>
 </ul>
-</div>
 </section>
 <section id="timing-censoring" class="slide level2 center">
 <h2>Timing &amp; censoring</h2>
@@ -326,10 +319,8 @@
 </section>
 <section id="example-events-happen-early-vs.-late" class="slide level2 center">
 <h2>Example: events happen early vs.&nbsp;late</h2>
-<p><br></p>
-<div class="definition-box">
-<div class="term">
-<p><strong>Study:</strong> 100 people, planned follow-up = 4 years <br> <strong>Case:</strong> 40 deaths occur in Year 1</p>
+<div class="definition-box thin">
+<p>::: term {.text-smaller} <strong>Study:</strong> 100 people, planned follow-up = 4 years <br> <strong>Case:</strong> 40 deaths occur in Year 1</p>
 </div>
 <div class="definition">
 <ul>
@@ -340,7 +331,7 @@
 <li class="fragment"><strong>Probability (risk):</strong> <span class="math inline">40/100 = 0.40</span></li>
 </ul>
 </div>
-</div>
+<p>:::</p>
 </section>
 <section id="when-time-at-risk-is-not-reported1" class="slide level2 center">
 <h2>When time-at-risk is not reported<sup>1</sup></h2>
@@ -373,7 +364,9 @@
 </ul></li>
 </ul>
 </div>
-<p><br></p>
+</section>
+<section id="summary-rates-vs.-probabilities-2" class="slide level2 center">
+<h2>Summary: Rates vs.&nbsp;Probabilities</h2>
 <div style="font-size: 0.55em; line-height: 1.2;">
 <table class="caption-top">
 <colgroup>
@@ -447,14 +440,15 @@
 </section>
 <section id="conversions" class="slide level2 center">
 <h2>Conversions</h2>
-<ul>
-<li class="fragment"><p>A standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period).</p></li>
-<li class="fragment"><p>In other words, the risk per unit time doesn’t change over time. If the hazard were not constant (say risk increases the longer you’re sick), you would need a more complex time-dependent model.</p></li>
-<li class="fragment"><p>It is common to use the following formula to convert <span style="background-color: yellow;">rates to probabilities</span> under a constant (exponential) hazard.</p></li>
-</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>::: arrow-bullets {.smaller} - A standard Markov model assumes an <strong>exponential (constant-hazard)</strong> process. - This allows conversion between <strong>rates</strong> (instantaneous) and <strong>probabilities</strong> (over time). - If the hazard changes over time, simple conversions no longer apply.</p>
+</div></div>
+<div class="column" style="display:flex; align-items:center; justify-content:center;">
 <p><span class="math display">
 p = 1 - e^{-rt}
 </span></p>
+</div><p>:::</p>
 </section>
 <section id="conversions-1" class="slide level2 center">
 <h2>Conversions</h2>
@@ -582,24 +576,13 @@ p = 1 - e^{−0.02857229∗1} = 0.028168
 </section>
 <section id="alternative-rate-to-probability-conversions" class="slide level2 smaller center">
 <h2>Alternative Rate-to-Probability Conversions</h2>
-<div style="font-size: 0.8em">
-
-</div>
-<div class="column" style="width:50%;">
-
-</div><div class="arrow-bullets">
-<ul>
-<li class="fragment"><p>Long cycles can include multiple transitions (healthy → sick → dead).</p></li>
-<li class="fragment"><p>Standard rate/probability conversions<br>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>::: arrow-bullets {.smaller style=“line-height:1.15”} - Long cycles can include multiple transitions (healthy → sick → dead). - Standard rate–probability conversion<br>
 <span class="math inline">p_{HS}= 1 - e^{-r_{HS}\Delta t}</span><br>
-converts transitions independently, ignoring that death competes with sickness within the same time interval.</p></li>
-<li class="fragment"><p>This hides within-cycle events.</p></li>
-<li class="fragment"><p>Can lead to <strong>underestimation of deaths</strong> with long cycles.</p></li>
-<li class="fragment"><p>Fix: Shorter cycles or competing risk conversions</p></li>
-</ul>
-</div>
-<p>::: :::</p>
-<div class="column" style="width:50%;">
+treats transitions independently, ignoring competing risks. - This hides within-cycle events. - Can <strong>underestimate deaths</strong> with long cycles. - Fix: shorter cycles or competing-risk conversions.</p>
+</div></div>
+<div class="column" style="display:flex; align-items:center; justify-content:center;">
 <div class="cell" data-fig-width="4" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-comp-st" class="quarto-float quarto-figure quarto-figure-center">
@@ -669,13 +652,13 @@ converts transitions independently, ignoring that death competes with sickness w
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comp-st-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas
+Figure&nbsp;1: Compound transition patterns under standard conversion
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-</div><p>::: :::</p>
+</div><p>:::</p>
 </section>
 <section id="alternative-rate-to-probability-conversions-1" class="slide level2 smaller center">
 <h2>Alternative Rate-to-Probability Conversions</h2>
@@ -692,6 +675,7 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 </section>
 <section id="what-to-use" class="slide level2 center">
 <h2>What to use</h2>
+<div class="smaller" style="line-height:1.15">
 <table class="caption-top">
 <colgroup>
 <col style="width: 32%">
@@ -723,11 +707,12 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="alternative-rate-to-probability-conversions-2" class="slide level2 smaller center">
 <h2>Alternative Rate-to-Probability Conversions</h2>
 <p><br></p>
-<div class="highlight-box thin">
+<div class="highlight-box larger">
 <p>There’s an even more accurate way to correct for “competing risks” &amp; while it’s beyond the scope of this introductory workshop, we will briefly review how to do this within the Markov lecture.</p>
 </div>
 </section>
@@ -750,7 +735,7 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 </div>
 
 
-</section></section>
+</section>
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

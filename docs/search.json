@@ -3006,6 +3006,13 @@
     "text": "Rates involve person-time\n\n\n\nIncidence (hazard) rate: number of events per unit of person-time\nRates describe how fast events occur\nRates can range from 0 to \\infinity"
   },
   {
+    "objectID": "lectures/lec_rates-probabilities.html#what-is-the-difference-between-a-rate-and-a-probability",
+    "href": "lectures/lec_rates-probabilities.html#what-is-the-difference-between-a-rate-and-a-probability",
+    "title": "Rates & Probabilities",
+    "section": "What is the difference between a rate and a probability?",
+    "text": "What is the difference between a rate and a probability?"
+  },
+  {
     "objectID": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities",
     "href": "lectures/lec_rates-probabilities.html#rates-vs.-probabilities",
     "title": "Rates & Probabilities",
@@ -3038,7 +3045,7 @@
     "href": "lectures/lec_rates-probabilities.html#example-same-study-probability-vs.-rate",
     "title": "Rates & Probabilities",
     "section": "Example: same study, probability vs. rate",
-    "text": "Example: same study, probability vs. rate\n\n\n\nStudy: 100 people followed for up to 4 years; 40 deaths.\nProbability (risk) over 4 years: 40/100 = 0.40 ;\nInterpretation: 40% died within 4 years. \nRate (if all 100 followed for 4 years): Total person-time = 100 \\times 4 = 400 person-years; 40/400 = 0.10 deaths per person-year \nInterpretation: ≈1 death per 10 years of total follow-up across the study population (aggregated person time)"
+    "text": "Example: same study, probability vs. rate\n::: arrow-bullets {style=“line-height:1.1”} - Study: 100 people followed for up to 4 years; 40 deaths. - Probability (risk) over 4 years: 40/100 = 0.40 ; - Interpretation: 40% died within 4 years.\n\nRate (if all 100 followed for 4 years): Total person-time = 100 \\times 4 = 400 person-years; 40/400 = 0.10 deaths per person-year \nInterpretation: ≈1 death per 10 years of total follow-up across the study population (aggregated person time) :::"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#timing-censoring",
@@ -3052,7 +3059,7 @@
     "href": "lectures/lec_rates-probabilities.html#example-events-happen-early-vs.-late",
     "title": "Rates & Probabilities",
     "section": "Example: events happen early vs. late",
-    "text": "Example: events happen early vs. late\n\n\n\nStudy: 100 people, planned follow-up = 4 years  Case: 40 deaths occur in Year 1\n\n\n\nPerson-time = (40 \\times 1) + (60 \\times 4) = 280 person-years\n\nRate: 40/280 = 0.143 deaths per person-year\n\nProbability (risk): 40/100 = 0.40"
+    "text": "Example: events happen early vs. late\n\n::: term {.text-smaller} Study: 100 people, planned follow-up = 4 years  Case: 40 deaths occur in Year 1\n\n\n\nPerson-time = (40 \\times 1) + (60 \\times 4) = 280 person-years\n\nRate: 40/280 = 0.143 deaths per person-year\n\nProbability (risk): 40/100 = 0.40\n\n\n:::"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#when-time-at-risk-is-not-reported1",
@@ -3073,7 +3080,14 @@
     "href": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities-1",
     "title": "Rates & Probabilities",
     "section": "Summary: Rates vs. Probabilities",
-    "text": "Summary: Rates vs. Probabilities\n\n\n\nProbability\n\nAnswers: What proportion of people experience the event by time X?\n\nRate\n\nAnswers: How fast do events occur, per unit of time at risk?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\nRange\nUsed in\n\n\n\n\nRate\n\\dfrac{\\# \\text{events}}{\\text{total person-time}}\n0–\\infty\nRate matrices\n\n\nProbability / risk\n\\dfrac{\\# \\text{events}}{\\# \\text{people followed}}\n0–1\nProbability matrices"
+    "text": "Summary: Rates vs. Probabilities\n\n\n\nProbability\n\nAnswers: What proportion of people experience the event by time X?\n\nRate\n\nAnswers: How fast do events occur, per unit of time at risk?"
+  },
+  {
+    "objectID": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities-2",
+    "href": "lectures/lec_rates-probabilities.html#summary-rates-vs.-probabilities-2",
+    "title": "Rates & Probabilities",
+    "section": "Summary: Rates vs. Probabilities",
+    "text": "Summary: Rates vs. Probabilities\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\nRange\nUsed in\n\n\n\n\nRate\n\\dfrac{\\# \\text{events}}{\\text{total person-time}}\n0–\\infty\nRate matrices\n\n\nProbability / risk\n\\dfrac{\\# \\text{events}}{\\# \\text{people followed}}\n0–1\nProbability matrices"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#identifying-ratesprobabilities-through-the-literature",
@@ -3122,7 +3136,7 @@
     "href": "lectures/lec_rates-probabilities.html#conversions",
     "title": "Rates & Probabilities",
     "section": "Conversions",
-    "text": "Conversions\n\nA standard Markov model assumes an exponential (constant-hazard) transition process, so we can easily move between rates (instantaneous) and probabilities (over a time period).\nIn other words, the risk per unit time doesn’t change over time. If the hazard were not constant (say risk increases the longer you’re sick), you would need a more complex time-dependent model.\nIt is common to use the following formula to convert rates to probabilities under a constant (exponential) hazard.\n\n\np = 1 - e^{-rt}"
+    "text": "Conversions\n\n\n::: arrow-bullets {.smaller} - A standard Markov model assumes an exponential (constant-hazard) process. - This allows conversion between rates (instantaneous) and probabilities (over time). - If the hazard changes over time, simple conversions no longer apply.\n\n\n\np = 1 - e^{-rt}\n\n:::"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#conversions-1",
@@ -3185,7 +3199,7 @@
     "href": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions",
     "title": "Rates & Probabilities",
     "section": "Alternative Rate-to-Probability Conversions",
-    "text": "Alternative Rate-to-Probability Conversions\n\n\n\n\n\n\n\nLong cycles can include multiple transitions (healthy → sick → dead).\nStandard rate/probability conversions\np_{HS}= 1 - e^{-r_{HS}\\Delta t}\nconverts transitions independently, ignoring that death competes with sickness within the same time interval.\nThis hides within-cycle events.\nCan lead to underestimation of deaths with long cycles.\nFix: Shorter cycles or competing risk conversions\n\n\n::: :::\n\n\n\n\n\n\n\n\n\nG\n\n\n\nHealthy\n\nHealthy\n\n\n\nHealthy-&gt;Healthy\n\n\n\n\n\nSick\n\nSick\n\n\n\nHealthy-&gt;Sick\n\n\n\n\n\nDead\n\nDead\n\n\n\nHealthy-&gt;Dead\n\n\n\n\n\nSick-&gt;Sick\n\n\n\n\n\nSick-&gt;Dead\n\n\n\n\n\nDead-&gt;Dead\n\n\n\n\n\n\n\n\nFigure 1: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas\n\n\n\n\n\n::: :::"
+    "text": "Alternative Rate-to-Probability Conversions\n\n\n::: arrow-bullets {.smaller style=“line-height:1.15”} - Long cycles can include multiple transitions (healthy → sick → dead). - Standard rate–probability conversion\np_{HS}= 1 - e^{-r_{HS}\\Delta t}\ntreats transitions independently, ignoring competing risks. - This hides within-cycle events. - Can underestimate deaths with long cycles. - Fix: shorter cycles or competing-risk conversions.\n\n\n\n\n\n\n\n\n\n\nG\n\n\n\nHealthy\n\nHealthy\n\n\n\nHealthy-&gt;Healthy\n\n\n\n\n\nSick\n\nSick\n\n\n\nHealthy-&gt;Sick\n\n\n\n\n\nDead\n\nDead\n\n\n\nHealthy-&gt;Dead\n\n\n\n\n\nSick-&gt;Sick\n\n\n\n\n\nSick-&gt;Dead\n\n\n\n\n\nDead-&gt;Dead\n\n\n\n\n\n\n\n\nFigure 1: Compound transition patterns under standard conversion\n\n\n\n\n\n:::"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions-1",
@@ -3199,7 +3213,7 @@
     "href": "lectures/lec_rates-probabilities.html#what-to-use",
     "title": "Rates & Probabilities",
     "section": "What to use",
-    "text": "What to use\n\n\n\n\n\n\n\n\nEquation\nUse case\nAdvantage\n\n\n\n\np = 1 - e^{-rt}\nWhen you know a rate but need a probability for a fixed cycle length\nSimple closed-form conversion under a constant (exponential) hazard\n\n\nr = -\\ln(1-p)/t\nWhen you have a probability but need a rate to rescale across time intervals\nPreserves the correct exponential relationship when changing cycle length\n\n\nCompeting-risk formulas p_{HS}, p_{HD}\nWhen more than one event can occur from the same state (e.g., Healthy → Sick and Healthy → Dead)\nProperly accounts for competing hazards and prevents hidden within-cycle events"
+    "text": "What to use\n\n\n\n\n\n\n\n\n\nEquation\nUse case\nAdvantage\n\n\n\n\np = 1 - e^{-rt}\nWhen you know a rate but need a probability for a fixed cycle length\nSimple closed-form conversion under a constant (exponential) hazard\n\n\nr = -\\ln(1-p)/t\nWhen you have a probability but need a rate to rescale across time intervals\nPreserves the correct exponential relationship when changing cycle length\n\n\nCompeting-risk formulas p_{HS}, p_{HD}\nWhen more than one event can occur from the same state (e.g., Healthy → Sick and Healthy → Dead)\nProperly accounts for competing hazards and prevents hidden within-cycle events"
   },
   {
     "objectID": "lectures/lec_rates-probabilities.html#alternative-rate-to-probability-conversions-2",
