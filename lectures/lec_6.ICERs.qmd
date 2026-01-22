@@ -151,21 +151,17 @@ df_i4 <-
 00
 :::
 
-## Learning Objectives
+## Learning Objectives {.smaller}
 
 ::: icon-bullets
--   Differentiate between average & incremental CEA ratios
+-   Differentiate between average & incremental ICERs
 
 -   Characterize decision problems by whether they are competing or
     non-competing
 
--   Compute and interpret ICERs
+-   Compute and interpret ICERs, including "dominated" and "extendedly dominated" strategies
 
--   Practice ruling out "dominated" and "extendedly dominated"
-    strategies
-
--   Identify "high-value" versus "low value" care strategies, based on
-    generally accepted cost-effectiveness thresholds
+-   Identify "high-value" versus "low value" care strategies, based on generally accepted cost-effectiveness thresholds
 :::
 
 ## Outline {.numbered-list-slide}
@@ -382,141 +378,101 @@ $\Delta E$
 ::::
 :::::::
 
-##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-:::: definition-box
-::: term
-Incremental Cost-Effectiveness Ratio
+## Incremental Cost-Effectiveness Ratio {.smaller}
+
+**Most often used, since for most conditions there is already some available treatment.**
+
+::: columns
+
+::: {.column width="60%"}
+::: arrow-bullets {.smaller style="line-height:1.15"}
+::: incremental
+- $C_1$: net present value of total lifetime costs of **new** treatment
+- $C_0$: net present value of total lifetime costs of **default** treatment
+- $E_1$: effectiveness of new treatment (e.g., LE, QALYs, DALYs, other outcomes)
+- $E_0$: effectiveness of default treatment
+:::
+:::
 :::
 
+::: {.column width="40%" style="display:flex; align-items:center; justify-content:center;"}
 $$
-\begin{aligned}
-ICER &=  \frac{C_1 - C_0}{E_1 - E_0} 
- &= \frac{\Delta C}{\Delta E} 
-\end{aligned}
+\text{ICER}=\frac{C_1 - C_0\;(\Delta C)}{E_1 - E_0\;(\Delta E)}
 $$
-
--   $C_1$: net present value of total lifetime costs of new treatment
--   $C_0$: net present value of total lifetime costs of comparator
--   $E_1$: effectiveness of new treatment
--   $E_0$: effectiveness of comparator
-    -   [Effectivness is measured in expected life expectancy,
-        quality-adjusted life years (QALYs) or disability-adjusted life
-        years (DALYs), or some decision-relevant health
-        outcome.]{style="font-size: 2vh"}
-
-[Most often used, since for most conditions there is already some
-available treatment.]{.bold .accent-text}
-::::
-
-<!-- # Example: Neurologic Disease -->
-
-<!-- ## Neurologic Disease Decision Tree -->
-
-<!-- - Consider a neurologic disease that blocks a certain cell receptor in the brain.  -->
-
-<!-- - If left untreated, the disease is lethal for 50 out of every 1,000 people. -->
-
-<!-- ## Neurologic Disease Decision Tree -->
-
-<!-- - A hypothetical new treatment reduces the mortality rate to to 15 out of every 1,000, but only among people with the certain cell receptor.  -->
-
-<!-- - Among people without the receptor, the treatment confers a 1% probability of death.  -->
-
-<!-- ## Neurologic Disease Decision Tree -->
-
-<!-- - Rather than treat none or treat all suspected with the disease, a biopsy option is available. -->
-
-<!-- - TK -->
-
-## Neurologic Disease Decision Tree {.title-photo-slide}
-
-::: photo-container
-![](images/lec6/Neurologic.png)
+:::
 :::
 
-## Outcomes
-
-:::::: concept-grid
-::: concept-box
-$C_{treat}$ = [expected cost of treat everyone strategy.]{.db-text}
-:::
-
-::: concept-box
-$C_{no treat}$ = [expected cost of treat *no one* strategy.]{.db-text}
-:::
-
-::: concept-box
-$C_{biopsy}$ = [expected cost of biopsy strategy.]{.db-text}
-:::
-::::::
-
-:::::: {.concept-grid .fragment}
-::: {.concept-box .accent}
-$E_{treat}$ = [expected life expectancy of treat everyone
-strategy.]{.db-text}
-:::
-
-::: {.concept-box .accent}
-$E_{no treat}$ = [expected expectancy of treat *no one*
-strategy.]{.db-text}
-:::
-
-::: {.concept-box .accent}
-$E_{biopsy}$ = [expected expectancy of biopsy strategy.]{.db-text}
-:::
-::::::
-
-## Outcomes in Amua
-
-![](images/lec6/outcomes-amua.png){fig-align="center"}
-
-## Strategy: Treat No One
-
-![](images/lec6/NoTreatOutcomes.png)
-
-## Strategy: Treat All
-
-![](images/lec6/TreatOutcomes.png)
-
-## Key Takeaways (For Now)
-
-::: {.incremental .icon-bullets}
--   Treatment yields *higher* life expectancy for those with disease,
-    but comes at a cost. (↑ LE, ↑ Cost)
--   Treatment yields *lower* life expectancy for those without the
-    disease, *and also* comes at a cost. (↓ LE, ↑ Cost)
--   Biopsy can help balance these two outcomes by better targeting
-    treatment, but also comes with costs and risks.
--   Incremental CEA provides a transparent framework for quantifying and
-    weighing these considerations.
-:::
-
-##  {auto-animate="true" auto-animate-easing="ease-in-out"}
-
-:::: definition-box
-::: term
-Average Cost-Effectiveness Ratio
-:::
+## Average Cost-Effectiveness Ratio {.smaller}
 
 **Special case where** $C_0$ and $E_0$ are assumed to be zero.
 
-$$
-\begin{aligned}
-ICER &=  \frac{C_1 - 0}{E_1 - 0}
- &= \frac{C_1}{E_1 }
-\end{aligned}
-$$
+::: columns
 
--   $C_1$: net present value of total lifetime costs of new treatment
--   $C_0$: Assumed zero
--   $E_1$: effectiveness of new treatment
--   $E_0$: Assumed zero
-    -   [Effectivness is measured in expected life expectancy,
-        quality-adjusted life years (QALYs) or disability-adjusted life
-        years (DALYs), or some decision-relevant health
-        outcome.]{style="font-size: 2vh"}
-::::
+::: {.column width="60%"}
+::: arrow-bullets {.smaller style="line-height:1.15"}
+::: incremental
+- $C_1$: net present value of total lifetime costs of **new** treatment
+- $C_0$: assumed to be **0**
+- $E_1$: effectiveness of new treatment (e.g., LE, QALYs, DALYs, other outcomes)
+- $E_0$: assumed to be **0**
+:::
+:::
+:::
+
+::: {.column width="40%" style="display:flex; align-items:center; justify-content:center;"}
+$$
+\text{ACER}
+= \frac{C_1 - 0}{E_1 - 0}
+= \frac{C_1}{E_1}
+$$
+:::
+
+:::
+
+
+
+## Treat All vs. Treat None
+
+Strategy: Treat All 
+![](images/cea-neurologic-disease_tx.png)
+
+
+
+## Treat All vs. Treat None
+
+Strategy: Treat No One 
+![](images/cea-neurologic-disease_notx.png)
+
+
+
+## Key Takeaways (For Now)
+
+::: columns
+::: {.column width="40%"}
+
+![](images/cea-neurologic-disease_notx.png)
+
+
+![](images/cea-neurologic-disease_tx.png)
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.incremental style="font-size: 0.8em"}
+
+- Treatment yields *higher* life expectancy for those with disease, but comes at a cost.  
+- Treatment yields *lower* life expectancy for those without the disease, *and also* comes at a cost.  
+- **Biopsy** can help balance these two outcomes by better targeting treatment, but also comes with risks and costs.  
+- Incremental CEA provides a transparent framework for quantifying and weighing these considerations.  
+
+:::
+:::
+:::
+
+
 
 ## Non-Competing vs. Competing CEAs {.section-slide}
 
@@ -732,15 +688,10 @@ Select programs that are cost-saving & offer benefit
 Rank other programs
 :::
 
-::: {.step-content .incremental .arrow-bullets}
--   Rank other programs in ascending order by their cost-effectiveness
-    ratio (lowest to highest)
-
--   Programs are then selected from the LEAST to the MOST expensive
-    until the budget is expended
-
--   Final array of programs selected will depend on the budget
-    constraint
+::: {.step-content .incremental .arrow-bullets .smaller style="line-height:1.15"}
+- Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)
+- Programs are selected from the **least** to the **most** expensive until the budget is exhausted
+- Final selection depends on the **budget constraint**
 :::
 ::::::
 :::::::
@@ -824,7 +775,7 @@ df_ex %>%
                             type=="cn_ep" ~ "Adopted")) %>% 
          
          select(program,cost,qalys,status) %>% kable(col.names = c("Program","Cost","QALYs","Status"),format.args = list(big.mark = ",")) %>% 
-    kableExtra::kable_styling() %>%
+    kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -861,7 +812,7 @@ df_ex %>%
          
          select(program,cost,qalys,status) %>% 
   kable(col.names = c("Program","Cost","QALYs","Status"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -895,7 +846,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -929,7 +880,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -978,7 +929,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce,cumcost,cumeffect) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E","Cumulative Cost","Cumulative QALYs"),format.args = list(big.mark = ",")) #%>% 
-  # kableExtra::kable_styling() %>%
+  # kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   # kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   # kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -999,7 +950,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce,cumcost,cumeffect) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E","Cumulative Cost","Cumulative QALYs"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -1012,7 +963,7 @@ df_ex_[color.me.green,] %>%
   mutate(Budget = budget) %>% 
   select(Budget,everything()) %>% 
   kable() %>% 
-    kableExtra::kable_styling()
+    kableExtra::kable_styling(bootstrap_options = "condensed")
 ```
 
 ::: notes
@@ -1056,7 +1007,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce,cumcost,cumeffect) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E","Cumulative Cost","Cumulative QALYs"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7")
 
@@ -1070,7 +1021,7 @@ df_ex_[color.me.green,] %>%
   mutate(Remaining = budget - Cost) %>% 
   select(Budget,everything()) %>% 
   kable() %>% 
-    kableExtra::kable_styling()
+    kableExtra::kable_styling(bootstrap_options = "condensed")
 ```
 
 ## Shopping Spree Problem {.smaller}
@@ -1088,7 +1039,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce,cumcost,cumeffect) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E","Cumulative Cost","Cumulative QALYs"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7") %>% 
   kableExtra::row_spec(color.me.yellow, bold = T, color = "black", background = "#e3df74")
@@ -1103,7 +1054,7 @@ df_ex_[color.me.green,] %>%
   mutate(Remaining = budget - Cost) %>% 
   select(Budget,everything()) %>% 
   kable() %>% 
-    kableExtra::kable_styling()
+    kableExtra::kable_styling(bootstrap_options = "condensed")
 ```
 
 ## Shopping Spree Problem {.smaller}
@@ -1122,7 +1073,7 @@ df_ex_ %>%
          
          select(program,cost,qalys,ce,cumcost,cumeffect) %>% 
   kable(col.names = c("Program","Cost","QALYs","C/E","Cumulative Cost","Cumulative QALYs"),format.args = list(big.mark = ",")) %>% 
-  kableExtra::kable_styling() %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
   kableExtra::row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA") %>% 
   kableExtra::row_spec(color.me.green, bold = T, color = "black", background = "#a8d4a7") %>% 
   kableExtra::row_spec(color.me.yellow, bold = T, color = "black", background = "#e3df74")
@@ -1144,7 +1095,7 @@ df_ex_[c(color.me.green,color.me.yellow),]  %>%
   mutate(Remaining = budget - Cost) %>% 
   select(Budget,everything()) %>% 
   kable() %>% 
-    kableExtra::kable_styling()
+    kableExtra::kable_styling(bootstrap_options = "condensed")
 ```
 
 ::: {style="font-size: 0.8em"}
@@ -1333,39 +1284,10 @@ fetal outcomes.
 :::::
 
 
-## (2c) Identify Dominated Strategies {.smaller auto-animate="true"}
+## (2b) Identify Dominated Strategies {.smaller auto-animate="true"}
 
-::::: split-content
-::: content-text
-::: incremental
--   We can also rule out strategies where *some other competing
-    strategy* results in more (or equal) health at lower (or equal)
-    cost.
--   This is known as "strong" dominance.
-:::
-:::
-
-::: {.content-visual .fragment}
-![](images/vis_icer3.png){fig-align="center"}
-:::
-:::::
-
-## (2c) Identify Dominated Strategies {.smaller auto-animate="true"}
-
-::::: split-content
-::: content-text
-::: incremental
--   We can also rule out strategies where *some other competing
-    strategy* results in more (or equal) health at lower (or equal)
-    cost.
--   This is known as "strong" dominance.
-:::
-:::
-
-::: {.content-visual .fragment}
 ![](images/vis_icer4.png){fig-align="center"}
-:::
-:::::
+
 
 
 ## What about strategy B? {auto-animate="true"}
@@ -1462,7 +1384,9 @@ Efficiency Frontier
 
 ::: {.column width="40%"}
 ::: definition
-The efficiency frontier is the set of non-dominated strategies.
+-   The efficiency frontier is the set of non-dominated strategies: Lower & right = better (more effective and less costly).
+-   Any point above the A-D line (like B) delivers fewer QALYs per dollar than the A–D mix.
+
 :::
 :::
 
@@ -1587,7 +1511,7 @@ Determine strategies ruled out by extended dominance.
 :::
 
 ::: step-content
-Determine strategies ruled out by extended dominance.
+Re-calculate ICERs after ruling out all dominated strategies.
 :::
 ::::::
 
@@ -1630,7 +1554,7 @@ df %>% kable(col.names = c("Strategy","Cost","QALYs"),format.args = list(big.mar
 1.  Calculate costs and effects for each strategy.
 
 [2. Sort table by costs in ascending order.]{.fragment
-.highlight-red}[^2]
+.highlight-red}[^2] - what are you getting for each additional cost. 
 :::
 
 ::: {.column width="50%"}
@@ -1902,6 +1826,7 @@ df_i3  %>%
 
 ::: nonincremental
 -   You can see this in the pictures as well ....
+-   A steeper slope = the "C" (numerator) is increasing faster than "E" (denominator) = less efficient use of resources
 :::
 
 ![](images/vis_icer11.png){fig-align="center"}
@@ -2045,23 +1970,34 @@ df %>%
 #| warning: false
 #| message: false
 
-df1 <- 
-  df %>% 
-  mutate(cost_per_daly_averted = iCost/DALYs_averted) %>% 
-  mutate(status = ifelse(cost_per_daly_averted <0 , "Dominated (Strong)","")) %>% 
-  mutate(status = ifelse(is.na(status),"",status)) 
+df1 <- df %>%
+  mutate(cost_per_daly_averted = iCost / DALYs_averted) %>%
+  mutate(status = ifelse(cost_per_daly_averted < 0, "Dominated (Strong)", ""))
 
 color.me.red <- which(df1$status == "Dominated (Strong)")
 
-df1 %>% 
-  mutate(cost_per_daly_averted = round(cost_per_daly_averted,0)) %>% 
-    select(-Cost,-DALYs) %>% 
-  kable(col.names = c("Strategy","Incremental Cost","DALYs Averted", "Incremental Cost per DALY Averted", "Status"),format.args = list(big.mark = ",")) %>%
-  kable_styling() %>% 
-  row_spec(color.me.red, bold = T, color = "black", background = "#FCD2CA")
+df1 %>%
+  mutate(cost_per_daly_averted = round(cost_per_daly_averted, 0)) %>%
+  select(
+    Strategy,
+    Cost, DALYs,                 # <-- totals (keep these)
+    iCost, DALYs_averted,         # <-- incrementals
+    cost_per_daly_averted,
+    status
+  ) %>%
+  kable(
+    col.names = c(
+      "Strategy", "Cost", "DALYs",
+      "Incremental Cost", "DALYs Averted",
+      "Incremental Cost per DALY Averted", "Status"
+    ),
+    format.args = list(big.mark = ",")
+  ) %>%
+  kableExtra::kable_styling(bootstrap_options = "condensed") %>%
+  kableExtra::row_spec(color.me.red, bold = TRUE, color = "black", background = "#FCD2CA")
 ```
 :::
-## 
+
 
 :::concept-grid
 :::{.concept-box .accent style="font-size: 3em"}
@@ -2269,9 +2205,9 @@ What are common thresholds and how are they determined?
 
 ::: {.arrow-bullets .incremental}
 -   In high income countries, common thresholds are \$50,000/QALY,
-    \$100,000/QALY, and \$100,000/QALY.
--   In LMICs, 0.5-3x per capita gross domestic product (GDP) per DALY
-    averted.
+    \$100,000/QALY, and \$150,000/QALY.
+-   In LMICs, 0.5-1x per capita gross domestic product (GDP) per DALY
+    averted is what is now recommended.
 -   More on this in a few minutes.
 :::
 
@@ -2600,22 +2536,19 @@ df4 %>%
 
 ## {.summary-end-slide}
 
-::::: summary-circle
+::: summary-circle
 ::: end-title
 Key Takeaways
 :::
 
-::: end-subtitle
-Benefits
+::: key-points
+- Use average C/E ratios for non-competing “shopping spree” problems; use ICERs for mutually exclusive choices.
+- Build the table in order: totals → sort by cost → incrementals and ICERs.
+- Remove dominated and extendedly dominated strategies, then re-calculate to obtain the efficiency frontier.
+- Choose the best remaining option under the cost-effectiveness threshold with a complete comparator set.
+:::
 :::
 
-<ul class="key-points">
-<li>X</li>
-<li>X</li>
-<li>X</li>
-<li>X</li>
-</ul>
-:::::
 
 ## Questions? {.questions-slide}
 

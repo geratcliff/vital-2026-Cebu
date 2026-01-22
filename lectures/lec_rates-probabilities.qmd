@@ -155,7 +155,7 @@ time period**.
 -   Rates can range from 0 to $\infinity$
 ::: 
 
-# What is the difference between a rate and a probability? {background="#c2f0c2"}
+## What is the difference between a rate and a probability? {background="#c2f0c2"}
 
 ## Rates vs. probabilities {.section-slide}
 
@@ -186,13 +186,11 @@ time period**.
 
 
 ## Example: same study, probability vs. rate
-<br>
 
-::: arrow-bullets
+::: arrow-bullets {style="line-height:1.1"}
 -   **Study:** 100 people followed for up to 4 years; 40 deaths.
 -   **Probability (risk) over 4 years:** $40/100 = 0.40$\ ; 
 -   *Interpretation:* 40% died within 4 years.
-<br>
 
 -   **Rate (if all 100 followed for 4 years):** Total person-time = $100 \times 4 = 400$ person-years;
     $40/400 = 0.10$ deaths per person-year <br> 
@@ -212,10 +210,9 @@ time period**.
 
 
 ## Example: events happen early vs. late
-<br>
 
-::: definition-box
-::: term
+:::: {.definition-box .thin}
+::: term {.text-smaller}
 **Study:** 100 people, planned follow-up = 4 years <br>
 **Case:** 40 deaths occur in Year 1
 :::
@@ -259,7 +256,8 @@ time period**.
     -   Answers: *How fast do events occur, per unit of time at risk?*
 :::
 
-<br>
+
+## Summary: Rates vs. Probabilities
 
 
 ::: {style="font-size: 0.55em; line-height: 1.2;"}
@@ -317,21 +315,22 @@ time period**.
 
 ## Conversions
 
--   A standard Markov model assumes an exponential (constant-hazard)
-    transition process, so we can easily move between rates
-    (instantaneous) and probabilities (over a time period).
 
--   In other words, the risk per unit time doesn't change over time. If
-    the hazard were not constant (say risk increases the longer you're
-    sick), you would need a more complex time-dependent model.
+::: columns
+::: {.column width="60%"}
+::: arrow-bullets {.smaller}
+- A standard Markov model assumes an **exponential (constant-hazard)** process.
+- This allows conversion between **rates** (instantaneous) and **probabilities** (over time).
+- If the hazard changes over time, simple conversions no longer apply.
+:::
+:::
 
--   It is common to use the following formula to convert [rates to
-    probabilities]{style="background-color: yellow;"} under a constant
-    (exponential) hazard.
-
+::: {.column width="40%" style="display:flex; align-items:center; justify-content:center;"}
 $$
-p = 1 - e^{-rt} 
-$$ 
+p = 1 - e^{-rt}
+$$
+:::
+:::
 
 
 ## Conversions
@@ -446,51 +445,42 @@ when modeling hundredths of thousands of individuals, for example
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 
-::: {style="font-size: 0.8em"}
-:::
+::: columns
 
-::: {.column width="50%"}
-:::
-::: arrow-bullets
--   Long cycles can include multiple transitions (healthy → sick → dead).
-
--   Standard rate/probability conversions\
-    $p_{HS}= 1 - e^{-r_{HS}\Delta t}$\
-    converts transitions independently, ignoring that death
-    competes with sickness within the same time interval.
-
--   This hides within-cycle events. 
-
--   Can lead to **underestimation of deaths** with long cycles.
-
--   Fix: Shorter cycles or competing risk conversions
+::: {.column width="55%"}
+::: arrow-bullets {.smaller style="line-height:1.15"}
+- Long cycles can include multiple transitions (healthy → sick → dead).
+- Standard rate–probability conversion  
+  $p_{HS}= 1 - e^{-r_{HS}\Delta t}$  
+  treats transitions independently, ignoring competing risks.
+- This hides within-cycle events.
+- Can **underestimate deaths** with long cycles.
+- Fix: shorter cycles or competing-risk conversions.
 :::
 :::
-::: 
 
-
-::: {.column width="50%"}
+::: {.column width="45%" style="display:flex; align-items:center; justify-content:center;"}
 ```{dot}
 //| fig-align: center
 //| fig-width: 4
-//| fig-cap: compound Transition Patterns Using Standard Rate to Probability Conversion Formulas
+//| fig-cap: Compound transition patterns under standard conversion
 //| label: fig-comp-st
 digraph G {
-    layout = neato;
-    Healthy [pos="0,0!" style="filled" fillcolor="#81aede"];
-    Sick [pos="1,1!" style="filled" fillcolor="#81aede"]; 
-    Dead [pos="1,-1!"]
-    Healthy -> Healthy [color="#d9d0d0"];
-    Sick -> Sick [color="#d9d0d0"];
-    Healthy -> Sick [color="blue" penwidth=3 ]; 
-    Sick -> Dead [color="red" style="dotted" penwidth=3];
-    Healthy -> Dead [color="#d9d0d0"];
-    Dead -> Dead [color="#d9d0d0"];
-  }
+  layout = neato;
+  Healthy [pos="0,0!" style="filled" fillcolor="#81aede"];
+  Sick    [pos="1,1!" style="filled" fillcolor="#81aede"];
+  Dead    [pos="1,-1!"];
+  Healthy -> Healthy [color="#d9d0d0"];
+  Sick    -> Sick    [color="#d9d0d0"];
+  Healthy -> Sick    [color="blue" penwidth=3];
+  Sick    -> Dead    [color="red" style="dotted" penwidth=3];
+  Healthy -> Dead    [color="#d9d0d0"];
+  Dead    -> Dead    [color="#d9d0d0"];
+}
 ```
 :::
 :::
-:::
+
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 
@@ -513,20 +503,25 @@ $$
 
 ## What to use 
 
+::: {.smaller style="line-height:1.15"}
+
 | Equation                                 | Use case                                                                                             | Advantage                                                                       |
 |-----------------------|-----------------------|-------------------------|
 | $p = 1 - e^{-rt}$                        | When you know a rate but need a probability for a fixed cycle length                         | Simple closed-form conversion under a constant (exponential) hazard             |
 | $r = -\ln(1-p)/t$                        | When you have a probability but need a rate to rescale across time intervals                 | Preserves the correct exponential relationship when changing cycle length       |
 | Competing-risk formulas $p_{HS}, p_{HD}$ | When more than one event can occur from the same state (e.g., *Healthy → Sick* and *Healthy → Dead*) | Properly accounts for competing hazards and prevents hidden within-cycle events |
+:::
+
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 <br>
 
-::: {.highlight-box .thin}
+::: {.highlight-box .larger}
 There's an even more accurate way to correct for "competing risks" &
 while it's beyond the scope of this introductory workshop, we will
 briefly review how to do this within the Markov lecture.
 :::
+
 
 ##  {.summary-end-slide}
 
