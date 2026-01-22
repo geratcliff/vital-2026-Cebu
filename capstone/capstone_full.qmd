@@ -27,7 +27,7 @@ title: "Full Capstone Help"
 library(downloadthis)
 ## Link in Github repo
 download_link(
-  link = "https://geratcliff.github.io/vital-2026-Cebu/capstone/CapstonePPTTemplate_Cebu.pptx",
+  link = "https://geratcliff.github.io/vital-2026-Cebu/capstone/CapstonePPTTemplate_Cebu",
   button_label = "Download PPT Template for Final Presentation",
   button_type = "primary",
   has_icon = TRUE,
