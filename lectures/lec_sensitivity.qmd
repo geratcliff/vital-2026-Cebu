@@ -37,56 +37,51 @@ editor:
 
 
 ## Outline {.numbered-list-slide}
-::: number-list
 
+::: number-list
 ::: list-item
 ::: number 01 :::
 ::: text
 One-way sensitivity analysis
 :::
 :::
-
 ::: list-item
 ::: number 02 :::
 ::: text
 Two-way sensitivity analysis
 :::
 :::
-
 ::: list-item
 ::: number 03 :::
 ::: text
 Limitations and extensions
 :::
 :::
-
 ::: list-item
 ::: number 04 :::
 ::: text
-Scenarios analysis
+Scenario analysis
 :::
 :::
-
 ::: list-item
 ::: number 05 :::
 ::: text
 Threshold analysis
 :::
 :::
-
 ::: list-item
 ::: number 06 :::
 ::: text
 Summing up analyses beyond the base case
 :::
 :::
-
 :::
+
 
 
 ## Sensitivity Analyses
 
-::: 
+::: incremental
 ::: arrow-bullets
 -   ICER for Prevention strategy is just above WTP threshold of
     \$50,000/QALY.
@@ -175,7 +170,7 @@ Summing up analyses beyond the base case
 
 ## Two-way sensitivity analysis
 
-::: 
+::: incremental
 ::: arrow-bullets
 -   A way to map the interaction effects between two parameters in a
     decision analysis model
@@ -192,7 +187,7 @@ Summing up analyses beyond the base case
 
 ## HIV prevention
 
-::: 
+::: incremental
 ::: arrow-bullets
 -   Markov model examining strategies for HIV prevention among
     serodiscordant couples seeking conception (woman does not have HIV
@@ -218,7 +213,7 @@ Summing up analyses beyond the base case
 
 ## Financial incentives for acute stroke care
 
-::: 
+::: incremental
 ::: arrow-bullets
 -   Under pay for performance policies in the US, **physicians or
     hospitals are paid more for meeting evidence-based quality targets**
@@ -276,7 +271,7 @@ Summing up analyses beyond the base case
 
 ## Scenario analysis
 
-::: 
+::: incremental
 ::: arrow-bullets
 -   Examines uncertainty in **model assumptions or structure**, often resulting in different parameter values across scenarios (while interventions/strategies remain the same)
 -   Uses hypothetical or alternative scenarios (e.g., optimistic vs conservative assumptions about long-term survival).
