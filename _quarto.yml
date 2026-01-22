@@ -20,15 +20,15 @@ website:
     search: false
     collapse-level: 1
     contents:
-      - href: index.html
+      - href: index.qmd
         text: Home
-      - href: prework.html
+      - href: prework.qmd
         text: Before you arrive
       - section: "Capstone"
         contents:
-          - href: capstone/capstone_full.html
+          - href: capstone/capstone_full.qmd
             text: Capstone Help
-          - href: _gbd_lifetables/lifetables.html
+          - href: _gbd_lifetables/lifetables.qmd
             text: Country specific life-tables
         
       - section: "Model Diagram Drawing Resources"
