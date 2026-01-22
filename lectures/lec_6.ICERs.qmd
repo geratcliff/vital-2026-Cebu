@@ -16,6 +16,8 @@ format:
     highlight-style: ayu-mirage
     footer: |
       [Back to Website](../index.html)
+execute:
+  cache: false
 editor_options: 
   chunk_output_type: console
 editor: 
