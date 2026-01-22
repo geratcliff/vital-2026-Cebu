@@ -172,6 +172,8 @@ time period**.
 
 -   **Key distinction:** rates use **person-time** in the denominator;
     probabilities do not
+    -   **Probabilities collapse into a time window (10% by year 1; 30% by 3 years; it's cumulative);
+    -   **Rates have time in the denominator 
 ::: 
 
 ## Rate (incidence rate)
@@ -213,16 +215,12 @@ time period**.
 
 :::: {.definition-box .thin}
 
-::: term {.text-smaller}
 **Study:** 100 people, planned follow-up = 4 years <br>
 **Case:** 40 deaths occur in Year 1
-:::
 
-::: definition
 -   Person-time = $(40 \times 1) + (60 \times 4) = 280$ person-years\
 -   **Rate:** $40/280 = 0.143$ deaths per person-year\
 -   **Probability (risk):** $40/100 = 0.40$
-:::
 
 ::::
 
@@ -446,6 +444,8 @@ we would get 0.027. This is CLOSE but it could make a huge difference
 when modeling hundredths of thousands of individuals, for example
 :::
 
+
+
 ## Alternative Rate-to-Probability Conversions {.smaller}
 
 ::: columns
@@ -462,12 +462,8 @@ when modeling hundredths of thousands of individuals, for example
 :::
 :::
 
-::: {.column width="45%" style="display:flex; align-items:center; justify-content:center;"}
+::: {.column width="45%"}
 ```{dot}
-//| fig-align: center
-//| fig-width: 4
-//| fig-cap: Compound transition patterns under standard conversion
-//| label: fig-comp-st
 digraph G {
   layout = neato;
   Healthy [pos="0,0!" style="filled" fillcolor="#81aede"];
