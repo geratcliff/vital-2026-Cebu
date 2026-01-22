@@ -5,6 +5,11 @@ library(glue)
 
 countries = c("Bangladesh", "Cambodia", "Cameroon", "China", "Ethiopia", "India", "Kenya", "Mozambique", "Philippines", "Rwanda", "South Africa", "Sri Lanka", "Thailand", "Zimbabwe", "United Republic of Tanzania", "Uganda", "Zambia")
 
+countries <- c("United Republic of Tanzania", "Morocco", "Ethiopia", "India", "China", 
+               "Zambia", "Uganda", "Viet Nam", "South Africa", "Zimbabwe",
+               "Thailand", "Senegal", "Bangladesh", "Cambodia", "Mozambique",
+               "Indonesia", "Rwanda", "Philippines", "Lebanon")
+
 cbd_life_tables <- c(
    "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_28_0.zip",
    "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_GBD_2019_LIFE_TABLES_1950_2019_ID_5_0.zip",

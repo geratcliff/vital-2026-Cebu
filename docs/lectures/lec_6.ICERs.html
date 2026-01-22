@@ -166,14 +166,13 @@
 <p>00</p>
 </div>
 </section>
-<section id="learning-objectives" class="slide level2 center">
+<section id="learning-objectives" class="slide level2 smaller center">
 <h2>Learning Objectives</h2>
 <div class="icon-bullets">
 <ul>
-<li><p>Differentiate between average &amp; incremental CEA ratios</p></li>
+<li><p>Differentiate between average &amp; incremental ICERs</p></li>
 <li><p>Characterize decision problems by whether they are competing or non-competing</p></li>
-<li><p>Compute and interpret ICERs</p></li>
-<li><p>Practice ruling out “dominated” and “extendedly dominated” strategies</p></li>
+<li><p>Compute and interpret ICERs, including “dominated” and “extendedly dominated” strategies</p></li>
 <li><p>Identify “high-value” versus “low value” care strategies, based on generally accepted cost-effectiveness thresholds</p></li>
 </ul>
 </div>
@@ -362,117 +361,63 @@
 </div>
 </div>
 </section>
-<section id="section" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="definition-box">
-<div class="term">
-<p>Incremental Cost-Effectiveness Ratio</p>
-</div>
+<section id="incremental-cost-effectiveness-ratio" class="slide level2 smaller center">
+<h2>Incremental Cost-Effectiveness Ratio</h2>
+<p><strong>Most often used, since for most conditions there is already some available treatment.</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>::: arrow-bullets {.smaller style=“line-height:1.15”} ::: incremental - <span class="math inline">C_1</span>: net present value of total lifetime costs of <strong>new</strong> treatment - <span class="math inline">C_0</span>: net present value of total lifetime costs of <strong>default</strong> treatment - <span class="math inline">E_1</span>: effectiveness of new treatment (e.g., LE, QALYs, DALYs, other outcomes) - <span class="math inline">E_0</span>: effectiveness of default treatment</p>
+</div></div>
+<p>:::</p>
+<div class="column" style="display:flex; align-items:center; justify-content:center;">
 <p><span class="math display">
-\begin{aligned}
-ICER &amp;=  \frac{C_1 - C_0}{E_1 - E_0}
-&amp;= \frac{\Delta C}{\Delta E}
-\end{aligned}
+\text{ICER}=\frac{C_1 - C_0\;(\Delta C)}{E_1 - E_0\;(\Delta E)}
 </span></p>
-<ul>
-<li><span class="math inline">C_1</span>: net present value of total lifetime costs of new treatment</li>
-<li><span class="math inline">C_0</span>: net present value of total lifetime costs of comparator</li>
-<li><span class="math inline">E_1</span>: effectiveness of new treatment</li>
-<li><span class="math inline">E_0</span>: effectiveness of comparator
-<ul>
-<li><span style="font-size: 2vh">Effectivness is measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.</span></li>
-</ul></li>
-</ul>
-<p><span class="bold accent-text">Most often used, since for most conditions there is already some available treatment.</span></p>
-</div>
-<!-- # Example: Neurologic Disease -->
-<!-- ## Neurologic Disease Decision Tree -->
-<!-- - Consider a neurologic disease that blocks a certain cell receptor in the brain.  -->
-<!-- - If left untreated, the disease is lethal for 50 out of every 1,000 people. -->
-<!-- ## Neurologic Disease Decision Tree -->
-<!-- - A hypothetical new treatment reduces the mortality rate to to 15 out of every 1,000, but only among people with the certain cell receptor.  -->
-<!-- - Among people without the receptor, the treatment confers a 1% probability of death.  -->
-<!-- ## Neurologic Disease Decision Tree -->
-<!-- - Rather than treat none or treat all suspected with the disease, a biopsy option is available. -->
-<!-- - TK -->
+</div><p>:::</p>
 </section>
-<section id="neurologic-disease-decision-tree" class="slide level2 title-photo-slide center">
-<h2>Neurologic Disease Decision Tree</h2>
-<div class="photo-container">
-<p><img data-src="images/lec6/Neurologic.png"></p>
-</div>
+<section id="average-cost-effectiveness-ratio" class="slide level2 smaller center">
+<h2>Average Cost-Effectiveness Ratio</h2>
+<p><strong>Special case where</strong> <span class="math inline">C_0</span> and <span class="math inline">E_0</span> are assumed to be zero.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>::: arrow-bullets {.smaller style=“line-height:1.15”} ::: incremental - <span class="math inline">C_1</span>: net present value of total lifetime costs of <strong>new</strong> treatment - <span class="math inline">C_0</span>: assumed to be <strong>0</strong> - <span class="math inline">E_1</span>: effectiveness of new treatment (e.g., LE, QALYs, DALYs, other outcomes) - <span class="math inline">E_0</span>: assumed to be <strong>0</strong></p>
+</div></div>
+<p>:::</p>
+<div class="column" style="display:flex; align-items:center; justify-content:center;">
+<p><span class="math display">
+\text{ACER}
+= \frac{C_1 - 0}{E_1 - 0}
+= \frac{C_1}{E_1}
+</span></p>
+</div><p>:::</p>
 </section>
-<section id="outcomes" class="slide level2 center">
-<h2>Outcomes</h2>
-<div class="concept-grid">
-<div class="concept-box">
-<p><span class="math inline">C_{treat}</span> = <span class="db-text">expected cost of treat everyone strategy.</span></p>
-</div>
-<div class="concept-box">
-<p><span class="math inline">C_{no treat}</span> = <span class="db-text">expected cost of treat <em>no one</em> strategy.</span></p>
-</div>
-<div class="concept-box">
-<p><span class="math inline">C_{biopsy}</span> = <span class="db-text">expected cost of biopsy strategy.</span></p>
-</div>
-</div>
-<div class="concept-grid fragment">
-<div class="concept-box accent">
-<p><span class="math inline">E_{treat}</span> = <span class="db-text">expected life expectancy of treat everyone strategy.</span></p>
-</div>
-<div class="concept-box accent">
-<p><span class="math inline">E_{no treat}</span> = <span class="db-text">expected expectancy of treat <em>no one</em> strategy.</span></p>
-</div>
-<div class="concept-box accent">
-<p><span class="math inline">E_{biopsy}</span> = <span class="db-text">expected expectancy of biopsy strategy.</span></p>
-</div>
-</div>
+<section id="treat-all-vs.-treat-none" class="slide level2 center">
+<h2>Treat All vs.&nbsp;Treat None</h2>
+<p>Strategy: Treat All <img data-src="images/cea-neurologic-disease_tx.png"></p>
 </section>
-<section id="outcomes-in-amua" class="slide level2 center">
-<h2>Outcomes in Amua</h2>
-
-<img data-src="images/lec6/outcomes-amua.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="strategy-treat-no-one" class="slide level2 center">
-<h2>Strategy: Treat No One</h2>
-
-<img data-src="images/lec6/NoTreatOutcomes.png" class="r-stretch"></section>
-<section id="strategy-treat-all" class="slide level2 center">
-<h2>Strategy: Treat All</h2>
-
-<img data-src="images/lec6/TreatOutcomes.png" class="r-stretch"></section>
+<section id="treat-all-vs.-treat-none-1" class="slide level2 center">
+<h2>Treat All vs.&nbsp;Treat None</h2>
+<p>Strategy: Treat No One <img data-src="images/cea-neurologic-disease_notx.png"></p>
+</section>
 <section id="key-takeaways-for-now" class="slide level2 center">
 <h2>Key Takeaways (For Now)</h2>
-<div class="icon-bullets">
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/cea-neurologic-disease_notx.png"></p>
+<p><img data-src="images/cea-neurologic-disease_tx.png"></p>
+</div><div class="column" style="width:60%;">
+<div style="font-size: 0.8em">
 <ul>
-<li class="fragment">Treatment yields <em>higher</em> life expectancy for those with disease, but comes at a cost. (↑ LE, ↑ Cost)</li>
-<li class="fragment">Treatment yields <em>lower</em> life expectancy for those without the disease, <em>and also</em> comes at a cost. (↓ LE, ↑ Cost)</li>
-<li class="fragment">Biopsy can help balance these two outcomes by better targeting treatment, but also comes with costs and risks.</li>
+<li class="fragment">Treatment yields <em>higher</em> life expectancy for those with disease, but comes at a cost.<br>
+</li>
+<li class="fragment">Treatment yields <em>lower</em> life expectancy for those without the disease, <em>and also</em> comes at a cost.<br>
+</li>
+<li class="fragment"><strong>Biopsy</strong> can help balance these two outcomes by better targeting treatment, but also comes with risks and costs.<br>
+</li>
 <li class="fragment">Incremental CEA provides a transparent framework for quantifying and weighing these considerations.</li>
 </ul>
 </div>
-</section>
-<section id="section-1" class="slide level2 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="definition-box">
-<div class="term">
-<p>Average Cost-Effectiveness Ratio</p>
-</div>
-<p><strong>Special case where</strong> <span class="math inline">C_0</span> and <span class="math inline">E_0</span> are assumed to be zero.</p>
-<p><span class="math display">
-\begin{aligned}
-ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
-&amp;= \frac{C_1}{E_1 }
-\end{aligned}
-</span></p>
-<ul>
-<li><span class="math inline">C_1</span>: net present value of total lifetime costs of new treatment</li>
-<li><span class="math inline">C_0</span>: Assumed zero</li>
-<li><span class="math inline">E_1</span>: effectiveness of new treatment</li>
-<li><span class="math inline">E_0</span>: Assumed zero
-<ul>
-<li><span style="font-size: 2vh">Effectivness is measured in expected life expectancy, quality-adjusted life years (QALYs) or disability-adjusted life years (DALYs), or some decision-relevant health outcome.</span></li>
-</ul></li>
-</ul>
-</div>
+</div></div>
 </section>
 <section id="non-competing-vs.-competing-ceas" class="slide level2 section-slide center">
 <h2>Non-Competing vs.&nbsp;Competing CEAs</h2>
@@ -611,11 +556,11 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 <div class="step-title">
 <p>Rank other programs</p>
 </div>
-<div class="step-content arrow-bullets">
+<div class="step-content arrow-bullets smaller" style="line-height:1.15">
 <ul>
-<li class="fragment"><p>Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)</p></li>
-<li class="fragment"><p>Programs are then selected from the LEAST to the MOST expensive until the budget is expended</p></li>
-<li class="fragment"><p>Final array of programs selected will depend on the budget constraint</p></li>
+<li class="fragment">Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)</li>
+<li class="fragment">Programs are selected from the <strong>least</strong> to the <strong>most</strong> expensive until the budget is exhausted</li>
+<li class="fragment">Final selection depends on the <strong>budget constraint</strong></li>
 </ul>
 </div>
 </div>
@@ -660,7 +605,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div><div class="column table-compact" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -735,7 +680,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div><div class="column table-compact" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -809,7 +754,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div><div class="column table-compact" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -872,7 +817,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div><div class="column table-compact" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -1024,7 +969,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 <p><span class="bold">Budget: $100</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -1090,7 +1035,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">Budget</th>
@@ -1134,7 +1079,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 <p><span class="bold">Budget: $150</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -1200,7 +1145,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">Budget</th>
@@ -1230,7 +1175,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 <p><span class="bold">Budget: $150</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -1296,7 +1241,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">Budget</th>
@@ -1326,7 +1271,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 <p><span class="bold">Budget: $150</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Program</th>
@@ -1392,7 +1337,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: right;" data-quarto-table-cell-role="th">Budget</th>
@@ -1578,42 +1523,10 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div>
 </section>
-<section id="c-identify-dominated-strategies" class="slide level2 smaller center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">(2c) Identify Dominated Strategies</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li class="fragment">We can also rule out strategies where <em>some other competing strategy</em> results in more (or equal) health at lower (or equal) cost.</li>
-<li class="fragment">This is known as “strong” dominance.</li>
-</ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer3.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="c-identify-dominated-strategies-1" class="slide level2 smaller center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">(2c) Identify Dominated Strategies</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li class="fragment">We can also rule out strategies where <em>some other competing strategy</em> results in more (or equal) health at lower (or equal) cost.</li>
-<li class="fragment">This is known as “strong” dominance.</li>
-</ul>
-</div>
-<div class="content-visual fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/vis_icer4.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
+<section id="b-identify-dominated-strategies-1" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">(2b) Identify Dominated Strategies</h2>
+
+<img data-src="images/vis_icer4.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="what-about-strategy-b" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">What about strategy B?</h2>
 
@@ -1706,7 +1619,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2 center">
+<section id="section" class="slide level2 center">
 <h2></h2>
 <div class="definition-box">
 <div class="term">
@@ -1714,7 +1627,10 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 <div class="column" style="width:40%;">
 <div class="definition">
-<p>The efficiency frontier is the set of non-dominated strategies.</p>
+<ul>
+<li>The efficiency frontier is the set of non-dominated strategies: Lower &amp; right = better (more effective and less costly).</li>
+<li>Any point above the A-D line (like B) delivers fewer QALYs per dollar than the A–D mix.</li>
+</ul>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="example">
@@ -1724,7 +1640,7 @@ ICER &amp;=  \frac{C_1 - 0}{E_1 - 0}
 </div>
 </div></div>
 </section>
-<section id="section-3" class="slide level2 center">
+<section id="section-1" class="slide level2 center">
 <h2></h2>
 <div class="definition-box">
 <div class="term">
@@ -1819,7 +1735,7 @@ More on this later!</p>
 <p>7</p>
 </div>
 <div class="step-content">
-<p>Determine strategies ruled out by extended dominance.</p>
+<p>Re-calculate ICERs after ruling out all dominated strategies.</p>
 </div>
 </div>
 <div class="step">
@@ -1888,7 +1804,7 @@ More on this later!</p>
 <ol type="1">
 <li>Calculate costs and effects for each strategy.</li>
 </ol>
-<p><span class="fragment highlight-red">2. Sort table by costs in ascending order.</span><sup>1</sup></p>
+<p><span class="fragment highlight-red">2. Sort table by costs in ascending order.</span><sup>1</sup> - what are you getting for each additional cost.</p>
 </div><div class="column" style="width:50%;">
 
 </div></div>
@@ -2096,7 +2012,7 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 center">
+<section id="section-2" class="slide level2 center">
 <h2></h2>
 <div class="definition-box">
 <div class="term">
@@ -2600,6 +2516,7 @@ More on this later!</p>
 <h2 data-id="quarto-animate-title">Determining Dominated Strategies</h2>
 <ul>
 <li>You can see this in the pictures as well ….</li>
+<li>A steeper slope = the “C” (numerator) is increasing faster than “E” (denominator) = less efficient use of resources</li>
 </ul>
 
 <img data-src="images/vis_icer11.png" class="quarto-figure quarto-figure-center r-stretch"></section>
@@ -2999,10 +2916,12 @@ More on this later!</p>
 <div style="font-size: 0.7em">
 <div class="cell">
 <div class="cell-output-display">
-<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed caption-top" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Strategy</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Cost</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">DALYs</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Incremental Cost</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">DALYs Averted</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Incremental Cost per DALY Averted</th>
@@ -3012,6 +2931,8 @@ More on this later!</p>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">No prophylaxis</td>
+<td style="text-align: right;">40,288</td>
+<td style="text-align: right;">9.50</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;"></td>
@@ -3019,6 +2940,8 @@ More on this later!</p>
 </tr>
 <tr class="even">
 <td style="text-align: left;">TMP-SMX</td>
+<td style="text-align: right;">44,786</td>
+<td style="text-align: right;">6.94</td>
 <td style="text-align: right;">4,498</td>
 <td style="text-align: right;">2.56</td>
 <td style="text-align: right;">1,757</td>
@@ -3026,6 +2949,8 @@ More on this later!</p>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
+<td style="text-align: right;">45,944</td>
+<td style="text-align: right;">6.46</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">0.48</td>
 <td style="text-align: right;">2,413</td>
@@ -3033,6 +2958,8 @@ More on this later!</p>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole</td>
+<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">47,046</td>
+<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6.49</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,102</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-36,733</td>
@@ -3040,6 +2967,8 @@ More on this later!</p>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
+<td style="text-align: right;">48,596</td>
+<td style="text-align: right;">5.90</td>
 <td style="text-align: right;">1,550</td>
 <td style="text-align: right;">0.59</td>
 <td style="text-align: right;">2,627</td>
@@ -3047,6 +2976,8 @@ More on this later!</p>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, ganciclovir</td>
+<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">54,628</td>
+<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6.30</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6,032</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.40</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-15,080</td>
@@ -3054,6 +2985,8 @@ More on this later!</p>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, ganciclovir</td>
+<td style="text-align: right;">56,812</td>
+<td style="text-align: right;">5.67</td>
 <td style="text-align: right;">2,184</td>
 <td style="text-align: right;">0.63</td>
 <td style="text-align: right;">3,467</td>
@@ -3061,6 +2994,8 @@ More on this later!</p>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole, ganciclovir</td>
+<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">58,082</td>
+<td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">5.70</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,270</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-42,333</td>
@@ -3068,6 +3003,8 @@ More on this later!</p>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
+<td style="text-align: right;">61,119</td>
+<td style="text-align: right;">4.88</td>
 <td style="text-align: right;">3,037</td>
 <td style="text-align: right;">0.82</td>
 <td style="text-align: right;">3,704</td>
@@ -3078,9 +3015,6 @@ More on this later!</p>
 </div>
 </div>
 </div>
-</section>
-<section id="section-5" class="slide level2 center">
-<h2></h2>
 <div class="concept-grid">
 <div class="concept-box accent" style="font-size: 3em">
 <p>Remove dominated strategies and recalculate</p>
@@ -3104,41 +3038,34 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
-<td style="text-align: right;">40,288</td>
+<td style="text-align: left;">TMP-SMX</td>
+<td style="text-align: right;">44,786</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">9.50</td>
+<td style="text-align: right;">6.94</td>
 <td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">44,786</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">6.94</td>
-<td style="text-align: right;">2.56</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">45,944</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">6.46</td>
 <td style="text-align: right;">0.48</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">48,596</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">5.90</td>
 <td style="text-align: right;">0.56</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TMP-SMX, azithromycin, ganciclovir</td>
 <td style="text-align: right;">56,812</td>
 <td style="text-align: right;">8,216</td>
 <td style="text-align: right;">5.67</td>
 <td style="text-align: right;">0.23</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">61,119</td>
 <td style="text-align: right;">4,307</td>
@@ -3168,41 +3095,34 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
+<td style="text-align: left;">TMP-SMX</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">2.56</td>
-<td style="text-align: right;">1,757</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">0.48</td>
 <td style="text-align: right;">2,413</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">0.56</td>
 <td style="text-align: right;">4,736</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, azithromycin, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">8,216</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">0.23</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">35,722</td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Extended)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">4,307</td>
 <td style="text-align: right;">0.79</td>
@@ -3215,7 +3135,7 @@ More on this later!</p>
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2 center">
+<section id="section-3" class="slide level2 center">
 <h2></h2>
 <div class="concept-grid">
 <div class="concept-box accent" style="font-size: 3em">
@@ -3240,34 +3160,27 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
-<td style="text-align: right;">40,288</td>
+<td style="text-align: left;">TMP-SMX</td>
+<td style="text-align: right;">44,786</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">9.50</td>
+<td style="text-align: right;">6.94</td>
 <td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">44,786</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">6.94</td>
-<td style="text-align: right;">2.56</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">45,944</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">6.46</td>
 <td style="text-align: right;">0.48</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">48,596</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">5.90</td>
 <td style="text-align: right;">0.56</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">61,119</td>
 <td style="text-align: right;">12,523</td>
@@ -3297,34 +3210,27 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
+<td style="text-align: left;">TMP-SMX</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">2.56</td>
-<td style="text-align: right;">1,757</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">0.48</td>
 <td style="text-align: right;">2,413</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">0.56</td>
 <td style="text-align: right;">4,736</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">12,523</td>
 <td style="text-align: right;">1.02</td>
@@ -3354,62 +3260,55 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
+<td style="text-align: left;">TMP-SMX</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">2.56</td>
-<td style="text-align: right;">1,757</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">0.48</td>
 <td style="text-align: right;">2,413</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">0.56</td>
 <td style="text-align: right;">4,736</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">12,523</td>
 <td style="text-align: right;">1.02</td>
 <td style="text-align: right;">12,277</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,102</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6,032</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.40</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,270</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, azithromycin, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">8,216</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">0.23</td>
@@ -3511,8 +3410,8 @@ More on this later!</p>
 <p>What are common thresholds and how are they determined?</p>
 <div class="arrow-bullets">
 <ul>
-<li class="fragment">In high income countries, common thresholds are $50,000/QALY, $100,000/QALY, and $100,000/QALY.</li>
-<li class="fragment">In LMICs, 0.5-3x per capita gross domestic product (GDP) per DALY averted.</li>
+<li class="fragment">In high income countries, common thresholds are $50,000/QALY, $100,000/QALY, and $150,000/QALY.</li>
+<li class="fragment">In LMICs, 0.5-1x per capita gross domestic product (GDP) per DALY averted is what is now recommended.</li>
 <li class="fragment">More on this in a few minutes.</li>
 </ul>
 </div>
@@ -3752,62 +3651,55 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
+<td style="text-align: left;">TMP-SMX</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">2.56</td>
-<td style="text-align: right;">1,757</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">0.48</td>
 <td style="text-align: right;">2,413</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">0.56</td>
 <td style="text-align: right;">4,736</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">12,523</td>
 <td style="text-align: right;">1.02</td>
 <td style="text-align: right;">12,277</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,102</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6,032</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.40</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,270</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, azithromycin, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">8,216</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">0.23</td>
@@ -3841,62 +3733,55 @@ More on this later!</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">No prophylaxis</td>
+<td style="text-align: left;">TMP-SMX</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0.00</td>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TMP-SMX</td>
-<td style="text-align: right;">4,498</td>
-<td style="text-align: right;">2.56</td>
-<td style="text-align: right;">1,757</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin</td>
 <td style="text-align: right;">1,158</td>
 <td style="text-align: right;">0.48</td>
 <td style="text-align: right;">2,413</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole</td>
 <td style="text-align: right;">2,652</td>
 <td style="text-align: right;">0.56</td>
 <td style="text-align: right;">4,736</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TMP-SMX, azithromycin, fluconazole, ganciclovir</td>
 <td style="text-align: right;">12,523</td>
 <td style="text-align: right;">1.02</td>
 <td style="text-align: right;">12,277</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,102</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">6,032</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.40</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, fluconazole, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">1,270</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">-0.03</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;"></td>
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">Dominated (Strong)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">TMP-SMX, azithromycin, ganciclovir</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">8,216</td>
 <td style="text-align: right; font-weight: bold; color: black !important; background-color: rgba(252, 210, 202, 255) !important;">0.23</td>
@@ -3909,35 +3794,26 @@ More on this later!</p>
 </div>
 </div>
 </div></section>
-<section id="section-7" class="slide level2 summary-end-slide center">
+<section id="section-4" class="slide level2 summary-end-slide center">
 <h2></h2>
 <div class="summary-circle">
 <div class="end-title">
 <p>Key Takeaways</p>
 </div>
-<div class="end-subtitle">
-<p>Benefits</p>
-</div>
-<ul class="key-points">
-<li>
-X
-</li>
-<li>
-X
-</li>
-<li>
-X
-</li>
-<li>
-X
-</li>
+<div class="key-points">
+<ul>
+<li>Use average C/E ratios for non-competing “shopping spree” problems; use ICERs for mutually exclusive choices.</li>
+<li>Build the table in order: totals → sort by cost → incrementals and ICERs.</li>
+<li>Remove dominated and extendedly dominated strategies, then re-calculate to obtain the efficiency frontier.</li>
+<li>Choose the best remaining option under the cost-effectiveness threshold with a complete comparator set.</li>
 </ul>
+</div>
 </div>
 </section>
 <section id="questions" class="slide level2 questions-slide center">
 <h2>Questions?</h2>
 <div class="next-info">
-<p>Next Lecture: <strong>Markov Models</strong></p>
+<p>Next Lecture: <strong> Markov Models </strong></p>
 </div>
 
 
