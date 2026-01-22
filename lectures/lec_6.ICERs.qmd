@@ -459,13 +459,14 @@ Strategy: Treat No One
 
 ::: {.column width="60%"}
 
-::: {.incremental style="font-size: 0.8em"}
-
+::: incremental
+::: arrow-bullets
 - Treatment yields *higher* life expectancy for those with disease, but comes at a cost.  
 - Treatment yields *lower* life expectancy for those without the disease, *and also* comes at a cost.  
 - **Biopsy** can help balance these two outcomes by better targeting treatment, but also comes with risks and costs.  
 - Incremental CEA provides a transparent framework for quantifying and weighing these considerations.  
 
+:::
 :::
 :::
 :::
@@ -550,9 +551,11 @@ Depression screening
 
 ## Shopping Spree Problem
 
-:::::::: {.column width="40%"}
-::::::: process-flow
-:::::: step
+::: columns
+
+::: {.column width="40%"}
+::::: process-flow
+::::: step
 ::: step-number
 1
 :::
@@ -565,9 +568,9 @@ Remove Dominated Strategies
 Rule out programs that cost \$ but have negative health effects.
 Dominated by alternative of "no program"
 :::
-::::::
-:::::::
-::::::::
+:::::
+:::::
+:::
 
 ::: {.column width="10%"}
 :::
@@ -617,11 +620,18 @@ df_ex %>%
 ```
 :::
 
+:::
+
+:::
+
+
 ## Shopping Spree Problem
 
-:::::::: {.column width="40%"}
-::::::: process-flow
-:::::: step
+::: columns
+
+::: {.column width="40%"}
+::::: process-flow
+::::: step
 ::: step-number
 2
 :::
@@ -635,9 +645,9 @@ Select programs that are cost-saving & offer benefit
 
 -   Cost-saving compared to alternative of no program
 :::
-::::::
-:::::::
-::::::::
+:::::
+:::::
+:::
 
 ::: {.column width="10%"}
 :::
@@ -673,11 +683,18 @@ Select programs that are cost-saving & offer benefit
 ```
 :::
 
+:::
+
+:::
+
+
 ## Shopping Spree Problem
 
-:::::::: {.column width="40%"}
-::::::: process-flow
-:::::: step
+::: columns
+
+::: {.column width="40%"}
+::::: process-flow
+::::: step
 ::: step-number
 3
 :::
@@ -686,14 +703,14 @@ Select programs that are cost-saving & offer benefit
 Rank other programs
 :::
 
-::: {.step-content .incremental .arrow-bullets .smaller style="line-height:1.15"}
+::: {.step-content .incremental .arrow-bullets}
 - Rank other programs in ascending order by their cost-effectiveness ratio (lowest to highest)
 - Programs are selected from the **least** to the **most** expensive until the budget is exhausted
 - Final selection depends on the **budget constraint**
 :::
-::::::
-:::::::
-::::::::
+:::::
+:::::
+:::
 
 ::: {.column width="10%"}
 :::
@@ -731,6 +748,9 @@ Rank other programs
 ```
 :::
 
+:::
+
+:::
 
 
 ## Shopping Spree Problem {.smaller}
