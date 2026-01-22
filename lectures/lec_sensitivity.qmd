@@ -86,12 +86,14 @@ Summing up analyses beyond the base case
 
 ## Sensitivity Analyses
 
+::: 
 ::: arrow-bullets
 -   ICER for Prevention strategy is just above WTP threshold of
     \$50,000/QALY.
 -   When evaluated using net monetary benefit at a $50,000/QALY threshold, treatment has a slightly higher NMB than prevention, indicating that the two strategies deliver nearly equivalent value for money.
 -   How sensitive are these results to changes in specific model inputs?
 :::
+::: 
 
 
 ## One-way sensitivity analysis {.section-slide}
@@ -103,6 +105,7 @@ Summing up analyses beyond the base case
 
 ## One-way sensitivity analysis
 
+::: incremental
 ::: arrow-bullets
 -   Usually the starting point for sensitivity analyses
 -   Sequentially testing one variable at a time (i.e., Age, BMI, QALY,
@@ -112,8 +115,11 @@ Summing up analyses beyond the base case
 -   One-way sensitivity analyses are often presented in a **tornado
     diagram**
     -   Used to visually rank the different variables in order of their
-        overall influence on the magnitude of the model outputs
+        overall influence on the magnitude of the model outputs 
+
 :::
+::: 
+
 
 # Examples from publications
 
@@ -169,12 +175,14 @@ Summing up analyses beyond the base case
 
 ## Two-way sensitivity analysis
 
+::: 
 ::: arrow-bullets
 -   A way to map the interaction effects between two parameters in a
     decision analysis model
 -   Varies 2 parameters at a time
 -   Explores the robustness of results in more depth
 :::
+::: 
 
 # Examples from publications
 
@@ -184,6 +192,7 @@ Summing up analyses beyond the base case
 
 ## HIV prevention
 
+::: 
 ::: arrow-bullets
 -   Markov model examining strategies for HIV prevention among
     serodiscordant couples seeking conception (woman does not have HIV
@@ -196,6 +205,7 @@ Summing up analyses beyond the base case
 
 -   And we also know that PrEP has traditionally been really **costly**
 :::
+::: 
 
 
 ## HIV prevention
@@ -208,6 +218,7 @@ Summing up analyses beyond the base case
 
 ## Financial incentives for acute stroke care
 
+::: 
 ::: arrow-bullets
 -   Under pay for performance policies in the US, **physicians or
     hospitals are paid more for meeting evidence-based quality targets**
@@ -217,6 +228,7 @@ Summing up analyses beyond the base case
     the **application of reimbursement to hospitals for faster
     time-to-tPA for acute ischemic stroke**
 :::
+::: 
 
 ## Financial incentives for acute stroke care
 
@@ -264,6 +276,7 @@ Summing up analyses beyond the base case
 
 ## Scenario analysis
 
+::: 
 ::: arrow-bullets
 -   Examines uncertainty in **model assumptions or structure**, often resulting in different parameter values across scenarios (while interventions/strategies remain the same)
 -   Uses hypothetical or alternative scenarios (e.g., optimistic vs conservative assumptions about long-term survival).
@@ -271,7 +284,9 @@ Summing up analyses beyond the base case
     -   Subgroups or sub-populations (e.g., age cohorts, risk levels)
     -   Perspective (societal vs healthcare sector)
     -   Time horizon
+
 :::
+::: 
 
 
 
