@@ -380,15 +380,12 @@ $\Delta E$
 ::::
 :::::::
 
-
 ## Incremental Cost-Effectiveness Ratio {.smaller}
-
 **Most often used, since for most conditions there is already some available treatment.**
 
 ::: columns
-
 ::: {.column width="60%"}
-::: arrow-bullets {.smaller style="line-height:1.15"}
+::: {.arrow-bullets .smaller style="line-height:1.15"}
 ::: incremental
 - $C_1$: net present value of total lifetime costs of **new** treatment
 - $C_0$: net present value of total lifetime costs of **default** treatment
@@ -410,9 +407,8 @@ $$
 **Special case where** $C_0$ and $E_0$ are assumed to be zero.
 
 ::: columns
-
 ::: {.column width="60%"}
-::: arrow-bullets {.smaller style="line-height:1.15"}
+::: {.arrow-bullets .smaller style="line-height:1.15"}
 ::: incremental
 - $C_1$: net present value of total lifetime costs of **new** treatment
 - $C_0$: assumed to be **0**
@@ -937,7 +933,7 @@ df_ex_ %>%
 
 ```
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem {.smaller .table-compact}
 
 [Budget: \$100]{.bold}
 
@@ -982,7 +978,7 @@ df_ex_[color.me.green,] %>%
 (4) More on thresholds later
 :::
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem {.smaller .table-compact}
 
 [Budget: \$150]{.bold}
 
@@ -1026,7 +1022,7 @@ df_ex_[color.me.green,] %>%
     kableExtra::kable_styling(bootstrap_options = "condensed")
 ```
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem  {.smaller .table-compact}
 
 [Budget: \$150]{.bold}
 
@@ -1059,7 +1055,7 @@ df_ex_[color.me.green,] %>%
     kableExtra::kable_styling(bootstrap_options = "condensed")
 ```
 
-## Shopping Spree Problem {.smaller}
+## Shopping Spree Problem  {.smaller .table-compact}
 
 [Budget: \$150]{.bold}
 
