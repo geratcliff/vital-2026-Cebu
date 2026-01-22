@@ -2553,5 +2553,5 @@ Key Takeaways
 ## Questions? {.questions-slide}
 
 ::: next-info
-Next Lecture: <strong>Markov Models</strong>
+Next Lecture: <strong> Markov Models </strong>
 :::
