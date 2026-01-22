@@ -439,6 +439,7 @@ window.Quarto = {
 <p>The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.</p>
 <p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if: - There is a small percentage of people that can get sick again - The data does not exist for “Life Years Gained”.</p>
 <p>A Markov Model will allow us to cleanly integrate this into our model.</p>
+<p><strong>Although we are calling this the “Simple Markov Model”, we understand that this is a really long case study, there will also be time to work on it tomorrow but we wanted to make sure that you had all the information for your model</strong></p>
 <div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -643,6 +644,7 @@ window.Quarto = {
 <section id="add-parameters" class="level1">
 <h1>Add Parameters</h1>
 <p>To help with time, we have created a parameters file you can upload to your model.</p>
+<p><strong>Download this file:</strong> <a href="parameters_markovsimp.csv">PARAMETER TABLE</a></p>
 <ol type="1">
 <li><p>On the top bar click Model &gt; Import</p></li>
 <li><p>An pop-up should appear to help “Import Objects”</p>
@@ -656,7 +658,52 @@ window.Quarto = {
 </ol>
 <p>You’re side bar should now be populated with the model parameters</p>
 <p>Here are the parameters if you need to add them manually:</p>
-<p>ADD PARAMETER TABLE</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Expression</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>prev</td>
+<td>0.08</td>
+<td>Prevelence of Disease X at age 50</td>
+</tr>
+<tr class="even">
+<td>p_sick</td>
+<td>0.03</td>
+<td>Annual probability of getting Disease X</td>
+</tr>
+<tr class="odd">
+<td>hr_treated</td>
+<td>0.5</td>
+<td>Hazard ratio of getting Disease X after treated</td>
+</tr>
+<tr class="even">
+<td>initial_age</td>
+<td>50</td>
+<td>Initial Age</td>
+</tr>
+<tr class="odd">
+<td>c_treatment</td>
+<td>30000</td>
+<td>Cost of Treatment</td>
+</tr>
+<tr class="even">
+<td>c_pall</td>
+<td>15000</td>
+<td>Cost of Palliative Care</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="starting-probabilities" class="level1">
 <h1>Starting Probabilities</h1>
@@ -703,7 +750,7 @@ window.Quarto = {
 <section id="uploading-a-table" class="level1">
 <h1>Uploading a Table</h1>
 <p>You may have noticed that there is no probability of death in the uploaded parameters. Parameters are set values that do not change over time. However, the probability of death increases with age. To accommodate this, we will upload a table and create a p_die variable.</p>
-<p>Table File:</p>
+<p><strong>Table File:</strong> <a href="tbl_p_die.csv">probability of death by age</a></p>
 <div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -908,12 +955,12 @@ Option 2: Select the "Treat All" branch and select the $ on the top banner</code
 <tbody>
 <tr class="odd">
 <td>Treat None</td>
-<td>$318,696,724</td>
-<td>31219.7721</td>
+<td>$317,998,311.33</td>
+<td>30713.17</td>
 </tr>
 <tr class="even">
 <td>Treat All</td>
-<td>$821,600,790</td>
+<td>$241,509,685.61</td>
 <td>31219.7721</td>
 </tr>
 </tbody>
@@ -952,14 +999,14 @@ Option 2: Select the "Treat All" branch and select the $ on the top banner</code
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<br> What is the cost (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checksimp">Check</button>
+<p><br> What is the cost (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checksimp">Check</button></p>
 <div id="feedbacksimp" style="margin-top: 10px;">
 
 </div>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 170151.4614;
+  const CORRECT = 131958.7514;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answersimp');
   const button = document.getElementById('checksimp');
@@ -992,7 +1039,7 @@ Option 2: Select the "Treat All" branch and select the $ on the top banner</code
 <p>Screening Added</p>
 </summary>
 <p style="color: black;">
-</p><p>ADD FILE</p>
+</p><p><a href="../MarkovSimpleWithScreening.amua">Amua File With Screening Added</a></p>
 <p></p>
 </details>
 

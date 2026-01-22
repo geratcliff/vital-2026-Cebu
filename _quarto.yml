@@ -26,8 +26,10 @@ website:
         text: Before you arrive
       - section: "Model Diagram Drawing Resources"
         contents:
+          - text: VCHEM Health State Transition Diagram Builder
+            href: https://geratcliff.shinyapps.io/bubble_tool/
           - text: Draw.io
-          - href: http://www.draw.io
+            href: http://www.draw.io
       - section: "Amua Resources"
         contents:
           - text: Center for Health Decision Sciences Amua Resources
@@ -71,6 +73,11 @@ website:
             
       - href: about.qmd
         text: Instructors
+    
+      - text: "---"
+      
+      - text: Contact us at vchem@vumc.org
+        href: mailto:vchem@vumc.org
         
 
 format:

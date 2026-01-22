@@ -47,10 +47,9 @@ title: "CaseStudy_MarkovProg"
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
-
 </style>
 ```
 
@@ -59,14 +58,12 @@ title: "CaseStudy_MarkovProg"
 
 By the end of this session, participants will be able to:
 
-1.  
-:::
-
-::: {.callout .fill-box .why-box}
-## Why are we doing this?
+1.Expand Markov models building on the simple model to add complexity 2. Model disease-specific mortality by distinguishing disease deaths from all-cause mortality 3. Implement one-time transition costs 4. Evaluate progression's impact on CEA and understand how this complexity changes cost-effectiveness results
 :::
 
 To help visualize how this will work, here is a bubble diagram
+
+![](images/progMarkov/bubble.png)
 
 Adding in progression in our model can help create a more realistic clinical model.
 
@@ -75,7 +72,7 @@ Previously we assumed that everyone with Disease X received palliative care but 
 # Additional Parameters
 
 | Name | Value | Description |
-|---------------|-----------------|----------------------------------------|
+|------------------|------------------|-------------------------------------|
 | p_sicker | 0.12 | Probability of getting sicker from a mild case of Disease X |
 | p_diseasedeath | 0.15 | Probability of dying from disease death |
 | c_mild | \$1,000 | Cost of being mildly sick (doctors appointments) |
@@ -83,41 +80,111 @@ Previously we assumed that everyone with Disease X received palliative care but 
 
 # Add the additional states to your model
 
+## Disease Death
+
+Add a "Disease Death" state
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
+1.  Create a "Disease Death" state from the markov node
+2.  Set the starting probability to 0
+3.  Create a return to "Disease Death" event
+
+</p>
+
+</details>
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+![](images/progMarkov/DiseaseDeath.png)
+
+</p>
+
+</details>
+
+## Sicker
+
+Add a "Sicker" state
+
+<details>
+
+<summary style="color: orange;">
+
+More assistance with step
+
+</summary>
+
+<p style="color: black;">
+
 1.  Add a Sicker state to the "Treat None" markov model
 2.  Set the starting probability to 0
 3.  Add all cause death event
-4.  Add Disease Death event
+4.  Add disease death event
 5.  Update outcomes and probabilities
 6.  Update Sick to go to Sicker
 7.  Add one time cost of sick to sicker
 8.  Set cost off sick to c_sick
 
-Repeat for the markov models on Treat ALL
+</p>
 
-::: callout-tip
+</details>
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+![](images/progMarkov/Sicker.png)
+
+</p>
+
+</details>
+
+## Repeat for the markov models on Treat ALL
+
+:::: callout-tip
 ## Check your answer
 
-**What is the ICER of the strategy you would choose?**
+<br> Enter the ICER for the strategy you would choose (to 2 deminal places) <br> <input id="answerprog" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="checkprog">Check</button>
 
-Enter your result: <input id="answer4" type="number" step="0.01" placeholder="e.g., 44.5" /> <button id="check4">Check</button>
+::: {#feedbackprog style="margin-top: 10px;"}
+:::
 
 ```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 44.5;
+  const CORRECT = 21759.59;
   const TOL = 0.01; // accept +/- 0.01
-
-  const input = document.getElementById('answer4');
-  const button = document.getElementById('check4');
-  const feedback = document.getElementById('feedback4');
-
+  const input = document.getElementById('answerprog');
+  const button = document.getElementById('checkprog');
+  const feedback = document.getElementById('feedbackprog');
   function setFeedback(msg, status) {
     feedback.textContent = msg;
     feedback.style.fontWeight = '600';
     feedback.style.color = status === 'ok' ? '#1a7f37' : (status === 'warn' ? '#7f6a00' : '#b30000');
   }
-
   button.addEventListener('click', function() {
     const val = parseFloat(input.value);
     if (isNaN(val)) {
@@ -134,4 +201,22 @@ Enter your result: <input id="answer4" type="number" step="0.01" placeholder="e.
 })();
 </script>
 ```
-:::
+
+<br>
+::::
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Screening Added
+
+</summary>
+
+<p style="color: black;">
+
+[Amua File With Screening Added](/MarkovProgwithScreening.amua)
+
+</p>
+
+</details>
