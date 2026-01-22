@@ -187,7 +187,7 @@ time period**.
 
 ## Example: same study, probability vs. rate
 
-::: arrow-bullets {style="line-height:1.1"}
+::: arrow-bullets 
 -   **Study:** 100 people followed for up to 4 years; 40 deaths.
 -   **Probability (risk) over 4 years:** $40/100 = 0.40$\ ; 
 -   *Interpretation:* 40% died within 4 years.
@@ -212,6 +212,7 @@ time period**.
 ## Example: events happen early vs. late
 
 :::: {.definition-box .thin}
+
 ::: term {.text-smaller}
 **Study:** 100 people, planned follow-up = 4 years <br>
 **Case:** 40 deaths occur in Year 1
@@ -222,7 +223,8 @@ time period**.
 -   **Rate:** $40/280 = 0.143$ deaths per person-year\
 -   **Probability (risk):** $40/100 = 0.40$
 :::
-:::
+
+::::
 
 
 
@@ -318,7 +320,7 @@ time period**.
 
 ::: columns
 ::: {.column width="60%"}
-::: arrow-bullets {.smaller}
+::: {.arrow-bullets .smaller}
 - A standard Markov model assumes an **exponential (constant-hazard)** process.
 - This allows conversion between **rates** (instantaneous) and **probabilities** (over time).
 - If the hazard changes over time, simple conversions no longer apply.
@@ -330,6 +332,7 @@ $$
 p = 1 - e^{-rt}
 $$
 :::
+
 :::
 
 
@@ -448,7 +451,7 @@ when modeling hundredths of thousands of individuals, for example
 ::: columns
 
 ::: {.column width="55%"}
-::: arrow-bullets {.smaller style="line-height:1.15"}
+::: {.arrow-bullets .smaller style="line-height:1.15"}
 - Long cycles can include multiple transitions (healthy → sick → dead).
 - Standard rate–probability conversion  
   $p_{HS}= 1 - e^{-r_{HS}\Delta t}$  
@@ -479,6 +482,7 @@ digraph G {
 }
 ```
 :::
+
 :::
 
 

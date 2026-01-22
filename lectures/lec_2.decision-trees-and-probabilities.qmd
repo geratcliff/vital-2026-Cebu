@@ -951,6 +951,7 @@ style ERHospB fill:#ffffff,stroke:#333,stroke-width:0px
 ## Probabilities
 
 ::: split-content
+::: incremental
 ::: {.content-text .arrow-bullets}
 -   Moving from left to right, the first probabilities in the tree show
     the probability of an event.
@@ -960,6 +961,8 @@ style ERHospB fill:#ffffff,stroke:#333,stroke-width:0px
 -   Multiplying probabilities along pathways estimates the pathway
     probability, which is a [joint]{.bold .primary-text} probability.
 :::
+::: 
+
 
 ::: content-visual
 ![](images/lec2/dt_evans97.png)
@@ -1293,13 +1296,13 @@ Limitations
 :::
 :::
 
-## Some Do's & "Dont's {.section-slide}
+## Some Do's & Dont's {.section-slide}
 
 ::: section-number
 06
 :::
 
-## Some Do's & "Dont's as you think about your own trees
+## Some Do's & Dont's as you think about your own trees
 <br>
 
 1.  **Balance risks and benefits** <br>
