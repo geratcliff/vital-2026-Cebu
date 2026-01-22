@@ -19,6 +19,6 @@ _freeze/
 _gbd_lifetables/IHME*
 _gbd_lifetables/life-tables-2019.rds
 _website-usb/
-_jag-ignore/
+_jag-ignore:/
 
 **/*.quarto_ipynb
