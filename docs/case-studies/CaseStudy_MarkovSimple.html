@@ -158,7 +158,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../_gbd_lifetables/lifetables.html" class="sidebar-item-text sidebar-link">
+  <a href="../_gbd_lifetables/lifetables.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Country specific life-tables</span></a>
   </div>
 </li>
@@ -371,6 +371,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#a-set-probability-of-sick-or-not-sick" id="toc-a-set-probability-of-sick-or-not-sick" class="nav-link" data-scroll-target="#a-set-probability-of-sick-or-not-sick">A: Set probability of sick or not sick</a></li>
   <li><a href="#b-set-initial-probabilities" id="toc-b-set-initial-probabilities" class="nav-link" data-scroll-target="#b-set-initial-probabilities">B: Set initial probabilities</a></li>
+  <li><a href="#c-add-treatment-cost" id="toc-c-add-treatment-cost" class="nav-link" data-scroll-target="#c-add-treatment-cost">C: Add Treatment Cost</a></li>
   <li><a href="#d-add-reduction-in-p_sick-for-those-treated" id="toc-d-add-reduction-in-p_sick-for-those-treated" class="nav-link" data-scroll-target="#d-add-reduction-in-p_sick-for-those-treated">D: Add reduction in p_sick for those treated</a></li>
   <li><a href="#define-cycle-adjustments-and-discounting" id="toc-define-cycle-adjustments-and-discounting" class="nav-link" data-scroll-target="#define-cycle-adjustments-and-discounting">Define Cycle Adjustments and Discounting</a></li>
   <li><a href="#get-individual-cost-and-ly" id="toc-get-individual-cost-and-ly" class="nav-link" data-scroll-target="#get-individual-cost-and-ly">Get individual cost and LY</a></li>
@@ -470,7 +471,11 @@ window.Quarto = {
 </div>
 </div>
 <p>The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.</p>
-<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if: - There is a small percentage of people that can get sick again - The data does not exist for “Life Years Gained”.</p>
+<p>In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if:</p>
+<ul>
+<li><p>There are a small percentage of people that can get sick again</p></li>
+<li><p>The data does not exist for “Life Years Gained”.</p></li>
+</ul>
 <p>A Markov Model will allow us to cleanly integrate this into our model.</p>
 <p><strong>Although we are calling this the “Simple Markov Model”, we understand that this is a really long case study, there will also be time to work on it tomorrow but we wanted to make sure that you had all the information for your model</strong></p>
 <div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
@@ -838,6 +843,11 @@ window.Quarto = {
 </div>
 <ol start="6" type="1">
 <li><p>Ensure that your table has no extra columns or rows. If it does, select and delete them with the remove (<img src="../amua-images/remove_16.png" class="img-fluid">) options on the top bar of the pop-up</p></li>
+<li><p>Choose the “Table Type” and “Look Up” Method. We will be using Lookup, Interpolate.</p>
+<ul>
+<li><p>This means that for age 1 = 0.013 and age 2 =0.010 but if the model asks for age 1.5, it will return a number between the two</p>
+<p><em>More information on table types:</em> <a href="https://github.com/zward/Amua/wiki/Tables#table-types" class="uri">https://github.com/zward/Amua/wiki/Tables#table-types</a></p></li>
+</ul></li>
 <li><p>Save your table</p></li>
 </ol>
 <p><img src="images/simpleMarkov/AddTableFull.png" class="img-fluid"></p>
@@ -856,7 +866,8 @@ window.Quarto = {
 <li><p>Name the variable “p_die”</p></li>
 <li><p>Use the following formula to define the variable <code>tbl_p_die[initial_age + t, 1]</code></p></li>
 </ol>
-<p><img src="images/simpleMarkov/variableformula.png" class="img-fluid"> Note: We use “initial_age +t” for the row value because “<em>t</em>” alone is just the Amua built in variable for the cycle number. If we used just “<em>t</em>” the p_die for cycle 10 would be for 10 year olds not 60 year olds.</p>
+<p><img src="images/simpleMarkov/variableformula.png" class="img-fluid"></p>
+<p><em>Note: We use “initial_age +t” for the row value because “t” alone is just the Amua built in variable for the cycle number. If we used just “t” the p_die for cycle 10 would be for 10 year olds not 60 year olds.</em></p>
 <ol start="5" type="1">
 <li>Save the variable</li>
 </ol>
@@ -959,10 +970,15 @@ window.Quarto = {
 <section id="b-set-initial-probabilities" class="level3">
 <h3 class="anchored" data-anchor-id="b-set-initial-probabilities">B: Set initial probabilities</h3>
 <p>We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. Therefore the initial probabilities for both “Sick -&gt; Treat” and “Not Sick -&gt; Treat” are Healthy = 1, Sick = 0, and Dead = 0.</p>
-<p><img src="images/simpleMarkov/TreatInitialProb.png" class="img-fluid"> ### C: Add Treatment Cost</p>
+<p><img src="images/simpleMarkov/TreatInitialProb.png" class="img-fluid"></p>
+</section>
+<section id="c-add-treatment-cost" class="level3">
+<h3 class="anchored" data-anchor-id="c-add-treatment-cost">C: Add Treatment Cost</h3>
 <p>The needs to be a one-time cost added to the “Treat All” branch.</p>
-<pre><code>Option 1: Right click the "Treat All" branch and select "$ Add Cost (One-Time Event)"
-Option 2: Select the "Treat All" branch and select the $ on the top banner</code></pre>
+<ul>
+<li><p>Option 1: Right click the “Treat All” branch and select “$ Add Cost (One-Time Event)”</p></li>
+<li><p>Option 2: Select the “Treat All” branch and select the $ on the top banner</p></li>
+</ul>
 <p>Update the cost to have the cost of treatment</p>
 <p><img src="images/simpleMarkov/OneTimeCost.png" class="img-fluid"></p>
 </section>

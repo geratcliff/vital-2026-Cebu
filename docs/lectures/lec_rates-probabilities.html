@@ -287,7 +287,11 @@
 </p></li>
 <li class="fragment"><p><strong>Rate:</strong> speed at which events occur per unit of person-time<br>
 </p></li>
-<li class="fragment"><p><strong>Key distinction:</strong> rates use <strong>person-time</strong> in the denominator; probabilities do not</p></li>
+<li class="fragment"><p><strong>Key distinction:</strong> rates use <strong>person-time</strong> in the denominator; probabilities do not</p>
+<ul>
+<li class="fragment">**Probabilities collapse into a time window (10% by year 1; 30% by 3 years; it’s cumulative);</li>
+<li class="fragment">**Rates have time in the denominator</li>
+</ul></li>
 </ul>
 </div>
 </section>
@@ -324,9 +328,7 @@
 <section id="example-events-happen-early-vs.-late" class="slide level2 center">
 <h2>Example: events happen early vs.&nbsp;late</h2>
 <div class="definition-box thin">
-<p>::: term {.text-smaller} <strong>Study:</strong> 100 people, planned follow-up = 4 years <br> <strong>Case:</strong> 40 deaths occur in Year 1</p>
-</div>
-<div class="definition">
+<p><strong>Study:</strong> 100 people, planned follow-up = 4 years <br> <strong>Case:</strong> 40 deaths occur in Year 1</p>
 <ul>
 <li class="fragment">Person-time = <span class="math inline">(40 \times 1) + (60 \times 4) = 280</span> person-years<br>
 </li>
@@ -335,7 +337,6 @@
 <li class="fragment"><strong>Probability (risk):</strong> <span class="math inline">40/100 = 0.40</span></li>
 </ul>
 </div>
-<p>::::</p>
 </section>
 <section id="when-time-at-risk-is-not-reported1" class="slide level2 center">
 <h2>When time-at-risk is not reported<sup>1</sup></h2>
@@ -598,14 +599,13 @@ treats transitions independently, ignoring competing risks.</li>
 <li class="fragment">Fix: shorter cycles or competing-risk conversions.</li>
 </ul>
 </div>
-</div><div class="column" style="display:flex; align-items:center; justify-content:center;">
-<div class="cell" data-fig-width="4" data-layout-align="center">
+</div><div class="column" style="width:45%;">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-comp-st" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-comp-st-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<svg width="384" height="480" viewbox="0.00 0.00 171.02 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 171.02 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
 <title>G</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-184 167.02,-184 167.02,4 -4,4"></polygon>
@@ -666,11 +666,7 @@ treats transitions independently, ignoring competing risks.</li>
 </g>
 </svg>
 </div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comp-st-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Compound transition patterns under standard conversion
-</figcaption>
-</figure>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>

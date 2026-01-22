@@ -70,7 +70,11 @@ By the end of this session, participants will be able to:
 
 The decision trees are enough to answer some research questions. However, a more complicated Markov Model may be needed to represent the health condition accurately.
 
-In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if: - There is a small percentage of people that can get sick again - The data does not exist for "Life Years Gained".
+In our decision tree, we have a one time screening and calculations for if someone gets sick. However, what if:
+
+-   There are a small percentage of people that can get sick again
+
+-   The data does not exist for "Life Years Gained".
 
 A Markov Model will allow us to cleanly integrate this into our model.
 
@@ -460,7 +464,13 @@ More assistance with step
 
 6.  Ensure that your table has no extra columns or rows. If it does, select and delete them with the remove (![](/amua-images/remove_16.png)) options on the top bar of the pop-up
 
-7.  Save your table
+7.  Choose the "Table Type" and "Look Up" Method. We will be using Lookup, Interpolate.
+
+    -   This means that for age 1 = 0.013 and age 2 =0.010 but if the model asks for age 1.5, it will return a number between the two
+
+        *More information on table types:* <https://github.com/zward/Amua/wiki/Tables#table-types>
+
+8.  Save your table
 
 ![](images/simpleMarkov/AddTableFull.png)
 
@@ -478,7 +488,9 @@ More assistance with step
 
 4.  Use the following formula to define the variable `tbl_p_die[initial_age + t, 1]`
 
-![](images/simpleMarkov/variableformula.png) Note: We use "initial_age +t" for the row value because "*t*" alone is just the Amua built in variable for the cycle number. If we used just "*t*" the p_die for cycle 10 would be for 10 year olds not 60 year olds.
+![](images/simpleMarkov/variableformula.png)
+
+*Note: We use "initial_age +t" for the row value because "t" alone is just the Amua built in variable for the cycle number. If we used just "t" the p_die for cycle 10 would be for 10 year olds not 60 year olds.*
 
 5.  Save the variable
 
@@ -610,14 +622,15 @@ In the tree portion of the "Treat All" branch, set the probability of sick to `p
 
 We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. Therefore the initial probabilities for both "Sick -\> Treat" and "Not Sick -\> Treat" are Healthy = 1, Sick = 0, and Dead = 0.
 
-![](images/simpleMarkov/TreatInitialProb.png) \### C: Add Treatment Cost
+![](images/simpleMarkov/TreatInitialProb.png)
+
+### C: Add Treatment Cost
 
 The needs to be a one-time cost added to the "Treat All" branch.
 
-```         
-Option 1: Right click the "Treat All" branch and select "$ Add Cost (One-Time Event)"
-Option 2: Select the "Treat All" branch and select the $ on the top banner
-```
+-   Option 1: Right click the "Treat All" branch and select "\$ Add Cost (One-Time Event)"
+
+-   Option 2: Select the "Treat All" branch and select the \$ on the top banner
 
 Update the cost to have the cost of treatment
 
