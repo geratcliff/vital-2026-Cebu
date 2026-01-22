@@ -1,0 +1,46 @@
+---
+title: "Life Tables"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+Life Tables:
+
+[Bangladesh](output/bangladesh.csv)
+
+[Cambodia](output/cambodia.csv)
+
+[China](output/china.csv)
+
+[Ethiopia](output/ethiopia.csv)
+
+[India](output/india.csv)
+
+[Indonesia](output/indonesia.csv)
+
+[Lebanon](output/lebanon.csv)
+
+[Morocco](output/morocco.csv)
+
+[Mozambique](output/mozambique.csv)
+
+[Philippines](output/philippines.csv)
+
+[Rwanda](output/rwanda.csv)
+
+[Senegal](output/senegal.csv)
+
+[South Africa](output/south_africa.csv)
+
+[Tanzania]
+
+[Thailand](output/thailand.csv)
+
+[Uganda](output/uganda.csv)
+
+[Vietnam](output/viet_nam.csv)
+
+[Zambia](output/zambia.csv)
+
+[Zimbabwe](output/zimbabwe.csv)
