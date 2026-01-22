@@ -444,7 +444,7 @@ we would get 0.027. This is CLOSE but it could make a huge difference
 when modeling hundredths of thousands of individuals, for example
 :::
 
-## Alternative Rate-to-Probability Conversions {.smaller}
+
 
 ## Alternative Rate-to-Probability Conversions {.smaller}
 
