@@ -166,11 +166,23 @@ to identify errors within a model and also highlight commonly seen
 errors in models and results.
 :::
 
-::: {.callout .task-box}
+::: {.callout .fill-box .task-box}
 ## Your Task
 
 Determine which errors are in the model and decide if the sources he
 provided you are helpful.
 :::
 
-ADD FILE
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/CommonErrors_WithErrors.amua",
+  button_label = "Download Amua File",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
