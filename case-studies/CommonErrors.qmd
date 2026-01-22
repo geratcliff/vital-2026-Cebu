@@ -139,7 +139,7 @@ Improve the BYE Endemic in A Nearby Region*
 | No Treatment | \$78,620 | 11.56 | \- | \- | \- |
 | Screen then Treat | \$103,245 | 10.18 | \$24,625 | -1.38 | -\$17,844.20 |
 | Treatment | \$107,989 | 13.45 | \$4,744 | 3.27 | \$1,450.76 |
-FAKE SOURCE:
+FAKE SOURCE: Morrison, K., García-Rodriguez, M., & Okonkwo, A. (2024). Economic evaluation of BYE prevention and treatment programs: Evidence from a multi-country cohort study. International Journal of Medical Decision Making, 18(2), 156-173.
 
 
 Figure 8: Incremental Cost-Effectiveness of  Varies Strategies to Improve the BYE Endemic in Another Region
@@ -150,7 +150,7 @@ Figure 8: Incremental Cost-Effectiveness of  Varies Strategies to Improve the BY
 | No Treatment | \$86,340 | 12.35 | \- | \- | \- |
 | Screen then Treat | \$107,650 | 13.79 | \$21,310 | 1.44 | \$14,799 |
 | Treatment | \$109,145 | 14.08 | \$22,805 | 1.73 | \$13,182 |
-FAKE SOURCE:
+FAKE SOURCE: Patel, R., Chen, L., & Nakamura, T. (2023). Cost-effectiveness analysis of intervention strategies for Brief Yearning Episode in Southeast Asian populations. Journal of Health Economics and Decision Science, 45(3), 287-301
 
 
 <br><br>Our team has been very busy getting this workshop ready so we
@@ -166,7 +166,7 @@ to identify errors within a model and also highlight commonly seen
 errors in models and results.
 :::
 
-::: {.callout .task-box .why-box}
+::: {.callout .task-box}
 ## Your Task
 
 Determine which errors are in the model and decide if the sources he
