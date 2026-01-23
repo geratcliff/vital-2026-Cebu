@@ -7,13 +7,13 @@
         <dateCreated>Wed Oct 08 11:39:55 CDT 2025</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Thu Jan 08 10:58:23 CST 2026</dateModified>
-        <versionModified>0.3.3</versionModified>
+        <dateModified>Fri Jan 23 11:22:31 CST 2026</dateModified>
+        <versionModified>0.3.4</versionModified>
     </Metadata>
     <DimInfo>
-        <dimNames>Utility</dimNames>
+        <dimNames>QALE</dimNames>
         <dimNames>Cost</dimNames>
-        <dimSymbols>U</dimSymbols>
+        <dimSymbols>QALY</dimSymbols>
         <dimSymbols>$</dimSymbols>
         <decimals>4</decimals>
         <decimals>4</decimals>
@@ -592,6 +592,7 @@
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>1</type>
