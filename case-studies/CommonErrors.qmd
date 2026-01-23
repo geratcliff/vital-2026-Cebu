@@ -123,7 +123,7 @@ found to cost about \$100,00 per person and result in 10 QALYs. <br><br>
 Dr. Grooves develop a 5-state Markov model: (1) Well, (2) Mild, (3)
 Severe, (4) Disease Death and (4) \[All Cause\] Death based on the data
 provided above. He said he used a 3% discounting rate for both costs and
-utility and half-cycle correction on the model. All costs were converted
+QALYs and half-cycle correction on the model. All costs were converted
 into the same year. He is hoping to find the life-time impacts of BYE.
 <br><br>
 
@@ -135,7 +135,7 @@ Improve the BYE Endemic in A Nearby Region*
 
 |  |  |  |  |  |  |
 |----|----|----|----|----|----|
-| **Strategy** | **Cost (Dis)** | **Utility (Dis)** | **Inc. Cost** | **Inc. Utility** | **ICER** |
+| **Strategy** | **Cost (Dis)** | **QALYs (Dis)** | **Inc. Cost** | **Inc. QALYs** | **ICER** |
 | No Treatment | \$78,620 | 11.56 | \- | \- | \- |
 | Screen then Treat | \$103,245 | 10.18 | \$24,625 | -1.38 | -\$17,844.20 |
 | Treatment | \$107,989 | 13.45 | \$4,744 | 3.27 | \$1,450.76 |
@@ -146,7 +146,7 @@ Figure 8: Incremental Cost-Effectiveness of  Varies Strategies to Improve the BY
 
 |  |  |  |  |  |  |
 |----|----|----|----|----|----|
-| **Strategy** | **Cost (Dis)** | **Utility (Dis)** | **Inc. Cost** | **Inc. Utility** | **ICER** |
+| **Strategy** | **Cost (Dis)** | **QALYs (Dis)** | **Inc. Cost** | **Inc. QALYs** | **ICER** |
 | No Treatment | \$86,340 | 12.35 | \- | \- | \- |
 | Screen then Treat | \$107,650 | 13.79 | \$21,310 | 1.44 | \$14,799 |
 | Treatment | \$109,145 | 14.08 | \$22,805 | 1.73 | \$13,182 |
