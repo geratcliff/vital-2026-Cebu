@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.24">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a876c3dbe31265d622a75c94b7df1a4a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>Decision Analysis Workshop - Cebu – Modeling DALYs in Amua</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,28 +27,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-      margin-bottom: 0em;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0667623e39e345170d362296defe6630.css">
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b9f537af43a82684849d92d60960a7b0.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -168,20 +148,39 @@
 </div>
 
 </section>
-<section id="learning-objectives" class="slide level2">
-<h2>Learning Objectives</h2>
-<ul>
-<li>Review of DALY health outcomes</li>
-<li>Tips and tricks for modeling DALYs in Amua</li>
-</ul>
+<section id="section" class="slide level2 numbered-list-slide center">
+<h2></h2>
+<h2>
+Learning Objectives
+</h2>
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Review of DALY health outcomes</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>Tips and tricks for modeling DALYs in Amua</p>
+</div>
+</div>
+</div>
 </section>
-<section>
-<section id="overview-of-daly-outcomes" class="title-slide slide level1 center">
-<h1>Overview of DALY Outcomes</h1>
-
+<section id="overview-of-daly-outcomes" class="slide level2 section-slide center">
+<h2>Overview of DALY Outcomes</h2>
+<div class="section-number">
+<p>01</p>
+</div>
 </section>
-<section id="common-outcomes" class="slide level2">
+<section id="common-outcomes" class="slide level2 center">
 <h2>Common Outcomes</h2>
+<div class="icon-bullets">
 <ol type="1">
 <li class="fragment">Occupancy-based payoffs:</li>
 </ol>
@@ -196,17 +195,21 @@
 <li class="fragment">One-time event-based cost (e.g., disease-related death, initial Dx, etc.).</li>
 <li class="fragment">One-time health outcome (e.g., years of life lost to premature mortality)</li>
 </ul>
+</div>
 </section>
-<section id="disability-adjusted-life-years-dalys" class="slide level2">
+<section id="disability-adjusted-life-years-dalys" class="slide level2 center">
 <h2>Disability-Adjusted Life Years (DALYs)</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">Reflect both occupancy- and transition-based payoffs.</li>
 <li class="fragment">There’s also <em>very</em> little guidance on how to structure a decision model for DALY outcomes.</li>
 <li class="fragment">We’ll show you how today!</li>
 </ul>
+</div>
 </section>
-<section id="dalys" class="slide level2">
+<section id="dalys" class="slide level2 center">
 <h2>DALYs</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment"><p>Origin story: Global Burden of Disease Study</p></li>
 <li class="fragment"><p>Deliberately a measure of health, not welfare/utility</p></li>
@@ -216,31 +219,37 @@
 <li class="fragment"><p>Quality of life (measured by disability weight)</p></li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="dalys-1" class="slide level2">
+<section id="dalys-1" class="slide level2 center">
 <h2>DALYs</h2>
-<p><a href="https://en.wikipedia.org/wiki/Disability-adjusted_life_year"><img data-src="images/DALY_disability_affected_life_year_infographic.svg" width="1500"></a></p>
+<p><a href="https://en.wikipedia.org/wiki/Disability-adjusted_life_year"><img data-src="images/dalys/DALY_disability_affected_life_year_infographic.svg" width="1500"></a></p>
 <div class="fragment">
+<div class="highlight-box">
 <p><strong>DALYs = YLL + YLD</strong></p>
 <ul>
 <li>YLL (Years of Life Lost)</li>
 <li>YLD (Years Lived with Disability)</li>
 </ul>
 </div>
+</div>
 </section>
-<section id="years-of-life-lost-to-disease" class="slide level2">
+<section id="years-of-life-lost-to-disease" class="slide level2 center">
 <h2>Years of Life Lost to Disease</h2>
 <p>For a given condition <span class="math inline">c</span>,</p>
 <p><span class="math display">
 YLD(c) = D_c \cdot L_c
 </span></p>
+<div class="icon-bullets">
 <ul>
 <li class="fragment"><span class="math inline">D_c</span> is the condition’s disability weight</li>
 <li class="fragment"><span class="math inline">L_c</span> is the time lived with the disease.</li>
 </ul>
+</div>
 </section>
-<section id="years-of-life-lost-to-premature-mortality" class="slide level2">
+<section id="years-of-life-lost-to-premature-mortality" class="slide level2 center">
 <h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">YLL are defined by by a “loss function.”</li>
 <li class="fragment">Drawn from a reference life table, indicating remaining life expectancy at age <span class="math inline">a</span>.</li>
@@ -248,45 +257,70 @@ YLD(c) = D_c \cdot L_c
 YLL(a)= Ex(a)
 </span></li>
 </ul>
+</div>
 </section>
-<section id="years-of-life-lost-to-premature-mortality-1" class="slide level2">
+<section id="years-of-life-lost-to-premature-mortality-1" class="slide level2 center">
 <h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
+<div class="icon-bullets">
 
+</div>
 </section>
-<section id="dalys-2" class="slide level2">
+<section id="dalys-2" class="slide level2 center">
 <h2>DALYs</h2>
 <p><span class="math display">
 DALY(c,a) = YLD(c) + YLL(a)
 </span></p>
 </section>
-<section id="evolution-of-daly-calculations" class="slide level2">
+<section id="evolution-of-daly-calculations" class="slide level2 center">
 <h2>Evolution of DALY Calculations</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment"><strong>Historical Practice:</strong> Initial GBD studies applied age-weighting and 3% annual time discounting.</li>
 <li class="fragment"><strong>Changes Post-2010:</strong> Discontinuation of these practices for a more descriptive DALY measure.</li>
 </ul>
+</div>
 </section>
-<section id="current-discounting-practices" class="slide level2">
+<section id="current-discounting-practices" class="slide level2 center">
 <h2>Current Discounting Practices</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment"><strong>WHO-CHOICE:</strong> Time discounting of health outcomes.</li>
 </ul>
+</div>
 </section>
-<section id="takeaways" class="slide level2">
-<h2>Takeaways</h2>
+<section id="section-1" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Modeling Without Discounting</p>
+</div>
+<div class="key-points">
 <ul>
 <li class="fragment">Modeling DALYs in Amua is straightforward if you don’t use discounting.
 <ul>
 <li class="fragment">For YLDs, use disability weight like you would a utility weight.</li>
 <li class="fragment">For YLLs, use one-time “cost” of remaining life expectancy.
 <ul>
-<li class="fragment">YLL = <code>tbl_reference_life_table[initial_age + t, 1]</code></li>
+<li class="fragment">YLL = tbl_reference_life_table[initial_age + t, 1]</li>
 </ul></li>
 </ul></li>
 </ul>
+</div>
+</div>
 </section>
-<section id="takeaways-1" class="slide level2">
-<h2>Takeaways</h2>
+<section id="section-2" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Modeling With Discounting</p>
+</div>
+<div class="key-points">
 <ul>
 <li class="fragment">But if you do need to discount …
 <ul>
@@ -295,9 +329,12 @@ DALY(c,a) = YLD(c) + YLL(a)
 <li class="fragment">We’ll provide you the formulas to use here and in the .amua model file.</li>
 </ul></li>
 </ul>
+</div>
+</div>
 </section>
-<section id="mathematical-formulation-for-dalys-in-amua" class="slide level2">
+<section id="mathematical-formulation-for-dalys-in-amua" class="slide level2 center">
 <h2>Mathematical Formulation for DALYs in AMUA</h2>
+<div class="arrow-bullets">
 <ul>
 <li><p><span class="math inline">YLD(c) = D_c</span>.</p></li>
 <li><p><span class="math inline">YLL(a,t)=  Ex(a)\exp(-\ln(1+r)*t)</span>.</p>
@@ -307,44 +344,53 @@ DALY(c,a) = YLD(c) + YLL(a)
 <li><p><span class="math inline">t</span> is the cycle number at which premature death occurs.</p></li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="mathematical-formulation-for-dalys-in-amua-1" class="slide level2">
+<section id="mathematical-formulation-for-dalys-in-amua-1" class="slide level2 center">
 <h2>Mathematical Formulation for DALYs in AMUA</h2>
+<div class="arrow-bullets">
 <ul>
 <li><p><span class="math inline">YLD(c)=</span> <code>dw_c</code>.</p></li>
 <li><p><span class="math inline">YLL(a,t)=</span> <code>tbl_ref_lt[initial_age+t,1]</code> <span class="math inline">*\exp(-\log(1+</span> <code>r_disc</code> <span class="math inline">)*</span> <code>t</code><span class="math inline">)</span>.</p></li>
 </ul>
+</div>
 </section>
-<section id="overview-of-decision-problem" class="slide level2">
+<section id="overview-of-decision-problem" class="slide level2 center">
 <h2>Overview of Decision Problem</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">Progressive disease model (from case study)</li>
 <li class="fragment">Focus only on cohort of individuals who develop mild disease.</li>
 <li class="fragment">Follow until death (from disease-related or other causes)</li>
 </ul>
+</div>
 </section>
-<section id="overview-of-decision-problem-1" class="slide level2">
+<section id="overview-of-decision-problem-1" class="slide level2 center">
 <h2>Overview of Decision Problem</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">Major difference from case study: can ignore Healthy state.</li>
 <li class="fragment">Strategies: Status quo, prevention, treatment</li>
 </ul>
-</section></section>
-<section>
-<section id="methods-structuring-the-model" class="title-slide slide level1 center" data-background="#43464B">
-<h1>Methods: Structuring the Model</h1>
-
+</div>
 </section>
-<section id="state-transition-diagram" class="slide level2 nostretch">
+<section id="methods-structuring-the-model" class="slide level2 section-slide center">
+<h2>Methods: Structuring the Model</h2>
+<div class="section-number">
+<p>02</p>
+</div>
+</section>
+<section id="state-transition-diagram" class="slide level2 nostretch center">
 <h2>State Transition Diagram</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/clipboard-2723911892.png" class="quarto-figure quarto-figure-center" width="800"></p>
+<p><img data-src="images/dalys/clipboard-2723911892.png" class="quarto-figure quarto-figure-center" width="800"></p>
 </figure>
 </div>
 </section>
-<section id="defining-outcomes-in-amua" class="slide level2">
+<section id="defining-outcomes-in-amua" class="slide level2 center">
 <h2>Defining Outcomes in Amua</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">YLD: New Outcome. Use disability weights instead of utility weights!</li>
 <li class="fragment">YLL: One-time “event” at time of death from disease.
@@ -354,12 +400,14 @@ DALY(c,a) = YLD(c) + YLL(a)
 </ul></li>
 <li class="fragment">Need to also define the discount rate as a parameter <code>r_disc</code></li>
 </ul>
+</div>
 </section>
-<section id="interactive-amua-session" class="slide level2">
+<section id="interactive-amua-session" class="slide level2 center">
 <h2>Interactive Amua Session</h2>
 </section>
-<section id="occupancy-based-payoff-yld" class="slide level2">
+<section id="occupancy-based-payoff-yld" class="slide level2 center">
 <h2>Occupancy-Based Payoff: YLD</h2>
+<div class="arrow-bullets">
 <ul>
 <li>YLD is an “occupancy-based” payoff (i.e., YLD increments by disability weight for each cycle in that health state).
 <ul>
@@ -370,36 +418,44 @@ DALY(c,a) = YLD(c) + YLL(a)
 <li>Mild disease state: <code>dw_mild</code></li>
 <li>Progressive disease state: <code>dw_progressive</code></li>
 </ul>
+</div>
 </section>
-<section id="transition-based-payoff-yll" class="slide level2">
+<section id="transition-based-payoff-yll" class="slide level2 center">
 <h2>Transition-Based Payoff: YLL</h2>
+<div class="arrow-bullets">
 <ul>
 <li>Remaining life expectancies are drawn from the reference life table, or from an endogenous life table.</li>
 <li>Import reference life table as lookup table—just like we did with background mortality, etc.</li>
 <li>Remember to use the “Truncate” option because the life table may not extend to the maximum age in the model.</li>
 </ul>
+</div>
 <div class="footer">
 <p>Additional slides below (hit down button).</p>
 </div>
 </section>
-<section id="life-expectancy-yll" class="slide level2">
+<section id="life-expectancy-yll" class="slide level2 center">
 <h2>Life Expectancy &amp; YLL</h2>
+<div class="icon-bullets">
 <ul>
-<li class="fragment"><strong>Contextual Choices:</strong> Remaining life expectancy values may vary by research context <span class="citation" data-cites="anand2019">(<a href="#/references" role="doc-biblioref" onclick="">Anand and Reddy 2019</a>)</span>.</li>
+<li class="fragment"><strong>Contextual Choices:</strong> Remaining life expectancy values may vary by research context <span class="citation" data-cites="anand2019">(<a href="" role="doc-biblioref" onclick="return false;"><strong>anand2019?</strong></a>)</span>.</li>
 <li class="fragment"><strong>Historical Method:</strong> GBD uses an <em>exogenous</em> life table approximating maximum human lifespan.</li>
 <li class="fragment"><strong>Alternatives:</strong> <em>Endogenous</em> tables or models may be preferred in certain cases.</li>
 </ul>
+</div>
 </section>
-<section id="exogenous-vs.-endogenous-life-tables" class="slide level2">
+<section id="exogenous-vs.-endogenous-life-tables" class="slide level2 center">
 <h2>Exogenous vs.&nbsp;Endogenous Life Tables</h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment"><strong>Distinction:</strong> Source of life expectancy values (external vs. internal).</li>
 <li class="fragment"><strong>Exogenous:</strong> Independent mortality risks, using GBD’s reference table.</li>
 <li class="fragment"><strong>Endogenous:</strong> Specific to the population’s mortality risks and health states.</li>
 </ul>
+</div>
 </section>
-<section id="incremental-cea" class="slide level2">
+<section id="incremental-cea" class="slide level2 center">
 <h2>Incremental CEA</h2>
+<div class="arrow-bullets">
 <ul>
 <li>ICERs are based on cost per DALYs <em>averted</em></li>
 <li>Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel)</li>
@@ -408,38 +464,26 @@ DALY(c,a) = YLD(c) + YLL(a)
 <li>CEA will work, but expected values will be negative.</li>
 </ul></li>
 </ul>
-</section></section>
-<section id="thanks" class="title-slide slide level1 center">
-<h1>Thanks!</h1>
-<div class="vertical-center-slide">
-<div class="callout callout-note no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>Draft manuscript (with R code) available online at <a href="https://graveja0.github.io/dalys/" class="uri">https://graveja0.github.io/dalys/</a></p>
-</div>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="media/adobe-express-qr-code.png" class="quarto-figure quarto-figure-center" style="width:25.0%"></p>
-</figure>
-</div>
 </div>
 </section>
-
-<section id="references" class="title-slide slide level1 smaller scrollable">
-<h1>References</h1>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-anand2019" class="csl-entry" role="listitem">
-Anand, Sudhir, and Sanjay G. Reddy. 2019. <span>“The Construction of the DALY: Implications and Anomalies.”</span> <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3451311">https://doi.org/10.2139/ssrn.3451311</a>.
+<section id="thanks" class="slide level2 questions-slide center">
+<h2>Thanks!</h2>
+<div class="highlight-box primary">
+<p>Draft manuscript (with R code) available online at <a href="https://graveja0.github.io/dalys/" class="uri">https://graveja0.github.io/dalys/</a></p>
 </div>
+
+<img data-src="images/dalys/adobe-express-qr-code.png" class="quarto-figure quarto-figure-center r-stretch" style="width:25.0%"><div class="next-info">
+<p>Next: Advanced Topics</p>
 </div>
+</section>
+<section id="references" class="slide level2 center">
+<h2>References</h2>
+
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../vchem.png" class="slide-logo"></p>
+<p><img src="images/logos.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="../index.html">Back to Website</a></p>
 </div>
@@ -522,7 +566,7 @@ Anand, Sudhir, and Sanjay G. Reddy. 2019. <span>“The Construction of the DALY:
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -618,12 +662,17 @@ Anand, Sudhir, and Sanjay G. Reddy. 2019. <span>“The Construction of the DALY:
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,

@@ -156,7 +156,21 @@ Decision Analysis
 :::
 
 ::: definition
-a methodology that is uniquely beneficial when there are ***meaningful tradeoffs*** between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.
+A methodology that is uniquely beneficial when there are ***meaningful tradeoffs*** between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.
+:::
+
+
+::::::::
+
+## 
+
+:::::::: definition-box
+::: term
+Decision Analysis
+:::
+
+::: definition
+A methodology that is uniquely beneficial when there are ***meaningful tradeoffs*** between healthcare interventions, but the best strategies for obtaining optimal outcomes are uncertain.
 :::
 
 ::::: example

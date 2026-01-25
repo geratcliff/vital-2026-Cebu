@@ -78,22 +78,46 @@
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_DALYs.html</loc>
-    <lastmod>2026-01-22T18:53:28.523Z</lastmod>
+    <lastmod>2026-01-25T08:20:25.451Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs-decision-tree-additional.html</loc>
-    <lastmod>2025-12-31T18:16:32.773Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Sensitivity.html</loc>
+    <lastmod>2026-01-25T09:08:29.777Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_prob-decision.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Index.html</loc>
+    <lastmod>2026-01-07T17:31:50.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CommonErrors.html</loc>
+    <lastmod>2026-01-23T12:06:35.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision-tree-amua.html</loc>
+    <lastmod>2025-12-02T21:00:13.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_AMUA.html</loc>
+    <lastmod>2025-12-30T19:31:56.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Intro.html</loc>
+    <lastmod>2026-01-21T21:20:23.238Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_icer.html</loc>
     <lastmod>2025-12-02T21:00:13.154Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_MarkovSimple.html</loc>
-    <lastmod>2026-01-22T21:07:46.962Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/index.html</loc>
+    <lastmod>2026-01-23T19:05:54.017Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov-trace.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Tree.html</loc>
+    <lastmod>2026-01-21T17:49:55.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision-tree-excel.html</loc>
     <lastmod>2025-12-02T21:00:13.154Z</lastmod>
   </url>
   <url>
@@ -101,40 +125,20 @@
     <lastmod>2025-12-02T21:00:13.156Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision-tree-excel.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov-trace.html</loc>
     <lastmod>2025-12-02T21:00:13.154Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Tree.html</loc>
-    <lastmod>2026-01-21T17:49:55.832Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_MarkovSimple.html</loc>
+    <lastmod>2026-01-22T21:07:46.962Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/index.html</loc>
-    <lastmod>2026-01-22T21:33:20.429Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_icer.html</loc>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_prob-decision.html</loc>
     <lastmod>2025-12-02T21:00:13.154Z</lastmod>
   </url>
   <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Intro.html</loc>
-    <lastmod>2026-01-21T21:20:23.238Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_AMUA.html</loc>
-    <lastmod>2025-12-30T19:31:56.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision-tree-amua.html</loc>
-    <lastmod>2025-12-02T21:00:13.153Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CommonErrors.html</loc>
-    <lastmod>2026-01-23T12:06:35.860Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/CaseStudy_Index.html</loc>
-    <lastmod>2026-01-07T17:31:50.368Z</lastmod>
+    <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs-decision-tree-additional.html</loc>
+    <lastmod>2025-12-31T18:16:32.773Z</lastmod>
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs-markov-additional.html</loc>
@@ -202,11 +206,11 @@
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_6.ICERs.html</loc>
-    <lastmod>2026-01-22T22:41:45.326Z</lastmod>
+    <lastmod>2026-01-25T09:39:38.943Z</lastmod>
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5b.cea-fundamentals2.html</loc>
-    <lastmod>2026-01-23T13:09:23.868Z</lastmod>
+    <lastmod>2026-01-23T19:27:15.452Z</lastmod>
   </url>
   <url>
     <loc>https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_3a.bayes-probrevision.html</loc>

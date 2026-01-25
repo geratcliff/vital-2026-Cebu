@@ -145,7 +145,7 @@ download_link(
 ```
 
 
-**To save time, we will go back to the simple Markov Model**
+**To save time, we will go through the No Treat branch. A full answer key will be included at the end**
 
 ### A: Important Parameters 
 
@@ -158,7 +158,7 @@ Since we are using DALYs, we use disability weights.
 | Name            | Value | Description                                         |
 |-------------------|-------------------|----------------------------------|
 | dw_sick | 0.20  | Disability weight for Sick health state.            |
-| dw_sick_treated | 0.10  | Disability weight for Sicker health state. |
+| dw_sicker | 0.10  | Disability weight for Sicker health state. |
 
 
 #### Life Expectancy by Age
@@ -374,6 +374,8 @@ Our final objective is to add DALYs to the markov model. We have seen how to add
         -   For Example: Under sick where it now has(\$) c_sick; (YLD) dw_sick ; (YLL) 0, we will have (\$) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick
 
 -   After inputting the outcomes, your Markov model should look like this:![](images/HSD_AddDALY.png)
+
+
 
 ::: {.callout-note appearance="minimal"}
 Check and run the model to get the CEA for DALYs

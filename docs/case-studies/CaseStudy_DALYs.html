@@ -367,6 +367,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<style>
+/* Base: make Quarto callouts behave like full cards */
+.callout.fill-box {
+  /* Unified background & border for the whole card */
+  --box-bg: #eaf6ee;   /* default soft green if no class overrides */
+  --edge-color: #1f6f43; /* default darker edge/title color */
+  background: var(--box-bg);
+  border: 1px solid var(--edge-color);
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden; /* keeps rounded corners clean when title is darker */
+}
+
+/* Title bar: darker shade; full-width across top */
+.callout.fill-box .callout-title {
+  background: var(--edge-color);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--edge-color);
+}
+
+/* Body: same light color as the card, not a separate "stripe" */
+.callout.fill-box .callout-body {
+  background: transparent; /* let the parent set the background */
+  padding: 0.9rem 1rem;
+}
+
+
+/* --- Specific palettes --- */
+/* Green: "Why are we doing this?" */
+.callout.why-box {
+  --box-bg: #eaf6ee;    /* light green fill */
+  --edge-color: #1f6f43;/* dark green edge/title */
+}
+
+/* Purple: "Your Task" */
+.callout.task-box {
+  --box-bg: #f3ecfb;    /* light purple fill */
+  --edge-color: #7140a6;/* deep purple edge/title */
+}
+
+/* Yellow: "Objectives" */
+.callout.objectives {
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
+}
+
+</style>
+<div class="fill-box objectives callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Introduction and Learning Objectives <i class="fa-regular fa-clipboard" aria-label="clipboard"></i>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this session, participants will be able to:</p>
+<ol type="1">
+<li><p>Apply DALYs to a Decision Tree</p></li>
+<li><p>Calculate Years Lived with Disability (YLDs) using disability weights</p></li>
+<li><p>Calculate Years of Life Lost (YLLs) with proper discounting from time of death</p></li>
+<li><p>Combine YLDs and YLLs to compute total DALYs for cost-effectiveness analysis</p></li>
+</ol>
+</div>
+</div>
 <section id="decision-trees" class="level1">
 <h1>Decision Trees</h1>
 <section id="add-a-daly-dimension" class="level2">
@@ -374,7 +442,7 @@ ul.task-list li input[type="checkbox"] {
 <p>We now want to add a new outcome dimension: <strong>DALYs (Disability-Adjusted Life Years)</strong>. DALYs are a measure of disease burden, where <strong>0 = perfect health</strong> and <strong>1 = death</strong> per year lost. For this model, we will assume we have estimated DALYs available for each terminal node.</p>
 <div class="cell">
 <div class="cell-output-display">
-<a href="https://https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision_tree_diseaseX_ANS.amua">
+<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision_tree_diseaseX_ANS.amua">
 <button class="btn btn-primary"><i class="fa fa-save"></i> Download Completed Decision Tree</button>
 </a>
 </div>
@@ -444,11 +512,12 @@ ul.task-list li input[type="checkbox"] {
 <p>We now want to add a new outcome dimension: <strong>DALYs (Disability-Adjusted Life Years)</strong>. DALYs are a measure of disease burden, where <strong>0 = perfect health</strong> and <strong>1 = death</strong> per year lost. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.</p>
 <div class="cell">
 <div class="cell-output-display">
-<a href="https://https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_ANS.amua">
+<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_ANS.amua">
 <button class="btn btn-primary"><i class="fa fa-save"></i> Download Completed Markov Model</button>
 </a>
 </div>
 </div>
+<p><strong>To save time, we will go back to the simple Markov Model</strong></p>
 <section id="a-important-parameters" class="level3">
 <h3 class="anchored" data-anchor-id="a-important-parameters">A: Important Parameters</h3>
 <section id="disability-weights" class="level4">
@@ -463,7 +532,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Since we are using DALYs instead of QALYs, we now use disability weights instead of Quality-of-life (QoL) weights.</p>
+<p>Since we are using DALYs, we use disability weights.</p>
 </div>
 </div>
 <table class="caption-top table">
@@ -482,18 +551,13 @@ Important
 <tbody>
 <tr class="odd">
 <td>dw_sick</td>
-<td>0.15</td>
+<td>0.20</td>
 <td>Disability weight for Sick health state.</td>
 </tr>
 <tr class="even">
 <td>dw_sicker</td>
-<td>0.37</td>
+<td>0.10</td>
 <td>Disability weight for Sicker health state.</td>
-</tr>
-<tr class="odd">
-<td>dw_treated</td>
-<td>0.05</td>
-<td>Disability weight for being treated</td>
 </tr>
 </tbody>
 </table>
