@@ -158,8 +158,8 @@ The plot should now display a bar for each variable with inputs
 ## C: Check The Plot
 
 1.  Verify that the plot makes sense
-    -   Is the directionality correct?
-    -   Are the most impactful variables logical?
+    -   Is the direction correct?
+    -   Are the most impactful variables what you would expect?
 
 ## D: Common Issues
 
