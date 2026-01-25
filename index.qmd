@@ -35,17 +35,17 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 26/01/2026 (Monday)
 
 | Time | Type | Topic |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | 08:00 - 8:45 | Check-Ins | Registration and Introductions |
-| 08:45 - 9:30 | [Lecture]{.lecture}  | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.html) |
-| 10:00 - 10:30 | [Case Study]{.casestudy}  | [Identifying Strategy Differences](case-studies/CaseStudy_Intro.html) |
+| 08:45 - 9:30 | [Lecture]{.lecture} | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.html) |
+| 10:00 - 10:30 | [Case Study]{.casestudy} | [Identifying Strategy Differences](case-studies/CaseStudy_Intro.html) |
 | 10:30 - 10:50 | Break | Coffee/Tea |
 | 10:50 - 12:00 | [Lecture]{.lecture} | [Decision Trees](lectures/lec_2.decision-trees-and-probabilities.html) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 13:55 | [Capstone]{.capstone} | Example Presentation |
 | 13:55 - 14:55 | [Capstone]{.capstone} | [Discuss Decision Problem \[Small Groups\]](capstone/01_smallgroups.html) |
-| 14:55 -15:40 | [Case Study]{.casestudy}  | [Introduction to AMUA](case-studies/CaseStudy_AMUA.html) |
-| 15:40-16:30 | [Lecture]{.lecture}| [CEA Fundamentals 1: Costs](lectures/lec_5a.cea-fundamentals1.html) |
+| 14:55 -15:40 | [Case Study]{.casestudy} | [Introduction to AMUA](case-studies/CaseStudy_AMUA.html) |
+| 15:40-16:30 | [Lecture]{.lecture} | [CEA Fundamentals 1: Costs](lectures/lec_5a.cea-fundamentals1.html) |
 | 16:30 | Check-Ins | Daily Recap & Discussion |
 
 : {tbl-colwidths="\[20,10,50\]"}
@@ -53,8 +53,8 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 27/01/2026 (Tuesday)
 
 | Time | Type | Topic |
-|------------------------|------------------------|------------------------|
-| 08:00 - 09:00 | [Case Study]{.casestudy}  | [Decision Trees in Amua](case-studies/CaseStudy_Tree.html |
+|----|----|----|
+| 08:00 - 09:00 | [Case Study]{.casestudy} | \[Decision Trees in Amua\](case-studies/CaseStudy_Tree.html |
 | 9:00 - 10:30 | [Capstone]{.capstone} | [Make a Decision Tree](capstone/02_decision-tree.html) |
 | 10:30 - 11:30 | Break | Coffee/Tea |
 | 11:30 - 12:30 | [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits](lectures/lec_5b.cea-fundamentals2.html) |
@@ -71,13 +71,13 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 28/01/2026 (Wednesday)
 
 | Time | Type | Topic |
-|------------------------|------------------------|------------------------|
-| 08:00 - 09:00 | [Case Study]{.casestudy}  | [Incremental CEA](case-studies/CaseStudy_CEA.html) |
+|----|----|----|
+| 08:00 - 09:00 | [Case Study]{.casestudy} | [Incremental CEA](case-studies/CaseStudy_CEA.html) |
 | 09:00-10:00 | [Lecture]{.lecture} | [Markov Models](lectures/lec_7.MarkovModels1.html) |
 | 10:45 - 11:15 | Break | Coffee/Tea |
 | 11:15 - 12:30 | [Lecture]{.lecture} | [Rates, Probabilities & More](lectures/lec_rates-probabilities.html) |
 | 12:30 - 13:40 | Break | Lunch |
-| 13:40 - 14:45 | [Case Study]{.casestudy}  | [Simple Markov Model in Amua](case-studies/CaseStudy_MarkovSimple.html) |
+| 13:40 - 14:45 | [Case Study]{.casestudy} | [Simple Markov Model in Amua](case-studies/CaseStudy_MarkovSimple.html) |
 | 14:45 - 16:30 | [Capstone]{.capstone} | [Design Markov Model](capstone/03_design-markov.html) |
 | 16:30 | Check-Ins | Daily Recap and Group Discussion |
 
@@ -86,15 +86,15 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 29/01/2026 (Thursday)
 
 | Time | Type | Topic |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | 08:00 - 09:00 | [Lecture]{.lecture} | [Lecture: Structuring the Markov Model](lectures/lec_structure.html) \[JG\] |
-| 09:00 - 10:15 | [Case Study]{.casestudy}  |  [Progressive Disease Model in Amua](case-studies/CaseStudy_MarkovProg.html) |
+| 09:00 - 10:15 | [Case Study]{.casestudy} | [Progressive Disease Model in Amua](case-studies/CaseStudy_MarkovProg.html) |
 | 10:15 - 10:30 | Break | Coffee/Tea |
 | 10:30- 12:30 | [Lecture]{.lecture} | [Determinisitic, Threshold and Scenario Analyses](lectures/lec_sensitivity.html) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 14:00 | [Capstone]{.capstone} | Example Presentation |
 | 14:00 - 14:45 | [Capstone]{.capstone} | [Run CEA and Stop work on Model to complete slides](capstone/04_build-markov.html) |
-| 14:45 - 16:00 | [Case Study]{.casestudy}  | [Common CEA Errors](case-studies/CommonErrors.html) |
+| 14:45 - 16:00 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 16:00 | Check-Ins | Daily Recap |
 
 : {tbl-colwidths="\[20,10,50\]"}
@@ -102,9 +102,9 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 30/01/2026 (Friday)
 
 | Time | Type | Topic |
-|------------------|------------------|-------------------------------------|
-| 08:00 - 09:00 | [Case Study]{.casestudy}  | DALYs in AMUA \[Guided\] |
-| 09:30 - 10:15 | [Case Study]{.casestudy}  | [Common CEA Errors](case-studies/CommonErrors.html) |
+|----|----|----|
+| 08:00 - 09:00 | [Case Study]{.casestudy} | DALYs in AMUA \[Guided\] |
+| 09:30 - 10:15 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 10:15 - 10:45 | Break | Coffee/Tea |
 | 10:45 - 12:30 | Presentations | Capstone Presentations (Small Groups) |
 | 12:30 - 13:45 | Break | Lunch |
@@ -114,10 +114,10 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 ## Optional Content
 
-| Time         | Type       | Topic        |
-|--------------|------------|--------------|
-| Asynchronous | Case Study | QALYS.       |
-| Asynchronous | Lecture    | PSA Analysis |
-| Asynchronous | Guide | [Quick Start Guide](V4_Quick_Start_Guide.pdf) |
+| Time         | Type       | Topic                                         |
+|--------------|------------|-----------------------------------------------|
+| Asynchronous | Case Study | QALYS.                                        |
+| Asynchronous | Lecture    | PSA Analysis                                  |
+| Asynchronous | Guide      | [Quick Start Guide](V4_Quick_Start_Guide.pdf) |
 
 : {tbl-colwidths="\[20,10,50\]"}

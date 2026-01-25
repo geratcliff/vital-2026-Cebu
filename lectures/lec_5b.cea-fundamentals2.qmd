@@ -51,7 +51,7 @@ editor:
 :::
 
 ::: text
-Valuing health outcomes: QALYs/DALYs
+Clinical Outcomes
 :::
 :::::
 
@@ -61,7 +61,7 @@ Valuing health outcomes: QALYs/DALYs
 :::
 
 ::: text
-Utility weights/instruments
+Summary Measurements
 :::
 :::::
 
@@ -113,7 +113,7 @@ $$
 
 ## 
 
-::::::::::: definition-box
+:::::::::: definition-box
 ::: term
 Denominator (benefits)
 :::
@@ -122,7 +122,7 @@ Denominator (benefits)
 Valued in terms of **clinical outcomes**
 :::
 
-:::::::: split-content
+::::::: split-content
 ::::: content-text
 :::: example
 Examples:
@@ -135,24 +135,119 @@ Examples:
 ::::
 :::::
 
-::: {.content-text .incremental}
--   What's important for the question at hand
--   Most analyses report several different outcomes
--   QALYs/DALYs enable comparability across disease areas
-:::
-
 ::: content-text
 $$
 \frac{C_1 - C_0 \quad  (\Delta C)}{\colorbox{#CfAE70}{$E_1 - E_0 \quad  (\Delta E)$}}
 $$
 :::
-::::::::
-:::::::::::
+:::::::
+::::::::::
 
-## Valuing Health Outcomes {.section-slide}
+## Benefits
+
+::: {.arrow-bullets .incremental}
+-   What's important for the question at hand
+-   Most analyses report several different outcomes
+-   QALYs/DALYs enable comparability across disease areas
+:::
+
+# Valuing Health Outcomes
+
+## Clinical Outcomes {.section-slide}
 
 ::: section-number
 01
+:::
+
+## What are they?
+
+Clinical outcomes allow us to measure particular events in a decision
+tree or health economic model.
+
+For Example:
+
+:::::: {.concept-grid .text-smaller}
+::: concept-box
+\# of HIV cases prevented
+:::
+
+::: concept-box
+\# of children seizure free
+:::
+
+::: concept-box
+\# of healthy pregnancies
+:::
+::::::
+
+:::::: {.concept-grid .text-smaller}
+::: concept-box
+\# of hospital visits
+:::
+
+::: concept-box
+\# of disease deaths
+:::
+
+::: concept-box
+\# of cancer progressions
+:::
+::::::
+
+## When are they be used
+
+::: icon-bullets-triangle
+-   Policy holders need the information
+-   The outcome holds high importance
+-   Short-term models
+:::
+
+## How do you choose one?
+
+"Is implementing screening for colon cancer cost-effective?"
+
+[**What concerns might arise for each of these?**]{.accent-text
+.fragment fragment-index="0"}
+
+-   Number of cases of colon cancer [Screening will increase the number
+    of cases caught.]{.accent-text .fragment fragment-index="1"}
+-   Number of cases of STAGE 1 colon cancer [Could heavily favor
+    Screening]{.accent-text .fragment fragment-index="2"}
+-   Number of cancer deaths [Deaths aren't the healthcare
+    burden]{.accent-text .fragment fragment-index="3"}
+-   Number of hospitalizations from colon cancer [Minimal
+    Data]{.accent-text .fragment fragment-index="4"}
+-   Number of screenings completed [Focuses on
+    implementation]{.accent-text .fragment fragment-index="5"}
+-   etc.
+
+[**All these are still great outcomes, they just highlight important
+considerations when choosing the one for your research
+question**]{.accent-text .fragment fragment-index="6"}
+
+## A Well Defined Clinical Outcome
+
+-   Specific
+    -   Combining too many events can make it hard to understand the
+        strategies impact, instead consider multiple outcomes
+-   Prevent biasing a strategy
+    -   Make sure that your chosen outcome truly tells the story of what
+        is happening.
+        -   One of the quirks of modeling is that bad events are
+            sometimes economically good. For example, death is very low
+            cost.
+-   Answers your research question
+    -   The outcomes chosen should provide impactful information
+    -   Focus the computation power on metrics that are important to the
+        research question and policy holders
+-   Data is available
+    -   As with much of economic modeling, clinical outcomes rely on
+        accurate data.
+
+## Summary Measurements {.section-slide}
+
+::: section-number
+02
 :::
 
 ## Why summary measures of health?
@@ -183,7 +278,7 @@ With [QALYs]{.bold .accent-text}, two dimensions of interest:
 [Length of life]{.bold .db-text}<br> measured in life-years
 :::
 
-::: {.concept-box .accent}
+::: {.concept-box .accent .text-smaller}
 [Quality of life]{.bold .db-text} <br> measured by utility weight,
 usually between 0 and 1
 :::
@@ -191,7 +286,7 @@ usually between 0 and 1
 ::::::
 
 ::: content-visual
-![](/images/lec5b/QALYs.png)
+![](images/lec5b/QALYs.png)
 :::
 ::::::::
 
@@ -218,7 +313,7 @@ Quality Adjusted Life Years = <br> Sum of weight \* duration of life
 :::
 
 ::: content-visual
-![](/images/lec5b/QALY_scale.png)
+![](images/lec5b/QALY_scale.png)
 :::
 :::::
 :::::::
@@ -308,6 +403,9 @@ QALYs
 :::::
 :::::::::
 
+
+
+
 ## Utility weights -- How are they obtained?
 
 -   Utility weights for most health states are between 0 (death) and 1
@@ -341,8 +439,8 @@ Indirect methods:
 ## Direct methods - Standard Gamble (SG) {.split-wrapper .smaller}
 
 [What risk of death would you accept in order to avoid \[living with
-an]{.accent-text}[amputated leg]{.bold} for the rest of your life\] and
-live the rest of your life in perfect health?
+an **amputated leg** for the rest of your life\] and
+live the rest of your life in perfect health?]{.accent-text}
 
 ::::: split-content
 ::: content-visual
@@ -395,8 +493,8 @@ This is the STANDARD GAMBLE TECHNIQUE
 ## Direct methods - Standard Gamble (SG) {.split-wrapper .small}
 
 [What risk of death would you accept in order to avoid \[living
-with]{.accent-text}[stroke]{.bold} for the rest of your life\] and
-livethe rest of your life in perfect health?
+with **stroke** for the rest of your life\] and
+livethe rest of your life in perfect health? ]{.accent-text}
 
 :::::: split-content
 ::: content-visual
@@ -441,8 +539,8 @@ livethe rest of your life in perfect health?
 
 ::::: center-text
 [What portion of your current life expectancy of 40 years would you give
-up to improve your current health state]{.accent-text}[(stroke)]{.bold}
-to 'perfect health'?
+up to improve your current health state **stroke**
+to 'perfect health'?]{.accent-text}
 
 ::: fragment
 ![](images/lec5b/TTO.png){style="max-width: 50%;"}}
@@ -467,10 +565,9 @@ Standard Gamble
 :::
 
 ::: column-content
--   [Represents]{.bold} decision-making under uncertainty
+-   **Represents** decision-making under uncertainty
 -   [Only valuing the health state]{.fragment fragment-index="2"}
--   [Risk posture ]{.fragment fragment-index="3"}[is]{.bold} captured
-    (risk aversion for death)
+-   [Risk posture **is** captured (risk aversion for death)]{.fragment fragment-index="3"}
 -   [Utility values usually \> TTO for same state]{.fragment
     fragment-index="4"}
 :::
@@ -482,12 +579,11 @@ Time Trade-Off
 :::
 
 ::: column-content
--   [Is]{.bold} decision-making under certainty
+-   **Is** decision-making under certainty
 -   [Might inadvertently capture time preference (i.e., we might value
     health in the future less than we do today)]{.fragment
     fragment-index="2"}
--   [Risk posture ]{.fragment fragment-index="3"}[is NOT]{.bold}
-    captured
+-   [Risk posture **is NOT** captured]{.fragment fragment-index="3"}
 -   [Utility values usually \< SG for same state]{.fragment
     fragment-index="4"}
 :::
@@ -639,13 +735,13 @@ With [DALYs]{.bold .accent-text}, two dimensions of interest:
 ::::::
 
 ::: content-visual
-![](/images/lec5b/DALY_circle.png)
+![](images/lec5b/DALY_circle.png)
 :::
 ::::::::
 
 ## DALYs Formula
 
-[![](images/DALY_disability_affected_life_year_infographic.svg){width="1500"}](https://en.wikipedia.org/wiki/Disability-adjusted_life_year)
+[![](images/lec5b/DALY_disability_affected_life_year_infographic.png){width="1500"}](https://en.wikipedia.org/wiki/Disability-adjusted_life_year)
 
 ## 
 
@@ -828,15 +924,14 @@ Effective asthma control for 10 years
 :::
 
 :::: fragment
-::: .content-visual
+::: content-visual
 ![](images/paste-51631169.png)
 :::
 ::::
 ::::::
 
-[Source: Salomon, Joshua A., et al.
-"Disability weights for the Global Burden of Disease 2013 study." The
-Lancet Global Health 3.11 (2015):
+[Source: Salomon, Joshua A., et al. "Disability weights for the Global
+Burden of Disease 2013 study." The Lancet Global Health 3.11 (2015):
 e712-e723.](http://www.thelancet.com/journals/langlo/article/PIIS2214-109X(15)00069-8/fulltext){style="font-size:1vh;"}
 
 ## DALYs = YLL + [YLD]{style="color: red;"}
@@ -875,12 +970,15 @@ Example:
 ::: example-text
 Effective asthma control for 10 years
 
--   Disability weight (uncontrolled asthma) = [?]{.fragment .fade-out fragment-index="1"} [0.133]{.fragment .fade-in fragment-index="1"}
+-   Disability weight (uncontrolled asthma) = [?]{.fragment .fade-out
+    fragment-index="1"} [0.133]{.fragment .fade-in fragment-index="1"}
 
--   Disability weight (controlled asthma) = [?]{.fragment .fade-out fragment-index="1"} [0.015]{.fragment .fade-in fragment-index="1"}
+-   Disability weight (controlled asthma) = [?]{.fragment .fade-out
+    fragment-index="1"} [0.015]{.fragment .fade-in fragment-index="1"}
 
--   [YLD = (10 \* 0.015) - (10 \* 0.133) = -1.18 DALYs =]{.fragment .fade-in fragment-index="2"}  [1.18 DALYs averted]{.bold .accent-text .fragment .fade-in fragment-index="3"}
-
+-   [YLD = (10 \* 0.015) - (10 \* 0.133) = -1.18 DALYs =]{.fragment
+    .fade-in fragment-index="2"} [1.18 DALYs averted]{.bold .accent-text
+    .fragment .fade-in fragment-index="3"}
 :::
 :::::
 ::::::::
@@ -896,18 +994,175 @@ Effective asthma control for 10 years
     disability weight
 -   Discounting still generally done for CEA
 :::
+
 :::: fragment
 ::: {.highlight-box .thin}
 [Common Practice]{.bold .accent-text}
 
-- **High-income setting:** QALYs
-- **Low- and middle-income setting:** DALYs
-  - Disability weights are freely & publicly available (these weights are required for DALY calculations), it can reduce costs/time/resources compared to collecting QALY estimates
-
+-   **High-income setting:** QALYs
+-   **Low- and middle-income setting:** DALYs
+    -   Disability weights are freely & publicly available (these
+        weights are required for DALY calculations), it can reduce
+        costs/time/resources compared to collecting QALY estimates
 :::
 ::::
 
-## {.summary-end-slide}
+## Alternatives to ICERs
+
+ICERs are the most common approach for describing CEA results
+
+::::::: pros-cons-new
+:::: pros-column
+::: column-title
+Advantages
+:::
+
+-   Summarizes all aspects of decision problem except WTP (which comes
+    from decision-maker)
+::::
+
+:::: cons-column
+::: column-title
+Disadvantages
+:::
+
+-   Ratios can act poorly/are unstable; especially when there is a lot
+    of uncertainty in the denominator, the incremental QALYs are small,
+    or close to zero.
+-   For cost-saving interventions, the ICER is meaningless.
+::::
+:::::::
+
+## An Alternative
+::: {.icon-bullets}
+[Maybe all of your interventions are cost-effective under accepted WTPs
+& your goal, rather, is to quantify the short and long-term health
+benefits of interventions.]{.fragment}
+
+[If willing to choose a fixed willingness-to-pay threshold (e.g., λ=
+100,000 / QALY), can write down an equation for the contribution of
+health and cost to utility.]{.fragment}
+:::
+
+## 
+
+::::: concept-grid
+::: concept-box
+Net Health Benefit (NHB)
+:::
+
+::: concept-box
+Net Monetary Benefit (NMB)
+:::
+:::::
+
+:::: concept-grid
+::: {.concept-box .accent}
+Objective: Select the strategy with the highest NHB/NMB
+:::
+::::
+
+## Net Health Benefit (NHB)
+
+$$
+ NHB_s = E_s - \frac{C_s}{λ}
+$$ 
+$E_s$ is effectiveness of strategy s
+
+$C_s$ is cost of s
+
+$λ$ is WTP threshold
+
+-   Effectiveness is already in QALYs, no conversion needed
+-   Cost is in \$, needs conversion to QALYs (so need to divide by
+    \$/QALY)
+
+## Net Monetary Benefit (NMB)
+
+$$
+ NMB_s = E_s * λ - C_s
+$$ 
+
+where
+
+$E_s$ is effectiveness of strategy s
+
+$C_s$ is cost of s
+
+$λ$ is WTP threshold
+
+-   Cost is already in \$, no conversion needed
+
+-   Effectiveness is in QALYs, needs conversion to \$ (multiply by
+    \$/QALY)
+
+## Example: NHB
+
+:::split-content
+:::content-text
+$E_1 = 0.07$ years
+
+$E_2 = 0.10$ years
+
+$C_1 = 1,500$
+
+$C_2 = 2,800$
+
+$λ = 50,000$ per year of life saved
+:::
+::: content-text
+$ICER = \frac{2800 - 1500}{0.10 - 0.07}$
+
+$=43,333$
+:::
+:::
+
+## Example: NHB
+$NHB_1 = 0.07−\frac{1500}{50000} =0.040$
+
+$NHB_2 = 0.10−\frac{2800}{50000} =0.044$
+
+$IncNHB = 0.044−0.040=0.004$
+
+::: {.arrow-bullets .incremental}
+-   Suggests a small difference in QALYs between the interventions
+    (.004\*365 = 1.46 days)
+-   The cost adjusted NHB accounts for the tradeoffs between health
+    outcomes and costs into a single measure.
+:::
+
+
+## Example: Net Monetary Benefit (NMB)
+
+$NMB_1=(0.07×50000)−1500 = 2000$
+
+$NMB_2=(0.10×50000)−2800=2200$
+
+$IncNMB =2200−2000=200$
+
+::: {.arrow-bullets .incremental}
+- Quantifies this improvement’s value in monetary
+terms. Treatment 2 provides \$200 more net value than Treatment 1 after
+accounting for both its additional health benefit and higher cost.
+::: 
+
+## NHB/NMB
+
+The strategy with the highest incremental NHB or NMB is the preferred
+option, given a specified WTP threshold. 
+
+
+:::: split-content
+::: content-text
+A higher NHB means more health gained after accounting for costs.
+:::
+
+::: content-visual
+![](images/lec5b/balance_health.png)
+:::
+::::
+
+##  {.summary-end-slide}
 
 ::::: summary-circle
 ::: end-title
@@ -919,10 +1174,15 @@ Benefits
 :::
 
 <ul class="key-points">
+
 <li>X</li>
+
 <li>X</li>
+
 <li>X</li>
+
 <li>X</li>
+
 </ul>
 :::::
 
