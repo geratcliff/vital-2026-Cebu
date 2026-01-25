@@ -31,7 +31,7 @@ editor:
 library(readr)
 library(here)
 library(gt)
-source(here::here("/Users/ratclg2/Documents/lectures/_healthy-sick-dead/01-healthy-sick-dead_setup.r"))
+source(here::here("_healthy-sick-dead/01-healthy-sick-dead_setup.r"))
 source(here("/Users/ratclg2/Documents/lectures/_healthy-sick-dead/functions_healthy-sick-dead.r"))
 source(here("/Users/ratclg2/Documents/lectures/_healthy-sick-dead/02_healthy-sick-dead_process-parameters.r"))
 source(here("/Users/ratclg2/Documents/lectures/_healthy-sick-dead/04_healthy-sick-dead_discounting-and-cycle-adjustments.r"))
