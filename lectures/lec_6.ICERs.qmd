@@ -457,16 +457,15 @@ Strategy: Treat No One
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" .center}
 
-::: incremental
-::: arrow-bullets
-- Treatment yields *higher* life expectancy for those with disease, but comes at a cost.  
-- Treatment yields *lower* life expectancy for those without the disease, *and also* comes at a cost.  
-- **Biopsy** can help balance these two outcomes by better targeting treatment, but also comes with risks and costs.  
-- Incremental CEA provides a transparent framework for quantifying and weighing these considerations.  
-
+::: {.incremental .arrow-bullets}
+- Treatment yields *higher* life expectancy for those with disease, but comes at a cost.
+- Treatment yields *lower* life expectancy for those without the disease, *and also* comes at a cost.
+- **Biopsy** can help balance these two outcomes by better targeting treatment, but also comes with risks and costs.
+- Incremental CEA provides a transparent framework for quantifying and weighing these considerations.
 :::
+
 :::
 :::
 :::
