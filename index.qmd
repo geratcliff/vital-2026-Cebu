@@ -30,12 +30,12 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 # Schedule
 
-### [Download All Lecture Slides as a ZIP file](https://graveja0.github.io/vital-istanbul-2024/vital-istanbul-2024-workshop-lectures.zip) \[NEEDS UPDATED\]
+<!-- ### [Download All Lecture Slides as a ZIP file](https://graveja0.github.io/vital-istanbul-2024/vital-istanbul-2024-workshop-lectures.zip) \[NEEDS UPDATED\] -->
 
 ## 26/01/2026 (Monday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 8:45 | Check-Ins | Registration and Introductions |
 | 08:45 - 9:30 | [Lecture]{.lecture} | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.html) |
 | 10:00 - 10:30 | [Case Study]{.casestudy} | [Identifying Strategy Differences](case-studies/CaseStudy_Intro.html) |
@@ -53,25 +53,25 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 27/01/2026 (Tuesday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | \[Decision Trees in Amua\](case-studies/CaseStudy_Tree.html |
 | 9:00 - 10:30 | [Capstone]{.capstone} | [Make a Decision Tree](capstone/02_decision-tree.html) |
 | 10:30 - 11:30 | Break | Coffee/Tea |
 | 11:30 - 12:30 | [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits](lectures/lec_5b.cea-fundamentals2.html) |
 | 12:30 - 13:40 | Break | Lunch |
-| 13:40 - 14:45 | [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits (Cont.)](lectures/lec_5b.cea-fundamentals2.html) |
+| 13:40 - 14:45 | [Lecture]{.lecture} | [CEA Fundamentals 2: Benefits-DALYs](lectures/lec_dalys.html) |
 | 14:45 - 16:00 | [Lecture]{.lecture} | [CEA Fundamentals 3: Incremental CEA](lectures/lec_6.ICERs.html) |
 | 16:00 - 16:30 | [Capstone]{.capstone} | [Add Outcomes to your decision tree](capstone/02_decision-tree.html) |
 | 16:30 | Check-Ins | Daily Recap |
 
 : {tbl-colwidths="\[20,10,50\]"}
 
-### [Group dinner at Ettas Cucina + Bar - Mandani Bay will be provided. Time and Transportation will be announced.]{style="color:#0083a9;"}
+### [Group dinner at Ettas Cucina + Bar - Mandani Bay will be provided. Please meet in the lobby for one of the two provided transports: 5:30pm and 6:00pm. ]{style="color:#0083a9;"}
 
 ## 28/01/2026 (Wednesday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | [Incremental CEA](case-studies/CaseStudy_CEA.html) |
 | 09:00-10:00 | [Lecture]{.lecture} | [Markov Models](lectures/lec_7.MarkovModels1.html) |
 | 10:45 - 11:15 | Break | Coffee/Tea |
@@ -86,7 +86,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 29/01/2026 (Thursday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Lecture]{.lecture} | [Lecture: Structuring the Markov Model](lectures/lec_structure.html) \[JG\] |
 | 09:00 - 10:15 | [Case Study]{.casestudy} | [Progressive Disease Model in Amua](case-studies/CaseStudy_MarkovProg.html) |
 | 10:15 - 10:30 | Break | Coffee/Tea |
@@ -102,7 +102,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 30/01/2026 (Friday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------|------------------|------------------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | DALYs in AMUA \[Guided\] |
 | 09:30 - 10:15 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 10:15 - 10:45 | Break | Coffee/Tea |

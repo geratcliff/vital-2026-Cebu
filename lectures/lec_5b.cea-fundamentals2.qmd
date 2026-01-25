@@ -227,22 +227,65 @@ question**]{.accent-text .fragment fragment-index="6"}
 
 ## A Well Defined Clinical Outcome
 
--   Specific
-    -   Combining too many events can make it hard to understand the
-        strategies impact, instead consider multiple outcomes
--   Prevent biasing a strategy
-    -   Make sure that your chosen outcome truly tells the story of what
-        is happening.
-        -   One of the quirks of modeling is that bad events are
-            sometimes economically good. For example, death is very low
-            cost.
--   Answers your research question
-    -   The outcomes chosen should provide impactful information
-    -   Focus the computation power on metrics that are important to the
-        research question and policy holders
--   Data is available
-    -   As with much of economic modeling, clinical outcomes rely on
-        accurate data.
+::: horizontal-comparison
+::: comparison-row
+::: row-header
+Specific
+:::
+::: row-content
+-   Each outcome should describe one clear event or condition.
+
+-   If you combine too many things into one outcome, it can be hard
+        to understand why strategies are different.
+
+-   When possible, use separate outcomes for different events (for
+        example: survival, complications, hospitalizations).
+:::
+:::
+::: comparison-row
+::: row-header
+Prevent biasing a strategy
+:::
+
+::: row-content
+-   Make sure the outcome truly shows **what is happening
+        clinically**, not just what is cheap or expensive.
+-   Some bad events may look “good” in a model because they cost
+        less.
+    -   For example, **death has low cost**, but it is clearly a bad outcome.
+    
+:::
+:::
+::: comparison-row
+::: row-header
+Answers your research question
+:::
+
+::: row-content
+-   Chosen outcomes should generate information that is meaningful
+        for the research objective and decision context.
+-   Focus model structure and computational effort on outcomes that:
+    -   Influence policy, reimbursement, or clinical decision‑making
+    -   Drive differences in costs, utilities, or survival
+    
+:::
+:::
+
+::: comparison-row
+::: row-header
+Data is available
+:::
+
+::: row-content
+-   As with much of economic modeling, clinical outcomes rely on
+        accurate data
+    
+:::
+:::
+
+:::
+
+
 
 ## Summary Measurements {.section-slide}
 
@@ -403,9 +446,6 @@ QALYs
 :::::
 :::::::::
 
-
-
-
 ## Utility weights -- How are they obtained?
 
 -   Utility weights for most health states are between 0 (death) and 1
@@ -438,9 +478,9 @@ Indirect methods:
 
 ## Direct methods - Standard Gamble (SG) {.split-wrapper .smaller}
 
-[What risk of death would you accept in order to avoid \[living with
-an **amputated leg** for the rest of your life\] and
-live the rest of your life in perfect health?]{.accent-text}
+[What risk of death would you accept in order to avoid \[living with an
+**amputated leg** for the rest of your life\] and live the rest of your
+life in perfect health?]{.accent-text}
 
 ::::: split-content
 ::: content-visual
@@ -492,9 +532,9 @@ This is the STANDARD GAMBLE TECHNIQUE
 
 ## Direct methods - Standard Gamble (SG) {.split-wrapper .small}
 
-[What risk of death would you accept in order to avoid \[living
-with **stroke** for the rest of your life\] and
-livethe rest of your life in perfect health? ]{.accent-text}
+[What risk of death would you accept in order to avoid \[living with
+**stroke** for the rest of your life\] and livethe rest of your life in
+perfect health?]{.accent-text}
 
 :::::: split-content
 ::: content-visual
@@ -539,8 +579,8 @@ livethe rest of your life in perfect health? ]{.accent-text}
 
 ::::: center-text
 [What portion of your current life expectancy of 40 years would you give
-up to improve your current health state **stroke**
-to 'perfect health'?]{.accent-text}
+up to improve your current health state **stroke** to 'perfect
+health'?]{.accent-text}
 
 ::: fragment
 ![](images/lec5b/TTO.png){style="max-width: 50%;"}}
@@ -567,7 +607,8 @@ Standard Gamble
 ::: column-content
 -   **Represents** decision-making under uncertainty
 -   [Only valuing the health state]{.fragment fragment-index="2"}
--   [Risk posture **is** captured (risk aversion for death)]{.fragment fragment-index="3"}
+-   [Risk posture **is** captured (risk aversion for death)]{.fragment
+    fragment-index="3"}
 -   [Utility values usually \> TTO for same state]{.fragment
     fragment-index="4"}
 :::
@@ -712,301 +753,6 @@ QWB <br> [Quality of well-being scale]{.db-text}
     access
 :::
 
-## Intro to DALYs
-
-:::::::: split-content
-:::::: content-text
-Origin story: Global Burden of Disease Study <br>
-
-Deliberately a measure of [health]{.bold .accent-text}, not
-welfare/utility
-
-With [DALYs]{.bold .accent-text}, two dimensions of interest:
-
-::::: concept-grid
-::: {.concept-box .accent}
-[Length of life]{.bold .db-text}<br> differences in life expectancy
-:::
-
-::: {.concept-box .accent}
-[Quality of life]{.bold .db-text} <br> measured by disability weight
-:::
-:::::
-::::::
-
-::: content-visual
-![](images/lec5b/DALY_circle.png)
-:::
-::::::::
-
-## DALYs Formula
-
-[![](images/lec5b/DALY_disability_affected_life_year_infographic.png){width="1500"}](https://en.wikipedia.org/wiki/Disability-adjusted_life_year)
-
-## 
-
-:::::::: definition-box
-::: term
-Years of Life Lost (YLL)
-:::
-
-::: definition
-Changes in life expectancy, calculated from comparison to synthetic life
-table <br> <br> DALYs = [YLL]{.bold .accent-text} + YLD
-:::
-
-::::: example
-::: example-label
-Example:
-:::
-
-::: example-text
-Providing HIV treatment delays death from age 30 to age 50. <br> Life
-years gained = 20 years <br> YLL = ??
-:::
-:::::
-::::::::
-
-## Synthetic, Reference Life Table
-
-:::::: split-content
-::: {.content-text .table-compact}
-| Age | Life Expectancy |
-|:---:|:---------------:|
-|  0  |      88.9       |
-|  1  |      88.0       |
-|  5  |      84.0       |
-| 10  |      79.0       |
-| 15  |      74.1       |
-| 20  |      69.1       |
-| 25  |      64.1       |
-| 30  |      59.2       |
-| 35  |      54.3       |
-| 40  |      49.3       |
-| 45  |      44.4       |
-:::
-
-:::: {.content-text .table-compact}
-| Age | Life Expectancy |
-|:---:|:---------------:|
-| 50  |      39.6       |
-| 55  |      34.9       |
-| 60  |      30.3       |
-| 65  |      25.7       |
-| 70  |      21.3       |
-| 75  |      17.1       |
-| 80  |      13.2       |
-| 85  |      10.0       |
-| 90  |       7.6       |
-| 95  |       5.9       |
-
-::: {.table-compact style="font-size: 0.6em"}
-Source:
-http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd-2019-reference-life-table
-:::
-::::
-::::::
-
-## Synthetic, Reference Life Table
-
-:::::: split-content
-::: {.content-text .table-compact}
-| Age |             Life Expectancy              |
-|:---:|:----------------------------------------:|
-|  0  |                   88.9                   |
-|  1  |                   88.0                   |
-|  5  |                   84.0                   |
-| 10  |                   79.0                   |
-| 15  |                   74.1                   |
-| 20  |                   69.1                   |
-| 25  |                   64.1                   |
-| 30  | [59.2]{.bold .secondary-text .highlight} |
-| 35  |                   54.3                   |
-| 40  |                   49.3                   |
-| 45  |                   44.4                   |
-:::
-
-:::: {.content-text .table-compact}
-| Age |             Life Expectancy              |
-|:---:|:----------------------------------------:|
-| 50  | [39.6]{.bold .secondary-text .highlight} |
-| 55  |                   34.9                   |
-| 60  |                   30.3                   |
-| 65  |                   25.7                   |
-| 70  |                   21.3                   |
-| 75  |                   17.1                   |
-| 80  |                   13.2                   |
-| 85  |                   10.0                   |
-| 90  |                   7.6                    |
-| 95  |                   5.9                    |
-
-::: {.table-compact style="font-size: 0.6em"}
-Source:
-http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd-2019-reference-life-table
-:::
-::::
-::::::
-
-## 
-
-::::::::: definition-box
-::: term
-Years of Life Lost (YLL)
-:::
-
-::: definition
-Changes in life expectancy, calculated from comparison to synthetic life
-table <br> <br> DALYs = [YLL]{.bold .accent-text} + YLD
-:::
-
-:::::: example
-::: example-label
-Example:
-:::
-
-:::: example-text
-Providing HIV treatment delays death from age 30 to age 50. <br> Life
-years gained = 20 years <br> YLL = [??]{.fragment .fade-out
-fragment-index="1"} [LE(50) - LE(30) = 39.6 - 59.2 = -19.6 DALYs
-=]{.fragment .fade-in fragment-index="1"}[19.6 DALYs averted]{.bold
-.accent-text .fragment .fade-in fragment-index="2"}
-
-::: {.fragment .center-text .bold .secondary-text}
-YLL (measured as DALYs averted) $\neq$ LYs gained!
-:::
-::::
-::::::
-:::::::::
-
-## 
-
-:::::::: definition-box
-::: term
-Years Lived with Disability (YLD)
-:::
-
-::: definition
-Calculated similar to QALYs, utility weight ≈ 1 - disability weight <br>
-<br> DALYs = YLL + [YLD]{.bold .accent-text}
-:::
-
-::::: example
-::: example-label
-Example:
-:::
-
-::: example-text
-Effective asthma control for 10 years
-
--   Disability weight (uncontrolled asthma) = ?
-
--   Disability weight (controlled asthma) = ?
-:::
-:::::
-::::::::
-
-::::::::
-
-## Disability Weights {.smaller}
-
-:::::: split-content
-::: content-text
--   Common values for small set of named health conditions (e.g.
-    early/late HIV, HIV/ART)
--   First iteration: expert opinion
--   Second iteration: Pop-based HH surveys in several world regions
-    (13,902 respondents)
-    -   Paired comparison of two health state descriptions which worse
-
-    -   Probit regression to calculate disability weights
-
-    -   235 unique health states
-:::
-
-:::: fragment
-::: content-visual
-![](images/paste-51631169.png)
-:::
-::::
-::::::
-
-[Source: Salomon, Joshua A., et al. "Disability weights for the Global
-Burden of Disease 2013 study." The Lancet Global Health 3.11 (2015):
-e712-e723.](http://www.thelancet.com/journals/langlo/article/PIIS2214-109X(15)00069-8/fulltext){style="font-size:1vh;"}
-
-## DALYs = YLL + [YLD]{style="color: red;"}
-
-::: nonincremental
--   Years Lived with Disability (YLD): calculated similar to QALYs,
-    utility weight ≈ 1 - disability weight
-
--   YLD example: Effective asthma control for 10 years
-
-    -   Disability weight (uncontrolled asthma) = 0.133
-
-    -   Disability weight (controlled asthma) = 0.015
-
-    -   YLD = 10 \* 0.015 - 10 \* 0.133 = -1.18 DALYs = **1.18 DALYs
-        averted**
-:::
-
-## 
-
-:::::::: definition-box
-::: term
-Years Lived with Disability (YLD)
-:::
-
-::: definition
-Calculated similar to QALYs, utility weight ≈ 1 - disability weight <br>
-<br> DALYs = YLL + [YLD]{.bold .accent-text}
-:::
-
-::::: example
-::: example-label
-Example:
-:::
-
-::: example-text
-Effective asthma control for 10 years
-
--   Disability weight (uncontrolled asthma) = [?]{.fragment .fade-out
-    fragment-index="1"} [0.133]{.fragment .fade-in fragment-index="1"}
-
--   Disability weight (controlled asthma) = [?]{.fragment .fade-out
-    fragment-index="1"} [0.015]{.fragment .fade-in fragment-index="1"}
-
--   [YLD = (10 \* 0.015) - (10 \* 0.133) = -1.18 DALYs =]{.fragment
-    .fade-in fragment-index="2"} [1.18 DALYs averted]{.bold .accent-text
-    .fragment .fade-in fragment-index="3"}
-:::
-:::::
-::::::::
-
-::::::::
-
-## DALYs for CEA
-
-::: icon-bullets
--   Recommended calculation approach has changed over time (age
-    weighting, discounting, now both out)
--   Some will calculate a "QALY-like" DALY, using utility weight = 1-
-    disability weight
--   Discounting still generally done for CEA
-:::
-
-:::: fragment
-::: {.highlight-box .thin}
-[Common Practice]{.bold .accent-text}
-
--   **High-income setting:** QALYs
--   **Low- and middle-income setting:** DALYs
-    -   Disability weights are freely & publicly available (these
-        weights are required for DALY calculations), it can reduce
-        costs/time/resources compared to collecting QALY estimates
-:::
-::::
-
 ## Alternatives to ICERs
 
 ICERs are the most common approach for describing CEA results
@@ -1034,7 +780,8 @@ Disadvantages
 :::::::
 
 ## An Alternative
-::: {.icon-bullets}
+
+::: icon-bullets
 [Maybe all of your interventions are cost-effective under accepted WTPs
 & your goal, rather, is to quantify the short and long-term health
 benefits of interventions.]{.fragment}
@@ -1066,8 +813,7 @@ Objective: Select the strategy with the highest NHB/NMB
 
 $$
  NHB_s = E_s - \frac{C_s}{λ}
-$$ 
-$E_s$ is effectiveness of strategy s
+$$ $E_s$ is effectiveness of strategy s
 
 $C_s$ is cost of s
 
@@ -1081,7 +827,7 @@ $λ$ is WTP threshold
 
 $$
  NMB_s = E_s * λ - C_s
-$$ 
+$$
 
 where
 
@@ -1098,8 +844,8 @@ $λ$ is WTP threshold
 
 ## Example: NHB
 
-:::split-content
-:::content-text
+::::: split-content
+::: content-text
 $E_1 = 0.07$ years
 
 $E_2 = 0.10$ years
@@ -1110,14 +856,16 @@ $C_2 = 2,800$
 
 $λ = 50,000$ per year of life saved
 :::
+
 ::: content-text
 $ICER = \frac{2800 - 1500}{0.10 - 0.07}$
 
 $=43,333$
 :::
-:::
+:::::
 
 ## Example: NHB
+
 $NHB_1 = 0.07−\frac{1500}{50000} =0.040$
 
 $NHB_2 = 0.10−\frac{2800}{50000} =0.044$
@@ -1131,7 +879,6 @@ $IncNHB = 0.044−0.040=0.004$
     outcomes and costs into a single measure.
 :::
 
-
 ## Example: Net Monetary Benefit (NMB)
 
 $NMB_1=(0.07×50000)−1500 = 2000$
@@ -1141,18 +888,17 @@ $NMB_2=(0.10×50000)−2800=2200$
 $IncNMB =2200−2000=200$
 
 ::: {.arrow-bullets .incremental}
-- Quantifies this improvement’s value in monetary
-terms. Treatment 2 provides \$200 more net value than Treatment 1 after
-accounting for both its additional health benefit and higher cost.
-::: 
+-   Quantifies this improvement’s value in monetary terms. Treatment 2
+    provides \$200 more net value than Treatment 1 after accounting for
+    both its additional health benefit and higher cost.
+:::
 
 ## NHB/NMB
 
 The strategy with the highest incremental NHB or NMB is the preferred
-option, given a specified WTP threshold. 
+option, given a specified WTP threshold.
 
-
-:::: split-content
+::::: split-content
 ::: content-text
 A higher NHB means more health gained after accounting for costs.
 :::
@@ -1160,7 +906,7 @@ A higher NHB means more health gained after accounting for costs.
 ::: content-visual
 ![](images/lec5b/balance_health.png)
 :::
-::::
+:::::
 
 ##  {.summary-end-slide}
 

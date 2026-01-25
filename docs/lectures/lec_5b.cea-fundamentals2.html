@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-51035f180572a632add10bd3d815e46c.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0a25349dfd0f1242b1a423d76157be77.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -333,28 +333,59 @@
 </section>
 <section id="a-well-defined-clinical-outcome" class="slide level2 center">
 <h2>A Well Defined Clinical Outcome</h2>
+<div class="horizontal-comparison">
+<div class="comparison-row">
+<div class="row-header">
+<p>Specific</p>
+</div>
+<div class="row-content">
 <ul>
-<li>Specific
+<li><p>Each outcome should describe one clear event or condition.</p></li>
+<li><p>If you combine too many things into one outcome, it can be hard to understand why strategies are different.</p></li>
+<li><p>When possible, use separate outcomes for different events (for example: survival, complications, hospitalizations).</p></li>
+</ul>
+</div>
+</div>
+<div class="comparison-row">
+<div class="row-header">
+<p>Prevent biasing a strategy</p>
+</div>
+<div class="row-content">
 <ul>
-<li>Combining too many events can make it hard to understand the strategies impact, instead consider multiple outcomes</li>
-</ul></li>
-<li>Prevent biasing a strategy
+<li>Make sure the outcome truly shows <strong>what is happening clinically</strong>, not just what is cheap or expensive.</li>
+<li>Some bad events may look “good” in a model because they cost less.
 <ul>
-<li>Make sure that your chosen outcome truly tells the story of what is happening.
-<ul>
-<li>One of the quirks of modeling is that bad events are sometimes economically good. For example, death is very low cost.</li>
-</ul></li>
-</ul></li>
-<li>Answers your research question
-<ul>
-<li>The outcomes chosen should provide impactful information</li>
-<li>Focus the computation power on metrics that are important to the research question and policy holders</li>
-</ul></li>
-<li>Data is available
-<ul>
-<li>As with much of economic modeling, clinical outcomes rely on accurate data.</li>
+<li>For example, <strong>death has low cost</strong>, but it is clearly a bad outcome.</li>
 </ul></li>
 </ul>
+</div>
+</div>
+<div class="comparison-row">
+<div class="row-header">
+<p>Answers your research question</p>
+</div>
+<div class="row-content">
+<ul>
+<li>Chosen outcomes should generate information that is meaningful for the research objective and decision context.</li>
+<li>Focus model structure and computational effort on outcomes that:
+<ul>
+<li>Influence policy, reimbursement, or clinical decision‑making</li>
+<li>Drive differences in costs, utilities, or survival</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="comparison-row">
+<div class="row-header">
+<p>Data is available</p>
+</div>
+<div class="row-content">
+<ul>
+<li>As with much of economic modeling, clinical outcomes rely on accurate data</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="summary-measurements" class="slide level2 section-slide center">
 <h2>Summary Measurements</h2>
@@ -761,410 +792,6 @@ Indirect methods - EQ-5D
           display:block!important;
       }</style></aside>
 </section>
-<section id="intro-to-dalys" class="slide level2 center">
-<h2>Intro to DALYs</h2>
-<div class="split-content">
-<div class="content-text">
-<p>Origin story: Global Burden of Disease Study <br></p>
-<p>Deliberately a measure of <span class="bold accent-text">health</span>, not welfare/utility</p>
-<p>With <span class="bold accent-text">DALYs</span>, two dimensions of interest:</p>
-<div class="concept-grid">
-<div class="concept-box accent">
-<p><span class="bold db-text">Length of life</span><br> differences in life expectancy</p>
-</div>
-<div class="concept-box accent">
-<p><span class="bold db-text">Quality of life</span> <br> measured by disability weight</p>
-</div>
-</div>
-</div>
-<div class="content-visual">
-<p><img data-src="images/lec5b/DALY_circle.png"></p>
-</div>
-</div>
-</section>
-<section id="dalys-formula" class="slide level2 center">
-<h2>DALYs Formula</h2>
-<p><a href="https://en.wikipedia.org/wiki/Disability-adjusted_life_year"><img data-src="images/lec5b/DALY_disability_affected_life_year_infographic.png" width="1500"></a></p>
-</section>
-<section id="section-5" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>Years of Life Lost (YLL)</p>
-</div>
-<div class="definition">
-<p>Changes in life expectancy, calculated from comparison to synthetic life table <br> <br> DALYs = <span class="bold accent-text">YLL</span> + YLD</p>
-</div>
-<div class="example">
-<div class="example-label">
-<p>Example:</p>
-</div>
-<div class="example-text">
-<p>Providing HIV treatment delays death from age 30 to age 50. <br> Life years gained = 20 years <br> YLL = ??</p>
-</div>
-</div>
-</div>
-</section>
-<section id="synthetic-reference-life-table" class="slide level2 center">
-<h2>Synthetic, Reference Life Table</h2>
-<div class="split-content">
-<div class="content-text table-compact">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Age</th>
-<th style="text-align: center;">Life Expectancy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">88.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">88.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">84.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">79.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">74.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">69.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">64.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">59.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">35</td>
-<td style="text-align: center;">54.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">49.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">44.4</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="content-text table-compact">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Age</th>
-<th style="text-align: center;">Life Expectancy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">39.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">55</td>
-<td style="text-align: center;">34.9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">60</td>
-<td style="text-align: center;">30.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">65</td>
-<td style="text-align: center;">25.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">70</td>
-<td style="text-align: center;">21.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">75</td>
-<td style="text-align: center;">17.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">13.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">85</td>
-<td style="text-align: center;">10.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">90</td>
-<td style="text-align: center;">7.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">95</td>
-<td style="text-align: center;">5.9</td>
-</tr>
-</tbody>
-</table>
-<div class="table-compact" style="font-size: 0.6em">
-<p>Source: http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd-2019-reference-life-table</p>
-</div>
-</div>
-</div>
-</section>
-<section id="synthetic-reference-life-table-1" class="slide level2 center">
-<h2>Synthetic, Reference Life Table</h2>
-<div class="split-content">
-<div class="content-text table-compact">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Age</th>
-<th style="text-align: center;">Life Expectancy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">88.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">88.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">84.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">79.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">74.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">69.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">64.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">30</td>
-<td style="text-align: center;"><span class="bold secondary-text highlight">59.2</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">35</td>
-<td style="text-align: center;">54.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">49.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">44.4</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="content-text table-compact">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Age</th>
-<th style="text-align: center;">Life Expectancy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">50</td>
-<td style="text-align: center;"><span class="bold secondary-text highlight">39.6</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">55</td>
-<td style="text-align: center;">34.9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">60</td>
-<td style="text-align: center;">30.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">65</td>
-<td style="text-align: center;">25.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">70</td>
-<td style="text-align: center;">21.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">75</td>
-<td style="text-align: center;">17.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">13.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">85</td>
-<td style="text-align: center;">10.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">90</td>
-<td style="text-align: center;">7.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">95</td>
-<td style="text-align: center;">5.9</td>
-</tr>
-</tbody>
-</table>
-<div class="table-compact" style="font-size: 0.6em">
-<p>Source: http://ghdx.healthdata.org/record/ihme-data/global-burden-disease-study-2019-gbd-2019-reference-life-table</p>
-</div>
-</div>
-</div>
-</section>
-<section id="section-6" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>Years of Life Lost (YLL)</p>
-</div>
-<div class="definition">
-<p>Changes in life expectancy, calculated from comparison to synthetic life table <br> <br> DALYs = <span class="bold accent-text">YLL</span> + YLD</p>
-</div>
-<div class="example">
-<div class="example-label">
-<p>Example:</p>
-</div>
-<div class="example-text">
-<p>Providing HIV treatment delays death from age 30 to age 50. <br> Life years gained = 20 years <br> YLL = <span class="fragment fade-out" data-fragment-index="1">??</span> <span class="fragment fade-in" data-fragment-index="1">LE(50) - LE(30) = 39.6 - 59.2 = -19.6 DALYs =</span><span class="bold accent-text fragment fade-in" data-fragment-index="2">19.6 DALYs averted</span></p>
-<div class="fragment center-text bold secondary-text">
-<p>YLL (measured as DALYs averted) <span class="math inline">\neq</span> LYs gained!</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-7" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>Years Lived with Disability (YLD)</p>
-</div>
-<div class="definition">
-<p>Calculated similar to QALYs, utility weight ≈ 1 - disability weight <br> <br> DALYs = YLL + <span class="bold accent-text">YLD</span></p>
-</div>
-<div class="example">
-<div class="example-label">
-<p>Example:</p>
-</div>
-<div class="example-text">
-<p>Effective asthma control for 10 years</p>
-<ul>
-<li><p>Disability weight (uncontrolled asthma) = ?</p></li>
-<li><p>Disability weight (controlled asthma) = ?</p></li>
-</ul>
-</div>
-</div>
-</div>
-<p>::::::::</p>
-</section>
-<section id="disability-weights" class="slide level2 smaller center">
-<h2>Disability Weights</h2>
-<div class="split-content">
-<div class="content-text">
-<ul>
-<li>Common values for small set of named health conditions (e.g. early/late HIV, HIV/ART)</li>
-<li>First iteration: expert opinion</li>
-<li>Second iteration: Pop-based HH surveys in several world regions (13,902 respondents)
-<ul>
-<li><p>Paired comparison of two health state descriptions which worse</p></li>
-<li><p>Probit regression to calculate disability weights</p></li>
-<li><p>235 unique health states</p></li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<div class="content-visual">
-<p><img data-src="images/paste-51631169.png"></p>
-</div>
-</div>
-</div>
-<p><a href="http://www.thelancet.com/journals/langlo/article/PIIS2214-109X(15)00069-8/fulltext" style="font-size:1vh;">Source: Salomon, Joshua A., et al.&nbsp;“Disability weights for the Global Burden of Disease 2013 study.” The Lancet Global Health 3.11 (2015): e712-e723.</a></p>
-</section>
-<section id="dalys-yll-yld" class="slide level2 center">
-<h2>DALYs = YLL + <span style="color: red;">YLD</span></h2>
-<ul>
-<li><p>Years Lived with Disability (YLD): calculated similar to QALYs, utility weight ≈ 1 - disability weight</p></li>
-<li><p>YLD example: Effective asthma control for 10 years</p>
-<ul>
-<li><p>Disability weight (uncontrolled asthma) = 0.133</p></li>
-<li><p>Disability weight (controlled asthma) = 0.015</p></li>
-<li><p>YLD = 10 * 0.015 - 10 * 0.133 = -1.18 DALYs = <strong>1.18 DALYs averted</strong></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="section-8" class="slide level2 center">
-<h2></h2>
-<div class="definition-box">
-<div class="term">
-<p>Years Lived with Disability (YLD)</p>
-</div>
-<div class="definition">
-<p>Calculated similar to QALYs, utility weight ≈ 1 - disability weight <br> <br> DALYs = YLL + <span class="bold accent-text">YLD</span></p>
-</div>
-<div class="example">
-<div class="example-label">
-<p>Example:</p>
-</div>
-<div class="example-text">
-<p>Effective asthma control for 10 years</p>
-<ul>
-<li><p>Disability weight (uncontrolled asthma) = <span class="fragment fade-out" data-fragment-index="1">?</span> <span class="fragment fade-in" data-fragment-index="1">0.133</span></p></li>
-<li><p>Disability weight (controlled asthma) = <span class="fragment fade-out" data-fragment-index="1">?</span> <span class="fragment fade-in" data-fragment-index="1">0.015</span></p></li>
-<li><p><span class="fragment fade-in" data-fragment-index="2">YLD = (10 * 0.015) - (10 * 0.133) = -1.18 DALYs =</span> <span class="bold accent-text fragment fade-in" data-fragment-index="3">1.18 DALYs averted</span></p></li>
-</ul>
-</div>
-</div>
-</div>
-<p>::::::::</p>
-</section>
-<section id="dalys-for-cea" class="slide level2 center">
-<h2>DALYs for CEA</h2>
-<div class="icon-bullets">
-<ul>
-<li>Recommended calculation approach has changed over time (age weighting, discounting, now both out)</li>
-<li>Some will calculate a “QALY-like” DALY, using utility weight = 1- disability weight</li>
-<li>Discounting still generally done for CEA</li>
-</ul>
-</div>
-<div class="fragment">
-<div class="highlight-box thin">
-<p><span class="bold accent-text">Common Practice</span></p>
-<ul>
-<li><strong>High-income setting:</strong> QALYs</li>
-<li><strong>Low- and middle-income setting:</strong> DALYs
-<ul>
-<li>Disability weights are freely &amp; publicly available (these weights are required for DALY calculations), it can reduce costs/time/resources compared to collecting QALY estimates</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</section>
 <section id="alternatives-to-icers" class="slide level2 center">
 <h2>Alternatives to ICERs</h2>
 <p>ICERs are the most common approach for describing CEA results</p>
@@ -1195,7 +822,7 @@ Indirect methods - EQ-5D
 <p><span class="fragment">If willing to choose a fixed willingness-to-pay threshold (e.g., λ= 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.</span></p>
 </div>
 </section>
-<section id="section-9" class="slide level2 center">
+<section id="section-5" class="slide level2 center">
 <h2></h2>
 <div class="concept-grid">
 <div class="concept-box">
@@ -1288,7 +915,7 @@ NMB_s = E_s * λ - C_s
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2 summary-end-slide center">
+<section id="section-6" class="slide level2 summary-end-slide center">
 <h2></h2>
 <div class="summary-circle">
 <div class="end-title">

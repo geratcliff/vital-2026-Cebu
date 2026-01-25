@@ -1007,6 +1007,33 @@ $breakpoint-large: 1440px;
         font-weight: bold;
         font-size: clamp(0.8em, 1.5vw, 1em);
       }
+      
+      // Nested bullets - plain text style
+      ul {
+        margin-top: 0.5em;
+        padding-left: 1em;
+        list-style: none;
+        
+        li {
+          padding: 0.3em 0 0.3em 1.5em;
+          background: none !important;   // ← Remove card styling
+          box-shadow: none !important;   // ← Remove shadow
+          border-radius: 0;               // ← Remove rounded corners
+          margin: 0.3em 0;
+          font-size: 0.9em;
+          
+          &::before {
+            content: "•";
+            background: none;  // ← Remove circle background
+            color: $secondary-color;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            font-size: 1.2em;
+            left: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -1042,6 +1069,32 @@ $breakpoint-large: 1440px;
         font-weight: bold;
         font-size: clamp(0.8em, 1.5vw, 1em);
       }
+      // Nested bullets - plain text style
+      ul {
+        margin-top: 0.5em;
+        padding-left: 1em;
+        list-style: none;
+        
+        li {
+          padding: 0.3em 0 0.3em 1.5em;
+          background: none !important;   // ← Remove card styling
+          box-shadow: none !important;   // ← Remove shadow
+          border-radius: 0;               // ← Remove rounded corners
+          margin: 0.3em 0;
+          font-size: 0.9em;
+          
+          &::before {
+            content: "•";
+            background: none;  // ← Remove circle background
+            color: $secondary-color;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            font-size: 1.2em;
+            left: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -1076,6 +1129,32 @@ $breakpoint-large: 1440px;
         justify-content: center;
         font-weight: bold;
         font-size: clamp(0.8em, 1.5vw, 1em);
+      }
+      // Nested bullets - plain text style
+      ul {
+        margin-top: 0.5em;
+        padding-left: 1em;
+        list-style: none;
+        
+        li {
+          padding: 0.3em 0 0.3em 1.5em;
+          background: none !important;   // ← Remove card styling
+          box-shadow: none !important;   // ← Remove shadow
+          border-radius: 0;               // ← Remove rounded corners
+          margin: 0.3em 0;
+          font-size: 0.9em;
+          
+          &::before {
+            content: "•";
+            background: none;  // ← Remove circle background
+            color: $secondary-color;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            font-size: 1.2em;
+            left: 0;
+          }
+        }
       }
     }
   }

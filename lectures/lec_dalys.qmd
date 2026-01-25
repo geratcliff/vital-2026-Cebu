@@ -283,7 +283,7 @@ Modeling With Discounting
 
 ## Defining Outcomes in Amua
 
-:::: icon-bullets
+:::: icon-bullets-triangle
 ::: incremental
 -   YLD: New Outcome. Use disability weights instead of utility weights!
 -   YLL: One-time "event" at time of death from disease.
