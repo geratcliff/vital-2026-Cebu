@@ -350,6 +350,7 @@ $C_0$
 $$\frac{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}$$
 
 ::::: r-hstack
+
 ::: {.secondary-text data-id="benefitA"}
 $E_0$
 :::
@@ -359,6 +360,7 @@ $$ \quad - \quad $$
 ::: {.secondary-text data-id="benefitB"}
 $E_1$
 :::
+
 :::::
 :::::::::
 
@@ -556,6 +558,7 @@ Depression screening
 ::: {.column width="40%"}
 ::::: process-flow
 ::::: step
+
 ::: step-number
 1
 :::
@@ -568,6 +571,7 @@ Remove Dominated Strategies
 Rule out programs that cost \$ but have negative health effects.
 Dominated by alternative of "no program"
 :::
+
 :::::
 :::::
 :::
@@ -618,8 +622,6 @@ df_ex %>%
   geom_label(aes(label=program), size=10)
 
 ```
-:::
-
 :::
 
 :::
@@ -685,7 +687,6 @@ Select programs that are cost-saving & offer benefit
 
 :::
 
-:::
 
 
 ## Shopping Spree Problem
@@ -750,7 +751,6 @@ Rank other programs
 
 :::
 
-:::
 
 
 ## Shopping Spree Problem {.smaller}
