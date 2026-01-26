@@ -71,7 +71,7 @@ Summary Measurements
 :::
 
 ::: text
-Where to get values
+Alternatives to ICERs
 :::
 :::::
 ::::::::::::
@@ -194,7 +194,7 @@ For Example:
 :::
 ::::::
 
-## When are they be used
+## When are they used?
 
 ::: icon-bullets-triangle
 -   Policy holders need the information
@@ -251,8 +251,7 @@ Prevent biasing a strategy
 -   Make sure the outcome truly shows **what is happening
         clinically**, not just what is cheap or expensive.
 -   Some bad events may look “good” in a model because they cost
-        less.
-    -   For example, **death has low cost**, but it is clearly a bad outcome.
+        less. (For example, **death has low cost**, but it is clearly a bad outcome.)
     
 :::
 :::
@@ -264,9 +263,7 @@ Answers your research question
 ::: row-content
 -   Chosen outcomes should generate information that is meaningful
         for the research objective and decision context.
--   Focus model structure and computational effort on outcomes that:
-    -   Influence policy, reimbursement, or clinical decision‑making
-    -   Drive differences in costs, utilities, or survival
+-   Focus model structure and computational effort on outcomes that influence decision‑making ot drive differences in outcomes.
     
 :::
 :::
@@ -533,7 +530,7 @@ This is the STANDARD GAMBLE TECHNIQUE
 ## Direct methods - Standard Gamble (SG) {.split-wrapper .small}
 
 [What risk of death would you accept in order to avoid \[living with
-**stroke** for the rest of your life\] and livethe rest of your life in
+**stroke** for the rest of your life\] and live the rest of your life in
 perfect health?]{.accent-text}
 
 :::::: split-content
@@ -583,7 +580,7 @@ up to improve your current health state **stroke** to 'perfect
 health'?]{.accent-text}
 
 ::: fragment
-![](images/lec5b/TTO.png){style="max-width: 50%;"}}
+![](images/lec5b/TTO.png){style="max-width: 50%;"}
 :::
 
 ::: fragment
@@ -753,12 +750,19 @@ QWB <br> [Quality of well-being scale]{.db-text}
     access
 :::
 
+
+## Alternatives to ICERs{.section-slide}
+
+::: section-number
+03
+:::
+
 ## Alternatives to ICERs
 
 ICERs are the most common approach for describing CEA results
 
 ::::::: pros-cons-new
-:::: pros-column
+:::: {.pros-column .fragment}
 ::: column-title
 Advantages
 :::
@@ -767,7 +771,7 @@ Advantages
     from decision-maker)
 ::::
 
-:::: cons-column
+:::: {.cons-column .fragment}
 ::: column-title
 Disadvantages
 :::
@@ -888,8 +892,8 @@ $NMB_2=(0.10×50000)−2800=2200$
 $IncNMB =2200−2000=200$
 
 ::: {.arrow-bullets .incremental}
--   Quantifies this improvement’s value in monetary terms. Treatment 2
-    provides \$200 more net value than Treatment 1 after accounting for
+-   Quantifies this improvement’s value in monetary terms. 
+-   Treatment 2 provides \$200 more net value than Treatment 1 after accounting for
     both its additional health benefit and higher cost.
 :::
 
@@ -921,13 +925,11 @@ Benefits
 
 <ul class="key-points">
 
-<li>X</li>
+<li> Clinical outcomes should be clearly defined and relevant to the decision question.</li>
 
-<li>X</li>
+<li>QALYs combine quantity and quality of life into a single summary measure, enabling comparisons.</li>
 
-<li>X</li>
-
-<li>X</li>
+<li>Net benefit approaches provide alternatives to ICERs but require an explicit willingness‑to‑pay threshold.</li>
 
 </ul>
 :::::
@@ -935,5 +937,5 @@ Benefits
 ## Questions? {.questions-slide}
 
 ::: next-info
-Next Lecture: <strong>Incremental CEA</strong>
+Next Lecture: <strong>DALYs</strong>
 :::
