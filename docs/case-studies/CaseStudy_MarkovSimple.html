@@ -361,6 +361,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#a-add-markov-chain" id="toc-a-add-markov-chain" class="nav-link" data-scroll-target="#a-add-markov-chain">A: Add Markov Chain</a></li>
   <li><a href="#b-add-the-health-states" id="toc-b-add-the-health-states" class="nav-link" data-scroll-target="#b-add-the-health-states">B: Add the Health States</a></li>
+  <li><a href="#c-add-events-within-each-health-state" id="toc-c-add-events-within-each-health-state" class="nav-link" data-scroll-target="#c-add-events-within-each-health-state">C: Add events within each health state</a></li>
   </ul></li>
   <li><a href="#add-parameters" id="toc-add-parameters" class="nav-link" data-scroll-target="#add-parameters">Add Parameters</a></li>
   <li><a href="#starting-probabilities" id="toc-starting-probabilities" class="nav-link" data-scroll-target="#starting-probabilities">Starting Probabilities</a></li>
@@ -613,7 +614,9 @@ window.Quarto = {
 </ol>
 <p><img src="images/simpleMarkov/AddState3.png" class="img-fluid"><br>
 </p>
-<p>### C: Add events within each health state</p>
+</section>
+<section id="c-add-events-within-each-health-state" class="level3">
+<h3 class="anchored" data-anchor-id="c-add-events-within-each-health-state">C: Add events within each health state</h3>
 <div class="callout callout-style-simple callout-important no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -633,17 +636,23 @@ window.Quarto = {
 </div>
 </div>
 <ol type="1">
+<li>Identify the Events in each state
+<ul>
+<li>Healthy: Stay Healthy, Get Sick, All-cause death</li>
+<li>Sick: Stay sick, Disease Death, All-cause death</li>
+<li>Dead: Remain Dead</li>
+</ul></li>
 <li>Select the Markov State labeled “Healthy”. It will outline red when selected</li>
 </ol>
 <p><img src="images/simpleMarkov/AddStateEvent1.png" class="img-fluid"></p>
-<ol start="2" type="1">
+<ol start="3" type="1">
 <li><p>Add a chance node</p>
 <p>Option 1: Right click &gt; Add &gt; Chance Node (<img src="../amua-images/chanceNode_24.png" class="img-fluid">).</p>
 <p>Option 2: Click the Chance Node button (<img src="../amua-images/chanceNode_24.png" class="img-fluid">) in the top bar</p>
 <p>Option 3: Double click on the Markov State to get two chance nodes added</p></li>
 </ol>
 <p><img src="images/simpleMarkov/AddStateEvent2.png" class="img-fluid"></p>
-<ol start="3" type="1">
+<ol start="4" type="1">
 <li><p>Change the labels to “Survive” and “Die”.</p></li>
 <li><p>Nothing can happen after you die so we will change that to a state transition node. Select the “Die” branch and click the “Change to State Transition” ((<img src="../amua-images/changeTypeTrans_24.png" class="img-fluid">.) button on the top bar. You should get something like this. [It may have auto filled a state or it may also be blank]</p></li>
 </ol>
@@ -704,9 +713,9 @@ window.Quarto = {
 <p>Here are the parameters if you need to add them manually:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 58%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 52%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -960,7 +969,7 @@ window.Quarto = {
 <p>Check your Model</p>
 </summary>
 <p style="color: black;">
-</p><p><img src="images/simpleMarkov/FullSimple.png" class="img-fluid"></p>
+</p><p><img src="images/simpleMarkov/TreatAllSimple.png" class="img-fluid"></p>
 <p></p>
 </details>
 </section>
@@ -1015,13 +1024,13 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Treat None</td>
-<td>$317,998,311.33</td>
-<td>30713.17</td>
+<td>$78,329,076.61</td>
+<td>15,195.26</td>
 </tr>
 <tr class="even">
 <td>Treat All</td>
-<td>$241,509,685.61</td>
-<td>31219.7721</td>
+<td>$87,687,551.51</td>
+<td>20,779.69</td>
 </tr>
 </tbody>
 </table>
@@ -1066,7 +1075,7 @@ window.Quarto = {
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 131958.7514;
+  const CORRECT = 65517.829;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answersimp');
   const button = document.getElementById('checksimp');
