@@ -183,7 +183,6 @@ You should get a empty page with a decision node (![](/amua-images/decisionNode_
 Build out the Markov Structure for the "Treat None" arm of the model
 :::
 
-
 <details>
 
 <summary style="color: orange;">
@@ -228,7 +227,7 @@ This model has three health states: Healthy, Sick, and Dead
 
 ![](images/simpleMarkov/AddState3.png)\
 
-\### C: Add events within each health state
+### C: Add events within each health state
 
 ::: {.callout-important appearance="minimal"}
 It is common practice in teaching decision modeling to model events sequentially. Suppose, for example, that an individual can experience the following events from a diseased state:
@@ -250,11 +249,15 @@ If you are using transition probabilities derived from embedding the transition 
 **For the remainder of this case study we will model the disease progression using the sequential approach (e.g., the approach in Panel B).**
 :::
 
-1.  Select the Markov State labeled "Healthy". It will outline red when selected
+1.  Identify the Events in each state
+    -   Healthy: Stay Healthy, Get Sick, All-cause death
+    -   Sick: Stay sick, Disease Death, All-cause death
+    -   Dead: Remain Dead
+2.  Select the Markov State labeled "Healthy". It will outline red when selected
 
 ![](images/simpleMarkov/AddStateEvent1.png)
 
-2.  Add a chance node
+3.  Add a chance node
 
     Option 1: Right click \> Add \> Chance Node (![](/amua-images/chanceNode_24.png)).
 
@@ -264,9 +267,9 @@ If you are using transition probabilities derived from embedding the transition 
 
 ![](images/simpleMarkov/AddStateEvent2.png)
 
-3.  Change the labels to "Survive" and "Die".
+4.  Change the labels to "Survive" and "Die".
 
-4.  Nothing can happen after you die so we will change that to a state transition node. Select the "Die" branch and click the "Change to State Transition" ((![](/amua-images/changeTypeTrans_24.png).) button on the top bar. You should get something like this. \[It may have auto filled a state or it may also be blank\]
+5.  Nothing can happen after you die so we will change that to a state transition node. Select the "Die" branch and click the "Change to State Transition" ((![](/amua-images/changeTypeTrans_24.png).) button on the top bar. You should get something like this. \[It may have auto filled a state or it may also be blank\]
 
 ![](images/simpleMarkov/AddStateEvent3.png)
 
@@ -343,7 +346,7 @@ You're side bar should now be populated with the model parameters
 Here are the parameters if you need to add them manually:
 
 | Name           | Expression | Description                                     |
-|---------------|---------------|-------------------------------------------|
+|-----------------|-----------------|--------------------------------------|
 | prev           | 0.08       | Prevelance of Disease X at age 50               |
 | p_sick         | 0.03       | Annual probability of getting Disease X         |
 | p_diseasedeath | 0.15       | Annual probability of dying from Disease X      |
@@ -592,7 +595,7 @@ Check your Model
 
 <p style="color: black;">
 
-![](images/simpleMarkov/FullSimple.png)
+![](images/simpleMarkov/TreatAllSimple.png)
 
 </p>
 
@@ -660,8 +663,8 @@ Check your Model
 
 | Strategy   | Cost (\$ for 1000 people) | LY (for 1000 people) |
 |------------|---------------------------|----------------------|
-| Treat None | \$317,998,311.33          | 30713.17             |
-| Treat All  | \$241,509,685.61          | 31219.7721           |
+| Treat None | \$78,329,076.61          |  15,195.26            |
+| Treat All  | \$87,687,551.51           | 20,779.69             |
 
 </p>
 
@@ -699,7 +702,7 @@ Enter your result:
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 131958.7514;
+  const CORRECT = 65517.829;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answersimp');
   const button = document.getElementById('checksimp');
