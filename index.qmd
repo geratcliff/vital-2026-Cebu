@@ -42,7 +42,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | 10:30 - 10:50 | Break | Coffee/Tea |
 | 10:50 - 12:00 | [Lecture]{.lecture} | [Decision Trees](lectures/lec_2.decision-trees-and-probabilities.html) |
 | 12:30 - 13:40 | Break | Lunch |
-| 13:40 - 13:55 | [Capstone]{.capstone} | Example Presentation |
+| 13:40 - 13:55 | [Capstone]{.capstone} | [Example Presentation](capestone/completed_capestone_mike.pdf) |
 | 13:55 - 14:55 | [Capstone]{.capstone} | [Discuss Decision Problem \[Small Groups\]](capstone/01_smallgroups.html) |
 | 14:55 -15:40 | [Case Study]{.casestudy} | [Introduction to AMUA](case-studies/CaseStudy_AMUA.html) |
 | 15:40-16:30 | [Lecture]{.lecture} | [CEA Fundamentals 1: Costs](lectures/lec_5a.cea-fundamentals1.html) |
