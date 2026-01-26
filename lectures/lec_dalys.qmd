@@ -109,7 +109,7 @@ Tips and tricks for modeling DALYs in Amua
 
 ## DALYs
 
-[![](images/dalys/DALY_disability_affected_life_year_infographic.svg){width="1500"}](https://en.wikipedia.org/wiki/Disability-adjusted_life_year)
+![](images/dalys/DALY_disability_affected_life_year_infographic.svg){width="1500"}](https://en.wikipedia.org/wiki/Disability-adjusted_life_year)
 
 ::: fragment
 :::: highlight-box
@@ -279,7 +279,7 @@ Modeling With Discounting
 
 ## State Transition Diagram {.nostretch}
 
-![](images/dalys/clipboard-2723911892.png){fig-align="center" width="800"}
+![](images/dalys/stateTransition.png){fig-align="center" width="800"}
 
 ## Defining Outcomes in Amua
 
