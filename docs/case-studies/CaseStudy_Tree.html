@@ -299,6 +299,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Instructors</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../V4_Quick_Start_Guide.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Start Guide</span></a>
+  </div>
+</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -317,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#reminder-of-decision-problem" id="toc-reminder-of-decision-problem" class="nav-link active" data-scroll-target="#reminder-of-decision-problem">Reminder of Decision Problem</a></li>
-  <li><a href="#step-1-download-the-tree-file" id="toc-step-1-download-the-tree-file" class="nav-link" data-scroll-target="#step-1-download-the-tree-file">Step 1: Download the Tree File</a></li>
+  <li><a href="#step-1-create-initial-structure" id="toc-step-1-create-initial-structure" class="nav-link" data-scroll-target="#step-1-create-initial-structure">Step 1: Create initial Structure</a></li>
   <li><a href="#step-2-build-out-the-strategies" id="toc-step-2-build-out-the-strategies" class="nav-link" data-scroll-target="#step-2-build-out-the-strategies">Step 2: Build Out the Strategies</a>
   <ul class="collapse">
   <li><a href="#treat-all-strategy" id="toc-treat-all-strategy" class="nav-link" data-scroll-target="#treat-all-strategy">Treat all strategy</a>
@@ -477,9 +483,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>No Screen, Treat All</p></li>
 </ol>
 </section>
-<section id="step-1-download-the-tree-file" class="level1">
-<h1>Step 1: Download the Tree File</h1>
-<p>To assist you with the limited time for the case study, we have created the initial layout of the decision tree for you.</p>
+<section id="step-1-create-initial-structure" class="level1">
+<h1>Step 1: Create initial Structure</h1>
+<p>This is the initial structure of the model that we will build everything from.</p>
+<p>You can build it out or download the following document: <a href="tree_initial.amua">tree_initial.amua</a></p>
 <p><img src="images/tree/InitialStructure.png" class="img-fluid"></p>
 </section>
 <section id="step-2-build-out-the-strategies" class="level1">
@@ -604,8 +611,9 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="b-add-the-parameters-to-the-branches">B: Add The Parameters to the branches</h3>
 <p>The probabilities that we have are:</p>
 <p>p_sick: which will go on any branch where someone gets sick sens: which will go on any branch where someone is sick AND tests positive</p>
-<p>To add a probability: 1. Click next to the grey “p:” under the branch that you want to edit</p>
-<pre><code>![](images/tree/AddParameterBranch.png)</code></pre>
+<p>To add a probability:</p>
+<p>1. Click next to the grey “p:” under the branch that you want to edit</p>
+<p><img src="images/tree/AddParameterBranch.png" class="img-fluid"></p>
 <ol start="2" type="1">
 <li><p>Type the NAME of the parameter you want to add</p>
 <p><img src="images/tree/AddParameterBranch2.png" class="img-fluid"></p></li>
@@ -619,6 +627,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="c-add-the-complimentary-probabilities" class="level3">
 <h3 class="anchored" data-anchor-id="c-add-the-complimentary-probabilities">C: Add The Complimentary Probabilities</h3>
 <p>In Amua, there is a built in variable “<em>C</em>” that will calculate the complementary probability (1-[p of the opposing branch]). You need to add this to all the remaining branches.</p>
+<p><img src="images/tree/CompProb.png" class="img-fluid"></p>
 <p></p>
 </section></details>
 <details>
@@ -652,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>c_treated</td>
 <td>$30,000</td>
-<td>Cost of being sick and treated</td>
+<td>Cost of being treated</td>
 </tr>
 <tr class="odd">
 <td>c_screen</td>
@@ -664,6 +673,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 18%">
+<col style="width: 54%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Label</th>
@@ -675,22 +689,22 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>LY_untreated</td>
 <td>8</td>
-<td>Cost of being sick and untreated</td>
+<td>Additional Life Years Gained of being sick and untreated</td>
 </tr>
 <tr class="even">
 <td>LY_treated</td>
 <td>17</td>
-<td>Cost of being sick and treated</td>
+<td>Additional Life Years Gained of being sick and treated</td>
 </tr>
 <tr class="odd">
 <td>LY_healthy</td>
 <td>20</td>
-<td>Cost of screening</td>
+<td>Additional Life Years Gained of screening</td>
 </tr>
 <tr class="even">
 <td>LY_healthy_treated</td>
 <td>19.7</td>
-<td>Cost to implement screening</td>
+<td>Additional Life Years Gained to implement screening</td>
 </tr>
 </tbody>
 </table>
@@ -769,7 +783,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<br> Enter your EV($) for the Screening: <br> <input id="answertree" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checktree">Check</button>
+<p><br> Enter your EV($) for the Screening: <br> <input id="answertree" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checktree">Check</button></p>
 <div id="feedbacktree" style="margin-top: 10px;">
 
 </div>

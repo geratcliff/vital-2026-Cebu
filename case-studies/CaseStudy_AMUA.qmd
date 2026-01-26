@@ -47,8 +47,8 @@ title: "Case Study 2 - Intro to Amua"
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
@@ -302,7 +302,7 @@ To [delete a variable]{style="color: #D65C41;"}, click on the variable and click
 :::
 
 | Parameter | Description | Value |
-|----|----|----|
+|-------------------|-------------------------------|----------------------|
 | prev | Disease prevalence | 0.05 |
 | sens | Sensitivity of test | 0.97 |
 | spec | Specificity of test | 0.9988 |
