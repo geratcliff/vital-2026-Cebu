@@ -50,6 +50,8 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 : {tbl-colwidths="\[20,10,50\]"}
 
+![](images/143348.jpeg)
+
 ## 27/01/2026 (Tuesday)
 
 | Time | Type | Topic |
@@ -102,7 +104,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 30/01/2026 (Friday)
 
 | Time | Type | Topic |
-|-------------------|-------------------|------------------------------------|
+|-------------------|-------------------|-----------------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | DALYs in AMUA \[Guided\] |
 | 09:30 - 10:15 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 10:15 - 10:45 | Break | Coffee/Tea |

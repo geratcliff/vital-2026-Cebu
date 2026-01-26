@@ -131,14 +131,24 @@ More assistance with step
 
 <p style="color: black;">
 
+### A: Create a Sicker State
 1.  Add a Sicker state to the "Treat None" markov model
 2.  Set the starting probability to 0
+![](images/progMarkov/Sicker1.png)
+
 3.  Add all cause death event
+![](images/progMarkov/Sicker2.png)
 4.  Add disease death event
+![](images/progMarkov/Sicker3.png)
 5.  Update outcomes and probabilities
-6.  Update Sick to go to Sicker
-7.  Add one time cost of sick to sicker
-8.  Set cost off sick to c_sick
+![](images/progMarkov/Sicker4.png)
+
+### B: Update the Sick State
+1.  Update Sick to go to Sicker
+2.  Add one time cost of sick to sicker
+3.  Set cost of the Sick state to c_mild
+![](images/progMarkov/Sicker5.png)
+
 
 </p>
 
@@ -161,6 +171,27 @@ Check your Model
 </details>
 
 ## Repeat for the markov models on Treat ALL
+
+
+</details>
+
+<details>
+
+<summary style="color: green; font-size: 4vh;">
+
+Check your Model
+
+</summary>
+
+<p style="color: black;">
+
+![](images/progMarkov/Sick_treat.png)
+
+![](images/progMarkov/NotSick_treat.png)
+
+</p>
+
+</details>
 
 :::: callout-tip
 ## Check your answer

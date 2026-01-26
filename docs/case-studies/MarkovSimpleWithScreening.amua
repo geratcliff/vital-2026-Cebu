@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Model>
-    <name>Markov Simple WIth Screening</name>
+    <name>MarkovSimpleWithScreening</name>
     <type>1</type>
     <Metadata>
         <author>ratclg2</author>
         <dateCreated>Mon Jan 12 12:27:52 CST 2026</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Wed Jan 21 12:55:33 CST 2026</dateModified>
+        <dateModified>Mon Jan 26 00:13:32 CST 2026</dateModified>
         <versionModified>0.3.4</versionModified>
     </Metadata>
     <DimInfo>
@@ -26,12 +26,14 @@
         <baseScenario>Treat None</baseScenario>
         <extendedDim>0</extendedDim>
     </DimInfo>
-    <scale>90</scale>
+    <scale>72</scale>
     <alignRight>true</alignRight>
     <Parameter>
         <name>p_sick</name>
-        <expression>0.08</expression>
+        <expression>0.03</expression>
         <notes></notes>
+        <sensMin>0.01</sensMin>
+        <sensMax>0.04</sensMax>
     </Parameter>
     <Parameter>
         <name>sens</name>
@@ -67,6 +69,11 @@
         <expression>2510</expression>
         <notes></notes>
     </Parameter>
+    <Parameter>
+        <name>p_diseasedeath</name>
+        <expression>0.15</expression>
+        <notes></notes>
+    </Parameter>
     <Variable>
         <name>p_die</name>
         <expression>tbl_p_die[initial_age+t, 1]</expression>
@@ -75,7 +82,9 @@
     <Table>
         <name>tbl_p_die</name>
         <type>Lookup</type>
-        <lookupMethod>Exact</lookupMethod>
+        <lookupMethod>Interpolate</lookupMethod>
+        <interpolate>Linear</interpolate>
+        <extrapolate>No</extrapolate>
         <numRows>112</numRows>
         <numCols>2</numCols>
         <headers>index</headers>
@@ -542,16 +551,16 @@
         <Node>
             <type>0</type>
             <name>Root</name>
-            <xPos>45</xPos>
-            <yPos>784</yPos>
-            <width>18</width>
-            <height>18</height>
+            <xPos>36</xPos>
+            <yPos>732</yPos>
+            <width>14</width>
+            <height>14</height>
             <parentX>0</parentX>
             <parentY>0</parentY>
             <parentType>0</parentType>
+            <childIndices>31</childIndices>
+            <childIndices>43</childIndices>
             <childIndices>1</childIndices>
-            <childIndices>12</childIndices>
-            <childIndices>35</childIndices>
             <level>0</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -559,743 +568,17 @@
             <collapsed>false</collapsed>
         </Node>
         <Node>
-            <type>1</type>
-            <name>Treat None</name>
-            <xPos>211</xPos>
-            <yPos>192</yPos>
-            <width>27</width>
-            <height>27</height>
-            <parentX>63</parentX>
-            <parentY>793</parentY>
+            <type>3</type>
+            <name>Screen All</name>
+            <xPos>169</xPos>
+            <yPos>1379</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>50</parentX>
+            <parentY>739</parentY>
             <parentType>0</parentType>
             <childIndices>2</childIndices>
             <childIndices>3</childIndices>
-            <childIndices>4</childIndices>
-            <level>1</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <terminationCondition>t==60</terminationCondition>
-            <stateNames>Healthy</stateNames>
-            <stateNames>Sick</stateNames>
-            <stateNames>Dead</stateNames>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Healthy</name>
-            <xPos>287</xPos>
-            <yPos>80</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>238</parentX>
-            <parentY>205</parentY>
-            <parentType>1</parentType>
-            <childIndices>5</childIndices>
-            <childIndices>6</childIndices>
-            <level>2</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>0</rewards>
-            <rewards>1</rewards>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Sick</name>
-            <xPos>287</xPos>
-            <yPos>202</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>238</parentX>
-            <parentY>205</parentY>
-            <parentType>1</parentType>
-            <childIndices>9</childIndices>
-            <childIndices>10</childIndices>
-            <level>2</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>prev</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>c_pall</rewards>
-            <rewards>1</rewards>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Dead</name>
-            <xPos>287</xPos>
-            <yPos>283</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>238</parentX>
-            <parentY>205</parentY>
-            <parentType>1</parentType>
-            <childIndices>11</childIndices>
-            <level>2</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
-        </Node>
-        <Node>
-            <type>3</type>
-            <name>Survive</name>
-            <xPos>543</xPos>
-            <yPos>49</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>395</parentX>
-            <parentY>98</parentY>
-            <parentType>2</parentType>
-            <childIndices>7</childIndices>
-            <childIndices>8</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>130</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>395</parentX>
-            <parentY>98</parentY>
-            <parentType>2</parentType>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_die</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Get Sick</name>
-            <xPos>1041</xPos>
-            <yPos>22</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>58</parentY>
-            <parentType>3</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_sick</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Sick</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Stay Healthy</name>
-            <xPos>1041</xPos>
-            <yPos>76</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>58</parentY>
-            <parentType>3</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Healthy</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Survive -&gt; Remain Sick</name>
-            <xPos>1041</xPos>
-            <yPos>184</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>395</parentX>
-            <parentY>220</parentY>
-            <parentType>2</parentType>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Sick</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>238</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>395</parentX>
-            <parentY>220</parentY>
-            <parentType>2</parentType>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_die</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Reamin Dead</name>
-            <xPos>1041</xPos>
-            <yPos>292</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>395</parentX>
-            <parentY>301</parentY>
-            <parentType>2</parentType>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>1</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>3</type>
-            <name>Treat All</name>
-            <xPos>211</xPos>
-            <yPos>682</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>63</parentX>
-            <parentY>793</parentY>
-            <parentType>0</parentType>
-            <childIndices>13</childIndices>
-            <childIndices>24</childIndices>
-            <level>1</level>
-            <hasCost>true</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>c_treatment</cost>
-            <cost>0</cost>
-        </Node>
-        <Node>
-            <type>1</type>
-            <name>Sick -&gt;Treat</name>
-            <xPos>377</xPos>
-            <yPos>516</yPos>
-            <width>27</width>
-            <height>27</height>
-            <parentX>229</parentX>
-            <parentY>691</parentY>
-            <parentType>3</parentType>
-            <childIndices>14</childIndices>
-            <childIndices>19</childIndices>
-            <childIndices>22</childIndices>
-            <level>2</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>prev</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <terminationCondition>t==60</terminationCondition>
-            <stateNames>Healthy</stateNames>
-            <stateNames>Sick</stateNames>
-            <stateNames>Dead</stateNames>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Healthy</name>
-            <xPos>453</xPos>
-            <yPos>404</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>529</parentY>
-            <parentType>1</parentType>
-            <childIndices>15</childIndices>
-            <childIndices>18</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>1</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>0</rewards>
-            <rewards>1</rewards>
-        </Node>
-        <Node>
-            <type>3</type>
-            <name>Survive</name>
-            <xPos>709</xPos>
-            <yPos>373</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>422</parentY>
-            <parentType>2</parentType>
-            <childIndices>16</childIndices>
-            <childIndices>17</childIndices>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Get Sick</name>
-            <xPos>1041</xPos>
-            <yPos>346</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>382</parentY>
-            <parentType>3</parentType>
-            <level>5</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_sick</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Sick</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Stay Healthy</name>
-            <xPos>1041</xPos>
-            <yPos>400</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>382</parentY>
-            <parentType>3</parentType>
-            <level>5</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Healthy</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>454</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>422</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_die</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Sick</name>
-            <xPos>453</xPos>
-            <yPos>526</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>529</parentY>
-            <parentType>1</parentType>
-            <childIndices>20</childIndices>
-            <childIndices>21</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>c_pall</rewards>
-            <rewards>1</rewards>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Survive -&gt; Remain Sick</name>
-            <xPos>1041</xPos>
-            <yPos>508</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>544</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Sick</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>562</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>544</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_die</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Dead</name>
-            <xPos>453</xPos>
-            <yPos>607</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>529</parentY>
-            <parentType>1</parentType>
-            <childIndices>23</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Reamin Dead</name>
-            <xPos>1041</xPos>
-            <yPos>616</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>625</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>1</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>1</type>
-            <name>Not Sick -&gt; Treat</name>
-            <xPos>377</xPos>
-            <yPos>840</yPos>
-            <width>27</width>
-            <height>27</height>
-            <parentX>229</parentX>
-            <parentY>691</parentY>
-            <parentType>3</parentType>
-            <childIndices>25</childIndices>
-            <childIndices>30</childIndices>
-            <childIndices>33</childIndices>
-            <level>2</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <terminationCondition>t==60</terminationCondition>
-            <stateNames>Healthy</stateNames>
-            <stateNames>Sick</stateNames>
-            <stateNames>Dead</stateNames>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Healthy</name>
-            <xPos>453</xPos>
-            <yPos>728</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>853</parentY>
-            <parentType>1</parentType>
-            <childIndices>26</childIndices>
-            <childIndices>29</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>1</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>0</rewards>
-            <rewards>1</rewards>
-        </Node>
-        <Node>
-            <type>3</type>
-            <name>Survive</name>
-            <xPos>709</xPos>
-            <yPos>697</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>746</parentY>
-            <parentType>2</parentType>
-            <childIndices>27</childIndices>
-            <childIndices>28</childIndices>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Get Sick</name>
-            <xPos>1041</xPos>
-            <yPos>670</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>706</parentY>
-            <parentType>3</parentType>
-            <level>5</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_sick*hr_treated</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Sick</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Stay Healthy</name>
-            <xPos>1041</xPos>
-            <yPos>724</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>706</parentY>
-            <parentType>3</parentType>
-            <level>5</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Healthy</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>778</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>746</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_die</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Sick</name>
-            <xPos>453</xPos>
-            <yPos>850</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>853</parentY>
-            <parentType>1</parentType>
-            <childIndices>31</childIndices>
-            <childIndices>32</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>c_pall</rewards>
-            <rewards>1</rewards>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Survive -&gt; Remain Sick</name>
-            <xPos>1041</xPos>
-            <yPos>832</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>868</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>C</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Sick</transition>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>886</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>868</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>p_die</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>2</type>
-            <name>Dead</name>
-            <xPos>453</xPos>
-            <yPos>931</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>853</parentY>
-            <parentType>1</parentType>
-            <childIndices>34</childIndices>
-            <level>3</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>0</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
-        </Node>
-        <Node>
-            <type>4</type>
-            <name>Reamin Dead</name>
-            <xPos>1041</xPos>
-            <yPos>940</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>949</parentY>
-            <parentType>2</parentType>
-            <level>4</level>
-            <hasCost>false</hasCost>
-            <hasVarUpdates>false</hasVarUpdates>
-            <visible>true</visible>
-            <collapsed>false</collapsed>
-            <prob>1</prob>
-            <cost>0</cost>
-            <cost>0</cost>
-            <transition>Dead</transition>
-        </Node>
-        <Node>
-            <type>3</type>
-            <name>Screen All</name>
-            <xPos>211</xPos>
-            <yPos>1467</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>63</parentX>
-            <parentY>793</parentY>
-            <parentType>0</parentType>
-            <childIndices>36</childIndices>
-            <childIndices>37</childIndices>
             <level>1</level>
             <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1308,15 +591,15 @@
         <Node>
             <type>3</type>
             <name>Sick</name>
-            <xPos>377</xPos>
-            <yPos>1276</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>229</parentX>
-            <parentY>1476</parentY>
+            <xPos>302</xPos>
+            <yPos>1198</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>183</parentX>
+            <parentY>1386</parentY>
             <parentType>3</parentType>
-            <childIndices>48</childIndices>
-            <childIndices>59</childIndices>
+            <childIndices>14</childIndices>
+            <childIndices>25</childIndices>
             <level>2</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1329,16 +612,16 @@
         <Node>
             <type>1</type>
             <name>Not Sick -&gt; No Treat</name>
-            <xPos>377</xPos>
-            <yPos>1650</yPos>
-            <width>27</width>
-            <height>27</height>
-            <parentX>229</parentX>
-            <parentY>1476</parentY>
+            <xPos>302</xPos>
+            <yPos>1554</yPos>
+            <width>21</width>
+            <height>21</height>
+            <parentX>183</parentX>
+            <parentY>1386</parentY>
             <parentType>3</parentType>
-            <childIndices>38</childIndices>
-            <childIndices>43</childIndices>
-            <childIndices>46</childIndices>
+            <childIndices>4</childIndices>
+            <childIndices>9</childIndices>
+            <childIndices>12</childIndices>
             <level>2</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1355,15 +638,15 @@
         <Node>
             <type>2</type>
             <name>Healthy</name>
-            <xPos>453</xPos>
-            <yPos>1538</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>1663</parentY>
+            <xPos>363</xPos>
+            <yPos>1440</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>1564</parentY>
             <parentType>1</parentType>
-            <childIndices>39</childIndices>
-            <childIndices>42</childIndices>
+            <childIndices>5</childIndices>
+            <childIndices>8</childIndices>
             <level>3</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1378,15 +661,15 @@
         <Node>
             <type>3</type>
             <name>Survive</name>
-            <xPos>709</xPos>
-            <yPos>1507</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>1556</parentY>
+            <xPos>568</xPos>
+            <yPos>1415</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>1454</parentY>
             <parentType>2</parentType>
-            <childIndices>40</childIndices>
-            <childIndices>41</childIndices>
+            <childIndices>6</childIndices>
+            <childIndices>7</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1399,12 +682,12 @@
         <Node>
             <type>4</type>
             <name>Get Sick</name>
-            <xPos>1041</xPos>
-            <yPos>1480</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1516</parentY>
+            <xPos>834</xPos>
+            <yPos>1394</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1422</parentY>
             <parentType>3</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1419,12 +702,12 @@
         <Node>
             <type>4</type>
             <name>Stay Healthy</name>
-            <xPos>1041</xPos>
-            <yPos>1534</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1516</parentY>
+            <xPos>834</xPos>
+            <yPos>1437</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1422</parentY>
             <parentType>3</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1439,12 +722,12 @@
         <Node>
             <type>4</type>
             <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>1588</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>1556</parentY>
+            <xPos>834</xPos>
+            <yPos>1480</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>1454</parentY>
             <parentType>2</parentType>
             <level>4</level>
             <hasCost>false</hasCost>
@@ -1459,15 +742,15 @@
         <Node>
             <type>2</type>
             <name>Sick</name>
-            <xPos>453</xPos>
-            <yPos>1660</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>1663</parentY>
+            <xPos>363</xPos>
+            <yPos>1569</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>1564</parentY>
             <parentType>1</parentType>
-            <childIndices>44</childIndices>
-            <childIndices>45</childIndices>
+            <childIndices>10</childIndices>
+            <childIndices>11</childIndices>
             <level>3</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1480,15 +763,17 @@
             <rewards>1</rewards>
         </Node>
         <Node>
-            <type>4</type>
+            <type>3</type>
             <name>Survive -&gt; Remain Sick</name>
-            <xPos>1041</xPos>
-            <yPos>1642</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>1678</parentY>
+            <xPos>568</xPos>
+            <yPos>1544</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>1583</parentY>
             <parentType>2</parentType>
+            <childIndices>75</childIndices>
+            <childIndices>76</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1497,17 +782,17 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
-            <transition>Sick</transition>
+            <transition>0</transition>
         </Node>
         <Node>
             <type>4</type>
             <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>1696</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>1678</parentY>
+            <xPos>834</xPos>
+            <yPos>1609</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>1583</parentY>
             <parentType>2</parentType>
             <level>4</level>
             <hasCost>false</hasCost>
@@ -1522,14 +807,14 @@
         <Node>
             <type>2</type>
             <name>Dead</name>
-            <xPos>453</xPos>
-            <yPos>1741</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>404</parentX>
-            <parentY>1663</parentY>
+            <xPos>363</xPos>
+            <yPos>1645</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>1564</parentY>
             <parentType>1</parentType>
-            <childIndices>47</childIndices>
+            <childIndices>13</childIndices>
             <level>3</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1543,13 +828,13 @@
         </Node>
         <Node>
             <type>4</type>
-            <name>Reamin Dead</name>
-            <xPos>1041</xPos>
-            <yPos>1750</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>561</parentX>
-            <parentY>1759</parentY>
+            <name>Remain Dead</name>
+            <xPos>834</xPos>
+            <yPos>1652</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>1659</parentY>
             <parentType>2</parentType>
             <level>4</level>
             <hasCost>false</hasCost>
@@ -1564,16 +849,16 @@
         <Node>
             <type>1</type>
             <name>Test (+) -&gt;Treat</name>
-            <xPos>543</xPos>
-            <yPos>1164</yPos>
-            <width>27</width>
-            <height>27</height>
-            <parentX>395</parentX>
-            <parentY>1285</parentY>
+            <xPos>435</xPos>
+            <yPos>1081</yPos>
+            <width>21</width>
+            <height>21</height>
+            <parentX>316</parentX>
+            <parentY>1205</parentY>
             <parentType>3</parentType>
-            <childIndices>49</childIndices>
-            <childIndices>54</childIndices>
-            <childIndices>57</childIndices>
+            <childIndices>15</childIndices>
+            <childIndices>20</childIndices>
+            <childIndices>23</childIndices>
             <level>3</level>
             <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1590,15 +875,15 @@
         <Node>
             <type>2</type>
             <name>Healthy</name>
-            <xPos>619</xPos>
-            <yPos>1052</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>570</parentX>
-            <parentY>1177</parentY>
+            <xPos>496</xPos>
+            <yPos>967</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>456</parentX>
+            <parentY>1091</parentY>
             <parentType>1</parentType>
-            <childIndices>50</childIndices>
-            <childIndices>53</childIndices>
+            <childIndices>16</childIndices>
+            <childIndices>19</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1613,15 +898,15 @@
         <Node>
             <type>3</type>
             <name>Survive</name>
-            <xPos>875</xPos>
-            <yPos>1021</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1070</parentY>
+            <xPos>701</xPos>
+            <yPos>942</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>981</parentY>
             <parentType>2</parentType>
-            <childIndices>51</childIndices>
-            <childIndices>52</childIndices>
+            <childIndices>17</childIndices>
+            <childIndices>18</childIndices>
             <level>5</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1634,12 +919,12 @@
         <Node>
             <type>4</type>
             <name>Get Sick</name>
-            <xPos>1041</xPos>
-            <yPos>994</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>893</parentX>
-            <parentY>1030</parentY>
+            <xPos>834</xPos>
+            <yPos>921</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>715</parentX>
+            <parentY>949</parentY>
             <parentType>3</parentType>
             <level>6</level>
             <hasCost>false</hasCost>
@@ -1654,12 +939,12 @@
         <Node>
             <type>4</type>
             <name>Stay Healthy</name>
-            <xPos>1041</xPos>
-            <yPos>1048</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>893</parentX>
-            <parentY>1030</parentY>
+            <xPos>834</xPos>
+            <yPos>964</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>715</parentX>
+            <parentY>949</parentY>
             <parentType>3</parentType>
             <level>6</level>
             <hasCost>false</hasCost>
@@ -1674,12 +959,12 @@
         <Node>
             <type>4</type>
             <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>1102</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1070</parentY>
+            <xPos>834</xPos>
+            <yPos>1007</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>981</parentY>
             <parentType>2</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1694,15 +979,15 @@
         <Node>
             <type>2</type>
             <name>Sick</name>
-            <xPos>619</xPos>
-            <yPos>1174</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>570</parentX>
-            <parentY>1177</parentY>
+            <xPos>496</xPos>
+            <yPos>1096</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>456</parentX>
+            <parentY>1091</parentY>
             <parentType>1</parentType>
-            <childIndices>55</childIndices>
-            <childIndices>56</childIndices>
+            <childIndices>21</childIndices>
+            <childIndices>22</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1715,15 +1000,17 @@
             <rewards>1</rewards>
         </Node>
         <Node>
-            <type>4</type>
-            <name>Survive -&gt; Remain Sick</name>
-            <xPos>1041</xPos>
-            <yPos>1156</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1192</parentY>
+            <type>3</type>
+            <name>Survive</name>
+            <xPos>701</xPos>
+            <yPos>1071</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1110</parentY>
             <parentType>2</parentType>
+            <childIndices>73</childIndices>
+            <childIndices>74</childIndices>
             <level>5</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1732,17 +1019,17 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
-            <transition>Sick</transition>
+            <transition>0</transition>
         </Node>
         <Node>
             <type>4</type>
             <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>1210</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1192</parentY>
+            <xPos>834</xPos>
+            <yPos>1136</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1110</parentY>
             <parentType>2</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1757,14 +1044,14 @@
         <Node>
             <type>2</type>
             <name>Dead</name>
-            <xPos>619</xPos>
-            <yPos>1255</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>570</parentX>
-            <parentY>1177</parentY>
+            <xPos>496</xPos>
+            <yPos>1172</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>456</parentX>
+            <parentY>1091</parentY>
             <parentType>1</parentType>
-            <childIndices>58</childIndices>
+            <childIndices>24</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1779,12 +1066,12 @@
         <Node>
             <type>4</type>
             <name>Reamin Dead</name>
-            <xPos>1041</xPos>
-            <yPos>1264</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1273</parentY>
+            <xPos>834</xPos>
+            <yPos>1179</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1186</parentY>
             <parentType>2</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1799,15 +1086,15 @@
         <Node>
             <type>1</type>
             <name>Test (-) -&gt;No Treat</name>
-            <xPos>543</xPos>
-            <yPos>1380</yPos>
-            <width>27</width>
-            <height>27</height>
-            <parentX>395</parentX>
-            <parentY>1285</parentY>
+            <xPos>435</xPos>
+            <yPos>1309</yPos>
+            <width>21</width>
+            <height>21</height>
+            <parentX>316</parentX>
+            <parentY>1205</parentY>
             <parentType>3</parentType>
-            <childIndices>60</childIndices>
-            <childIndices>63</childIndices>
+            <childIndices>26</childIndices>
+            <childIndices>29</childIndices>
             <level>3</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1823,15 +1110,15 @@
         <Node>
             <type>2</type>
             <name>Sick</name>
-            <xPos>619</xPos>
-            <yPos>1336</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>570</parentX>
-            <parentY>1393</parentY>
+            <xPos>496</xPos>
+            <yPos>1268</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>456</parentX>
+            <parentY>1319</parentY>
             <parentType>1</parentType>
-            <childIndices>61</childIndices>
-            <childIndices>62</childIndices>
+            <childIndices>27</childIndices>
+            <childIndices>28</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1844,15 +1131,17 @@
             <rewards>1</rewards>
         </Node>
         <Node>
-            <type>4</type>
+            <type>3</type>
             <name>Survive -&gt; Remain Sick</name>
-            <xPos>1041</xPos>
-            <yPos>1318</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1354</parentY>
+            <xPos>701</xPos>
+            <yPos>1243</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1282</parentY>
             <parentType>2</parentType>
+            <childIndices>71</childIndices>
+            <childIndices>72</childIndices>
             <level>5</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1861,17 +1150,17 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
-            <transition>Sick</transition>
+            <transition>0</transition>
         </Node>
         <Node>
             <type>4</type>
             <name>Die</name>
-            <xPos>1041</xPos>
-            <yPos>1372</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1354</parentY>
+            <xPos>834</xPos>
+            <yPos>1308</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1282</parentY>
             <parentType>2</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1886,14 +1175,14 @@
         <Node>
             <type>2</type>
             <name>Dead</name>
-            <xPos>619</xPos>
-            <yPos>1417</yPos>
-            <width>108</width>
-            <height>36</height>
-            <parentX>570</parentX>
-            <parentY>1393</parentY>
+            <xPos>496</xPos>
+            <yPos>1344</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>456</parentX>
+            <parentY>1319</parentY>
             <parentType>1</parentType>
-            <childIndices>64</childIndices>
+            <childIndices>30</childIndices>
             <level>4</level>
             <hasCost>false</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
@@ -1907,13 +1196,13 @@
         </Node>
         <Node>
             <type>4</type>
-            <name>Reamin Dead</name>
-            <xPos>1041</xPos>
-            <yPos>1426</yPos>
-            <width>18</width>
-            <height>18</height>
-            <parentX>727</parentX>
-            <parentY>1435</parentY>
+            <name>Remain Dead</name>
+            <xPos>834</xPos>
+            <yPos>1351</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1358</parentY>
             <parentType>2</parentType>
             <level>5</level>
             <hasCost>false</hasCost>
@@ -1921,6 +1210,978 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>1</type>
+            <name>Treat None</name>
+            <xPos>169</xPos>
+            <yPos>178</yPos>
+            <width>21</width>
+            <height>21</height>
+            <parentX>50</parentX>
+            <parentY>739</parentY>
+            <parentType>0</parentType>
+            <childIndices>32</childIndices>
+            <childIndices>37</childIndices>
+            <childIndices>41</childIndices>
+            <level>1</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <terminationCondition>t==60</terminationCondition>
+            <stateNames>Healthy</stateNames>
+            <stateNames>Sick</stateNames>
+            <stateNames>Dead</stateNames>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Healthy</name>
+            <xPos>230</xPos>
+            <yPos>64</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>190</parentX>
+            <parentY>188</parentY>
+            <parentType>1</parentType>
+            <childIndices>33</childIndices>
+            <childIndices>36</childIndices>
+            <level>2</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>1</rewards>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Survive</name>
+            <xPos>435</xPos>
+            <yPos>39</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>316</parentX>
+            <parentY>78</parentY>
+            <parentType>2</parentType>
+            <childIndices>34</childIndices>
+            <childIndices>35</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Get Sick</name>
+            <xPos>834</xPos>
+            <yPos>18</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>46</parentY>
+            <parentType>3</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_sick</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Stay Healthy</name>
+            <xPos>834</xPos>
+            <yPos>61</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>46</parentY>
+            <parentType>3</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Healthy</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Die</name>
+            <xPos>834</xPos>
+            <yPos>104</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>316</parentX>
+            <parentY>78</parentY>
+            <parentType>2</parentType>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Sick</name>
+            <xPos>230</xPos>
+            <yPos>193</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>190</parentX>
+            <parentY>188</parentY>
+            <parentType>1</parentType>
+            <childIndices>38</childIndices>
+            <childIndices>40</childIndices>
+            <level>2</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>prev</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>c_pall</rewards>
+            <rewards>1</rewards>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Survive </name>
+            <xPos>435</xPos>
+            <yPos>168</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>316</parentX>
+            <parentY>207</parentY>
+            <parentType>2</parentType>
+            <childIndices>39</childIndices>
+            <childIndices>70</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>0</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Sick</name>
+            <xPos>834</xPos>
+            <yPos>147</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>175</parentY>
+            <parentType>3</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Die</name>
+            <xPos>834</xPos>
+            <yPos>233</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>316</parentX>
+            <parentY>207</parentY>
+            <parentType>2</parentType>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Dead</name>
+            <xPos>230</xPos>
+            <yPos>269</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>190</parentX>
+            <parentY>188</parentY>
+            <parentType>1</parentType>
+            <childIndices>42</childIndices>
+            <level>2</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Dead</name>
+            <xPos>834</xPos>
+            <yPos>276</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>316</parentX>
+            <parentY>283</parentY>
+            <parentType>2</parentType>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Treat All</name>
+            <xPos>169</xPos>
+            <yPos>632</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>50</parentX>
+            <parentY>739</parentY>
+            <parentType>0</parentType>
+            <childIndices>44</childIndices>
+            <childIndices>57</childIndices>
+            <level>1</level>
+            <hasCost>true</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>c_treatment</cost>
+            <cost>0</cost>
+        </Node>
+        <Node>
+            <type>1</type>
+            <name>Sick -&gt;Treat</name>
+            <xPos>302</xPos>
+            <yPos>479</yPos>
+            <width>21</width>
+            <height>21</height>
+            <parentX>183</parentX>
+            <parentY>639</parentY>
+            <parentType>3</parentType>
+            <childIndices>45</childIndices>
+            <childIndices>50</childIndices>
+            <childIndices>55</childIndices>
+            <level>2</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>prev</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <terminationCondition>t==60</terminationCondition>
+            <stateNames>Healthy</stateNames>
+            <stateNames>Sick</stateNames>
+            <stateNames>Dead</stateNames>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Healthy</name>
+            <xPos>363</xPos>
+            <yPos>365</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>489</parentY>
+            <parentType>1</parentType>
+            <childIndices>46</childIndices>
+            <childIndices>49</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>1</rewards>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Survive</name>
+            <xPos>568</xPos>
+            <yPos>340</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>379</parentY>
+            <parentType>2</parentType>
+            <childIndices>47</childIndices>
+            <childIndices>48</childIndices>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Get Sick</name>
+            <xPos>834</xPos>
+            <yPos>319</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>347</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_sick*hr_treated</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Stay Healthy</name>
+            <xPos>834</xPos>
+            <yPos>362</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>347</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Healthy</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Die</name>
+            <xPos>834</xPos>
+            <yPos>405</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>379</parentY>
+            <parentType>2</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Sick</name>
+            <xPos>363</xPos>
+            <yPos>494</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>489</parentY>
+            <parentType>1</parentType>
+            <childIndices>51</childIndices>
+            <childIndices>54</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>c_pall</rewards>
+            <rewards>1</rewards>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Survive </name>
+            <xPos>568</xPos>
+            <yPos>469</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>508</parentY>
+            <parentType>2</parentType>
+            <childIndices>52</childIndices>
+            <childIndices>53</childIndices>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>0</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Sick</name>
+            <xPos>834</xPos>
+            <yPos>448</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>476</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Disease Death</name>
+            <xPos>834</xPos>
+            <yPos>491</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>476</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_diseasedeath</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Die</name>
+            <xPos>834</xPos>
+            <yPos>534</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>508</parentY>
+            <parentType>2</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Dead</name>
+            <xPos>363</xPos>
+            <yPos>570</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>489</parentY>
+            <parentType>1</parentType>
+            <childIndices>56</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Dead</name>
+            <xPos>834</xPos>
+            <yPos>577</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>584</parentY>
+            <parentType>2</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>1</type>
+            <name>Not Sick -&gt; Treat</name>
+            <xPos>302</xPos>
+            <yPos>780</yPos>
+            <width>21</width>
+            <height>21</height>
+            <parentX>183</parentX>
+            <parentY>639</parentY>
+            <parentType>3</parentType>
+            <childIndices>58</childIndices>
+            <childIndices>63</childIndices>
+            <childIndices>68</childIndices>
+            <level>2</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <terminationCondition>t==60</terminationCondition>
+            <stateNames>Healthy</stateNames>
+            <stateNames>Sick</stateNames>
+            <stateNames>Dead</stateNames>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Healthy</name>
+            <xPos>363</xPos>
+            <yPos>666</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>790</parentY>
+            <parentType>1</parentType>
+            <childIndices>59</childIndices>
+            <childIndices>62</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>1</rewards>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Survive</name>
+            <xPos>568</xPos>
+            <yPos>641</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>680</parentY>
+            <parentType>2</parentType>
+            <childIndices>60</childIndices>
+            <childIndices>61</childIndices>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Get Sick</name>
+            <xPos>834</xPos>
+            <yPos>620</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>648</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_sick*hr_treated</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Stay Healthy</name>
+            <xPos>834</xPos>
+            <yPos>663</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>648</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Healthy</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Die</name>
+            <xPos>834</xPos>
+            <yPos>706</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>680</parentY>
+            <parentType>2</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Sick</name>
+            <xPos>363</xPos>
+            <yPos>795</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>790</parentY>
+            <parentType>1</parentType>
+            <childIndices>64</childIndices>
+            <childIndices>67</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>c_pall</rewards>
+            <rewards>1</rewards>
+        </Node>
+        <Node>
+            <type>3</type>
+            <name>Survive </name>
+            <xPos>568</xPos>
+            <yPos>770</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>809</parentY>
+            <parentType>2</parentType>
+            <childIndices>65</childIndices>
+            <childIndices>66</childIndices>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>0</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Sick</name>
+            <xPos>834</xPos>
+            <yPos>749</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>777</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Disease Death</name>
+            <xPos>834</xPos>
+            <yPos>792</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>777</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_diseasedeath</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Die</name>
+            <xPos>834</xPos>
+            <yPos>835</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>809</parentY>
+            <parentType>2</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>2</type>
+            <name>Dead</name>
+            <xPos>363</xPos>
+            <yPos>871</yPos>
+            <width>86</width>
+            <height>28</height>
+            <parentX>323</parentX>
+            <parentY>790</parentY>
+            <parentType>1</parentType>
+            <childIndices>69</childIndices>
+            <level>3</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Reamin Dead</name>
+            <xPos>834</xPos>
+            <yPos>878</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>885</parentY>
+            <parentType>2</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Disease Death</name>
+            <xPos>834</xPos>
+            <yPos>190</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>449</parentX>
+            <parentY>175</parentY>
+            <parentType>3</parentType>
+            <level>4</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_diseasedeath</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Sick</name>
+            <xPos>834</xPos>
+            <yPos>1222</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>715</parentX>
+            <parentY>1250</parentY>
+            <parentType>3</parentType>
+            <level>6</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Disease Death</name>
+            <xPos>834</xPos>
+            <yPos>1265</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>715</parentX>
+            <parentY>1250</parentY>
+            <parentType>3</parentType>
+            <level>6</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_diseasedeath</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Sick</name>
+            <xPos>834</xPos>
+            <yPos>1050</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>715</parentX>
+            <parentY>1078</parentY>
+            <parentType>3</parentType>
+            <level>6</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Disease Death</name>
+            <xPos>834</xPos>
+            <yPos>1093</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>715</parentX>
+            <parentY>1078</parentY>
+            <parentType>3</parentType>
+            <level>6</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_diseasedeath</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Dead</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Remain Sick</name>
+            <xPos>834</xPos>
+            <yPos>1523</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1551</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
+            <transition>Sick</transition>
+        </Node>
+        <Node>
+            <type>4</type>
+            <name>Disease Death</name>
+            <xPos>834</xPos>
+            <yPos>1566</yPos>
+            <width>14</width>
+            <height>14</height>
+            <parentX>582</parentX>
+            <parentY>1551</parentY>
+            <parentType>3</parentType>
+            <level>5</level>
+            <hasCost>false</hasCost>
+            <hasVarUpdates>false</hasVarUpdates>
+            <visible>true</visible>
+            <collapsed>false</collapsed>
+            <prob>p_diseasedeath</prob>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1933,7 +2194,7 @@
         <discountRates>3</discountRates>
         <discountStartCycle>0</discountStartCycle>
         <cyclesPerYear>1.0</cyclesPerYear>
-        <showTrace>false</showTrace>
+        <showTrace>true</showTrace>
         <compileTraces>false</compileTraces>
     </markov>
 </Model>

@@ -326,7 +326,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#add-the-additional-states-to-your-model" id="toc-add-the-additional-states-to-your-model" class="nav-link" data-scroll-target="#add-the-additional-states-to-your-model">Add the additional states to your model</a>
   <ul class="collapse">
   <li><a href="#disease-death" id="toc-disease-death" class="nav-link" data-scroll-target="#disease-death">Disease Death</a></li>
-  <li><a href="#sicker" id="toc-sicker" class="nav-link" data-scroll-target="#sicker">Sicker</a></li>
+  <li><a href="#sicker" id="toc-sicker" class="nav-link" data-scroll-target="#sicker">Sicker</a>
+  <ul class="collapse">
+  <li><a href="#a-create-a-sicker-state" id="toc-a-create-a-sicker-state" class="nav-link" data-scroll-target="#a-create-a-sicker-state">A: Create a Sicker State</a></li>
+  <li><a href="#b-update-the-sick-state" id="toc-b-update-the-sick-state" class="nav-link" data-scroll-target="#b-update-the-sick-state">B: Update the Sick State</a></li>
+  </ul></li>
   <li><a href="#repeat-for-the-markov-models-on-treat-all" id="toc-repeat-for-the-markov-models-on-treat-all" class="nav-link" data-scroll-target="#repeat-for-the-markov-models-on-treat-all">Repeat for the markov models on Treat ALL</a></li>
   </ul></li>
   </ul>
@@ -488,18 +492,25 @@ ul.task-list li input[type="checkbox"] {
 <p>More assistance with step</p>
 </summary>
 <p style="color: black;">
-</p><ol type="1">
-<li>Add a Sicker state to the “Treat None” markov model</li>
-<li>Set the starting probability to 0</li>
-<li>Add all cause death event</li>
-<li>Add disease death event</li>
-<li>Update outcomes and probabilities</li>
+</p><section id="a-create-a-sicker-state" class="level3">
+<h3 class="anchored" data-anchor-id="a-create-a-sicker-state">A: Create a Sicker State</h3>
+<ol type="1">
+<li><p>Add a Sicker state to the “Treat None” markov model</p></li>
+<li><p>Set the starting probability to 0 <img src="images/progMarkov/Sicker1.png" class="img-fluid"></p></li>
+<li><p>Add all cause death event <img src="images/progMarkov/Sicker2.png" class="img-fluid"></p></li>
+<li><p>Add disease death event <img src="images/progMarkov/Sicker3.png" class="img-fluid"></p></li>
+<li><p>Update outcomes and probabilities <img src="images/progMarkov/Sicker4.png" class="img-fluid"></p></li>
+</ol>
+</section>
+<section id="b-update-the-sick-state" class="level3">
+<h3 class="anchored" data-anchor-id="b-update-the-sick-state">B: Update the Sick State</h3>
+<ol type="1">
 <li>Update Sick to go to Sicker</li>
 <li>Add one time cost of sick to sicker</li>
-<li>Set cost off sick to c_sick</li>
+<li>Set cost of the Sick state to c_mild <img src="images/progMarkov/Sicker5.png" class="img-fluid"></li>
 </ol>
 <p></p>
-</details>
+</section></details>
 <details>
 <summary style="color: green; font-size: 4vh;">
 <p>Check your Model</p>
@@ -509,8 +520,19 @@ ul.task-list li input[type="checkbox"] {
 <p></p>
 </details>
 </section>
+</section>
 <section id="repeat-for-the-markov-models-on-treat-all" class="level2">
 <h2 class="anchored" data-anchor-id="repeat-for-the-markov-models-on-treat-all">Repeat for the markov models on Treat ALL</h2>
+
+<details>
+<summary style="color: green; font-size: 4vh;">
+<p>Check your Model</p>
+</summary>
+<p style="color: black;">
+</p><p><img src="images/progMarkov/Sick_treat.png" class="img-fluid"></p>
+<p><img src="images/progMarkov/NotSick_treat.png" class="img-fluid"></p>
+<p></p>
+</details>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -567,7 +589,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section>
-</section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

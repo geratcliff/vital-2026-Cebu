@@ -7,7 +7,7 @@
         <dateCreated>Sun Jan 25 19:22:05 CST 2026</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Sun Jan 25 19:23:18 CST 2026</dateModified>
+        <dateModified>Sun Jan 25 23:54:50 CST 2026</dateModified>
         <versionModified>0.3.3</versionModified>
     </Metadata>
     <DimInfo>
@@ -24,6 +24,11 @@
     </DimInfo>
     <scale>100</scale>
     <alignRight>false</alignRight>
+    <Parameter>
+        <name>p_sick</name>
+        <expression>.23</expression>
+        <notes></notes>
+    </Parameter>
     <simParamSets>false</simParamSets>
     <simType>0</simType>
     <cohortSize>1</cohortSize>
@@ -97,8 +102,8 @@
         <Node>
             <type>1</type>
             <name>Treat</name>
-            <xPos>235</xPos>
-            <yPos>360</yPos>
+            <xPos>158</xPos>
+            <yPos>470</yPos>
             <width>20</width>
             <height>20</height>
             <parentX>70</parentX>
@@ -128,7 +133,7 @@
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
-            <prob>0</prob>
+            <prob>p_sick</prob>
             <cost>0</cost>
             <payoff>0</payoff>
         </Node>
@@ -147,7 +152,7 @@
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
-            <prob>0</prob>
+            <prob>C</prob>
             <cost>0</cost>
             <payoff>0</payoff>
         </Node>
