@@ -59,12 +59,12 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | 08:00 - 08:30 | [Lecture]{.lecture} | [CEA Fundamentals 1: Costs (Cont.)](https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5a.cea-fundamentals1.html#/we-can-identify-different-types-of-healthcare-costs) |
 | 08:30 - 09:30 | [Case Study]{.casestudy} | [Decision Trees in Amua](case-studies/CaseStudy_Tree.html) |
 | 09:30 - 10:30 | [Capstone]{.capstone} | [Make a Decision Tree](capstone/02_decision-tree.html) |
-| 10:30 - 11:30 | Break | Coffee/Tea |
-| 11:30 - 12:30 | [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits](lectures/lec_5b.cea-fundamentals2.html) |
+| 10:30 - 11:00 | Break | Coffee/Tea |
+| 11:00 - 12:00| [Lecture]{.lecture} | [CEA Fundamentals 2:Benefits](lectures/lec_5b.cea-fundamentals2.html) |
+| 12:00 - 12:30 | [Lecture]{.lecture} | [CEA Fundamentals 2: Benefits-DALYs](lectures/lec_dalys.html) |
 | 12:30 - 13:40 | Break | Lunch |
-| 13:40 - 14:30 | [Lecture]{.lecture} | [CEA Fundamentals 2: Benefits-DALYs](lectures/lec_dalys.html) |
-| 14:30 - 16:00 | [Lecture]{.lecture} | [CEA Fundamentals 3: Incremental CEA](lectures/lec_6.ICERs.html) |
-| 16:00 - 16:30 | [Capstone]{.capstone} | [Add Outcomes to your decision tree](capstone/02_decision-tree.html) |
+| 13:40 - 15:30 | [Lecture]{.lecture} | [CEA Fundamentals 3: Incremental CEA](lectures/lec_6.ICERs.html) |
+| 15:30 - 16:30 | [Capstone]{.capstone} | [Add Outcomes to your decision tree](capstone/02_decision-tree.html) |
 | 16:30 | Check-Ins | Daily Recap |
 
 : {tbl-colwidths="\[20,10,50\]"}
