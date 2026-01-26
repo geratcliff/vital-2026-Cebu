@@ -80,6 +80,9 @@ website:
             
       - href: about.qmd
         text: Instructors
+      - href: V4_Quick_Start_Guide.pdf
+        text: Quick Start Guide     
+        
     
       - text: "---"
       

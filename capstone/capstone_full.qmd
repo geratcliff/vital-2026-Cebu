@@ -104,7 +104,7 @@ Ideas for graphic:
 +-----------------+----------------+-------------------+------------+----------------+
 :::
 
-### Slide 5: Markov Bubble Diagaram (SKIP IF DOING A TREE)
+### Slide 5: Markov Bubble Diagram (SKIP IF DOING A TREE)
 
 -   Include a bubble diagram
 
