@@ -346,7 +346,7 @@ You're side bar should now be populated with the model parameters
 Here are the parameters if you need to add them manually:
 
 | Name           | Expression | Description                                     |
-|-----------------|-----------------|--------------------------------------|
+|------------------|------------------|-------------------------------------|
 | prev           | 0.08       | Prevelance of Disease X at age 50               |
 | p_sick         | 0.03       | Annual probability of getting Disease X         |
 | p_diseasedeath | 0.15       | Annual probability of dying from Disease X      |
@@ -663,8 +663,8 @@ Check your Model
 
 | Strategy   | Cost (\$ for 1000 people) | LY (for 1000 people) |
 |------------|---------------------------|----------------------|
-| Treat None | \$78,329,076.61          |  15,195.26            |
-| Treat All  | \$87,687,551.51           | 20,779.69             |
+| Treat None | \$78,329,076.61           | 15,195.26            |
+| Treat All  | \$87,687,551.51           | 20,779.69            |
 
 </p>
 

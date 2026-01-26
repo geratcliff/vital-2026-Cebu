@@ -147,6 +147,17 @@ More assistance with step
 1.  Update Sick to go to Sicker
 2.  Add one time cost of sick to sicker
 3.  Set cost of the Sick state to c_mild
+
+::: {.callout-important appearance="minimal"}
+To find where a variable is in a model use the "Highlight Use" Tool
+
+1. Select the **Expression** of a parameter or variable that you want to find in the model
+2. Click the ![](../amua-images/highlight_16.png)  symbol above at the top of the right sidebar 
+
+Now the variable will highlight green everywhere it is in the model.
+:::
+
+
 ![](images/progMarkov/Sicker5.png)
 
 

@@ -343,7 +343,7 @@ Check your Model
 ### Life Years
 
 | Label | Value | Description |
-|--------------------|-------------|---------------------------------------|
+|-------------------|-----------------|-------------------------------------|
 | LY_untreated | 8 | Additional Life Years Gained of being sick and untreated |
 | LY_treated | 17 | Additional Life Years Gained of being sick and treated |
 | LY_healthy | 20 | Additional Life Years Gained of screening |

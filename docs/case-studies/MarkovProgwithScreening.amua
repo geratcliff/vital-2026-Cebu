@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Model>
-    <name>Markov Prog with Screening</name>
+    <name>MarkovProgwithScreening</name>
     <type>1</type>
     <Metadata>
         <author>ratclg2</author>
         <dateCreated>Mon Jan 12 12:27:52 CST 2026</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Wed Jan 21 12:55:14 CST 2026</dateModified>
+        <dateModified>Mon Jan 26 01:24:18 CST 2026</dateModified>
         <versionModified>0.3.4</versionModified>
     </Metadata>
     <DimInfo>
@@ -30,7 +30,7 @@
     <alignRight>true</alignRight>
     <Parameter>
         <name>p_sick</name>
-        <expression>0.08</expression>
+        <expression>0.03</expression>
         <notes></notes>
     </Parameter>
     <Parameter>
@@ -577,7 +577,6 @@
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
-            <cost>0</cost>
         </Node>
         <Node>
             <type>1</type>
