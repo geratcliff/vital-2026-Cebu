@@ -299,6 +299,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Instructors</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../V4_Quick_Start_Guide.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Start Guide</span></a>
+  </div>
+</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -452,7 +458,8 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/sensitivity/RunMenu.png" class="img-fluid"></p>
 <section id="step-1-complete-the-model" class="level1">
 <h1>Step 1: Complete the model</h1>
-<p>Congrats, you have already completed step 1 if you have worked through the case study sequence</p>
+<p>Congrats, you have already completed step 1 if you have worked through the case study sequence.</p>
+<p>If not, please download the following: FULL MODEL FILE</p>
 </section>
 <section id="step-2-identify-the-variance-ranges" class="level1">
 <h1>Step 2: Identify the variance ranges</h1>
@@ -485,12 +492,12 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>sens</td>
 <td>0.9</td>
-<td></td>
+<td>0.86-0.93</td>
 </tr>
 <tr class="odd">
 <td>prev</td>
 <td>0.08</td>
-<td></td>
+<td>0.074-0.086</td>
 </tr>
 <tr class="even">
 <td>hr_treated</td>
@@ -659,11 +666,44 @@ ul.task-list li input[type="checkbox"] {
 <h1>Step 5: Run a PSA</h1>
 <section id="a-determine-variable-distributions" class="level2">
 <h2 class="anchored" data-anchor-id="a-determine-variable-distributions">A: Determine variable distributions</h2>
-<p>Remember from the lecture that:</p>
-<p>ADD MOST COMMON TABLE</p>
+<p>The table below provides recommendations:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter Type</th>
+<th>Distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability</td>
+<td>beta</td>
+</tr>
+<tr class="even">
+<td>Rate</td>
+<td>gamma</td>
+</tr>
+<tr class="odd">
+<td>Utility weight</td>
+<td>beta</td>
+</tr>
+<tr class="even">
+<td>Right skew (e.g., cost)</td>
+<td>gamma, lognormal</td>
+</tr>
+<tr class="odd">
+<td>Relative risks or hazard ratios</td>
+<td>lognormal</td>
+</tr>
+<tr class="even">
+<td>Odds Ratio</td>
+<td>logistic</td>
+</tr>
+</tbody>
+</table>
 <p>For each variable you will need to determine the necessary Amua inputs</p>
-<p>ZACH GUIDE?</p>
-<p>TOOL</p>
+<p><a href="https://github.com/zward/Amua/wiki/Distributions" target="_blank">Link to Amua Input Documentation</a></p>
+<p>If you need help getting the distribution values, use the following tool: <a href="https://yuhanxuan.shinyapps.io/shiny4dist/" target="_blank">Distribution Solver</a></p>
 </section>
 <section id="b-update-the-model" class="level2">
 <h2 class="anchored" data-anchor-id="b-update-the-model">B: Update the model</h2>
@@ -671,13 +711,74 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Save your model (Model &gt; Save)</li>
 <li>Then use Model &gt; Save As to create a duplicate (Example: model_psa.amua)</li>
-<li>Edit the parameters to match the inputs
-<ul>
-<li>Beta:</li>
-<li>Gamma:</li>
-<li></li>
-</ul></li>
+<li>Edit the parameters to match the inputs</li>
 </ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Value</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>p_sick</td>
+<td>0.03</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>p_sicker</td>
+<td>0.12</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>p_diseasedeath</td>
+<td>0.15</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>sens</td>
+<td>0.9</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>prev</td>
+<td>0.08</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>hr_treated</td>
+<td>0.5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>initial_age</td>
+<td>50</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>c_treatment</td>
+<td>0.08</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>c_pall</td>
+<td>0.08</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>c_mild</td>
+<td>0.15</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>c_initialsicker</td>
+<td>0.15</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="c-setup-the-run" class="level2">
 <h2 class="anchored" data-anchor-id="c-setup-the-run">C: Setup the Run</h2>
@@ -698,7 +799,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="c-the-plots" class="level2">
 <h2 class="anchored" data-anchor-id="c-the-plots">C: The Plots</h2>
-<p>ZACH HELP?</p>
+<p>This will create 4 tabs of graphics. To understand these, use the Amua guide <a href="https://github.com/zward/Amua/wiki/Sensitivity-Analysis#probabilistic" target="_blank">Link to Amua Input Documentation</a></p>
 <p>Most commonly the CEAC is presented in results.</p>
 
 

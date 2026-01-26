@@ -72,9 +72,8 @@ Previously we assumed that everyone with Disease X received palliative care but 
 # Additional Parameters
 
 | Name | Value | Description |
-|------------------|------------------|-------------------------------------|
-| p_sicker | 0.12 | Probability of getting sicker from a mild case of Disease X |
-| p_diseasedeath | 0.15 | Probability of dying from disease death |
+|------------------|------------------|------------------------------------|
+| p_sicker | 0.12 | Annual probability of getting sicker from a mild case of Disease X |
 | c_mild | \$1,000 | Cost of being mildly sick (doctors appointments) |
 | c_initialsicker | \$50,000 | One-time cost between mild and progression |
 

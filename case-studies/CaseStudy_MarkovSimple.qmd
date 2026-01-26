@@ -80,6 +80,8 @@ A Markov Model will allow us to cleanly integrate this into our model.
 
 **Although we are calling this the "Simple Markov Model", we understand that this is a really long case study, there will also be time to work on it tomorrow but we wanted to make sure that you had all the information for your model**
 
+Anatomy of a Markov Model in Amua: ![](images/simpleMarkov/MarkovParts.png)
+
 ::: {.callout .fill-box .why-box}
 ## Why are we doing this?
 
@@ -181,7 +183,6 @@ You should get a empty page with a decision node (![](/amua-images/decisionNode_
 Build out the Markov Structure for the "Treat None" arm of the model
 :::
 
-Anatomy of a Markov Model in Amua: ![](images/simpleMarkov/MarkovParts.png)
 
 <details>
 
@@ -341,14 +342,15 @@ You're side bar should now be populated with the model parameters
 
 Here are the parameters if you need to add them manually:
 
-| Name        | Expression | Description                                     |
-|-------------|------------|-------------------------------------------------|
-| prev        | 0.08       | Prevelence of Disease X at age 50               |
-| p_sick      | 0.03       | Annual probability of getting Disease X         |
-| hr_treated  | 0.5        | Hazard ratio of getting Disease X after treated |
-| initial_age | 50         | Initial Age                                     |
-| c_treatment | 30000      | Cost of Treatment                               |
-| c_pall      | 15000      | Cost of Palliative Care                         |
+| Name           | Expression | Description                                     |
+|---------------|---------------|-------------------------------------------|
+| prev           | 0.08       | Prevelance of Disease X at age 50               |
+| p_sick         | 0.03       | Annual probability of getting Disease X         |
+| p_diseasedeath | 0.15       | Annual probability of dying from Disease X      |
+| hr_treated     | 0.5        | Hazard ratio of getting Disease X after treated |
+| initial_age    | 50         | Initial Age                                     |
+| c_treatment    | 30000      | Cost of Treatment                               |
+| c_pall         | 15000      | Cost of Palliative Care                         |
 
 # Starting Probabilities
 

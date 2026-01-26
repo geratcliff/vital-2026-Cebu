@@ -670,7 +670,6 @@ Methodological Practices, and Reporting of Cost-effectiveness Analyses:
 Second Panel on Cost-Effectiveness in Health and Medicine. JAMA.
 2016;316:1093--1103.](images/lec5a/perspective_1.png)
 
-
 ## Whose perspective?
 
 PERSPECTIVE MATTERS
@@ -928,8 +927,7 @@ http://ghcearegistry.org/ghcearegistry/
 
 ![](images/lec5a/global2.png)
 
-## Costs (DCP3) 
-
+## Costs (DCP3)
 
 ![](images/lec5a/dp3.png)
 
@@ -1205,8 +1203,11 @@ Present Value Formula
 :::
 
 ::: definition
+::: {style="font-size: 1vh;"}
 $$PV = \frac{FV}{(1+r)^t}$$
+:::
 
+::: {style="font-size: 1.5vh;"}
 Where:
 
 -   FV = future value, the nominal cost incurred in the future
@@ -1215,6 +1216,7 @@ Where:
     interest rate)
 
 -   t = number of years in future when cost is incurred
+:::
 
 [Standard rate:]{.bold .accent-text} Reasonable consensus around 3% per
 year (may vary by country guidelines)
@@ -1230,7 +1232,7 @@ first, then discount
 
 ## Intuition
 
-:::: split-content
+::::: split-content
 ::: content-text
 $r = 0.03$
 
@@ -1245,12 +1247,10 @@ $PV = FV/(1+r)^t$, and we're at Year 0:
 :::
 
 ::: {.content-visual .incremental .bold .secondary-text}
-
 -   What would \$1 be in Year 2 be in the PRESENT VALUE of today?
 
 -   Today, it will be [0.94.]{.accent-text}
 :::
-
 :::::
 
 ::: notes
@@ -1264,13 +1264,14 @@ $PV = FV/(1+r)^t$, and we're at Year 0:
 
 ## Discounting Example
 
-:::: definition-box
+:::::::: definition-box
 ::: term
 Example Problem
 :::
 
 ::: definition
-Assume in year 5, a patient develops disease, and there is a treatment cost of $500. What is the present value?
+Assume in year 5, a patient develops disease, and there is a treatment
+cost of \$500. What is the present value?
 :::
 
 ::::: example
@@ -1282,9 +1283,9 @@ Solution:
 $$PV = \frac{FV}{(1+r)^t} = \frac{500}{(1+0.03)^5} = \$431.30$$
 :::
 :::::
-::::
+::::::::
 
-## {.summary-end-slide}
+##  {.summary-end-slide}
 
 ::::: summary-circle
 ::: end-title
@@ -1296,10 +1297,15 @@ Costs
 :::
 
 <ul class="key-points">
+
 <li>Different types of economic evaluation</li>
+
 <li>CEA uses cost-effectiveness ratios</li>
+
 <li>Perspective matters for cost inclusion</li>
+
 <li>Adjust for inflation & discount future costs</li>
+
 </ul>
 :::::
 
@@ -1308,4 +1314,3 @@ Costs
 ::: next-info
 Next Lecture: <strong>Benefits & QALYs</strong>
 :::
-

@@ -328,6 +328,12 @@ window.Quarto = {
  <span class="menu-text">Instructors</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../V4_Quick_Start_Guide.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Start Guide</span></a>
+  </div>
+</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -478,6 +484,7 @@ window.Quarto = {
 </ul>
 <p>A Markov Model will allow us to cleanly integrate this into our model.</p>
 <p><strong>Although we are calling this the “Simple Markov Model”, we understand that this is a really long case study, there will also be time to work on it tomorrow but we wanted to make sure that you had all the information for your model</strong></p>
+<p>Anatomy of a Markov Model in Amua: <img src="images/simpleMarkov/MarkovParts.png" class="img-fluid"></p>
 <div class="fill-box why-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -574,7 +581,6 @@ window.Quarto = {
 <p>Build out the Markov Structure for the “Treat None” arm of the model</p>
 </div>
 </div>
-<p>Anatomy of a Markov Model in Amua: <img src="images/simpleMarkov/MarkovParts.png" class="img-fluid"></p>
 <details>
 <summary style="color: orange;">
 <p>More assistance with step</p>
@@ -698,9 +704,9 @@ window.Quarto = {
 <p>Here are the parameters if you need to add them manually:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 17%">
-<col style="width: 16%">
-<col style="width: 66%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 58%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -713,7 +719,7 @@ window.Quarto = {
 <tr class="odd">
 <td>prev</td>
 <td>0.08</td>
-<td>Prevelence of Disease X at age 50</td>
+<td>Prevelance of Disease X at age 50</td>
 </tr>
 <tr class="even">
 <td>p_sick</td>
@@ -721,21 +727,26 @@ window.Quarto = {
 <td>Annual probability of getting Disease X</td>
 </tr>
 <tr class="odd">
+<td>p_diseasedeath</td>
+<td>0.15</td>
+<td>Annual probability of dying from Disease X</td>
+</tr>
+<tr class="even">
 <td>hr_treated</td>
 <td>0.5</td>
 <td>Hazard ratio of getting Disease X after treated</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>initial_age</td>
 <td>50</td>
 <td>Initial Age</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>c_treatment</td>
 <td>30000</td>
 <td>Cost of Treatment</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>c_pall</td>
 <td>15000</td>
 <td>Cost of Palliative Care</td>

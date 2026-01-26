@@ -61,15 +61,14 @@ By the end of this session, participants will be able to:
 
 1.  Apply DALYs to a Decision Tree
 
-3.  Calculate Years Lived with Disability (YLDs) using disability weights
+2.  Calculate Years Lived with Disability (YLDs) using disability weights
 
-4.  Calculate Years of Life Lost (YLLs) with proper discounting from time of death
+3.  Calculate Years of Life Lost (YLLs) with proper discounting from time of death
 
-5.  Combine YLDs and YLLs to compute total DALYs for cost-effectiveness analysis
+4.  Combine YLDs and YLLs to compute total DALYs for cost-effectiveness analysis
 :::
 
-
-# Decision Trees 
+# Decision Trees
 
 ## Add a DALY Dimension
 
@@ -87,7 +86,6 @@ download_link(
   self_contained = FALSE
 )
 ```
-
 
 #### **Instructions:**
 
@@ -124,8 +122,7 @@ Now, you're ready to perform a cost-effectiveness analysis with DALYs as the out
 
 Click ![](/amua-images/runModel_16.png) Run Model and check out the CEA Results report.
 
-
-# Markov Models 
+# Markov Models
 
 ## Add a DALY Dimension
 
@@ -144,10 +141,9 @@ download_link(
 )
 ```
 
-
 **To save time, we will go through the No Treat branch. A full answer key will be included at the end**
 
-### A: Important Parameters 
+### A: Important Parameters
 
 #### Disability Weights
 
@@ -155,11 +151,10 @@ download_link(
 Since we are using DALYs, we use disability weights.
 :::
 
-| Name            | Value | Description                                         |
-|-------------------|-------------------|----------------------------------|
-| dw_sick | 0.20  | Disability weight for Sick health state.            |
+| Name      | Value | Description                                |
+|-----------|-------|--------------------------------------------|
+| dw_sick   | 0.20  | Disability weight for Sick health state.   |
 | dw_sicker | 0.10  | Disability weight for Sicker health state. |
-
 
 #### Life Expectancy by Age
 
@@ -187,7 +182,6 @@ Since we are using DALYs, we use disability weights.
 | 90  | 7.617724915 |
 | 95  | 5.922359078 |
 
-
 ### B: Add YLDs
 
 #### Create A New Outcome
@@ -198,7 +192,7 @@ Since we are using DALYs, we use disability weights.
 
 -   Go to Model \> Properties \> select the Analysis tab.
 
--   Use the blue plus sign (![Custom Icon](/amua-images/add_16.png){alt="Custom Icon" width="15"})to add Years Lived with Disability (YLD). You can use YLD as the symbol and round on 4 decimals. 
+-   Use the blue plus sign (![Custom Icon](/amua-images/add_16.png){alt="Custom Icon" width="15"})to add Years Lived with Disability (YLD). You can use YLD as the symbol and round on 4 decimals.
 
 -   Click ![](images/DALYs/refreshsymbol.png){width="25" height="18"}**Refresh** to apply.
 
@@ -210,7 +204,7 @@ Since we are using DALYs, we use disability weights.
 
 ## Add Disability Weights to Model
 
-First you will need to define the disability weights as new parameters. To add a parameter, use the plus sign above the parameter menu (![Custom Icon](/amua-images/add_16.png){alt="Custom Icon" width="15"}). Each parameter needs a name and an expression. Use the defined values from [Model Parameters].
+First you will need to define the disability weights as new parameters. To add a parameter, use the plus sign above the parameter menu (![Custom Icon](/amua-images/add_16.png){alt="Custom Icon" width="15"}). Each parameter needs a name and an expression. Use the defined values from \[Model Parameters\].
 
 Now set YLD outcomes equal to the parameters in both strategies. *Remember that for YLD, 0 is healthy.*
 
@@ -348,7 +342,6 @@ Our final objective is to add DALYs to the markov model. We have seen how to add
 4.  Because DALY is a gap measure, change the objective to **minimize DALYs (analogous to maximizing QALYs)**
 
     ![](images/DALYs/DALYPropsMarkov.png){width="555"}
-    
 
 ### Add Outcome
 
@@ -374,8 +367,6 @@ Our final objective is to add DALYs to the markov model. We have seen how to add
         -   For Example: Under sick where it now has(\$) c_sick; (YLD) dw_sick ; (YLL) 0, we will have (\$) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick
 
 -   After inputting the outcomes, your Markov model should look like this:![](images/HSD_AddDALY.png)
-
-
 
 ::: {.callout-note appearance="minimal"}
 Check and run the model to get the CEA for DALYs

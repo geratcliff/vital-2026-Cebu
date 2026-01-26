@@ -100,7 +100,9 @@ that are offered in Amua
 # Step 1: Complete the model
 
 Congrats, you have already completed step 1 if you have worked through
-the case study sequence
+the case study sequence.
+
+If not, please download the following: FULL MODEL FILE
 
 # Step 2: Identify the variance ranges
 
@@ -111,19 +113,19 @@ use things like common ranges, expert opinions, and assumptions
 
 Below are the ranges we will use:
 
-| Variable        | Value | Range |
-|-----------------|-------|-------|
-| p_sick          | 0.03  |       |
-| p_sicker        | 0.12  |       |
-| p_diseasedeath  | 0.15  |       |
-| sens            | 0.9   |       |
-| prev            | 0.08  |       |
-| hr_treated      | 0.5   |       |
-| initial_age     | 50    | --    |
-| c_treatment     | 0.08  |       |
-| c_pall          | 0.08  |       |
-| c_mild          | 0.15  |       |
-| c_initialsicker | 0.15  |       |
+| Variable        | Value | Range       |
+|-----------------|-------|-------------|
+| p_sick          | 0.03  |             |
+| p_sicker        | 0.12  |             |
+| p_diseasedeath  | 0.15  |             |
+| sens            | 0.9   | 0.86-0.93   |
+| prev            | 0.08  | 0.074-0.086 |
+| hr_treated      | 0.5   |             |
+| initial_age     | 50    | --          |
+| c_treatment     | 0.08  |             |
+| c_pall          | 0.08  |             |
+| c_mild          | 0.15  |             |
+| c_initialsicker | 0.15  |             |
 
 Note: We do not need to vary initial age
 
@@ -235,17 +237,27 @@ intersection as well as a mark for the base values.
 
 # Step 5: Run a PSA
 
-## A: Determine variable distributions 
+## A: Determine variable distributions
 
-Remember from the lecture that:
+The table below provides recommendations:
 
-ADD MOST COMMON TABLE
+| Parameter Type                  | Distribution     |
+|---------------------------------|------------------|
+| Probability                     | beta             |
+| Rate                            | gamma            |
+| Utility weight                  | beta             |
+| Right skew (e.g., cost)         | gamma, lognormal |
+| Relative risks or hazard ratios | lognormal        |
+| Odds Ratio                      | logistic         |
 
 For each variable you will need to determine the necessary Amua inputs
 
-ZACH GUIDE?
+[Link to Amua Input
+Documentation](https://github.com/zward/Amua/wiki/Distributions){target="_blank"}
 
-TOOL
+If you need help getting the distribution values, use the following
+tool: [Distribution
+Solver](https://yuhanxuan.shinyapps.io/shiny4dist/){target="_blank"}
 
 ## B: Update the model
 
@@ -256,9 +268,20 @@ will override your variables.
 2.  Then use Model \> Save As to create a duplicate (Example:
     model_psa.amua)
 3.  Edit the parameters to match the inputs
-    -   Beta:
-    -   Gamma:
-    -   
+
+| Variable        | Value | Range |
+|-----------------|-------|-------|
+| p_sick          | 0.03  |       |
+| p_sicker        | 0.12  |       |
+| p_diseasedeath  | 0.15  |       |
+| sens            | 0.9   |       |
+| prev            | 0.08  |       |
+| hr_treated      | 0.5   |       |
+| initial_age     | 50    | --    |
+| c_treatment     | 0.08  |       |
+| c_pall          | 0.08  |       |
+| c_mild          | 0.15  |       |
+| c_initialsicker | 0.15  |       |
 
 ## C: Setup the Run
 
@@ -275,6 +298,8 @@ will override your variables.
 
 ## C: The Plots
 
-ZACH HELP?
+This will create 4 tabs of graphics. To understand these, use the Amua
+guide [Link to Amua Input
+Documentation](https://github.com/zward/Amua/wiki/Sensitivity-Analysis#probabilistic){target="_blank"}
 
 Most commonly the CEAC is presented in results.
