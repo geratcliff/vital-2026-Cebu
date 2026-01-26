@@ -2,6 +2,7 @@
 title: "Case Study 2 - Intro to Amua"
 ---
 
+```{=html}
 <style>
 /* Base: make Quarto callouts behave like full cards */
 .callout.fill-box {
@@ -46,15 +47,14 @@ title: "Case Study 2 - Intro to Amua"
 
 /* Yellow: "Objectives" */
 .callout.objectives {
-  --box-bg: #FFFAA0;    /* light yellow fill */
-  --edge-color: #F4C430; /* deep yellow edge/title */
+  --box-bg: #f2eee4;    /* light yellow fill */
+  --edge-color: #CfAE70; /* deep yellow edge/title */
 }
 
 </style>
-
+```
 
 ::: {.callout .fill-box .objectives}
-
 # Introduction and Learning Objectives {{< fa regular clipboard >}}
 
 This case study is designed to get you familiar with constructing a decision tree in Amua. Specific learning objectives are as follows:
@@ -76,7 +76,6 @@ You will first need to install Java (1.8 or later) & download Amua. Follow the d
 
 Here is a comprehensive [tutorial](https://s3.amazonaws.com/amua-tutorials/Amua+-+Tutorial+-+Decision+Tree+20190117.pdf) to get you started. We review some highlights below:
 
-
 ::: {.callout-note appearance="simple"}
 Please note that this case study is based on the Amua tutorial [here](https://s3.amazonaws.com/amua-tutorials/Amua+-+Tutorial+-+Decision+Tree+20190117.pdf). We have modified the tutorial to make it more relevant to the workshop.
 :::
@@ -87,9 +86,9 @@ In this example problem, you must decide whether or not to implement a screening
 
 For disease-negative individuals who are inappropriately treated, assume that there is a decrease in their life expectancy due to drug toxicity. The screening test is imperfect with a sensitivity of 0.97 and a specificity of 0.9988. The prevalence of the disease in this population is 0.05. The objective is to maximize life expectancy. As alternative strategies, you could not screen anyone, or you could simply treat everyone without screening first.
 
-
 ::: {.callout .fill-box .task-box}
 ## Your Task
+
 -   Create a new model in Amua
 -   Define the following three strategies
     1.  No screening
@@ -103,7 +102,6 @@ First you need to create a new model
 
 In Amua, on the menu at the top, go to **Model** -\> **New** -\> **Decision Tree**.
 
-
 # Step 2: Add Strategies
 
 ## Adding Branches
@@ -114,12 +112,13 @@ To add branches to this decision node (the root of the tree) you have a few opti
 
 -   Right-click: Right-click on the node to display the pop-up menu. Select Add -\> and choose the node\
     type you wish to add.
-    
+
 -   Toolbar: Select the node and click on a node type in the toolbar at the top to add it to the tree.
 
 For the example in this tutorial, double-click on the root decision node <i class="fa-solid fa-square" style="color: #ff0000;"></i> , which will add two branches.
 
 <!-- <i class="fa-solid fa-circle" style="color: #28d025;"></i>  -->
+
 :::
 
 ::: {.callout-tip appearance="minimal"}
@@ -128,11 +127,10 @@ For the example in this tutorial, double-click on the root decision node <i clas
 New branches are called Name by default. To give branches more informative labels, click on Name above the branch. A text-box above the branch will appear outlined in [blue]{style="color: blue;"}. You can now edit the text that appears in this field. Label the top branch No Screen. You can hit Enter on the keyboard or click outside of the textbox on the canvas to accept the new label. Now, click the label above the lower branch and rename it "Screen."
 :::
 
-
 ![](images/amua-define-strategies.png)
 
-
 # Step 3: Build Out the Strategies
+
 ## No Screen
 
 1.  Double-click on the No Screen chance node <i class="fa-solid fa-circle fa-xs" style="color: #00ff00;"></i> to add 2 branches.\
@@ -140,6 +138,7 @@ New branches are called Name by default. To give branches more informative label
 3.  Click the Optimize Current Display (OCD) button on the toolbar to arrange the branches and ensure even spacing.
 
 ### Add Terminal Nodes
+
 4.  Right-click on each of the child nodes <i class="fa-solid fa-circle fa-xs" style="color: #00ff00;"></i> and select <img src="../amua-images/changeTypeTrans_24.png" alt="Custom Icon" width="20" height="20"/> **Change to Terminal Node**. You may also change node types on the toolbar or add a new terminal node <i class="fa-solid fa-caret-left" style="color: #0000ff;"></i> using the toolbar or pop-up menu.
 
 ::: callout-tip
@@ -177,7 +176,6 @@ You can now complete the structure of the decision tree by adding in the remaini
     Redo actions using the Edit menu or keyboard shortcuts (Windows: Ctrl-Z, Ctrl-Y. Mac: Cmd-Z, Cmd-Y).
 :::
 
-
 # Step 4: Save
 
 -   You can save at any time by clicking on **Model -\> Save** or using the keyboard shortcut (Windows: Ctrl-S. Mac: Cmd-S).
@@ -186,8 +184,9 @@ You can now complete the structure of the decision tree by adding in the remaini
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
-- Define probabilities  
-- Add life expectancy outcomes
+
+-   Define probabilities\
+-   Add life expectancy outcomes
 :::
 
 # Step 5: Define Model Outcomes
@@ -195,10 +194,14 @@ You can now complete the structure of the decision tree by adding in the remaini
 By default, model outcomes (called model 'dimensions' in Amua) track Costs, denoted by the \$ symbol inside parentheses. In this model, our outcome of interest will be Life Expectancy.
 
 -   To change the outcome of interest, go to the menu bar and click `Model -> Properties` and select the `Analysis` tab.
--   In this tab, rename the dimension from **Cost** to **Life Expectancy**, change the symbol to LE, and choose 2 decimal places for precision.
--   Make sure that you hit **Enter** once you change the value in a table cell. The cell border will turn [light blue]{style="color: #118aef;"} once the cell is updated.
 
-![](images/amua-properties.png) ![](images/amua-le.png)
+-   In this tab, rename the dimension from **Cost** to **Life Expectancy**, change the symbol to LE, and choose 2 decimal places for precision.
+
+-   Make sure that you hit ![](../amua-images/refresh_16.png) **Refresh** once you change the value in a table cell.
+
+-   Click "OK" to add the updates to the model.
+
+    ![](images/amua-properties.png) ![](images/amua-le.png)
 
 # Step 6: Define Probabilities
 
@@ -286,24 +289,30 @@ We've entered the names of all of the probabilities and payoffs in the tree, but
 
 ![](images/adding_params1.png){width="355"}
 
-2\. Add each parameter, one-by-one, with its corresponding value as detailed below:
+2.  In the parameter pop-up window, enter a parameter name (Name) and the parameter value ($f(x)$ Expression). The description is optional but useful if the model is being shared with others. ![](images/tree/AddParameterPopUp.png)
+
+3.  Click "Save" to add the parameter
+
+<!-- -->
+
+4.  Add each parameter, one-by-one, with its corresponding value as detailed below:
 
 ::: {.callout-tip appearance="minimal"}
 To [delete a variable]{style="color: #D65C41;"}, click on the variable and click on the red <i class="fa-solid fa-x" style="color: #d03216;"></i> next to the pencil image in the variable dialogue.
 :::
 
-| Parameter | Description                                                                       | Value                                                    |
-|-----------------|---------------------------------|----------------------|
-| prev      | Disease prevalence                                                                | 0.05                                                     |
-| sens      | Sensitivity of test                                                               | 0.97                                                     |
-| spec      | Specificity of test                                                               | 0.9988                                                   |
-| pTPos     | Probability of testing positive (based on Bayes' theorem--more on this tomorrow!) | prev \* sens + (1 - prev) \* (1 - spec)                  |
-| pD_TPos   | Probability of having the disease given a *positive* test.                        | prev \* sens / (prev \* sens + (1 - prev) \* (1 - spec)) |
-| pD_TNeg   | Probability of having the disease given a *negative* test.                        | prev\*(1 - sens)/(prev \* (1 - sens)+(1 - prev) \* spec) |
-| LateRx    | Life expectancy if disease treated late                                           | 25.2                                                     |
-| NoDx      | Life expectancy if no disease                                                     | 40.3                                                     |
-| Rx        | Life expectancy if treated                                                        | 35.8                                                     |
-| Tox       | Life expectancy if treated, but do not have disease (due to Rx toxicity)          | 39.4                                                     |
+| Parameter | Description | Value |
+|-------------------|-------------------------------|----------------------|
+| prev | Disease prevalence | 0.05 |
+| sens | Sensitivity of test | 0.97 |
+| spec | Specificity of test | 0.9988 |
+| pTPos | Probability of testing positive (based on Bayes' theorem--more on this tomorrow!) | prev \* sens + (1 - prev) \* (1 - spec) |
+| pD_TPos | Probability of having the disease given a *positive* test. | prev \* sens / (prev \* sens + (1 - prev) \* (1 - spec)) |
+| pD_TNeg | Probability of having the disease given a *negative* test. | prev\*(1 - sens)/(prev \* (1 - sens)+(1 - prev) \* spec) |
+| LateRx | Life expectancy if disease treated late | 25.2 |
+| NoDx | Life expectancy if no disease | 40.3 |
+| Rx | Life expectancy if treated | 35.8 |
+| Tox | Life expectancy if treated, but do not have disease (due to Rx toxicity) | 39.4 |
 
 ![](images/amua-addparam1.png){width="511"}
 

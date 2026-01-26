@@ -125,10 +125,13 @@ different strategies.**
 
 3.  No Screen, Treat All
 
-# Step 1: Download the Tree File
+# Step 1: Create initial Structure
 
-To assist you with the limited time for the case study, we have created
-the initial layout of the decision tree for you.
+This is the initial structure of the model that we will build everything
+from.
+
+You can build it out or download the following document:
+[tree_initial.amua](tree_initial.amua)
 
 ![](images/tree/InitialStructure.png)
 
@@ -285,12 +288,11 @@ The probabilities that we have are:
 p_sick: which will go on any branch where someone gets sick sens: which
 will go on any branch where someone is sick AND tests positive
 
-To add a probability: 1. Click next to the grey "p:" under the branch
-that you want to edit
+To add a probability:
 
-```         
+1\. Click next to the grey "p:" under the branch that you want to edit
+
 ![](images/tree/AddParameterBranch.png)
-```
 
 2.  Type the NAME of the parameter you want to add
 
@@ -308,6 +310,8 @@ to update later and you will not be able to do sensitivity analysis.
 In Amua, there is a built in variable "*C*" that will calculate the
 complementary probability (1-\[p of the opposing branch\]). You need to
 add this to all the remaining branches.
+
+![](images/tree/CompProb.png)
 
 </p>
 
@@ -330,20 +334,20 @@ Check your Model
 ::: panel-tabset
 ### Costs
 
-| Label       | Value     | Description                      |
-|-------------|-----------|----------------------------------|
+| Label       | Value    | Description                      |
+|-------------|----------|----------------------------------|
 | c_untreated | \$35,000 | Cost of being sick and untreated |
-| c_treated   | \$30,000 | Cost of being sick and treated   |
-| c_screen    | \$2,510   | Cost of screening                |
+| c_treated   | \$30,000 | Cost of being treated            |
+| c_screen    | \$2,510  | Cost of screening                |
 
 ### Life Years
 
-| Label              | Value | Description                      |
-|--------------------|-------|----------------------------------|
-| LY_untreated       | 8     | Cost of being sick and untreated |
-| LY_treated         | 17    | Cost of being sick and treated   |
-| LY_healthy         | 20    | Cost of screening                |
-| LY_healthy_treated | 19.7  | Cost to implement screening      |
+| Label | Value | Description |
+|--------------------|-------------|---------------------------------------|
+| LY_untreated | 8 | Additional Life Years Gained of being sick and untreated |
+| LY_treated | 17 | Additional Life Years Gained of being sick and treated |
+| LY_healthy | 20 | Additional Life Years Gained of screening |
+| LY_healthy_treated | 19.7 | Additional Life Years Gained to implement screening |
 :::
 
 <details>
@@ -375,8 +379,7 @@ variable in the table above.
 
 4.  Click save and repeat for all parameters.
 
-You should end up with this: 
-<br>
+You should end up with this: <br>
 ![](images/tree/AddOutcomeParameters.png)
 
 ### B: Update the model properties to have both outcomes
@@ -389,9 +392,9 @@ You should end up with this:
 
     ![](images/tree/ModelPropertiesAnalysis.png)
 
-3. The "Cost" outcome is likely already added. If not, click the blue plus sign
-    ![](/amua-images/add_16.png) . This will add a new row to the
-    outcomes table
+3.  The "Cost" outcome is likely already added. If not, click the blue
+    plus sign ![](/amua-images/add_16.png) . This will add a new row to
+    the outcomes table
 
     ![](images/tree/AddNewOutcomeRow.png)
 
@@ -401,9 +404,7 @@ You should end up with this:
 
 5.  Repeat for the "Life Years outcome. You should end up with this:
 
-
     ![](images/tree/AddOutcomes.png)
-
 
 6.  Click the "Refresh Button to update your model
 
@@ -414,21 +415,18 @@ You should end up with this:
 At the end of each branch you will need to add the corresponding cost
 and LY gained outcomes.
 
-To add a probability: 
+To add a probability:
 
 1.  Click on the outcome at the branch that you want to edit
-       
-    ![](images/tree/EditOutcomeValue.png)
 
+    ![](images/tree/EditOutcomeValue.png)
 
 2.  Type the NAME of the parameter you want to add. This can be typed
     within the model view or at the top in the formula bar
 
     Formula Bar: ![](images/tree/FormulaBar.png)
 
-     
     ![](images/tree/AddOutcomeBranch.png)
-
 
 NOTE: You never want to add the value as it will make the model harder
 to update later and you will not be able to do sensitivity analysis.
@@ -440,16 +438,14 @@ to update later and you will not be able to do sensitivity analysis.
 
 </details>
 
-
 <details>
 
 <summary style="color: green; font-size: 4vh;">
 
-Check Your Model 
+Check Your Model
 
 </summary>
 
-        
 ![](images/tree/OutcomesAddedFull.png)
 
 </details>
@@ -458,15 +454,17 @@ Check Your Model
 
 Run the tree (![](/amua-images/runModel_24.png)) to check your results
 
-
-::: callout-tip
+:::: callout-tip
 ## Check your answer
-<br>
-Enter your EV($) for the Screening:
-<br>
+
+<br> Enter your EV(\$) for the Screening: <br>
 <input id="answertree" type="number" step="0.01" placeholder="e.g., 43.5" />
 <button id="checktree">Check</button>
-<div id="feedbacktree" style="margin-top: 10px;"></div>
+
+::: {#feedbacktree style="margin-top: 10px;"}
+:::
+
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
@@ -495,5 +493,7 @@ Enter your EV($) for the Screening:
   });
 })();
 </script>
+```
+
 <br>
-:::
+::::

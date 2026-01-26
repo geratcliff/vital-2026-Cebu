@@ -28,7 +28,7 @@ title: "Full Capstone Help"
 library(downloadthis)
 ## Link in Github repo
 download_link(
-  link = "https://geratcliff.github.io/vital-2026-Cebu/capstone/CapstonePPTTemplate_Cebu",
+  link = "https://geratcliff.github.io/vital-2026-Cebu/capstone/CapstonePPTTemplate_Cebu.pptx",
   button_label = "Download PPT Template for Final Presentation",
   button_type = "primary",
   has_icon = TRUE,
@@ -104,7 +104,7 @@ Ideas for graphic:
 +-----------------+----------------+-------------------+------------+----------------+
 :::
 
-### Slide 5: Markov Bubble Diagaram (SKIP IF DOING A TREE)
+### Slide 5: Markov Bubble Diagram (SKIP IF DOING A TREE)
 
 -   Include a bubble diagram
 
