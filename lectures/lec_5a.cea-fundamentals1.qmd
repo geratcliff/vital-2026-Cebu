@@ -130,7 +130,7 @@ problems.
 ::::
 
 ::: content-visual
-![](/images/lec5a/balance.png)
+![](images/lec5a/balance.png)
 
 *Balancing \$\$ and Health Outcomes*
 :::
