@@ -30,6 +30,8 @@ website:
             text: Capstone Help
           - href: _gbd_lifetables/lifetables.qmd
             text: Country specific life-tables
+          - href: topics.qmd
+            text: Project Topics
         
       - section: "Model Diagram Drawing Resources"
         contents:
