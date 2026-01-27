@@ -128,6 +128,8 @@ Click ![](/amua-images/runModel_16.png) Run Model and check out the CEA Results 
 
 We now want to add a new outcome dimension: **DALYs (Disability-Adjusted Life Years)**. DALYs are a measure of disease burden, where **0 = perfect health** and **1 = death** per year lost. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.
 
+Before we jump into DALYs, we will add each inidivudal part to understand how they work.
+
 ```{r, echo = FALSE}
 library(downloadthis)
 ## Link in Github repo
@@ -151,10 +153,11 @@ download_link(
 Since we are using DALYs, we use disability weights.
 :::
 
-| Name      | Value | Description                                |
-|-----------|-------|--------------------------------------------|
-| dw_sick   | 0.20  | Disability weight for Sick health state.   |
-| dw_sicker | 0.10  | Disability weight for Sicker health state. |
+| Name         | Value | Description                                |
+|--------------|-------|--------------------------------------------|
+| dw_treatment | 0.05  | Disability weight for Treatment.           |
+| dw_sick      | 0.16  | Disability weight for Sick health state.   |
+| dw_sicker    | 0.48  | Disability weight for Sicker health state. |
 
 #### Life Expectancy by Age
 
@@ -200,7 +203,9 @@ Since we are using DALYs, we use disability weights.
 
 -   We want to reset the objective to **minimize**. In DALYs, we want to decrease the YLDs and YLLs.
 
--   Go to the Markov tab and add in the discount rate for YLDs. (3.0) ![](images/DALYs/AddYLDOutcome.png){width="500"}
+-   Go to the Markov tab and add in the discount rate for YLDs. (3.0)
+
+![](images/DALYs/AddYLDProp.png){width="500"}
 
 ## Add Disability Weights to Model
 
@@ -208,17 +213,25 @@ First you will need to define the disability weights as new parameters. To add a
 
 Now set YLD outcomes equal to the parameters in both strategies. *Remember that for YLD, 0 is healthy.*
 
-Your model should look like:
+Check your Model
 
-![](images/HSD_AddYLD.png)
+</summary>
+
+<p style="color: black;">
+
+![](images/simpleMarkov/TreatAllSimple.png)
+
+</p>
+
+</details>
 
 ::: callout-note
 **Now check (![Custom Icon](../amua-images/checkModel_128.png){alt="Custom Icon" width="15"}) and run (![Custom Icon](../amua-images/runModel_128.png){alt="Custom Icon" width="15"})** **the model to verify that it calculates expected YLD!**
 
-| Strategy   | YLD    | YLD (Dis) |
-|------------|--------|-----------|
-| Status Quo | 2.8697 | 1.7484    |
-| Treatment  | 3.8058 | 1.9969    |
+| Strategy   | YLD  | YLD (Dis) |
+|------------|------|-----------|
+| Status Quo | 1.97 | 1.14      |
+| Treatment  | 1.19 | 0.66      |
 :::
 
 # Add YLLs
@@ -235,25 +248,25 @@ Your model should look like:
 
 -   Click the refresh button
 
--   The "Analysis Type" should be still be set to Expected Value (EV) with the object of minimize.
+-   The "Analysis Type" should be still be set to Expected Value (EV) with the objective of minimize.
 
 -   Change outcome to YLLs
 
 -   Go to the Markov tab and add in the discount rate for YLLs. (3.0)
 
-![](images/HSD_AddYLLOutcome.png){width="500"}
+![](images/DALYs/AddYLLProp.png){width="500"}
 
 -   Next, we will define cycle-specific payoffs in the model itself based on the values in the tables above. We need to add YLLs for people transitioning from the sick to the dead state.
 
 ## Add Life Expectancy Table
 
--   We need to add a table to pull the estimated reaminaing life expectancy by age so that we can properly calculate the YLLs.
+-   We need to add a table to pull the estimated remaining life expectancy by age so that we can properly calculate the YLLs.
 
 ```{r, echo = FALSE}
 library(downloadthis)
 ## Link in Github repo
 download_link(
-  link = "https://ihea2025-vanderbilt.netlify.app/exercises_amua/tbl_ref_lt.csv",
+  link = "tbl_ref_lt.csv",
   button_label = "Download Table Data",
   button_type = "primary",
   has_icon = TRUE,
@@ -280,7 +293,13 @@ download_link(
 
 -   The table window should look like this:
 
-![](images/HSD_TblforYLL.png){fig-align="center"}
+![](images/DALYs/Tbl_ref_lt.png){fig-align="center"} \## Add Discounting Rate
+
+| Name          | Value | Description                           |
+|---------------|-------|---------------------------------------|
+| r_disc_health | 0.03  | Annual discount rate: health outcomes |
+
+*For most things in Amua, we can just add the discount rate in the properties but for YLD we will need them for our formula*
 
 ## Add Variable
 
@@ -290,7 +309,7 @@ download_link(
 
     -   To properly add YLLs with discounting from the time of death, we will use the following formula:
 
-    ![](images/Markov%20Case%20Study%20(9).png)
+    ![](images/DALYs/YLLFormula.png)
 
 -   Select the variables tab and then click the blue plus sign (![Custom Icon](../amua-images/add_16.png){alt="Custom Icon" width="15"}) to add a new variable.
 
@@ -298,7 +317,7 @@ download_link(
 
 -   Using the formula above to set the expression: `tbl_ref_lt[initial_age + t, 1] * (exp(-log(1+r_disc_health)*t))`
 
-    ![](images/HSD_YLLVariable.png)
+    ![](images/DALYs/YLLVariable.png)
 
 ## Add YLL to the Model
 
@@ -315,10 +334,10 @@ After inputting the outcomes, your Markov model should look like this:
 ::: {.callout-note appearance="minimal"}
 **Now check (![Custom Icon](../amua-images/checkModel_128.png){alt="Custom Icon" width="15"}) and run (![Custom Icon](../amua-images/runModel_128.png){alt="Custom Icon" width="15"})** **the model to verify that it calculates expected YLL!**
 
-| Strategy   | YLL     | YLL (Dis) |
-|------------|---------|-----------|
-| Status Quo | 46.5828 | 33.4476   |
-| Treatment  | 35.1637 | 23.8311   |
+| Strategy   | YLL  | YLL (Dis) |
+|------------|------|-----------|
+| Status Quo | 5.88 | 3.85      |
+| Treatment  | 2.8  | 1.7       |
 :::
 
 # Add DALYs
@@ -341,7 +360,7 @@ Our final objective is to add DALYs to the markov model. We have seen how to add
 
 4.  Because DALY is a gap measure, change the objective to **minimize DALYs (analogous to maximizing QALYs)**
 
-    ![](images/DALYs/DALYPropsMarkov.png){width="555"}
+    ![](images/DALYs/AdddalysProp.png){width="555"}
 
 ### Add Outcome
 
@@ -366,13 +385,13 @@ Our final objective is to add DALYs to the markov model. We have seen how to add
     -   Every place in the model where there is a value for YLD or YLL, we will put that in DALYs so that it sums them all together.
         -   For Example: Under sick where it now has(\$) c_sick; (YLD) dw_sick ; (YLL) 0, we will have (\$) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick
 
--   After inputting the outcomes, your Markov model should look like this:![](images/HSD_AddDALY.png)
-
 ::: {.callout-note appearance="minimal"}
 Check and run the model to get the CEA for DALYs
 
-| Strategy   | Cost      | DALY    | ICER       | Note     |
-|------------|-----------|---------|------------|----------|
-| Status Quo | 40,795.37 | 35.1959 |            | Baseline |
-| Treatment  | 79,896.29 | 25.828  | 4,173.8912 |          |
+| Strategy   | Cost      | DALY | ICER      | Note     |
+|------------|-----------|------|-----------|----------|
+| Treat None | 40,286.24 | 4.98 |           | Baseline |
+| Treat All  | 51,548.10 | 2.78 | 5121.1089 |          |
 :::
+
+Solution File: ADD FILE

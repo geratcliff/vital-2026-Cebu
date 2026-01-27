@@ -7,7 +7,7 @@
         <dateCreated>Mon Jan 12 12:27:52 CST 2026</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Mon Jan 26 00:13:32 CST 2026</dateModified>
+        <dateModified>Tue Jan 27 00:06:33 CST 2026</dateModified>
         <versionModified>0.3.4</versionModified>
     </Metadata>
     <DimInfo>
@@ -17,9 +17,9 @@
         <dimSymbols>LY</dimSymbols>
         <decimals>4</decimals>
         <decimals>4</decimals>
-        <analysisType>1</analysisType>
+        <analysisType>0</analysisType>
         <objective>0</objective>
-        <objectiveDim>0</objectiveDim>
+        <objectiveDim>1</objectiveDim>
         <costDim>0</costDim>
         <effectDim>1</effectDim>
         <WTP>100000.0</WTP>

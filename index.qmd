@@ -106,7 +106,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 | Time | Type | Topic |
 |-------------------|-------------------|----------------------------------|
-| 08:00 - 09:00 | [Case Study]{.casestudy} | DALYs in AMUA \[Guided\] |
+| 08:00 - 09:00 | [Case Study]{.casestudy} | [DALYs in AMUA](/case-studies/CaseStudy_DALYs.html) \[Guided\] |
 | 09:30 - 10:15 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 10:15 - 10:45 | Break | Coffee/Tea |
 | 10:45 - 12:30 | Presentations | Capstone Presentations (Small Groups) |
