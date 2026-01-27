@@ -221,7 +221,7 @@ This model has three health states: Healthy, Sick, and Dead
 
 ![](images/simpleMarkov/AddState2.png)
 
-3.  Rename the State to "Health"
+3.  Rename the State to "Healthy"
 
 4.  Repeat for Sick and Dead
 
@@ -346,7 +346,7 @@ You're side bar should now be populated with the model parameters
 Here are the parameters if you need to add them manually:
 
 | Name           | Expression | Description                                     |
-|------------------|------------------|-------------------------------------|
+|-------------------|-------------------|------------------------------------|
 | prev           | 0.08       | Prevelance of Disease X at age 50               |
 | p_sick         | 0.03       | Annual probability of getting Disease X         |
 | p_diseasedeath | 0.15       | Annual probability of dying from Disease X      |
@@ -553,7 +553,7 @@ Check your Model
 
 <p style="color: black;">
 
-![](images/simpleMarkov/AddParametersAll.png)
+![](images/simpleMarkov/TreatNoneFull.png)
 
 </p>
 
@@ -605,7 +605,15 @@ Check your Model
 
 Copy and pasting the strategy helped us save time but we need to make sure that the model accurately matches the strategy that it is running for.
 
-Things that need fixed: - Set probability of sick or not sick in the tree part of "Treat All" - Set initial probabilities to match the corresponding branch - Add in treatment costs - Add in a rate reduction of getting sick again and needing palliative care
+Things that need fixed:
+
+-   Set probability of sick or not sick in the tree part of "Treat All"
+
+-   Set initial probabilities to match the corresponding branch
+
+-   Add in treatment costs
+
+-   Add in a rate reduction of getting sick again and needing palliative care
 
 <details>
 
@@ -625,7 +633,7 @@ In the tree portion of the "Treat All" branch, set the probability of sick to `p
 
 ### B: Set initial probabilities
 
-We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. Therefore the initial probabilities for both "Sick -\> Treat" and "Not Sick -\> Treat" are Healthy = 1, Sick = 0, and Dead = 0.
+We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. **Therefore the initial probabilities for both "Sick -\> Treat" and "Not Sick -\> Treat" are Healthy = 1, Sick = 0, and Dead = 0.**
 
 ![](images/simpleMarkov/TreatInitialProb.png)
 
@@ -663,8 +671,8 @@ Check your Model
 
 | Strategy   | Cost (\$ for 1000 people) | LY (for 1000 people) |
 |------------|---------------------------|----------------------|
-| Treat None | 52566.0787                | 21.3367              |
-| Treat All  | 59822.0336                | 26.2392              |
+| Treat None | 52566078.65               | 21336.7046           |
+| Treat All  | 59822033.62               | 26239.1531           |
 
 </p>
 
@@ -693,7 +701,7 @@ Enter your result:
 :::: callout-tip
 ## Check your answer
 
-<br> What is the cost (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="checksimp">Check</button>
+<br> What is the ICER (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="checksimp">Check</button>
 
 ::: {#feedbacksimp style="margin-top: 10px;"}
 :::
@@ -702,7 +710,7 @@ Enter your result:
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 65517.829;
+  const CORRECT = 5812.6069;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answersimp');
   const button = document.getElementById('checksimp');

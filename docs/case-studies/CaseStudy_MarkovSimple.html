@@ -615,7 +615,7 @@ window.Quarto = {
 </ol>
 <p><img src="images/simpleMarkov/AddState2.png" class="img-fluid"></p>
 <ol start="3" type="1">
-<li><p>Rename the State to “Health”</p></li>
+<li><p>Rename the State to “Healthy”</p></li>
 <li><p>Repeat for Sick and Dead</p></li>
 </ol>
 <p><img src="images/simpleMarkov/AddState3.png" class="img-fluid"><br>
@@ -719,9 +719,9 @@ window.Quarto = {
 <p>Here are the parameters if you need to add them manually:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 50%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 48%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -946,7 +946,7 @@ window.Quarto = {
 <p>Check your Model</p>
 </summary>
 <p style="color: black;">
-</p><p><img src="images/simpleMarkov/AddParametersAll.png" class="img-fluid"></p>
+</p><p><img src="images/simpleMarkov/TreatNoneFull.png" class="img-fluid"></p>
 <p></p>
 </details>
 </section>
@@ -982,7 +982,13 @@ window.Quarto = {
 <section id="adjusting-to-match-strategy" class="level1">
 <h1>Adjusting to match strategy</h1>
 <p>Copy and pasting the strategy helped us save time but we need to make sure that the model accurately matches the strategy that it is running for.</p>
-<p>Things that need fixed: - Set probability of sick or not sick in the tree part of “Treat All” - Set initial probabilities to match the corresponding branch - Add in treatment costs - Add in a rate reduction of getting sick again and needing palliative care</p>
+<p>Things that need fixed:</p>
+<ul>
+<li><p>Set probability of sick or not sick in the tree part of “Treat All”</p></li>
+<li><p>Set initial probabilities to match the corresponding branch</p></li>
+<li><p>Add in treatment costs</p></li>
+<li><p>Add in a rate reduction of getting sick again and needing palliative care</p></li>
+</ul>
 <details>
 <summary style="color: orange;">
 <p>More assistance with step</p>
@@ -995,7 +1001,7 @@ window.Quarto = {
 </section>
 <section id="b-set-initial-probabilities" class="level3">
 <h3 class="anchored" data-anchor-id="b-set-initial-probabilities">B: Set initial probabilities</h3>
-<p>We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. Therefore the initial probabilities for both “Sick -&gt; Treat” and “Not Sick -&gt; Treat” are Healthy = 1, Sick = 0, and Dead = 0.</p>
+<p>We will assume that after you get treatment that will remain healthy for atleast one cycle before getting sick again. <strong>Therefore the initial probabilities for both “Sick -&gt; Treat” and “Not Sick -&gt; Treat” are Healthy = 1, Sick = 0, and Dead = 0.</strong></p>
 <p><img src="images/simpleMarkov/TreatInitialProb.png" class="img-fluid"></p>
 </section>
 <section id="c-add-treatment-cost" class="level3">
@@ -1030,13 +1036,13 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Treat None</td>
-<td>52566.0787</td>
-<td>21.3367</td>
+<td>52566078.65</td>
+<td>21336.7046</td>
 </tr>
 <tr class="even">
 <td>Treat All</td>
-<td>59822.0336</td>
-<td>26.2392</td>
+<td>59822033.62</td>
+<td>26239.1531</td>
 </tr>
 </tbody>
 </table>
@@ -1074,14 +1080,14 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><br> What is the cost (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checksimp">Check</button></p>
+<p><br> What is the ICER (to two decimal places) of the strategy you would choose? <br> <input id="answersimp" type="number" step="0.01" placeholder="e.g., 43.5"> <button id="checksimp">Check</button></p>
 <div id="feedbacksimp" style="margin-top: 10px;">
 
 </div>
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 65517.829;
+  const CORRECT = 5812.6069;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answersimp');
   const button = document.getElementById('checksimp');
