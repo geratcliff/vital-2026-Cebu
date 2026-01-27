@@ -1,5 +1,5 @@
 ---
-title: Modeling DALYs in Amua
+title: Disability-Adjusted Life Years
 format:
   revealjs:
     theme: [default, _extensions/branding/custom-brand.scss]
@@ -41,7 +41,7 @@ bibliography: "references.bib"
 :::
 
 ::: text
-Review of DALY health outcomes
+Today: Background on DALY health outcomes
 :::
 :::::
 
@@ -51,7 +51,7 @@ Review of DALY health outcomes
 :::
 
 ::: text
-Tips and tricks for modeling DALYs in Amua
+Friday: Tips and tricks for modeling DALYs in Amua
 :::
 :::::
 :::::::::::::::
@@ -61,6 +61,17 @@ Tips and tricks for modeling DALYs in Amua
 ::: section-number
 01
 :::
+
+## Summary
+
+:::: icon-bullets
+::: incremental
+- DALYs not as frequently used in HTAs or CEAs.
+- Used for resource allocation in LMICs, but with sparse methodological guidance.
+  - Exceptions: @rushby2001 , @larson2013calculating, and @sassi2006calculating. 
+  - Our methods replicate each: [Link to workbook.](https://graveja0.github.io/dalys/notebooks/FRH-replication-preview.html)
+:::
+::::
 
 ## Common Outcomes
 
@@ -87,7 +98,7 @@ Tips and tricks for modeling DALYs in Amua
 -   Reflect both occupancy- and transition-based payoffs.
 -   There's also *very* little guidance on how to structure a decision
     model for DALY outcomes.
--   We'll show you how today!
+-   We'll show you how this week!
 :::
 ::::
 
@@ -109,7 +120,7 @@ Tips and tricks for modeling DALYs in Amua
 
 ## DALYs
 
-![](images/dalys/DALY_disability_affected_life_year_infographic.svg){width="1500"}](https://en.wikipedia.org/wiki/Disability-adjusted_life_year)
+![](images/dalys/DALY_disability_affected_life_year_infographic.svg){width="1500"}
 
 ::: fragment
 :::: highlight-box
@@ -140,6 +151,15 @@ $$
 
 :::: icon-bullets
 ::: incremental
+
+
+:::
+::::
+
+## [Years of Life Lost to Premature Mortality]{.r-fit-text}
+
+:::: icon-bullets
+::: incremental
 -   YLL are defined by by a "loss function."
 -   Drawn from a reference life table, indicating remaining life
     expectancy at age $a$.
@@ -149,14 +169,35 @@ $$
 :::
 ::::
 
-## [Years of Life Lost to Premature Mortality]{.r-fit-text}
+## Life Expectancy & YLL
 
 :::: icon-bullets
 ::: incremental
-
-
+-   **Contextual Choices:** Remaining life expectancy values may vary by
+    research context [@anand2019].
+-   **Historical Method:** GBD uses an *exogenous* life table
+    approximating maximum human lifespan.
+-   **Alternatives:** *Endogenous* tables or models may be preferred in
+    certain cases.
 :::
 ::::
+
+## Exogenous vs. Endogenous Life Tables
+
+:::: icon-bullets
+::: incremental
+-   **Distinction:** Source of life expectancy values (external vs.
+    internal).
+-   **Exogenous:** Independent mortality risks, using GBD's reference
+    table.
+-   **Endogenous:** Specific to the population's mortality risks and
+    health states.
+:::
+::::
+
+
+
+
 
 ## DALYs
 
@@ -182,6 +223,17 @@ $$
 -   **WHO-CHOICE:** Time discounting of health outcomes.
 :::
 ::::
+
+<!-- ## Incremental CEA -->
+
+<!-- ::: arrow-bullets -->
+<!-- - ICERs are based on cost per DALYs *averted* -->
+<!-- - Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel) -->
+<!-- - Alternative: define YLL and YLD outcomes as their negative values. -->
+<!--   - CEA will work, but expected values will be negative. -->
+<!-- ::: -->
+
+
 
 ##  {.summary-end-slide}
 
@@ -221,155 +273,18 @@ Modeling With Discounting
 -   But if you do need to discount ...
     -   You're going to see some math expressions that take care of
         discounting for YLL outcomes.
-    -   This math adds some complexity but not much insight, so I'll
-        gloss over it a bit
+    -   This math adds some complexity but not much insight, so we won't belabor it in slides. 
     -   We'll provide you the formulas to use here and in the .amua
-        model file.
+        model file on Friday. 
 :::
 ::::
 :::::::
 
-## Mathematical Formulation for DALYs in AMUA
-
-::: arrow-bullets
--  $YLD(c) = D_c$.
-
--  $YLL(a,t)=  Ex(a)\exp(-\ln(1+r)*t)$.
-    - $a$ is the time of death
-    -   $r$ is the discount rate you're using in the model (e.g.,
-    3%).
-
-    - $t$ is the cycle number at which premature death occurs.
-:::
-
-## Mathematical Formulation for DALYs in AMUA
-
-::: arrow-bullets
--  $YLD(c)=$ `dw_c`.
-
--   $YLL(a,t)=$ `tbl_ref_lt[initial_age+t,1]` $*\exp(-\log(1+$ `r_disc` $)*$ `t`$)$.
-:::
 
 
-
-## Overview of Decision Problem
-
-:::: icon-bullets
-::: incremental
--   Progressive disease model (from case study)
--   Focus only on cohort of individuals who develop mild disease.
--   Follow until death (from disease-related or other causes)
-:::
-::::
-
-## Overview of Decision Problem
-
-:::: icon-bullets
-::: incremental
--   Major difference from case study: can ignore Healthy state.
--   Strategies: Status quo, prevention, treatment
-:::
-::::
-
-## Methods: Structuring the Model {.section-slide}
-
-::: section-number
-02
-:::
-
-## State Transition Diagram {.nostretch}
-
-![](images/dalys/stateTransition.png){fig-align="center" width="800"}
-
-## Defining Outcomes in Amua
-
-:::: icon-bullets-triangle
-::: incremental
--   YLD: New Outcome. Use disability weights instead of utility weights!
--   YLL: One-time "event" at time of death from disease.
-    -   "Cost": present value of remaining life expectancy at age of death in
-        the model.
-    -   Intuition: we penalize premature death from disease using the
-        remaining life expectancy at the age in which the person dies.
-- Need to also define the discount rate as a parameter `r_disc`
-:::
-::::
-
-## Interactive Amua Session
-
-## Occupancy-Based Payoff: YLD
-
-::: arrow-bullets
--   YLD is an "occupancy-based" payoff (i.e., YLD increments by
-    disability weight for each cycle in that health state).
-    -   Add `dw_mild` = 0.08
-    -   Add `dw_progressive` = 0.15
-    -   Add `dw_progressive_treated` = 0.13
--   Mild disease state: `dw_mild`
--   Progressive disease state: `dw_progressive`
-:::
-
-## Transition-Based Payoff: YLL
-
-::: arrow-bullets
--   Remaining life expectancies are drawn from the reference life table,
-    or from an endogenous life table.
--   Import reference life table as lookup table---just like we did with
-    background mortality, etc.
--   Remember to use the "Truncate" option because the life table may not
-    extend to the maximum age in the model.
-:::
-
-::: footer
-Additional slides below (hit down button).
-:::
-
-## Life Expectancy & YLL
-
-:::: icon-bullets
-::: incremental
--   **Contextual Choices:** Remaining life expectancy values may vary by
-    research context [@anand2019].
--   **Historical Method:** GBD uses an *exogenous* life table
-    approximating maximum human lifespan.
--   **Alternatives:** *Endogenous* tables or models may be preferred in
-    certain cases.
-:::
-::::
-
-## Exogenous vs. Endogenous Life Tables
-
-:::: icon-bullets
-::: incremental
--   **Distinction:** Source of life expectancy values (external vs.
-    internal).
--   **Exogenous:** Independent mortality risks, using GBD's reference
-    table.
--   **Endogenous:** Specific to the population's mortality risks and
-    health states.
-:::
-::::
-
-## Incremental CEA
-
-::: arrow-bullets
-- ICERs are based on cost per DALYs *averted*
-- Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel)
-- Alternative: define YLL and YLD outcomes as their negative values.
-  - CEA will work, but expected values will be negative.
-:::
 
 ## Thanks! {.questions-slide}
 
-::: {.highlight-box .primary}
-Draft manuscript (with R code) available online at
-<https://graveja0.github.io/dalys/>
-:::
 
-![](images/dalys/adobe-express-qr-code.png){fig-align="center" width="25%"}
-
-:::{.next-info}
-Next: Advanced Topics
-:::
 
 ## References
