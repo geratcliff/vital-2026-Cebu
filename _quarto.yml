@@ -24,6 +24,8 @@ website:
         text: Home
       - href: prework.qmd
         text: Before you arrive
+      - href: recordings.html
+        text: Lecture Recordings
       - section: "Capstone"
         contents:
           - href: capstone/capstone_full.qmd
