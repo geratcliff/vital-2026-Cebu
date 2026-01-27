@@ -618,6 +618,7 @@ or 4 or 5... you would represent it as i=3, 4, 5 and then you multiply
 the probabilities.
 
 Xi = payoff and P = probability
+p(xi) means the probabilities belong to outcomes x. 
 :::
 
 ## 

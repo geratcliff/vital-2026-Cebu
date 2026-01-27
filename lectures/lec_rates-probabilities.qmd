@@ -196,7 +196,7 @@ time period**.
 
 -   **Rate (if all 100 followed for 4 years):** Total person-time = $100 \times 4 = 400$ person-years;
     $40/400 = 0.10$ deaths per person-year <br> 
--   *Interpretation:* ≈1 death per 10 years of total follow-up across the study population (aggregated person time)
+-   *Interpretation:* 0.10 deaths occur for every 1 person-year of follow-up; or around 1 death per 10 person-years of follow-up across the study population
 :::
 
 
@@ -326,6 +326,7 @@ time period**.
 :::
 
 ::: {.column width="40%" style="display:flex; align-items:center; justify-content:center;"}
+[Rate to Probability]{style="background-color: yellow;"}
 $$
 p = 1 - e^{-rt}
 $$
@@ -341,6 +342,13 @@ $$
 [Probability to Rate]{style="background-color: yellow;"} <br>
 
 $$ r = \frac{-ln(1-p)} {t} $$
+## Conversions
+
+::: {.arrow-bullets .smaller}
+-   exp(x): Applies continuous time accumulation (when converting rates to probabilities; the exponential ensures probabilities stay between 0 & 1 and that the timing of events is modeled correctly)
+-   ln(x): Removes it (when converting probability to rate)
+:::
+
 
 ## Conversions
 
@@ -498,7 +506,6 @@ $$
 $$
 p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 $$
-
 
 
 ## What to use 
