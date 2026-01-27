@@ -1,0 +1,290 @@
+---
+title: Disability-Adjusted Life Years
+format:
+  revealjs:
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600
+    height: 900
+    margin: 0.1
+    minScale: 0.2
+    maxScale: 2.0
+    center: true
+    incremental: false
+    slide-number: true
+    logo: images/logos.png
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: |
+      [Back to Website](../index.html)
+editor_options:
+  chunk_output_type: console
+editor:
+  markdown:
+    wrap: 72
+bibliography: "references.bib"
+---
+
+```{r}
+#knitr::purl(here::here("modeling-dalys_harvard-2024.qmd"))
+```
+
+##  {.numbered-list-slide}
+
+<h2>Learning Objectives</h2>
+
+::::::::::::::: number-list
+::::: list-item
+::: number
+01
+:::
+
+::: text
+Today: Background on DALY health outcomes
+:::
+:::::
+
+::::: list-item
+::: number
+02
+:::
+
+::: text
+Friday: Tips and tricks for modeling DALYs in Amua
+:::
+:::::
+:::::::::::::::
+
+## Overview of DALY Outcomes {.section-slide}
+
+::: section-number
+01
+:::
+
+## Summary
+
+:::: icon-bullets
+::: incremental
+- DALYs not as frequently used in HTAs or CEAs.
+- Used for resource allocation in LMICs, but with sparse methodological guidance.
+  - Exceptions: @rushby2001 , @larson2013calculating, and @sassi2006calculating. 
+  - Our methods replicate each: [Link to workbook.](https://graveja0.github.io/dalys/notebooks/FRH-replication-preview.html)
+:::
+::::
+
+## Common Outcomes
+
+:::: icon-bullets
+::: incremental
+1.  Occupancy-based payoffs:
+
+-   Utility/DALY weight applied for a time period / step.
+-   Treatment/disease cost per time period / step.
+
+2.  Transition-based payoffs:
+
+-   One-time event-based cost (e.g., disease-related death, initial Dx,
+    etc.).
+-   One-time health outcome (e.g., years of life lost to premature
+    mortality)
+:::
+::::
+
+## Disability-Adjusted Life Years (DALYs)
+
+:::: icon-bullets
+::: incremental
+-   Reflect both occupancy- and transition-based payoffs.
+-   There's also *very* little guidance on how to structure a decision
+    model for DALY outcomes.
+-   We'll show you how this week!
+:::
+::::
+
+## DALYs
+
+:::: icon-bullets
+::: incremental
+-   Origin story: Global Burden of Disease Study
+
+-   Deliberately a measure of health, not welfare/utility
+
+-   Similar to QALYs, two dimensions of interest:
+
+    -   Length of life (differences in life expectancy)
+
+    -   Quality of life (measured by disability weight)
+:::
+::::
+
+## DALYs
+
+![](images/dalys/DALY_disability_affected_life_year_infographic.svg){width="1500"}
+
+::: fragment
+:::: highlight-box
+**DALYs = YLL + YLD**
+
+-   YLL (Years of Life Lost)
+-   YLD (Years Lived with Disability)
+::::
+:::
+
+
+## Years of Life Lost to Disease
+
+For a given condition $c$,
+
+$$
+YLD(c) = D_c \cdot L_c
+$$
+
+:::: icon-bullets
+::: incremental
+-   $D_c$ is the condition's disability weight
+-   $L_c$ is the time lived with the disease.
+:::
+::::
+
+## [Years of Life Lost to Premature Mortality]{.r-fit-text}
+
+:::: icon-bullets
+::: incremental
+
+
+:::
+::::
+
+## [Years of Life Lost to Premature Mortality]{.r-fit-text}
+
+:::: icon-bullets
+::: incremental
+-   YLL are defined by by a "loss function."
+-   Drawn from a reference life table, indicating remaining life
+    expectancy at age $a$.
+-   $$
+    YLL(a)= Ex(a)
+    $$
+:::
+::::
+
+## Life Expectancy & YLL
+
+:::: icon-bullets
+::: incremental
+-   **Contextual Choices:** Remaining life expectancy values may vary by
+    research context [@anand2019].
+-   **Historical Method:** GBD uses an *exogenous* life table
+    approximating maximum human lifespan.
+-   **Alternatives:** *Endogenous* tables or models may be preferred in
+    certain cases.
+:::
+::::
+
+## Exogenous vs. Endogenous Life Tables
+
+:::: icon-bullets
+::: incremental
+-   **Distinction:** Source of life expectancy values (external vs.
+    internal).
+-   **Exogenous:** Independent mortality risks, using GBD's reference
+    table.
+-   **Endogenous:** Specific to the population's mortality risks and
+    health states.
+:::
+::::
+
+
+
+
+
+## DALYs
+
+$$
+DALY(c,a) = YLD(c) + YLL(a)
+$$
+
+## Evolution of DALY Calculations
+
+:::: icon-bullets
+::: incremental
+-   **Historical Practice:** Initial GBD studies applied age-weighting
+    and 3% annual time discounting.
+-   **Changes Post-2010:** Discontinuation of these practices for a more
+    descriptive DALY measure.
+:::
+::::
+
+## Current Discounting Practices
+
+:::: icon-bullets
+::: incremental
+-   **WHO-CHOICE:** Time discounting of health outcomes.
+:::
+::::
+
+<!-- ## Incremental CEA -->
+
+<!-- ::: arrow-bullets -->
+<!-- - ICERs are based on cost per DALYs *averted* -->
+<!-- - Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel) -->
+<!-- - Alternative: define YLL and YLD outcomes as their negative values. -->
+<!--   - CEA will work, but expected values will be negative. -->
+<!-- ::: -->
+
+
+
+##  {.summary-end-slide}
+
+::::::: summary-circle
+::: end-title
+Key Takeaways
+:::
+
+::: end-subtitle
+Modeling Without Discounting
+:::
+
+:::: key-points
+::: incremental
+-   Modeling DALYs in Amua is straightforward if you don't use
+    discounting.
+    -   For YLDs, use disability weight like you would a utility weight.
+    -   For YLLs, use one-time "cost" of remaining life expectancy.
+        - YLL = tbl_reference_life_table[initial_age + t, 1]
+:::
+::::
+:::::::
+
+##  {.summary-end-slide}
+
+::::::: summary-circle
+::: end-title
+Key Takeaways
+:::
+
+::: end-subtitle
+Modeling With Discounting
+:::
+
+:::: key-points
+::: incremental
+-   But if you do need to discount ...
+    -   You're going to see some math expressions that take care of
+        discounting for YLL outcomes.
+    -   This math adds some complexity but not much insight, so we won't belabor it in slides. 
+    -   We'll provide you the formulas to use here and in the .amua
+        model file on Friday. 
+:::
+::::
+:::::::
+
+
+
+
+## Thanks! {.questions-slide}
+
+
+
+## References
