@@ -164,7 +164,7 @@ Enter the ICER of the strategy you would choose (to two decimal places)
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 3317.90;
+  const CORRECT = 3359.38;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answercea1');
   const button = document.getElementById('checkcea1');
@@ -303,7 +303,7 @@ Enter your result:
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 108333.33;
+  const CORRECT = 104565.22;
   const TOL = 0.01; // accept +/- 0.01
 
   const input = document.getElementById('answercea3');
