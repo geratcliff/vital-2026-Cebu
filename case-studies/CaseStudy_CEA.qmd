@@ -259,7 +259,7 @@ Enter your result:
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 3317.90;
+  const CORRECT = 3359.38;
   const TOL = 0.01; // accept +/- 0.01
 
   const input = document.getElementById('answercea2');
