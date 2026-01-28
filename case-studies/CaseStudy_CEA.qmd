@@ -328,4 +328,4 @@ Enter your result: <input id="answercea3" type="number" step="0.01" placeholder=
 ```
 :::
 
-[Answer Key](case-studies/CaseStudy_CEA_Ans.html)
+[Answer Key](CaseStudy_CEA_Ans.html)
