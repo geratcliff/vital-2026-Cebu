@@ -30,32 +30,22 @@ editor: source
 ```
 # Learning Objectives and Outline
 
-<!-- Rates: The instantaneous potential for the occurrence of an event, expressed per number of patients at risk. Rates can be added and subtracted. -->
-
-<!-- Probabilities: A number ranging between 0 and 1. Represents the likelihood of an event happening over a specific period of time. -->
-
-<!-- https://www.hsrd.research.va.gov/for_researchers/cyber_seminars/archives/2401-notes.pdf -->
-
-<!-- https://link.springer.com/article/10.1007/s40273-020-00937-z -->
-
-<!-- https://www.valueinhealthjournal.com/article/S1098-3015(12)01654-3/fulltext?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1098301512016543%3Fshowall%3Dtrue -->
-
 ```{r}
 library(knitr)
 library(kableExtra)
 library(tidyverse)
 ```
 
-## Learning Objectives
+## Learning Objectives 
 
-::: incremental
+::: {.incremental style="font-size: 1.3em;"}
 -   Understand differences between rates and probabilities, hazard rates, relative risks, and other relevant model inputs.
 -   Understand rate-to-probability conversion formulas and transition probability embedding.
 -   Explain how to embed a transition probability matrix with a defined timestep.
 -   Explore age-, time- and country/region-specific adjustments to a Markov model.
 :::
 
-# Outline {.smaller}
+# Outline {.small}
 
 ::: incremental
 1.  Rates, probabilities, and other model inputs.
@@ -131,144 +121,38 @@ library(tidyverse)
 4.  Make further overall or strategy-specific adjustments to $\mathbf{P}$ as needed.
 :::
 
-# What is the difference between a rate and a probability? {background="#c2f0c2"}
-
-## Rates vs. Probabilities
-
-::: incremental
--   **Rate**: number of occurrences of an event per unit of time.
--   **Probability**: Liklihood that an event will occur for an in individual over a defined time period.
--   Major difference is in denominator: rates take into account **time at risk** while probabilities do not.
-:::
-
-## Rates vs. Probabilities
-
-![](images/paste-83525383.png)
-
-## Rates
-
-::: incremental
--   Number of events divided by the total time at risk experienced by all people followed.
--   Ranges from 0 to $\infty$.
--   $\frac{\# \text{events in time period}}{\text{Total time period experienced by all subjects followed}}$
-:::
-
-## Rates
-
-![](images/paste-8191B0E3.png)
-
-## Probabilities
-
-![](images/paste-62FF1911.png)
-
-## Rates vs. Probabilities: Example[^1]
-
-[^1]: Source: @gidwaniEstimatingTransitionProbabilities2020
-
-::: incremental
--   Suppose a study followed 100 people with congestive heart failure for 4 years.
--   At the end of 4 years, 40 had died.
--   The probability of death over 4 years is $40/100=0.40$.
-:::
-
-## Rates vs. Probabilities: Example[^2]
-
-[^2]: Source: @gidwaniEstimatingTransitionProbabilities2020
-
-::: incremental
--   A rate takes into acccount the time each person was at risk.
--   The 60 who survived were at risk the entire 4 years and contributed $60 \times 4 = 240$ years at risk.
--   Once a person dies, he/she is no longer at risk.
-:::
-
-## Rates vs. Probabilities: Example[^3]
-
-[^3]: Source: @gidwaniEstimatingTransitionProbabilities2020
-
-::: incremental
--   When a study does not report time at risk, the conventional assumption is that the events were spread evenly over the time period.
--   Using this assumption, the average time at risk for the 40 who died was 2 years, adding 40 × 2 = 80 years at risk.
-:::
-
-## Rates vs. Probabilities: Example[^4]
-
-[^4]: Source: @gidwaniEstimatingTransitionProbabilities2020
-
-::: incremental
--   Total time at risk for the cohort of 100 people is 320 person-years (240+80).
--   Thus, the rate of death from CHF is 40/320 = 0.125 deaths per person-year.
--   Let's now construct a rate matrix with three states: CHF, Death from CHF, and Death from other causes.
-:::
-
-## Rates vs. Probabilities: Example
-
 ```{r}
 m_P <- matrix(0,nrow=3,ncol=3,dimnames=list(c("CHF","D_CHF","D_OTH"),c("CHF","D_CHF","D_OTH")))
-#m_P[1,2] <- 0.125
-#m_P[1,3] <- 0.006
-m_P %>% kable()
-```
-
-## Rates vs. Probabilities: Example
-
-::: incremental
--   0.125 per person year is the **rate** we'd enter into our rate matrix.
--   We could also think of a separate death rate from background causes (e.g., 0.006 per person-year).[^5]
-:::
-
-[^5]: This often comes from separate vital statistics / life-table data sources.
-
-## Rates vs. Probabilities: Example
-
-```{r}
 m_P[1,2] <- 0.125
 m_P[1,3] <- 0.006
-m_P %>% kable()
 ```
 
-## Rates vs. Probabilities: Example {.smaller}
-
-::: columns
-::: column
-::: incremental
--   The diagonal elements in a rate matrix are just the negative sum of the off-diagonal elements.
--   In this example, the diagonal value for the 1st row would be -0.131 = -(0.125+0.006)
--   We can leave all other rate matrix values at 0 because the rate of progression from death to other states is zero.
-:::
-:::
-
-::: column
-::: {style="padding-top: 125px; font-size: 0.8em"}
 ```{r}
 m_P <- matrix(0,nrow=3,ncol=3,dimnames=list(c("CHF","Death_CHF","Death_Other"),c("CHF","Death_CHF","Death_Other")))
 m_P[1,2] <- 0.125
 m_P[1,3] <- 0.006
 m_P[1,1] <- -c(.125+.006)
-m_P %>% data.frame() %>% 
-   mutate(CHF = cell_spec(CHF, 
-                               color = ifelse(CHF<0,"white","black"),
-                               background= ifelse(CHF<0,"red","white"),
-                               bold = ifelse(Death_CHF<0,T,F)))  %>% 
-  kable('html', booktabs =TRUE, escape = FALSE) %>% kable_styling()
+# m_P %>% data.frame() %>% 
+#    mutate(CHF = cell_spec(CHF, 
+#                                color = ifelse(CHF<0,"white","black"),
+#                                background= ifelse(CHF<0,"red","white"),
+#                                bold = ifelse(Death_CHF<0,T,F)))  %>% 
+#   kable('html', booktabs =TRUE, escape = FALSE) %>% kable_styling()
 ```
-:::
-:::
-:::
-
-## Summary: Rates vs. Probabilities
-
-::: {style="font-size: 0.6em"}
-| Statistic        | Evaluates                                                                                               | Range         | Applicable Domain  |
-|-----------|---------------------------------------|-----------|-----------|
-| Rate             | $\frac{\# \text{events in time period}}{\text{Total time period experienced by all subjects followed}}$ | 0 to $\infty$ | Rate matrix        |
-| Probability/risk | $\frac{\# \text{events in time period}}{\# \text{people followed for time period}}$                     | 0-1           | Probability matrix |
-:::
 
 ## 1. Place rates in a rate matrix $\mathbf{R}$.
 
 ![](images/paste-01DABA0F.png)
 
-## 1. Place rates in a rate matrix $\mathbf{R}$. {.smaller}
+## Rates vs. Probabilities: Quick Review {background="#c2f0c2"}
+
+::: incremental
+- See the dedicated **"Rates & Probabilities"** lecture for detailed coverage.
+- Key point: Rates use **person-time** in the denominator; probabilities do not.
+- We'll use rate matrices as our "common ground" for combining different inputs.
+:::
+
+## 1. Place rates in a rate matrix $\mathbf{R}$. {.small}
 
 ::: columns
 ::: column
@@ -319,7 +203,7 @@ m_P %>% kable()
 
 ![](images/paste-20350F55.png)
 
-## 2. Make adjustments to $\mathbf{R}$ as needed. {.smaller}
+## 2. Make adjustments to $\mathbf{R}$ as needed. {.small}
 
 ::: columns
 ::: column
@@ -342,7 +226,7 @@ m_P %>% kable()
 :::
 :::
 
-## 2. Make adjustments to $\mathbf{R}$ as needed. {.smaller}
+## 2. Make adjustments to $\mathbf{R}$ as needed. {.small}
 
 ::: columns
 ::: column
@@ -386,7 +270,7 @@ m_P_A %>%
 :::
 :::
 
-## 2. Make adjustments to $\mathbf{R}$ as needed. {.smaller}
+## 2. Make adjustments to $\mathbf{R}$ as needed. {.small}
 
 ::: columns
 ::: column
@@ -408,7 +292,7 @@ m_P %>% kable()
 :::
 :::
 
-## 2. Make adjustments to $\mathbf{R}$ as needed. {.smaller}
+## 2. Make adjustments to $\mathbf{R}$ as needed. {.small}
 
 ::: columns
 ::: column
@@ -855,8 +739,6 @@ Transition probability matrices (NH = Natural History; A = Strategy A; B = Strat
 -   Also available (by region) [from the UN](https://www.un.org/development/desa/pd/data/model-life-tables) and other organizations.
 :::
 
-##  {background-image="media/life-table-un.png" data-background-size="contain"}
-
 
 ## Nonstationary Rates
 
@@ -999,7 +881,7 @@ m_Pt %>%
 ```
 :::
 
-## Tunnel States: Healthy, Sick, Dead {.smaller}
+## Tunnel States: Healthy, Sick, Dead {.small}
 
 -   If we run out the Markov trace for five cycles, here are the results.
 

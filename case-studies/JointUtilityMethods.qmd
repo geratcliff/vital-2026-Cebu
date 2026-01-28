@@ -10,13 +10,13 @@ format:
     center: true     # Vertically center content
     incremental: false
     slide-number: true
-    logo: images/logos.png 
+    logo: ../images/logos.png 
     html-math-method: katex
     transition: fade
     background-transition: fade
     highlight-style: ayu-mirage
     footer: |
-      [Back to Website](../index.html)
+      [Back to Website](CaseStudy_QALYs.html)
 editor_options: 
   chunk_output_type: console
 editor: 

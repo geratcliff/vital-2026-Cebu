@@ -323,7 +323,18 @@ Check your Model
 
 To help with time, we have created a parameters file you can upload to your model.
 
-**Download this file:** [PARAMETER TABLE](parameters_markovsimp.csv)
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/parameters_markovsimp.csv",
+  button_label = "Download Parameters",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 1.  On the top bar click Model \> Import
 
@@ -346,7 +357,7 @@ You're side bar should now be populated with the model parameters
 Here are the parameters if you need to add them manually:
 
 | Name           | Expression | Description                                     |
-|----------------|------------|-------------------------------------------------|
+|-------------------|-------------------|-----------------------------------|
 | prev           | 0.08       | Prevelance of Disease X at age 50               |
 | p_sick         | 0.03       | Annual probability of getting Disease X         |
 | p_diseasedeath | 0.15       | Annual probability of dying from Disease X      |
@@ -415,7 +426,18 @@ Check your Model
 
 You may have noticed that there is no probability of death in the uploaded parameters. Parameters are set values that do not change over time. However, the probability of death increases with age. To accommodate this, we will upload a table and create a p_die variable.
 
-**Table File:** [probability of death by age](tbl_p_die.csv)
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/tbl_p_die.csv",
+  button_label = "Probability of Death By Age",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
@@ -750,7 +772,18 @@ Screening Added
 
 <p style="color: black;">
 
-[Amua File With Screening Added](/MarkovSimpleWithScreening.amua)
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/MarkovSimpleWithScreening.amua",
+  button_label = "Amua File With Screening Added",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 </p>
 

@@ -1,17 +1,21 @@
 ---
-title: "9. Systematic Approaches to Understanding Model Uncertainty"
+title: "Systematic Approaches to Understanding Model Uncertainty"
 format:
   revealjs:
-    theme: slides.scss
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.05      # Minimal margins for max space
+    center: true     # Vertically center content
     incremental: false
     slide-number: true
-    logo: ../vchem.png
+    logo: ../images/logos.png 
     html-math-method: katex
     transition: fade
     background-transition: fade
     highlight-style: ayu-mirage
     footer: |
-      [Back to Website](../index.html)
+      [Back to Website](CaseStudy_QALYs.html)
 editor_options: 
   chunk_output_type: console
 editor: 
@@ -689,7 +693,7 @@ p_labeled <- directlabels::direct.label(p, "top.points") + scale_y_continuous(li
 print(p_labeled)
 ```
 
-# Interactive Amua Session 
+
 
 # 3. How Do We Summarize PSA Results?
 
@@ -1010,7 +1014,7 @@ plot.ceac(ceac_obj, frontier=FALSE) +
   theme(legend.position = c(0.82, 0.5))
 ```
 
-# Interactive Amua Session 
+
 
 ## What Does the CEAC Tell Us?
 
@@ -1248,7 +1252,7 @@ plot.evpi(evpi)
 :::
 :::
 
-# Interactive Amua Session 
+
 
 <!-- ## Sampling Parameters -->
 

@@ -59,16 +59,16 @@ title: "Case Study: QALYs"
 
 By the end of this session, participants will be able to:
 
-1. Define and parameterize key inputs (e.g., probabilities, outcomes, and costs) within the Amua software.
+1.  Define and parameterize key inputs (e.g., probabilities, outcomes, and costs) within the Amua software.
 
-2. Evaluate model outcomes, such as expected quality-adjusted life expectancy (QALE), for alternative clinical strategies.
+2.  Evaluate model outcomes, such as expected quality-adjusted life expectancy (QALE), for alternative clinical strategies.
 :::
 
 # Decision Trees
 
 ## Add QALY Dimension
 
-We now want to add a new outcome dimension: **QALYs (Quality-Adjusted Life Years)**. QALYs are a measure of disease burden, where **1 = perfect health** and **0 = death**. 
+We now want to add a new outcome dimension: **QALYs (Quality-Adjusted Life Years)**. QALYs are a measure of disease burden, where **1 = perfect health** and **0 = death**.
 
 ```{r, echo = FALSE}
 library(downloadthis)
@@ -95,7 +95,7 @@ download_link(
 
     -   **Decimals:** 2
 
-3.  Click ![](images/DALYs/refreshsymbol.png){width="25" height="18"}**Refresh**
+3.  Click ![](images/QALYs/refreshsymbol.png){width="25" height="18"}**Refresh**
 
 4.  For QALYs make sure the objective is **maximizing**
 
@@ -103,12 +103,12 @@ download_link(
 
 5.  We can now return to the tree and enter QALE values at each terminal node
 
-| **Clinical State** | **QALE** | **Notes** |
+| **Clinical State**  | **QALE** | **Notes**                                    |
 |------------------------|------------------------|------------------------|
-| QALE_Untreated | 3.21 |  Large amounts of time at low quality of life |
-| QALE_SickTreated | 14.54 | Short amounts of time sick and in treatment |
-| QALE_Healthy | 20 | Full Health |
-| QALE_HealthyTreated | 19.432 | Very short amount of time in treatment|
+| QALE_Untreated      | 3.21     | Large amounts of time at low quality of life |
+| QALE_SickTreated    | 14.54    | Short amounts of time sick and in treatment  |
+| QALE_Healthy        | 20       | Full Health                                  |
+| QALE_HealthyTreated | 19.432   | Very short amount of time in treatment       |
 
 You can apply these QALE values to **terminal nodes** in Amua accordingly. Your tree should like this:
 
@@ -120,10 +120,9 @@ Click ![](/amua-images/runModel_16.png) Run Model and check out the CEA Results 
 
 # Markov Models
 
-## Add a DALY Dimension
+## Add a QALE Dimension
 
-We now want to add a new outcome dimension: **DALYs (Disability-Adjusted Life Years)**. DALYs are a measure of disease burden, where **0 = perfect health** and **1 = death** per year lost. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.
-
+We now want to add a new outcome dimension: **QALE (Disability-Adjusted Expectancy)**. QALYs, where **1 = perfect health** and **0 = death**. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.
 
 ```{r, echo = FALSE}
 library(downloadthis)
@@ -138,7 +137,6 @@ download_link(
 )
 ```
 
-**To save time, we will go through the No Treat branch. A full answer key will be included at the end**
 
 ### A: Important Parameters
 
@@ -147,71 +145,72 @@ download_link(
 | Name | Value | Description |
 |-------------------|-------------------|----------------------------------|
 | u_healthy | 1.0 | Quality-of-life (QoL) weight for healthy state. |
+| u_treatment | 0.932 | Quality-of-life (QoL) weight for healthy state. |
 | u_sick | 0.842 | Quality-of-life (QoL) weight for sick health state. |
-| u_sick_treated | 0.87 | Quality-of-life (QoL) weight for sick health state if treated. |
+| u_sicker| 0.645 | Quality-of-life (QoL) weight for sicker health state  |
 | u_dead | 0 | Quality-of-life (QoL) weight for death health states. |
-
 
 # Add QALYs
 
-
-### A: Add A DALY Outcome
+### A: Add A QALY Outcome
 
 1.  In Amua, go to **Model → Properties → Analysis tab**.
 
 2.  Add a new dimension:
 
-    -   **Dimension**: DALYs
+    -   **Dimension**: QALE
 
-    -   **Symbol**: D
+    -   **Symbol**: QALY
 
     -   **Decimals:** 2
 
-3.  Click ![](images/DALYs/refreshsymbol.png){width="25" height="18"}**Refresh**
+3.  Click ![](images/QALYs/refreshsymbol.png){width="25" height="18"}**Refresh**
 
-4.  Because DALY is a gap measure, change the objective to **minimize DALYs (analogous to maximizing QALYs)**
+4.  Change the "Analysis Type" to Cost-Effectiveness Analysis (CEA).
 
-    ![](images/DALYs/AdddalysProp.png){width="555"}
+5.  Set the Cost, Effect, Baseline Strategy and Willingness-to-pay (WTP). Ensure that the Effect Objective is still set to mazimize.
 
-### Add Outcome
+    ![](images/QALYs/QALYProperties.png){width="555"}
+    
+6. Go to the Markov tab and add in the discount rate for DALYs. (3.0)
 
--   Go to Model {{< fa arrow-right >}} Properties {{< fa arrow-right >}} select the Analysis tab.
 
--   Click the blue plus sign (![Custom Icon](../amua-images/add_16.png){alt="Custom Icon" width="15"}) to add a new outcome. Add DALYs.
+### B: Add QALY to the model
 
--   Click the refresh button
+1.   Next, in the model itself, define the cycle-specific payoffs based on the values in the table above.
 
--   Change the "Analysis Type" to Cost-Effectiveness Analysis (CEA).
+    ![](images/QALYs/TreatNoneQALYs.png){width="555"}
 
--   Set the Cost, Effect, Baseline Strategy and Willingness-to-pay (WTP). Ensure that the Effect Objective is still set to minimize.
+2.   Repeat the same thing with the Treat All branch. BUT also add a one time utility for treatment 
 
--   Go to the Markov tab and add in the discount rate for DALYs. (3.0)
-
-    ![](images/HSD_AddDALYOutcome.png)
-
-<!-- -->
-
--   Next, in the model itself, define the cycle-specific payoffs based on the values in the tables above.
-
-    -   Every place in the model where there is a value for YLD or YLL, we will put that in DALYs so that it sums them all together.
-        -   For Example: Under sick where it now has(\$) c_sick; (YLD) dw_sick ; (YLL) 0, we will have (\$) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick
 
 ::: {.callout-note appearance="minimal"}
-Check and run the model to get the CEA for DALYs
+Check and run the model to get the CEA for QALYs
 
-| Strategy   | Cost      | DALY | ICER      | Note     |
+| Strategy   | Cost      | QALE | ICER      | Note     |
 |------------|-----------|------|-----------|----------|
-| Treat None | 40,286.24 | 4.98 |           | Baseline |
-| Treat All  | 51,548.10 | 2.78 | 5121.1089 |          |
+| Treat None | 40,286.24 | 14.8198 |           | Baseline |
+| Treat All  | 51,548.10 | 17.6283 | 4009.9429 |          |
 :::
 
-Solution File: ADD FILE
+Solution File: 
 
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_QALYS_ANS.amua",
+  button_label = "Full Amua File",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
-## What if there are multiple disability weights in one state? 
+## What if there are multiple disability weights in one state?
 
-For Example: You may get a disability weight for being sick and for a reaction to medication. 
+For Example: Suppose you can get AD heart failure and Stroke in one state.
 
-There are multiple ways to handle this: 
-
+There are multiple ways to handle this: [Joint Utility Methods Slides](JointUtilityMethods.html)
 

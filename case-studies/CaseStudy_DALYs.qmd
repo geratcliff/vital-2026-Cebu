@@ -143,7 +143,6 @@ download_link(
 )
 ```
 
-**To save time, we will go through the No Treat branch. A full answer key will be included at the end**
 
 ### A: Important Parameters
 
@@ -394,4 +393,15 @@ Check and run the model to get the CEA for DALYs
 | Treat All  | 51,548.10 | 2.78 | 5121.1089 |          |
 :::
 
-Solution File: ADD FILE
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_DALYS_ANS.amua",
+  button_label = "Full Amua File",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
