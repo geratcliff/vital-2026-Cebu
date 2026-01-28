@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../_gbd_lifetables/lifetables.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../_gbd_lifetables/lifetables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Country specific life-tables</span></a>
   </div>
 </li>
@@ -435,7 +435,8 @@ ul.task-list li input[type="checkbox"] {
 <p>To help visualize how this will work, here is a bubble diagram</p>
 <p><img src="images/progMarkov/bubble.png" class="img-fluid"></p>
 <p>Adding in progression in our model can help create a more realistic clinical model.</p>
-<p>Previously we assumed that everyone with Disease X received palliative care but in clinical reality it is only provided with progressed disease. There is also a one time cost for a higher dose of palliative care when transitioning from mild to progressive disease. While treatment lowers your probability of getting sick again, if you do get sick again, the probability of progression is the same. We will assume that no one starts in progressed disease. Disease death can only happen from the progressed state. The % of deaths from Disease X is minimal in the total death rate so there is no need to remove it from the all cause deaths.</p>
+<p>Previously we assumed that everyone with Disease X received palliative care but in clinical reality it is only provided with progressed disease. There is also a one time cost for a higher dose of palliative care when transitioning from mild to progressive disease.</p>
+<p>While treatment lowers your probability of Healthy to Sick, it does not affect the probability of disease progression (Sick to Sicker). We will assume that no one starts in progressed disease. Disease death can only happen from the progressed state. The % of deaths from Disease X is minimal in the total death rate so there is no need to remove it from the all cause deaths.</p>
 <section id="additional-parameters" class="level1">
 <h1>Additional Parameters</h1>
 <table class="caption-top table">
@@ -578,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 (function() {
   // Set the correct value and tolerance
-  const CORRECT = 21759.59;
+  const CORRECT = 7823.63;
   const TOL = 0.01; // accept +/- 0.01
   const input = document.getElementById('answerprog');
   const button = document.getElementById('checkprog');

@@ -1,0 +1,163 @@
+---
+title: "Joint Health Condition Utility Methods"
+author: "Created based on: Ara R, Wailoo AJ. Estimating Health State Utility Values for Joint Health Conditions: A Conceptual Review and Critique of the Current Evidence. *Med Decis Making*. 2013;33(2):139–153. "
+format:
+  revealjs:
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.05      # Minimal margins for max space
+    center: true     # Vertically center content
+    incremental: false
+    slide-number: true
+    logo: images/logos.png 
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: |
+      [Back to Website](../index.html)
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Common methods used to estimate Utility
+
+-   Additive method
+-   Multiplicative method
+-   Minimum method
+-   Adjusted decrement estimator
+-   Combination model (Linear index)
+
+<small> Ara R, Wailoo AJ. Estimating Health State Utility Values for
+Joint Health Conditions: A Conceptual Review and Critique of the Current
+Evidence. *Med Decis Making*. 2013;33(2):139–153. </small>
+
+------------------------------------------------------------------------
+
+## 1. Additive Method
+
+**Idea:** Individual disutilities are summed.
+
+$$U_{A,B} = 1 - \big[(1-U_A) + (1-U_B)\big] = U_A + U_B - 1$$
+
+**Example:**
+
+-   $U_{\text{Stroke}} = 0.68$
+-   $U_{\text{AD}} = 0.54$
+
+$$U_{\text{Stroke, AD}} = 0.68 + 0.54 - 1 = \mathbf{0.22}$$
+
+------------------------------------------------------------------------
+
+## 2. Multiplicative Method
+
+::: {style="font-size: 2.6vh;"}
+**Idea:** Individual utility values are multiplied.
+
+$$U_{A,B} = U_A \times U_B$$
+
+**Example:**
+
+-   $U_{\text{Stroke}} = 0.68$
+-   $U_{\text{AD}} = 0.54$
+
+$$U_{\text{Stroke, AD}} = 0.68 \times 0.54 = \mathbf{0.3672}$$
+:::
+
+------------------------------------------------------------------------
+
+## 3. Minimum Method
+
+::: {style="font-size: 2.6vh;"}
+**Idea:** Select the lower (minimum) of the component utilities.
+
+$$U_{A,B} = \min(U_A, U_B)$$
+
+**Example:**
+
+-   $U_{\text{Stroke}} = 0.68$
+-   $U_{\text{AD}} = 0.54$
+
+$$U_{\text{Stroke, AD}} = \min(0.68, 0.54) = \mathbf{0.54}$$
+:::
+
+------------------------------------------------------------------------
+
+## 4. Adjusted Decrement Estimator (ADE)
+
+::: {style="font-size: 2.6vh;"}
+Combination of additive, multiplicative, and minimum methods using an
+adjustment factor.
+
+Assumes the upper bound of $U(A,B)$ equals $\min(U_A, U_B)$.
+
+$$
+U_{A,B} = \min(U_A, U_B) - \min(U_A, U_B)\times\big[(1-U_A)\times(1-U_B)\big]
+$$
+
+**Example:**
+
+-   $U_{\text{Stroke}} = 0.68$
+-   $U_{\text{AD}} = 0.54$
+
+$$
+U_{\text{Stroke, AD}} = 0.54 - 0.54\times\big[(1-0.68)\times(1-0.54)\big] = \mathbf{0.46}
+$$
+:::
+
+------------------------------------------------------------------------
+
+## 5. Combination Model (Linear Index)
+
+::: {style="font-size: 2.6vh;"}
+Parametric regression that assigns weights to elements from additive,
+multiplicative, and minimum structures.
+
+$$
+\begin{aligned}
+U_{A,B} &= 1 - \Big[\beta_0 + \beta_1\,\min(1-U_A,\,1-U_B)\\
+&\quad + \beta_2\,\max(1-U_A,\,1-U_B) + \beta_3\,(1-U_A)(1-U_B)\Big] + \epsilon
+\end{aligned}
+$$
+
+Special cases:
+
+-   $\beta_0=0,\;\beta_1=1,\;\beta_2=1,\;\beta_3=0$ → **Additive**
+-   $\beta_0=0,\;\beta_1=1,\;\beta_2=1,\;\beta_3=-1$ →
+    **Multiplicative**
+-   $\beta_0=0,\;\beta_1=1,\;\beta_2=0,\;\beta_3=0$ → **Minimum**
+
+<small>*Requires observational data to estimate the* $\beta$
+coefficients.</small>
+:::
+
+------------------------------------------------------------------------
+
+## Performance comparison across methods
+
+::::::: {style="font-size: 1.5vh;"}
+:::::: columns
+::: {.column width="50%"}
+![](images/QALYs/Utility.png)
+:::
+
+:::: {.column width="50%"}
+
+$U_{\text{add, Stroke+AD}} = \mathbf{0.22}$  
+<br>
+$U_{\text{multiply, Stroke+AD}} = \mathbf{0.3672}$  
+<br>
+$U_{\text{min, Stroke+AD}} = \mathbf{0.54}$  
+<br>
+$U_{\text{ADE, Stroke+AD}} = \mathbf{0.46}$
+
+::::
+
+Thompson AJ, Sutton M, Payne K. Estimating Joint Health Condition
+Utility Values. *Value in Health*. 2019;22(4):482–490.
+::::::
+:::::::
