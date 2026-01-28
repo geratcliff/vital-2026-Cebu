@@ -57,17 +57,13 @@ title: "Case Study - CEA"
 ::: {.callout .fill-box .objectives}
 # Introduction and Learning Objectives {{< fa regular clipboard >}}
 
-
-
 By the end of this session, participants will be able to:
 
-1. Calculate incremental costs and effectiveness
-2. Apply dominance rules to eliminate both dominated and extendedly dominated strategies
-3. Calculate ICERs
-4. Apply WTP thresholds to make policy decisions
+1.  Calculate incremental costs and effectiveness
+2.  Apply dominance rules to eliminate both dominated and extendedly dominated strategies
+3.  Calculate ICERs
+4.  Apply WTP thresholds to make policy decisions
 :::
-
-
 
 Now that we have a model, we need to understand how the strategies compare to each other.
 
@@ -85,14 +81,13 @@ Hand calculate an Incremental Cost-Effectiveness Analysis using a WTP = \$100,00
 
 In the last exercise you should have gotten:
 
-|                 | Discounted Cost      |  Discounted Life Years     |
-|-----------------|-----------|-----------|
-| No Screen/Treat | 2,800 | 19.04 |
-| Treat all       | 30,000 | 19.484 |
-| Screen all      | 4,950 | 19.68 |
+|                 | Discounted Cost | Discounted Life Years |
+|-----------------|-----------------|-----------------------|
+| No Screen/Treat | 2,800           | 19.04                 |
+| Treat all       | 30,000          | 19.484                |
+| Screen all      | 4,950           | 19.68                 |
 
-: Cost and Life Year Outcomes for Cancer strategies
-## Perform a cost-effectiveness analysis of the treatment options using LYs as the measure of health effects.
+: Cost and Life Year Outcomes for Cancer strategies \## Perform a cost-effectiveness analysis of the treatment options using LYs as the measure of health effects.
 
 *Which strategy would you choose and why, if the willingness-to-pay threshold is \$100,000 per life year gained?*
 
@@ -127,40 +122,40 @@ Update the properties in Amua to have the model run a cost-effectiveness analysi
 Note: The basecase is No Screen/Treat
 
 <details>
-  
+
 <summary style="color: orange;">
-    
+
 More assistance with step
-  
+
 </summary>
-    
+
 <p style="color: black;">
-      
-1. Go to Model > Properties > Analysis
+
+1.  Go to Model \> Properties \> Analysis
 
 ![](images/CEA/Properties.png)
 
-2. Under "Analysis Type" choose "Cost-Effectiveness Analysis (CEA)"
+2.  Under "Analysis Type" choose "Cost-Effectiveness Analysis (CEA)"
 
 ![](images/CEA/AnalysisType.png)
 
-3. Set the settings to the following: 
+3.  Set the settings to the following:
 
 ![](images/CEA/CEASettings.png)
 
 </p>
+
 </details>
 
-
-
-::: callout-tip
+:::: callout-tip
 ## Check your answer
-<br>
-Enter the ICER of the strategy you would choose (to two decimal places)
-<br>
-<input id="answercea1" type="number" step="0.01" placeholder="e.g., 43.5" />
-<button id="checkcea1">Check</button>
-<div id="feedbackcea1" style="margin-top: 10px;"></div>
+
+<br> Enter the ICER of the strategy you would choose (to two decimal places) <br> <input id="answercea1" type="number" step="0.01" placeholder="e.g., 43.5" /> <button id="checkcea1">Check</button>
+
+::: {#feedbackcea1 style="margin-top: 10px;"}
+:::
+
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
@@ -189,16 +184,19 @@ Enter the ICER of the strategy you would choose (to two decimal places)
   });
 })();
 </script>
+```
+
 <br>
-:::
+::::
 
 # Additional Strategies
-Another member of the lab has built a model that looks at screening by risk. They were able to provide you the Cost and Life years for two strategies. Include these in your CEA to determine which of the 5 total strategies is the most cost-effective. 
 
-|  | Discounted Cost | Discounted LYs |
-| --- | --- | --- |
-| Screen High Risk Only |$28,000 | 19.89 |
-| Treat High Risk Only | $29,000 | 19.91 |
+Another member of the lab has built a model that looks at screening by risk. They were able to provide you the Cost and Life years for two strategies. Include these in your CEA to determine which of the 5 total strategies is the most cost-effective.
+
+|                       | Discounted Cost | Discounted LYs |
+|-----------------------|-----------------|----------------|
+| Screen High Risk Only | \$28,000        | 19.89          |
+| Treat High Risk Only  | \$29,000        | 19.91          |
 
 Add in those two strategies to your incremental calculations
 
@@ -210,6 +208,7 @@ Hand calculating the Incremental CEA will help you understand the logic behind t
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
+
 Hand calculate an Incremental Cost-Effectiveness Analysis using a WTP = \$100,000/Life Year gained with the additional strategies included
 :::
 
@@ -245,17 +244,14 @@ Hand calculate an Incremental Cost-Effectiveness Analysis using a WTP = \$100,00
 
 : ICER Calculation Table 2 {tbl-colwidths="\[20,20,20,20,20,20\]"}
 
-
-::: {.callout-tip}
+::: callout-tip
 ## Check your answer
 
 **What is the ICER of the strategy you would choose? (to 2 decimal places)**
 
-Enter your result:
-<input id="answercea2" type="number" step="0.01" placeholder="e.g., 42.5" />
-<button id="checkcea2">Check</button>
-<span id="feedbackcea2" style="margin-left:0.5rem;"></span>
+Enter your result: <input id="answercea2" type="number" step="0.01" placeholder="e.g., 42.5" /> <button id="checkcea2">Check</button>
 
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
@@ -287,19 +283,17 @@ Enter your result:
   });
 })();
 </script>
+```
 :::
 
-
-::: {.callout-tip}
+::: callout-tip
 ## Check your answer
 
-**What is the ICER of the strategy you would choose if the WTP was $200,000/LY? (to 2 decimal places)**
+**What is the ICER of the strategy you would choose if the WTP was \$200,000/LY? (to 2 decimal places)**
 
-Enter your result:
-<input id="answercea3" type="number" step="0.01" placeholder="e.g., 42.5" />
-<button id="checkcea3">Check</button>
-<span id="feedbackcea3" style="margin-left:0.5rem;"></span>
+Enter your result: <input id="answercea3" type="number" step="0.01" placeholder="e.g., 42.5" /> <button id="checkcea3">Check</button>
 
+```{=html}
 <script>
 (function() {
   // Set the correct value and tolerance
@@ -331,4 +325,7 @@ Enter your result:
   });
 })();
 </script>
+```
 :::
+
+[Answer Key](case-studies/CaseStudy_CEA_Ans.html)
