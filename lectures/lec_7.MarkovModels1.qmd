@@ -1245,7 +1245,7 @@ print_table(7)
 -   Constructing the matrix is a fairly technical, but fairly
     straightforward process.
 
-    -   We will skip over this process for now, but come back to it later today!
+    -   We will skip over this process for now, but come back to it tomorrow!
 
 ## Transition Probability Matrix
 
@@ -1284,11 +1284,11 @@ digraph G {
 
 ::: r-vstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy 
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 :::
 
@@ -1296,11 +1296,11 @@ Transition Probability Matrix
 
 ::: r-hstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy $\quad \quad$    
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 :::
 
@@ -1308,11 +1308,11 @@ Transition Probability Matrix
 
 ::: r-hstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy $\quad \quad$
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 
 ::: {data-id="occ1"}
@@ -1352,15 +1352,15 @@ $\quad \quad \quad \quad$
 
 ::: r-hstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy $\quad \quad$
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 
 ::: {data-id="occ1"}
-Health State Occupancy at End of Cycle
+$\quad$ Health State Occupancy at End of Cycle
 :::
 :::
 
@@ -1400,15 +1400,15 @@ s %*% P %>% round(.,3)
 
 ::: r-hstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy $\quad \quad$
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 
 ::: {data-id="occ1"}
-Health State Occupancy at End of Cycle
+$\quad$ Health State Occupancy at End of Cycle
 :::
 :::
 
@@ -1448,15 +1448,15 @@ s %*% P %>% round(.,3)
 
 ::: r-hstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy $\quad \quad$
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 
 ::: {data-id="occ1"}
-Health State Occupancy at End of Cycle
+$\quad$ Health State Occupancy at End of Cycle
 :::
 :::
 
@@ -1518,15 +1518,15 @@ s %*% P %>% round(.,3)
 
 ::: r-hstack
 ::: {data-id="occ"}
-Health State Occupancy at Beginning of Cycle
+Health State Occupancy $\quad \quad$
 :::
 
 ::: {data-id="m_P"}
-Transition Probability Matrix
+$\quad$ Transition Probability Matrix
 :::
 
 ::: {data-id="occ1"}
-Health State Occupancy at End of Cycle
+$\quad$ Health State Occupancy at End of Cycle
 :::
 :::
 
@@ -1611,7 +1611,7 @@ s %*% P %>% round(.,3)
 ##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 ::: {data-id="occ1"}
-Health State Occupancy at End of Cycle
+$\quad$ Health State Occupancy at End of Cycle
 :::
 
 ::: {data-id="tr1"}

@@ -346,7 +346,7 @@ You're side bar should now be populated with the model parameters
 Here are the parameters if you need to add them manually:
 
 | Name           | Expression | Description                                     |
-|-------------------|-------------------|------------------------------------|
+|----------------|------------|-------------------------------------------------|
 | prev           | 0.08       | Prevelance of Disease X at age 50               |
 | p_sick         | 0.03       | Annual probability of getting Disease X         |
 | p_diseasedeath | 0.15       | Annual probability of dying from Disease X      |
