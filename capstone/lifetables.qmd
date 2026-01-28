@@ -1,0 +1,46 @@
+---
+title: "Life Tables"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+Life Tables:
+
+[Bangladesh](_gbd_lifetables/output/bangladesh.csv)
+
+[Cambodia](_gbd_lifetables/output/cambodia.csv)
+
+[China](_gbd_lifetables/output/china.csv)
+
+[Ethiopia](_gbd_lifetables/output/ethiopia.csv)
+
+[India](_gbd_lifetables/output/india.csv)
+
+[Indonesia](_gbd_lifetables/output/indonesia.csv)
+
+[Lebanon](_gbd_lifetables/output/lebanon.csv)
+
+[Morocco](_gbd_lifetables/output/morocco.csv)
+
+[Mozambique](_gbd_lifetables/output/mozambique.csv)
+
+[Philippines](_gbd_lifetables/output/philippines.csv)
+
+[Rwanda](_gbd_lifetables/output/rwanda.csv)
+
+[Senegal](_gbd_lifetables/output/senegal.csv)
+
+[South Africa](_gbd_lifetables/output/south_africa.csv)
+
+[Tanzania](_gbd_lifetables/output/united_republic_of_tanzania.csv)
+
+[Thailand](_gbd_lifetables/output/thailand.csv)
+
+[Uganda](_gbd_lifetables/output/uganda.csv)
+
+[Vietnam](_gbd_lifetables/output/viet_nam.csv)
+
+[Zambia](_gbd_lifetables/output/zambia.csv)
+
+[Zimbabwe](_gbd_lifetables/output/zimbabwe.csv)

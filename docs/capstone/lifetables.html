@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Case Study: QALYs – Decision Analysis Workshop - Cebu</title>
+<title>Life Tables – Decision Analysis Workshop - Cebu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,8 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,7 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/font-awesome-6.5.2/js/script.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -85,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Case Study: QALYs</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capstone/capstone_full.html">Capstone</a></li><li class="breadcrumb-item"><a href="../capstone/lifetables.html">Country specific life-tables</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -121,13 +118,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Capstone</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capstone/capstone_full.html" class="sidebar-item-text sidebar-link">
@@ -136,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../capstone/lifetables.html" class="sidebar-item-text sidebar-link">
+  <a href="../capstone/lifetables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Country specific life-tables</span></a>
   </div>
 </li>
@@ -330,38 +327,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#decision-trees" id="toc-decision-trees" class="nav-link active" data-scroll-target="#decision-trees">Decision Trees</a>
-  <ul class="collapse">
-  <li><a href="#add-qaly-dimension" id="toc-add-qaly-dimension" class="nav-link" data-scroll-target="#add-qaly-dimension">Add QALY Dimension</a></li>
-  </ul></li>
-  <li><a href="#markov-models" id="toc-markov-models" class="nav-link" data-scroll-target="#markov-models">Markov Models</a>
-  <ul class="collapse">
-  <li><a href="#add-a-daly-dimension" id="toc-add-a-daly-dimension" class="nav-link" data-scroll-target="#add-a-daly-dimension">Add a DALY Dimension</a>
-  <ul class="collapse">
-  <li><a href="#a-important-parameters" id="toc-a-important-parameters" class="nav-link" data-scroll-target="#a-important-parameters">A: Important Parameters</a></li>
-  <li><a href="#quality-of-life-adjustments" id="toc-quality-of-life-adjustments" class="nav-link" data-scroll-target="#quality-of-life-adjustments">Quality of Life Adjustments</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#add-qalys" id="toc-add-qalys" class="nav-link" data-scroll-target="#add-qalys">Add QALYs</a>
-  <ul class="collapse">
-  <li><a href="#a-add-a-daly-outcome" id="toc-a-add-a-daly-outcome" class="nav-link" data-scroll-target="#a-add-a-daly-outcome">A: Add A DALY Outcome</a></li>
-  <li><a href="#add-outcome" id="toc-add-outcome" class="nav-link" data-scroll-target="#add-outcome">Add Outcome</a></li>
-  <li><a href="#what-if-there-are-multiple-disability-weights-in-one-state" id="toc-what-if-there-are-multiple-disability-weights-in-one-state" class="nav-link" data-scroll-target="#what-if-there-are-multiple-disability-weights-in-one-state">What if there are multiple disability weights in one state?</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capstone/capstone_full.html">Capstone</a></li><li class="breadcrumb-item"><a href="../capstone/lifetables.html">Country specific life-tables</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Case Study: QALYs</h1>
+<h1 class="title">Life Tables</h1>
 </div>
 
 
@@ -378,284 +352,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<style>
-/* Base: make Quarto callouts behave like full cards */
-.callout.fill-box {
-  /* Unified background & border for the whole card */
-  --box-bg: #eaf6ee;   /* default soft green if no class overrides */
-  --edge-color: #1f6f43; /* default darker edge/title color */
-  background: var(--box-bg);
-  border: 1px solid var(--edge-color);
-  border-radius: 8px;
-  margin: 1rem 0;
-  overflow: hidden; /* keeps rounded corners clean when title is darker */
-}
-
-/* Title bar: darker shade; full-width across top */
-.callout.fill-box .callout-title {
-  background: var(--edge-color);
-  color: #fff;
-  padding: 0.6rem 0.8rem;
-  font-weight: 600;
-  border-bottom: 1px solid var(--edge-color);
-}
-
-/* Body: same light color as the card, not a separate "stripe" */
-.callout.fill-box .callout-body {
-  background: transparent; /* let the parent set the background */
-  padding: 0.9rem 1rem;
-}
+<p>Life Tables:</p>
+<p><a href="_gbd_lifetables/output/bangladesh.csv">Bangladesh</a></p>
+<p><a href="_gbd_lifetables/output/cambodia.csv">Cambodia</a></p>
+<p><a href="_gbd_lifetables/output/china.csv">China</a></p>
+<p><a href="_gbd_lifetables/output/ethiopia.csv">Ethiopia</a></p>
+<p><a href="_gbd_lifetables/output/india.csv">India</a></p>
+<p><a href="_gbd_lifetables/output/indonesia.csv">Indonesia</a></p>
+<p><a href="_gbd_lifetables/output/lebanon.csv">Lebanon</a></p>
+<p><a href="_gbd_lifetables/output/morocco.csv">Morocco</a></p>
+<p><a href="_gbd_lifetables/output/mozambique.csv">Mozambique</a></p>
+<p><a href="_gbd_lifetables/output/philippines.csv">Philippines</a></p>
+<p><a href="_gbd_lifetables/output/rwanda.csv">Rwanda</a></p>
+<p><a href="_gbd_lifetables/output/senegal.csv">Senegal</a></p>
+<p><a href="_gbd_lifetables/output/south_africa.csv">South Africa</a></p>
+<p><a href="_gbd_lifetables/output/united_republic_of_tanzania.csv">Tanzania</a></p>
+<p><a href="_gbd_lifetables/output/thailand.csv">Thailand</a></p>
+<p><a href="_gbd_lifetables/output/uganda.csv">Uganda</a></p>
+<p><a href="_gbd_lifetables/output/viet_nam.csv">Vietnam</a></p>
+<p><a href="_gbd_lifetables/output/zambia.csv">Zambia</a></p>
+<p><a href="_gbd_lifetables/output/zimbabwe.csv">Zimbabwe</a></p>
 
 
-/* --- Specific palettes --- */
-/* Green: "Why are we doing this?" */
-.callout.why-box {
-  --box-bg: #eaf6ee;    /* light green fill */
-  --edge-color: #1f6f43;/* dark green edge/title */
-}
-
-/* Purple: "Your Task" */
-.callout.task-box {
-  --box-bg: #f3ecfb;    /* light purple fill */
-  --edge-color: #7140a6;/* deep purple edge/title */
-}
-
-/* Yellow: "Objectives" */
-.callout.objectives {
-  --box-bg: #f2eee4;    /* light yellow fill */
-  --edge-color: #CfAE70; /* deep yellow edge/title */
-}
-
-</style>
-<div class="fill-box objectives callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Introduction and Learning Objectives <i class="fa-regular fa-clipboard" aria-label="clipboard"></i>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>By the end of this session, participants will be able to:</p>
-<ol type="1">
-<li><p>Define and parameterize key inputs (e.g., probabilities, outcomes, and costs) within the Amua software.</p></li>
-<li><p>Evaluate model outcomes, such as expected quality-adjusted life expectancy (QALE), for alternative clinical strategies.</p></li>
-</ol>
-</div>
-</div>
-<section id="decision-trees" class="level1">
-<h1>Decision Trees</h1>
-<section id="add-qaly-dimension" class="level2">
-<h2 class="anchored" data-anchor-id="add-qaly-dimension">Add QALY Dimension</h2>
-<p>We now want to add a new outcome dimension: <strong>QALYs (Quality-Adjusted Life Years)</strong>. QALYs are a measure of disease burden, where <strong>1 = perfect health</strong> and <strong>0 = death</strong>.</p>
-<div class="cell">
-<div class="cell-output-display">
-<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision_tree_diseaseX_ANS.amua">
-<button class="btn btn-primary"><i class="fa fa-save"></i> Download Completed Decision Tree</button>
-</a>
-</div>
-</div>
-<section id="instructions" class="level4">
-<h4 class="anchored" data-anchor-id="instructions"><strong>Instructions:</strong></h4>
-<ol type="1">
-<li><p>In Amua, go to <strong>Model → Properties → Analysis tab</strong>.</p></li>
-<li><p>Add a new dimension:</p>
-<ul>
-<li><p><strong>Dimension</strong>: QALE</p></li>
-<li><p><strong>Symbol</strong>: Q</p></li>
-<li><p><strong>Decimals:</strong> 2</p></li>
-</ul></li>
-<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
-<li><p>For QALYs make sure the objective is <strong>maximizing</strong></p>
-<p><img src="images/QALYs/QALYProperties.png" class="img-fluid" width="555"></p></li>
-<li><p>We can now return to the tree and enter QALE values at each terminal node</p></li>
-</ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Clinical State</strong></th>
-<th><strong>QALE</strong></th>
-<th><strong>Notes</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>QALE_Untreated</td>
-<td>3.21</td>
-<td>Large amounts of time at low quality of life</td>
-</tr>
-<tr class="even">
-<td>QALE_SickTreated</td>
-<td>14.54</td>
-<td>Short amounts of time sick and in treatment</td>
-</tr>
-<tr class="odd">
-<td>QALE_Healthy</td>
-<td>20</td>
-<td>Full Health</td>
-</tr>
-<tr class="even">
-<td>QALE_HealthyTreated</td>
-<td>19.432</td>
-<td>Very short amount of time in treatment</td>
-</tr>
-</tbody>
-</table>
-<p>You can apply these QALE values to <strong>terminal nodes</strong> in Amua accordingly. Your tree should like this:</p>
-<p><img src="images/QALYs/AddQALYs.png" class="img-fluid"></p>
-<p>Now, you’re ready to perform a cost-effectiveness analysis with QALYs as the outcome!</p>
-<p>Click <img src="../amua-images/runModel_16.png" class="img-fluid"> Run Model and check out the CEA Results report.</p>
-</section>
-</section>
-</section>
-<section id="markov-models" class="level1">
-<h1>Markov Models</h1>
-<section id="add-a-daly-dimension" class="level2">
-<h2 class="anchored" data-anchor-id="add-a-daly-dimension">Add a DALY Dimension</h2>
-<p>We now want to add a new outcome dimension: <strong>DALYs (Disability-Adjusted Life Years)</strong>. DALYs are a measure of disease burden, where <strong>0 = perfect health</strong> and <strong>1 = death</strong> per year lost. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.</p>
-<div class="cell">
-<div class="cell-output-display">
-<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_ANS.amua">
-<button class="btn btn-primary"><i class="fa fa-save"></i> Download Completed Markov Model</button>
-</a>
-</div>
-</div>
-<p><strong>To save time, we will go through the No Treat branch. A full answer key will be included at the end</strong></p>
-<section id="a-important-parameters" class="level3">
-<h3 class="anchored" data-anchor-id="a-important-parameters">A: Important Parameters</h3>
-</section>
-<section id="quality-of-life-adjustments" class="level3">
-<h3 class="anchored" data-anchor-id="quality-of-life-adjustments">Quality of Life Adjustments</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 47%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>u_healthy</td>
-<td>1.0</td>
-<td>Quality-of-life (QoL) weight for healthy state.</td>
-</tr>
-<tr class="even">
-<td>u_sick</td>
-<td>0.842</td>
-<td>Quality-of-life (QoL) weight for sick health state.</td>
-</tr>
-<tr class="odd">
-<td>u_sick_treated</td>
-<td>0.87</td>
-<td>Quality-of-life (QoL) weight for sick health state if treated.</td>
-</tr>
-<tr class="even">
-<td>u_dead</td>
-<td>0</td>
-<td>Quality-of-life (QoL) weight for death health states.</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-</section>
-<section id="add-qalys" class="level1">
-<h1>Add QALYs</h1>
-<section id="a-add-a-daly-outcome" class="level3">
-<h3 class="anchored" data-anchor-id="a-add-a-daly-outcome">A: Add A DALY Outcome</h3>
-<ol type="1">
-<li><p>In Amua, go to <strong>Model → Properties → Analysis tab</strong>.</p></li>
-<li><p>Add a new dimension:</p>
-<ul>
-<li><p><strong>Dimension</strong>: DALYs</p></li>
-<li><p><strong>Symbol</strong>: D</p></li>
-<li><p><strong>Decimals:</strong> 2</p></li>
-</ul></li>
-<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
-<li><p>Because DALY is a gap measure, change the objective to <strong>minimize DALYs (analogous to maximizing QALYs)</strong></p>
-<p><img src="images/DALYs/AdddalysProp.png" class="img-fluid" width="555"></p></li>
-</ol>
-</section>
-<section id="add-outcome" class="level3">
-<h3 class="anchored" data-anchor-id="add-outcome">Add Outcome</h3>
-<ul>
-<li><p>Go to Model <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Properties <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> select the Analysis tab.</p></li>
-<li><p>Click the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">) to add a new outcome. Add DALYs.</p></li>
-<li><p>Click the refresh button</p></li>
-<li><p>Change the “Analysis Type” to Cost-Effectiveness Analysis (CEA).</p></li>
-<li><p>Set the Cost, Effect, Baseline Strategy and Willingness-to-pay (WTP). Ensure that the Effect Objective is still set to minimize.</p></li>
-<li><p>Go to the Markov tab and add in the discount rate for DALYs. (3.0)</p>
-<p><img src="images/HSD_AddDALYOutcome.png" class="img-fluid"></p></li>
-</ul>
-<!-- -->
-<ul>
-<li><p>Next, in the model itself, define the cycle-specific payoffs based on the values in the tables above.</p>
-<ul>
-<li>Every place in the model where there is a value for YLD or YLL, we will put that in DALYs so that it sums them all together.
-<ul>
-<li>For Example: Under sick where it now has($) c_sick; (YLD) dw_sick ; (YLL) 0, we will have ($) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick</li>
-</ul></li>
-</ul></li>
-</ul>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Check and run the model to get the CEA for DALYs</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>Cost</th>
-<th>DALY</th>
-<th>ICER</th>
-<th>Note</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Treat None</td>
-<td>40,286.24</td>
-<td>4.98</td>
-<td></td>
-<td>Baseline</td>
-</tr>
-<tr class="even">
-<td>Treat All</td>
-<td>51,548.10</td>
-<td>2.78</td>
-<td>5121.1089</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<p>Solution File: ADD FILE</p>
-</section>
-<section id="what-if-there-are-multiple-disability-weights-in-one-state" class="level2">
-<h2 class="anchored" data-anchor-id="what-if-there-are-multiple-disability-weights-in-one-state">What if there are multiple disability weights in one state?</h2>
-<p>For Example: You may get a disability weight for being sick and for a reaction to medication.</p>
-<p>There are multiple ways to handle this:</p>
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

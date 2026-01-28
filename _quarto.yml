@@ -30,7 +30,7 @@ website:
         contents:
           - href: capstone/capstone_full.qmd
             text: Capstone Help
-          - href: _gbd_lifetables/lifetables.html
+          - href: capstone/lifetables.html
             text: Country specific life-tables
           - href: capstone/topics.html
             text: Project Topics
