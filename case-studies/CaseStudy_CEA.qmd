@@ -85,7 +85,7 @@ Hand calculate an Incremental Cost-Effectiveness Analysis using a WTP = \$100,00
 
 In the last exercise you should have gotten:
 
-|                 | Cost      | Life Years     |
+|                 | Discounted Cost      |  Discounted Life Years     |
 |-----------------|-----------|-----------|
 | No Screen/Treat | 2,800 | 19.04 |
 | Treat all       | 30,000 | 19.484 |
@@ -195,7 +195,7 @@ Enter the ICER of the strategy you would choose (to two decimal places)
 # Additional Strategies
 Another member of the lab has built a model that looks at screening by risk. They were able to provide you the Cost and Life years for two strategies. Include these in your CEA to determine which of the 5 total strategies is the most cost-effective. 
 
-|  | Cost | LYs |
+|  | Discounted Cost | Discounted LYs |
 | --- | --- | --- |
 | Screen High Risk Only |$28,000 | 19.89 |
 | Treat High Risk Only | $29,000 | 19.91 |
