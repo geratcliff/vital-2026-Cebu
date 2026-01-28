@@ -38,43 +38,62 @@ editor:
 
 ## Outline {.numbered-list-slide}
 
-::: number-list
-::: list-item
-::: number 01 :::
-::: text
+::: {.number-list}
+
+::: {.list-item}
+::: {.number}
+01
+:::
+::: {.text}
 One-way sensitivity analysis
 :::
 :::
-::: list-item
-::: number 02 :::
-::: text
+
+::: {.list-item}
+::: {.number}
+02
+:::
+::: {.text}
 Two-way sensitivity analysis
 :::
 :::
-::: list-item
-::: number 03 :::
-::: text
+
+::: {.list-item}
+::: {.number}
+03
+:::
+::: {.text}
 Limitations and extensions
 :::
 :::
-::: list-item
-::: number 04 :::
-::: text
+
+::: {.list-item}
+::: {.number}
+04
+:::
+::: {.text}
 Scenario analysis
 :::
 :::
-::: list-item
-::: number 05 :::
-::: text
+
+::: {.list-item}
+::: {.number}
+05
+:::
+::: {.text}
 Threshold analysis
 :::
 :::
-::: list-item
-::: number 06 :::
-::: text
+
+::: {.list-item}
+::: {.number}
+06
+:::
+::: {.text}
 Summing up analyses beyond the base case
 :::
 :::
+
 :::
 
 
