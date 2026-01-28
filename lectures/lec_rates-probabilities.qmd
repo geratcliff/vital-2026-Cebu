@@ -342,6 +342,7 @@ $$
 [Probability to Rate]{style="background-color: yellow;"} <br>
 
 $$ r = \frac{-ln(1-p)} {t} $$
+
 ## Conversions
 
 ::: {.arrow-bullets .smaller}
@@ -545,7 +546,7 @@ Rates & Probabilities
 ::: incremental
 -   Probabilities are cumulative and bounded (0-1)
 -   Rates are instantaneous and scale with time
--   Conversions require a constant hazard assumption
+-   Conversions require a constant hazard assumption (hazard is flat within a time interval)
 :::
 :::
 :::
