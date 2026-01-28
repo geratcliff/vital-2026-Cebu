@@ -464,7 +464,10 @@ p = 1 - e^{-rt}
 <h2>Conversions</h2>
 <p><br></p>
 <p><span style="background-color: yellow;">Probability to Rate</span> <br></p>
-<p><span class="math display"> r = \frac{-ln(1-p)} {t} </span> ## Conversions</p>
+<p><span class="math display"> r = \frac{-ln(1-p)} {t} </span></p>
+</section>
+<section id="conversions-2" class="slide level2 center">
+<h2>Conversions</h2>
 <div class="arrow-bullets smaller">
 <ul>
 <li class="fragment">exp(x): Applies continuous time accumulation (when converting rates to probabilities; the exponential ensures probabilities stay between 0 &amp; 1 and that the timing of events is modeled correctly)</li>
@@ -472,12 +475,12 @@ p = 1 - e^{-rt}
 </ul>
 </div>
 </section>
-<section id="conversions-2" class="slide level2 center">
+<section id="conversions-3" class="slide level2 center">
 <h2>Conversions</h2>
 <p><br></p>
 <p><strong>Example:</strong> Consider we have a 12-month probability of 10.8% that a child under age 6 is newly diagnosed with elevated blood lead levels. If your Markov model has a 3-month cycle length, a 3-month probability is needed.</p>
 </section>
-<section id="conversions-3" class="slide level2 smaller center">
+<section id="conversions-4" class="slide level2 smaller center">
 <h2>Conversions</h2>
 <p><br></p>
 <p><span style="background-color: yellow;">STEP 1</span> Convert the 12-month probability to a 12-month rate (or 12-month probability to a 3-month rate)</p>
@@ -523,13 +526,13 @@ p = 1 - e^{-rt}
           display:block!important;
       }</style></aside>
 </section>
-<section id="conversions-4" class="slide level2 smaller center">
+<section id="conversions-5" class="slide level2 smaller center">
 <h2>Conversions</h2>
 <p><br></p>
 <p><span style="background-color: yellow;">STEP 2</span> Convert the 12-month rate to a 3-month rate</p>
 <p><span class="math display"> \frac{0.1142891}{4} = 0.02857228 </span></p>
 </section>
-<section id="conversions-5" class="slide level2 smaller center">
+<section id="conversions-6" class="slide level2 smaller center">
 <h2>Conversions</h2>
 <p><br></p>
 <p><span style="background-color: yellow;">STEP 2</span> Convert 3-month rate to 3-month probability</p>
@@ -555,14 +558,14 @@ p = 1 - e^{−0.02857228∗1} = 0.028168
           display:block!important;
       }</style></aside>
 </section>
-<section id="conversions-6" class="slide level2 smaller center">
+<section id="conversions-7" class="slide level2 smaller center">
 <h2>Conversions</h2>
 <p><br></p>
 <p>OR, <span style="background-color: aquamarine;">Step 1</span> Convert the 12-month probability to a 3-month rate</p>
 <p><span class="math display"> r = \frac{-ln(1-p)} {t} </span></p>
 <p><span class="math display"> r = \frac{-ln(1-.108)} {4} = 0.02857229 </span></p>
 </section>
-<section id="conversions-7" class="slide level2 smaller center">
+<section id="conversions-8" class="slide level2 smaller center">
 <h2>Conversions</h2>
 <p><br></p>
 <p><span style="background-color: aquamarine;">STEP 2</span> Convert 3-month rate to a 3-month probability</p>
@@ -573,7 +576,7 @@ p = 1 - e^{-r\Delta t}
 p = 1 - e^{−0.02857229∗1} = 0.028168
 </span></p>
 </section>
-<section id="conversions-8" class="slide level2 center">
+<section id="conversions-9" class="slide level2 center">
 <h2>Conversions</h2>
 <p><br></p>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -747,7 +750,7 @@ p_{HH} = e^{-(r_{HS}+r_{HD})\Delta t}
 <ul>
 <li class="fragment">Probabilities are cumulative and bounded (0-1)</li>
 <li class="fragment">Rates are instantaneous and scale with time</li>
-<li class="fragment">Conversions require a constant hazard assumption</li>
+<li class="fragment">Conversions require a constant hazard assumption (hazard is flat within a time interval)</li>
 </ul>
 </div>
 </div>
