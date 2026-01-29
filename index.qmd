@@ -94,7 +94,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 |------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Lecture]{.lecture} | [Lecture: Structuring the Markov Model](lectures/lec_structure.html) \[JG\] |
 | 09:00 - 10:15 | [Case Study]{.casestudy} | [Progressive Disease Model in Amua](case-studies/CaseStudy_MarkovProg.html) |
-| 10:15 - 10:30 | Break | Coffee/Tea |
+| 10:15 - 10:45 | Break | Coffee/Tea |
 | 10:30- 12:30 | [Lecture]{.lecture} | [Determinisitic, Threshold and Scenario Analyses](lectures/lec_sensitivity.html) |
 | 12:30 - 13:40 | Break | Lunch |
 | 13:40 - 14:00 | [Capstone]{.capstone} | [Example Presentation](capstone/completed_capstone_andrea.pptx) |
