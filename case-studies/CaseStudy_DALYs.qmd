@@ -99,7 +99,7 @@ download_link(
 
     -   **Decimals:** 2
 
-3.  Click ![](images/DALYs/refreshsymbol.png){width="25" height="18"}**Refresh**
+3.  Click ![](images/DALYs/refreshsymbol.png){width="25" height="18"} **Refresh**
 
 4.  Because DALY is a gap measure, change the objective to **minimize DALYs (analogous to maximizing QALYs)**
 

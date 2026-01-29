@@ -121,7 +121,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 <!-- 1.  **Thailand - Malaria** (2-person team) -->
 
-<!-- 2.  **Senegal - Kidney Transplant** (2-person team) -->
+<!-- 2.  **Indonesia - Cervical Cancer** (2-person team) -->
 
 <!-- 3.  **China-Shan - Gastric Cancer** (1-person team) -->
 
@@ -135,11 +135,11 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 <!-- 1.  **South Africa - Rabies** (2-person team) -->
 
-<!-- 2.  **Indonesia - Cervical Cancer** (2-person team) -->
+<!-- 2.  **Senegal - Kidney Transplant** (2-person team) -->
 
 <!-- 3.  **Morocco - Breast Cancer Screening** (1-person team) -->
 
-<!-- 4.  **Ethiopia - HPV Vaccines** (2-person team) -->
+<!-- 4.  **Lebanon - Colorectal Cancer** (1-person team) -->
 
 <!-- 5.  **Vietnam - Thalassemia Screening** (2-person team) -->
 
@@ -159,7 +159,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 
 <!-- ### Meeting Room 2 (5 teams) -->
 
-<!-- 1.  **Lebanon - Colorectal Cancer** (1-person team) -->
+<!-- 1.  **Ethiopia - HPV Vaccines** (2-person team) -->
 
 <!-- 2.  **India-Diksha - Neonatal mortality** (1-person team) -->
 
