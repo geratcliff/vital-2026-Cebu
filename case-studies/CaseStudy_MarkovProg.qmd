@@ -259,7 +259,7 @@ Screening Added
 
 <p style="color: black;">
 
-[Amua File With Screening Added](/MarkovProgwithScreening.amua)
+[Amua File With Screening Added](case-studies/MarkovProgwithScreening.amua)
 
 </p>
 
