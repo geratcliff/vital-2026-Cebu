@@ -192,7 +192,7 @@ library(downloadthis)
 ## Link in Github repo
 download_link(
   link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/CommonErrorsGuide.pdf",
-  button_label = "Download Amua File",
+  button_label = "Download Answer Guide",
   button_type = "primary",
   has_icon = TRUE,
   icon = "fa fa-save",
