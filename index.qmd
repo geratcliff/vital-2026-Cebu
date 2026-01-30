@@ -110,64 +110,65 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 |-------------------|-------------------|----------------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | [DALYs in AMUA](case-studies/CaseStudy_DALYs.html) \[Guided\] |
 | 09:30 - 10:15 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
-| 10:15 - 10:45 | Break | Coffee/Tea |
+| 10:15 - 10:30 | -- | FINAL SURVEY (will be emailed) |
+| 10:30 - 10:45 | Break | Coffee/Tea |
 | 10:45 - 12:45 | Presentations | Capstone Presentations (Small Groups) |
 | 12:45 - 13:15 | Break | Lunch |
 | 13:15 - 14:00 | Farewell | Certificate Ceremony and Closing Discussion |
 
 : {tbl-colwidths="\[20,10,50\]"}
 
-<!-- ### Function Room A (6 teams) -->
+### Function Room A (6 teams)
 
-<!-- 1.  **Thailand - Malaria** (2-person team) -->
+1.  **Thailand - Malaria** (2-person team)
 
-<!-- 2.  **Indonesia - Cervical Cancer** (2-person team) -->
+2.  **Indonesia - Cervical Cancer** (2-person team)
 
-<!-- 3.  **China-Shan - Gastric Cancer** (1-person team) -->
+3.  **China-Shan - Gastric Cancer** (1-person team)
 
-<!-- 4.  **Tanzania - Maternal Health** (1-person team) -->
+4.  **Tanzania - Maternal Health** (1-person team)
 
-<!-- 5.  **China-Huizing - Assisted Reproductive Technology** (1-person team) -->
+5.  **China-Huizing - Assisted Reproductive Technology** (1-person team)
 
-<!-- 6.  **Mozambique - Hypertension** (3-person team) -->
+6.  **Mozambique - Hypertension** (3-person team)
 
-<!-- ### Function Room B (6 teams) -->
+### Function Room B (6 teams)
 
-<!-- 1.  **South Africa - Rabies** (2-person team) -->
+1.  **South Africa - Rabies** (2-person team)
 
-<!-- 2.  **Senegal - Kidney Transplant** (2-person team) -->
+2.  **Senegal - Kidney Transplant** (2-person team)
 
-<!-- 3.  **Morocco - Breast Cancer Screening** (1-person team) -->
+3.  **Morocco - Breast Cancer Screening** (1-person team)
 
-<!-- 4.  **Lebanon - Colorectal Cancer** (1-person team) -->
+4.  **Lebanon - Colorectal Cancer** (1-person team)
 
-<!-- 5.  **Vietnam - Thalassemia Screening** (2-person team) -->
+5.  **Vietnam - Thalassemia Screening** (2-person team)
 
-<!-- 6.  **Bangladesh - Cervical Cancer** (2-person team) -->
+6.  **Bangladesh - Cervical Cancer** (2-person team)
 
-<!-- ### Meeting Room 1 (5 teams) -->
+### Meeting Room 1 (5 teams)
 
-<!-- 1.  **Uganda - TB** (2-person team) -->
+1.  **Uganda - TB** (2-person team)
 
-<!-- 2.  **Philippines - HPV Vaccination** (2-person team) -->
+2.  **Philippines - HPV Vaccination** (2-person team)
 
-<!-- 3.  **Zimbabwe - Major Depressive Disorders** (2-person team) -->
+3.  **Zimbabwe - Major Depressive Disorders** (2-person team)
 
-<!-- 4.  **Zambia - Alcohol Abuse** (2-person team) -->
+4.  **Zambia - Alcohol Abuse** (2-person team)
 
-<!-- 5.  **India-Archana - Cardiovascular Disease** (1-person team) -->
+5.  **India-Archana - Cardiovascular Disease** (1-person team)
 
-<!-- ### Meeting Room 2 (5 teams) -->
+### Meeting Room 2 (5 teams)
 
-<!-- 1.  **Ethiopia - HPV Vaccines** (2-person team) -->
+1.  **Ethiopia - HPV Vaccines** (2-person team)
 
-<!-- 2.  **India-Diksha - Neonatal mortality** (1-person team) -->
+2.  **India-Diksha - Neonatal mortality** (1-person team)
 
-<!-- 3.  **Bangladesh - Malnutrition/Maternal Health** (1-person team) -->
+3.  **Bangladesh - Malnutrition/Maternal Health** (1-person team)
 
-<!-- 4.  **Rwanda - Road Accidents** (2-person team) -->
+4.  **Rwanda - Road Accidents** (2-person team)
 
-<!-- 5.  **Cambodia - Cervical Cancer** (2-person team) -->
+5.  **Cambodia - Cervical Cancer** (2-person team)
 
 ## Optional Content
 
