@@ -78,7 +78,7 @@ We now want to add a new outcome dimension: **DALYs (Disability-Adjusted Life Ye
 library(downloadthis)
 ## Link in Github repo
 download_link(
-  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision_tree_diseaseX_ANS.amua",
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_decision_tree_diseaseX.amua",
   button_label = "Download Completed Decision Tree",
   button_type = "primary",
   has_icon = TRUE,

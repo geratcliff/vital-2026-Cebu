@@ -7,14 +7,20 @@
         <dateCreated>Mon Jan 12 12:27:52 CST 2026</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Mon Jan 26 02:24:46 CST 2026</dateModified>
+        <dateModified>Fri Jan 30 09:07:54 PST 2026</dateModified>
         <versionModified>0.3.4</versionModified>
     </Metadata>
     <DimInfo>
         <dimNames>Cost</dimNames>
         <dimNames>YLD</dimNames>
+        <dimNames>YLL</dimNames>
+        <dimNames>DALYS</dimNames>
         <dimSymbols>$</dimSymbols>
         <dimSymbols>YLD</dimSymbols>
+        <dimSymbols>YLL</dimSymbols>
+        <dimSymbols>D</dimSymbols>
+        <decimals>4</decimals>
+        <decimals>4</decimals>
         <decimals>4</decimals>
         <decimals>4</decimals>
         <analysisType>0</analysisType>
@@ -565,6 +571,100 @@
         </data>
         <notes></notes>
     </Table>
+    <Table>
+        <name>yll_t</name>
+        <type>Lookup</type>
+        <lookupMethod>Truncate</lookupMethod>
+        <numRows>21</numRows>
+        <numCols>2</numCols>
+        <headers>Age</headers>
+        <headers>LE</headers>
+        <data>
+            <item>0.0</item>
+            <item>88.8718951</item>
+        </data>
+        <data>
+            <item>1.0</item>
+            <item>88.00051053</item>
+        </data>
+        <data>
+            <item>5.0</item>
+            <item>84.03008056</item>
+        </data>
+        <data>
+            <item>10.0</item>
+            <item>79.04633476</item>
+        </data>
+        <data>
+            <item>15.0</item>
+            <item>74.0665492</item>
+        </data>
+        <data>
+            <item>20.0</item>
+            <item>69.10756792</item>
+        </data>
+        <data>
+            <item>25.0</item>
+            <item>64.14930031</item>
+        </data>
+        <data>
+            <item>30.0</item>
+            <item>59.1962771</item>
+        </data>
+        <data>
+            <item>35.0</item>
+            <item>54.25261364</item>
+        </data>
+        <data>
+            <item>40.0</item>
+            <item>49.31739311</item>
+        </data>
+        <data>
+            <item>45.0</item>
+            <item>44.43332057</item>
+        </data>
+        <data>
+            <item>50.0</item>
+            <item>39.63473787</item>
+        </data>
+        <data>
+            <item>55.0</item>
+            <item>34.91488095</item>
+        </data>
+        <data>
+            <item>60.0</item>
+            <item>30.25343822</item>
+        </data>
+        <data>
+            <item>65.0</item>
+            <item>25.68089534</item>
+        </data>
+        <data>
+            <item>70.0</item>
+            <item>21.28820012</item>
+        </data>
+        <data>
+            <item>75.0</item>
+            <item>17.10351469</item>
+        </data>
+        <data>
+            <item>80.0</item>
+            <item>13.23872477</item>
+        </data>
+        <data>
+            <item>85.0</item>
+            <item>9.990181244</item>
+        </data>
+        <data>
+            <item>90.0</item>
+            <item>7.617724915</item>
+        </data>
+        <data>
+            <item>95.0</item>
+            <item>5.922359078</item>
+        </data>
+        <notes></notes>
+    </Table>
     <simParamSets>false</simParamSets>
     <simType>0</simType>
     <cohortSize>1</cohortSize>
@@ -592,6 +692,7 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>1</type>
@@ -614,6 +715,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>0</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <terminationCondition>t==60</terminationCondition>
@@ -643,6 +746,10 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -666,8 +773,12 @@
             <prob>prev</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <rewards>c_mild</rewards>
             <rewards>dw_sick</rewards>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
         </Node>
         <Node>
             <type>2</type>
@@ -688,6 +799,10 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -711,6 +826,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>4</type>
@@ -728,6 +845,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -750,6 +869,8 @@
             <prob>p_sick</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Sick</transition>
         </Node>
         <Node>
@@ -768,6 +889,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Healthy</transition>
@@ -792,6 +915,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>0</transition>
         </Node>
         <Node>
@@ -812,6 +937,8 @@
             <prob>p_die</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Dead</transition>
         </Node>
         <Node>
@@ -830,6 +957,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -854,6 +983,8 @@
             <prob>0</prob>
             <cost>c_treatment</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>1</type>
@@ -876,6 +1007,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>prev</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <terminationCondition>t==60</terminationCondition>
@@ -905,6 +1038,10 @@
             <prob>1</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -928,6 +1065,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>4</type>
@@ -945,6 +1084,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_sick</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Sick</transition>
@@ -967,6 +1108,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Healthy</transition>
         </Node>
         <Node>
@@ -985,6 +1128,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1008,6 +1153,10 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -1027,6 +1176,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1052,6 +1203,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <terminationCondition>t==60</terminationCondition>
@@ -1081,6 +1234,10 @@
             <prob>1</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -1104,6 +1261,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>4</type>
@@ -1121,6 +1280,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_sick*hr_treated</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Sick</transition>
@@ -1143,6 +1304,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Healthy</transition>
         </Node>
         <Node>
@@ -1161,6 +1324,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1184,6 +1349,10 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -1203,6 +1372,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1227,8 +1398,12 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <rewards>c_pall</rewards>
             <rewards>dw_sicker</rewards>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
         </Node>
         <Node>
             <type>2</type>
@@ -1249,6 +1424,10 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -1272,6 +1451,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>4</type>
@@ -1289,6 +1470,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1311,6 +1494,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Sicker</transition>
         </Node>
         <Node>
@@ -1329,6 +1514,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_diseasedeath</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Disease Death</transition>
@@ -1351,6 +1538,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Sick</transition>
         </Node>
         <Node>
@@ -1371,6 +1560,8 @@
             <prob>p_sicker</prob>
             <cost>c_initialsicker</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Sicker</transition>
         </Node>
         <Node>
@@ -1389,6 +1580,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1413,7 +1606,11 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <rewards>c_mild</rewards>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
         <Node>
@@ -1436,6 +1633,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>0</transition>
         </Node>
         <Node>
@@ -1454,6 +1653,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Sick</transition>
@@ -1476,6 +1677,8 @@
             <prob>p_sicker</prob>
             <cost>c_initialsicker</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Sicker</transition>
         </Node>
         <Node>
@@ -1494,6 +1697,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1518,7 +1723,11 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <rewards>c_pall</rewards>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
         <Node>
@@ -1541,6 +1750,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>4</type>
@@ -1558,6 +1769,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Sicker</transition>
@@ -1580,6 +1793,8 @@
             <prob>p_diseasedeath</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Disease Death</transition>
         </Node>
         <Node>
@@ -1598,6 +1813,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1621,6 +1838,10 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -1640,6 +1861,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>1</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1664,7 +1887,11 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <rewards>c_mild</rewards>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
         <Node>
@@ -1687,6 +1914,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>0</transition>
         </Node>
         <Node>
@@ -1705,6 +1934,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Sick</transition>
@@ -1727,6 +1958,8 @@
             <prob>p_sicker</prob>
             <cost>c_initialsicker</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Sicker</transition>
         </Node>
         <Node>
@@ -1745,6 +1978,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1769,7 +2004,11 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <rewards>c_pall</rewards>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
         <Node>
@@ -1792,6 +2031,8 @@
             <prob>C</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
         </Node>
         <Node>
             <type>4</type>
@@ -1809,6 +2050,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>C</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Sicker</transition>
@@ -1831,6 +2074,8 @@
             <prob>p_diseasedeath</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Disease Death</transition>
         </Node>
         <Node>
@@ -1849,6 +2094,8 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_die</prob>
+            <cost>0</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <transition>Dead</transition>
@@ -1872,6 +2119,10 @@
             <prob>0</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
+            <rewards>0</rewards>
+            <rewards>0</rewards>
             <rewards>0</rewards>
             <rewards>0</rewards>
         </Node>
@@ -1893,6 +2144,8 @@
             <prob>1</prob>
             <cost>0</cost>
             <cost>0</cost>
+            <cost>0</cost>
+            <cost>0</cost>
             <transition>Dead</transition>
         </Node>
         <maxCycles>1000</maxCycles>
@@ -1901,6 +2154,8 @@
         <discountRewards>true</discountRewards>
         <discountRates>3</discountRates>
         <discountRates>3</discountRates>
+        <discountRates>0</discountRates>
+        <discountRates>0</discountRates>
         <discountStartCycle>0</discountStartCycle>
         <cyclesPerYear>1.0</cyclesPerYear>
         <showTrace>true</showTrace>
