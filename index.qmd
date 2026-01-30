@@ -109,12 +109,12 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | Time | Type | Topic |
 |-------------------|-------------------|----------------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | [DALYs in AMUA](case-studies/CaseStudy_DALYs.html) \[Guided\] |
-| 09:30 - 10:15 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
-| 10:15 - 10:30 | -- | FINAL SURVEY (will be emailed) |
+| 09:30 - 10:30 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 10:30 - 10:45 | Break | Coffee/Tea |
 | 10:45 - 12:45 | Presentations | Capstone Presentations (Small Groups) |
 | 12:45 - 13:15 | Break | Lunch |
-| 13:15 - 14:00 | Farewell | Certificate Ceremony and Closing Discussion |
+| 13:15 - 13:30 | -- | FINAL SURVEY (will be emailed) |
+| 13:30 - 14:00 | Farewell | Certificate Ceremony and Closing Discussion |
 
 : {tbl-colwidths="\[20,10,50\]"}
 

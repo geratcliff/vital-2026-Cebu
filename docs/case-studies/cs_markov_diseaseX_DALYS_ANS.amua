@@ -7,7 +7,7 @@
         <dateCreated>Mon Jan 12 12:27:52 CST 2026</dateCreated>
         <versionCreated>0.3.3</versionCreated>
         <modifier>ratclg2</modifier>
-        <dateModified>Fri Jan 30 09:07:54 PST 2026</dateModified>
+        <dateModified>Fri Jan 30 09:15:07 PST 2026</dateModified>
         <versionModified>0.3.4</versionModified>
     </Metadata>
     <DimInfo>
@@ -23,11 +23,11 @@
         <decimals>4</decimals>
         <decimals>4</decimals>
         <decimals>4</decimals>
-        <analysisType>0</analysisType>
+        <analysisType>1</analysisType>
         <objective>1</objective>
         <objectiveDim>0</objectiveDim>
         <costDim>0</costDim>
-        <effectDim>1</effectDim>
+        <effectDim>3</effectDim>
         <WTP>100000.0</WTP>
         <baseScenario>Treat None</baseScenario>
         <extendedDim>0</extendedDim>
@@ -108,9 +108,24 @@
         <expression>0.05</expression>
         <notes></notes>
     </Parameter>
+    <Parameter>
+        <name>r_disc_health</name>
+        <expression>0.03</expression>
+        <notes></notes>
+    </Parameter>
+    <Parameter>
+        <name>dw_treatment</name>
+        <expression>0.05</expression>
+        <notes></notes>
+    </Parameter>
     <Variable>
         <name>p_die</name>
         <expression>tbl_p_die[initial_age+t, 1]</expression>
+        <notes></notes>
+    </Variable>
+    <Variable>
+        <name>yll_t</name>
+        <expression>tbl_ref_lt[initial_age + t, 1] * (exp(-log(1+r_disc_health)*t))</expression>
         <notes></notes>
     </Variable>
     <Table>
@@ -572,7 +587,7 @@
         <notes></notes>
     </Table>
     <Table>
-        <name>yll_t</name>
+        <name>tbl_ref_lt</name>
         <type>Lookup</type>
         <lookupMethod>Truncate</lookupMethod>
         <numRows>21</numRows>
@@ -778,7 +793,7 @@
             <rewards>c_mild</rewards>
             <rewards>dw_sick</rewards>
             <rewards>0</rewards>
-            <rewards>0</rewards>
+            <rewards>dw_sick</rewards>
         </Node>
         <Node>
             <type>2</type>
@@ -982,9 +997,9 @@
             <collapsed>false</collapsed>
             <prob>0</prob>
             <cost>c_treatment</cost>
+            <cost>dw_treatment</cost>
             <cost>0</cost>
-            <cost>0</cost>
-            <cost>0</cost>
+            <cost>dw_treatment</cost>
         </Node>
         <Node>
             <type>1</type>
@@ -1209,9 +1224,9 @@
             <cost>0</cost>
             <terminationCondition>t==60</terminationCondition>
             <stateNames>Healthy</stateNames>
-            <stateNames>Dead</stateNames>
             <stateNames>Sick</stateNames>
             <stateNames>Sicker</stateNames>
+            <stateNames>Dead</stateNames>
             <stateNames>Disease Death</stateNames>
         </Node>
         <Node>
@@ -1403,7 +1418,7 @@
             <rewards>c_pall</rewards>
             <rewards>dw_sicker</rewards>
             <rewards>0</rewards>
-            <rewards>0</rewards>
+            <rewards>dw_sicker</rewards>
         </Node>
         <Node>
             <type>2</type>
@@ -1509,15 +1524,15 @@
             <parentY>391</parentY>
             <parentType>3</parentType>
             <level>4</level>
-            <hasCost>false</hasCost>
+            <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_diseasedeath</prob>
             <cost>0</cost>
             <cost>0</cost>
-            <cost>0</cost>
-            <cost>0</cost>
+            <cost>yll_t</cost>
+            <cost>yll_t</cost>
             <transition>Disease Death</transition>
         </Node>
         <Node>
@@ -1609,9 +1624,9 @@
             <cost>0</cost>
             <cost>0</cost>
             <rewards>c_mild</rewards>
+            <rewards>dw_sick</rewards>
             <rewards>0</rewards>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
+            <rewards>dw_sick</rewards>
         </Node>
         <Node>
             <type>3</type>
@@ -1726,9 +1741,9 @@
             <cost>0</cost>
             <cost>0</cost>
             <rewards>c_pall</rewards>
+            <rewards>dw_sicker</rewards>
             <rewards>0</rewards>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
+            <rewards>dw_sicker</rewards>
         </Node>
         <Node>
             <type>3</type>
@@ -1786,15 +1801,15 @@
             <parentY>976</parentY>
             <parentType>3</parentType>
             <level>5</level>
-            <hasCost>false</hasCost>
+            <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_diseasedeath</prob>
             <cost>0</cost>
             <cost>0</cost>
-            <cost>0</cost>
-            <cost>0</cost>
+            <cost>yll_t</cost>
+            <cost>yll_t</cost>
             <transition>Disease Death</transition>
         </Node>
         <Node>
@@ -1891,8 +1906,8 @@
             <cost>0</cost>
             <rewards>c_mild</rewards>
             <rewards>0</rewards>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
+            <rewards>dw_sick</rewards>
+            <rewards>dw_sick</rewards>
         </Node>
         <Node>
             <type>3</type>
@@ -1944,7 +1959,7 @@
             <type>4</type>
             <name>Get Sicker</name>
             <xPos>875</xPos>
-            <yPos>1426</yPos>
+            <yPos>1427</yPos>
             <width>18</width>
             <height>18</height>
             <parentX>727</parentX>
@@ -1956,7 +1971,7 @@
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_sicker</prob>
-            <cost>c_initialsicker</cost>
+            <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
             <cost>0</cost>
@@ -2008,8 +2023,8 @@
             <cost>0</cost>
             <rewards>c_pall</rewards>
             <rewards>0</rewards>
-            <rewards>0</rewards>
-            <rewards>0</rewards>
+            <rewards>dw_sicker</rewards>
+            <rewards>dw_sicker</rewards>
         </Node>
         <Node>
             <type>3</type>
@@ -2067,15 +2082,15 @@
             <parentY>1570</parentY>
             <parentType>3</parentType>
             <level>5</level>
-            <hasCost>false</hasCost>
+            <hasCost>true</hasCost>
             <hasVarUpdates>false</hasVarUpdates>
             <visible>true</visible>
             <collapsed>false</collapsed>
             <prob>p_diseasedeath</prob>
             <cost>0</cost>
             <cost>0</cost>
-            <cost>0</cost>
-            <cost>0</cost>
+            <cost>yll_t</cost>
+            <cost>yll_t</cost>
             <transition>Disease Death</transition>
         </Node>
         <Node>
@@ -2154,8 +2169,8 @@
         <discountRewards>true</discountRewards>
         <discountRates>3</discountRates>
         <discountRates>3</discountRates>
-        <discountRates>0</discountRates>
-        <discountRates>0</discountRates>
+        <discountRates>3</discountRates>
+        <discountRates>3</discountRates>
         <discountStartCycle>0</discountStartCycle>
         <cyclesPerYear>1.0</cyclesPerYear>
         <showTrace>true</showTrace>

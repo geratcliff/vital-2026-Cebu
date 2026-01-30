@@ -186,3 +186,16 @@ download_link(
 )
 ```
 
+
+```{r, echo = FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://geratcliff.github.io/vital-2026-Cebu/case-studies/CommonErrorsGuide.pdf",
+  button_label = "Download Amua File",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
