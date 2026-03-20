@@ -44,7 +44,7 @@ format:
 01
 :::
 
-## (3) Info Cards Template
+## (3) Info Cards Template 
 
 ::::: info-cards
 ::: card

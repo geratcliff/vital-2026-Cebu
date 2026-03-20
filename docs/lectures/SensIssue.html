@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="template_files/libs/clipboard/clipboard.min.js"></script>
-<script src="template_files/libs/quarto-html/tabby.min.js"></script>
-<script src="template_files/libs/quarto-html/popper.min.js"></script>
-<script src="template_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="template_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="template_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="template_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <meta name="author" content="VUMC - Center for Health Economic Modeling">
-  <meta name="dcterms.date" content="2026-01-06">
-  <title>Template</title>
+  <title>Decision Analysis Workshop - Cebu – Common Amua Sensitivity Issue</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -30,11 +28,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto-898bc990489b7affa860c58dfe2ee05b.css">
-  <link href="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa2d77665c0c433884b05e9456e1bf95.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -127,616 +125,202 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="/assets/title-bg.jpg" class="quarto-title-block center">
-  <h1 class="title">Template</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Common Amua Sensitivity Issue</h1>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-VUMC - Center for Health Economic Modeling 
-</div>
-</div>
 </div>
 
-  <p class="date">2026-01-06</p>
 </section>
-<section id="section" class="slide level2 numbered-list-slide">
-<h2></h2>
-<h2>
-<ol type="1">
-<li>Numbered Overview Template
-</li></ol></h2>
-
-<div class="number-list">
-<div class="list-item">
-<div class="number">
-01
-</div>
-<div class="text">
-First topic
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-02
-</div>
-<div class="text">
-Second topic
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-03
-</div>
-<div class="text">
-Third topic
-</div>
-</div>
-<div class="list-item">
-<div class="number">
-04
-</div>
-<div class="text">
-Fourth topic
-</div>
-</div>
-</div>
+<section id="quick-sensitivity-review" class="slide level2 center">
+<h2>Quick Sensitivity Review</h2>
+<p>When we run a sensitivity analysis, the goal is to <strong>understand how the outcomes and decision would differ</strong>. For this example, we will focus on one-way sensitivity analysis (OWSA) as it is easiest to show visually. However, this concept applies to all sensitivity.</p>
+<p>For a <strong>OWSA, one parameter at a time is adjusted.</strong> The value should be adjusted up and down to match clinical trials, clinical observation, or a reasonable estimate. This new value is put back into the model and the model is run again. The new values from the model can tell how much a variable impacts the model.</p>
 </section>
-<section id="section-divider-template" class="slide level2 section-slide">
-<h2>(2) Section Divider Template</h2>
-<div class="section-number">
-<p>01</p>
-</div>
-</section>
-<section id="info-cards-template" class="slide level2">
-<h2>(3) Info Cards Template</h2>
+<section id="the-logic-of-the-issue" class="slide level2 center">
+<h2>The Logic of the Issue</h2>
+<p>To complete a OWSA, the model needs to have some method of “knowing” what to do with the difference between the original variable and the sensitivity variable.</p>
 <div class="info-cards">
 <div class="card">
-<p><strong>Health State Definition</strong></p>
-<p>A health state represents a specific condition. Should be:</p>
-<ul>
-<li>Mutually exclusive</li>
-<li>Collectively exhaustive</li>
-<li>Clinically meaningful</li>
-</ul>
-</div>
-<div class="card">
-<p><strong>Key Considerations</strong></p>
-<p>When defining states:</p>
-<ul>
-<li>Disease progression</li>
-<li>Treatment response</li>
-<li>Quality of life</li>
-<li>Cost implications</li>
-</ul>
+<div class="columns">
+<p><strong>For Example:</strong></p><div class="column" style="width:45%;">
+<p>If a probability is 0.4 in the model and then run on 0.6 in the OWSA, what probability is now 0.2 lower?</p>
+</div><div class="column" style="width:10%;">
+<p>Or</p>
+</div><div class="column" style="width:45%;">
+<p>If a probability is 0.4 in the model and then run on 0.3 in the OWSA, what probability is now 0.1 higher?</p>
+</div></div>
 </div>
 </div>
 </section>
-<section id="stats-grid-template" class="slide level2">
-<h2>(4) Stats Grid Template</h2>
-<div class="stats-grid">
-<div class="stat-box">
-<div class="stat-value">
-<p>4</p>
-</div>
-<div class="stat-label">
-<p>Health States</p>
-</div>
-<div class="stat-description">
-<p>Including absorbing state</p>
-</div>
-</div>
-<div class="stat-box">
-<div class="stat-value">
-<p>12</p>
-</div>
-<div class="stat-label">
-<p>Transitions</p>
-</div>
-<div class="stat-description">
-<p>Possible state changes</p>
-</div>
-</div>
-<div class="stat-box">
-<div class="stat-value">
-<p>1 yr</p>
-</div>
-<div class="stat-label">
-<p>Cycle Length</p>
-</div>
-<div class="stat-description">
-<p>Annual transitions</p>
-</div>
-</div>
-<div class="stat-box">
-<div class="stat-value">
-<p>20</p>
-</div>
-<div class="stat-label">
-<p>Time Horizon</p>
-</div>
-<div class="stat-description">
-<p>Years modeled</p>
-</div>
-</div>
-</div>
-</section>
-<section id="icon-bullets-template" class="slide level2">
-<h2>(5) Icon Bullets Template</h2>
-<div class="icon-bullets">
-<ul>
-<li>Health states are mutually exclusive</li>
-<li>Transitions must sum to 1.0</li>
-<li>Time cycle must be specified</li>
-<li>Clinical validation required</li>
-</ul>
-</div>
-</section>
-<section id="concept-grid-template" class="slide level2">
-<h2>(6) Concept Grid Template</h2>
-<div class="concept-grid">
-<div class="concept-box">
-<p>Disease-Free</p>
-</div>
-<div class="concept-box">
-<p>Early Disease</p>
-</div>
-<div class="concept-box">
-<p>Advanced Disease</p>
-</div>
-<div class="concept-box">
-<p>Death</p>
-</div>
-</div>
-</section>
-<section id="split-content-template" class="slide level2 split-wrapper">
-<h2>(7) Split Content Template</h2>
+<section id="a-conceptual-example" class="slide level2 center">
+<h2>A conceptual example</h2>
 <div class="split-content">
 <div class="content-text">
-<p><strong>Patient Journey</strong></p>
+<p>Let’s look at one health state within a model.</p>
+<p>Individuals who start the cycle in Health State 1 can end the cycle in Health State 1, Health State 2, Health State 3, or Health State 4.</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Concept.png"></p>
+</div>
+</div>
+</section>
+<section id="running-the-owsa" class="slide level2 center">
+<h2>Running the OWSA</h2>
+<div class="split-content">
+<div class="content-text">
+<p>To run the OWSA, the probability of going from “Health State 1” to “Health State 3” is decreased.</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Concept_OWSA.png"></p>
+</div>
+</div>
+</section>
+<section id="left-overs" class="slide level2 center">
+<h2>“Left-overs”</h2>
+<div class="split-content">
+<div class="content-text">
+<p>For lack of a better term we will call the people that no longer go from “Health State 1” to “Health State 3” the <span style="color: #fa6800;">“left-overs”</span>.</p>
+<p>The model has to know where these individuals should go.</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Concept_OWSA_Vis.png"></p>
+</div>
+</div>
+</section>
+<section id="placing-the-left-overs" class="slide level2 center">
+<h2>Placing the “left-overs”</h2>
+<p>In some scenarios, the “left-over” individuals can all be shifted to one other probability. But there are also scenarios where individuals should be distributed.</p>
+<div class="split-content">
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Concept_OWSA_Opt1.png"></p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Concept_OWSA_Opt2.png"></p>
+</div>
+</div>
+</section>
+<section id="lets-walk-through-an-example-in-amua" class="slide level2 center">
+<h2>Lets walk through an example in Amua</h2>
+</section>
+<section id="the-model" class="slide level2 center">
+<h2>The Model</h2>
+<p>This is modeled using a Markov model based on the following bubble diagram. All individuals will start in Healthy.</p>
+
+<img data-src="images/SensIssue/SensIssue_Bubble.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="lets-focus-on-sick" class="slide level2 center">
+<h2>Let’s focus on Sick</h2>
+<div class="split-content">
+<div class="content-text">
+<p>Based on the bubble diagram, individuals that are sick can:</p>
 <ul>
-<li>Initial diagnosis</li>
-<li>Treatment initiation</li>
-<li>Disease progression</li>
-<li>End-of-life care</li>
+<li><p>die of all-cause death</p></li>
+<li><p>remain sick</p></li>
+<li><p>get sicker</p></li>
+<li><p>heal</p></li>
 </ul>
 </div>
 <div class="content-visual">
-<p><img data-src="./assets/template_images/splitcontent_image.png"></p>
-<p><em>Patient journey flowchart</em></p>
+<p><img data-src="images/SensIssue/SensIssue_Stacked.png"></p>
 </div>
 </div>
 </section>
-<section id="simple-two-column-comparison-template" class="slide level2">
-<h2>(8) Simple Two Column Comparison Template</h2>
-<div class="simple-comparison">
-<div class="comparison-column">
-<div class="column-header">
-Markov models offer several benefits for health economic evaluation:
-</div>
-<div class="column-content">
-<ul>
-<li>Capture disease progression</li>
-<li>Handle uncertainty explicitly</li>
-<li>Allow probabilistic sensitivity analysis</li>
-<li>Incorporate time-dependent effects</li>
-</ul>
+<section id="running-the-owsa-1" class="slide level2 center">
+<h2>Running the OWSA</h2>
+<div class="split-content">
+<div class="content-text">
+<p>The model ran great and now it is time for the OWSA.</p>
+<div class="bold">
+<p>Based on (fake) data we learn that p_die can be wrong by up to 4%</p>
 </div>
 </div>
-<div class="comparison-column">
-<div class="column-header">
-However, they also have limitations:
-</div>
-<div class="column-content">
-<ul>
-<li>Memoryless assumption</li>
-<li>Computational complexity</li>
-<li>Data requirements</li>
-<li>Validation difficulties</li>
-</ul>
-</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Stacked_OWSA.png"></p>
 </div>
 </div>
 </section>
-<section id="comparison-table-template" class="slide level2">
-<h2>(9) Comparison Table Template</h2>
-<div class="comparison-table">
-<div class="comparison-column">
-<div class="column-header">
-<p>Standard Care</p>
+<section id="what-we-expect" class="slide level2 center">
+<h2>What we expect</h2>
+<div class="split-content">
+<div class="content-text">
+<p>We expect that if less people are dying then there are more individuals that are sorted between healthy, remain sick, and getting sicker.</p>
 </div>
-<div class="column-content">
-<ul>
-<li>Lower upfront cost</li>
-<li>Established protocols</li>
-<li>Widely available</li>
-<li>Known side effects</li>
-</ul>
-</div>
-</div>
-<div class="comparison-column">
-<div class="column-header">
-<p>New Treatment</p>
-</div>
-<div class="column-content">
-<ul>
-<li>Higher efficacy</li>
-<li>Fewer side effects</li>
-<li>Better QoL outcomes</li>
-<li>Higher cost</li>
-</ul>
-</div>
-</div>
-<div class="comparison-column">
-<div class="column-header">
-<p>Combination</p>
-</div>
-<div class="column-content">
-<ul>
-<li>Best outcomes</li>
-<li>Complex protocol</li>
-<li>Highest cost</li>
-<li>Specialized care needed</li>
-</ul>
-</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Stacked_OWSA_Split1.png"></p>
 </div>
 </div>
 </section>
-<section id="definition-template" class="slide level2">
-<h2>(10) Definition Template</h2>
-<div class="definition-box">
-<div class="term">
-<p>Markov Model</p>
+<section id="what-amua-does" class="slide level2 center">
+<h2>What Amua does</h2>
+<div class="split-content">
+<div class="content-text">
+<p>However, Amua uses the complimentary probability to determine where the “left over” individuals go.</p>
+<p>As the diagram shows, in this example, all 0.04 “left-over” individuals are staying in sick. They do not have a chance to become healthy or get sicker.</p>
+<div class="bold">
+<p>This does not match the clinical reality for the population and disease.</p>
 </div>
-<div class="definition">
-<p>A mathematical model that represents a system where transitions between states occur with fixed probabilities, independent of the path taken to reach the current state (memoryless property).</p>
 </div>
-<div class="example">
-<div class="example-label">
-<p>Example:</p>
-</div>
-<div class="example-text">
-<p>A patient in the “Early Disease” state has a 0.15 probability of progressing to “Advanced Disease” each year, regardless of how long they’ve been in the early stage.</p>
-</div>
+<div class="content-visual">
+<p><img data-src="images/SensIssue/SensIssue_Stacked_OWSA_Split2.png"></p>
 </div>
 </div>
 </section>
-<section id="highlight-box-template" class="slide level2">
-<h2>(11) Highlight Box Template</h2>
-<div class="highlight-box">
-<div class="box-title">
-<p>Key Takeaway</p>
-</div>
-<p>Markov models assume memoryless transitions - the probability of moving to the next state depends only on the current state, not on the history of previous states.</p>
-</div>
-</section>
-<section id="continued-.-with-different-colors" class="slide level2">
-<h2>(11) Continued …. With Different Colors</h2>
-<div class="highlight-box primary">
-<div class="box-title">
-<p>Primary Highlight</p>
-</div>
-<p>This uses the primary blue color.</p>
-</div>
-<div class="highlight-box secondary">
-<div class="box-title">
-<p>Secondary Highlight</p>
-</div>
-<p>This uses the secondary teal color.</p>
-</div>
-</section>
-<section id="image-grid-template-2x2" class="slide level2">
-<h2>(12) Image Grid Template [2x2]</h2>
-<div class="image-grid grid-2x2">
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid_stackeOWSA.png"></p>
-<div class="image-caption">
-<p>Staked OWSA</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid_OWSA.png"></p>
-<div class="image-caption">
-<p>Tornado Diagram (OWSA)</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid_TWSA.png"></p>
-<div class="image-caption">
-<p>Two-Way Sensitvity</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid_CEAC.png"></p>
-<div class="image-caption">
-<p>CEA from PSA</p>
-</div>
-</div>
-</div>
-</section>
-<section id="image-grid-template-3x3" class="slide level2">
-<h2>(12) Image Grid Template [3x3]</h2>
-<div class="image-grid grid-3x3">
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_healthy.png"></p>
-<div class="image-caption">
-<p>Healthy</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_screen.png"></p>
-<div class="image-caption">
-<p>Screening</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_infected.png"></p>
-<div class="image-caption">
-<p>Infected</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_vaccine.png"></p>
-<div class="image-caption">
-<p>Vaccinated</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_sick.png"></p>
-<div class="image-caption">
-<p>Symptomatic</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_doctor.png"></p>
-<div class="image-caption">
-<p>Doctor vists</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_meds.png"></p>
-<div class="image-caption">
-<p>Treatment</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_hospital.png"></p>
-<div class="image-caption">
-<p>Hospital</p>
-</div>
-</div>
-<div class="image-item">
-<p><img data-src="assets/template_images/Grid3_death.png"></p>
-<div class="image-caption">
-<p>Die</p>
-</div>
-</div>
-</div>
-</section>
-<section id="process-flow-template" class="slide level2">
-<h2>(13) Process Flow Template</h2>
-<div class="process-flow">
-<div class="step">
-<div class="step-number">
-<p>1</p>
-</div>
-<div class="step-title">
-<p>Literature Review</p>
-</div>
-<div class="step-content">
-<p>Review guidelines and models</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>2</p>
-</div>
-<div class="step-title">
-<p>Expert Consultation</p>
-</div>
-<div class="step-content">
-<p>Engage clinicians</p>
-</div>
-</div>
-<div class="step">
-<div class="step-number">
-<p>3</p>
-</div>
-<div class="step-title">
-<p>Data Validation</p>
-</div>
-<div class="step-content">
-<p>Ensure data alignment</p>
-</div>
-</div>
-</div>
-</section>
-<section id="timeline-template" class="slide level2">
-<h2>(14) Timeline Template</h2>
-<div class="timeline">
-<div class="timeline-items">
-<div class="timeline-item">
-<div class="timeline-marker">
-<p>1</p>
-</div>
-<div class="timeline-content">
-<div class="timeline-title">
-<p>Define States</p>
-</div>
-<div class="timeline-description">
-<p>Identify health states</p>
-</div>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-marker">
-<p>2</p>
-</div>
-<div class="timeline-content">
-<div class="timeline-title">
-<p>Create Diagram</p>
-</div>
-<div class="timeline-description">
-<p>Draw bubble diagram</p>
-</div>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-marker">
-<p>3</p>
-</div>
-<div class="timeline-content">
-<div class="timeline-title">
-<p>Add Transitions</p>
-</div>
-<div class="timeline-description">
-<p>Define probabilities</p>
-</div>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-marker">
-<p>4</p>
-</div>
-<div class="timeline-content">
-<div class="timeline-title">
-<p>Validate</p>
-</div>
-<div class="timeline-description">
-<p>Expert review</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="pros-cons" class="slide level2">
-<h2>(15) Pros &amp; Cons</h2>
-<div class="pros-cons-new">
-<div class="pros-column">
-<div class="column-title">
-Advantages
-</div>
-<ul>
-<li>Clinically proven efficacy</li>
-<li>Well-tolerated by patients</li>
-<li>Lower cost per dose</li>
-<li>Easy administration</li>
-<li>Wide availability</li>
-</ul>
-</div>
-<div class="cons-column">
-<div class="column-title">
-Disadvantages
-</div>
-<ul>
-<li>Requires frequent dosing</li>
-<li>Some drug interactions</li>
-<li>Not suitable for all patients</li>
-<li>Long-term safety uncertain</li>
-<li>Limited durability</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="section-1" class="slide level2 quote-slide">
-<h2></h2>
-<div class="quote-text">
-<p>The goal of health economic modeling is not to predict the future, but to inform better decisions in the present.</p>
-</div>
-<div class="quote-author">
-<p>Milton Weinstein</p>
-</div>
-<div class="quote-context">
-<p>Harvard School of Public Health</p>
-</div>
-</section>
-<section id="section-2" class="slide level2 big-number-slide">
-<h2></h2>
-<div class="big-number">
-<p>17</p>
-</div>
-<div class="big-number-label">
-<p>Big Number Template</p>
-</div>
-<div class="big-number-context">
-<p>Commonly used willingness-to-pay threshold per quality-adjusted life year (QALY) in the United States</p>
-</div>
-</section>
-<section id="checklist-template" class="slide level2">
-<h2>(18) Checklist Template</h2>
-<section id="before-running-analysis" class="checklist">
-<h3>Before Running Analysis</h3>
-<ul>
-<li><p>All health states defined</p></li>
-<li><p>Transition probabilities validated</p></li>
-<li><p>Cycle length specified</p></li>
-<li><p>Time horizon determined</p></li>
-<li><p>Discount rate selected</p></li>
-</ul>
-</section>
-</section>
-<section id="section-3" class="slide level2 summary-end-slide">
+<section id="a-fix" class="slide level2 center">
+<h2>A Fix</h2>
+<p>The best way to avoid this in Amua is to use paired branches as shown below.</p>
+
+<img data-src="images/SensIssue/SensIssue_Split.png" class="r-stretch"></section>
+<section id="running-the-owsa-2" class="slide level2 center">
+<h2>Running the OWSA</h2>
+<p>The new model is running and now it is time for the OWSA.</p>
+<p>We again use the (fake) data to adjust p_die by 4%</p>
+
+<img data-src="images/SensIssue/SensIssue_Split_OWSA.png" class="r-stretch"></section>
+<section id="what-amua-does-1" class="slide level2 center">
+<h2>What Amua does</h2>
+<p>Now the “left-over” individuals are moved to the “Survive” branch. This allows them to continue to flow through the other possible events.</p>
+
+<img data-src="images/SensIssue/SensIssue_Split_OWSA_Fix.png" class="r-stretch"></section>
+<section id="section" class="slide level2 summary-end-slide center">
 <h2></h2>
 <div class="summary-circle">
 <div class="end-title">
-Key Takeaways
+<p>Key Takeaways</p>
 </div>
 <div class="end-subtitle">
-Subtitle
+<p>Amua Model Structures</p>
 </div>
 <div class="key-points">
 <ul>
-<li>Memoryless transitions</li>
-<li>Probabilistic modeling</li>
-<li>Time-based cycles</li>
-<li>Clinical validation</li>
+<li class="fragment">Having a plan for “left-overs” is very important in any software</li>
+<li class="fragment">Using a two-branch system is best for most scenarios in Amua</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="questions" class="slide level2 questions-slide">
-<h2>Questions?</h2>
-<div class="next-info">
-<p>Next Lecture: <strong>(20) Lecture Divider Slide</strong></p>
-</div>
-</section>
-<section id="more-options" class="slide level2" data-background-class="triangle-accent">
-<h2>More Options</h2>
-<p>These aren’t working so please let me know if you fix them</p>
-<ul>
-<li><code>chevron-accent</code> - Double chevrons (top right)</li>
-<li><code>circle-accent</code> - Large circle (bottom right)</li>
-<li><code>triangle-accent</code> - Triangle (top left)</li>
-<li><code>rounded-rect-accent</code> - Rounded rectangle (right side)</li>
-<li><code>quarter-circle-accent</code> - Quarter circle (top right corner)</li>
-<li><code>half-circle-accent</code> - Half circle (left side)</li>
-<li><code>diagonal-stripe-accent</code> - Diagonal stripe pattern</li>
-</ul>
+
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="assets/logos/logos.png" class="slide-logo"></p>
+<p><img src="images/logos.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="template_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="template_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="template_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="template_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="template_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="template_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="template_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="template_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -801,7 +385,7 @@ Subtitle
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -897,34 +481,21 @@ Subtitle
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
 
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
 
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
-          RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
@@ -1001,7 +572,7 @@ Subtitle
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/geratcliff\.github\.io\/vital-2026-Cebu");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

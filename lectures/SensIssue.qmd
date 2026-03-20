@@ -1,0 +1,221 @@
+---
+title: "Common Amua Sensitivity Issue"
+format:
+  revealjs:
+    theme: [default, _extensions/branding/custom-brand.scss]
+    width: 1600      # Wider canvas
+    height: 900      # Taller canvas (16:9 ratio)
+    margin: 0.1     # Minimal margins for max space
+    minScale: 0.2    # Allow more scaling down
+    maxScale: 2.0    # Allow more scaling up
+    center: true     # Vertically center content
+    slide-number: true
+    logo: images/logos.png 
+    html-math-method: katex
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+editor_options: 
+  chunk_output_type: console
+editor: source
+markdown: 
+  wrap: 72
+---
+
+## Quick Sensitivity Review
+
+When we run a sensitivity analysis, the goal is to **understand how the outcomes and decision would differ**. For this example, we will focus on one-way sensitivity analysis (OWSA) as it is easiest to show visually. However, this concept applies to all sensitivity.
+
+For a **OWSA, one parameter at a time is adjusted.** The value should be adjusted up and down to match clinical trials, clinical observation, or a reasonable estimate. This new value is put back into the model and the model is run again. The new values from the model can tell how much a variable impacts the model.
+
+## The Logic of the Issue
+
+To complete a OWSA, the model needs to have some method of "knowing" what to do with the difference between the original variable and the sensitivity variable.
+
+:::::::: info-cards
+::::::: card
+:::::: columns
+**For Example:**
+
+::: {.column width="45%"}
+If a probability is 0.4 in the model and then run on 0.6 in the OWSA, what probability is now 0.2 lower?
+:::
+
+::: {.column width="10%"}
+Or
+:::
+
+::: {.column width="45%"}
+If a probability is 0.4 in the model and then run on 0.3 in the OWSA, what probability is now 0.1 higher?
+:::
+::::::
+:::::::
+::::::::
+
+## A conceptual example
+
+::::: split-content
+::: content-text
+Let's look at one health state within a model.
+
+Individuals who start the cycle in Health State 1 can end the cycle in Health State 1, Health State 2, Health State 3, or Health State 4.
+:::
+
+::: content-visual
+![](images/SensIssue/SensIssue_Concept.png)
+:::
+:::::
+
+## Running the OWSA
+
+::::: split-content
+::: content-text
+To run the OWSA, the probability of going from "Health State 1" to "Health State 3" is decreased.
+:::
+
+::: content-visual
+![](images/SensIssue/SensIssue_Concept_OWSA.png)
+:::
+:::::
+
+## "Left-overs"
+
+::::: split-content
+::: content-text
+For lack of a better term we will call the people that no longer go from "Health State 1" to "Health State 3" the ["left-overs"]{style="color: #fa6800;"}.
+
+The model has to know where these individuals should go.
+:::
+
+::: content-visual
+![](images/SensIssue/SensIssue_Concept_OWSA_Vis.png)
+:::
+:::::
+
+## Placing the "left-overs"
+
+In some scenarios, the "left-over" individuals can all be shifted to one other probability. But there are also scenarios where individuals should be distributed.
+
+::::: split-content
+::: content-visual
+![](images/SensIssue/SensIssue_Concept_OWSA_Opt1.png)
+:::
+
+::: content-visual
+![](images/SensIssue/SensIssue_Concept_OWSA_Opt2.png)
+:::
+:::::
+
+## Lets walk through an example in Amua
+
+## The Model
+
+This is modeled using a Markov model based on the following bubble diagram. All individuals will start in Healthy.
+
+![](images/SensIssue/SensIssue_Bubble.png){fig-align="center"}
+
+## Let's focus on Sick
+
+::::: split-content
+::: content-text
+Based on the bubble diagram, individuals that are sick can:
+
+-   die of all-cause death
+
+-   remain sick
+
+-   get sicker
+
+-   heal
+:::
+
+::: content-visual
+![](images/SensIssue/SensIssue_Stacked.png)
+:::
+:::::
+
+## Running the OWSA
+::::: split-content
+::: content-text
+The model ran great and now it is time for the OWSA.
+
+::: bold
+Based on (fake) data we learn that p_die can be wrong by up to 4%
+:::
+:::
+
+::: content-visual
+![](images/SensIssue/SensIssue_Stacked_OWSA.png)
+:::
+:::::
+
+## What we expect
+
+::::: split-content
+::: content-text
+
+We expect that if less people are dying then there are more individuals that are sorted between healthy, remain sick, and getting sicker.
+:::
+::: content-visual
+![](images/SensIssue/SensIssue_Stacked_OWSA_Split1.png)
+:::
+:::::
+
+## What Amua does
+
+::::: split-content
+::: content-text
+However, Amua uses the complimentary probability to determine where the "left over" individuals go.
+
+As the diagram shows, in this example, all 0.04 "left-over" individuals are staying in sick. They do not have a chance to become healthy or get sicker.
+
+::: bold
+This does not match the clinical reality for the population and disease.
+:::
+:::
+::: content-visual
+
+![](images/SensIssue/SensIssue_Stacked_OWSA_Split2.png)
+
+:::
+:::::
+
+## A Fix
+
+The best way to avoid this in Amua is to use paired branches as shown below.
+
+![](images/SensIssue/SensIssue_Split.png)
+
+## Running the OWSA
+
+The new model is running and now it is time for the OWSA.
+
+We again use the (fake) data to adjust p_die by 4%
+
+![](images/SensIssue/SensIssue_Split_OWSA.png)
+
+## What Amua does
+
+Now the "left-over" individuals are moved to the "Survive" branch. This allows them to continue to flow through the other possible events.
+
+![](images/SensIssue/SensIssue_Split_OWSA_Fix.png)
+
+##  {.summary-end-slide}
+
+::::::: summary-circle
+::: end-title
+Key Takeaways
+:::
+
+::: end-subtitle
+Amua Model Structures
+:::
+
+:::: key-points
+::: incremental
+-   Having a plan for "left-overs" is very important in any software
+-   Using a two-branch system is best for most scenarios in Amua
+:::
+::::
+:::::::
+
