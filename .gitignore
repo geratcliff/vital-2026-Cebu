@@ -9,6 +9,7 @@ _site/
 *cache*
 #/site_libs/
 #*files*#
+#*html*
 *.json*
 *.feed*
 _bundled-daily-material/
