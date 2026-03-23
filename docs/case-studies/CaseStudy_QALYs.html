@@ -341,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#markov-models" id="toc-markov-models" class="nav-link" data-scroll-target="#markov-models">Markov Models</a>
   <ul class="collapse">
-  <li><a href="#add-a-daly-dimension" id="toc-add-a-daly-dimension" class="nav-link" data-scroll-target="#add-a-daly-dimension">Add a DALY Dimension</a>
+  <li><a href="#add-a-qale-dimension" id="toc-add-a-qale-dimension" class="nav-link" data-scroll-target="#add-a-qale-dimension">Add a QALE Dimension</a>
   <ul class="collapse">
   <li><a href="#a-important-parameters" id="toc-a-important-parameters" class="nav-link" data-scroll-target="#a-important-parameters">A: Important Parameters</a></li>
   <li><a href="#quality-of-life-adjustments" id="toc-quality-of-life-adjustments" class="nav-link" data-scroll-target="#quality-of-life-adjustments">Quality of Life Adjustments</a></li>
@@ -349,8 +349,8 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#add-qalys" id="toc-add-qalys" class="nav-link" data-scroll-target="#add-qalys">Add QALYs</a>
   <ul class="collapse">
-  <li><a href="#a-add-a-daly-outcome" id="toc-a-add-a-daly-outcome" class="nav-link" data-scroll-target="#a-add-a-daly-outcome">A: Add A DALY Outcome</a></li>
-  <li><a href="#add-outcome" id="toc-add-outcome" class="nav-link" data-scroll-target="#add-outcome">Add Outcome</a></li>
+  <li><a href="#a-add-a-qaly-outcome" id="toc-a-add-a-qaly-outcome" class="nav-link" data-scroll-target="#a-add-a-qaly-outcome">A: Add A QALY Outcome</a></li>
+  <li><a href="#b-add-qaly-to-the-model" id="toc-b-add-qaly-to-the-model" class="nav-link" data-scroll-target="#b-add-qaly-to-the-model">B: Add QALY to the model</a></li>
   <li><a href="#what-if-there-are-multiple-disability-weights-in-one-state" id="toc-what-if-there-are-multiple-disability-weights-in-one-state" class="nav-link" data-scroll-target="#what-if-there-are-multiple-disability-weights-in-one-state">What if there are multiple disability weights in one state?</a></li>
   </ul></li>
   </ul>
@@ -466,7 +466,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Symbol</strong>: Q</p></li>
 <li><p><strong>Decimals:</strong> 2</p></li>
 </ul></li>
-<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
+<li><p>Click <img src="images/QALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
 <li><p>For QALYs make sure the objective is <strong>maximizing</strong></p>
 <p><img src="images/QALYs/QALYProperties.png" class="img-fluid" width="555"></p></li>
 <li><p>We can now return to the tree and enter QALE values at each terminal node</p></li>
@@ -516,9 +516,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="markov-models" class="level1">
 <h1>Markov Models</h1>
-<section id="add-a-daly-dimension" class="level2">
-<h2 class="anchored" data-anchor-id="add-a-daly-dimension">Add a DALY Dimension</h2>
-<p>We now want to add a new outcome dimension: <strong>DALYs (Disability-Adjusted Life Years)</strong>. DALYs are a measure of disease burden, where <strong>0 = perfect health</strong> and <strong>1 = death</strong> per year lost. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.</p>
+<section id="add-a-qale-dimension" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-qale-dimension">Add a QALE Dimension</h2>
+<p>We now want to add a new outcome dimension: <strong>QALE (Disability-Adjusted Expectancy)</strong>. QALYs, where <strong>1 = perfect health</strong> and <strong>0 = death</strong>. For this model, we will add Years of Life Lost. To discount these from the start of time and the time of occurrence we will use the built in discounting (from start time) and add discounting from the time of death.</p>
 <div class="cell">
 <div class="cell-output-display">
 <a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_ANS.amua">
@@ -526,7 +526,6 @@ ul.task-list li input[type="checkbox"] {
 </a>
 </div>
 </div>
-<p><strong>To save time, we will go through the No Treat branch. A full answer key will be included at the end</strong></p>
 <section id="a-important-parameters" class="level3">
 <h3 class="anchored" data-anchor-id="a-important-parameters">A: Important Parameters</h3>
 </section>
@@ -552,16 +551,21 @@ ul.task-list li input[type="checkbox"] {
 <td>Quality-of-life (QoL) weight for healthy state.</td>
 </tr>
 <tr class="even">
+<td>u_treatment</td>
+<td>0.932</td>
+<td>Quality-of-life (QoL) weight for healthy state.</td>
+</tr>
+<tr class="odd">
 <td>u_sick</td>
 <td>0.842</td>
 <td>Quality-of-life (QoL) weight for sick health state.</td>
 </tr>
-<tr class="odd">
-<td>u_sick_treated</td>
-<td>0.87</td>
-<td>Quality-of-life (QoL) weight for sick health state if treated.</td>
-</tr>
 <tr class="even">
+<td>u_sicker</td>
+<td>0.645</td>
+<td>Quality-of-life (QoL) weight for sicker health state</td>
+</tr>
+<tr class="odd">
 <td>u_dead</td>
 <td>0</td>
 <td>Quality-of-life (QoL) weight for death health states.</td>
@@ -573,55 +577,45 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="add-qalys" class="level1">
 <h1>Add QALYs</h1>
-<section id="a-add-a-daly-outcome" class="level3">
-<h3 class="anchored" data-anchor-id="a-add-a-daly-outcome">A: Add A DALY Outcome</h3>
+<section id="a-add-a-qaly-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="a-add-a-qaly-outcome">A: Add A QALY Outcome</h3>
 <ol type="1">
 <li><p>In Amua, go to <strong>Model → Properties → Analysis tab</strong>.</p></li>
 <li><p>Add a new dimension:</p>
 <ul>
-<li><p><strong>Dimension</strong>: DALYs</p></li>
-<li><p><strong>Symbol</strong>: D</p></li>
+<li><p><strong>Dimension</strong>: QALE</p></li>
+<li><p><strong>Symbol</strong>: QALY</p></li>
 <li><p><strong>Decimals:</strong> 2</p></li>
 </ul></li>
-<li><p>Click <img src="images/DALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
-<li><p>Because DALY is a gap measure, change the objective to <strong>minimize DALYs (analogous to maximizing QALYs)</strong></p>
-<p><img src="images/DALYs/AdddalysProp.png" class="img-fluid" width="555"></p></li>
+<li><p>Click <img src="images/QALYs/refreshsymbol.png" width="25" height="18"><strong>Refresh</strong></p></li>
+<li><p>Change the “Analysis Type” to Cost-Effectiveness Analysis (CEA).</p></li>
+<li><p>Set the Cost, Effect, Baseline Strategy and Willingness-to-pay (WTP). Ensure that the Effect Objective is still set to mazimize.</p>
+<p><img src="images/QALYs/QALYProperties.png" class="img-fluid" width="555"></p></li>
+<li><p>Go to the Markov tab and add in the discount rate for DALYs. (3.0)</p></li>
 </ol>
 </section>
-<section id="add-outcome" class="level3">
-<h3 class="anchored" data-anchor-id="add-outcome">Add Outcome</h3>
-<ul>
-<li><p>Go to Model <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Properties <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> select the Analysis tab.</p></li>
-<li><p>Click the blue plus sign (<img src="../amua-images/add_16.png" class="img-fluid" alt="Custom Icon" width="15">) to add a new outcome. Add DALYs.</p></li>
-<li><p>Click the refresh button</p></li>
-<li><p>Change the “Analysis Type” to Cost-Effectiveness Analysis (CEA).</p></li>
-<li><p>Set the Cost, Effect, Baseline Strategy and Willingness-to-pay (WTP). Ensure that the Effect Objective is still set to minimize.</p></li>
-<li><p>Go to the Markov tab and add in the discount rate for DALYs. (3.0)</p>
-<p><img src="images/HSD_AddDALYOutcome.png" class="img-fluid"></p></li>
-</ul>
-<!-- -->
-<ul>
-<li><p>Next, in the model itself, define the cycle-specific payoffs based on the values in the tables above.</p>
-<ul>
-<li>Every place in the model where there is a value for YLD or YLL, we will put that in DALYs so that it sums them all together.
-<ul>
-<li>For Example: Under sick where it now has($) c_sick; (YLD) dw_sick ; (YLL) 0, we will have ($) c_sick; (YLD) dw_sick ; (YLL) 0 ; (DALY) dw_sick</li>
-</ul></li>
-</ul></li>
-</ul>
+<section id="b-add-qaly-to-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="b-add-qaly-to-the-model">B: Add QALY to the model</h3>
+<ol type="1">
+<li>Next, in the model itself, define the cycle-specific payoffs based on the values in the table above.</li>
+</ol>
+<pre><code>![](images/QALYs/TreatNoneQALYs.png){width="555"}</code></pre>
+<ol start="2" type="1">
+<li>Repeat the same thing with the Treat All branch. BUT also add a one time utility for treatment</li>
+</ol>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Check and run the model to get the CEA for DALYs</p>
+<p>Check and run the model to get the CEA for QALYs</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Strategy</th>
 <th>Cost</th>
-<th>DALY</th>
+<th>QALE</th>
 <th>ICER</th>
 <th>Note</th>
 </tr>
@@ -630,15 +624,15 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>Treat None</td>
 <td>40,286.24</td>
-<td>4.98</td>
+<td>14.8198</td>
 <td></td>
 <td>Baseline</td>
 </tr>
 <tr class="even">
 <td>Treat All</td>
 <td>51,548.10</td>
-<td>2.78</td>
-<td>5121.1089</td>
+<td>17.6283</td>
+<td>4009.9429</td>
 <td></td>
 </tr>
 </tbody>
@@ -646,11 +640,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Solution File: ADD FILE</p>
+<p>Solution File:</p>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_QALYS_ANS.amua">
+<button class="btn btn-primary"><i class="fa fa-save"></i> Full Amua File</button>
+</a>
+</div>
+</div>
 </section>
 <section id="what-if-there-are-multiple-disability-weights-in-one-state" class="level2">
 <h2 class="anchored" data-anchor-id="what-if-there-are-multiple-disability-weights-in-one-state">What if there are multiple disability weights in one state?</h2>
-<p>For Example: You may get a disability weight for being sick and for a reaction to medication.</p>
+<p>For Example: Suppose you can get AD heart failure and Stroke in one state.</p>
 <p>There are multiple ways to handle this: <a href="JointUtilityMethods.html">Joint Utility Methods Slides</a></p>
 
 

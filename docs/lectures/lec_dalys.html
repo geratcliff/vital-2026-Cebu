@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>Decision Analysis Workshop - Cebu – Modeling DALYs in Amua</title>
+  <title>Decision Analysis Workshop - Cebu – Disability-Adjusted Life Years</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -162,7 +162,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Modeling DALYs in Amua</h1>
+  <h1 class="title">Disability-Adjusted Life Years</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -179,7 +179,7 @@ Learning Objectives
 <p>01</p>
 </div>
 <div class="text">
-<p>Review of DALY health outcomes</p>
+<p>Today: Background on DALY health outcomes</p>
 </div>
 </div>
 <div class="list-item">
@@ -187,7 +187,7 @@ Learning Objectives
 <p>02</p>
 </div>
 <div class="text">
-<p>Tips and tricks for modeling DALYs in Amua</p>
+<p>Friday: Tips and tricks for modeling DALYs in Amua</p>
 </div>
 </div>
 </div>
@@ -196,6 +196,19 @@ Learning Objectives
 <h2>Overview of DALY Outcomes</h2>
 <div class="section-number">
 <p>01</p>
+</div>
+</section>
+<section id="summary" class="slide level2 center">
+<h2>Summary</h2>
+<div class="icon-bullets">
+<ul>
+<li class="fragment">DALYs not as frequently used in HTAs or CEAs.</li>
+<li class="fragment">Used for resource allocation in LMICs, but with sparse methodological guidance.
+<ul>
+<li class="fragment">Exceptions: <span class="citation" data-cites="rushby2001">Fox-Rushby and Hanson (<a href="#/references" role="doc-biblioref" onclick="">2001</a>)</span> , <span class="citation" data-cites="larson2013calculating">Larson (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>, and <span class="citation" data-cites="sassi2006calculating">Sassi (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span>.</li>
+<li class="fragment">Our methods replicate each: <a href="https://graveja0.github.io/dalys/notebooks/FRH-replication-preview.html">Link to workbook.</a></li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="common-outcomes" class="slide level2 center">
@@ -223,7 +236,7 @@ Learning Objectives
 <ul>
 <li class="fragment">Reflect both occupancy- and transition-based payoffs.</li>
 <li class="fragment">There’s also <em>very</em> little guidance on how to structure a decision model for DALY outcomes.</li>
-<li class="fragment">We’ll show you how today!</li>
+<li class="fragment">We’ll show you how this week!</li>
 </ul>
 </div>
 </section>
@@ -243,8 +256,8 @@ Learning Objectives
 </section>
 <section id="dalys-1" class="slide level2 center">
 <h2>DALYs</h2>
-<p><a href="https://en.wikipedia.org/wiki/Disability-adjusted_life_year"><img data-src="images/dalys/DALY_disability_affected_life_year_infographic.svg" width="1500"></a></p>
-<div class="fragment">
+
+<img data-src="images/dalys/DALY_disability_affected_life_year_infographic.svg" width="1500" class="r-stretch"><div class="fragment">
 <div class="highlight-box">
 <p><strong>DALYs = YLL + YLD</strong></p>
 <ul>
@@ -270,6 +283,12 @@ YLD(c) = D_c \cdot L_c
 <section id="years-of-life-lost-to-premature-mortality" class="slide level2 center">
 <h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
 <div class="icon-bullets">
+
+</div>
+</section>
+<section id="years-of-life-lost-to-premature-mortality-1" class="slide level2 center">
+<h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
+<div class="icon-bullets">
 <ul>
 <li class="fragment">YLL are defined by by a “loss function.”</li>
 <li class="fragment">Drawn from a reference life table, indicating remaining life expectancy at age <span class="math inline">a</span>.</li>
@@ -279,10 +298,24 @@ YLL(a)= Ex(a)
 </ul>
 </div>
 </section>
-<section id="years-of-life-lost-to-premature-mortality-1" class="slide level2 center">
-<h2><span class="r-fit-text">Years of Life Lost to Premature Mortality</span></h2>
+<section id="life-expectancy-yll" class="slide level2 center">
+<h2>Life Expectancy &amp; YLL</h2>
 <div class="icon-bullets">
-
+<ul>
+<li class="fragment"><strong>Contextual Choices:</strong> Remaining life expectancy values may vary by research context <span class="citation" data-cites="anand2019">(<a href="#/references" role="doc-biblioref" onclick="">Anand and Reddy 2019</a>)</span>.</li>
+<li class="fragment"><strong>Historical Method:</strong> GBD uses an <em>exogenous</em> life table approximating maximum human lifespan.</li>
+<li class="fragment"><strong>Alternatives:</strong> <em>Endogenous</em> tables or models may be preferred in certain cases.</li>
+</ul>
+</div>
+</section>
+<section id="exogenous-vs.-endogenous-life-tables" class="slide level2 center">
+<h2>Exogenous vs.&nbsp;Endogenous Life Tables</h2>
+<div class="icon-bullets">
+<ul>
+<li class="fragment"><strong>Distinction:</strong> Source of life expectancy values (external vs. internal).</li>
+<li class="fragment"><strong>Exogenous:</strong> Independent mortality risks, using GBD’s reference table.</li>
+<li class="fragment"><strong>Endogenous:</strong> Specific to the population’s mortality risks and health states.</li>
+</ul>
 </div>
 </section>
 <section id="dalys-2" class="slide level2 center">
@@ -307,6 +340,13 @@ DALY(c,a) = YLD(c) + YLL(a)
 <li class="fragment"><strong>WHO-CHOICE:</strong> Time discounting of health outcomes.</li>
 </ul>
 </div>
+<!-- ## Incremental CEA -->
+<!-- ::: arrow-bullets -->
+<!-- - ICERs are based on cost per DALYs *averted* -->
+<!-- - Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel) -->
+<!-- - Alternative: define YLL and YLD outcomes as their negative values. -->
+<!--   - CEA will work, but expected values will be negative. -->
+<!-- ::: -->
 </section>
 <section id="section-1" class="slide level2 summary-end-slide center">
 <h2></h2>
@@ -345,156 +385,15 @@ DALY(c,a) = YLD(c) + YLL(a)
 <li class="fragment">But if you do need to discount …
 <ul>
 <li class="fragment">You’re going to see some math expressions that take care of discounting for YLL outcomes.</li>
-<li class="fragment">This math adds some complexity but not much insight, so I’ll gloss over it a bit</li>
-<li class="fragment">We’ll provide you the formulas to use here and in the .amua model file.</li>
+<li class="fragment">This math adds some complexity but not much insight, so we won’t belabor it in slides.</li>
+<li class="fragment">We’ll provide you the formulas to use here and in the .amua model file on Friday.</li>
 </ul></li>
 </ul>
 </div>
-</div>
-</section>
-<section id="mathematical-formulation-for-dalys-in-amua" class="slide level2 center">
-<h2>Mathematical Formulation for DALYs in AMUA</h2>
-<div class="arrow-bullets">
-<ul>
-<li><p><span class="math inline">YLD(c) = D_c</span>.</p></li>
-<li><p><span class="math inline">YLL(a,t)=  Ex(a)\exp(-\ln(1+r)*t)</span>.</p>
-<ul>
-<li><p><span class="math inline">a</span> is the time of death</p></li>
-<li><p><span class="math inline">r</span> is the discount rate you’re using in the model (e.g., 3%).</p></li>
-<li><p><span class="math inline">t</span> is the cycle number at which premature death occurs.</p></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="mathematical-formulation-for-dalys-in-amua-1" class="slide level2 center">
-<h2>Mathematical Formulation for DALYs in AMUA</h2>
-<div class="arrow-bullets">
-<ul>
-<li><p><span class="math inline">YLD(c)=</span> <code>dw_c</code>.</p></li>
-<li><p><span class="math inline">YLL(a,t)=</span> <code>tbl_ref_lt[initial_age+t,1]</code> <span class="math inline">*\exp(-\log(1+</span> <code>r_disc</code> <span class="math inline">)*</span> <code>t</code><span class="math inline">)</span>.</p></li>
-</ul>
-</div>
-</section>
-<section id="overview-of-decision-problem" class="slide level2 center">
-<h2>Overview of Decision Problem</h2>
-<div class="icon-bullets">
-<ul>
-<li class="fragment">Progressive disease model (from case study)</li>
-<li class="fragment">Focus only on cohort of individuals who develop mild disease.</li>
-<li class="fragment">Follow until death (from disease-related or other causes)</li>
-</ul>
-</div>
-</section>
-<section id="overview-of-decision-problem-1" class="slide level2 center">
-<h2>Overview of Decision Problem</h2>
-<div class="icon-bullets">
-<ul>
-<li class="fragment">Major difference from case study: can ignore Healthy state.</li>
-<li class="fragment">Strategies: Status quo, prevention, treatment</li>
-</ul>
-</div>
-</section>
-<section id="methods-structuring-the-model" class="slide level2 section-slide center">
-<h2>Methods: Structuring the Model</h2>
-<div class="section-number">
-<p>02</p>
-</div>
-</section>
-<section id="state-transition-diagram" class="slide level2 nostretch center">
-<h2>State Transition Diagram</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/dalys/clipboard-2723911892.png" class="quarto-figure quarto-figure-center" width="800"></p>
-</figure>
-</div>
-</section>
-<section id="defining-outcomes-in-amua" class="slide level2 center">
-<h2>Defining Outcomes in Amua</h2>
-<div class="icon-bullets-triangle">
-<ul>
-<li class="fragment">YLD: New Outcome. Use disability weights instead of utility weights!</li>
-<li class="fragment">YLL: One-time “event” at time of death from disease.
-<ul>
-<li class="fragment">“Cost”: present value of remaining life expectancy at age of death in the model.</li>
-<li class="fragment">Intuition: we penalize premature death from disease using the remaining life expectancy at the age in which the person dies.</li>
-</ul></li>
-<li class="fragment">Need to also define the discount rate as a parameter <code>r_disc</code></li>
-</ul>
-</div>
-</section>
-<section id="interactive-amua-session" class="slide level2 center">
-<h2>Interactive Amua Session</h2>
-</section>
-<section id="occupancy-based-payoff-yld" class="slide level2 center">
-<h2>Occupancy-Based Payoff: YLD</h2>
-<div class="arrow-bullets">
-<ul>
-<li>YLD is an “occupancy-based” payoff (i.e., YLD increments by disability weight for each cycle in that health state).
-<ul>
-<li>Add <code>dw_mild</code> = 0.08</li>
-<li>Add <code>dw_progressive</code> = 0.15</li>
-<li>Add <code>dw_progressive_treated</code> = 0.13</li>
-</ul></li>
-<li>Mild disease state: <code>dw_mild</code></li>
-<li>Progressive disease state: <code>dw_progressive</code></li>
-</ul>
-</div>
-</section>
-<section id="transition-based-payoff-yll" class="slide level2 center">
-<h2>Transition-Based Payoff: YLL</h2>
-<div class="arrow-bullets">
-<ul>
-<li>Remaining life expectancies are drawn from the reference life table, or from an endogenous life table.</li>
-<li>Import reference life table as lookup table—just like we did with background mortality, etc.</li>
-<li>Remember to use the “Truncate” option because the life table may not extend to the maximum age in the model.</li>
-</ul>
-</div>
-<div class="footer">
-<p>Additional slides below (hit down button).</p>
-</div>
-</section>
-<section id="life-expectancy-yll" class="slide level2 center">
-<h2>Life Expectancy &amp; YLL</h2>
-<div class="icon-bullets">
-<ul>
-<li class="fragment"><strong>Contextual Choices:</strong> Remaining life expectancy values may vary by research context <span class="citation" data-cites="anand2019">(<a href="#/references" role="doc-biblioref" onclick="">Anand and Reddy 2019</a>)</span>.</li>
-<li class="fragment"><strong>Historical Method:</strong> GBD uses an <em>exogenous</em> life table approximating maximum human lifespan.</li>
-<li class="fragment"><strong>Alternatives:</strong> <em>Endogenous</em> tables or models may be preferred in certain cases.</li>
-</ul>
-</div>
-</section>
-<section id="exogenous-vs.-endogenous-life-tables" class="slide level2 center">
-<h2>Exogenous vs.&nbsp;Endogenous Life Tables</h2>
-<div class="icon-bullets">
-<ul>
-<li class="fragment"><strong>Distinction:</strong> Source of life expectancy values (external vs. internal).</li>
-<li class="fragment"><strong>Exogenous:</strong> Independent mortality risks, using GBD’s reference table.</li>
-<li class="fragment"><strong>Endogenous:</strong> Specific to the population’s mortality risks and health states.</li>
-</ul>
-</div>
-</section>
-<section id="incremental-cea" class="slide level2 center">
-<h2>Incremental CEA</h2>
-<div class="arrow-bullets">
-<ul>
-<li>ICERs are based on cost per DALYs <em>averted</em></li>
-<li>Must export expected cost and DALY outcomes, then do ICER calculations outside Amua (e.g., Excel)</li>
-<li>Alternative: define YLL and YLD outcomes as their negative values.
-<ul>
-<li>CEA will work, but expected values will be negative.</li>
-</ul></li>
-</ul>
 </div>
 </section>
 <section id="thanks" class="slide level2 questions-slide center">
 <h2>Thanks!</h2>
-<div class="highlight-box primary">
-<p>Draft manuscript (with R code) available online at <a href="https://graveja0.github.io/dalys/" class="uri">https://graveja0.github.io/dalys/</a></p>
-</div>
-
-<img data-src="images/dalys/adobe-express-qr-code.png" class="quarto-figure quarto-figure-center r-stretch" style="width:25.0%"><div class="next-info">
-<p>Next: Advanced Topics</p>
-</div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -503,6 +402,15 @@ DALY(c,a) = YLD(c) + YLL(a)
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-anand2019" class="csl-entry" role="listitem">
 Anand, Sudhir, and Sanjay G. Reddy. 2019. <span>“The Construction of the DALY: Implications and Anomalies.”</span> <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3451311">https://doi.org/10.2139/ssrn.3451311</a>.
+</div>
+<div id="ref-rushby2001" class="csl-entry" role="listitem">
+Fox-Rushby, Ja, and K Hanson. 2001. <span>“Calculating and Presenting Disability Adjusted Life Years (DALYs) in Cost-Effectiveness Analysis.”</span> <em>Health Policy and Planning</em> 16 (3): 326–31. <a href="https://doi.org/10.1093/heapol/16.3.326">https://doi.org/10.1093/heapol/16.3.326</a>.
+</div>
+<div id="ref-larson2013calculating" class="csl-entry" role="listitem">
+Larson, Bruce A. 2013. <span>“Calculating Disability-Adjusted-Life-Years Lost (DALYs) in Discrete-Time.”</span> <em>Cost Effectiveness and Resource Allocation</em> 11 (1): 1–6.
+</div>
+<div id="ref-sassi2006calculating" class="csl-entry" role="listitem">
+Sassi, Franco. 2006. <span>“Calculating QALYs, Comparing QALY and DALY Calculations.”</span> <em>Health Policy and Planning</em> 21 (5): 402–8.
 </div>
 </div>
 </section>
