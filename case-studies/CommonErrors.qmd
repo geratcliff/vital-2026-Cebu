@@ -186,7 +186,6 @@ download_link(
 )
 ```
 
-<br>
 
 ```{r, echo = FALSE}
 library(downloadthis)
