@@ -1,0 +1,8 @@
+Name,Expression,Notes (optional)
+prev,0.08,Prevelance of Disease X at age 50
+p_sick,0.03,Annual probability of getting Disease X
+p_diseasedeath,0.15,Annual probability of dying from Disease X
+hr_treated,0.5,Hazard ratio of being treated
+initial_age,50,Age at the start of the model
+c_treatment,30000,Cost of Treatment
+c_pall,15000,Cost of Pallative Care
