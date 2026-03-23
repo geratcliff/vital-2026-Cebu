@@ -20,6 +20,6 @@ _gbd_lifetables/IHME*
 _gbd_lifetables/life-tables-2019.rds
 _website-usb/
 _jag-ignore:/
-docs/site_libs/
+
 
 **/*.quarto_ipynb
