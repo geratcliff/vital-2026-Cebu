@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-00b3e0f491c887a031945d3e0bd25d56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.24">
+
+  <title>Decision Analysis Workshop - Cebu – CEA Fundamentals: Valuing Outcomes</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1722a793d212abede37164dd4cad22d6.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">CEA Fundamentals: Valuing Outcomes</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="learning-objectives-and-outline" class="slide level2 section-slide center">
+<h2>Learning Objectives and Outline</h2>
+<div class="section-number">
+<p>00</p>
+</div>
+</section>
+<section id="learning-objectives" class="slide level2 center">
+<h2>Learning Objectives</h2>
+<div class="arrow-bullets">
+<ul>
+<li><p>Understand the concepts of summary measures of health, specifically, quality-adjusted life years (QALYs)</p></li>
+<li><p>Describe the general differences between direct and indirect methods for estimating health state utilities</p></li>
+<li><p>Curate model parameters for quantifying “benefits” (the denominator in the C/E ratio)</p></li>
+</ul>
+</div>
+</section>
+<section id="outline" class="slide level2 numbered-list-slide center">
+<h2>Outline</h2>
+<div class="number-list">
+<div class="list-item">
+<div class="number">
+<p>01</p>
+</div>
+<div class="text">
+<p>Clinical Outcomes</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>02</p>
+</div>
+<div class="text">
+<p>Summary Measurements</p>
+</div>
+</div>
+<div class="list-item">
+<div class="number">
+<p>03</p>
+</div>
+<div class="text">
+<p>Alternatives to ICERs</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="icer-review" class="title-slide slide level1 center">
+<h1>ICER review</h1>
+
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Numerator (costs)</p>
+</div>
+<div class="definition">
+<p>Valued in monetary terms</p>
+</div>
+<div class="split-content">
+<div class="content-text">
+<div class="example">
+<p>Examples:</p>
+<div class="arrow-bullets">
+<ul>
+<li>$USD</li>
+<li>₦NGN</li>
+<li>KES</li>
+<li>R</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="content-text">
+<p><span class="math display">
+\frac{\colorbox{#CfAE70}{$C_1 - C_0 \quad  (\Delta C)$}}{E_1 - E_0 \quad  (\Delta E)}
+</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Denominator (benefits)</p>
+</div>
+<div class="definition">
+<p>Valued in terms of <strong>clinical outcomes</strong></p>
+</div>
+<div class="split-content">
+<div class="content-text">
+<div class="example">
+<p>Examples:</p>
+<div class="arrow-bullets">
+<ul>
+<li># of HIV cases prevented</li>
+<li># of children seizure free</li>
+<li># of quality-adjusted life years gained</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="content-text">
+<p><span class="math display">
+\frac{C_1 - C_0 \quad  (\Delta C)}{\colorbox{#CfAE70}{$E_1 - E_0 \quad  (\Delta E)$}}
+</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="benefits" class="slide level2 center">
+<h2>Benefits</h2>
+<div class="arrow-bullets">
+<ul>
+<li class="fragment">What’s important for the question at hand</li>
+<li class="fragment">Most analyses report several different outcomes</li>
+<li class="fragment">QALYs/DALYs enable comparability across disease areas</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="valuing-health-outcomes" class="title-slide slide level1 center">
+<h1>Valuing Health Outcomes</h1>
+
+</section>
+<section id="clinical-outcomes" class="slide level2 section-slide center">
+<h2>Clinical Outcomes</h2>
+<div class="section-number">
+<p>01</p>
+</div>
+</section>
+<section id="what-are-they" class="slide level2 center">
+<h2>What are they?</h2>
+<p>Clinical outcomes allow us to measure particular events in a decision tree or health economic model.</p>
+<p>For Example:</p>
+<div class="concept-grid text-smaller">
+<div class="concept-box">
+<p># of HIV cases prevented</p>
+</div>
+<div class="concept-box">
+<p># of children seizure free</p>
+</div>
+<div class="concept-box">
+<p># of healthy pregnancies</p>
+</div>
+</div>
+<div class="concept-grid text-smaller">
+<div class="concept-box">
+<p># of hospital visits</p>
+</div>
+<div class="concept-box">
+<p># of disease deaths</p>
+</div>
+<div class="concept-box">
+<p># of cancer progressions</p>
+</div>
+</div>
+</section>
+<section id="when-are-they-used" class="slide level2 center">
+<h2>When are they used?</h2>
+<div class="icon-bullets-triangle">
+<ul>
+<li>Policy holders need the information</li>
+<li>The outcome holds high importance</li>
+<li>Short-term models</li>
+</ul>
+</div>
+</section>
+<section id="how-do-you-choose-one" class="slide level2 center">
+<h2>How do you choose one?</h2>
+<p>“Is implementing screening for colon cancer cost-effective?”</p>
+<p><span class="accent-text fragment" data-fragment-index="0"><strong>What concerns might arise for each of these?</strong></span></p>
+<ul>
+<li>Number of cases of colon cancer <span class="accent-text fragment" data-fragment-index="1">Screening will increase the number of cases caught.</span></li>
+<li>Number of cases of STAGE 1 colon cancer <span class="accent-text fragment" data-fragment-index="2">Could heavily favor Screening</span></li>
+<li>Number of cancer deaths <span class="accent-text fragment" data-fragment-index="3">Deaths aren’t the healthcare burden</span></li>
+<li>Number of hospitalizations from colon cancer <span class="accent-text fragment" data-fragment-index="4">Minimal Data</span></li>
+<li>Number of screenings completed <span class="accent-text fragment" data-fragment-index="5">Focuses on implementation</span></li>
+<li>etc.</li>
+</ul>
+<p><span class="accent-text fragment" data-fragment-index="6"><strong>All these are still great outcomes, they just highlight important considerations when choosing the one for your research question</strong></span></p>
+</section>
+<section id="a-well-defined-clinical-outcome" class="slide level2 center">
+<h2>A Well Defined Clinical Outcome</h2>
+<div class="horizontal-comparison">
+<div class="comparison-row">
+<div class="row-header">
+<p>Specific</p>
+</div>
+<div class="row-content">
+<ul>
+<li><p>Each outcome should describe one clear event or condition.</p></li>
+<li><p>If you combine too many things into one outcome, it can be hard to understand why strategies are different.</p></li>
+<li><p>When possible, use separate outcomes for different events (for example: survival, complications, hospitalizations).</p></li>
+</ul>
+</div>
+</div>
+<div class="comparison-row">
+<div class="row-header">
+<p>Prevent biasing a strategy</p>
+</div>
+<div class="row-content">
+<ul>
+<li>Make sure the outcome truly shows <strong>what is happening clinically</strong>, not just what is cheap or expensive.</li>
+<li>Some bad events may look “good” in a model because they cost less. (For example, <strong>death has low cost</strong>, but it is clearly a bad outcome.)</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row">
+<div class="row-header">
+<p>Answers your research question</p>
+</div>
+<div class="row-content">
+<ul>
+<li>Chosen outcomes should generate information that is meaningful for the research objective and decision context.</li>
+<li>Focus model structure and computational effort on outcomes that influence decision‑making ot drive differences in outcomes.</li>
+</ul>
+</div>
+</div>
+<div class="comparison-row">
+<div class="row-header">
+<p>Data is available</p>
+</div>
+<div class="row-content">
+<ul>
+<li>As with much of economic modeling, clinical outcomes rely on accurate data</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-measurements" class="slide level2 section-slide center">
+<h2>Summary Measurements</h2>
+<div class="section-number">
+<p>02</p>
+</div>
+</section>
+<section id="why-summary-measures-of-health" class="slide level2 center">
+<h2>Why summary measures of health?</h2>
+<h3 id="qalys-and-dalys-both-provide-a-summary-measure-of-health"><span class="accent-text">QALYs and DALYs both provide a summary measure of health</span></h3>
+<p>Allow comparison of health attainment/disease burden</p>
+<div class="icon-bullets">
+<ul>
+<li>Across diseases</li>
+<li>Across populations</li>
+<li>Over time</li>
+<li>Etc.</li>
+</ul>
+</div>
+</section>
+<section id="intro-to-qalys" class="slide level2 center">
+<h2>Intro to QALYs</h2>
+<div class="split-content">
+<div class="content-text">
+<p>Origin story: welfare economics</p>
+<ul>
+<li><span class="bold">Utility</span> = holistic measure of satisfaction or well-being</li>
+</ul>
+<p>With <span class="bold accent-text">QALYs</span>, two dimensions of interest:</p>
+<div class="concept-grid">
+<div class="concept-box accent">
+<p><span class="bold db-text">Length of life</span><br> measured in life-years</p>
+</div>
+<div class="concept-box accent text-smaller">
+<p><span class="bold db-text">Quality of life</span> <br> measured by utility weight, usually between 0 and 1</p>
+</div>
+</div>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec5b/QALYs.png"></p>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>QALYs</p>
+</div>
+<div class="definition">
+<p>A metric that reflects both changes in life expectancy and quality of life (pain, function, or both).</p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Formula:</p>
+</div>
+<div class="split-content">
+<div class="content-text">
+<p>Quality Adjusted Life Years = <br> Sum of weight * duration of life</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec5b/QALY_scale.png"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-patient-with-coronary-heart-disease-with-surgery" class="slide level2 center">
+<h2>Example: Patient with coronary heart disease <span class="accent-text">(with surgery)</span></h2>
+<div style="position: relative; height: 500px;">
+<div class="fragment fade-out" data-fragment-index="0" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+<p><img data-src="images/lec5b/example_surgery.png" width="900"></p>
+</div>
+<div class="fragment fade-in" data-fragment-index="0" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+<p><img data-src="images/lec5b/example_surgery_math.png" width="900"></p>
+</div>
+</div>
+<div class="fragment center-text" data-fragment-index="2">
+<p>QALYS = <span style="color:#f26522;">(3yrs * 1.000)</span> + <span style="color:#21409a;">(1.5yrs * 0.5)</span> + <span style="color:#00a14b;">(5yrs * 0.75)</span> + <span style="color:#7f3f98;">(0.5yrs * 0.25)</span> <br></p>
+</div>
+<div class="fragment center-text bold" data-fragment-index="3">
+<p>= 7.625 QALYs <br></p>
+</div>
+<div style="font-size: 0.6em">
+<p><em>Source: Harvard Decision Science</em></p>
+</div>
+</section>
+<section id="example-patient-with-coronary-heart-disease-without-surgery" class="slide level2 center">
+<h2>Example: Patient with coronary heart disease <span class="accent-text">(without surgery)</span></h2>
+<div style="position: relative; height: 500px;">
+<div class="fragment fade-out" data-fragment-index="0" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+<p><img data-src="images/lec5b/example_nosurgery.png" width="900"></p>
+</div>
+<div class="fragment fade-in" data-fragment-index="0" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+<p><img data-src="images/lec5b/example_nosurgery_math.png" width="900"></p>
+</div>
+</div>
+<div class="fragment center-text" data-fragment-index="2">
+<p>QALYS = <span style="color:#f26522;">(3yrs * 1.000)</span> + <span style="color:#21409a;">(1.5yrs * 0.5)</span> + <span style="color:#21409a;">(5yrs * 0.5)</span> + <span style="color:#7f3f98;">(0.5yrs * 0.25)</span> <br></p>
+</div>
+<div class="fragment center-text bold" data-fragment-index="3">
+<p>= 6.375 QALYs <br></p>
+</div>
+<div style="font-size: 0.6em">
+<p><em>Source: Harvard Decision Science</em></p>
+</div>
+</section>
+<section id="example-patient-with-coronary-heart-disease" class="slide level2 center">
+<h2>Example: Patient with coronary heart disease</h2>
+<div class="comparison-table">
+<div class="comparison-column">
+<div class="column-header">
+<p>Life Years</p>
+</div>
+<div class="column-content">
+<ul>
+<li>With surgery: 10 LYs</li>
+<li>Without surgery: 10 LYs</li>
+<li>Benefit from surgery intervention: <br> 10LYs – 10LYs <br> <span class="bold accent-text">= 0 LYs</span></li>
+</ul>
+</div>
+</div>
+<div class="comparison-column fragment">
+<div class="column-header">
+<p>QALYs</p>
+</div>
+<div class="column-content">
+<ul>
+<li>With surgery: 7.625 QALYs</li>
+<li>Without surgery: 6.375 QALYs</li>
+<li>Benefit from surgery intervention: <br> 7.625 QALYs – 6.375 QALYs <br> <span class="bold accent-text">= 1.25 QALYs</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="utility-weights-how-are-they-obtained" class="slide level2 center">
+<h2>Utility weights – How are they obtained?</h2>
+<ul>
+<li>Utility weights for most health states are between 0 (death) and 1 (perfect health)</li>
+</ul>
+<div class="simple-comparison">
+<div class="comparison-column">
+<div class="column-header">
+<p>Direct methods:</p>
+</div>
+<div class="column-content">
+<ul>
+<li>Standard gamble</li>
+<li>Time trade-Off</li>
+<li>Rating scales</li>
+</ul>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Indirect methods:</p>
+</div>
+<div class="column-content">
+<ul>
+<li>EQ-5D</li>
+<li>Other utility instrument: SF-36; Health Utilities Index (HUI)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="direct-methods---standard-gamble-sg" class="slide level2 split-wrapper smaller center">
+<h2>Direct methods - Standard Gamble (SG)</h2>
+<p><span class="accent-text">What risk of death would you accept in order to avoid [living with an <strong>amputated leg</strong> for the rest of your life] and live the rest of your life in perfect health?</span></p>
+<div class="split-content">
+<div class="content-visual">
+<p><img data-src="images/lec5b/SG_amp.png"></p>
+</div>
+<div class="content-text">
+<ul>
+<li class="fragment">Find the threshold <span class="math inline">p</span> that sets EV(A) = EV(B)</li>
+<li class="fragment">Assume respondent answered that they would be indifferent between A and B at a threshold of <span class="math inline">pDeath</span> = 0.10</li>
+<li class="fragment">Then U(Amputation) = <span class="math inline">p</span>*U(Death) + <span class="math inline">(1-p)</span>*U(Perfect Health) = 0.10*0 + (1-0.10)*1 = <strong>0.9</strong> = <span class="accent-text">threshold of indifference between surgery &amp; no surgery (I will live with this rather than have a high risk of dying)</span></li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<ol type="1">
+<li><p>The STANDARD GAMBLE technique asks patients (FOR EXAMPLE) - I WANT YOU TO IMAGINE</p></li>
+<li><p>Your leg gets amputated above the knee</p></li>
+<li><p>This doesn’t impact your life expectancy, but you now live your life with an amputated leg</p></li>
+<li><p>Now, there’s a NEW TREATMENT available where they can re-attach your leg</p></li>
+<li><p>But the treatment is RISKY &amp; those undergoing it have a probability of dying</p></li>
+<li><p>The standard gamble technique asks you to find the THRESHOLD of indifference between SURGERY &amp; NO SURGERY</p></li>
+<li><p>In other words, let’s say you have a 30% probability of dying: Would you do the treatment?</p></li>
+</ol>
+<ul>
+<li><p>What about a 20% probability of dying?</p></li>
+<li><p>What about a 10%? - Ajay says yes, .90 is your utility value for the health state of living with an amputated knee Etc.</p></li>
+</ul>
+<ol start="8" type="1">
+<li>Okay, I will live with this rather than have any high risk of dying”***</li>
+</ol>
+<p>This is the STANDARD GAMBLE TECHNIQUE</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="direct-methods---standard-gamble-sg-1" class="slide level2 split-wrapper small center">
+<h2>Direct methods - Standard Gamble (SG)</h2>
+<p><span class="accent-text">What risk of death would you accept in order to avoid [living with <strong>stroke</strong> for the rest of your life] and live the rest of your life in perfect health?</span></p>
+<div class="split-content">
+<div class="content-visual">
+<p><img data-src="images/lec5b/SG_stroke.png"></p>
+</div>
+<div class="content-text fragment">
+<p><span class="secondary-text">As a result of a stroke, you</span></p>
+<div style="font-size: 2.5vh;">
+<ul>
+<li><p>Have impaired use of your left arm and leg</p></li>
+<li><p>Need some help bathing and dressing</p></li>
+<li><p>Need a cane or other device to walk</p></li>
+<li><p>Experience mild pain a few days per week</p></li>
+<li><p>Are able to work, with some modifications</p></li>
+<li><p>Need assistance with shopping, household chores, errands</p></li>
+<li><p>Feel anxious and depressed sometimes</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="direct-methods---time-trade-off-tto" class="slide level2 center">
+<h2>Direct methods - Time Trade-Off (TTO)</h2>
+<div class="icon-bullets-triangle">
+<ul>
+<li><p>An alternative to standard gamble</p></li>
+<li><p>Instead of risk of death, TTO uses time alive to value health states</p></li>
+<li><p>Does not involve uncertainty in choices</p></li>
+<li><p>Task might be easier for some respondents compared to standard gamble</p></li>
+</ul>
+</div>
+</section>
+<section id="direct-methods---time-trade-off-tto-1" class="slide level2 center">
+<h2>Direct methods - Time Trade-Off (TTO)</h2>
+<div class="center-text">
+<p><span class="accent-text">What portion of your current life expectancy of 40 years would you give up to improve your current health state <strong>stroke</strong> to ‘perfect health’?</span></p>
+<div class="fragment">
+<p><img data-src="images/lec5b/TTO.png" style="max-width: 50%;"></p>
+</div>
+<div class="fragment">
+<p>U(Post-Stroke) * 40 years <span class="bold">=</span> U(Perfect Health) * 25 years + U(Dead) * 15 years</p>
+<p>U(Post-Stroke) * 40 years <span class="bold">=</span> 1 * 25 years + 0 * 15 years</p>
+<p>U(Post-Stroke) = 25/40 = <span class="bold">0.625</span></p>
+</div>
+</div>
+</section>
+<section id="sg-vs-tto" class="slide level2 center">
+<h2>SG vs TTO</h2>
+<div class="comparison-table">
+<div class="comparison-column">
+<div class="column-header">
+<p>Standard Gamble</p>
+</div>
+<div class="column-content">
+<ul>
+<li><strong>Represents</strong> decision-making under uncertainty</li>
+<li><span class="fragment" data-fragment-index="2">Only valuing the health state</span></li>
+<li><span class="fragment" data-fragment-index="3">Risk posture <strong>is</strong> captured (risk aversion for death)</span></li>
+<li><span class="fragment" data-fragment-index="4">Utility values usually &gt; TTO for same state</span></li>
+</ul>
+</div>
+</div>
+<div class="comparison-column">
+<div class="column-header">
+<p>Time Trade-Off</p>
+</div>
+<div class="column-content">
+<ul>
+<li><strong>Is</strong> decision-making under certainty</li>
+<li><span class="fragment" data-fragment-index="2">Might inadvertently capture time preference (i.e., we might value health in the future less than we do today)</span></li>
+<li><span class="fragment" data-fragment-index="3">Risk posture <strong>is NOT</strong> captured</span></li>
+<li><span class="fragment" data-fragment-index="4">Utility values usually &lt; SG for same state</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-3" class="slide level2 center">
+<h2></h2>
+<div class="definition-box">
+<div class="term">
+<p>Rating scales</p>
+</div>
+<div class="example">
+<div class="example-label">
+<p>Example:</p>
+</div>
+<div class="example-text">
+<p>On a scale where 0 represents death and 100 represents perfect health, what number would you say best describes your health state over the past 2 weeks?“.</p>
+</div>
+</div>
+<div class="example">
+<div class="example-label brown-text">
+<p>Problem:</p>
+</div>
+<div class="example-text">
+<p>It does not have the interval property we desire. For example, a value of “90” on this scale is not necessarily twice as good as a value of “45”</p>
+</div>
+</div>
+</div>
+</section>
+<section id="visual-analogue-scale-vas" class="slide level2 center">
+<h2>Visual Analogue Scale (VAS)</h2>
+<p>The Visual Analog Scale (VAS) is a commonly-used rating scale</p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lec5b/VAS.png"></p>
+<figcaption>Source: https://assessment-module.yale.edu/im-palliative/visual-analogue-scale</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="direct-methods-rating-scales" class="slide level2 center">
+<h2>Direct methods – Rating scales</h2>
+<div class="icon-bullets-triangle">
+<ul>
+<li>Easy to use: Rating scales often used where time or cognitive ability/literacy prevents use of other methods</li>
+<li>Very subjective and prone to more extreme answers! Usually, utilities for <strong>VAS &lt; TTO &lt; SG</strong></li>
+</ul>
+</div>
+</section>
+<section id="section-4" class="slide level2 center">
+<h2></h2>
+<div class="split-content">
+<div class="content-text">
+<h2>
+Indirect methods - EQ-5D
+</h2>
+<ul>
+<li><p>System for describing health states</p></li>
+<li><p>5 domains: mobility; self-care; usual activities; pain/discomfort; and anxiety/depression</p></li>
+<li><p>3 levels: 243 distinct health states (e.g.&nbsp;11223)</p></li>
+<li><p>Valuations elicited through population based surveys with VAS, TTO</p></li>
+</ul>
+</div>
+<div class="content-visual" style="padding: 0.5em; display: flex; align-items: center;">
+<p><img data-src="images/lec5b/eq5d.png" style="max-height: 70vh; width: auto;"></p>
+</div>
+</div>
+<aside class="notes">
+<ol type="1">
+<li>Indirect utility measures map preferences onto a utility scale via a generic health-related quality of life questionnaire</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="indirect-methods" class="slide level2 center">
+<h2>Indirect methods</h2>
+<div class="concept-grid">
+<div class="concept-box">
+<p>HUI <br> <span class="db-text">Health Utility Index</span></p>
+</div>
+<div class="concept-box">
+<p>EQ5D <br> <span class="db-text">EuroQol health status measure</span></p>
+</div>
+<div class="concept-box">
+<p>SF-6D <br> <span class="db-text">Converts SF-36 &amp; SF-12 scores to utilities</span></p>
+</div>
+<div class="concept-box">
+<p>QWB <br> <span class="db-text">Quality of well-being scale</span></p>
+</div>
+</div>
+<aside class="notes">
+<ol type="1">
+<li><p>I’m not going to get into detail for each of these since you don’t need to know the granularity of each right now until you start exploring for your studies in the future, but just as an overview of some of the more well-known ones:</p></li>
+<li><p>HUI (Health Utility Index), based on a large, Canadian community sample (copyrighted, not free to use), patients are asked to consider their health over the past 2, 3, &amp; 4 weeks</p></li>
+<li><p>EQ5D, European &amp; US-based, asks participants to consider their health during the day of the interview; free but need to request permission &amp; if you need to translate into other languages then it can be quite pricey</p></li>
+<li><p>SF-6D, 4 to 1-week recall period, converts the SF-36 &amp; SF-12 (validated, generic quality of life measures) into utility scores, conversion done by University of Sheffield developer John Brazier; published articles on the methodology to convert these</p></li>
+<li><p>QWB (Quality of Well-Being scale), asks participants to consider their health over the previous three days, primary care patients in San Diego, CA; contact UCSD health outcomes assessment program for access</p></li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="alternatives-to-icers" class="slide level2 section-slide center">
+<h2>Alternatives to ICERs</h2>
+<div class="section-number">
+<p>03</p>
+</div>
+</section>
+<section id="alternatives-to-icers-1" class="slide level2 center">
+<h2>Alternatives to ICERs</h2>
+<p>ICERs are the most common approach for describing CEA results</p>
+<div class="pros-cons-new">
+<div class="pros-column fragment">
+<div class="column-title">
+<p>Advantages</p>
+</div>
+<ul>
+<li>Summarizes all aspects of decision problem except WTP (which comes from decision-maker)</li>
+</ul>
+</div>
+<div class="cons-column fragment">
+<div class="column-title">
+<p>Disadvantages</p>
+</div>
+<ul>
+<li>Ratios can act poorly/are unstable; especially when there is a lot of uncertainty in the denominator, the incremental QALYs are small, or close to zero.</li>
+<li>For cost-saving interventions, the ICER is meaningless.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="an-alternative" class="slide level2 center">
+<h2>An Alternative</h2>
+<div class="icon-bullets">
+<p><span class="fragment">Maybe all of your interventions are cost-effective under accepted WTPs &amp; your goal, rather, is to quantify the short and long-term health benefits of interventions.</span></p>
+<p><span class="fragment">If willing to choose a fixed willingness-to-pay threshold (e.g., λ= 100,000 / QALY), can write down an equation for the contribution of health and cost to utility.</span></p>
+</div>
+</section>
+<section id="section-5" class="slide level2 center">
+<h2></h2>
+<div class="concept-grid">
+<div class="concept-box">
+<p>Net Health Benefit (NHB)</p>
+</div>
+<div class="concept-box">
+<p>Net Monetary Benefit (NMB)</p>
+</div>
+</div>
+<div class="concept-grid">
+<div class="concept-box accent">
+<p>Objective: Select the strategy with the highest NHB/NMB</p>
+</div>
+</div>
+</section>
+<section id="net-health-benefit-nhb" class="slide level2 center">
+<h2>Net Health Benefit (NHB)</h2>
+<p><span class="math display">
+NHB_s = E_s - \frac{C_s}{λ}
+</span> <span class="math inline">E_s</span> is effectiveness of strategy s</p>
+<p><span class="math inline">C_s</span> is cost of s</p>
+<p><span class="math inline">λ</span> is WTP threshold</p>
+<ul>
+<li>Effectiveness is already in QALYs, no conversion needed</li>
+<li>Cost is in $, needs conversion to QALYs (so need to divide by $/QALY)</li>
+</ul>
+</section>
+<section id="net-monetary-benefit-nmb" class="slide level2 center">
+<h2>Net Monetary Benefit (NMB)</h2>
+<p><span class="math display">
+NMB_s = E_s * λ - C_s
+</span></p>
+<p>where</p>
+<p><span class="math inline">E_s</span> is effectiveness of strategy s</p>
+<p><span class="math inline">C_s</span> is cost of s</p>
+<p><span class="math inline">λ</span> is WTP threshold</p>
+<ul>
+<li><p>Cost is already in $, no conversion needed</p></li>
+<li><p>Effectiveness is in QALYs, needs conversion to $ (multiply by $/QALY)</p></li>
+</ul>
+</section>
+<section id="example-nhb" class="slide level2 center">
+<h2>Example: NHB</h2>
+<div class="split-content">
+<div class="content-text">
+<p><span class="math inline">E_1 = 0.07</span> years</p>
+<p><span class="math inline">E_2 = 0.10</span> years</p>
+<p><span class="math inline">C_1 = 1,500</span></p>
+<p><span class="math inline">C_2 = 2,800</span></p>
+<p><span class="math inline">λ = 50,000</span> per year of life saved</p>
+</div>
+<div class="content-text">
+<p><span class="math inline">ICER = \frac{2800 - 1500}{0.10 - 0.07}</span></p>
+<p><span class="math inline">=43,333</span></p>
+</div>
+</div>
+</section>
+<section id="example-nhb-1" class="slide level2 center">
+<h2>Example: NHB</h2>
+<p><span class="math inline">NHB_1 = 0.07−\frac{1500}{50000} =0.040</span></p>
+<p><span class="math inline">NHB_2 = 0.10−\frac{2800}{50000} =0.044</span></p>
+<p><span class="math inline">IncNHB = 0.044−0.040=0.004</span></p>
+<div class="arrow-bullets">
+<ul>
+<li class="fragment">Suggests a small difference in QALYs between the interventions (.004*365 = 1.46 days)</li>
+<li class="fragment">The cost adjusted NHB accounts for the tradeoffs between health outcomes and costs into a single measure.</li>
+</ul>
+</div>
+</section>
+<section id="example-net-monetary-benefit-nmb" class="slide level2 center">
+<h2>Example: Net Monetary Benefit (NMB)</h2>
+<p><span class="math inline">NMB_1=(0.07×50000)−1500 = 2000</span></p>
+<p><span class="math inline">NMB_2=(0.10×50000)−2800=2200</span></p>
+<p><span class="math inline">IncNMB =2200−2000=200</span></p>
+<div class="arrow-bullets">
+<ul>
+<li class="fragment">Quantifies this improvement’s value in monetary terms.</li>
+<li class="fragment">Treatment 2 provides $200 more net value than Treatment 1 after accounting for both its additional health benefit and higher cost.</li>
+</ul>
+</div>
+</section>
+<section id="nhbnmb" class="slide level2 center">
+<h2>NHB/NMB</h2>
+<p>The strategy with the highest incremental NHB or NMB is the preferred option, given a specified WTP threshold.</p>
+<div class="split-content">
+<div class="content-text">
+<p>A higher NHB means more health gained after accounting for costs.</p>
+</div>
+<div class="content-visual">
+<p><img data-src="images/lec5b/balance_health.png"></p>
+</div>
+</div>
+</section>
+<section id="section-6" class="slide level2 summary-end-slide center">
+<h2></h2>
+<div class="summary-circle">
+<div class="end-title">
+<p>Key Takeaways</p>
+</div>
+<div class="end-subtitle">
+<p>Benefits</p>
+</div>
+<ul class="key-points">
+<li>
+Clinical outcomes should be clearly defined and relevant to the decision question.
+</li>
+<li>
+QALYs combine quantity and quality of life into a single summary measure, enabling comparisons.
+</li>
+<li>
+Net benefit approaches provide alternatives to ICERs but require an explicit willingness‑to‑pay threshold.
+</li>
+</ul>
+</div>
+</section>
+<section id="questions" class="slide level2 questions-slide center">
+<h2>Questions?</h2>
+<div class="next-info">
+<p>Next Lecture: <strong>DALYs</strong></p>
+</div>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/logos.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="../index.html">Back to Website</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/geratcliff\.github\.io\/vital-2026-Cebu");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
