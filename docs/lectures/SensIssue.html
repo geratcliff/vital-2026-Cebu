@@ -139,19 +139,10 @@
 </section>
 <section id="the-logic-of-the-issue" class="slide level2 center">
 <h2>The Logic of the Issue</h2>
-<p>To complete a OWSA, the model needs to have some method of “knowing” what to do with the difference between the original variable and the sensitivity variable.</p>
-<div class="info-cards">
-<div class="card">
-<div class="columns">
-<p><strong>For Example:</strong></p><div class="column" style="width:45%;">
-<p>If a probability is 0.4 in the model and then run on 0.6 in the OWSA, what probability is now 0.2 lower?</p>
-</div><div class="column" style="width:10%;">
-<p>Or</p>
-</div><div class="column" style="width:45%;">
-<p>If a probability is 0.4 in the model and then run on 0.3 in the OWSA, what probability is now 0.1 higher?</p>
-</div></div>
-</div>
-</div>
+<p>In a one‑way sensitivity analysis (OWSA), we change one probability at a time. We set it either to its maximum value or to its minimum value.</p>
+<p>Remember: the probabilities coming from the same chance node must sum to 1 (100%).</p>
+<p>Because of this, when one probability is changed, the model must automatically adjust the other probabilities to make sure the total is still 1.</p>
+<p>In other words, the model needs a rule for how to handle the difference between the original probability and the new sensitivity value.</p>
 </section>
 <section id="a-conceptual-example" class="slide level2 center">
 <h2>A conceptual example</h2>
@@ -214,10 +205,10 @@
 <div class="content-text">
 <p>Based on the bubble diagram, individuals that are sick can:</p>
 <ul>
-<li><p>die of all-cause death</p></li>
+<li><p>heal</p></li>
 <li><p>remain sick</p></li>
 <li><p>get sicker</p></li>
-<li><p>heal</p></li>
+<li><p>die of all-cause death</p></li>
 </ul>
 </div>
 <div class="content-visual">

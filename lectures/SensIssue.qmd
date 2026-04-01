@@ -30,27 +30,13 @@ For a **OWSA, one parameter at a time is adjusted.** The value should be adjuste
 
 ## The Logic of the Issue
 
-To complete a OWSA, the model needs to have some method of "knowing" what to do with the difference between the original variable and the sensitivity variable.
+In a one‑way sensitivity analysis (OWSA), we change one probability at a time. We set it either to its maximum value or to its minimum value.
 
-:::::::: info-cards
-::::::: card
-:::::: columns
-**For Example:**
+Remember: the probabilities coming from the same chance node must sum to 1 (100%).
 
-::: {.column width="45%"}
-If a probability is 0.4 in the model and then run on 0.6 in the OWSA, what probability is now 0.2 lower?
-:::
+Because of this, when one probability is changed, the model must automatically adjust the other probabilities to make sure the total is still 1.
 
-::: {.column width="10%"}
-Or
-:::
-
-::: {.column width="45%"}
-If a probability is 0.4 in the model and then run on 0.3 in the OWSA, what probability is now 0.1 higher?
-:::
-::::::
-:::::::
-::::::::
+In other words, the model needs a rule for how to handle the difference between the original probability and the new sensitivity value.
 
 ## A conceptual example
 
@@ -120,13 +106,13 @@ This is modeled using a Markov model based on the following bubble diagram. All 
 ::: content-text
 Based on the bubble diagram, individuals that are sick can:
 
--   die of all-cause death
+-   heal
 
 -   remain sick
 
 -   get sicker
 
--   heal
+-   die of all-cause death
 :::
 
 ::: content-visual
@@ -135,27 +121,28 @@ Based on the bubble diagram, individuals that are sick can:
 :::::
 
 ## Running the OWSA
-::::: split-content
-::: content-text
+
+:::::: split-content
+:::: content-text
 The model ran great and now it is time for the OWSA.
 
 ::: bold
 Based on (fake) data we learn that p_die can be wrong by up to 4%
 :::
-:::
+::::
 
 ::: content-visual
 ![](images/SensIssue/SensIssue_Stacked_OWSA.png)
 :::
-:::::
+::::::
 
 ## What we expect
 
 ::::: split-content
 ::: content-text
-
 We expect that if less people are dying then there are more individuals that are sorted between healthy, remain sick, and getting sicker.
 :::
+
 ::: content-visual
 ![](images/SensIssue/SensIssue_Stacked_OWSA_Split1.png)
 :::
@@ -163,8 +150,8 @@ We expect that if less people are dying then there are more individuals that are
 
 ## What Amua does
 
-::::: split-content
-::: content-text
+:::::: split-content
+:::: content-text
 However, Amua uses the complimentary probability to determine where the "left over" individuals go.
 
 As the diagram shows, in this example, all 0.04 "left-over" individuals are staying in sick. They do not have a chance to become healthy or get sicker.
@@ -172,13 +159,12 @@ As the diagram shows, in this example, all 0.04 "left-over" individuals are stay
 ::: bold
 This does not match the clinical reality for the population and disease.
 :::
-:::
+::::
+
 ::: content-visual
-
 ![](images/SensIssue/SensIssue_Stacked_OWSA_Split2.png)
-
 :::
-:::::
+::::::
 
 ## A Fix
 
@@ -218,4 +204,3 @@ Amua Model Structures
 :::
 ::::
 :::::::
-
