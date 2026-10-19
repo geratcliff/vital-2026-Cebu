@@ -35,7 +35,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 26/01/2026 (Monday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 8:45 | Check-Ins | Registration and Introductions |
 | 08:45 - 9:30 | [Lecture]{.lecture} | [Conceptual and Theoretical Foundations for Decision Analysis and Cost Effectiveness Analysis](lectures/lec_1a.introduction-to-decision-analysis.html) |
 | 10:00 - 10:30 | [Case Study]{.casestudy} | [Identifying Strategy Differences](case-studies/CaseStudy_Intro.html) |
@@ -53,7 +53,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 27/01/2026 (Tuesday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 08:30 | [Lecture]{.lecture} | [CEA Fundamentals 1: Costs (Cont.)](https://geratcliff.github.io/vital-2026-Cebu/lectures/lec_5a.cea-fundamentals1.html#/we-can-identify-different-types-of-healthcare-costs) |
 | 08:30 - 09:30 | [Case Study]{.casestudy} | [Decision Trees in Amua](case-studies/CaseStudy_Tree.html) |
 | 09:30 - 10:30 | [Capstone]{.capstone} | [Make a Decision Tree](capstone/02_decision-tree.html) |
@@ -70,7 +70,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 28/01/2026 (Wednesday)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | [Incremental CEA](case-studies/CaseStudy_CEA.html) |
 | 09:00-10:00 | [Lecture]{.lecture} | [Markov Models](lectures/lec_7.MarkovModels1.html) |
 | 10:45 - 11:15 | Break | Coffee/Tea |
@@ -85,7 +85,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ![](images/confused-john.jpg)
 
 | Time | Type | Topic |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 08:00 - 09:00 | [Lecture]{.lecture} | [Lecture: Structuring the Markov Model](lectures/lec_structure.html) \[JG\] |
 | 09:00 - 10:15 | [Case Study]{.casestudy} | [Progressive Disease Model in Amua](case-studies/CaseStudy_MarkovProg.html) |
 | 10:15 - 10:45 | Break | Coffee/Tea |
@@ -99,7 +99,7 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 ## 30/01/2026 (Friday)
 
 | Time | Type | Topic |
-|----|----|----|
+|-------------------|-------------------|----------------------------------|
 | 08:00 - 09:00 | [Case Study]{.casestudy} | [DALYs in AMUA](case-studies/CaseStudy_DALYs.html) \[Guided\] |
 | 09:30 - 10:30 | [Case Study]{.casestudy} | [Common CEA Errors](case-studies/CommonErrors.html) |
 | 10:30 - 10:45 | Break | Coffee/Tea |
@@ -167,4 +167,4 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | Asynchronous | Case Study | [QALYS](case-studies/CaseStudy_QALYs.html)    |
 | Asynchronous | Lecture    | [PSA Analysis & VOI](lectures/lec_psa.html)   |
 | Asynchronous | Guide      | [Quick Start Guide](V4_Quick_Start_Guide.pdf) |
-| Asynchronous | Case Study | [Sensitivity](case-studies/sensitivity.html)  |
+| Asynchronous | Case Study | [Sensitivity](case-studies/CaseStudy_sensitivity.html)  |
