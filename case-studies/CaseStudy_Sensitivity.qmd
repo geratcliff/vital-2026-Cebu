@@ -115,19 +115,25 @@ Below are the ranges we will use:
 
 | Variable        | Value | Range       |
 |-----------------|-------|-------------|
-| p_sick          | 0.03  |             |
-| p_sicker        | 0.12  |             |
-| p_diseasedeath  | 0.15  |             |
+| p_sick          | 0.03  | 0.01-0.07   |
+| p_sicker        | 0.12  | 0.08-0.30   |
+| p_diseasedeath  | 0.15  | 0.02-0.26   |
 | sens            | 0.9   | 0.86-0.93   |
 | prev            | 0.08  | 0.074-0.086 |
-| hr_treated      | 0.5   |             |
+| hr_treated      | 0.5   | 0.1-0.7     |
 | initial_age     | 50    | --          |
-| c_treatment     | 0.08  |             |
-| c_pall          | 0.08  |             |
-| c_mild          | 0.15  |             |
-| c_initialsicker | 0.15  |             |
+| c_treatment     | 30000 | 1000-500000 |
+| c_pall          | 15000 | 5000-25000  |
+| c_mild          | 1000  | 500-2000    |
+| c_initialsicker | 50000 | 42000-66000 |
+| u_healthy       | 1     | --          |
+| u_sick          | 0.842 | 0.81-0.88   |
+| u_sicker        | 0.645 | 0.60-0.70   |
+| u_dead.         | 0     | --          |
+| u_treatment     | 0.932 | 0.92-0.94   |
 
-Note: We do not need to vary initial age
+Note: We do not need to vary initial age, utility of healthy, or utility
+of death
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
@@ -140,46 +146,53 @@ Run a OWSA
 ## A: Setup the Run
 
 1.  Go to Run \> Sensitivity Analysis \> Tornado Diagram
-    -   We will be using a tornado diagram as it is the most common
-        method for presenting OWSA results
+    - We will be using a tornado diagram as it is the most common method
+      for presenting OWSA results
 
 ![](images/sensitivity/RunMenu.png)
 
-2.  Add in all the Low and High values. This is the determine lower and
+2.  Add in all the Low and High values. This is the determined lower and
     upper bound for each value.
-3.  Set the Outcome to "ICER (Cost/LY)"
-4.  Highlight the "Treat All" Strategy
+3.  Click Run
+4.  Set the Outcome to "ICER (Cost/LY)"
+5.  Highlight the strategy being compared to the base case. For this
+    example that would be "Treat All".
+
+![](images/sensitivity/TornadoData.png)
 
 ## B: Run The Analysis
 
-1.  Click "Run"
-2.  Click "Update Plot"
+1.  Click "Update Plot"
 
 The plot should now display a bar for each variable with inputs
+![](images/sensitivity/TornadoPlot.png)
 
 ## C: Check The Plot
 
 1.  Verify that the plot makes sense
-    -   Is the direction correct?
-    -   Are the most impactful variables what you would expect?
+    - Is the direction correct?
+    - Are the most impactful variables what you would expect?
 
 ## D: Common Issues
 
--   If your strategy is dominated or dominant, ICERs will not show. This
-    would render the tornado useless.
+- If your strategy is dominated or dominant, ICERs will not show. This
+  would render the tornado useless.
 
-    -   However, in the benefits lecture we talked about the
-        alternatives (NMB or NHB). You can get this by setting the
-        analysis type to "Benefit-Cost Analysis (BCA)" in Model \>
-        Properties \> Analysis
+  - However, in the benefits lecture we talked about the alternatives
+    (NMB or NHB). You can get this by setting the analysis type to
+    "Benefit-Cost Analysis (BCA)" in Model \> Properties \> Analysis
 
-        -   <https://github.com/zward/Amua/wiki/Model-Properties#analysis-type>
+    - <https://github.com/zward/Amua/wiki/Model-Properties#analysis-type>
 
--   You have more than two strategies.
+- You have more than two strategies.
 
-    -   A tornado diagram cannot provide clear information when more
-        than two strategies are involved. We recommend using the Stacked
-        One-Way sensitivity Analysis
+  - A tornado diagram cannot provide clear information when more than
+    two strategies are involved. We recommend using the Stacked One-Way
+    sensitivity Analysis
+
+  - **Example:** ![](images/sensitivity/Stacked.png)
+
+    ###### *image source: <https://github.com/zward/Amua/wiki/Sensitivity-Analysis#stacked-one-way>*
 
 ::: {.callout .fill-box .task-box}
 ## Your Task
@@ -198,9 +211,14 @@ Run a TWSA
 2.  Add in the Low and High values for the *two variables you want to
     compare*. This is the determine lower and upper bound for each
     value.
-3.  Set Parameter 1 to
-4.  Set Parameter 2 to
-5.  Set Outcome to ICER (Cost/LY)
+3.  Set Parameter 1 to `hr_treated`
+4.  Set Parameter 2 to `c_treatment`
+5.  Set Outcome to ICER (Cost/Effect)
+6.  Set Cost-Effectiveness threshold to `100000`
+7.  Intervals is set to `10`, increase this number to get more granular
+    data.
+
+![](images/sensitivity/TWSAdata.png)
 
 ## B: Run The Analysis
 
@@ -210,30 +228,31 @@ Run a TWSA
 The plot should now display a matrix grid with a decision for each value
 intersection as well as a mark for the base values.
 
+![](images/sensitivity/TWSAplot.png)
+
 ## C: Check The Plot
 
 1.  Verify that the plot makes sense
-    -   Look at the four corners and make sure the decision is
-        clinically realistic
-        -   Parameter 1 high, Parameter 2 low
+    - Look at the four corners and make sure the decision is clinically
+      realistic
+      - Parameter 1 high, Parameter 2 low
 
-        -   Parameter 1 high, Parameter 2 high
+      - Parameter 1 high, Parameter 2 high
 
-        -   Parameter 1 low, Parameter 2 high
+      - Parameter 1 low, Parameter 2 high
 
-        -   Parameter 1 low, Parameter 2 low
+      - Parameter 1 low, Parameter 2 low
 
 ## D: Common Issues
 
--   If your strategy is dominated or dominant, ICERs will not show and
-    therefore no graph will be created.
+- If your strategy is dominated or dominant, ICERs will not show and
+  therefore no graph will be created.
 
-    -   However, in the benefits lecture we talked about the
-        alternatives (NMB or NHB). You can get this by setting the
-        analysis type to "Benefit-Cost Analysis (BCA)" in Model \>
-        Properties \> Analysis
+  - However, in the benefits lecture we talked about the alternatives
+    (NMB or NHB). You can get this by setting the analysis type to
+    "Benefit-Cost Analysis (BCA)" in Model \> Properties \> Analysis
 
-        -   <https://github.com/zward/Amua/wiki/Model-Properties#analysis-type>
+    - <https://github.com/zward/Amua/wiki/Model-Properties#analysis-type>
 
 # Step 5: Run a PSA
 
@@ -252,38 +271,137 @@ The table below provides recommendations:
 
 For each variable you will need to determine the necessary Amua inputs
 
-[Link to Amua Input
+### Formulas to use distributions in Amua:
+
+Pulled from: [Link to Amua Input
 Documentation](https://github.com/zward/Amua/wiki/Distributions){target="_blank"}
+
++--------------+------------+---------------+------------+------------+
+| Distribution | Name       | Description   | Parameters | Support    |
++==============+============+===============+============+============+
+| `Beta`       | Beta       | A continuous  | `a`: Shape | Real       |
+|              |            | distribution  | parameter  | numbers in |
+|              |            | bounded by    | `>0`\      | `[0,1]`    |
+|              |            | `0` and `1`.  | `b`: Shape |            |
+|              |            | Often used to | parameter  |            |
+|              |            | model         | `>0`       |            |
+|              |            | probabilities |            |            |
++--------------+------------+---------------+------------+------------+
+| `Gamma`      | Gamma      | A continuous  | `k`: Shape | Real       |
+|              |            | distribution  | `>0`\      | numbers    |
+|              |            | that yields   | `θ`: Scale | `>0`       |
+|              |            | positive real | `>0`       |            |
+|              |            | numbers       |            |            |
++--------------+------------+---------------+------------+------------+
+| `Logistic`   | Logistic   | A continuous  | `μ`:       | Real       |
+|              |            | distribution  | Location\  | numbers    |
+|              |            | that          | `s`: Scale |            |
+|              |            | resembles the | `>0`       |            |
+|              |            | Normal        |            |            |
+|              |            | distribution  |            |            |
+|              |            | in shape but  |            |            |
+|              |            | has heavier   |            |            |
+|              |            | tails         |            |            |
++--------------+------------+---------------+------------+------------+
+| `LogNorm`    | Log-Normal | A continuous  | `μ`:       | Real       |
+|              |            | distribution  | Location\  | numbers    |
+|              |            | of a random   | `σ`: Scale | `>0`       |
+|              |            | variable      | `>0`       |            |
+|              |            | whose         |            |            |
+|              |            | logarithm     |            |            |
+|              |            | follows a     |            |            |
+|              |            | Normal        |            |            |
+|              |            | distribution  |            |            |
++--------------+------------+---------------+------------+------------+
 
 If you need help getting the distribution values, use the following
 tool: [Distribution
 Solver](https://yuhanxuan.shinyapps.io/shiny4dist/){target="_blank"}
 
-## B: Update the model
+## B: Save a Model Copy
 
 We recommend that you create a copy of your model to use for PSA as you
 will override your variables.
 
 1.  Save your model (Model \> Save)
+
 2.  Then use Model \> Save As to create a duplicate (Example:
     model_psa.amua)
-3.  Edit the parameters to match the inputs
 
-| Variable        | Value | Range |
-|-----------------|-------|-------|
-| p_sick          | 0.03  |       |
-| p_sicker        | 0.12  |       |
-| p_diseasedeath  | 0.15  |       |
-| sens            | 0.9   |       |
-| prev            | 0.08  |       |
-| hr_treated      | 0.5   |       |
-| initial_age     | 50    | --    |
-| c_treatment     | 0.08  |       |
-| c_pall          | 0.08  |       |
-| c_mild          | 0.15  |       |
-| c_initialsicker | 0.15  |       |
+## C: Update the Variables
 
-## C: Setup the Run
+1.  Start with the `p_sick` variable. It is a beta distribution with
+    `alpha = 4.3996` and `beta = 127.3367`
+
+2.  Double click on `p_sick` to open the "Define Parameter" pop-up
+
+    ![](images/sensitivity/psick_define.png){width="500"}
+
+3.  Delete all the previous expression
+
+4.  Click the ![](images/sensitivity/expressionbuilder.png){width="25"}
+    before "Expression" to open the "Build Expression" pop-up
+
+5.  Under "Elements" select Distribution \> Beta
+
+    ![](images/sensitivity/psick_expression.png)
+
+6.  Click `Insert Value`
+
+7.  Replace `a` with `4.3996` and `b` with `127.3367`
+
+    ![](images/sensitivity/psick_expression2.png)
+
+8.  Click `Update Expression`
+
+9.  Repeat for all the following variables
+
+### Beta
+
++------------------+-------------------+-------------------+
+| Variable         | Alpha (a)         | Beta (b)          |
++==================+===================+===================+
+| p_sick           | 4.3996            | 127.3367          |
++------------------+-------------------+-------------------+
+| p_sicker         | 7.7719            | 36.3478           |
++------------------+-------------------+-------------------+
+| p_diseasedeath   | 2.5561            | 20.8677           |
++------------------+-------------------+-------------------+
+| sens             | 256.2902          | 29.2273           |
++------------------+-------------------+-------------------+
+| prev             | 74.3729           | 855.2879          |
++------------------+-------------------+-------------------+
+| u_sick           | 342.9965          | 62.1399           |
++------------------+-------------------+-------------------+
+| u_sicker         | 226.2892          | 121.4084          |
++------------------+-------------------+-------------------+
+| u_treatment      | 2313.2903         | 173.2424          |
++------------------+-------------------+-------------------+
+
+### Gamma
+
++------------------+-------------------+-------------------+
+| Variable         | Shape (k)         | Scale (θ)         |
++==================+===================+===================+
+| c_treatment      | 5.9944            | 10000             |
++------------------+-------------------+-------------------+
+| c_pall           | 6.4077            | 2000              |
++------------------+-------------------+-------------------+
+| c_mild           | 8.4748            | 133.333           |
++------------------+-------------------+-------------------+
+| c_initialsicker  | 75.7058           | 714.286           |
++------------------+-------------------+-------------------+
+
+### lognorm
+
+| Variable   | Location (μ) | Scale (σ) |
+|------------|--------------|-----------|
+| hr_treated | -1.3296      | 0.4964    |
+
+
+![](images/sensitivity/PSAinputs.png)
+
+## D: Setup the Run
 
 1.  Go to Run \> Sensitivity Analysis \> Probabilistic (PSA)
 
@@ -291,15 +409,19 @@ will override your variables.
 
 2.  Verify that all the parameters look correct
 
-## B: Run The Analysis
+## E: Run The Analysis
 
 1.  Set the "\# Iterations"
 2.  Click "Run"
 
-## C: The Plots
+![](images/sensitivity/PSArun.png)
+
+## F: The Plots
 
 This will create 4 tabs of graphics. To understand these, use the Amua
 guide [Link to Amua Input
 Documentation](https://github.com/zward/Amua/wiki/Sensitivity-Analysis#probabilistic){target="_blank"}
 
-Most commonly the CEAC is presented in results.
+CEAC is most commonly presented in results.
+
+![](images/sensitivity/PSAceac.png)

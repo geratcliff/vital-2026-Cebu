@@ -352,11 +352,20 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#step-5-run-a-psa" id="toc-step-5-run-a-psa" class="nav-link" data-scroll-target="#step-5-run-a-psa">Step 5: Run a PSA</a>
   <ul class="collapse">
-  <li><a href="#a-determine-variable-distributions" id="toc-a-determine-variable-distributions" class="nav-link" data-scroll-target="#a-determine-variable-distributions">A: Determine variable distributions</a></li>
-  <li><a href="#b-update-the-model" id="toc-b-update-the-model" class="nav-link" data-scroll-target="#b-update-the-model">B: Update the model</a></li>
-  <li><a href="#c-setup-the-run" id="toc-c-setup-the-run" class="nav-link" data-scroll-target="#c-setup-the-run">C: Setup the Run</a></li>
-  <li><a href="#b-run-the-analysis-2" id="toc-b-run-the-analysis-2" class="nav-link" data-scroll-target="#b-run-the-analysis-2">B: Run The Analysis</a></li>
-  <li><a href="#c-the-plots" id="toc-c-the-plots" class="nav-link" data-scroll-target="#c-the-plots">C: The Plots</a></li>
+  <li><a href="#a-determine-variable-distributions" id="toc-a-determine-variable-distributions" class="nav-link" data-scroll-target="#a-determine-variable-distributions">A: Determine variable distributions</a>
+  <ul class="collapse">
+  <li><a href="#formulas-to-use-distributions-in-amua" id="toc-formulas-to-use-distributions-in-amua" class="nav-link" data-scroll-target="#formulas-to-use-distributions-in-amua">Formulas to use distributions in Amua:</a></li>
+  </ul></li>
+  <li><a href="#b-save-a-model-copy" id="toc-b-save-a-model-copy" class="nav-link" data-scroll-target="#b-save-a-model-copy">B: Save a Model Copy</a></li>
+  <li><a href="#c-update-the-variables" id="toc-c-update-the-variables" class="nav-link" data-scroll-target="#c-update-the-variables">C: Update the Variables</a>
+  <ul class="collapse">
+  <li><a href="#beta" id="toc-beta" class="nav-link" data-scroll-target="#beta">Beta</a></li>
+  <li><a href="#gamma" id="toc-gamma" class="nav-link" data-scroll-target="#gamma">Gamma</a></li>
+  <li><a href="#lognorm" id="toc-lognorm" class="nav-link" data-scroll-target="#lognorm">lognorm</a></li>
+  </ul></li>
+  <li><a href="#d-setup-the-run" id="toc-d-setup-the-run" class="nav-link" data-scroll-target="#d-setup-the-run">D: Setup the Run</a></li>
+  <li><a href="#e-run-the-analysis" id="toc-e-run-the-analysis" class="nav-link" data-scroll-target="#e-run-the-analysis">E: Run The Analysis</a></li>
+  <li><a href="#f-the-plots" id="toc-f-the-plots" class="nav-link" data-scroll-target="#f-the-plots">F: The Plots</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -489,17 +498,17 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>p_sick</td>
 <td>0.03</td>
-<td></td>
+<td>0.01-0.07</td>
 </tr>
 <tr class="even">
 <td>p_sicker</td>
 <td>0.12</td>
-<td></td>
+<td>0.08-0.30</td>
 </tr>
 <tr class="odd">
 <td>p_diseasedeath</td>
 <td>0.15</td>
-<td></td>
+<td>0.02-0.26</td>
 </tr>
 <tr class="even">
 <td>sens</td>
@@ -514,7 +523,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>hr_treated</td>
 <td>0.5</td>
-<td></td>
+<td>0.1-0.7</td>
 </tr>
 <tr class="odd">
 <td>initial_age</td>
@@ -523,27 +532,52 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>c_treatment</td>
-<td>0.08</td>
-<td></td>
+<td>30000</td>
+<td>1000-500000</td>
 </tr>
 <tr class="odd">
 <td>c_pall</td>
-<td>0.08</td>
-<td></td>
+<td>15000</td>
+<td>5000-25000</td>
 </tr>
 <tr class="even">
 <td>c_mild</td>
-<td>0.15</td>
-<td></td>
+<td>1000</td>
+<td>500-2000</td>
 </tr>
 <tr class="odd">
 <td>c_initialsicker</td>
-<td>0.15</td>
-<td></td>
+<td>50000</td>
+<td>42000-66000</td>
+</tr>
+<tr class="even">
+<td>u_healthy</td>
+<td>1</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td>u_sick</td>
+<td>0.842</td>
+<td>0.81-0.88</td>
+</tr>
+<tr class="even">
+<td>u_sicker</td>
+<td>0.645</td>
+<td>0.60-0.70</td>
+</tr>
+<tr class="odd">
+<td>u_dead.</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>u_treatment</td>
+<td>0.932</td>
+<td>0.92-0.94</td>
 </tr>
 </tbody>
 </table>
-<p>Note: We do not need to vary initial age</p>
+<p>Note: We do not need to vary initial age, utility of healthy, or utility of death</p>
 <div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -570,18 +604,19 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="images/sensitivity/RunMenu.png" class="img-fluid"></p>
 <ol start="2" type="1">
-<li>Add in all the Low and High values. This is the determine lower and upper bound for each value.</li>
+<li>Add in all the Low and High values. This is the determined lower and upper bound for each value.</li>
+<li>Click Run</li>
 <li>Set the Outcome to “ICER (Cost/LY)”</li>
-<li>Highlight the “Treat All” Strategy</li>
+<li>Highlight the strategy being compared to the base case. For this example that would be “Treat All”.</li>
 </ol>
+<p><img src="images/sensitivity/TornadoData.png" class="img-fluid"></p>
 </section>
 <section id="b-run-the-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="b-run-the-analysis">B: Run The Analysis</h2>
 <ol type="1">
-<li>Click “Run”</li>
 <li>Click “Update Plot”</li>
 </ol>
-<p>The plot should now display a bar for each variable with inputs</p>
+<p>The plot should now display a bar for each variable with inputs <img src="images/sensitivity/TornadoPlot.png" class="img-fluid"></p>
 </section>
 <section id="c-check-the-plot" class="level2">
 <h2 class="anchored" data-anchor-id="c-check-the-plot">C: Check The Plot</h2>
@@ -605,7 +640,9 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>You have more than two strategies.</p>
 <ul>
-<li>A tornado diagram cannot provide clear information when more than two strategies are involved. We recommend using the Stacked One-Way sensitivity Analysis</li>
+<li><p>A tornado diagram cannot provide clear information when more than two strategies are involved. We recommend using the Stacked One-Way sensitivity Analysis</p></li>
+<li><p><strong>Example:</strong> <img src="images/sensitivity/Stacked.png" class="img-fluid"></p>
+<h6 id="image-source-httpsgithub.comzwardamuawikisensitivity-analysisstacked-one-way" class="anchored"><em>image source: <a href="https://github.com/zward/Amua/wiki/Sensitivity-Analysis#stacked-one-way" class="uri">https://github.com/zward/Amua/wiki/Sensitivity-Analysis#stacked-one-way</a></em></h6></li>
 </ul></li>
 </ul>
 <div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
@@ -633,10 +670,13 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/sensitivity/RunMenu.png" class="img-fluid"></p>
 <ol start="2" type="1">
 <li>Add in the Low and High values for the <em>two variables you want to compare</em>. This is the determine lower and upper bound for each value.</li>
-<li>Set Parameter 1 to</li>
-<li>Set Parameter 2 to</li>
-<li>Set Outcome to ICER (Cost/LY)</li>
+<li>Set Parameter 1 to <code>hr_treated</code></li>
+<li>Set Parameter 2 to <code>c_treatment</code></li>
+<li>Set Outcome to ICER (Cost/Effect)</li>
+<li>Set Cost-Effectiveness threshold to <code>100000</code></li>
+<li>Intervals is set to <code>10</code>, increase this number to get more granular data.</li>
 </ol>
+<p><img src="images/sensitivity/TWSAdata.png" class="img-fluid"></p>
 </section>
 <section id="b-run-the-analysis-1" class="level2">
 <h2 class="anchored" data-anchor-id="b-run-the-analysis-1">B: Run The Analysis</h2>
@@ -645,6 +685,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Click “Update Plot”</li>
 </ol>
 <p>The plot should now display a matrix grid with a decision for each value intersection as well as a mark for the base values.</p>
+<p><img src="images/sensitivity/TWSAplot.png" class="img-fluid"></p>
 </section>
 <section id="c-check-the-plot-1" class="level2">
 <h2 class="anchored" data-anchor-id="c-check-the-plot-1">C: Check The Plot</h2>
@@ -714,86 +755,209 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>For each variable you will need to determine the necessary Amua inputs</p>
-<p><a href="https://github.com/zward/Amua/wiki/Distributions" target="_blank">Link to Amua Input Documentation</a></p>
+<section id="formulas-to-use-distributions-in-amua" class="level3">
+<h3 class="anchored" data-anchor-id="formulas-to-use-distributions-in-amua">Formulas to use distributions in Amua:</h3>
+<p>Pulled from: <a href="https://github.com/zward/Amua/wiki/Distributions" target="_blank">Link to Amua Input Documentation</a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 21%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Distribution</th>
+<th>Name</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Beta</code></td>
+<td>Beta</td>
+<td>A continuous distribution bounded by <code>0</code> and <code>1</code>. Often used to model probabilities</td>
+<td><code>a</code>: Shape parameter <code>&gt;0</code><br>
+<code>b</code>: Shape parameter <code>&gt;0</code></td>
+<td>Real numbers in <code>[0,1]</code></td>
+</tr>
+<tr class="even">
+<td><code>Gamma</code></td>
+<td>Gamma</td>
+<td>A continuous distribution that yields positive real numbers</td>
+<td><code>k</code>: Shape <code>&gt;0</code><br>
+<code>θ</code>: Scale <code>&gt;0</code></td>
+<td>Real numbers <code>&gt;0</code></td>
+</tr>
+<tr class="odd">
+<td><code>Logistic</code></td>
+<td>Logistic</td>
+<td>A continuous distribution that resembles the Normal distribution in shape but has heavier tails</td>
+<td><code>μ</code>: Location<br>
+<code>s</code>: Scale <code>&gt;0</code></td>
+<td>Real numbers</td>
+</tr>
+<tr class="even">
+<td><code>LogNorm</code></td>
+<td>Log-Normal</td>
+<td>A continuous distribution of a random variable whose logarithm follows a Normal distribution</td>
+<td><code>μ</code>: Location<br>
+<code>σ</code>: Scale <code>&gt;0</code></td>
+<td>Real numbers <code>&gt;0</code></td>
+</tr>
+</tbody>
+</table>
 <p>If you need help getting the distribution values, use the following tool: <a href="https://yuhanxuan.shinyapps.io/shiny4dist/" target="_blank">Distribution Solver</a></p>
 </section>
-<section id="b-update-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="b-update-the-model">B: Update the model</h2>
+</section>
+<section id="b-save-a-model-copy" class="level2">
+<h2 class="anchored" data-anchor-id="b-save-a-model-copy">B: Save a Model Copy</h2>
 <p>We recommend that you create a copy of your model to use for PSA as you will override your variables.</p>
 <ol type="1">
-<li>Save your model (Model &gt; Save)</li>
-<li>Then use Model &gt; Save As to create a duplicate (Example: model_psa.amua)</li>
-<li>Edit the parameters to match the inputs</li>
+<li><p>Save your model (Model &gt; Save)</p></li>
+<li><p>Then use Model &gt; Save As to create a duplicate (Example: model_psa.amua)</p></li>
 </ol>
+</section>
+<section id="c-update-the-variables" class="level2">
+<h2 class="anchored" data-anchor-id="c-update-the-variables">C: Update the Variables</h2>
+<ol type="1">
+<li><p>Start with the <code>p_sick</code> variable. It is a beta distribution with <code>alpha = 4.3996</code> and <code>beta = 127.3367</code></p></li>
+<li><p>Double click on <code>p_sick</code> to open the “Define Parameter” pop-up</p>
+<p><img src="images/sensitivity/psick_define.png" class="img-fluid" width="500"></p></li>
+<li><p>Delete all the previous expression</p></li>
+<li><p>Click the <img src="images/sensitivity/expressionbuilder.png" class="img-fluid" width="25"> before “Expression” to open the “Build Expression” pop-up</p></li>
+<li><p>Under “Elements” select Distribution &gt; Beta</p>
+<p><img src="images/sensitivity/psick_expression.png" class="img-fluid"></p></li>
+<li><p>Click <code>Insert Value</code></p></li>
+<li><p>Replace <code>a</code> with <code>4.3996</code> and <code>b</code> with <code>127.3367</code></p>
+<p><img src="images/sensitivity/psick_expression2.png" class="img-fluid"></p></li>
+<li><p>Click <code>Update Expression</code></p></li>
+<li><p>Repeat for all the following variables</p></li>
+</ol>
+<section id="beta" class="level3">
+<h3 class="anchored" data-anchor-id="beta">Beta</h3>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 27%">
+<col style="width: 27%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
-<th>Value</th>
-<th>Range</th>
+<th>Alpha (a)</th>
+<th>Beta (b)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>p_sick</td>
-<td>0.03</td>
-<td></td>
+<td>4.3996</td>
+<td>127.3367</td>
 </tr>
 <tr class="even">
 <td>p_sicker</td>
-<td>0.12</td>
-<td></td>
+<td>7.7719</td>
+<td>36.3478</td>
 </tr>
 <tr class="odd">
 <td>p_diseasedeath</td>
-<td>0.15</td>
-<td></td>
+<td>2.5561</td>
+<td>20.8677</td>
 </tr>
 <tr class="even">
 <td>sens</td>
-<td>0.9</td>
-<td></td>
+<td>256.2902</td>
+<td>29.2273</td>
 </tr>
 <tr class="odd">
 <td>prev</td>
-<td>0.08</td>
-<td></td>
+<td>74.3729</td>
+<td>855.2879</td>
 </tr>
 <tr class="even">
-<td>hr_treated</td>
-<td>0.5</td>
-<td></td>
+<td>u_sick</td>
+<td>342.9965</td>
+<td>62.1399</td>
 </tr>
 <tr class="odd">
-<td>initial_age</td>
-<td>50</td>
-<td>–</td>
+<td>u_sicker</td>
+<td>226.2892</td>
+<td>121.4084</td>
 </tr>
 <tr class="even">
-<td>c_treatment</td>
-<td>0.08</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>c_pall</td>
-<td>0.08</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>c_mild</td>
-<td>0.15</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>c_initialsicker</td>
-<td>0.15</td>
-<td></td>
+<td>u_treatment</td>
+<td>2313.2903</td>
+<td>173.2424</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="c-setup-the-run" class="level2">
-<h2 class="anchored" data-anchor-id="c-setup-the-run">C: Setup the Run</h2>
+<section id="gamma" class="level3">
+<h3 class="anchored" data-anchor-id="gamma">Gamma</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 27%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Shape (k)</th>
+<th>Scale (θ)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>c_treatment</td>
+<td>5.9944</td>
+<td>10000</td>
+</tr>
+<tr class="even">
+<td>c_pall</td>
+<td>6.4077</td>
+<td>2000</td>
+</tr>
+<tr class="odd">
+<td>c_mild</td>
+<td>8.4748</td>
+<td>133.333</td>
+</tr>
+<tr class="even">
+<td>c_initialsicker</td>
+<td>75.7058</td>
+<td>714.286</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lognorm" class="level3">
+<h3 class="anchored" data-anchor-id="lognorm">lognorm</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Location (μ)</th>
+<th>Scale (σ)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hr_treated</td>
+<td>-1.3296</td>
+<td>0.4964</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/sensitivity/PSAinputs.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="d-setup-the-run" class="level2">
+<h2 class="anchored" data-anchor-id="d-setup-the-run">D: Setup the Run</h2>
 <ol type="1">
 <li>Go to Run &gt; Sensitivity Analysis &gt; Probabilistic (PSA)</li>
 </ol>
@@ -802,17 +966,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Verify that all the parameters look correct</li>
 </ol>
 </section>
-<section id="b-run-the-analysis-2" class="level2">
-<h2 class="anchored" data-anchor-id="b-run-the-analysis-2">B: Run The Analysis</h2>
+<section id="e-run-the-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="e-run-the-analysis">E: Run The Analysis</h2>
 <ol type="1">
 <li>Set the “# Iterations”</li>
 <li>Click “Run”</li>
 </ol>
+<p><img src="images/sensitivity/PSArun.png" class="img-fluid"></p>
 </section>
-<section id="c-the-plots" class="level2">
-<h2 class="anchored" data-anchor-id="c-the-plots">C: The Plots</h2>
+<section id="f-the-plots" class="level2">
+<h2 class="anchored" data-anchor-id="f-the-plots">F: The Plots</h2>
 <p>This will create 4 tabs of graphics. To understand these, use the Amua guide <a href="https://github.com/zward/Amua/wiki/Sensitivity-Analysis#probabilistic" target="_blank">Link to Amua Input Documentation</a></p>
-<p>Most commonly the CEAC is presented in results.</p>
+<p>CEAC is most commonly presented in results.</p>
+<p><img src="images/sensitivity/PSAceac.png" class="img-fluid"></p>
 
 
 </section>
