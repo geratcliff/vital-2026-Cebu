@@ -343,14 +343,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#c-check-the-plot" id="toc-c-check-the-plot" class="nav-link" data-scroll-target="#c-check-the-plot">C: Check The Plot</a></li>
   <li><a href="#d-common-issues" id="toc-d-common-issues" class="nav-link" data-scroll-target="#d-common-issues">D: Common Issues</a></li>
   </ul></li>
-  <li><a href="#step-4-run-a-twsa" id="toc-step-4-run-a-twsa" class="nav-link" data-scroll-target="#step-4-run-a-twsa">Step 4: Run a TWSA</a>
+  <li><a href="#step-4-threshold-analysis" id="toc-step-4-threshold-analysis" class="nav-link" data-scroll-target="#step-4-threshold-analysis">Step 4: Threshold Analysis</a>
   <ul class="collapse">
+  <li><a href="#a-change-the-analysis-to-nmb-net-monetary-benefit" id="toc-a-change-the-analysis-to-nmb-net-monetary-benefit" class="nav-link" data-scroll-target="#a-change-the-analysis-to-nmb-net-monetary-benefit">A: Change the analysis to NMB (net-monetary benefit)</a></li>
   <li><a href="#a-setup-the-run-1" id="toc-a-setup-the-run-1" class="nav-link" data-scroll-target="#a-setup-the-run-1">A: Setup the Run</a></li>
   <li><a href="#b-run-the-analysis-1" id="toc-b-run-the-analysis-1" class="nav-link" data-scroll-target="#b-run-the-analysis-1">B: Run The Analysis</a></li>
   <li><a href="#c-check-the-plot-1" id="toc-c-check-the-plot-1" class="nav-link" data-scroll-target="#c-check-the-plot-1">C: Check The Plot</a></li>
   <li><a href="#d-common-issues-1" id="toc-d-common-issues-1" class="nav-link" data-scroll-target="#d-common-issues-1">D: Common Issues</a></li>
   </ul></li>
-  <li><a href="#step-5-run-a-psa" id="toc-step-5-run-a-psa" class="nav-link" data-scroll-target="#step-5-run-a-psa">Step 5: Run a PSA</a>
+  <li><a href="#step-5-run-a-twsa" id="toc-step-5-run-a-twsa" class="nav-link" data-scroll-target="#step-5-run-a-twsa">Step 5: Run a TWSA</a>
+  <ul class="collapse">
+  <li><a href="#a-setup-the-run-2" id="toc-a-setup-the-run-2" class="nav-link" data-scroll-target="#a-setup-the-run-2">A: Setup the Run</a></li>
+  <li><a href="#b-run-the-analysis-2" id="toc-b-run-the-analysis-2" class="nav-link" data-scroll-target="#b-run-the-analysis-2">B: Run The Analysis</a></li>
+  <li><a href="#c-check-the-plot-2" id="toc-c-check-the-plot-2" class="nav-link" data-scroll-target="#c-check-the-plot-2">C: Check The Plot</a></li>
+  <li><a href="#d-common-issues-2" id="toc-d-common-issues-2" class="nav-link" data-scroll-target="#d-common-issues-2">D: Common Issues</a></li>
+  </ul></li>
+  <li><a href="#step-6-run-a-psa" id="toc-step-6-run-a-psa" class="nav-link" data-scroll-target="#step-6-run-a-psa">Step 6: Run a PSA</a>
   <ul class="collapse">
   <li><a href="#a-determine-variable-distributions" id="toc-a-determine-variable-distributions" class="nav-link" data-scroll-target="#a-determine-variable-distributions">A: Determine variable distributions</a>
   <ul class="collapse">
@@ -481,7 +489,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Step 1: Complete the model</h1>
 <p>Congrats, you have already completed step 1 if you have worked through the case study sequence.</p>
 <p>If not, please download the following:</p>
-<p>library(downloadthis) ## Link in Github repo download_link( link = “https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_DALYS_ANS.amua”, button_label = “Download Markov Amua File”, button_type = “primary”, has_icon = TRUE, icon = “fa fa-save”, self_contained = FALSE )</p>
+<p>```{r, echo=FALSE, include=knitr::opts_knit$get(‘rmarkdown.pandoc.to’) == ‘html’} library(downloadthis) ## Link in Github repo download_link( link = “https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_DALYS_ANS.amua”, button_label = “Download Markov Amua File”, button_type = “primary”, has_icon = TRUE, icon = “fa fa-save”, self_contained = FALSE )</p>
 </section>
 <section id="step-2-identify-the-variance-ranges" class="level1">
 <h1>Step 2: Identify the variance ranges</h1>
@@ -589,7 +597,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Run a OWSA</p>
+<p>Understand how each individual input impacts the model when the rest of the inputs remain constant</p>
 </div>
 </div>
 </section>
@@ -641,7 +649,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>You have more than two strategies.</p>
 <ul>
-<li><p>A tornado diagram cannot provide clear information when more than two strategies are involved. We recommend using the Stacked One-Way sensitivity Analysis</p></li>
+<li><p>A tornado diagram cannot provide clear information when more than two strategies are involved. We recommend using the Stacked One-Way sensitivity Analysis.</p></li>
 <li><p><strong>Example:</strong> <img src="images/sensitivity/Stacked.png" class="img-fluid"></p>
 <h6 id="image-source-httpsgithub.comzwardamuawikisensitivity-analysisstacked-one-way" class="anchored"><em>image source: <a href="https://github.com/zward/Amua/wiki/Sensitivity-Analysis#stacked-one-way" class="uri">https://github.com/zward/Amua/wiki/Sensitivity-Analysis#stacked-one-way</a></em></h6></li>
 </ul></li>
@@ -656,15 +664,81 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Run a TWSA</p>
+<p>Understand the values of parameters where the decision changes</p>
 </div>
 </div>
 </section>
 </section>
-<section id="step-4-run-a-twsa" class="level1">
-<h1>Step 4: Run a TWSA</h1>
+<section id="step-4-threshold-analysis" class="level1">
+<h1>Step 4: Threshold Analysis</h1>
+<section id="a-change-the-analysis-to-nmb-net-monetary-benefit" class="level2">
+<h2 class="anchored" data-anchor-id="a-change-the-analysis-to-nmb-net-monetary-benefit">A: Change the analysis to NMB (net-monetary benefit)</h2>
+<ol type="1">
+<li>Go to Model &gt; Properties &gt; Analysis</li>
+<li>Change the <strong>Analysis Type:</strong> to <code>Benefit-Cost Analysis (BCA)</code></li>
+<li>Make sure that you have a Cost, Benefit, and WTP</li>
+</ol>
+<p><img src="images/sensitivity/NMB.png" class="img-fluid"></p>
+</section>
 <section id="a-setup-the-run-1" class="level2">
 <h2 class="anchored" data-anchor-id="a-setup-the-run-1">A: Setup the Run</h2>
+<ol type="1">
+<li>Go to Run &gt; Sensitivity Analysis &gt; Threshold</li>
+</ol>
+<p><img src="images/sensitivity/RunMenu.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Add in all the Low and High value for the variable you want to test. Make sure that it is selected. (One variable is tested at a time)</li>
+<li>If you have more than two strategies, choose the two strategies that you want to compare</li>
+<li>Set the outcome to <code>NMB (QALE-Cost)</code></li>
+<li>Intervals is set to <code>10</code>, increase this number to get more granular data.</li>
+</ol>
+<p><img src="images/sensitivity/Thresholddata.png" class="img-fluid"></p>
+</section>
+<section id="b-run-the-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="b-run-the-analysis-1">B: Run The Analysis</h2>
+<ol type="1">
+<li>Click “Run”</li>
+</ol>
+<p>The plot shows the NMB of the strategies over the range of test values for the input parameter. In addition the <strong>Threshold:</strong> value appears above the <strong>Run</strong> button.</p>
+<p>For <code>c_treatment</code> the threshold is <code>299586.4802</code>. In other words, when treatment costs over $299,586.48, Treat All is no longer cost-effective compared to Treat None.</p>
+<p><img src="images/sensitivity/ThresholdPlot.png" class="img-fluid"></p>
+</section>
+<section id="c-check-the-plot-1" class="level2">
+<h2 class="anchored" data-anchor-id="c-check-the-plot-1">C: Check The Plot</h2>
+<ol type="1">
+<li>Verify that the plot makes sense. For example, as cost of treatment is more expensive it is logical for the treat all strategy to be less effective.</li>
+</ol>
+</section>
+<section id="d-common-issues-1" class="level2">
+<h2 class="anchored" data-anchor-id="d-common-issues-1">D: Common Issues</h2>
+<ul>
+<li><p>If your strategy is dominated or dominant, ICERs will not show and therefore no graph will be created.</p>
+<ul>
+<li><p>However, in the benefits lecture we talked about the alternatives (NMB or NHB). You can get this by setting the analysis type to “Benefit-Cost Analysis (BCA)” in Model &gt; Properties &gt; Analysis</p>
+<ul>
+<li><a href="https://github.com/zward/Amua/wiki/Model-Properties#analysis-type" class="uri">https://github.com/zward/Amua/wiki/Model-Properties#analysis-type</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Your Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Compare two parameters to understand how the decision changes in relation to each other</p>
+</div>
+</div>
+</section>
+</section>
+<section id="step-5-run-a-twsa" class="level1">
+<h1>Step 5: Run a TWSA</h1>
+<section id="a-setup-the-run-2" class="level2">
+<h2 class="anchored" data-anchor-id="a-setup-the-run-2">A: Setup the Run</h2>
 <ol type="1">
 <li>Go to Run &gt; Sensitivity Analysis &gt; Two-way</li>
 </ol>
@@ -679,8 +753,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="images/sensitivity/TWSAdata.png" class="img-fluid"></p>
 </section>
-<section id="b-run-the-analysis-1" class="level2">
-<h2 class="anchored" data-anchor-id="b-run-the-analysis-1">B: Run The Analysis</h2>
+<section id="b-run-the-analysis-2" class="level2">
+<h2 class="anchored" data-anchor-id="b-run-the-analysis-2">B: Run The Analysis</h2>
 <ol type="1">
 <li>Click “Run”</li>
 <li>Click “Update Plot”</li>
@@ -688,8 +762,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The plot should now display a matrix grid with a decision for each value intersection as well as a mark for the base values.</p>
 <p><img src="images/sensitivity/TWSAplot.png" class="img-fluid"></p>
 </section>
-<section id="c-check-the-plot-1" class="level2">
-<h2 class="anchored" data-anchor-id="c-check-the-plot-1">C: Check The Plot</h2>
+<section id="c-check-the-plot-2" class="level2">
+<h2 class="anchored" data-anchor-id="c-check-the-plot-2">C: Check The Plot</h2>
 <ol type="1">
 <li>Verify that the plot makes sense
 <ul>
@@ -703,8 +777,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 </section>
-<section id="d-common-issues-1" class="level2">
-<h2 class="anchored" data-anchor-id="d-common-issues-1">D: Common Issues</h2>
+<section id="d-common-issues-2" class="level2">
+<h2 class="anchored" data-anchor-id="d-common-issues-2">D: Common Issues</h2>
 <ul>
 <li><p>If your strategy is dominated or dominant, ICERs will not show and therefore no graph will be created.</p>
 <ul>
@@ -714,10 +788,23 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul></li>
 </ul>
+<div class="fill-box task-box callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Your Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Understand the uncertainty in the model when all parameters are adjusted</p>
+</div>
+</div>
 </section>
 </section>
-<section id="step-5-run-a-psa" class="level1">
-<h1>Step 5: Run a PSA</h1>
+<section id="step-6-run-a-psa" class="level1">
+<h1>Step 6: Run a PSA</h1>
 <section id="a-determine-variable-distributions" class="level2">
 <h2 class="anchored" data-anchor-id="a-determine-variable-distributions">A: Determine variable distributions</h2>
 <p>The table below provides recommendations:</p>
@@ -755,7 +842,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>For each variable you will need to determine the necessary Amua inputs</p>
+<p>For each variable you will need to determine the necessary Amua inputs.</p>
 <section id="formulas-to-use-distributions-in-amua" class="level3">
 <h3 class="anchored" data-anchor-id="formulas-to-use-distributions-in-amua">Formulas to use distributions in Amua:</h3>
 <p>Pulled from: <a href="https://github.com/zward/Amua/wiki/Distributions" target="_blank">Link to Amua Input Documentation</a></p>
