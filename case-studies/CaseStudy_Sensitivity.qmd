@@ -214,7 +214,7 @@ Understand the values of parameters where the decision changes
 
 1.  Go to Model \> Properties \> Analysis
 2.  Change the **Analysis Type:** to `Benefit-Cost Analysis (BCA)`
-3.  Make sure that you have a Cost, Benefit, and WTP.
+3.  Make sure that you have a Cost, Benefit, and WTP
 
 ![](images/sensitivity/NMB.png)
 
