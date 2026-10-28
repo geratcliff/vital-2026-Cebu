@@ -354,43 +354,43 @@ For each variable you will need to determine the necessary Amua inputs.
 Pulled from: [Link to Amua Input
 Documentation](https://github.com/zward/Amua/wiki/Distributions){target="_blank"}
 
-+--------------+------------+---------------+------------+------------+
-| Distribution | Name       | Description   | Parameters | Support    |
-+==============+============+===============+============+============+
-| `Beta`       | Beta       | A continuous  | `a`: Shape | Real       |
-|              |            | distribution  | parameter  | numbers in |
-|              |            | bounded by    | `>0`\      | `[0,1]`    |
-|              |            | `0` and `1`.  | `b`: Shape |            |
-|              |            | Often used to | parameter  |            |
-|              |            | model         | `>0`       |            |
-|              |            | probabilities |            |            |
-+--------------+------------+---------------+------------+------------+
-| `Gamma`      | Gamma      | A continuous  | `k`: Shape | Real       |
-|              |            | distribution  | `>0`\      | numbers    |
-|              |            | that yields   | `θ`: Scale | `>0`       |
-|              |            | positive real | `>0`       |            |
-|              |            | numbers       |            |            |
-+--------------+------------+---------------+------------+------------+
-| `Logistic`   | Logistic   | A continuous  | `μ`:       | Real       |
-|              |            | distribution  | Location\  | numbers    |
-|              |            | that          | `s`: Scale |            |
-|              |            | resembles the | `>0`       |            |
-|              |            | Normal        |            |            |
-|              |            | distribution  |            |            |
-|              |            | in shape but  |            |            |
-|              |            | has heavier   |            |            |
-|              |            | tails         |            |            |
-+--------------+------------+---------------+------------+------------+
-| `LogNorm`    | Log-Normal | A continuous  | `μ`:       | Real       |
-|              |            | distribution  | Location\  | numbers    |
-|              |            | of a random   | `σ`: Scale | `>0`       |
-|              |            | variable      | `>0`       |            |
-|              |            | whose         |            |            |
-|              |            | logarithm     |            |            |
-|              |            | follows a     |            |            |
-|              |            | Normal        |            |            |
-|              |            | distribution  |            |            |
-+--------------+------------+---------------+------------+------------+
++--------------+------------+---------------+-------------+-------------+
+| Distribution | Name       | Description   | Parameters  | Support     |
++==============+============+===============+=============+=============+
+| `Beta`       | Beta       | A continuous  | `a`: Shape  | Real        |
+|              |            | distribution  | parameter   | numbers in  |
+|              |            | bounded by    | `>0`\       | `[0,1]`     |
+|              |            | `0` and `1`.  | `b`: Shape  |             |
+|              |            | Often used to | parameter   |             |
+|              |            | model         | `>0`        |             |
+|              |            | probabilities |             |             |
++--------------+------------+---------------+-------------+-------------+
+| `Gamma`      | Gamma      | A continuous  | `k`: Shape  | Real        |
+|              |            | distribution  | `>0`\       | numbers     |
+|              |            | that yields   | `θ`: Scale  | `>0`        |
+|              |            | positive real | `>0`        |             |
+|              |            | numbers       |             |             |
++--------------+------------+---------------+-------------+-------------+
+| `Logistic`   | Logistic   | A continuous  | `μ`:        | Real        |
+|              |            | distribution  | Location\   | numbers     |
+|              |            | that          | `s`: Scale  |             |
+|              |            | resembles the | `>0`        |             |
+|              |            | Normal        |             |             |
+|              |            | distribution  |             |             |
+|              |            | in shape but  |             |             |
+|              |            | has heavier   |             |             |
+|              |            | tails         |             |             |
++--------------+------------+---------------+-------------+-------------+
+| `LogNorm`    | Log-Normal | A continuous  | `μ`:        | Real        |
+|              |            | distribution  | Location\   | numbers     |
+|              |            | of a random   | `σ`: Scale  | `>0`        |
+|              |            | variable      | `>0`        |             |
+|              |            | whose         |             |             |
+|              |            | logarithm     |             |             |
+|              |            | follows a     |             |             |
+|              |            | Normal        |             |             |
+|              |            | distribution  |             |             |
++--------------+------------+---------------+-------------+-------------+
 
 If you need help getting the distribution values, use the following
 tool: [Distribution
