@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/font-awesome-6.5.2/js/script.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -489,7 +490,22 @@ ul.task-list li input[type="checkbox"] {
 <h1>Step 1: Complete the model</h1>
 <p>Congrats, you have already completed step 1 if you have worked through the case study sequence.</p>
 <p>If not, please download the following:</p>
-<p>```{r, echo=FALSE, include=knitr::opts_knit$get(‘rmarkdown.pandoc.to’) == ‘html’} library(downloadthis) ## Link in Github repo download_link( link = “https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_DALYS_ANS.amua”, button_label = “Download Markov Amua File”, button_type = “primary”, has_icon = TRUE, icon = “fa fa-save”, self_contained = FALSE )</p>
+<div style="display: flex; gap: 10px;">
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_DALYS_ANS.amua">
+<button class="btn btn-primary"><i class="fa fa-save"></i> Download Markov Amua File (DALYS)</button>
+</a>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://geratcliff.github.io/vital-2026-Cebu/case-studies/cs_markov_diseaseX_QALYS_ANS.amua">
+<button class="btn btn-primary"><i class="fa fa-save"></i> Download Markov Amua File (QALYS)</button>
+</a>
+</div>
+</div>
+</div>
 </section>
 <section id="step-2-identify-the-variance-ranges" class="level1">
 <h1>Step 2: Identify the variance ranges</h1>
@@ -851,8 +867,8 @@ ul.task-list li input[type="checkbox"] {
 <col style="width: 20%">
 <col style="width: 17%">
 <col style="width: 21%">
-<col style="width: 18%">
-<col style="width: 18%">
+<col style="width: 17%">
+<col style="width: 17%">
 </colgroup>
 <thead>
 <tr class="header">
