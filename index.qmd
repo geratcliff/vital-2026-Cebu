@@ -167,4 +167,4 @@ Due to the workshop only being 5 days, we kindly ask that you do some pre-work b
 | Asynchronous | Case Study | [QALYS](case-studies/CaseStudy_QALYs.html) |
 | Asynchronous | Lecture | [PSA Analysis & VOI](lectures/lec_psa.html) |
 | Asynchronous | Guide | [Quick Start Guide](V4_Quick_Start_Guide.pdf) |
-| Asynchronous | Case Study | [Sensitivity](case_studies/CaseStudy_Sensitivity.html) |
+| Asynchronous | Case Study | [Sensitivity](case-studies/CaseStudy_Sensitivity.html) |
